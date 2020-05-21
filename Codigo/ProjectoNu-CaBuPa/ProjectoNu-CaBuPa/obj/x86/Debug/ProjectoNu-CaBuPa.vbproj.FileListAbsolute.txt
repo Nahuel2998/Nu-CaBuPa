@@ -1,0 +1,9 @@
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\bin\Debug\ProjectoNu-CaBuPa.exe
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\bin\Debug\ProjectoNu-CaBuPa.pdb
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\bin\Debug\ProjectoNu-CaBuPa.xml
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.Form1.resources
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.Resources.resources
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu-CaBuPa.vbproj.GenerateResource.Cache
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu-CaBuPa.exe
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu-CaBuPa.xml
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu-CaBuPa.pdb
