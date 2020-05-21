@@ -1,0 +1,25 @@
+Connector/Net 6.3  Release Notes
+------------------------------------
+
+Welcome to the release notes for Connector/Net 6.3
+
+What's new in 6.3
+--------------------
+
+- Support for Visual Studio 2010
+- Nested transaction scopes now work though they still must use the same connection (no XA)
+- The ability to enable query analysis at runtime
+- New SQL editor
+
+
+What we know is broken
+----------------------
+- Documentation has not been integrated into VS2010 yet.  We are having trouble with silent integration
+  of documentation files.  We will include this in a future release.
+
+- The Generated Database Wizard will save the file with the extension .sql.  You will need to
+  manually change the extension to .mysql to use the new editor.
+
+
+
+
