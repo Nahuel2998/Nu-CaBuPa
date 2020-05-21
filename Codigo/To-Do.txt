@@ -1,0 +1,5 @@
+Siguiente versión
++Conexión con la BD
++Interfaz de login
++Objeto controlador de BD
++Version inicial del inicio
