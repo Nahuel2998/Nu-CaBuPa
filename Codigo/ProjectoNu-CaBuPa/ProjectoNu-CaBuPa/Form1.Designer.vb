@@ -22,8 +22,8 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Seccion1")
-        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modulo1", New System.Windows.Forms.TreeNode() {TreeNode11})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Seccion1")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modulo1", New System.Windows.Forms.TreeNode() {TreeNode1})
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CMenu = New System.Windows.Forms.Panel()
         Me.TreeMenu = New System.Windows.Forms.GroupBox()
@@ -31,14 +31,13 @@ Partial Class Form1
         Me.Status = New System.Windows.Forms.Panel()
         Me.Estado = New System.Windows.Forms.Label()
         Me.Content = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Dibujo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Title = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.CMenu.SuspendLayout()
         Me.TreeMenu.SuspendLayout()
         Me.Status.SuspendLayout()
@@ -51,7 +50,7 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(4, 70)
+        Me.Label1.Location = New System.Drawing.Point(0, 54)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(328, 73)
         Me.Label1.TabIndex = 0
@@ -87,13 +86,13 @@ Partial Class Form1
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TreeView1.Location = New System.Drawing.Point(6, 19)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode11.Name = "Seccion1"
-        TreeNode11.Tag = "Seccion1"
-        TreeNode11.Text = "Seccion1"
-        TreeNode12.Name = "Modulo1"
-        TreeNode12.Tag = "Modulo1"
-        TreeNode12.Text = "Modulo1"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode12})
+        TreeNode1.Name = "Seccion1"
+        TreeNode1.Tag = "Seccion1"
+        TreeNode1.Text = "Seccion1"
+        TreeNode2.Name = "Modulo1"
+        TreeNode2.Tag = "Modulo1"
+        TreeNode2.Text = "Modulo1"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode2})
         Me.TreeView1.Size = New System.Drawing.Size(115, 202)
         Me.TreeView1.TabIndex = 0
         '
@@ -124,7 +123,6 @@ Partial Class Form1
         Me.Content.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Content.Controls.Add(Me.TextBox1)
         Me.Content.Controls.Add(Me.Button1)
         Me.Content.Controls.Add(Me.Dibujo)
         Me.Content.Controls.Add(Me.Label4)
@@ -135,6 +133,15 @@ Partial Class Form1
         Me.Content.Name = "Content"
         Me.Content.Size = New System.Drawing.Size(387, 234)
         Me.Content.TabIndex = 3
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(201, 176)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Generar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Dibujo
         '
@@ -203,29 +210,6 @@ Partial Class Form1
         Me.Label2.Text = "Tit"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(201, 176)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Generar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Font = New System.Drawing.Font("Arial Black", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(292, 147)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(82, 78)
-        Me.TextBox1.TabIndex = 6
-        Me.TextBox1.Text = "NNN" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "NNN" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "NNN"
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -262,6 +246,5 @@ Partial Class Form1
     Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
     Friend WithEvents Dibujo As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 
 End Class
