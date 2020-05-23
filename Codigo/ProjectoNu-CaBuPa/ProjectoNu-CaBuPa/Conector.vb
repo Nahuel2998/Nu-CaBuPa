@@ -7,6 +7,23 @@ Public Class Conector
     Private conn As New MySqlConnection
     Private connStr As String
     Private Adress, User, Database, Port, Pass As String
+#Region "GetDirection"
+    Public Function GAdress() As String
+        Return Adress
+    End Function
+    Public Function GUser() As String
+        Return User
+    End Function
+    Public Function GDatabase() As String
+        Return Database
+    End Function
+    Public Function GPort() As String
+        Return Port
+    End Function
+    Public Function GPass() As String
+        Return Pass
+    End Function
+#End Region
 #Region "Constructor"
     Public Sub New(ByVal RAdress As String, ByVal RUser As String, ByVal RDatabase As String, ByVal RPort As String, ByVal RPass As String)
         MyBase.New()
@@ -43,13 +60,13 @@ Public Class Conector
         connStr = "server=" + Adress + ";user=" + User + ";database=" + Database + ";port=" + Port + ";password=" + Pass + ";"
         Dim conn As New MySqlConnection(connStr)
         Try
-            Console.WriteLine("Conectando")
+            Console.WriteLine("Conectando...")
             conn.Open()
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
         End Try
         conn.Close()
-        Console.WriteLine("Listo")
+        Console.WriteLine("Conexión exitosa con el servidor")
     End Sub
     Public Function RConexion() As MySqlConnection
         Return conn

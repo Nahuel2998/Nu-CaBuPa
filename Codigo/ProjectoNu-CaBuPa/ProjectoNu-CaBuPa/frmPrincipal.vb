@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class frmPrincipal
     Dim R As New Random
     Dim myArray = {"NNN", "NNN", "NNN"}
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
