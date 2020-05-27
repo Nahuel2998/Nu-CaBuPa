@@ -8,6 +8,6 @@ Module ModuloInicializador
     Public Sub Principal()
         Dim frmPrin As New frmPrincipal
         ' Muestra el formulario de configuracion
-        frmPrin.ShowDialog()
+        frmPrin.Show()
     End Sub
 End Module

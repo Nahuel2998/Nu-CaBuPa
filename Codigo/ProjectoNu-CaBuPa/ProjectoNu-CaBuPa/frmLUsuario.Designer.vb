@@ -29,18 +29,15 @@ Partial Class frmLUsuario
         Me.btnEntrar = New System.Windows.Forms.Button()
         Me.lblPass = New System.Windows.Forms.Label()
         Me.lblUsuario = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnOpciones = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.panelUsuario.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelUsuario
         '
+        Me.panelUsuario.Controls.Add(Me.btnOpciones)
         Me.panelUsuario.Controls.Add(Me.txtPass)
         Me.panelUsuario.Controls.Add(Me.txtUsuario)
         Me.panelUsuario.Controls.Add(Me.btnSalir)
@@ -50,7 +47,7 @@ Partial Class frmLUsuario
         Me.panelUsuario.Location = New System.Drawing.Point(3, 3)
         Me.panelUsuario.MinimumSize = New System.Drawing.Size(148, 116)
         Me.panelUsuario.Name = "panelUsuario"
-        Me.panelUsuario.Size = New System.Drawing.Size(193, 117)
+        Me.panelUsuario.Size = New System.Drawing.Size(238, 117)
         Me.panelUsuario.TabIndex = 0
         Me.panelUsuario.TabStop = False
         Me.panelUsuario.Text = "Datos"
@@ -62,7 +59,7 @@ Partial Class frmLUsuario
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtPass.Location = New System.Drawing.Point(80, 57)
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(103, 20)
+        Me.txtPass.Size = New System.Drawing.Size(148, 20)
         Me.txtPass.TabIndex = 5
         Me.txtPass.UseSystemPasswordChar = True
         '
@@ -73,13 +70,13 @@ Partial Class frmLUsuario
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtUsuario.Location = New System.Drawing.Point(80, 29)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(103, 20)
+        Me.txtUsuario.Size = New System.Drawing.Size(148, 20)
         Me.txtUsuario.TabIndex = 4
         '
         'btnSalir
         '
         Me.btnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSalir.Location = New System.Drawing.Point(45, 80)
+        Me.btnSalir.Location = New System.Drawing.Point(90, 80)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(68, 31)
         Me.btnSalir.TabIndex = 3
@@ -89,7 +86,7 @@ Partial Class frmLUsuario
         'btnEntrar
         '
         Me.btnEntrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEntrar.Location = New System.Drawing.Point(119, 80)
+        Me.btnEntrar.Location = New System.Drawing.Point(160, 80)
         Me.btnEntrar.Name = "btnEntrar"
         Me.btnEntrar.Size = New System.Drawing.Size(68, 31)
         Me.btnEntrar.TabIndex = 2
@@ -120,24 +117,14 @@ Partial Class frmLUsuario
         Me.lblUsuario.TabIndex = 0
         Me.lblUsuario.Text = "Usuario :"
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
-        Me.GroupBox1.Controls.Add(Me.btnOpciones)
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 118)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(193, 82)
-        Me.GroupBox1.TabIndex = 1
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Configuración"
-        '
         'btnOpciones
         '
-        Me.btnOpciones.Location = New System.Drawing.Point(12, 19)
+        Me.btnOpciones.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnOpciones.Location = New System.Drawing.Point(6, 80)
         Me.btnOpciones.Name = "btnOpciones"
-        Me.btnOpciones.Size = New System.Drawing.Size(65, 37)
+        Me.btnOpciones.Size = New System.Drawing.Size(83, 31)
         Me.btnOpciones.TabIndex = 0
-        Me.btnOpciones.Text = "Opciones"
+        Me.btnOpciones.Text = "Configuración"
         Me.btnOpciones.UseVisualStyleBackColor = True
         '
         'Panel1
@@ -147,38 +134,24 @@ Partial Class frmLUsuario
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.AutoSize = True
         Me.Panel1.Controls.Add(Me.panelUsuario)
-        Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(207, 209)
+        Me.Panel1.Size = New System.Drawing.Size(244, 123)
         Me.Panel1.TabIndex = 2
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToOrderColumns = True
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(84, 19)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(103, 57)
-        Me.DataGridView1.TabIndex = 1
         '
         'frmLUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(231, 233)
+        Me.ClientSize = New System.Drawing.Size(263, 143)
         Me.Controls.Add(Me.Panel1)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(247, 272)
-        Me.MinimumSize = New System.Drawing.Size(247, 272)
         Me.Name = "frmLUsuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.panelUsuario.ResumeLayout(False)
         Me.panelUsuario.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -190,8 +163,6 @@ Partial Class frmLUsuario
     Friend WithEvents btnEntrar As System.Windows.Forms.Button
     Friend WithEvents lblPass As System.Windows.Forms.Label
     Friend WithEvents lblUsuario As System.Windows.Forms.Label
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents btnOpciones As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class

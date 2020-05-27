@@ -24,25 +24,55 @@ Partial Class frmConfiguracion
     Private Sub InitializeComponent()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lblNombre = New System.Windows.Forms.Label()
-        Me.Contraseña = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnSalir = New System.Windows.Forms.Button()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtContraseña = New System.Windows.Forms.TextBox()
-        Me.txtIp = New System.Windows.Forms.TextBox()
-        Me.txtPuerto = New System.Windows.Forms.TextBox()
-        Me.txtBD = New System.Windows.Forms.TextBox()
-        Me.btnRestablecer = New System.Windows.Forms.Button()
         Me.DebugCrear = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnRestablecer = New System.Windows.Forms.Button()
+        Me.txtBD = New System.Windows.Forms.TextBox()
+        Me.txtPuerto = New System.Windows.Forms.TextBox()
+        Me.txtIp = New System.Windows.Forms.TextBox()
+        Me.txtContraseña = New System.Windows.Forms.TextBox()
+        Me.txtUsuario = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Contraseña = New System.Windows.Forms.Label()
+        Me.lblNombre = New System.Windows.Forms.Label()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.NombresUsuario = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmbUsuarios = New System.Windows.Forms.ComboBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.LimpiarUsuario = New System.Windows.Forms.Button()
+        Me.CrearUsuario = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtContrasena = New System.Windows.Forms.TextBox()
+        Me.CargarUsuarios = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.NombresUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(170, 191)
+        Me.btnGuardar.Location = New System.Drawing.Point(289, 197)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.btnGuardar.TabIndex = 0
@@ -51,29 +81,124 @@ Partial Class frmConfiguracion
         '
         'GroupBox1
         '
-        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.DebugCrear)
+        Me.GroupBox1.Controls.Add(Me.btnSalir)
         Me.GroupBox1.Controls.Add(Me.btnRestablecer)
         Me.GroupBox1.Controls.Add(Me.txtBD)
         Me.GroupBox1.Controls.Add(Me.txtPuerto)
         Me.GroupBox1.Controls.Add(Me.txtIp)
         Me.GroupBox1.Controls.Add(Me.txtContraseña)
-        Me.GroupBox1.Controls.Add(Me.txtNombre)
-        Me.GroupBox1.Controls.Add(Me.btnSalir)
+        Me.GroupBox1.Controls.Add(Me.txtUsuario)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Contraseña)
         Me.GroupBox1.Controls.Add(Me.lblNombre)
         Me.GroupBox1.Controls.Add(Me.btnGuardar)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(251, 220)
+        Me.GroupBox1.Size = New System.Drawing.Size(370, 230)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Conexion"
+        '
+        'DebugCrear
+        '
+        Me.DebugCrear.Location = New System.Drawing.Point(136, 197)
+        Me.DebugCrear.Name = "DebugCrear"
+        Me.DebugCrear.Size = New System.Drawing.Size(66, 23)
+        Me.DebugCrear.TabIndex = 13
+        Me.DebugCrear.Text = "Crear"
+        Me.DebugCrear.UseVisualStyleBackColor = True
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Location = New System.Drawing.Point(11, 197)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalir.TabIndex = 6
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'btnRestablecer
+        '
+        Me.btnRestablecer.Location = New System.Drawing.Point(208, 197)
+        Me.btnRestablecer.Name = "btnRestablecer"
+        Me.btnRestablecer.Size = New System.Drawing.Size(75, 23)
+        Me.btnRestablecer.TabIndex = 12
+        Me.btnRestablecer.Text = "Restablecer"
+        Me.btnRestablecer.UseVisualStyleBackColor = True
+        '
+        'txtBD
+        '
+        Me.txtBD.Location = New System.Drawing.Point(11, 162)
+        Me.txtBD.Name = "txtBD"
+        Me.txtBD.Size = New System.Drawing.Size(191, 20)
+        Me.txtBD.TabIndex = 11
+        '
+        'txtPuerto
+        '
+        Me.txtPuerto.Location = New System.Drawing.Point(208, 117)
+        Me.txtPuerto.Name = "txtPuerto"
+        Me.txtPuerto.Size = New System.Drawing.Size(157, 20)
+        Me.txtPuerto.TabIndex = 10
+        '
+        'txtIp
+        '
+        Me.txtIp.Location = New System.Drawing.Point(10, 118)
+        Me.txtIp.Name = "txtIp"
+        Me.txtIp.Size = New System.Drawing.Size(192, 20)
+        Me.txtIp.TabIndex = 9
+        '
+        'txtContraseña
+        '
+        Me.txtContraseña.Location = New System.Drawing.Point(9, 75)
+        Me.txtContraseña.Name = "txtContraseña"
+        Me.txtContraseña.Size = New System.Drawing.Size(193, 20)
+        Me.txtContraseña.TabIndex = 8
+        '
+        'txtUsuario
+        '
+        Me.txtUsuario.Location = New System.Drawing.Point(10, 36)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(192, 20)
+        Me.txtUsuario.TabIndex = 7
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(7, 141)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(75, 13)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Base de datos"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(205, 102)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(38, 13)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Puerto"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(7, 102)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(17, 13)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "IP"
+        '
+        'Contraseña
+        '
+        Me.Contraseña.AutoSize = True
+        Me.Contraseña.Location = New System.Drawing.Point(6, 59)
+        Me.Contraseña.Name = "Contraseña"
+        Me.Contraseña.Size = New System.Drawing.Size(61, 13)
+        Me.Contraseña.TabIndex = 2
+        Me.Contraseña.Text = "Contraseña"
         '
         'lblNombre
         '
@@ -84,118 +209,253 @@ Partial Class frmConfiguracion
         Me.lblNombre.TabIndex = 1
         Me.lblNombre.Text = "Nombre"
         '
-        'Contraseña
+        'TabControl1
         '
-        Me.Contraseña.AutoSize = True
-        Me.Contraseña.Location = New System.Drawing.Point(7, 59)
-        Me.Contraseña.Name = "Contraseña"
-        Me.Contraseña.Size = New System.Drawing.Size(61, 13)
-        Me.Contraseña.TabIndex = 2
-        Me.Contraseña.Text = "Contraseña"
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 12)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(390, 268)
+        Me.TabControl1.TabIndex = 17
         '
-        'Label3
+        'TabPage1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(7, 103)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(17, 13)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "IP"
+        Me.TabPage1.Controls.Add(Me.GroupBox1)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(382, 242)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Conexión"
+        Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'Label4
+        'TabPage2
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(124, 99)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(38, 13)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Puerto"
+        Me.TabPage2.Controls.Add(Me.GroupBox3)
+        Me.TabPage2.Controls.Add(Me.GroupBox2)
+        Me.TabPage2.Controls.Add(Me.GroupBox4)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(382, 242)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Usuario"
+        Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Label5
+        'GroupBox3
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 144)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(75, 13)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Base de datos"
+        Me.GroupBox3.Controls.Add(Me.CargarUsuarios)
+        Me.GroupBox3.Controls.Add(Me.NombresUsuario)
+        Me.GroupBox3.Controls.Add(Me.Button1)
+        Me.GroupBox3.Location = New System.Drawing.Point(208, 88)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(166, 146)
+        Me.GroupBox3.TabIndex = 13
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Usuarios"
         '
-        'btnSalir
+        'NombresUsuario
         '
-        Me.btnSalir.Location = New System.Drawing.Point(8, 191)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
-        Me.btnSalir.TabIndex = 6
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
+        Me.NombresUsuario.AllowUserToOrderColumns = True
+        Me.NombresUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.NombresUsuario.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.NombresUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.NombresUsuario.Location = New System.Drawing.Point(8, 19)
+        Me.NombresUsuario.Name = "NombresUsuario"
+        Me.NombresUsuario.Size = New System.Drawing.Size(152, 84)
+        Me.NombresUsuario.TabIndex = 9
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(8, 117)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Salir"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label1)
+        Me.GroupBox2.Controls.Add(Me.cmbUsuarios)
+        Me.GroupBox2.Controls.Add(Me.Button3)
+        Me.GroupBox2.Controls.Add(Me.Button4)
+        Me.GroupBox2.Controls.Add(Me.Label2)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.TextBox4)
+        Me.GroupBox2.Location = New System.Drawing.Point(6, 88)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(195, 146)
+        Me.GroupBox2.TabIndex = 12
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Edición"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(25, 26)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(48, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Usuarios"
+        '
+        'cmbUsuarios
+        '
+        Me.cmbUsuarios.FormattingEnabled = True
+        Me.cmbUsuarios.Location = New System.Drawing.Point(74, 23)
+        Me.cmbUsuarios.Name = "cmbUsuarios"
+        Me.cmbUsuarios.Size = New System.Drawing.Size(100, 21)
+        Me.cmbUsuarios.TabIndex = 7
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(15, 117)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 6
+        Me.Button3.Text = "Borrar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(99, 117)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 5
+        Me.Button4.Text = "Aplicar"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 80)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Contraseña"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(29, 54)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(44, 13)
+        Me.Label6.TabIndex = 3
+        Me.Label6.Text = "Nombre"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(74, 51)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 0
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(74, 77)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 1
+        Me.TextBox4.UseSystemPasswordChar = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.LimpiarUsuario)
+        Me.GroupBox4.Controls.Add(Me.CrearUsuario)
+        Me.GroupBox4.Controls.Add(Me.Label7)
+        Me.GroupBox4.Controls.Add(Me.Label8)
+        Me.GroupBox4.Controls.Add(Me.txtNombre)
+        Me.GroupBox4.Controls.Add(Me.txtContrasena)
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(368, 74)
+        Me.GroupBox4.TabIndex = 11
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Creación"
+        '
+        'LimpiarUsuario
+        '
+        Me.LimpiarUsuario.Location = New System.Drawing.Point(202, 39)
+        Me.LimpiarUsuario.Name = "LimpiarUsuario"
+        Me.LimpiarUsuario.Size = New System.Drawing.Size(75, 23)
+        Me.LimpiarUsuario.TabIndex = 6
+        Me.LimpiarUsuario.Text = "Limpiar"
+        Me.LimpiarUsuario.UseVisualStyleBackColor = True
+        '
+        'CrearUsuario
+        '
+        Me.CrearUsuario.Location = New System.Drawing.Point(287, 39)
+        Me.CrearUsuario.Name = "CrearUsuario"
+        Me.CrearUsuario.Size = New System.Drawing.Size(75, 23)
+        Me.CrearUsuario.TabIndex = 5
+        Me.CrearUsuario.Text = "Crear"
+        Me.CrearUsuario.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(180, 16)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(61, 13)
+        Me.Label7.TabIndex = 4
+        Me.Label7.Text = "Contraseña"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(12, 16)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(44, 13)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "Nombre"
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(10, 36)
+        Me.txtNombre.Location = New System.Drawing.Point(57, 13)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(100, 20)
-        Me.txtNombre.TabIndex = 7
+        Me.txtNombre.Size = New System.Drawing.Size(117, 20)
+        Me.txtNombre.TabIndex = 0
         '
-        'txtContraseña
+        'txtContrasena
         '
-        Me.txtContraseña.Location = New System.Drawing.Point(10, 78)
-        Me.txtContraseña.Name = "txtContraseña"
-        Me.txtContraseña.Size = New System.Drawing.Size(100, 20)
-        Me.txtContraseña.TabIndex = 8
+        Me.txtContrasena.Location = New System.Drawing.Point(247, 13)
+        Me.txtContrasena.Name = "txtContrasena"
+        Me.txtContrasena.Size = New System.Drawing.Size(115, 20)
+        Me.txtContrasena.TabIndex = 1
+        Me.txtContrasena.UseSystemPasswordChar = True
         '
-        'txtIp
+        'CargarUsuarios
         '
-        Me.txtIp.Location = New System.Drawing.Point(10, 119)
-        Me.txtIp.Name = "txtIp"
-        Me.txtIp.Size = New System.Drawing.Size(100, 20)
-        Me.txtIp.TabIndex = 9
-        '
-        'txtPuerto
-        '
-        Me.txtPuerto.Location = New System.Drawing.Point(127, 118)
-        Me.txtPuerto.Name = "txtPuerto"
-        Me.txtPuerto.Size = New System.Drawing.Size(100, 20)
-        Me.txtPuerto.TabIndex = 10
-        '
-        'txtBD
-        '
-        Me.txtBD.Location = New System.Drawing.Point(10, 165)
-        Me.txtBD.Name = "txtBD"
-        Me.txtBD.Size = New System.Drawing.Size(100, 20)
-        Me.txtBD.TabIndex = 11
-        '
-        'btnRestablecer
-        '
-        Me.btnRestablecer.Location = New System.Drawing.Point(89, 191)
-        Me.btnRestablecer.Name = "btnRestablecer"
-        Me.btnRestablecer.Size = New System.Drawing.Size(75, 23)
-        Me.btnRestablecer.TabIndex = 12
-        Me.btnRestablecer.Text = "Restablecer"
-        Me.btnRestablecer.UseVisualStyleBackColor = True
-        '
-        'DebugCrear
-        '
-        Me.DebugCrear.Location = New System.Drawing.Point(150, 36)
-        Me.DebugCrear.Name = "DebugCrear"
-        Me.DebugCrear.Size = New System.Drawing.Size(66, 23)
-        Me.DebugCrear.TabIndex = 13
-        Me.DebugCrear.Text = "Create"
-        Me.DebugCrear.UseVisualStyleBackColor = True
+        Me.CargarUsuarios.Location = New System.Drawing.Point(90, 117)
+        Me.CargarUsuarios.Name = "CargarUsuarios"
+        Me.CargarUsuarios.Size = New System.Drawing.Size(75, 23)
+        Me.CargarUsuarios.TabIndex = 10
+        Me.CargarUsuarios.Text = "Cargar"
+        Me.CargarUsuarios.UseVisualStyleBackColor = True
         '
         'frmConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(276, 245)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(406, 284)
+        Me.Controls.Add(Me.TabControl1)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(292, 284)
-        Me.MinimumSize = New System.Drawing.Size(292, 284)
         Me.Name = "frmConfiguracion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Servidor"
+        Me.Text = "Configuración"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.NombresUsuario, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -207,11 +467,34 @@ Partial Class frmConfiguracion
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Contraseña As System.Windows.Forms.Label
     Friend WithEvents lblNombre As System.Windows.Forms.Label
-    Friend WithEvents txtNombre As System.Windows.Forms.TextBox
+    Friend WithEvents txtUsuario As System.Windows.Forms.TextBox
     Friend WithEvents txtBD As System.Windows.Forms.TextBox
     Friend WithEvents txtPuerto As System.Windows.Forms.TextBox
     Friend WithEvents txtIp As System.Windows.Forms.TextBox
     Friend WithEvents txtContraseña As System.Windows.Forms.TextBox
     Friend WithEvents btnRestablecer As System.Windows.Forms.Button
     Friend WithEvents DebugCrear As System.Windows.Forms.Button
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents NombresUsuario As System.Windows.Forms.DataGridView
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents cmbUsuarios As System.Windows.Forms.ComboBox
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents LimpiarUsuario As System.Windows.Forms.Button
+    Friend WithEvents CrearUsuario As System.Windows.Forms.Button
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtNombre As System.Windows.Forms.TextBox
+    Friend WithEvents txtContrasena As System.Windows.Forms.TextBox
+    Friend WithEvents CargarUsuarios As System.Windows.Forms.Button
 End Class

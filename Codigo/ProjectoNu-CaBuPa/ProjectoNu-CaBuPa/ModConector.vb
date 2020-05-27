@@ -8,6 +8,7 @@ Module ModConector
     Private Adress, User, Database, Port, Pass As String
     Private UsuarioID As Integer
     Private Usuario, Password As String
+    Private objCmd As New MySqlCommand
 #Region "GetDirection"
     Public Function GAdress() As String
         Return Adress
@@ -71,13 +72,11 @@ Module ModConector
 #End Region
 #Region "Conectar"
     Public Sub Inicio()
-        connStr = "Server=" + Adress + ";UID=" + User + ";database=" + Database + ";Password=" + ";Port=" + Port
-        conn = New MySqlConnection(connStr)
         Try
-            MessageBox.Show("Conectando al servidor")
-            MessageBox.Show(connStr)
+
+            connStr = "Server=" + Adress + ";UID=" + User + ";database=" + Database + ";Password=" + ";Port=" + Port
+            conn = New MySqlConnection(connStr)
             conn.Open()
-            MessageBox.Show("Conectado al servidor")
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
             Console.WriteLine(ex.ToString())
@@ -93,68 +92,105 @@ Module ModConector
 #Region "Interpretar"
     Public Function ESQL(ByVal sql As String) As Boolean
         Try
-            Dim objCmd As New MySqlCommand(sql, conn)
-            objCmd.Connection.Open()
+            objCmd = New MySqlCommand(sql, conn)
+            objCmd.Prepare()
             objCmd.ExecuteNonQuery()
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
             Return False
         End Try
-        conn.Close()
         Return True
     End Function
     Public Function ESQLSelect(ByVal sql As String) As DataTable
         Dim dt As New DataTable
         Try
-            Dim objCmd As New MySqlCommand(sql, conn)
-            objCmd.Connection.Open()
+            objCmd = New MySqlCommand(sql, conn)
+            objCmd.Prepare()
             Dim sqladapter As New MySqlDataAdapter(objCmd)
             sqladapter.Fill(dt)
         Catch ex As Exception
             Return Nothing
         End Try
-        conn.Close()
+        Return dt
+    End Function
+    Public Function ESQLSelect(ByVal objCmd As MySqlCommand) As DataTable
+        Dim dt As New DataTable
+        Try
+            Dim sqladapter As New MySqlDataAdapter(objCmd)
+            sqladapter.Fill(dt)
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+            Return Nothing
+        End Try
         Return dt
     End Function
 #End Region
 #Region "Comandos"
-    Sub BSQL(ByVal nTabla As String, ByVal Condition As String)
+    Public Sub BSQL(ByVal nTabla As String, ByVal Condition As String)
         Dim borrar As String = "DELETE FROM " + nTabla + " WHERE " + Condition
         ESQL(borrar)
     End Sub
-    Sub ISQL(ByVal nTabla As String, ByVal Column As String, ByVal Data As String)
+    Public Sub ISQL(ByVal nTabla As String, ByVal Column As String, ByVal Data As String)
         Dim insert As String = "Insert into " + nTabla + " ( " + Column + " ) values (" + Data + " )"
         ESQL(insert)
     End Sub
-    Function SSQL(ByVal nColumn As String, ByVal nTabla As String, ByVal Condition As String) As DataTable
+    Public Function SSQL(ByVal nColumn As String, ByVal nTabla As String, ByVal Condition As String) As DataTable
         Dim selector As String = "select " + nColumn + " FROM " + nTabla + " WHERE " + Condition
         Return ESQLSelect(selector)
     End Function
-    Sub USQL(ByVal nTabla As String, ByVal Orden As String, ByVal Condition As String)
+    Public Sub USQL(ByVal nTabla As String, ByVal Orden As String, ByVal Condition As String)
         Dim update As String = "update " + nTabla + " set " + Orden + " WHERE " + Condition
         ESQL(update)
     End Sub
 #End Region
 #Region "Usuarios"
-    Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String) As DataTable
+    Public Function AUsuarios() As DataTable
         Try
-            Dim sqladapter As MySqlDataAdapter
-            Dim dt As New DataTable
-            'Dim sqlreader As MySqlDataReader
-            Dim Command As String = "SELECT id_usuario FROM usuarios WHERE nombre = '@nombre' AND contrasena = sha2('@contrasena',256)"
-
-            Dim objCmd As New MySqlCommand("SELECT id_usuario FROM usuarios WHERE nombre = @nombre AND contrasena = sha2(@contrasena,256)", conn)
-            objCmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre
-            objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = contraseña
+            MessageBox.Show(conn.Ping.ToString)
+            objCmd = New MySqlCommand("SELECT nombre FROM usuarios", conn)
             objCmd.Prepare()
-            sqladapter = New MySqlDataAdapter(objCmd)
-            sqladapter.Fill(dt)
-            Return dt
+            Dim dt As DataTable = ESQLSelect(objCmd)
+            'Dim dr As MySqlDataReader
+            'dr = objCmd.ExecuteReader
+            'dt.Load(dr)
+            If Not IsNothing(dt) Then
+                If dt.Rows.Count = 0 Then
+                    MessageBox.Show("Contraseña o Usuario Incorrecto")
+                Else
+                    Return dt
+                End If
+            End If
         Catch e As Exception
             MessageBox.Show(e.ToString)
         End Try
         Return Nothing
     End Function
+    Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String) As Boolean
+        Try
+            objCmd = New MySqlCommand("SELECT id_usuario FROM usuarios WHERE nombre = @nombre AND contrasena = sha2(@contrasena,256)", conn)
+            objCmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre
+            objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = contraseña
+            objCmd.Prepare()
+            Dim dt As DataTable = ESQLSelect(objCmd)
+            If Not IsNothing(dt) Then
+                If dt.Rows.Count = 0 Then
+                    MessageBox.Show("Contraseña o Usuario Incorrecto")
+                Else
+                    Usuario = nombre
+                    Password = contraseña
+                    UsuarioID = Integer.Parse(dt.Rows(0)("id_usuario"))
+                    Return True
+                End If
+            End If
+        Catch e As Exception
+            MessageBox.Show(e.ToString)
+        End Try
+
+        Return False
+    End Function
+    Public Sub IUsuario(ByVal nombre As String, ByVal contraseña As String)
+        ISQL("usuarios", "nombre , contrasena", "'" + nombre + "',sha2('" + contraseña + "',256)")
+    End Sub
 
 #End Region
 End Module

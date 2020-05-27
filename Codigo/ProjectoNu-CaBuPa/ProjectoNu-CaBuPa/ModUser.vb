@@ -32,6 +32,8 @@ Module ModUser
         End If
         leer.Close()
         Verify()
+        ModCodificador.Actualizar()
+        LeeDatos()
     End Sub
     Public Sub Verify()
         If Not File.Exists(ruta & archivo) Then
@@ -47,10 +49,8 @@ Module ModUser
             File.Delete(ruta & archivo)
         End If
     End Sub
-    Public Sub Leer()
+    Public Sub LeeDatos()
         If File.Exists(ruta & archivo) Then
-
-
             Dim leer As New StreamReader(ruta & archivo)
             Dim Datos(4) As String
             Dim n As Byte = 0
@@ -64,6 +64,7 @@ Module ModUser
             ModConector.Crear(Datos(0), Datos(1), Datos(2), Datos(3), Datos(4))
             leer.Close()
         End If
+
     End Sub
     Public Sub Guardar(ByVal Desarrollo As Boolean)
         Dim archivos As String
