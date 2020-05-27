@@ -12,3 +12,6 @@ mysql> create table horas (id_tanda int not null, horas time not null, primary k
 mysql> create table aparece (id_publicidad int  not null,activa boolean not null,pago boolean not null, id_tanda int  not null, primary key (id_publicidad, id_tanda), foreign key (id_tanda) references tanda(id_tanda), foreign key (id_publicidad) references publicidad (id_publicidad));
 mysql> create table serie (id_serie int  not null auto_increment, nombre varchar (30) not null, activo bool not null, primary key (id_serie));
 mysql> create table video (id_video int  not null auto_increment, contenido varchar (40) not null, nombre varchar (30) not null,emitido boolean not null,id_serie int not null, fecha date not null, primary key (id_video), foreign key (id_serie) references serie (id_serie));
+mysql> create table usuarios (id_usuario int  not null auto_increment, nombre varchar (30) not null, contraseña varchar (64) not null, primary key (id_usuario));
+mysql> create table acceso (id_acceso int  not null auto_increment, seccion varchar (64) not null, primary key (id_acceso));
+mysql> create table contiene (id_usuario int  not null, id_acceso int  not null, primary key (id_usuario,id_acceso), foreign key (id_usuario) references usuarios(id_usuario), foreign key (id_acceso) references acceso (id_acceso));

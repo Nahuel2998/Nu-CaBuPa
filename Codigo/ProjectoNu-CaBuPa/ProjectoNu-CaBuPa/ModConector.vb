@@ -1,12 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Data
-
 Imports MySql.Data
+Module ModConector
 
-Public Class Conector
     Private conn As New MySqlConnection
     Private connStr As String
     Private Adress, User, Database, Port, Pass As String
+    Private UsuarioID As Integer
+    Private Usuario, Password As String
 #Region "GetDirection"
     Public Function GAdress() As String
         Return Adress
@@ -25,8 +26,7 @@ Public Class Conector
     End Function
 #End Region
 #Region "Constructor"
-    Public Sub New(ByVal RAdress As String, ByVal RUser As String, ByVal RDatabase As String, ByVal RPort As String, ByVal RPass As String)
-        MyBase.New()
+    Public Sub Crear(ByVal RAdress As String, ByVal RPort As String, ByVal RDatabase As String, ByVal RUser As String, ByVal RPass As String)
         If Not String.IsNullOrEmpty(Adress) Then
             Adress = RAdress
         Else
@@ -52,21 +52,39 @@ Public Class Conector
         Else
             Pass = "root"
         End If
-        Inicio()
+    End Sub
+    Public Sub EAdress(ByVal NAdress As String)
+        Adress = NAdress
+    End Sub
+    Public Sub EPort(ByVal NPort As String)
+        Port = NPort
+    End Sub
+    Public Sub EUser(ByVal NUser As String)
+        User = NUser
+    End Sub
+    Public Sub EPass(ByVal NPass As String)
+        Pass = NPass
+    End Sub
+    Public Sub EDatabase(ByVal NDatabase As String)
+        Database = NDatabase
     End Sub
 #End Region
 #Region "Conectar"
     Public Sub Inicio()
-        connStr = "server=" + Adress + ";user=" + User + ";database=" + Database + ";port=" + Port + ";password=" + Pass + ";"
-        Dim conn As New MySqlConnection(connStr)
+        connStr = "Server=" + Adress + ";UID=" + User + ";database=" + Database + ";Password=" + ";Port=" + Port
+        conn = New MySqlConnection(connStr)
         Try
-            Console.WriteLine("Conectando...")
+            MessageBox.Show("Conectando al servidor")
+            MessageBox.Show(connStr)
             conn.Open()
+            MessageBox.Show("Conectado al servidor")
         Catch ex As Exception
+            MessageBox.Show(ex.ToString())
             Console.WriteLine(ex.ToString())
         End Try
+    End Sub
+    Public Sub desconectar()
         conn.Close()
-        Console.WriteLine("Conexión exitosa con el servidor")
     End Sub
     Public Function RConexion() As MySqlConnection
         Return conn
@@ -85,8 +103,8 @@ Public Class Conector
         conn.Close()
         Return True
     End Function
-    Public Function ESQLSelect(ByVal sql As String) As DataSet
-        Dim dt As New DataSet
+    Public Function ESQLSelect(ByVal sql As String) As DataTable
+        Dim dt As New DataTable
         Try
             Dim objCmd As New MySqlCommand(sql, conn)
             objCmd.Connection.Open()
@@ -94,7 +112,6 @@ Public Class Conector
             sqladapter.Fill(dt)
         Catch ex As Exception
             Return Nothing
-
         End Try
         conn.Close()
         Return dt
@@ -109,13 +126,35 @@ Public Class Conector
         Dim insert As String = "Insert into " + nTabla + " ( " + Column + " ) values (" + Data + " )"
         ESQL(insert)
     End Sub
-    Function SSQL(ByVal nColumn As String, ByVal nTabla As String, ByVal Condition As String) As DataSet
-        Dim selector As String = "select " + nColumn + "FROM " + nTabla + " WHERE " + Condition
+    Function SSQL(ByVal nColumn As String, ByVal nTabla As String, ByVal Condition As String) As DataTable
+        Dim selector As String = "select " + nColumn + " FROM " + nTabla + " WHERE " + Condition
         Return ESQLSelect(selector)
     End Function
     Sub USQL(ByVal nTabla As String, ByVal Orden As String, ByVal Condition As String)
-        Dim update As String = "update " + nTabla + "set " + Orden + " WHERE " + Condition
+        Dim update As String = "update " + nTabla + " set " + Orden + " WHERE " + Condition
         ESQL(update)
     End Sub
 #End Region
-End Class
+#Region "Usuarios"
+    Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String) As DataTable
+        Try
+            Dim sqladapter As MySqlDataAdapter
+            Dim dt As New DataTable
+            'Dim sqlreader As MySqlDataReader
+            Dim Command As String = "SELECT id_usuario FROM usuarios WHERE nombre = '@nombre' AND contrasena = sha2('@contrasena',256)"
+
+            Dim objCmd As New MySqlCommand("SELECT id_usuario FROM usuarios WHERE nombre = @nombre AND contrasena = sha2(@contrasena,256)", conn)
+            objCmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre
+            objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = contraseña
+            objCmd.Prepare()
+            sqladapter = New MySqlDataAdapter(objCmd)
+            sqladapter.Fill(dt)
+            Return dt
+        Catch e As Exception
+            MessageBox.Show(e.ToString)
+        End Try
+        Return Nothing
+    End Function
+
+#End Region
+End Module

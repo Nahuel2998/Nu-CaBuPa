@@ -23,45 +23,78 @@ Partial Class frmLUsuario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.panelUsuario = New System.Windows.Forms.GroupBox()
-        Me.lblUsuario = New System.Windows.Forms.Label()
-        Me.lblPass = New System.Windows.Forms.Label()
-        Me.btnEntrar = New System.Windows.Forms.Button()
+        Me.txtPass = New System.Windows.Forms.TextBox()
+        Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.btnSalir = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.btnEntrar = New System.Windows.Forms.Button()
+        Me.lblPass = New System.Windows.Forms.Label()
+        Me.lblUsuario = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnOpciones = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.panelUsuario.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelUsuario
         '
-        Me.panelUsuario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.panelUsuario.Controls.Add(Me.TextBox2)
-        Me.panelUsuario.Controls.Add(Me.TextBox1)
+        Me.panelUsuario.Controls.Add(Me.txtPass)
+        Me.panelUsuario.Controls.Add(Me.txtUsuario)
         Me.panelUsuario.Controls.Add(Me.btnSalir)
         Me.panelUsuario.Controls.Add(Me.btnEntrar)
         Me.panelUsuario.Controls.Add(Me.lblPass)
         Me.panelUsuario.Controls.Add(Me.lblUsuario)
-        Me.panelUsuario.Location = New System.Drawing.Point(13, 13)
+        Me.panelUsuario.Location = New System.Drawing.Point(3, 3)
         Me.panelUsuario.MinimumSize = New System.Drawing.Size(148, 116)
         Me.panelUsuario.Name = "panelUsuario"
-        Me.panelUsuario.Size = New System.Drawing.Size(263, 130)
+        Me.panelUsuario.Size = New System.Drawing.Size(193, 117)
         Me.panelUsuario.TabIndex = 0
         Me.panelUsuario.TabStop = False
         Me.panelUsuario.Text = "Datos"
         '
-        'lblUsuario
+        'txtPass
         '
-        Me.lblUsuario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtPass.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblUsuario.AutoSize = True
-        Me.lblUsuario.Location = New System.Drawing.Point(7, 29)
-        Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(49, 13)
-        Me.lblUsuario.TabIndex = 0
-        Me.lblUsuario.Text = "Usuario :"
+        Me.txtPass.Location = New System.Drawing.Point(80, 57)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.Size = New System.Drawing.Size(103, 20)
+        Me.txtPass.TabIndex = 5
+        Me.txtPass.UseSystemPasswordChar = True
+        '
+        'txtUsuario
+        '
+        Me.txtUsuario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtUsuario.Location = New System.Drawing.Point(80, 29)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(103, 20)
+        Me.txtUsuario.TabIndex = 4
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSalir.Location = New System.Drawing.Point(45, 80)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(68, 31)
+        Me.btnSalir.TabIndex = 3
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'btnEntrar
+        '
+        Me.btnEntrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEntrar.Location = New System.Drawing.Point(119, 80)
+        Me.btnEntrar.Name = "btnEntrar"
+        Me.btnEntrar.Size = New System.Drawing.Size(68, 31)
+        Me.btnEntrar.TabIndex = 2
+        Me.btnEntrar.Text = "Entrar"
+        Me.btnEntrar.UseVisualStyleBackColor = True
         '
         'lblPass
         '
@@ -75,65 +108,90 @@ Partial Class frmLUsuario
         Me.lblPass.TabIndex = 1
         Me.lblPass.Text = "Contraseña :"
         '
-        'btnEntrar
+        'lblUsuario
         '
-        Me.btnEntrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEntrar.Location = New System.Drawing.Point(120, 93)
-        Me.btnEntrar.Name = "btnEntrar"
-        Me.btnEntrar.Size = New System.Drawing.Size(68, 31)
-        Me.btnEntrar.TabIndex = 2
-        Me.btnEntrar.Text = "Entrar"
-        Me.btnEntrar.UseVisualStyleBackColor = True
-        '
-        'btnSalir
-        '
-        Me.btnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSalir.Location = New System.Drawing.Point(189, 93)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(68, 31)
-        Me.btnSalir.TabIndex = 3
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.lblUsuario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Location = New System.Drawing.Point(80, 29)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox1.TabIndex = 4
+        Me.lblUsuario.AutoSize = True
+        Me.lblUsuario.Location = New System.Drawing.Point(7, 29)
+        Me.lblUsuario.Name = "lblUsuario"
+        Me.lblUsuario.Size = New System.Drawing.Size(49, 13)
+        Me.lblUsuario.TabIndex = 0
+        Me.lblUsuario.Text = "Usuario :"
         '
-        'TextBox2
+        'GroupBox1
         '
-        Me.TextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.GroupBox1.Controls.Add(Me.DataGridView1)
+        Me.GroupBox1.Controls.Add(Me.btnOpciones)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 118)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(193, 82)
+        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Configuración"
+        '
+        'btnOpciones
+        '
+        Me.btnOpciones.Location = New System.Drawing.Point(12, 19)
+        Me.btnOpciones.Name = "btnOpciones"
+        Me.btnOpciones.Size = New System.Drawing.Size(65, 37)
+        Me.btnOpciones.TabIndex = 0
+        Me.btnOpciones.Text = "Opciones"
+        Me.btnOpciones.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Location = New System.Drawing.Point(80, 57)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox2.TabIndex = 5
+        Me.Panel1.AutoSize = True
+        Me.Panel1.Controls.Add(Me.panelUsuario)
+        Me.Panel1.Controls.Add(Me.GroupBox1)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(207, 209)
+        Me.Panel1.TabIndex = 2
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(84, 19)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(103, 57)
+        Me.DataGridView1.TabIndex = 1
         '
         'frmLUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(288, 155)
-        Me.Controls.Add(Me.panelUsuario)
-        Me.MinimumSize = New System.Drawing.Size(190, 179)
+        Me.ClientSize = New System.Drawing.Size(231, 233)
+        Me.Controls.Add(Me.Panel1)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(247, 272)
+        Me.MinimumSize = New System.Drawing.Size(247, 272)
         Me.Name = "frmLUsuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.panelUsuario.ResumeLayout(False)
         Me.panelUsuario.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents panelUsuario As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtPass As System.Windows.Forms.TextBox
+    Friend WithEvents txtUsuario As System.Windows.Forms.TextBox
     Friend WithEvents btnSalir As System.Windows.Forms.Button
     Friend WithEvents btnEntrar As System.Windows.Forms.Button
     Friend WithEvents lblPass As System.Windows.Forms.Label
     Friend WithEvents lblUsuario As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents btnOpciones As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class
