@@ -41,11 +41,8 @@ Partial Class frmConfiguracion
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.NombresUsuario = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmbUsuarios = New System.Windows.Forms.ComboBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -59,15 +56,15 @@ Partial Class frmConfiguracion
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtContrasena = New System.Windows.Forms.TextBox()
-        Me.CargarUsuarios = New System.Windows.Forms.Button()
+        Me.dgvNombreUsuario = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.NombresUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.dgvNombreUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnGuardar
@@ -104,12 +101,14 @@ Partial Class frmConfiguracion
         '
         'DebugCrear
         '
+        Me.DebugCrear.Enabled = False
         Me.DebugCrear.Location = New System.Drawing.Point(136, 197)
         Me.DebugCrear.Name = "DebugCrear"
         Me.DebugCrear.Size = New System.Drawing.Size(66, 23)
         Me.DebugCrear.TabIndex = 13
         Me.DebugCrear.Text = "Crear"
         Me.DebugCrear.UseVisualStyleBackColor = True
+        Me.DebugCrear.Visible = False
         '
         'btnSalir
         '
@@ -213,10 +212,10 @@ Partial Class frmConfiguracion
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 12)
+        Me.TabControl1.Location = New System.Drawing.Point(6, 8)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(390, 268)
+        Me.TabControl1.Size = New System.Drawing.Size(385, 263)
         Me.TabControl1.TabIndex = 17
         '
         'TabPage1
@@ -225,50 +224,36 @@ Partial Class frmConfiguracion
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(382, 242)
+        Me.TabPage1.Size = New System.Drawing.Size(377, 237)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Conexión"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.GroupBox3)
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox4)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(382, 242)
+        Me.TabPage2.Size = New System.Drawing.Size(377, 237)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Usuario"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.CargarUsuarios)
-        Me.GroupBox3.Controls.Add(Me.NombresUsuario)
-        Me.GroupBox3.Controls.Add(Me.Button1)
-        Me.GroupBox3.Location = New System.Drawing.Point(208, 88)
+        Me.GroupBox3.Controls.Add(Me.dgvNombreUsuario)
+        Me.GroupBox3.Location = New System.Drawing.Point(183, 16)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(166, 146)
+        Me.GroupBox3.Size = New System.Drawing.Size(179, 124)
         Me.GroupBox3.TabIndex = 13
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Usuarios"
         '
-        'NombresUsuario
-        '
-        Me.NombresUsuario.AllowUserToOrderColumns = True
-        Me.NombresUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.NombresUsuario.BackgroundColor = System.Drawing.SystemColors.ButtonFace
-        Me.NombresUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.NombresUsuario.Location = New System.Drawing.Point(8, 19)
-        Me.NombresUsuario.Name = "NombresUsuario"
-        Me.NombresUsuario.Size = New System.Drawing.Size(152, 84)
-        Me.NombresUsuario.TabIndex = 9
-        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(8, 117)
+        Me.Button1.Location = New System.Drawing.Point(15, 39)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 5
@@ -277,37 +262,19 @@ Partial Class frmConfiguracion
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.cmbUsuarios)
+        Me.GroupBox2.Controls.Add(Me.GroupBox3)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.Button4)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.TextBox3)
         Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 88)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 5)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(195, 146)
+        Me.GroupBox2.Size = New System.Drawing.Size(368, 146)
         Me.GroupBox2.TabIndex = 12
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Edición"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(25, 26)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 13)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Usuarios"
-        '
-        'cmbUsuarios
-        '
-        Me.cmbUsuarios.FormattingEnabled = True
-        Me.cmbUsuarios.Location = New System.Drawing.Point(74, 23)
-        Me.cmbUsuarios.Name = "cmbUsuarios"
-        Me.cmbUsuarios.Size = New System.Drawing.Size(100, 21)
-        Me.cmbUsuarios.TabIndex = 7
         '
         'Button3
         '
@@ -330,7 +297,7 @@ Partial Class frmConfiguracion
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 80)
+        Me.Label2.Location = New System.Drawing.Point(12, 64)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 13)
         Me.Label2.TabIndex = 4
@@ -339,7 +306,7 @@ Partial Class frmConfiguracion
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(29, 54)
+        Me.Label6.Location = New System.Drawing.Point(12, 16)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(44, 13)
         Me.Label6.TabIndex = 3
@@ -347,28 +314,29 @@ Partial Class frmConfiguracion
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(74, 51)
+        Me.TextBox3.Location = New System.Drawing.Point(15, 35)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(159, 20)
         Me.TextBox3.TabIndex = 0
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(74, 77)
+        Me.TextBox4.Location = New System.Drawing.Point(15, 80)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(159, 20)
         Me.TextBox4.TabIndex = 1
         Me.TextBox4.UseSystemPasswordChar = True
         '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.LimpiarUsuario)
+        Me.GroupBox4.Controls.Add(Me.Button1)
         Me.GroupBox4.Controls.Add(Me.CrearUsuario)
         Me.GroupBox4.Controls.Add(Me.Label7)
         Me.GroupBox4.Controls.Add(Me.Label8)
         Me.GroupBox4.Controls.Add(Me.txtNombre)
         Me.GroupBox4.Controls.Add(Me.txtContrasena)
-        Me.GroupBox4.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 157)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(368, 74)
         Me.GroupBox4.TabIndex = 11
@@ -426,20 +394,25 @@ Partial Class frmConfiguracion
         Me.txtContrasena.TabIndex = 1
         Me.txtContrasena.UseSystemPasswordChar = True
         '
-        'CargarUsuarios
+        'dgvNombreUsuario
         '
-        Me.CargarUsuarios.Location = New System.Drawing.Point(90, 117)
-        Me.CargarUsuarios.Name = "CargarUsuarios"
-        Me.CargarUsuarios.Size = New System.Drawing.Size(75, 23)
-        Me.CargarUsuarios.TabIndex = 10
-        Me.CargarUsuarios.Text = "Cargar"
-        Me.CargarUsuarios.UseVisualStyleBackColor = True
+        Me.dgvNombreUsuario.AllowUserToAddRows = False
+        Me.dgvNombreUsuario.AllowUserToDeleteRows = False
+        Me.dgvNombreUsuario.AllowUserToResizeColumns = False
+        Me.dgvNombreUsuario.AllowUserToResizeRows = False
+        Me.dgvNombreUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvNombreUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvNombreUsuario.Location = New System.Drawing.Point(6, 19)
+        Me.dgvNombreUsuario.Name = "dgvNombreUsuario"
+        Me.dgvNombreUsuario.RowHeadersVisible = False
+        Me.dgvNombreUsuario.Size = New System.Drawing.Size(167, 99)
+        Me.dgvNombreUsuario.TabIndex = 0
         '
         'frmConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(406, 284)
+        Me.ClientSize = New System.Drawing.Size(393, 272)
         Me.Controls.Add(Me.TabControl1)
         Me.MaximizeBox = False
         Me.Name = "frmConfiguracion"
@@ -451,11 +424,11 @@ Partial Class frmConfiguracion
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.NombresUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.dgvNombreUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -478,11 +451,8 @@ Partial Class frmConfiguracion
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents NombresUsuario As System.Windows.Forms.DataGridView
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents cmbUsuarios As System.Windows.Forms.ComboBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -496,5 +466,5 @@ Partial Class frmConfiguracion
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents txtContrasena As System.Windows.Forms.TextBox
-    Friend WithEvents CargarUsuarios As System.Windows.Forms.Button
+    Friend WithEvents dgvNombreUsuario As System.Windows.Forms.DataGridView
 End Class

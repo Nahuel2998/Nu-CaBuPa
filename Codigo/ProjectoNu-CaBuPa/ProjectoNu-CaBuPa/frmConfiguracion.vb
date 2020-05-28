@@ -50,28 +50,28 @@ Public Class frmConfiguracion
         ModConector.IUsuario(txtUsuario.Text, txtContraseña.Text)
     End Sub
 
-    Private Sub ActualizarUsuarios()
-        MessageBox.Show("Carga")
-        Dim dt As DataTable = ModConector.AUsuarios()
+    Private Sub ActualizarUsuarios(ByVal actualizar As Boolean)
+        Dim dt As DataTable = ModConector.AUsuarios(actualizar)
         If Not IsNothing(dt) Then
-            NombresUsuario.DataSource = dt
-            cmbUsuarios.DataSource = dt
-            MessageBox.Show("Carga")
+            dgvNombreUsuario.DataSource = dt
         Else
-            MessageBox.Show("No")
+            MessageBox.Show("No se cargo correctamente")
         End If
-    End Sub
-    Private Sub TabPage2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage2.Click
-        ActualizarUsuarios()
     End Sub
 
     Private Sub CrearUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CrearUsuario.Click
         ModConector.IUsuario(txtNombre.Text, txtContrasena.Text)
-        ActualizarUsuarios()
+        ActualizarUsuarios(True)
     End Sub
 
-  
-    Private Sub CargarUsuarios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CargarUsuarios.Click
-        ActualizarUsuarios()
+    Private Sub frmConfiguracion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If ModConector.GDebug Then
+            DebugCrear.Visible = True
+            DebugCrear.Enabled = True
+        End If
+    End Sub
+
+    Private Sub TabPage2_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage2.Enter
+        ActualizarUsuarios(False)
     End Sub
 End Class
