@@ -70,6 +70,7 @@ Module ModUser
         Dim archivos As String
         If Desarrollo Then
             archivos = Barchivo
+
         Else
             archivos = archivo
         End If

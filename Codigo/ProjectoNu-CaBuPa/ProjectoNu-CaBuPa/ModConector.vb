@@ -119,12 +119,17 @@ Module ModConector
         End Try
         Return dt
     End Function
-    Public Function ESQLSelect(ByVal objCmd As MySqlCommand) As DataTable
+    Public Function ESQLSelect(ByVal objCmd As MySqlCommand, ByVal guardar As Boolean) As DataTable
         dt = New DataTable
         Try
             sqladapter = New MySqlDataAdapter(objCmd)
             sqladapter.Fill(dt)
-            ds.Tables.Add(dt)
+            If guardar Then
+                If ds.Tables.Contains(dt.TableName) Then
+                    ds.Tables.Remove(dt.TableName)
+                End If
+                ds.Tables.Add(dt)
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
             Return Nothing
@@ -167,7 +172,7 @@ Module ModConector
             Try
                 objCmd = New MySqlCommand("SELECT nombre as 'Nombre Usuarios' FROM usuarios", conn)
                 objCmd.Prepare()
-                Dim dt As DataTable = ESQLSelect(objCmd)
+                Dim dt As DataTable = ESQLSelect(objCmd, True)
                 If Not IsNothing(dt) Then
                     If dt.Rows.Count = 0 Then
                         MessageBox.Show("No hay usuarios")
@@ -184,11 +189,12 @@ Module ModConector
     End Function
     Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String) As Boolean
         Try
-            objCmd = New MySqlCommand("SELECT id_usuario FROM usuarios WHERE nombre = @nombre AND contrasena = sha2(@contrasena,256)", conn)
+            objCmd = New MySqlCommand("SELECT id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256))", conn)
             objCmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre
             objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = contraseña
+            objCmd.Parameters.Add("@key", MySqlDbType.VarChar).Value = ModCodificador.GKey
             objCmd.Prepare()
-            Dim dt As DataTable = ESQLSelect(objCmd)
+            Dim dt As DataTable = ESQLSelect(objCmd, False)
             If Not IsNothing(dt) Then
                 If dt.Rows.Count = 0 Then
                     MessageBox.Show("Contraseña o Usuario Incorrecto")
@@ -206,7 +212,7 @@ Module ModConector
         Return False
     End Function
     Public Sub IUsuario(ByVal nombre As String, ByVal contraseña As String)
-        ISQL("usuarios", "nombre , contrasena", "'" + nombre + "',sha2('" + contraseña + "',256)")
+        ISQL("usuarios", "nombre , contrasena", "'" + nombre + "', AES_ENCRYPT('" + contraseña + "', sha2('" + ModCodificador.GKey + "',256))")
     End Sub
 
 #End Region
