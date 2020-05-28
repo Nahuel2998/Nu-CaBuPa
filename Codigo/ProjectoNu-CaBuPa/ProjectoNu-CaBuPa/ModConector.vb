@@ -13,6 +13,9 @@ Module ModConector
     Private dt As New DataTable
     Private sqladapter As MySqlDataAdapter
 #Region "GetDirection"
+    Public Function GDT(ByVal Nombre As String) As DataTable
+        Return ds.Tables(Nombre)
+    End Function
     Public Function GDebug() As Boolean
         Return Debug
     End Function
@@ -170,7 +173,7 @@ Module ModConector
             Return dt
         Else
             Try
-                objCmd = New MySqlCommand("SELECT nombre as 'Nombre Usuarios' FROM usuarios", conn)
+                objCmd = New MySqlCommand("SELECT id_usuario as 'ID', nombre as 'Nombre Usuarios' FROM usuarios", conn)
                 objCmd.Prepare()
                 Dim dt As DataTable = ESQLSelect(objCmd, True)
                 If Not IsNothing(dt) Then
@@ -189,10 +192,9 @@ Module ModConector
     End Function
     Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String) As Boolean
         Try
-            objCmd = New MySqlCommand("SELECT id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256))", conn)
+            objCmd = New MySqlCommand("SELECT id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = @contrasena", conn)
             objCmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre
-            objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = contraseña
-            objCmd.Parameters.Add("@key", MySqlDbType.VarChar).Value = ModCodificador.GKey
+            objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = ModCodificador.Encriptar(contraseña)
             objCmd.Prepare()
             Dim dt As DataTable = ESQLSelect(objCmd, False)
             If Not IsNothing(dt) Then
@@ -212,7 +214,7 @@ Module ModConector
         Return False
     End Function
     Public Sub IUsuario(ByVal nombre As String, ByVal contraseña As String)
-        ISQL("usuarios", "nombre , contrasena", "'" + nombre + "', AES_ENCRYPT('" + contraseña + "', sha2('" + ModCodificador.GKey + "',256))")
+        ISQL("usuarios", "nombre , contrasena", "'" + nombre + "', '" + ModCodificador.Encriptar(contraseña) + "'")
     End Sub
 
 #End Region

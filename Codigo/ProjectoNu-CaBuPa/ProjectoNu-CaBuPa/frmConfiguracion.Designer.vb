@@ -25,7 +25,6 @@ Partial Class frmConfiguracion
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DebugCrear = New System.Windows.Forms.Button()
-        Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnRestablecer = New System.Windows.Forms.Button()
         Me.txtBD = New System.Windows.Forms.TextBox()
         Me.txtPuerto = New System.Windows.Forms.TextBox()
@@ -40,15 +39,15 @@ Partial Class frmConfiguracion
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.dgvNombreUsuario = New System.Windows.Forms.DataGridView()
+        Me.UBorrar = New System.Windows.Forms.Button()
+        Me.UAplicar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtENombre = New System.Windows.Forms.TextBox()
+        Me.txtEContrasena = New System.Windows.Forms.TextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.LimpiarUsuario = New System.Windows.Forms.Button()
         Me.CrearUsuario = New System.Windows.Forms.Button()
@@ -56,15 +55,14 @@ Partial Class frmConfiguracion
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtContrasena = New System.Windows.Forms.TextBox()
-        Me.dgvNombreUsuario = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         CType(Me.dgvNombreUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnGuardar
@@ -79,7 +77,6 @@ Partial Class frmConfiguracion
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.DebugCrear)
-        Me.GroupBox1.Controls.Add(Me.btnSalir)
         Me.GroupBox1.Controls.Add(Me.btnRestablecer)
         Me.GroupBox1.Controls.Add(Me.txtBD)
         Me.GroupBox1.Controls.Add(Me.txtPuerto)
@@ -109,15 +106,6 @@ Partial Class frmConfiguracion
         Me.DebugCrear.Text = "Crear"
         Me.DebugCrear.UseVisualStyleBackColor = True
         Me.DebugCrear.Visible = False
-        '
-        'btnSalir
-        '
-        Me.btnSalir.Location = New System.Drawing.Point(11, 197)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
-        Me.btnSalir.TabIndex = 6
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
         '
         'btnRestablecer
         '
@@ -241,6 +229,22 @@ Partial Class frmConfiguracion
         Me.TabPage2.Text = "Usuario"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.GroupBox3)
+        Me.GroupBox2.Controls.Add(Me.UBorrar)
+        Me.GroupBox2.Controls.Add(Me.UAplicar)
+        Me.GroupBox2.Controls.Add(Me.Label2)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.txtENombre)
+        Me.GroupBox2.Controls.Add(Me.txtEContrasena)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 5)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(368, 146)
+        Me.GroupBox2.TabIndex = 12
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Edición"
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.dgvNombreUsuario)
@@ -251,48 +255,40 @@ Partial Class frmConfiguracion
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Usuarios"
         '
-        'Button1
+        'dgvNombreUsuario
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 39)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Salir"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.dgvNombreUsuario.AllowUserToAddRows = False
+        Me.dgvNombreUsuario.AllowUserToDeleteRows = False
+        Me.dgvNombreUsuario.AllowUserToResizeColumns = False
+        Me.dgvNombreUsuario.AllowUserToResizeRows = False
+        Me.dgvNombreUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvNombreUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvNombreUsuario.Location = New System.Drawing.Point(6, 19)
+        Me.dgvNombreUsuario.MultiSelect = False
+        Me.dgvNombreUsuario.Name = "dgvNombreUsuario"
+        Me.dgvNombreUsuario.ReadOnly = True
+        Me.dgvNombreUsuario.RowHeadersVisible = False
+        Me.dgvNombreUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvNombreUsuario.Size = New System.Drawing.Size(167, 99)
+        Me.dgvNombreUsuario.TabIndex = 0
         '
-        'GroupBox2
+        'UBorrar
         '
-        Me.GroupBox2.Controls.Add(Me.GroupBox3)
-        Me.GroupBox2.Controls.Add(Me.Button3)
-        Me.GroupBox2.Controls.Add(Me.Button4)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 5)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(368, 146)
-        Me.GroupBox2.TabIndex = 12
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Edición"
+        Me.UBorrar.Location = New System.Drawing.Point(15, 117)
+        Me.UBorrar.Name = "UBorrar"
+        Me.UBorrar.Size = New System.Drawing.Size(75, 23)
+        Me.UBorrar.TabIndex = 6
+        Me.UBorrar.Text = "Borrar"
+        Me.UBorrar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'UAplicar
         '
-        Me.Button3.Location = New System.Drawing.Point(15, 117)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Borrar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(99, 117)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Aplicar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.UAplicar.Location = New System.Drawing.Point(99, 117)
+        Me.UAplicar.Name = "UAplicar"
+        Me.UAplicar.Size = New System.Drawing.Size(75, 23)
+        Me.UAplicar.TabIndex = 5
+        Me.UAplicar.Text = "Aplicar"
+        Me.UAplicar.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -312,25 +308,24 @@ Partial Class frmConfiguracion
         Me.Label6.TabIndex = 3
         Me.Label6.Text = "Nombre"
         '
-        'TextBox3
+        'txtENombre
         '
-        Me.TextBox3.Location = New System.Drawing.Point(15, 35)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox3.TabIndex = 0
+        Me.txtENombre.Location = New System.Drawing.Point(15, 35)
+        Me.txtENombre.Name = "txtENombre"
+        Me.txtENombre.Size = New System.Drawing.Size(159, 20)
+        Me.txtENombre.TabIndex = 0
         '
-        'TextBox4
+        'txtEContrasena
         '
-        Me.TextBox4.Location = New System.Drawing.Point(15, 80)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox4.TabIndex = 1
-        Me.TextBox4.UseSystemPasswordChar = True
+        Me.txtEContrasena.Location = New System.Drawing.Point(15, 80)
+        Me.txtEContrasena.Name = "txtEContrasena"
+        Me.txtEContrasena.Size = New System.Drawing.Size(159, 20)
+        Me.txtEContrasena.TabIndex = 1
+        Me.txtEContrasena.UseSystemPasswordChar = True
         '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.LimpiarUsuario)
-        Me.GroupBox4.Controls.Add(Me.Button1)
         Me.GroupBox4.Controls.Add(Me.CrearUsuario)
         Me.GroupBox4.Controls.Add(Me.Label7)
         Me.GroupBox4.Controls.Add(Me.Label8)
@@ -394,20 +389,6 @@ Partial Class frmConfiguracion
         Me.txtContrasena.TabIndex = 1
         Me.txtContrasena.UseSystemPasswordChar = True
         '
-        'dgvNombreUsuario
-        '
-        Me.dgvNombreUsuario.AllowUserToAddRows = False
-        Me.dgvNombreUsuario.AllowUserToDeleteRows = False
-        Me.dgvNombreUsuario.AllowUserToResizeColumns = False
-        Me.dgvNombreUsuario.AllowUserToResizeRows = False
-        Me.dgvNombreUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvNombreUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvNombreUsuario.Location = New System.Drawing.Point(6, 19)
-        Me.dgvNombreUsuario.Name = "dgvNombreUsuario"
-        Me.dgvNombreUsuario.RowHeadersVisible = False
-        Me.dgvNombreUsuario.Size = New System.Drawing.Size(167, 99)
-        Me.dgvNombreUsuario.TabIndex = 0
-        '
         'frmConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -423,18 +404,17 @@ Partial Class frmConfiguracion
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.dgvNombreUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.dgvNombreUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents btnSalir As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -451,14 +431,13 @@ Partial Class frmConfiguracion
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents UBorrar As System.Windows.Forms.Button
+    Friend WithEvents UAplicar As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents txtENombre As System.Windows.Forms.TextBox
+    Friend WithEvents txtEContrasena As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents LimpiarUsuario As System.Windows.Forms.Button
     Friend WithEvents CrearUsuario As System.Windows.Forms.Button

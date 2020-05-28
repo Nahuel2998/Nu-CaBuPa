@@ -1,6 +1,8 @@
 ﻿
 Public Class frmConfiguracion
-    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
+    Private UserID As Integer = Nothing
+    Private UsuarioDatos As DataTable
+    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Dispose()
     End Sub
 
@@ -54,6 +56,7 @@ Public Class frmConfiguracion
         Dim dt As DataTable = ModConector.AUsuarios(actualizar)
         If Not IsNothing(dt) Then
             dgvNombreUsuario.DataSource = dt
+
         Else
             MessageBox.Show("No se cargo correctamente")
         End If
@@ -62,6 +65,7 @@ Public Class frmConfiguracion
     Private Sub CrearUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CrearUsuario.Click
         ModConector.IUsuario(txtNombre.Text, txtContrasena.Text)
         ActualizarUsuarios(True)
+        limpiar()
     End Sub
 
     Private Sub frmConfiguracion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -73,5 +77,44 @@ Public Class frmConfiguracion
 
     Private Sub TabPage2_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage2.Enter
         ActualizarUsuarios(False)
+    End Sub
+
+    Private Sub dgvNombreUsuario_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dgvNombreUsuario.GotFocus
+        'dgvNombreUsuario.DataSource = ModConector.GDT("usuarios")
+        txtENombre.Text = dgvNombreUsuario.CurrentRow.Cells("Nombre Usuarios").Value.ToString
+        'Try
+        UserID = dgvNombreUsuario.CurrentRow.Cells("ID").Value
+        'txtENombre.Text = ModConector.GDT("usuarios").Rows(dgvNombreUsuario.CurrentRow.Index).Item("Nombre Usuarios")
+        'Catch es As Exception
+        'End Try
+
+    End Sub
+
+    Private Sub limpiar()
+        txtNombre.Text = ""
+        txtContrasena.Text = ""
+    End Sub
+    Private Sub LimpiarUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LimpiarUsuario.Click
+        limpiar()
+    End Sub
+    Private Sub LimpiarEditar()
+        txtENombre.Text = ""
+        txtEContrasena.Text = ""
+        dgvNombreUsuario.CurrentRow.Selected = False
+    End Sub
+    Private Sub UAplicar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UAplicar.Click
+        If Not IsNothing(UserID) Then
+            USQL("usuarios", "nombre ='" + txtENombre.Text + "',contrasena = '" + ModCodificador.Encriptar(txtEContrasena.Text()) + "'", "id_usuario ='" + UserID.ToString() + "'")
+            ActualizarUsuarios(False)
+            LimpiarEditar()
+        End If
+    End Sub
+
+    Private Sub UBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UBorrar.Click
+        If Not IsNothing(UserID) Then
+            BSQL("usuarios", "id_usuario ='" + UserID.ToString + "'")
+            ActualizarUsuarios(False)
+            LimpiarEditar()
+        End If
     End Sub
 End Class
