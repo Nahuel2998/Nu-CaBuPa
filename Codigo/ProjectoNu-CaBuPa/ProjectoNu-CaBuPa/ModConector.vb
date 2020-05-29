@@ -18,6 +18,14 @@ Module ModConector
     Public Function GDT(ByVal Nombre As String) As DataTable
         Return ds.Tables(Nombre)
     End Function
+    Public Function GUsuarioID() As Integer
+        Return UsuarioID
+    End Function
+    Public Sub BorrarUsuario()
+        Usuario = ""
+        Password = ""
+        UsuarioID = Nothing
+    End Sub
     Public Function GDebug() As Boolean
         Return Debug
     End Function
@@ -84,14 +92,15 @@ Module ModConector
 #Region "Conectar"
     Public Sub Inicio()
         Try
-            'connStr = "Server=" + Adress + "; port=" + Port + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass '+ "; CharSet=utf8"
-            connStr = "Server=" + Adress + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8mb4"
+            connStr = "DataSource=" + Adress + "; Port=" + Port + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8"
+            'connStr = "Server=" + Adress + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8mb4"
             'connStr = "Server=" + Adress + "; Database=" + Database + "; Uid=" + User + "; Pwd=root; CharSet=utf8mb4"
             conn = New MySqlConnection(connStr)
-            conn.Open()
+            If Not conn.Ping Then
+                conn.Open()
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
-            Console.WriteLine(ex.ToString())
         End Try
     End Sub
     Public Sub desconectar()

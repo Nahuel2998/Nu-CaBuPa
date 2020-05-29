@@ -2,9 +2,6 @@
 Public Class frmConfiguracion
     Private UserID As Integer = Nothing
     Private UsuarioDatos As DataTable
-    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Dispose()
-    End Sub
 
     Private Sub btnRestablecer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRestablecer.Click
         ModUser.Borrar()
@@ -68,6 +65,11 @@ Public Class frmConfiguracion
         limpiar()
     End Sub
 
+    Private Sub frmConfiguracion_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        ModUser.Inicio()
+        ModConector.Inicio()
+    End Sub
+
     Private Sub frmConfiguracion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If ModConector.GDebug Then
             DebugCrear.Visible = True
@@ -98,9 +100,13 @@ Public Class frmConfiguracion
     End Sub
     Private Sub UAplicar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UAplicar.Click
         If Not IsNothing(UserID) Then
-            USQL("usuarios", "nombre ='" + txtENombre.Text + "',contrasena = AES_ENCRYPT('" + ModCodificador.Encriptar(txtEContrasena.Text()) + "',sha2('" + ModCodificador.GKeyMaestra + "',256))", "id_usuario ='" + UserID.ToString() + "'")
+            USQL("usuarios", "nombre ='" + txtENombre.Text + "',contrasena = AES_ENCRYPT('" + txtEContrasena.Text() + "',sha2('" + ModCodificador.GKey + "',256))", "id_usuario ='" + UserID.ToString() + "'")
             ActualizarUsuarios(False)
+            If UserID = ModConector.GUsuarioID Then
+                ModConector.BorrarUsuario()
+                Me.Dispose()
 
+            End If
         End If
         LimpiarEditar()
     End Sub
@@ -109,6 +115,11 @@ Public Class frmConfiguracion
         If Not IsNothing(UserID) Then
             BSQL("usuarios", "id_usuario ='" + UserID.ToString + "'")
             ActualizarUsuarios(False)
+            If UserID = ModConector.GUsuarioID Then
+                ModConector.BorrarUsuario()
+                Me.Dispose()
+
+            End If
         End If
         LimpiarEditar()
     End Sub
@@ -124,5 +135,6 @@ Public Class frmConfiguracion
         Catch es As Exception
         End Try
     End Sub
+
 
 End Class
