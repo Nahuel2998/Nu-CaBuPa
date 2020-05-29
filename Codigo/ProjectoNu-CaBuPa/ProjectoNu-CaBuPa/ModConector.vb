@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Data
 Imports MySql.Data
+
 Module ModConector
     Private Debug As Boolean = True
     Private conn As New MySqlConnection
@@ -12,6 +13,7 @@ Module ModConector
     Private ds As New DataSet
     Private dt As New DataTable
     Private sqladapter As MySqlDataAdapter
+
 #Region "GetDirection"
     Public Function GDT(ByVal Nombre As String) As DataTable
         Return ds.Tables(Nombre)
@@ -82,7 +84,9 @@ Module ModConector
 #Region "Conectar"
     Public Sub Inicio()
         Try
-            connStr = "Server=" + Adress + "; UID=" + User + "; database=" + Database + "; Password=" + Pass + "; Port=" + Port + "; CharSet=utf8"
+            'connStr = "Server=" + Adress + "; port=" + Port + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass '+ "; CharSet=utf8"
+            connStr = "Server=" + Adress + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8mb4"
+            'connStr = "Server=" + Adress + "; Database=" + Database + "; Uid=" + User + "; Pwd=root; CharSet=utf8mb4"
             conn = New MySqlConnection(connStr)
             conn.Open()
         Catch ex As Exception
@@ -192,9 +196,10 @@ Module ModConector
     End Function
     Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String) As Boolean
         Try
-            objCmd = New MySqlCommand("SELECT id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = @contrasena", conn)
+            objCmd = New MySqlCommand("SELECT id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256))", conn)
             objCmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre
-            objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = ModCodificador.Encriptar(contraseña)
+            objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = contraseña
+            objCmd.Parameters.Add("@key", MySqlDbType.VarChar).Value = ModCodificador.GKey
             objCmd.Prepare()
             Dim dt As DataTable = ESQLSelect(objCmd, False)
             If Not IsNothing(dt) Then
@@ -214,7 +219,7 @@ Module ModConector
         Return False
     End Function
     Public Sub IUsuario(ByVal nombre As String, ByVal contraseña As String)
-        ISQL("usuarios", "nombre , contrasena", "'" + nombre + "', '" + ModCodificador.Encriptar(contraseña) + "'")
+        ISQL("usuarios", "nombre , contrasena", "'" + nombre + "', AES_ENCRYPT('" + contraseña + "',sha2('" + ModCodificador.GKey + "',256))")
     End Sub
 
 #End Region

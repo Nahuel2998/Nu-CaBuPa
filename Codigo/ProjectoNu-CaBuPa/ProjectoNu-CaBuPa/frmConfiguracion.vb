@@ -77,22 +77,16 @@ Public Class frmConfiguracion
 
     Private Sub TabPage2_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage2.Enter
         ActualizarUsuarios(False)
+        LimpiarEditar()
+        limpiar()
     End Sub
 
-    Private Sub dgvNombreUsuario_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dgvNombreUsuario.GotFocus
-        'dgvNombreUsuario.DataSource = ModConector.GDT("usuarios")
-        txtENombre.Text = dgvNombreUsuario.CurrentRow.Cells("Nombre Usuarios").Value.ToString
-        'Try
-        UserID = dgvNombreUsuario.CurrentRow.Cells("ID").Value
-        'txtENombre.Text = ModConector.GDT("usuarios").Rows(dgvNombreUsuario.CurrentRow.Index).Item("Nombre Usuarios")
-        'Catch es As Exception
-        'End Try
-
-    End Sub
+  
 
     Private Sub limpiar()
         txtNombre.Text = ""
         txtContrasena.Text = ""
+        dgvNombreUsuario.ClearSelection()
     End Sub
     Private Sub LimpiarUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LimpiarUsuario.Click
         limpiar()
@@ -100,21 +94,35 @@ Public Class frmConfiguracion
     Private Sub LimpiarEditar()
         txtENombre.Text = ""
         txtEContrasena.Text = ""
-        dgvNombreUsuario.CurrentRow.Selected = False
+        UserID = Nothing
     End Sub
     Private Sub UAplicar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UAplicar.Click
         If Not IsNothing(UserID) Then
-            USQL("usuarios", "nombre ='" + txtENombre.Text + "',contrasena = '" + ModCodificador.Encriptar(txtEContrasena.Text()) + "'", "id_usuario ='" + UserID.ToString() + "'")
+            USQL("usuarios", "nombre ='" + txtENombre.Text + "',contrasena = AES_ENCRYPT('" + ModCodificador.Encriptar(txtEContrasena.Text()) + "',sha2('" + ModCodificador.GKeyMaestra + "',256))", "id_usuario ='" + UserID.ToString() + "'")
             ActualizarUsuarios(False)
-            LimpiarEditar()
+
         End If
+        LimpiarEditar()
     End Sub
 
     Private Sub UBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UBorrar.Click
         If Not IsNothing(UserID) Then
             BSQL("usuarios", "id_usuario ='" + UserID.ToString + "'")
             ActualizarUsuarios(False)
-            LimpiarEditar()
         End If
+        LimpiarEditar()
     End Sub
+
+    Private Sub dgvNombreUsuario_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles dgvNombreUsuario.CellMouseClick
+
+        Try
+            LimpiarEditar()
+
+            txtENombre.Text = dgvNombreUsuario.CurrentRow.Cells("Nombre Usuarios").Value.ToString
+            UserID = dgvNombreUsuario.CurrentRow.Cells("ID").Value
+            'txtENombre.Text = ModConector.GDT("usuarios").Rows(dgvNombreUsuario.CurrentRow.Index).Item("Nombre Usuarios")
+        Catch es As Exception
+        End Try
+    End Sub
+
 End Class
