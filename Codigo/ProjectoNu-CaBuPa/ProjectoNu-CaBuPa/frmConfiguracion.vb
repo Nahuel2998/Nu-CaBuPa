@@ -49,21 +49,6 @@ Public Class frmConfiguracion
         ModConector.IUsuario(txtUsuario.Text, txtContraseña.Text)
     End Sub
 
-    Private Sub ActualizarUsuarios(ByVal actualizar As Boolean)
-        Dim dt As DataTable = ModConector.AUsuarios(actualizar)
-        If Not IsNothing(dt) Then
-            dgvNombreUsuario.DataSource = dt
-
-        Else
-            MessageBox.Show("No se cargo correctamente")
-        End If
-    End Sub
-
-    Private Sub CrearUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CrearUsuario.Click
-        ModConector.IUsuario(txtNombre.Text, txtContrasena.Text)
-        ActualizarUsuarios(True)
-        limpiar()
-    End Sub
 
     Private Sub frmConfiguracion_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         ModUser.Inicio()
@@ -84,7 +69,7 @@ Public Class frmConfiguracion
     End Sub
 
   
-
+#Region "Limpiadores"
     Private Sub limpiar()
         txtNombre.Text = ""
         txtContrasena.Text = ""
@@ -110,7 +95,8 @@ Public Class frmConfiguracion
         End If
         LimpiarEditar()
     End Sub
-
+#End Region
+#Region "Modificar Usuarios"
     Private Sub UBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UBorrar.Click
         If Not IsNothing(UserID) Then
             BSQL("usuarios", "id_usuario ='" + UserID.ToString + "'")
@@ -124,14 +110,27 @@ Public Class frmConfiguracion
         LimpiarEditar()
     End Sub
 
-    Private Sub dgvNombreUsuario_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles dgvNombreUsuario.CellMouseClick
+    Private Sub ActualizarUsuarios(ByVal actualizar As Boolean)
+        Dim dt As DataTable = ModConector.AUsuarios(actualizar)
+        If Not IsNothing(dt) Then
+            dgvNombreUsuario.DataSource = dt
 
+        Else
+            MessageBox.Show("No se cargo correctamente")
+        End If
+    End Sub
+
+    Private Sub CrearUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CrearUsuario.Click
+        ModConector.IUsuario(txtNombre.Text, txtContrasena.Text)
+        ActualizarUsuarios(True)
+        limpiar()
+    End Sub
+#End Region
+    Private Sub dgvNombreUsuario_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles dgvNombreUsuario.CellMouseClick
         Try
             LimpiarEditar()
-
             txtENombre.Text = dgvNombreUsuario.CurrentRow.Cells("Nombre Usuarios").Value.ToString
             UserID = dgvNombreUsuario.CurrentRow.Cells("ID").Value
-            'txtENombre.Text = ModConector.GDT("usuarios").Rows(dgvNombreUsuario.CurrentRow.Index).Item("Nombre Usuarios")
         Catch es As Exception
         End Try
     End Sub

@@ -7,7 +7,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,12 +21,12 @@
 
 DROP TABLE IF EXISTS `acceso`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `acceso` (
   `id_acceso` int(11) NOT NULL AUTO_INCREMENT,
   `seccion` varchar(64) NOT NULL,
   PRIMARY KEY (`id_acceso`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,12 +44,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `alquiler`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `alquiler` (
   `id_alquiler` int(11) NOT NULL AUTO_INCREMENT,
   `couta` int(7) unsigned NOT NULL,
   PRIMARY KEY (`id_alquiler`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `aparece`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `aparece` (
   `id_publicidad` int(11) NOT NULL,
   `activa` tinyint(1) NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE `aparece` (
   KEY `id_tanda` (`id_tanda`),
   CONSTRAINT `aparece_ibfk_1` FOREIGN KEY (`id_tanda`) REFERENCES `tanda` (`id_tanda`),
   CONSTRAINT `aparece_ibfk_2` FOREIGN KEY (`id_publicidad`) REFERENCES `publicidad` (`id_publicidad`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +95,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `conduce`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `conduce` (
   `id_conductor` int(11) NOT NULL,
   `id_programa` int(11) NOT NULL,
@@ -105,7 +105,7 @@ CREATE TABLE `conduce` (
   KEY `id_conductor` (`id_conductor`),
   CONSTRAINT `conduce_ibfk_1` FOREIGN KEY (`id_conductor`) REFERENCES `conductor` (`id_conductor`),
   CONSTRAINT `conduce_ibfk_2` FOREIGN KEY (`id_programa`) REFERENCES `programa` (`id_programa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,12 +123,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `conductor`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `conductor` (
   `id_conductor` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(32) NOT NULL,
   PRIMARY KEY (`id_conductor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -146,7 +146,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `contiene`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `contiene` (
   `id_usuario` int(11) NOT NULL,
   `id_acceso` int(11) NOT NULL,
@@ -154,7 +154,7 @@ CREATE TABLE `contiene` (
   KEY `id_acceso` (`id_acceso`),
   CONSTRAINT `contiene_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`),
   CONSTRAINT `contiene_ibfk_2` FOREIGN KEY (`id_acceso`) REFERENCES `acceso` (`id_acceso`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -172,7 +172,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `emite`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `emite` (
   `id_programa` int(11) NOT NULL,
   `id_fecha_programa` int(11) NOT NULL,
@@ -181,7 +181,7 @@ CREATE TABLE `emite` (
   KEY `id_fecha_programa` (`id_fecha_programa`),
   CONSTRAINT `emite_ibfk_1` FOREIGN KEY (`id_fecha_programa`) REFERENCES `fecha_programa` (`id_fecha_programa`),
   CONSTRAINT `emite_ibfk_2` FOREIGN KEY (`id_programa`) REFERENCES `programa` (`id_programa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -199,12 +199,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `empresa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `empresa` (
   `id_empresa` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(32) NOT NULL,
   PRIMARY KEY (`id_empresa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -222,13 +222,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `fecha_programa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `fecha_programa` (
   `id_fecha_programa` int(11) NOT NULL AUTO_INCREMENT,
   `fecha_inicio` date NOT NULL,
   `fecha_final` date NOT NULL,
   PRIMARY KEY (`id_fecha_programa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -246,13 +246,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `horas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `horas` (
   `id_tanda` int(11) NOT NULL,
   `horas` time NOT NULL,
   PRIMARY KEY (`id_tanda`),
   CONSTRAINT `horas_ibfk_1` FOREIGN KEY (`id_tanda`) REFERENCES `tanda` (`id_tanda`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -270,13 +270,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `programa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `programa` (
   `id_programa` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_programa` varchar(64) NOT NULL,
   `activo` tinyint(1) NOT NULL,
   PRIMARY KEY (`id_programa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -294,7 +294,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publicidad`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `publicidad` (
   `id_publicidad` int(11) NOT NULL AUTO_INCREMENT,
   `tema` varchar(64) NOT NULL,
@@ -302,7 +302,7 @@ CREATE TABLE `publicidad` (
   PRIMARY KEY (`id_publicidad`),
   KEY `id_empresa` (`id_empresa`),
   CONSTRAINT `publicidad_ibfk_1` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id_empresa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -320,13 +320,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `serie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `serie` (
   `id_serie` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(32) NOT NULL,
   `activo` tinyint(1) NOT NULL,
   PRIMARY KEY (`id_serie`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -344,11 +344,11 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `tanda`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `tanda` (
   `id_tanda` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_tanda`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -366,7 +366,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `tiene`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `tiene` (
   `fecha_couta` date NOT NULL,
   `pago` tinyint(1) NOT NULL,
@@ -376,7 +376,7 @@ CREATE TABLE `tiene` (
   KEY `id_programa` (`id_programa`),
   CONSTRAINT `tiene_ibfk_1` FOREIGN KEY (`id_alquiler`) REFERENCES `alquiler` (`id_alquiler`),
   CONSTRAINT `tiene_ibfk_2` FOREIGN KEY (`id_programa`) REFERENCES `programa` (`id_programa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -394,13 +394,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(32) NOT NULL,
-  `contrasena` varbinary(100) NOT NULL,
+  `contrasena` varchar(64) NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -419,7 +419,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `video`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `video` (
   `id_video` int(11) NOT NULL AUTO_INCREMENT,
   `contenido` varchar(64) NOT NULL,
@@ -430,7 +430,7 @@ CREATE TABLE `video` (
   PRIMARY KEY (`id_video`),
   KEY `id_serie` (`id_serie`),
   CONSTRAINT `video_ibfk_1` FOREIGN KEY (`id_serie`) REFERENCES `serie` (`id_serie`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

@@ -117,7 +117,7 @@ Module ModConector
             objCmd.Prepare()
             objCmd.ExecuteNonQuery()
         Catch ex As Exception
-            Console.WriteLine(ex.ToString())
+            MessageBox.Show(ex.ToString)
             Return False
         End Try
         Return True
@@ -131,6 +131,7 @@ Module ModConector
             sqladapter.Fill(dt)
             ds.Tables.Add(dt)
         Catch ex As Exception
+            MessageBox.Show(ex.ToString)
             Return Nothing
         End Try
         Return dt
