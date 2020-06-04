@@ -60,10 +60,12 @@ Public Class frmConfiguracion
             DebugCrear.Visible = True
             DebugCrear.Enabled = True
         End If
+        Control.CheckForIllegalCrossThreadCalls = False
     End Sub
 
     Private Sub TabPage2_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage2.Enter
         ActualizarUsuarios(False)
+        'BGW.RunWorkerAsync(False)
         LimpiarEditar()
         limpiar()
     End Sub
@@ -101,6 +103,7 @@ Public Class frmConfiguracion
         If Not IsNothing(UserID) Then
             BSQL("usuarios", "id_usuario ='" + UserID.ToString + "'")
             ActualizarUsuarios(False)
+            'BGW.RunWorkerAsync(False)
             If UserID = ModConector.GUsuarioID Then
                 ModConector.BorrarUsuario()
                 Me.Dispose()
@@ -113,7 +116,7 @@ Public Class frmConfiguracion
     Private Sub ActualizarUsuarios(ByVal actualizar As Boolean)
         Dim dt As DataTable = ModConector.AUsuarios(actualizar)
         If Not IsNothing(dt) Then
-            dgvNombreUsuario.DataSource = dt
+            Me.dgvNombreUsuario.DataSource = dt
 
         Else
             MessageBox.Show("No se cargo correctamente")
@@ -123,6 +126,7 @@ Public Class frmConfiguracion
     Private Sub CrearUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CrearUsuario.Click
         ModConector.IUsuario(txtNombre.Text, txtContrasena.Text)
         ActualizarUsuarios(True)
+        'BGW.RunWorkerAsync(True)
         limpiar()
     End Sub
 #End Region
@@ -134,6 +138,11 @@ Public Class frmConfiguracion
         Catch es As Exception
         End Try
     End Sub
+
+
+    'Private Sub BGW_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BGW.DoWork
+    '   ActualizarUsuarios(e.Argument())
+    'End Sub
 
 
 End Class

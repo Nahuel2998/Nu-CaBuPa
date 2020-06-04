@@ -51,11 +51,10 @@
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\v4.0\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\Conector utilizado\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -76,35 +75,35 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.Designer.vb">
+    <Compile Include="S_Video\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="S_Video\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConfiguracion.Designer.vb">
+    <Compile Include="S_Usuario\frmConfiguracion.Designer.vb">
       <DependentUpon>frmConfiguracion.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmConfiguracion.vb">
+    <Compile Include="S_Usuario\frmConfiguracion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.vb">
+    <Compile Include="S_Principal\frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.vb">
+    <Compile Include="S_Principal\frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLUsuario.Designer.vb">
+    <Compile Include="S_Usuario\frmLUsuario.Designer.vb">
       <DependentUpon>frmLUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmLUsuario.vb">
+    <Compile Include="S_Usuario\frmLUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModCodificador.vb" />
-    <Compile Include="ModConector.vb" />
-    <Compile Include="ModuloInicializador.vb" />
-    <Compile Include="ModUser.vb" />
+    <Compile Include="Modulos\ModCodificador.vb" />
+    <Compile Include="Modulos\ModConector.vb" />
+    <Compile Include="Modulos\ModuloInicializador.vb" />
+    <Compile Include="Modulos\ModUser.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -122,16 +121,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="S_Video\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConfiguracion.resx">
+    <EmbeddedResource Include="S_Usuario\frmConfiguracion.resx">
       <DependentUpon>frmConfiguracion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLUsuario.resx">
+    <EmbeddedResource Include="S_Usuario\frmLUsuario.resx">
       <DependentUpon>frmLUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
+    <EmbeddedResource Include="S_Principal\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

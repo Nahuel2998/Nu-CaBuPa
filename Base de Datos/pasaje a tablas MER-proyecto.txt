@@ -2,6 +2,12 @@ Acceso: {id_acceso, sección}
 Usuario {id_usuario, nombre, contraseña}
 Accede: {id_usuario, id_acceso}
 
+Evento: {id_evento, descripcion, nombre}
+Fechas: {id_evento, fecha}
+Sobre: {id_evento, id_video}
+Relaciona: {id_evento, id_programa}
+Promociona: {id_evento, id_publicidad, pago}
+
 Conductor: {id_conductor, nombre}
 Programa: {id_programa, nombre_programa, activo}
 Conduce: {id_conductor , id_programa, fecha_inicio, actividad_conductor}
