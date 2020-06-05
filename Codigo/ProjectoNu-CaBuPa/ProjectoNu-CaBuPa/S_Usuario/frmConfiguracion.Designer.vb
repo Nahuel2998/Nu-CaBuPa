@@ -55,7 +55,7 @@ Partial Class frmConfiguracion
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtContrasena = New System.Windows.Forms.TextBox()
-        Me.BGW = New System.ComponentModel.BackgroundWorker()
+        Me.BW = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -427,9 +427,6 @@ Partial Class frmConfiguracion
         Me.txtContrasena.TabIndex = 1
         Me.txtContrasena.UseSystemPasswordChar = True
         '
-        'BGW
-        '
-        '
         'frmConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -488,5 +485,5 @@ Partial Class frmConfiguracion
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents txtContrasena As System.Windows.Forms.TextBox
     Friend WithEvents dgvNombreUsuario As System.Windows.Forms.DataGridView
-    Friend WithEvents BGW As System.ComponentModel.BackgroundWorker
+    Friend WithEvents BW As System.ComponentModel.BackgroundWorker
 End Class

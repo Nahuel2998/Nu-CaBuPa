@@ -2,7 +2,7 @@
 Public Class frmConfiguracion
     Private UserID As Integer = Nothing
     Private UsuarioDatos As DataTable
-
+    Public dt As DataTable
     Private Sub btnRestablecer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRestablecer.Click
         ModUser.Borrar()
         ModUser.Inicio()
@@ -64,13 +64,14 @@ Public Class frmConfiguracion
     End Sub
 
     Private Sub TabPage2_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage2.Enter
-        ActualizarUsuarios(False)
-        'BGW.RunWorkerAsync(False)
+        'ActualizarUsuarios(False)
+
+        BW.RunWorkerAsync(False)
         LimpiarEditar()
         limpiar()
     End Sub
 
-  
+
 #Region "Limpiadores"
     Private Sub limpiar()
         txtNombre.Text = ""
@@ -102,8 +103,9 @@ Public Class frmConfiguracion
     Private Sub UBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UBorrar.Click
         If Not IsNothing(UserID) Then
             BSQL("usuarios", "id_usuario ='" + UserID.ToString + "'")
-            ActualizarUsuarios(False)
-            'BGW.RunWorkerAsync(False)
+            'ActualizarUsuarios(False)
+
+            BW.RunWorkerAsync(False)
             If UserID = ModConector.GUsuarioID Then
                 ModConector.BorrarUsuario()
                 Me.Dispose()
@@ -112,21 +114,19 @@ Public Class frmConfiguracion
         End If
         LimpiarEditar()
     End Sub
-
-    Private Sub ActualizarUsuarios(ByVal actualizar As Boolean)
-        Dim dt As DataTable = ModConector.AUsuarios(actualizar)
+    Private Sub ActualizarUsuarios()
         If Not IsNothing(dt) Then
             Me.dgvNombreUsuario.DataSource = dt
 
         Else
-            MessageBox.Show("No se cargo correctamente")
+            MessageBox.Show("No se cargo correctamente.")
         End If
     End Sub
 
     Private Sub CrearUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CrearUsuario.Click
         ModConector.IUsuario(txtNombre.Text, txtContrasena.Text)
-        ActualizarUsuarios(True)
-        'BGW.RunWorkerAsync(True)
+        'ActualizarUsuarios(True)
+        BW.RunWorkerAsync(True)
         limpiar()
     End Sub
 #End Region
@@ -140,9 +140,13 @@ Public Class frmConfiguracion
     End Sub
 
 
-    'Private Sub BGW_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BGW.DoWork
-    '   ActualizarUsuarios(e.Argument())
-    'End Sub
 
 
+    Private Sub BW_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BW.DoWork
+        dt = ModConector.AUsuarios(e.Argument)
+    End Sub
+
+    Private Sub BW_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BW.RunWorkerCompleted
+        ActualizarUsuarios()
+    End Sub
 End Class
