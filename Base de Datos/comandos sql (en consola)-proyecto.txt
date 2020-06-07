@@ -15,3 +15,8 @@ mysql> create table video (id_video int  not null auto_increment, contenido varc
 mysql> create table usuarios (id_usuario int  not null auto_increment, nombre varchar (30) not null, contraseña varbinary (100) not null, primary key (id_usuario));
 mysql> create table acceso (id_acceso int  not null auto_increment, seccion varchar (64) not null, primary key (id_acceso));
 mysql> create table contiene (id_usuario int  not null, id_acceso int  not null, primary key (id_usuario,id_acceso), foreign key (id_usuario) references usuarios(id_usuario), foreign key (id_acceso) references acceso (id_acceso));
+mysql> create table evento (id_evento int  not null auto_increment, descripcion varchar (256) not null, nombre varchar (64) not null, primary key (id_evento));
+mysql> create table fechas (id_evento int  not null, fecha date not null, primary key (id_evento), foreign key (id_evento) references evento(id_evento));
+mysql> create table sobre (id_evento int  not null, id_video int not null, primary key (id_evento, id_video), foreign key (id_evento) references evento(id_evento),foreign key (id_video) references video(id_video));
+mysql> create table relaciona (id_evento int  not null, id_programa int not null, primary key (id_evento, id_programa), foreign key (id_evento) references evento(id_evento),foreign key (id_programa) references programa(id_programa));
+mysql> create table promociona (id_evento int  not null, id_publicidad int not null,pago int default 0, primary key (id_evento, id_publicidad), foreign key (id_evento) references evento(id_evento),foreign key (id_publicidad) references publicidad(id_publicidad));
