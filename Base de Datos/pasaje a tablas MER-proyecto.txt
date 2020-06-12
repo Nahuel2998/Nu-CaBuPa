@@ -12,7 +12,7 @@ Conductor: {id_conductor, nombre}
 Programa: {id_programa, nombre_programa, activo}
 Conduce: {id_conductor , id_programa, fecha_inicio, actividad_conductor}
 
-Alquiler: {id_alquiler, cuota} 
+Precios: {id_alquiler, cuota, descripcion} 
 Tiene: {Fecha_couta, pagado, fecha_pago, id_alquiler, id_programa}
 
 Fecha_programa:   {id_fecha_programa, fecha_fin, fecha_inicio}

@@ -15,9 +15,9 @@
         txtPass.Text = ""
     End Sub
     Private Sub btnEntrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEntrar.Click
-        If BUsuario(txtUsuario.Text, txtPass.Text) Then
-                MessageBox.Show("Bienvenido")
-                ModuloInicializador.Principal()
+        If ModConector.BUsuario(txtUsuario.Text, txtPass.Text) Then
+            MessageBox.Show("Bienvenido")
+            ModuloInicializador.Principal()
             Me.SetVisibleCore(False)
         End If
     End Sub

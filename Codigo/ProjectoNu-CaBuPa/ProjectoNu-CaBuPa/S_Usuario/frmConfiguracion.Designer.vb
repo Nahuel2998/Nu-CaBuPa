@@ -232,7 +232,7 @@ Partial Class frmConfiguracion
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage1.Size = New System.Drawing.Size(570, 372)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Conexión"
+        Me.TabPage1.Text = "Conexion"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'TabPage2
@@ -426,6 +426,9 @@ Partial Class frmConfiguracion
         Me.txtContrasena.Size = New System.Drawing.Size(170, 26)
         Me.txtContrasena.TabIndex = 1
         Me.txtContrasena.UseSystemPasswordChar = True
+        '
+        'BW
+        '
         '
         'frmConfiguracion
         '

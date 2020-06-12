@@ -89,7 +89,8 @@ Public Class frmConfiguracion
     Private Sub UAplicar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UAplicar.Click
         If Not IsNothing(UserID) Then
             USQL("usuarios", "nombre ='" + txtENombre.Text + "',contrasena = AES_ENCRYPT('" + txtEContrasena.Text() + "',sha2('" + ModCodificador.GKey + "',256))", "id_usuario ='" + UserID.ToString() + "'")
-            ActualizarUsuarios(False)
+            'ActualizarUsuarios(False)
+            BW.RunWorkerAsync(False)
             If UserID = ModConector.GUsuarioID Then
                 ModConector.BorrarUsuario()
                 Me.Dispose()
