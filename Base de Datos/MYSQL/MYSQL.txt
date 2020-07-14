@@ -1,0 +1,178 @@
+create database JVRPDATABASE;
+use JVRPDATABASE;
+create table Programa
+	(
+	ID_Programa int(6) unsigned auto_increment not null primary key primary key,
+	Nombre_Programa varchar(64) not null,
+	Fecha_Finalizacion datetime
+	);
+
+create table FechaPrograma
+	(
+	Fecha date, 
+	Hora_Inicio time not null, 
+	Hora_Fin time not null, 
+	ID_Programa int(6) unsigned, 
+	foreign key (ID_Programa ) references Programa(ID_Programa),
+	primary key(Fecha, Hora_Inicio));
+create table PrecioEspacio
+	(
+	ID_Precio_Espacio int(6) unsigned auto_increment not null primary key,
+	Descripcion varchar(256) not null,
+	Precio int(5) unsigned
+	);
+create table ProgramaCuota
+	(
+	ID_Precio_Espacio int(6) unsigned not null,
+	ID_Programa int(6) unsigned not null,
+	Fecha_Pago date,
+	Nro_Recibo int(7) unsigned,
+	primary key(ID_Programa,ID_Precio_Espacio),
+	foreign key (ID_Programa ) references Programa(ID_Programa),
+	foreign key (ID_Precio_Espacio ) references PrecioEspacio(ID_Precio_Espacio)
+	);
+
+create table Empresa
+	(
+	ID_Empresa int(6) unsigned auto_increment not null primary key,
+	Nombre varchar(64) not null,
+	Telefono int(9) unsigned
+	);
+
+create table Publicidad
+	(
+	ID_Publicidad int(6) unsigned auto_increment not null primary key,
+	Tema varchar(256) not null,
+	ID_Empresa int(6) unsigned not null,
+	foreign key (ID_Empresa ) references Empresa(ID_Empresa)
+	);
+
+create table PMuestraPubli 
+	(ID_Publicidad int(6) unsigned not null,
+	ID_Programa int(6) unsigned not null,
+	Fecha_Finalizacion date,
+	foreign key (ID_Programa ) references Programa(ID_Programa),
+	foreign key (ID_Publicidad ) references Publicidad(ID_Publicidad)
+	);
+create table PublicidadCuota
+	(
+	ID_Cuota int(6) unsigned auto_increment not null primary key,
+	Fecha_Pago date,
+	Precio int(6) unsigned not null,
+	ID_Publicidad int(6) unsigned not null,
+	foreign key (ID_Publicidad ) references Publicidad(ID_Publicidad)
+	);
+
+
+create table Tanda
+	(
+	Hora_Inicio time not null primary key,
+	Hora_Fin time not null
+	);
+create table AparecePubli
+	(
+	ID_Publicidad int(6) unsigned not null,
+	Hora_Inicio time not null,
+	Fecha_Inicio date not null,
+	Fecha_Finalizacion date,
+	primary key(ID_Publicidad,Hora_Inicio),
+	foreign key (ID_Publicidad ) references Publicidad(ID_Publicidad),
+	foreign key (Hora_Inicio ) references Tanda(Hora_Inicio)
+	);
+
+
+create table Evento
+	(
+	ID_Evento INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nombre VARCHAR(64) NOT NULL,
+	descripcion VARCHAR(256) NOT NULL
+	);
+	
+create table FechaEvento
+	(
+	ID_Evento INT(6) unsigned,
+	fecha DATETIME NOT NULL,
+	foreign key (ID_Evento ) references Evento(ID_Evento),
+	PRIMARY KEY(ID_Evento, fecha)
+	);
+create table EventoMuestraPubli 
+	(
+	ID_Evento int(6) unsigned not null,
+	ID_Publicidad int(6) unsigned not null,
+	primary key(ID_Evento, ID_Publicidad),
+	foreign key (ID_Publicidad ) references Publicidad(ID_Publicidad),
+	foreign key (ID_Evento ) references Evento(ID_Evento)
+	);
+create table EventoEsDeP
+	(
+	ID_Programa int(6) unsigned not null,
+	ID_Evento int(6) unsigned not null,
+	primary key(ID_Programa,ID_Evento),
+	foreign key (ID_Programa ) references Programa(ID_Programa),
+	foreign key (ID_Evento ) references Evento(ID_Evento)
+	);
+create table Funcionario
+	(
+	ID_Funcionario INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	telefono INT(9) NOT NULL,
+	nombre VARCHAR(64) NOT NULL
+	);
+	
+create table Funcion
+	(
+	ID_Funcion INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	descripcion VARCHAR(256) NOT NULL
+	);
+	
+create table TrabajaComo
+	(
+	ID_Funcionario INT(6) unsigned,
+	ID_Funcion INT(6) unsigned,
+	foreign key (ID_Funcionario ) references Funcionario(ID_Funcionario),
+	foreign key (ID_Funcion ) references Funcion(ID_Funcion),
+	PRIMARY KEY(ID_Funcionario, ID_Funcion)
+	);
+	
+create table FunTrabaja
+	(
+	ID_Funcionario INT(6) unsigned,
+	ID_Funcion INT(6) unsigned,
+	ID_Programa INT(6) unsigned,
+	fecha_inicio DATE NOT NULL,
+	fecha_finalizacion DATE,
+	foreign key (ID_Funcionario ) references Funcionario(ID_Funcionario),
+	foreign key (ID_Funcion ) references Funcion(ID_Funcion),
+	foreign key (ID_Programa ) references Programa(ID_Programa),
+	PRIMARY KEY(ID_Funcionario, ID_Funcion, ID_Programa)
+	);
+	
+-- - --
+
+create table Video
+	(
+	ID_Video INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	contenido VARCHAR(256) NOT NULL,
+	nombre VARCHAR(64) NOT NULL,
+	ID_Serie INT(6) unsigned,
+	foreign key (ID_Serie ) references Serie(ID_Serie),
+	fecha DATETIME
+	);
+	
+create table Serie
+	(
+	ID_Serie INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	fecha_finalizacion DATE,
+	nombre VARCHAR(64) NOT NULL
+	);
+	
+create table VEsDeEvento
+	(
+	ID_Evento INT(6) unsigned not null,
+	ID_Video INT(6) unsigned not null,
+	ID_Serie INT(6) unsigned not null,
+	foreign key (ID_Evento ) references Evento(ID_Evento),
+	foreign key (ID_Video ) references Video(ID_Video),
+	foreign key (ID_Serie ) references Serie(ID_Serie),
+	PRIMARY KEY(ID_Evento, ID_Video, ID_Serie)
+	);
+	
