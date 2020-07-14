@@ -1,0 +1,79 @@
+create table Funcionario
+	(
+	ID_Funcionario INT(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	telefono INT(9) NOT NULL,
+	nombre VARCHAR(64) NOT NULL
+	);
+	
+create table Funcion
+	(
+	ID_Funcion INT(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	descripcion VARCHAR(256) NOT NULL
+	);
+	
+create table TrabajaComo
+	(
+	ID_Funcionario INT(6),
+	ID_Funcion INT(6),
+	FOREIGN KEY ID_Funcionario REFERENCES Funcionario(ID_Funcionario),
+	FOREIGN KEY ID_Funcion REFERENCES Funcion(ID_Funcion),
+	PRIMARY KEY(ID_Funcionario, ID_Funcion)
+	);
+	
+create table FunTrabaja
+	(
+	ID_Funcionario INT(6),
+	ID_Funcion INT(6),
+	ID_Programa INT(6),
+	fecha_inicio DATE NOT NULL,
+	fecha_finalizacion DATE,
+	FOREIGN KEY ID_Funcionario REFERENCES Funcionario(ID_Funcionario),
+	FOREIGN KEY ID_Funcion REFERENCES Funcion(ID_Funcion),
+	FOREIGN KEY ID_Programa REFERENCES Programa(ID_Programa),
+	PRIMARY KEY(ID_Funcionario, ID_Funcion, ID_Programa)
+	);
+	
+-- - --
+
+create table Video
+	(
+	ID_Video INT(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	contenido VARCHAR(256) NOT NULL,
+	nombre VARCHAR(64) NOT NULL,
+	ID_Serie INT(6),
+	FOREIGN KEY ID_Serie REFERENCES Serie(ID_Serie),
+	fecha DATE
+	);
+	
+create table Serie
+	(
+	ID_Serie INT(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	fecha_finalizacion DATE,
+	nombre VARCHAR(64) NOT NULL
+	);
+	
+create table VEsDeEvento
+	(
+	ID_Evento INT(6),
+	ID_Video INT(6),
+	ID_Serie INT(6),
+	FOREIGN KEY ID_Evento REFERENCES Evento(ID_Evento),
+	FOREIGN KEY ID_Video REFERENCES Video(ID_Video),
+	FOREIGN KEY ID_Serie REFERENCES Serie(ID_Serie),
+	PRIMARY KEY(ID_Evento, ID_Video, ID_Serie)
+	);
+
+create table Evento
+	(
+	ID_Evento INT(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nombre VARCHAR(64) NOT NULL,
+	descripcion VARCHAR(256) NOT NULL
+	);
+	
+create table FechaEvento
+	(
+	ID_Evento INT(6),
+	fecha DATE NOT NULL,
+	FOREIGN KEY ID_Evento REFERENCES Evento(ID_Evento),
+	PRIMARY KEY(ID_Evento, fecha)
+	);	
