@@ -1,32 +1,54 @@
-Acceso: {id_acceso, sección}
-Usuario {id_usuario, nombre, contraseña}
-Accede: {id_usuario, id_acceso}
+Programa: {*ID_Programa*, Nombre_Programa, Fecha_Finalizacion}
+---
+FechaPrograma: {*Fecha*, *Hora_Inicio*, Hora_Fin, ID_Programa}
+PrecioEspacio: {*ID_Precio_Espacio*, Descripcion, Precio}
+ProgramaCuota: {*ID_Precio_Espacio*,*ID_Programa*,Fecha_Pago,Nro_Recibo}
 
-Evento: {id_evento, descripcion, nombre}
-Fechas: {id_evento, fecha}
-Sobre: {id_evento, id_video}
-Relaciona: {id_evento, id_programa}
-Promociona: {id_evento, id_publicidad, pago}
+---
 
-Conductor: {id_conductor, nombre}
-Programa: {id_programa, nombre_programa, activo}
-Conduce: {id_conductor , id_programa, fecha_inicio, actividad_conductor}
+Publicidad: {*ID_Publicidad*, Tema, ID_Empresa}
 
-Precios: {id_alquiler, cuota, descripcion} 
-Tiene: {Fecha_couta, pagado, fecha_pago, id_alquiler, id_programa}
+---
 
-Fecha_programa:   {id_fecha_programa, fecha_fin, fecha_inicio}
-Emite: {id_programa, id_fecha_programa, activo_en_horario}
+PMuestraPubli: {*ID_Publicidad*, *ID_Programa*, Fecha_Finalizacion}
+PublicidadCuota: {*ID_Cuota*, Fecha_Pago, Precio, ID_Publicidad}
 
-Publicidad: {id_publicidad, tema,id_empresa}
-Tanda: {id_tanda}
-Aparece: {Id_publicidad, activa, pago, id_tanda}
-Horas: {id_tandas, horas}
+---
 
-Empresa: {id_empresa, nombre}
+Empresa:	{*ID_Empresa*, Nombre, Telefono}
 
-Video: {id_video, contenido,nombre, emitido,id_serie, fecha_estimada}
-Serie: {id_serie, nombre, activo}
+---
+
+Tanda:		{*Hora_Inicio*, Hora_Fin}
+AparecePubli:	{*ID_Publicidad*, *Hora_Inicio*, Fecha_Inicio, Fecha_Finalizacion}
+
+---
+
+Evento:		{*ID_Evento*, Nombre, Descripcion}
+
+---
+
+VEsDeEvento:	{*ID_Evento, ID_Video, ID_Serie*}
+FechaEvento:	{*ID_Evento, Fecha*} 
+
+---
+
+EventoMuestraPubli: {*ID_Evento*, *ID_Publicidad*}
+EventoEsDeP:	{*ID_Programa*,*ID_Evento*}
+---
+Funcionario:	{*ID_Funcionario*, Telefono, Nombre}
+
+---
+
+Funcion:	{*ID_Funcion*, Descripcion}
+TrabajaComo:	{*ID_Funcionario, ID_Funcion*}
+
+FunTrabaja:	{*ID_Funcionario, ID_Funcion, ID_Programa*, Fecha_Inicio, Fecha_Finalizacion}
+
+- - - -
+
+Video:		{*ID_Video*, Contenido, Nombre, ID_Serie, Fecha}
+Serie:		{*ID_Serie*, Fecha_Finalizacion, Nombre}
 
 
 
