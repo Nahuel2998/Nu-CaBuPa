@@ -1,0 +1,22 @@
+Programa: {*ID_Programa*, Nombre_Programa, Fecha_Finalizacion}
+---
+FechaPrograma: {*Fecha*, *Hora_Inicio*, Hora_Fin, ID_Programa}
+PrecioEspacio: {*ID_Precio_Espacio*, Descripcion, Precio}
+ProgramaCuota: {*ID_Precio_Espacio*,*ID_Programa*,Fecha_Pago,Nro_Recibo}
+---
+Publicidad: {*ID_Publicidad*, Tema, ID_Empresa}
+---
+PMuestraPubli: {*ID_Publicidad*, *ID_Programa*, Fecha_Finalizacion}
+PublicidadCuota: {*ID_Cuota*, Fecha_Pago, Precio, ID_Publicidad}
+---
+Empresa: {*ID_Empresa*, Nombre, Telefono}
+---
+Tanda: {*Hora_Inicio*, Hora_Fin}
+AparecePubli: {*ID_Publicidad*, *Hora_Inicio*, Fecha_Inicio, Fecha_Finalizacion}
+---
+EventoMuestraPubli: {*ID_Evento*, *ID_Publicidad*}
+EventoEsDeP: {*ID_Programa*,*ID_Evento*}
+
+
+
+
