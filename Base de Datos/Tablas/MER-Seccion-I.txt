@@ -2,14 +2,17 @@ Funcionario:	{*ID_Funcionario*, Telefono, Nombre}
 Funcion:		{*ID_Funcion*, Descripcion}
 TrabajaComo:	{*ID_Funcionario, ID_Funcion*}
 
-FunTrabaja:		{*ID_Funcionario, ID_Funcion, ID_Programa*, Fecha_Inicio, Fecha_Finalizacion}
+FunTrabaja:	{*ID_Funcionario, ID_Funcion, ID_Programa*, Fecha_Inicio, Fecha_Finalizacion}
 
 - - - -
 
-Video:			{*ID_Video*, Contenido, Nombre, ID_Serie, Fecha}
-Serie:			{*ID_Serie*, Fecha_Finalizacion, Nombre}
+Video:		{*ID_Video*, Contenido, Nombre, ID_Serie, Fecha}
+Serie:		{*ID_Serie*, Fecha_Finalizacion, Nombre}
 
 VEsDeEvento:	{*ID_Evento, ID_Video, ID_Serie*}
 
-Evento:			{*ID_Evento*, Nombre, Descripcion}
+Evento:		{*ID_Evento*, Nombre, Descripcion}
 FechaEvento:	{*ID_Evento, Fecha*} 
+usuarios:	{*id_usuario*, nombre, contrasena}
+acceso:		{*id_acceso*, seccion}
+UsTieneAcceso:	{*id_usuario, id_acceso*} 
