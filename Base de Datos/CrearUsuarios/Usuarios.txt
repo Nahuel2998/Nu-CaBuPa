@@ -1,0 +1,9 @@
+CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'administrador';
+GRANT USAGE ON *.* TO 'Admin'@'localhost';
+GRANT ALL PRIVILEGES ON JVRPDATABASE.* TO 'Admin'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'Invitado'@'localhost' IDENTIFIED BY 'invitado';
+GRANT USAGE ON *.* TO 'Invitado'@'localhost';
+GRANT select ON JVRPDATABASE.* TO 'Invitado'@'localhost';
+FLUSH PRIVILEGES;
