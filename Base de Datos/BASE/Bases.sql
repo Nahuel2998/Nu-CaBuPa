@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `jvrpdatabase` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `jvrpdatabase` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `jvrpdatabase`;
 -- MySQL dump 10.13  Distrib 8.0.20, for Win64 (x86_64)
 --
@@ -28,7 +28,7 @@ CREATE TABLE `acceso` (
   `id_acceso` int(6) unsigned NOT NULL AUTO_INCREMENT,
   `seccion` varchar(64) NOT NULL,
   PRIMARY KEY (`id_acceso`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +45,7 @@ CREATE TABLE `aparecepubli` (
   `Fecha_Finalizacion` date DEFAULT NULL,
   PRIMARY KEY (`ID_Publicidad`,`Hora_Inicio`),
   KEY `Hora_Inicio` (`Hora_Inicio`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -60,7 +60,7 @@ CREATE TABLE `empresa` (
   `Nombre` varchar(64) NOT NULL,
   `Telefono` int(9) unsigned DEFAULT NULL,
   PRIMARY KEY (`ID_Empresa`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,7 +75,7 @@ CREATE TABLE `evento` (
   `nombre` varchar(64) NOT NULL,
   `descripcion` varchar(256) NOT NULL,
   PRIMARY KEY (`ID_Evento`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +90,7 @@ CREATE TABLE `eventoesdep` (
   `ID_Evento` int(6) unsigned NOT NULL,
   PRIMARY KEY (`ID_Programa`,`ID_Evento`),
   KEY `ID_Evento` (`ID_Evento`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,7 +105,7 @@ CREATE TABLE `eventomuestrapubli` (
   `ID_Publicidad` int(6) unsigned NOT NULL,
   PRIMARY KEY (`ID_Evento`,`ID_Publicidad`),
   KEY `ID_Publicidad` (`ID_Publicidad`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,7 +119,7 @@ CREATE TABLE `fechaevento` (
   `ID_Evento` int(6) unsigned NOT NULL,
   `fecha` datetime NOT NULL,
   PRIMARY KEY (`ID_Evento`,`fecha`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -136,7 +136,7 @@ CREATE TABLE `fechaprograma` (
   `ID_Programa` int(6) unsigned DEFAULT NULL,
   PRIMARY KEY (`Fecha`,`Hora_Inicio`),
   KEY `ID_Programa` (`ID_Programa`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,7 +150,7 @@ CREATE TABLE `funcion` (
   `ID_Funcion` int(6) unsigned NOT NULL AUTO_INCREMENT,
   `descripcion` varchar(256) NOT NULL,
   PRIMARY KEY (`ID_Funcion`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -165,7 +165,7 @@ CREATE TABLE `funcionario` (
   `telefono` int(9) NOT NULL,
   `nombre` varchar(64) NOT NULL,
   PRIMARY KEY (`ID_Funcionario`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -184,7 +184,7 @@ CREATE TABLE `funtrabaja` (
   PRIMARY KEY (`ID_Funcionario`,`ID_Funcion`,`ID_Programa`),
   KEY `ID_Funcion` (`ID_Funcion`),
   KEY `ID_Programa` (`ID_Programa`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -200,7 +200,7 @@ CREATE TABLE `pmuestrapubli` (
   `Fecha_Finalizacion` date DEFAULT NULL,
   KEY `ID_Programa` (`ID_Programa`),
   KEY `ID_Publicidad` (`ID_Publicidad`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -215,7 +215,7 @@ CREATE TABLE `precioespacio` (
   `Descripcion` varchar(256) NOT NULL,
   `Precio` int(5) unsigned DEFAULT NULL,
   PRIMARY KEY (`ID_Precio_Espacio`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -230,7 +230,7 @@ CREATE TABLE `programa` (
   `Nombre_Programa` varchar(64) NOT NULL,
   `Fecha_Finalizacion` datetime DEFAULT NULL,
   PRIMARY KEY (`ID_Programa`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -247,7 +247,7 @@ CREATE TABLE `programacuota` (
   `Nro_Recibo` int(7) unsigned DEFAULT NULL,
   PRIMARY KEY (`ID_Programa`,`ID_Precio_Espacio`),
   KEY `ID_Precio_Espacio` (`ID_Precio_Espacio`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -263,7 +263,7 @@ CREATE TABLE `publicidad` (
   `ID_Empresa` int(6) unsigned NOT NULL,
   PRIMARY KEY (`ID_Publicidad`),
   KEY `ID_Empresa` (`ID_Empresa`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -280,7 +280,7 @@ CREATE TABLE `publicidadcuota` (
   `ID_Publicidad` int(6) unsigned NOT NULL,
   PRIMARY KEY (`ID_Cuota`),
   KEY `ID_Publicidad` (`ID_Publicidad`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -295,7 +295,7 @@ CREATE TABLE `serie` (
   `fecha_finalizacion` date DEFAULT NULL,
   `nombre` varchar(64) NOT NULL,
   PRIMARY KEY (`ID_Serie`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -309,7 +309,7 @@ CREATE TABLE `tanda` (
   `Hora_Inicio` time NOT NULL,
   `Hora_Fin` time NOT NULL,
   PRIMARY KEY (`Hora_Inicio`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -324,7 +324,7 @@ CREATE TABLE `trabajacomo` (
   `ID_Funcion` int(6) unsigned NOT NULL,
   PRIMARY KEY (`ID_Funcionario`,`ID_Funcion`),
   KEY `ID_Funcion` (`ID_Funcion`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -339,7 +339,7 @@ CREATE TABLE `ustieneacceso` (
   `id_acceso` int(6) unsigned NOT NULL,
   PRIMARY KEY (`id_usuario`,`id_acceso`),
   KEY `id_acceso` (`id_acceso`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -354,7 +354,7 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(64) NOT NULL,
   `contrasena` varbinary(256) NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -371,7 +371,7 @@ CREATE TABLE `vesdeevento` (
   PRIMARY KEY (`ID_Evento`,`ID_Video`,`ID_Serie`),
   KEY `ID_Video` (`ID_Video`),
   KEY `ID_Serie` (`ID_Serie`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -389,7 +389,7 @@ CREATE TABLE `video` (
   `fecha` datetime DEFAULT NULL,
   PRIMARY KEY (`ID_Video`),
   KEY `ID_Serie` (`ID_Serie`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
