@@ -6,7 +6,7 @@
         End If
     End Sub
 
-    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
+    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         End
         ModConector.desconectar()
     End Sub
@@ -33,5 +33,9 @@
         Catch m As Exception
             MessageBox.Show(e.ToString)
         End Try
+    End Sub
+
+    Private Sub lblPass_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblPass.Click
+
     End Sub
 End Class
