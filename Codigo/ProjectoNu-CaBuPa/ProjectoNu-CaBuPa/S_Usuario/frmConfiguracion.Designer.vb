@@ -68,16 +68,19 @@ Partial Class frmConfiguracion
         '
         'btnGuardar
         '
+        Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnGuardar.Location = New System.Drawing.Point(434, 303)
         Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(112, 35)
         Me.btnGuardar.TabIndex = 0
         Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.UseVisualStyleBackColor = True
+        Me.btnGuardar.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.GroupBox1.Controls.Add(Me.DebugCrear)
         Me.GroupBox1.Controls.Add(Me.btnRestablecer)
         Me.GroupBox1.Controls.Add(Me.txtBD)
@@ -102,25 +105,29 @@ Partial Class frmConfiguracion
         '
         'DebugCrear
         '
+        Me.DebugCrear.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DebugCrear.Enabled = False
+        Me.DebugCrear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.DebugCrear.Location = New System.Drawing.Point(204, 303)
         Me.DebugCrear.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DebugCrear.Name = "DebugCrear"
         Me.DebugCrear.Size = New System.Drawing.Size(99, 35)
         Me.DebugCrear.TabIndex = 13
         Me.DebugCrear.Text = "Crear"
-        Me.DebugCrear.UseVisualStyleBackColor = True
+        Me.DebugCrear.UseVisualStyleBackColor = False
         Me.DebugCrear.Visible = False
         '
         'btnRestablecer
         '
+        Me.btnRestablecer.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRestablecer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnRestablecer.Location = New System.Drawing.Point(312, 303)
         Me.btnRestablecer.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnRestablecer.Name = "btnRestablecer"
         Me.btnRestablecer.Size = New System.Drawing.Size(112, 35)
         Me.btnRestablecer.TabIndex = 12
         Me.btnRestablecer.Text = "Restablecer"
-        Me.btnRestablecer.UseVisualStyleBackColor = True
+        Me.btnRestablecer.UseVisualStyleBackColor = False
         '
         'txtBD
         '
@@ -237,6 +244,7 @@ Partial Class frmConfiguracion
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox4)
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
@@ -246,7 +254,6 @@ Partial Class frmConfiguracion
         Me.TabPage2.Size = New System.Drawing.Size(570, 372)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Usuario"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -269,6 +276,7 @@ Partial Class frmConfiguracion
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.dgvNombreUsuario)
+        Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox3.Location = New System.Drawing.Point(274, 25)
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox3.Name = "GroupBox3"
@@ -292,29 +300,34 @@ Partial Class frmConfiguracion
         Me.dgvNombreUsuario.Name = "dgvNombreUsuario"
         Me.dgvNombreUsuario.ReadOnly = True
         Me.dgvNombreUsuario.RowHeadersVisible = False
+        Me.dgvNombreUsuario.RowHeadersWidth = 62
         Me.dgvNombreUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvNombreUsuario.Size = New System.Drawing.Size(250, 152)
         Me.dgvNombreUsuario.TabIndex = 0
         '
         'UBorrar
         '
+        Me.UBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.UBorrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.UBorrar.Location = New System.Drawing.Point(22, 180)
         Me.UBorrar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.UBorrar.Name = "UBorrar"
         Me.UBorrar.Size = New System.Drawing.Size(112, 35)
         Me.UBorrar.TabIndex = 6
         Me.UBorrar.Text = "Borrar"
-        Me.UBorrar.UseVisualStyleBackColor = True
+        Me.UBorrar.UseVisualStyleBackColor = False
         '
         'UAplicar
         '
+        Me.UAplicar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.UAplicar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.UAplicar.Location = New System.Drawing.Point(148, 180)
         Me.UAplicar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.UAplicar.Name = "UAplicar"
         Me.UAplicar.Size = New System.Drawing.Size(112, 35)
         Me.UAplicar.TabIndex = 5
         Me.UAplicar.Text = "Aplicar"
-        Me.UAplicar.UseVisualStyleBackColor = True
+        Me.UAplicar.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -372,23 +385,27 @@ Partial Class frmConfiguracion
         '
         'LimpiarUsuario
         '
+        Me.LimpiarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LimpiarUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.LimpiarUsuario.Location = New System.Drawing.Point(303, 60)
         Me.LimpiarUsuario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LimpiarUsuario.Name = "LimpiarUsuario"
         Me.LimpiarUsuario.Size = New System.Drawing.Size(112, 35)
         Me.LimpiarUsuario.TabIndex = 6
         Me.LimpiarUsuario.Text = "Limpiar"
-        Me.LimpiarUsuario.UseVisualStyleBackColor = True
+        Me.LimpiarUsuario.UseVisualStyleBackColor = False
         '
         'CrearUsuario
         '
+        Me.CrearUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.CrearUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.CrearUsuario.Location = New System.Drawing.Point(430, 60)
         Me.CrearUsuario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CrearUsuario.Name = "CrearUsuario"
         Me.CrearUsuario.Size = New System.Drawing.Size(112, 35)
         Me.CrearUsuario.TabIndex = 5
         Me.CrearUsuario.Text = "Crear"
-        Me.CrearUsuario.UseVisualStyleBackColor = True
+        Me.CrearUsuario.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -434,8 +451,10 @@ Partial Class frmConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(590, 418)
         Me.Controls.Add(Me.TabControl1)
+        Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.Name = "frmConfiguracion"

@@ -22,8 +22,8 @@ Partial Class frmPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Seccion1")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modulo1", New System.Windows.Forms.TreeNode() {TreeNode1})
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Seccion1")
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modulo1", New System.Windows.Forms.TreeNode() {TreeNode3})
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CMenu = New System.Windows.Forms.Panel()
         Me.TreeMenu = New System.Windows.Forms.GroupBox()
@@ -31,8 +31,6 @@ Partial Class frmPrincipal
         Me.Status = New System.Windows.Forms.Panel()
         Me.Estado = New System.Windows.Forms.Label()
         Me.Content = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Dibujo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Title = New System.Windows.Forms.Panel()
@@ -60,7 +58,7 @@ Partial Class frmPrincipal
         'CMenu
         '
         Me.CMenu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.CMenu.Controls.Add(Me.TreeMenu)
         Me.CMenu.Location = New System.Drawing.Point(20, 20)
         Me.CMenu.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -71,8 +69,8 @@ Partial Class frmPrincipal
         'TreeMenu
         '
         Me.TreeMenu.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TreeMenu.Controls.Add(Me.TreeView1)
         Me.TreeMenu.Location = New System.Drawing.Point(6, 6)
         Me.TreeMenu.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -86,25 +84,25 @@ Partial Class frmPrincipal
         'TreeView1
         '
         Me.TreeView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TreeView1.Location = New System.Drawing.Point(9, 29)
         Me.TreeView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode1.Name = "Seccion1"
-        TreeNode1.Tag = "Seccion1"
-        TreeNode1.Text = "Seccion1"
-        TreeNode2.Name = "Modulo1"
-        TreeNode2.Tag = "Modulo1"
-        TreeNode2.Text = "Modulo1"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode2})
+        TreeNode3.Name = "Seccion1"
+        TreeNode3.Tag = "Seccion1"
+        TreeNode3.Text = "Seccion1"
+        TreeNode4.Name = "Modulo1"
+        TreeNode4.Tag = "Modulo1"
+        TreeNode4.Text = "Modulo1"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode4})
         Me.TreeView1.Size = New System.Drawing.Size(170, 309)
         Me.TreeView1.TabIndex = 0
         '
         'Status
         '
         Me.Status.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Status.AutoSize = True
         Me.Status.Controls.Add(Me.Estado)
         Me.Status.Location = New System.Drawing.Point(20, 391)
@@ -116,8 +114,8 @@ Partial Class frmPrincipal
         'Estado
         '
         Me.Estado.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Estado.Location = New System.Drawing.Point(15, 17)
         Me.Estado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Estado.Name = "Estado"
@@ -128,10 +126,8 @@ Partial Class frmPrincipal
         'Content
         '
         Me.Content.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Content.Controls.Add(Me.Button1)
-        Me.Content.Controls.Add(Me.Dibujo)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Content.Controls.Add(Me.Label4)
         Me.Content.Controls.Add(Me.Label1)
         Me.Content.Controls.Add(Me.Label3)
@@ -141,31 +137,6 @@ Partial Class frmPrincipal
         Me.Content.Name = "Content"
         Me.Content.Size = New System.Drawing.Size(580, 360)
         Me.Content.TabIndex = 3
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(302, 271)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 35)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Generar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Dibujo
-        '
-        Me.Dibujo.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Dibujo.Enabled = False
-        Me.Dibujo.Font = New System.Drawing.Font("Arial Black", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Dibujo.Location = New System.Drawing.Point(156, 226)
-        Me.Dibujo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Dibujo.Multiline = True
-        Me.Dibujo.Name = "Dibujo"
-        Me.Dibujo.ReadOnly = True
-        Me.Dibujo.Size = New System.Drawing.Size(121, 118)
-        Me.Dibujo.TabIndex = 4
-        Me.Dibujo.Text = "NNN" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "NNN" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "NNN"
-        Me.Dibujo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
@@ -190,7 +161,7 @@ Partial Class frmPrincipal
         'Title
         '
         Me.Title.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Title.Controls.Add(Me.GroupBox1)
         Me.Title.Location = New System.Drawing.Point(6, 9)
         Me.Title.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -201,8 +172,8 @@ Partial Class frmPrincipal
         'GroupBox1
         '
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -216,8 +187,8 @@ Partial Class frmPrincipal
         'Label2
         '
         Me.Label2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.Location = New System.Drawing.Point(9, 25)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
@@ -261,7 +232,5 @@ Partial Class frmPrincipal
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
-    Friend WithEvents Dibujo As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class
