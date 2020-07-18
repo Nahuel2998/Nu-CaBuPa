@@ -66,6 +66,7 @@ create table PMuestraPubli
 	(ID_Publicidad int(6) unsigned not null,
 	ID_Programa int(6) unsigned not null,
 	Fecha_Finalizacion date,
+	Fecha_Inicio date,
 	foreign key ID_Programa references Programa(ID_Programa),
 	foreign key ID_Publicidad references Publicidad(ID_Publicidad)
 	);
@@ -184,10 +185,8 @@ create table VEsDeEvento
 	(
 	ID_Evento INT(6) unsigned,
 	ID_Video INT(6) unsigned,
-	ID_Serie INT(6) unsigned,
 	FOREIGN KEY ID_Evento REFERENCES Evento(ID_Evento),
 	FOREIGN KEY ID_Video REFERENCES Video(ID_Video),
-	FOREIGN KEY ID_Serie REFERENCES Serie(ID_Serie),
-	PRIMARY KEY(ID_Evento, ID_Video, ID_Serie)
+	PRIMARY KEY(ID_Evento, ID_Video)
 	);
 	
