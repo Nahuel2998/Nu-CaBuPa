@@ -16,7 +16,6 @@
     End Sub
     Private Sub btnEntrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEntrar.Click
         If ModConector.BUsuario(txtUsuario.Text, txtPass.Text) Then
-            MessageBox.Show("Bienvenido")
             ModuloInicializador.Principal()
             Me.SetVisibleCore(False)
         End If
@@ -31,7 +30,9 @@
             ModUser.Inicio()
             ModConector.Inicio()
         Catch m As Exception
-            MessageBox.Show(e.ToString)
+            If (ModConector.GDebug) Then
+                MessageBox.Show(e.ToString)
+            End If
         End Try
     End Sub
 

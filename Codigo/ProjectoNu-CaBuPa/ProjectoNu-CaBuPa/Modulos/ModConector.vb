@@ -3,10 +3,10 @@ Imports System.Data
 Imports MySql.Data
 
 Module ModConector
-    Private Debug As Boolean = True
+    Private Debug As Boolean = False
     Private conn As New MySqlConnection
     Private connStr As String
-    Private Adress, User, Database, Port, Pass As String
+    Private Address, User, Database, Port, Pass As String
     Private UsuarioID As Integer
     Private Usuario, Password As String
     Private objCmd As New MySqlCommand
@@ -29,8 +29,8 @@ Module ModConector
     Public Function GDebug() As Boolean
         Return Debug
     End Function
-    Public Function GAdress() As String
-        Return Adress
+    Public Function GAddress() As String
+        Return Address
     End Function
     Public Function GUser() As String
         Return User
@@ -46,35 +46,35 @@ Module ModConector
     End Function
 #End Region
 #Region "Constructor"
-    Public Sub Crear(ByVal RAdress As String, ByVal RPort As String, ByVal RDatabase As String, ByVal RUser As String, ByVal RPass As String)
-        If Not String.IsNullOrEmpty(Adress) Then
-            Adress = RAdress
+    Public Sub Crear(ByVal RAddress As String, ByVal RPort As String, ByVal RDatabase As String, ByVal RUser As String, ByVal RPass As String)
+        If Not String.IsNullOrEmpty(Address) Then
+            Address = RAddress
         Else
-            Adress = "localhost"
+            Address = "localhost"
         End If
-        If Not String.IsNullOrEmpty(Adress) Then
+        If Not String.IsNullOrEmpty(Address) Then
             User = RUser
         Else
             User = "root"
         End If
-        If Not String.IsNullOrEmpty(Adress) Then
+        If Not String.IsNullOrEmpty(Address) Then
             Database = RDatabase
         Else
             Database = "JVRPDB"
         End If
-        If Not String.IsNullOrEmpty(Adress) Then
+        If Not String.IsNullOrEmpty(Address) Then
             Port = RPort
         Else
             Port = "3306"
         End If
-        If Not String.IsNullOrEmpty(Adress) Then
+        If Not String.IsNullOrEmpty(Address) Then
             Pass = RPass
         Else
             Pass = "root"
         End If
     End Sub
-    Public Sub EAdress(ByVal NAdress As String)
-        Adress = NAdress
+    Public Sub EAddress(ByVal NAddress As String)
+        Address = NAddress
     End Sub
     Public Sub EPort(ByVal NPort As String)
         Port = NPort
@@ -92,9 +92,9 @@ Module ModConector
 #Region "Conectar"
     Public Sub Inicio()
         Try
-            connStr = "DataSource=" + Adress + "; Port=" + Port + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8"
-            'connStr = "Server=" + Adress + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8mb4"
-            'connStr = "Server=" + Adress + "; Database=" + Database + "; Uid=" + User + "; Pwd=root; CharSet=utf8mb4"
+            connStr = "DataSource=" + Address + "; Port=" + Port + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8"
+            'connStr = "Server=" + Address + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8mb4"
+            'connStr = "Server=" + Address + "; Database=" + Database + "; Uid=" + User + "; Pwd=root; CharSet=utf8mb4"
             conn = New MySqlConnection(connStr)
             If Not conn.Ping Then
                 conn.Open()
