@@ -24,6 +24,7 @@ Partial Class frmConfiguracion
     Private Sub InitializeComponent()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnGenerador = New System.Windows.Forms.Button()
         Me.DebugCrear = New System.Windows.Forms.Button()
         Me.btnRestablecer = New System.Windows.Forms.Button()
         Me.txtBD = New System.Windows.Forms.TextBox()
@@ -36,10 +37,11 @@ Partial Class frmConfiguracion
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Contraseña = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TAB = New System.Windows.Forms.TabControl()
+        Me.TBconexion = New System.Windows.Forms.TabPage()
+        Me.TPusuarios = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnAccesos = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.dgvNombreUsuario = New System.Windows.Forms.DataGridView()
         Me.UBorrar = New System.Windows.Forms.Button()
@@ -57,9 +59,9 @@ Partial Class frmConfiguracion
         Me.txtContrasena = New System.Windows.Forms.TextBox()
         Me.BW = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
+        Me.TAB.SuspendLayout()
+        Me.TBconexion.SuspendLayout()
+        Me.TPusuarios.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvNombreUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,6 +83,7 @@ Partial Class frmConfiguracion
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.btnGenerador)
         Me.GroupBox1.Controls.Add(Me.DebugCrear)
         Me.GroupBox1.Controls.Add(Me.btnRestablecer)
         Me.GroupBox1.Controls.Add(Me.txtBD)
@@ -102,6 +105,15 @@ Partial Class frmConfiguracion
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Conexion"
+        '
+        'btnGenerador
+        '
+        Me.btnGenerador.Location = New System.Drawing.Point(341, 46)
+        Me.btnGenerador.Name = "btnGenerador"
+        Me.btnGenerador.Size = New System.Drawing.Size(176, 95)
+        Me.btnGenerador.TabIndex = 14
+        Me.btnGenerador.Text = "Generador"
+        Me.btnGenerador.UseVisualStyleBackColor = True
         '
         'DebugCrear
         '
@@ -219,44 +231,45 @@ Partial Class frmConfiguracion
         Me.lblNombre.TabIndex = 1
         Me.lblNombre.Text = "Nombre"
         '
-        'TabControl1
+        'TAB
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(9, 12)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(578, 405)
-        Me.TabControl1.TabIndex = 17
+        Me.TAB.Controls.Add(Me.TBconexion)
+        Me.TAB.Controls.Add(Me.TPusuarios)
+        Me.TAB.Location = New System.Drawing.Point(9, 12)
+        Me.TAB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TAB.Name = "TAB"
+        Me.TAB.SelectedIndex = 0
+        Me.TAB.Size = New System.Drawing.Size(578, 405)
+        Me.TAB.TabIndex = 17
         '
-        'TabPage1
+        'TBconexion
         '
-        Me.TabPage1.Controls.Add(Me.GroupBox1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage1.Size = New System.Drawing.Size(570, 372)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Conexion"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TBconexion.Controls.Add(Me.GroupBox1)
+        Me.TBconexion.Location = New System.Drawing.Point(4, 29)
+        Me.TBconexion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TBconexion.Name = "TBconexion"
+        Me.TBconexion.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TBconexion.Size = New System.Drawing.Size(570, 372)
+        Me.TBconexion.TabIndex = 0
+        Me.TBconexion.Text = "Conexion"
+        Me.TBconexion.UseVisualStyleBackColor = True
         '
-        'TabPage2
+        'TPusuarios
         '
-        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.TabPage2.Controls.Add(Me.GroupBox2)
-        Me.TabPage2.Controls.Add(Me.GroupBox4)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage2.Size = New System.Drawing.Size(570, 372)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Usuario"
+        Me.TPusuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.TPusuarios.Controls.Add(Me.GroupBox2)
+        Me.TPusuarios.Controls.Add(Me.GroupBox4)
+        Me.TPusuarios.Location = New System.Drawing.Point(4, 29)
+        Me.TPusuarios.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TPusuarios.Name = "TPusuarios"
+        Me.TPusuarios.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TPusuarios.Size = New System.Drawing.Size(570, 372)
+        Me.TPusuarios.TabIndex = 1
+        Me.TPusuarios.Text = "Usuario"
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.btnAccesos)
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
         Me.GroupBox2.Controls.Add(Me.UBorrar)
         Me.GroupBox2.Controls.Add(Me.UAplicar)
@@ -268,10 +281,21 @@ Partial Class frmConfiguracion
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox2.Size = New System.Drawing.Size(552, 225)
+        Me.GroupBox2.Size = New System.Drawing.Size(552, 233)
         Me.GroupBox2.TabIndex = 12
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Edición"
+        '
+        'btnAccesos
+        '
+        Me.btnAccesos.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnAccesos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnAccesos.Location = New System.Drawing.Point(154, 189)
+        Me.btnAccesos.Name = "btnAccesos"
+        Me.btnAccesos.Size = New System.Drawing.Size(112, 35)
+        Me.btnAccesos.TabIndex = 13
+        Me.btnAccesos.Text = "Permisos"
+        Me.btnAccesos.UseVisualStyleBackColor = False
         '
         'GroupBox3
         '
@@ -281,7 +305,7 @@ Partial Class frmConfiguracion
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox3.Size = New System.Drawing.Size(268, 191)
+        Me.GroupBox3.Size = New System.Drawing.Size(268, 190)
         Me.GroupBox3.TabIndex = 13
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Usuarios"
@@ -309,7 +333,7 @@ Partial Class frmConfiguracion
         '
         Me.UBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.UBorrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.UBorrar.Location = New System.Drawing.Point(22, 180)
+        Me.UBorrar.Location = New System.Drawing.Point(22, 146)
         Me.UBorrar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.UBorrar.Name = "UBorrar"
         Me.UBorrar.Size = New System.Drawing.Size(112, 35)
@@ -321,7 +345,7 @@ Partial Class frmConfiguracion
         '
         Me.UAplicar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.UAplicar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.UAplicar.Location = New System.Drawing.Point(148, 180)
+        Me.UAplicar.Location = New System.Drawing.Point(154, 146)
         Me.UAplicar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.UAplicar.Name = "UAplicar"
         Me.UAplicar.Size = New System.Drawing.Size(112, 35)
@@ -332,7 +356,7 @@ Partial Class frmConfiguracion
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 98)
+        Me.Label2.Location = New System.Drawing.Point(18, 85)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(92, 20)
@@ -359,7 +383,7 @@ Partial Class frmConfiguracion
         '
         'txtEContrasena
         '
-        Me.txtEContrasena.Location = New System.Drawing.Point(22, 123)
+        Me.txtEContrasena.Location = New System.Drawing.Point(22, 110)
         Me.txtEContrasena.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtEContrasena.Name = "txtEContrasena"
         Me.txtEContrasena.Size = New System.Drawing.Size(236, 26)
@@ -378,7 +402,7 @@ Partial Class frmConfiguracion
         Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox4.Size = New System.Drawing.Size(552, 114)
+        Me.GroupBox4.Size = New System.Drawing.Size(547, 114)
         Me.GroupBox4.TabIndex = 11
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Creación"
@@ -387,7 +411,7 @@ Partial Class frmConfiguracion
         '
         Me.LimpiarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.LimpiarUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LimpiarUsuario.Location = New System.Drawing.Point(303, 60)
+        Me.LimpiarUsuario.Location = New System.Drawing.Point(296, 69)
         Me.LimpiarUsuario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LimpiarUsuario.Name = "LimpiarUsuario"
         Me.LimpiarUsuario.Size = New System.Drawing.Size(112, 35)
@@ -399,7 +423,7 @@ Partial Class frmConfiguracion
         '
         Me.CrearUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.CrearUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.CrearUsuario.Location = New System.Drawing.Point(430, 60)
+        Me.CrearUsuario.Location = New System.Drawing.Point(416, 69)
         Me.CrearUsuario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CrearUsuario.Name = "CrearUsuario"
         Me.CrearUsuario.Size = New System.Drawing.Size(112, 35)
@@ -410,7 +434,7 @@ Partial Class frmConfiguracion
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(270, 25)
+        Me.Label7.Location = New System.Drawing.Point(265, 25)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(92, 20)
@@ -429,18 +453,18 @@ Partial Class frmConfiguracion
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(86, 20)
+        Me.txtNombre.Location = New System.Drawing.Point(91, 22)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(174, 26)
+        Me.txtNombre.Size = New System.Drawing.Size(162, 26)
         Me.txtNombre.TabIndex = 0
         '
         'txtContrasena
         '
-        Me.txtContrasena.Location = New System.Drawing.Point(370, 20)
+        Me.txtContrasena.Location = New System.Drawing.Point(356, 22)
         Me.txtContrasena.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtContrasena.Name = "txtContrasena"
-        Me.txtContrasena.Size = New System.Drawing.Size(170, 26)
+        Me.txtContrasena.Size = New System.Drawing.Size(172, 26)
         Me.txtContrasena.TabIndex = 1
         Me.txtContrasena.UseSystemPasswordChar = True
         '
@@ -453,7 +477,7 @@ Partial Class frmConfiguracion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(590, 418)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TAB)
         Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
@@ -462,9 +486,9 @@ Partial Class frmConfiguracion
         Me.Text = "Configuración"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
+        Me.TAB.ResumeLayout(False)
+        Me.TBconexion.ResumeLayout(False)
+        Me.TPusuarios.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -488,9 +512,9 @@ Partial Class frmConfiguracion
     Friend WithEvents txtContraseña As System.Windows.Forms.TextBox
     Friend WithEvents btnRestablecer As System.Windows.Forms.Button
     Friend WithEvents DebugCrear As System.Windows.Forms.Button
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
-    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents TAB As System.Windows.Forms.TabControl
+    Friend WithEvents TBconexion As System.Windows.Forms.TabPage
+    Friend WithEvents TPusuarios As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents UBorrar As System.Windows.Forms.Button
@@ -508,4 +532,6 @@ Partial Class frmConfiguracion
     Friend WithEvents txtContrasena As System.Windows.Forms.TextBox
     Friend WithEvents dgvNombreUsuario As System.Windows.Forms.DataGridView
     Friend WithEvents BW As System.ComponentModel.BackgroundWorker
+    Friend WithEvents btnAccesos As Button
+    Friend WithEvents btnGenerador As Button
 End Class

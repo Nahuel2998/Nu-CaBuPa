@@ -2,7 +2,7 @@
 
     Private Sub btnOpciones_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOpciones.Click
         If BUsuario(txtUsuario.Text, txtPass.Text) Or ModConector.GDebug Then
-            ModuloInicializador.Configuracion()
+            ModInicializador.Configuracion()
         End If
     End Sub
 
@@ -16,7 +16,7 @@
     End Sub
     Private Sub btnEntrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEntrar.Click
         If ModConector.BUsuario(txtUsuario.Text, txtPass.Text) Then
-            ModuloInicializador.Principal()
+            ModInicializador.Principal()
             Me.SetVisibleCore(False)
         End If
     End Sub

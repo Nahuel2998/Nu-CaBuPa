@@ -14,5 +14,5 @@ VEsDeEvento:	{*ID_Evento, ID_Video, ID_Serie*}
 Evento:		{*ID_Evento*, Nombre, Descripcion}
 FechaEvento:	{*ID_Evento, Fecha*} 
 usuarios:	{*id_usuario*, nombre, contrasena}
-acceso:		{*id_acceso*, seccion}
+acceso:		{*id_acceso*, seccion, tipo}
 UsTieneAcceso:	{*id_usuario, id_acceso*} 

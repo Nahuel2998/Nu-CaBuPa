@@ -10,7 +10,7 @@ Public Class frmConfiguracion
 
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
         If (txtIp.Text <> "") Then
-            ModConector.EAdress(txtIp.Text)
+            ModConector.EAddress(txtIp.Text)
         End If
         If (txtPuerto.Text <> "") Then
             ModConector.EPort(txtPuerto.Text)
@@ -28,7 +28,7 @@ Public Class frmConfiguracion
 
     Private Sub DebugCrear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DebugCrear.Click
         If (txtIp.Text <> "") Then
-            ModConector.EAdress(txtIp.Text)
+            ModConector.EAddress(txtIp.Text)
         End If
         If (txtPuerto.Text <> "") Then
             ModConector.EPort(txtPuerto.Text)
@@ -63,7 +63,7 @@ Public Class frmConfiguracion
         Control.CheckForIllegalCrossThreadCalls = False
     End Sub
 
-    Private Sub TabPage2_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage2.Enter
+    Private Sub TabPage2_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TPusuarios.Enter
         'ActualizarUsuarios(False)
 
         BW.RunWorkerAsync(False)
@@ -94,7 +94,6 @@ Public Class frmConfiguracion
             If UserID = ModConector.GUsuarioID Then
                 ModConector.BorrarUsuario()
                 Me.Dispose()
-
             End If
         End If
         LimpiarEditar()
@@ -153,5 +152,9 @@ Public Class frmConfiguracion
 
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
+    End Sub
+
+    Private Sub btnGenerador_Click(sender As Object, e As EventArgs) Handles btnGenerador.Click
+        ModInicializador.Generadores()
     End Sub
 End Class

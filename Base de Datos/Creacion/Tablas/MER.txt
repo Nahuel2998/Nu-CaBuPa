@@ -10,7 +10,7 @@ Publicidad: {*ID_Publicidad*, Tema, ID_Empresa}
 
 ---
 usuarios:	{*id_usuario*, nombre, contrasena}
-acceso:		{*id_acceso*, seccion}
+acceso:		{*id_acceso*, seccion, tipo}
 UsTieneAcceso:	{*id_usuario, id_acceso*} 
 
 ---

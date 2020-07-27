@@ -7,7 +7,8 @@ CREATE TABLE `usuarios` (
 );
 CREATE TABLE `acceso` (
   `id_acceso` int(6) unsigned auto_increment not null primary key,
-  `seccion` varchar(64) NOT NULL
+  `seccion` varchar(64) NOT NULL,
+	tipo varchar(2) not null,
 );
 CREATE TABLE `UsTieneAcceso` (
   `id_usuario` int(6) unsigned not null,

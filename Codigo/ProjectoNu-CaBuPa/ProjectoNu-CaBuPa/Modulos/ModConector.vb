@@ -3,7 +3,7 @@ Imports System.Data
 Imports MySql.Data
 
 Module ModConector
-    Private Debug As Boolean = False
+    Private Debug As Boolean = True
     Private conn As New MySqlConnection
     Private connStr As String
     Private Address, User, Database, Port, Pass As String
@@ -156,27 +156,26 @@ Module ModConector
 #End Region
 #Region "Comandos"
     Public Sub BSQL(ByVal nTabla As String, ByVal Condition As String)
-        Dim borrar As String = "DELETE FROM " + nTabla + " WHERE " + Condition
-        ESQL(borrar)
+        ESQL("DELETE FROM " + nTabla + " WHERE " + Condition)
     End Sub
     Public Sub ISQL(ByVal nTabla As String, ByVal Column As String, ByVal Data As String)
-        Dim insert As String = "Insert into " + nTabla + " ( " + Column + " ) values (" + Data + " )"
-        ESQL(insert)
+        ESQL("Insert into " + nTabla + " ( " + Column + " ) values (" + Data + " )")
     End Sub
     Public Function SSQL(ByVal nColumn As String, ByVal nTabla As String, ByVal Condition As String) As DataTable
-        Dim selector As String = "select " + nColumn + " FROM " + nTabla + " WHERE " + Condition
         If ds.Tables.Contains(nTabla) Then
             dt = New DataTable
             dt.Columns.Add(ds.Tables(nTabla).Columns(nColumn))
             Return dt
         Else
-
-            Return ESQLSelect(selector)
+            Return ESQLSelect("select " + nColumn + " FROM " + nTabla + " WHERE " + Condition)
         End If
     End Function
+    Public Function PSQL(ByVal nColumn As String, ByVal nTabla As String, ByVal Condition As String) As String
+        Return "select " + nColumn + " FROM " + nTabla + " WHERE " + Condition
+
+    End Function
     Public Sub USQL(ByVal nTabla As String, ByVal Orden As String, ByVal Condition As String)
-        Dim update As String = "update " + nTabla + " set " + Orden + " WHERE " + Condition
-        ESQL(update)
+        ESQL("update " + nTabla + " set " + Orden + " WHERE " + Condition)
     End Sub
 #End Region
 #Region "Usuarios"
@@ -187,7 +186,7 @@ Module ModConector
             Return dt
         Else
             Try
-                objCmd = New MySqlCommand("SELECT id_usuario as 'ID', nombre as 'Nombre Usuarios' FROM usuarios", conn)
+                objCmd = New MySqlCommand(PSQL("id_usuario as 'ID', nombre as 'Nombre Usuarios'", "usuarios", "True"), conn)
                 objCmd.Prepare()
                 Dim dt As DataTable = ESQLSelect(objCmd, True)
                 If Not IsNothing(dt) Then
@@ -206,7 +205,7 @@ Module ModConector
     End Function
     Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String) As Boolean
         Try
-            objCmd = New MySqlCommand("SELECT id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256))", conn)
+            objCmd = New MySqlCommand(PSQL("id_usuario", "usuarios as User", "nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256))"), conn)
             objCmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre
             objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = contraseña
             objCmd.Parameters.Add("@key", MySqlDbType.VarChar).Value = ModCodificador.GKey

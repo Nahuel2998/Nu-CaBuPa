@@ -87,7 +87,7 @@ Module ModUser
             archivos = archivo
         End If
         Dim escribir As New StreamWriter(ruta & Archivos, False)
-        escribir.WriteLine(ModCodificador.Encriptar(ModConector.GAdress()))
+        escribir.WriteLine(ModCodificador.Encriptar(ModConector.GAddress()))
         escribir.WriteLine(ModCodificador.Encriptar(ModConector.GPort()))
         escribir.WriteLine(ModCodificador.Encriptar(ModConector.GDatabase()))
         escribir.WriteLine(ModCodificador.Encriptar(ModConector.GUser()))
