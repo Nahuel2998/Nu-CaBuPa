@@ -11,12 +11,15 @@ Public Class Generador_DB
 
     Private Sub btnCTabla_Click(sender As Object, e As EventArgs) Handles btnCTabla.Click
         ModLog.Guardar(nTabla)
-        dt = New DataTable
-        dt = ESQLSelect("describe " + nTabla)
-        dgvTabla.DataSource = dt
-        For i As Integer = 5 To 1 Step -1
+        For i As Integer = dgvTabla.Columns.Count - 1 To 0 Step -1
             dgvTabla.Columns.RemoveAt(i)
         Next
+        dt = ESQLSelect("describe " + nTabla)
+        dgvTabla.DataSource = dt
+        For i As Integer = dgvTabla.Columns.Count - 1 To 1 Step -1
+            dgvTabla.Columns.RemoveAt(i)
+        Next
+        dgvTabla.Columns(0).ReadOnly = True
         dgvTabla.Columns.Add("Datos", "Datos")
         dgvTabla.Columns.Add("Mantener", "Mantener")
     End Sub

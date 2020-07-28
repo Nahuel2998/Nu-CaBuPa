@@ -58,6 +58,8 @@ Public Class frmConfiguracion
     Private Sub frmConfiguracion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If ModConector.GDebug Then
             DebugCrear.Visible = True
+            btnGenerador.Visible = True
+            btnGenerador.Enabled = True
             DebugCrear.Enabled = True
         End If
         Control.CheckForIllegalCrossThreadCalls = False

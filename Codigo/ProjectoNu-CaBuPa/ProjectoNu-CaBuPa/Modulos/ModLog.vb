@@ -7,7 +7,7 @@ Module ModLog
     Private archivo As String = "Log.txt"
     Public Sub Guardar(ByVal Acciones As String)
         Dim escribir As New StreamWriter(ruta & archivo, True)
-        escribir.WriteLine(Now.ToString + " " + Acciones)
+        escribir.WriteLine(Now.ToString + " " + My.Computer.Name + " ' " + Acciones + " '")
         escribir.Close()
 
     End Sub

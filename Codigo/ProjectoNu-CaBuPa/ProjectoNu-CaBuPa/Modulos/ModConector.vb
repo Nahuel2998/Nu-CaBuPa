@@ -96,6 +96,7 @@ Module ModConector
             'connStr = "Server=" + Address + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8mb4"
             'connStr = "Server=" + Address + "; Database=" + Database + "; Uid=" + User + "; Pwd=root; CharSet=utf8mb4"
             conn = New MySqlConnection(connStr)
+            ModLog.Guardar(connStr)
             If Not conn.Ping Then
                 conn.Open()
             End If

@@ -108,12 +108,14 @@ Partial Class frmConfiguracion
         '
         'btnGenerador
         '
+        Me.btnGenerador.Enabled = False
         Me.btnGenerador.Location = New System.Drawing.Point(341, 46)
         Me.btnGenerador.Name = "btnGenerador"
         Me.btnGenerador.Size = New System.Drawing.Size(176, 95)
         Me.btnGenerador.TabIndex = 14
         Me.btnGenerador.Text = "Generador"
         Me.btnGenerador.UseVisualStyleBackColor = True
+        Me.btnGenerador.Visible = False
         '
         'DebugCrear
         '
