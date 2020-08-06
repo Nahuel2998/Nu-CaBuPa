@@ -91,10 +91,16 @@
     <Compile Include="S_Usuario\Accesos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="S_Video\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="S_Video\Multimedia - Copia.Designer.vb">
+      <DependentUpon>Multimedia - Copia.vb</DependentUpon>
     </Compile>
-    <Compile Include="S_Video\Form1.vb">
+    <Compile Include="S_Video\Multimedia - Copia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S_Video\Multimedia.Designer.vb">
+      <DependentUpon>Multimedia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="S_Video\Multimedia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="S_Usuario\frmConfiguracion.Designer.vb">
@@ -144,8 +150,11 @@
     <EmbeddedResource Include="S_Usuario\Accesos.resx">
       <DependentUpon>Accesos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="S_Video\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="S_Video\Multimedia - Copia.resx">
+      <DependentUpon>Multimedia - Copia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_Video\Multimedia.resx">
+      <DependentUpon>Multimedia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="S_Usuario\frmConfiguracion.resx">
       <DependentUpon>frmConfiguracion.vb</DependentUpon>

@@ -103,3 +103,4 @@
 7/27/2020 9:14:03 PM eventomuestrapubli
 7/27/2020 9:17:32 PM DESKTOP-SDVEG3U'DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8'
 7/27/2020 9:17:36 PM DESKTOP-SDVEG3U'DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8'
+05/08/2020 20:37:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

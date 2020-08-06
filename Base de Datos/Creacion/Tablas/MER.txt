@@ -1,8 +1,7 @@
 Programa: {*ID_Programa*, Nombre_Programa, Fecha_Finalizacion}
 ---
 FechaPrograma: {*Fecha*, *Hora_Inicio*, Hora_Fin, ID_Programa}
-PrecioEspacio: {*ID_Precio_Espacio*, Descripcion, Precio}
-ProgramaCuota: {*ID_Precio_Espacio*,*ID_Programa*,Fecha_Pago,Nro_Recibo}
+ProgramaCuota: {*ID_Programa_Cuota*,*ID_Programa*,Fecha_Pago,Fecha_Emision, Precio}
 
 ---
 
@@ -16,7 +15,7 @@ UsTieneAcceso:	{*id_usuario, id_acceso*}
 ---
 
 PMuestraPubli: {*ID_Publicidad*, *ID_Programa*, Fecha_Finalizacion}
-PublicidadCuota: {*ID_Cuota*, Fecha_Pago, Precio, ID_Publicidad}
+PublicidadCuota: {*ID_Publicidad_Cuota*, Fecha_Pago, Precio, ID_Publicidad}
 
 ---
 
@@ -33,7 +32,7 @@ Evento:		{*ID_Evento*, Nombre, Descripcion}
 
 ---
 
-VEsDeEvento:	{*ID_Evento, ID_Video, ID_Serie*}
+EventoTrataDeV:	{*ID_Evento, ID_Video, ID_Serie*}
 FechaEvento:	{*ID_Evento, Fecha*} 
 
 ---

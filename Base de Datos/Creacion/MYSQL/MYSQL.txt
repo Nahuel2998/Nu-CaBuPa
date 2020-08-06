@@ -1,22 +1,23 @@
 create database JVRPDATABASE;
 use JVRPDATABASE;
-CREATE TABLE `usuarios` (
-  `id_usuario` int(6) unsigned auto_increment not null primary key,
-  `nombre` varchar(64) NOT NULL,
-  `contrasena` varbinary(256) NOT NULL
+
+CREATE TABLE usuarios (
+  id_usuario int(6) unsigned auto_increment not null primary key,
+  nombre varchar(64) NOT NULL,
+  contrasena varbinary(256) NOT NULL
 );
-CREATE TABLE `acceso` (
-  `id_acceso` int(6) unsigned auto_increment not null primary key,
-  `seccion` varchar(64) NOT NULL,
-	tipo varchar(2) not null,
+CREATE TABLE acceso (
+  id_acceso int(6) unsigned auto_increment not null primary key,
+  seccion varchar(64) NOT NULL,
+	tipo varchar(2) not null
 );
-CREATE TABLE `UsTieneAcceso` (
-  `id_usuario` int(6) unsigned not null,
-  `id_acceso` int(6) unsigned not null,
-  PRIMARY KEY (`id_usuario`,`id_acceso`),
-  KEY `id_acceso` (`id_acceso`),
-  CONSTRAINT `UsTieneAcceso_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`),
-  CONSTRAINT `UsTieneAcceso_ibfk_2` FOREIGN KEY (`id_acceso`) REFERENCES `acceso` (`id_acceso`)
+CREATE TABLE UsTieneAcceso (
+  id_usuario int(6) unsigned not null,
+  id_acceso int(6) unsigned not null,
+  PRIMARY KEY (id_usuario,id_acceso),
+  KEY id_acceso (id_acceso),
+  CONSTRAINT UsTieneAcceso_ibfk_1 FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario),
+  CONSTRAINT UsTieneAcceso_ibfk_2 FOREIGN KEY (id_acceso) REFERENCES acceso (id_acceso)
 );
 create table Programa
 	(
@@ -33,21 +34,15 @@ create table FechaPrograma
 	ID_Programa int(6) unsigned, 
 	foreign key (ID_Programa ) references Programa(ID_Programa),
 	primary key(Fecha, Hora_Inicio));
-create table PrecioEspacio
-	(
-	ID_Precio_Espacio int(6) unsigned auto_increment not null primary key,
-	Descripcion varchar(256) not null,
-	Precio int(5) unsigned
-	);
 create table ProgramaCuota
 	(
-	ID_Precio_Espacio int(6) unsigned not null,
+	ID_Programa_Cuota int(6) unsigned not null,
 	ID_Programa int(6) unsigned not null,
 	Fecha_Pago date,
-	Nro_Recibo int(7) unsigned,
-	primary key(ID_Programa,ID_Precio_Espacio),
-	foreign key (ID_Programa ) references Programa(ID_Programa),
-	foreign key (ID_Precio_Espacio ) references PrecioEspacio(ID_Precio_Espacio)
+	Precio int(5) unsigned not null,
+	Fecha_Emision date not null,
+	primary key(ID_Programa_Cuota),
+	foreign key (ID_Programa ) references Programa(ID_Programa)
 	);
 
 create table Empresa
@@ -74,7 +69,7 @@ create table PMuestraPubli
 	);
 create table PublicidadCuota
 	(
-	ID_Cuota int(6) unsigned auto_increment not null primary key,
+	ID_PublicidadCuota int(6) unsigned auto_increment not null primary key,
 	Fecha_Pago date,
 	Precio int(6) unsigned not null,
 	ID_Publicidad int(6) unsigned not null,
@@ -164,7 +159,7 @@ create table FunTrabaja
 	PRIMARY KEY(ID_Funcionario, ID_Funcion, ID_Programa)
 	);
 	
--- - --
+  
 
 create table Video
 	(
@@ -183,7 +178,7 @@ create table Serie
 	nombre VARCHAR(64) NOT NULL
 	);
 	
-create table VEsDeEvento
+create table EventoEsDeV
 	(
 	ID_Evento INT(6) unsigned not null,
 	ID_Video INT(6) unsigned not null,

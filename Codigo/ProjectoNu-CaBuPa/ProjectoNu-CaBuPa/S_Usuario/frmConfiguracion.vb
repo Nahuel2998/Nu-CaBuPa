@@ -159,4 +159,8 @@ Public Class frmConfiguracion
     Private Sub btnGenerador_Click(sender As Object, e As EventArgs) Handles btnGenerador.Click
         ModInicializador.Generadores()
     End Sub
+
+    Private Sub btnAccesos_Click(sender As Object, e As EventArgs) Handles btnAccesos.Click
+
+    End Sub
 End Class
