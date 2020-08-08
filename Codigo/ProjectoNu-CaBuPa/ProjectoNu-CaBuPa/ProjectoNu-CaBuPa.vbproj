@@ -147,6 +147,9 @@
     <EmbeddedResource Include="Ayudas de desarrollo\Generador_DB.resx">
       <DependentUpon>Generador_DB.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="S_Principal\frmPrincipal.aa.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="S_Usuario\Accesos.resx">
       <DependentUpon>Accesos.vb</DependentUpon>
     </EmbeddedResource>

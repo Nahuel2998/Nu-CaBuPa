@@ -104,3 +104,29 @@
 7/27/2020 9:17:32 PM DESKTOP-SDVEG3U'DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8'
 7/27/2020 9:17:36 PM DESKTOP-SDVEG3U'DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8'
 05/08/2020 20:37:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+06/08/2020 19:31:14 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+06/08/2020 19:31:28 DESKTOP-SDVEG3U ' video 
+06/08/2020 19:32:54 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+06/08/2020 19:33:05 DESKTOP-SDVEG3U ' serie 
+06/08/2020 19:35:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+06/08/2020 19:35:16 DESKTOP-SDVEG3U ' acceso 
+06/08/2020 19:36:07 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+06/08/2020 19:36:26 DESKTOP-SDVEG3U ' acceso 
+06/08/2020 19:36:35 DESKTOP-SDVEG3U ' id_acceso,seccion,tipo'1','none','rw' 
+06/08/2020 19:37:23 DESKTOP-SDVEG3U ' id_acceso,seccion,tipo'3','ninguna','xr' 
+06/08/2020 19:37:29 DESKTOP-SDVEG3U ' id_acceso,seccion,tipo'4','ninguna','xr' 
+06/08/2020 19:37:40 DESKTOP-SDVEG3U ' seccion,tipo'nnnn','xr' 
+06/08/2020 19:38:27 DESKTOP-SDVEG3U ' usuarios 
+07/08/2020 19:40:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+07/08/2020 19:40:20 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+07/08/2020 20:10:18 DESKTOP-SDVEG3U ' 1730 
+07/08/2020 20:12:40 DESKTOP-SDVEG3U ' 1088 
+07/08/2020 20:12:40 DESKTOP-SDVEG3U ' 544 
+07/08/2020 20:13:05 DESKTOP-SDVEG3U ' 1088 
+07/08/2020 20:13:05 DESKTOP-SDVEG3U ' 544 
+07/08/2020 20:13:26 DESKTOP-SDVEG3U ' 1088 
+07/08/2020 20:13:26 DESKTOP-SDVEG3U ' 544 
+07/08/2020 20:21:45 DESKTOP-SDVEG3U ' 1088 
+07/08/2020 20:21:45 DESKTOP-SDVEG3U ' 544 
+07/08/2020 20:29:16 DESKTOP-SDVEG3U ' 1088 
+07/08/2020 20:29:17 DESKTOP-SDVEG3U ' 544 
