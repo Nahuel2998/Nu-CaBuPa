@@ -152,10 +152,6 @@ Public Class frmConfiguracion
         ActualizarUsuarios()
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
-
     Private Sub btnGenerador_Click(sender As Object, e As EventArgs) Handles btnGenerador.Click
         ModInicializador.Generadores()
     End Sub

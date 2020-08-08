@@ -233,4 +233,24 @@ Module ModConector
     End Sub
 
 #End Region
+#Region "Main"
+    Public Function APrograma(fecha As Date) As DataTable
+        Try
+            objCmd = New MySqlCommand(PSQL("hora_inicio as 'Inicio', hora_fin as 'Fin', Nombre_programa as 'Programa'", "fechaprograma f inner join programa p on f.id_programa=p.id_programa", "fecha = '" + Format(CDate(fecha), "yyyy-MM-dd") + "'"), conn)
+            objCmd.Prepare()
+            Dim dt As DataTable = ESQLSelect(objCmd, True)
+            If Not IsNothing(dt) Then
+                If dt.Rows.Count = 0 Then
+                    MessageBox.Show("No hay programas")
+                Else
+                    Return dt
+                End If
+            End If
+        Catch e As Exception
+            MessageBox.Show(e.ToString)
+        End Try
+        Return Nothing
+
+    End Function
+#End Region
 End Module

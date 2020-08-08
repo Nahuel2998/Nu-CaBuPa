@@ -39,10 +39,9 @@ Public Class Generador_DB
     Private Function GeneradorDeString() As String()
         Dim Texto As String() = {"", ""}
         For i As Integer = 0 To dgvTabla.Rows.Count - 1
-            If dt.Rows(i).Item(3).ToString() = "no" Or Not String.IsNullOrWhiteSpace(dgvTabla.Rows(i).Cells(1).Value.ToString()) Then
+            If dt.Rows(i).Item(3).ToString() = "no" Or Not String.IsNullOrWhiteSpace(dgvTabla.Rows(i).Cells(1).Value) Then
                 Texto(0) += dgvTabla.Rows(i).Cells(0).Value.ToString() + ","
                 Texto(1) += "'" + dgvTabla.Rows(i).Cells(1).Value.ToString() + "',"
-
             End If
         Next
         Texto(0) = Texto(0).Remove(Texto(0).Length - 1)

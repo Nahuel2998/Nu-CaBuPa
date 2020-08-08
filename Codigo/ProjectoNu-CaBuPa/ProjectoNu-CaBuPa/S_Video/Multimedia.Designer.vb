@@ -25,6 +25,7 @@ Partial Class Multimedia
         Me.Aregar = New System.Windows.Forms.TabPage()
         Me.tbTipoContenido = New System.Windows.Forms.TabControl()
         Me.tbpVideo = New System.Windows.Forms.TabPage()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
@@ -33,29 +34,28 @@ Partial Class Multimedia
         Me.Label7 = New System.Windows.Forms.Label()
         Me.tbpSerie = New System.Windows.Forms.TabPage()
         Me.Buscar = New System.Windows.Forms.TabPage()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnbuscar = New System.Windows.Forms.Button()
-        Me.tbAccion = New System.Windows.Forms.TabControl()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Serie = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.btnbuscar = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.tbAccion = New System.Windows.Forms.TabControl()
         Me.Aregar.SuspendLayout()
         Me.tbTipoContenido.SuspendLayout()
         Me.tbpVideo.SuspendLayout()
         Me.Buscar.SuspendLayout()
-        Me.tbAccion.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tbAccion.SuspendLayout()
         Me.SuspendLayout()
         '
         'Aregar
@@ -96,6 +96,14 @@ Partial Class Multimedia
         Me.tbpVideo.TabIndex = 0
         Me.tbpVideo.Text = "Video"
         Me.tbpVideo.UseVisualStyleBackColor = True
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(115, 89)
+        Me.TextBox4.Multiline = True
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(297, 112)
+        Me.TextBox4.TabIndex = 66
         '
         'Button2
         '
@@ -181,89 +189,6 @@ Partial Class Multimedia
         Me.Buscar.Text = "Buscar"
         Me.Buscar.UseVisualStyleBackColor = True
         '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(494, 64)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(293, 26)
-        Me.DateTimePicker1.TabIndex = 45
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(494, 20)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(293, 26)
-        Me.TextBox2.TabIndex = 43
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(95, 20)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(280, 26)
-        Me.TextBox1.TabIndex = 42
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(432, 69)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(54, 20)
-        Me.Label4.TabIndex = 40
-        Me.Label4.Text = "Fecha"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(383, 22)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(103, 20)
-        Me.Label2.TabIndex = 38
-        Me.Label2.Text = "Nombre serie"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 22)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 20)
-        Me.Label1.TabIndex = 37
-        Me.Label1.Text = "Nombre"
-        '
-        'btnbuscar
-        '
-        Me.btnbuscar.Location = New System.Drawing.Point(541, 101)
-        Me.btnbuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnbuscar.Name = "btnbuscar"
-        Me.btnbuscar.Size = New System.Drawing.Size(112, 35)
-        Me.btnbuscar.TabIndex = 35
-        Me.btnbuscar.Text = "Buscar"
-        Me.btnbuscar.UseVisualStyleBackColor = True
-        '
-        'tbAccion
-        '
-        Me.tbAccion.Controls.Add(Me.Buscar)
-        Me.tbAccion.Controls.Add(Me.Aregar)
-        Me.tbAccion.Location = New System.Drawing.Point(9, 18)
-        Me.tbAccion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tbAccion.Name = "tbAccion"
-        Me.tbAccion.SelectedIndex = 0
-        Me.tbAccion.Size = New System.Drawing.Size(816, 454)
-        Me.tbAccion.TabIndex = 0
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(115, 89)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(297, 112)
-        Me.TextBox4.TabIndex = 66
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
@@ -282,23 +207,6 @@ Partial Class Multimedia
         Me.GroupBox1.TabIndex = 48
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Video"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(7, 67)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 20)
-        Me.Label5.TabIndex = 46
-        Me.Label5.Text = "Contenido"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(95, 67)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(280, 69)
-        Me.TextBox5.TabIndex = 47
         '
         'DataGridView1
         '
@@ -341,6 +249,98 @@ Partial Class Multimedia
         Me.Fecha.Name = "Fecha"
         Me.Fecha.ReadOnly = True
         '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(95, 67)
+        Me.TextBox5.Multiline = True
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(280, 69)
+        Me.TextBox5.TabIndex = 47
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(7, 67)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(82, 20)
+        Me.Label5.TabIndex = 46
+        Me.Label5.Text = "Contenido"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(7, 22)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(65, 20)
+        Me.Label1.TabIndex = 37
+        Me.Label1.Text = "Nombre"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(95, 20)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(280, 26)
+        Me.TextBox1.TabIndex = 42
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(383, 22)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(103, 20)
+        Me.Label2.TabIndex = 38
+        Me.Label2.Text = "Nombre serie"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(494, 20)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(293, 26)
+        Me.TextBox2.TabIndex = 43
+        '
+        'btnbuscar
+        '
+        Me.btnbuscar.Location = New System.Drawing.Point(541, 101)
+        Me.btnbuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnbuscar.Name = "btnbuscar"
+        Me.btnbuscar.Size = New System.Drawing.Size(112, 35)
+        Me.btnbuscar.TabIndex = 35
+        Me.btnbuscar.Text = "Buscar"
+        Me.btnbuscar.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(494, 64)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(293, 26)
+        Me.DateTimePicker1.TabIndex = 45
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(432, 69)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(54, 20)
+        Me.Label4.TabIndex = 40
+        Me.Label4.Text = "Fecha"
+        '
+        'tbAccion
+        '
+        Me.tbAccion.Controls.Add(Me.Buscar)
+        Me.tbAccion.Controls.Add(Me.Aregar)
+        Me.tbAccion.Location = New System.Drawing.Point(9, 18)
+        Me.tbAccion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.tbAccion.Name = "tbAccion"
+        Me.tbAccion.SelectedIndex = 0
+        Me.tbAccion.Size = New System.Drawing.Size(816, 454)
+        Me.tbAccion.TabIndex = 0
+        '
         'Multimedia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -355,10 +355,10 @@ Partial Class Multimedia
         Me.tbpVideo.ResumeLayout(False)
         Me.tbpVideo.PerformLayout()
         Me.Buscar.ResumeLayout(False)
-        Me.tbAccion.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tbAccion.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
