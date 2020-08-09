@@ -58,4 +58,15 @@ Public Class frmPrincipal
         BWNumberOne.RunWorkerAsync()
     End Sub
 
+    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+        DataGridView1.RowHeadersVisible = False
+    End Sub
+
+    Private Sub dgvPrograma_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellContentClick
+
+    End Sub
+
+    Private Sub dgvvideo_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
 End Class

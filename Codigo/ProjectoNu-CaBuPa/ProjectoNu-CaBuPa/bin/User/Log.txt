@@ -226,3 +226,30 @@
 08/08/2020 20:43:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 08/08/2020 20:52:54 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 08/08/2020 20:57:36 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 17:57:14 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 17:57:38 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 17:58:07 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:16:08 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:20:12 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:21:48 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:29:23 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:29:36 LAPTOP-701EDAA0 ' programa 
+9/8/2020 18:30:01 LAPTOP-701EDAA0 ' Nombre_Programa,Fecha_Finalizacion'Hola','9-9-2020' 
+9/8/2020 18:30:25 LAPTOP-701EDAA0 ' Nombre_Programa,Fecha_Finalizacion'Hola','09/09/2020' 
+9/8/2020 18:31:10 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:32:48 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:33:04 LAPTOP-701EDAA0 ' programa 
+9/8/2020 18:33:24 LAPTOP-701EDAA0 ' ID_Programa,Nombre_Programa,Fecha_Finalizacion'1','Hola','10/10/2020' 
+9/8/2020 18:33:48 LAPTOP-701EDAA0 ' ID_Programa,Nombre_Programa,Fecha_Finalizacion'1','Hola','09-10-2020' 
+9/8/2020 18:34:30 LAPTOP-701EDAA0 ' fechaprograma 
+9/8/2020 18:35:03 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:18:31 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:19:20 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:20:29 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:26:10 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:27:17 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:28:28 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:31:30 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:33:54 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:35:05 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:39:36 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

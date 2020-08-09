@@ -61,11 +61,10 @@ Partial Class Multimedia
         'Aregar
         '
         Me.Aregar.Controls.Add(Me.tbTipoContenido)
-        Me.Aregar.Location = New System.Drawing.Point(4, 29)
-        Me.Aregar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Aregar.Location = New System.Drawing.Point(4, 22)
         Me.Aregar.Name = "Aregar"
-        Me.Aregar.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Aregar.Size = New System.Drawing.Size(808, 421)
+        Me.Aregar.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.Aregar.Size = New System.Drawing.Size(536, 269)
         Me.Aregar.TabIndex = 1
         Me.Aregar.Text = "Agregar"
         Me.Aregar.UseVisualStyleBackColor = True
@@ -74,10 +73,11 @@ Partial Class Multimedia
         '
         Me.tbTipoContenido.Controls.Add(Me.tbpVideo)
         Me.tbTipoContenido.Controls.Add(Me.tbpSerie)
-        Me.tbTipoContenido.Location = New System.Drawing.Point(8, 9)
+        Me.tbTipoContenido.Location = New System.Drawing.Point(5, 6)
+        Me.tbTipoContenido.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbTipoContenido.Name = "tbTipoContenido"
         Me.tbTipoContenido.SelectedIndex = 0
-        Me.tbTipoContenido.Size = New System.Drawing.Size(795, 404)
+        Me.tbTipoContenido.Size = New System.Drawing.Size(530, 263)
         Me.tbTipoContenido.TabIndex = 59
         '
         'tbpVideo
@@ -89,28 +89,29 @@ Partial Class Multimedia
         Me.tbpVideo.Controls.Add(Me.TextBox3)
         Me.tbpVideo.Controls.Add(Me.Label6)
         Me.tbpVideo.Controls.Add(Me.Label7)
-        Me.tbpVideo.Location = New System.Drawing.Point(4, 29)
+        Me.tbpVideo.Location = New System.Drawing.Point(4, 22)
+        Me.tbpVideo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbpVideo.Name = "tbpVideo"
-        Me.tbpVideo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbpVideo.Size = New System.Drawing.Size(787, 371)
+        Me.tbpVideo.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbpVideo.Size = New System.Drawing.Size(522, 237)
         Me.tbpVideo.TabIndex = 0
         Me.tbpVideo.Text = "Video"
         Me.tbpVideo.UseVisualStyleBackColor = True
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(115, 89)
+        Me.TextBox4.Location = New System.Drawing.Point(77, 58)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(297, 112)
+        Me.TextBox4.Size = New System.Drawing.Size(199, 74)
         Me.TextBox4.TabIndex = 66
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(151, 289)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button2.Location = New System.Drawing.Point(101, 188)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 35)
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 65
         Me.Button2.Text = "Boton "
         Me.Button2.UseVisualStyleBackColor = True
@@ -118,10 +119,9 @@ Partial Class Multimedia
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(275, 124)
-        Me.RadioButton3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.RadioButton3.Location = New System.Drawing.Point(183, 81)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(54, 24)
+        Me.RadioButton3.Size = New System.Drawing.Size(39, 17)
         Me.RadioButton3.TabIndex = 63
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "No"
@@ -130,10 +130,9 @@ Partial Class Multimedia
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(183, 124)
-        Me.RadioButton4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.RadioButton4.Location = New System.Drawing.Point(122, 81)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(48, 24)
+        Me.RadioButton4.Size = New System.Drawing.Size(34, 17)
         Me.RadioButton4.TabIndex = 62
         Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "Si"
@@ -141,38 +140,36 @@ Partial Class Multimedia
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(80, 20)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox3.Location = New System.Drawing.Point(53, 13)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(148, 26)
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
         Me.TextBox3.TabIndex = 61
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(57, 130)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(38, 84)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(52, 20)
+        Me.Label6.Size = New System.Drawing.Size(37, 13)
         Me.Label6.TabIndex = 60
         Me.Label6.Text = "Activo"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(7, 24)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(5, 16)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(65, 20)
+        Me.Label7.Size = New System.Drawing.Size(44, 13)
         Me.Label7.TabIndex = 59
         Me.Label7.Text = "Nombre"
         '
         'tbpSerie
         '
-        Me.tbpSerie.Location = New System.Drawing.Point(4, 29)
+        Me.tbpSerie.Location = New System.Drawing.Point(4, 22)
+        Me.tbpSerie.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbpSerie.Name = "tbpSerie"
-        Me.tbpSerie.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbpSerie.Size = New System.Drawing.Size(787, 371)
+        Me.tbpSerie.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbpSerie.Size = New System.Drawing.Size(522, 237)
         Me.tbpSerie.TabIndex = 1
         Me.tbpSerie.Text = "Serie"
         Me.tbpSerie.UseVisualStyleBackColor = True
@@ -180,11 +177,10 @@ Partial Class Multimedia
         'Buscar
         '
         Me.Buscar.Controls.Add(Me.GroupBox1)
-        Me.Buscar.Location = New System.Drawing.Point(4, 29)
-        Me.Buscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Buscar.Location = New System.Drawing.Point(4, 22)
         Me.Buscar.Name = "Buscar"
-        Me.Buscar.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Buscar.Size = New System.Drawing.Size(808, 421)
+        Me.Buscar.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.Buscar.Size = New System.Drawing.Size(536, 269)
         Me.Buscar.TabIndex = 0
         Me.Buscar.Text = "Buscar"
         Me.Buscar.UseVisualStyleBackColor = True
@@ -201,9 +197,11 @@ Partial Class Multimedia
         Me.GroupBox1.Controls.Add(Me.btnbuscar)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Location = New System.Drawing.Point(7, 8)
+        Me.GroupBox1.Location = New System.Drawing.Point(5, 5)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(794, 405)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(529, 263)
         Me.GroupBox1.TabIndex = 48
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Video"
@@ -217,7 +215,8 @@ Partial Class Multimedia
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nombre, Me.Serie, Me.Fecha})
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 144)
+        Me.DataGridView1.Location = New System.Drawing.Point(4, 94)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -225,7 +224,7 @@ Partial Class Multimedia
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.ShowEditingIcon = False
-        Me.DataGridView1.Size = New System.Drawing.Size(781, 255)
+        Me.DataGridView1.Size = New System.Drawing.Size(521, 166)
         Me.DataGridView1.TabIndex = 48
         '
         'Nombre
@@ -251,82 +250,77 @@ Partial Class Multimedia
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(95, 67)
+        Me.TextBox5.Location = New System.Drawing.Point(63, 44)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(280, 69)
+        Me.TextBox5.Size = New System.Drawing.Size(188, 46)
         Me.TextBox5.TabIndex = 47
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(7, 67)
+        Me.Label5.Location = New System.Drawing.Point(5, 44)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 20)
+        Me.Label5.Size = New System.Drawing.Size(55, 13)
         Me.Label5.TabIndex = 46
         Me.Label5.Text = "Contenido"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 22)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(5, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 20)
+        Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "Nombre"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(95, 20)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox1.Location = New System.Drawing.Point(63, 13)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(280, 26)
+        Me.TextBox1.Size = New System.Drawing.Size(188, 20)
         Me.TextBox1.TabIndex = 42
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(383, 22)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(255, 14)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(103, 20)
+        Me.Label2.Size = New System.Drawing.Size(69, 13)
         Me.Label2.TabIndex = 38
         Me.Label2.Text = "Nombre serie"
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(494, 20)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox2.Location = New System.Drawing.Point(329, 13)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(293, 26)
+        Me.TextBox2.Size = New System.Drawing.Size(197, 20)
         Me.TextBox2.TabIndex = 43
         '
         'btnbuscar
         '
-        Me.btnbuscar.Location = New System.Drawing.Point(541, 101)
-        Me.btnbuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnbuscar.Location = New System.Drawing.Point(361, 66)
         Me.btnbuscar.Name = "btnbuscar"
-        Me.btnbuscar.Size = New System.Drawing.Size(112, 35)
+        Me.btnbuscar.Size = New System.Drawing.Size(75, 23)
         Me.btnbuscar.TabIndex = 35
         Me.btnbuscar.Text = "Buscar"
         Me.btnbuscar.UseVisualStyleBackColor = True
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(494, 64)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(329, 42)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(293, 26)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(197, 20)
         Me.DateTimePicker1.TabIndex = 45
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(432, 69)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(288, 45)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(54, 20)
+        Me.Label4.Size = New System.Drawing.Size(37, 13)
         Me.Label4.TabIndex = 40
         Me.Label4.Text = "Fecha"
         '
@@ -334,20 +328,18 @@ Partial Class Multimedia
         '
         Me.tbAccion.Controls.Add(Me.Buscar)
         Me.tbAccion.Controls.Add(Me.Aregar)
-        Me.tbAccion.Location = New System.Drawing.Point(9, 18)
-        Me.tbAccion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.tbAccion.Location = New System.Drawing.Point(6, 12)
         Me.tbAccion.Name = "tbAccion"
         Me.tbAccion.SelectedIndex = 0
-        Me.tbAccion.Size = New System.Drawing.Size(816, 454)
+        Me.tbAccion.Size = New System.Drawing.Size(544, 295)
         Me.tbAccion.TabIndex = 0
         '
         'Multimedia
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(838, 491)
+        Me.ClientSize = New System.Drawing.Size(559, 319)
         Me.Controls.Add(Me.tbAccion)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Multimedia"
         Me.Text = "Multimedia"
         Me.Aregar.ResumeLayout(False)

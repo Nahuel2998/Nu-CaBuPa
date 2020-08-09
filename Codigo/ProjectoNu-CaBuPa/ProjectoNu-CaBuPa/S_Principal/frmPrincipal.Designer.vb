@@ -46,6 +46,25 @@ Partial Class frmPrincipal
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.pCMain = New System.Windows.Forms.Panel()
         Me.BWNumberOne = New System.ComponentModel.BackgroundWorker()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Serie = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -54,19 +73,27 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvPrograma, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.gbTandas.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pStatus.SuspendLayout()
         Me.pCMain.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pMain
         '
         resources.ApplyResources(Me.pMain, "pMain")
         Me.pMain.Controls.Add(Me.spNotEven, 2, 0)
-        Me.pMain.Controls.Add(Me.tcSecciones, 1, 0)
         Me.pMain.Controls.Add(Me.Panel2, 0, 0)
+        Me.pMain.Controls.Add(Me.tcSecciones, 1, 0)
         Me.pMain.Name = "pMain"
         '
         'spNotEven
@@ -179,6 +206,7 @@ Partial Class frmPrincipal
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.TabControl1)
         resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -227,6 +255,130 @@ Partial Class frmPrincipal
         'BWNumberOne
         '
         '
+        'TabControl1
+        '
+        resources.ApplyResources(Me.TabControl1, "TabControl1")
+        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        '
+        'TabPage4
+        '
+        resources.ApplyResources(Me.TabPage4, "TabPage4")
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.GroupBox4)
+        Me.TabPage3.Controls.Add(Me.GroupBox3)
+        resources.ApplyResources(Me.TabPage3, "TabPage3")
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        resources.ApplyResources(Me.GroupBox3, "GroupBox3")
+        Me.GroupBox3.Controls.Add(Me.DataGridView2)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.TabStop = False
+        '
+        'GroupBox4
+        '
+        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
+        Me.GroupBox4.Controls.Add(Me.GroupBox5)
+        Me.GroupBox4.Controls.Add(Me.GroupBox6)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.TabStop = False
+        '
+        'GroupBox5
+        '
+        resources.ApplyResources(Me.GroupBox5, "GroupBox5")
+        Me.GroupBox5.Controls.Add(Me.Label4)
+        Me.GroupBox5.Controls.Add(Me.Label3)
+        Me.GroupBox5.Controls.Add(Me.TextBox3)
+        Me.GroupBox5.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.TabStop = False
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label4.Name = "Label4"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Name = "Label3"
+        '
+        'TextBox3
+        '
+        resources.ApplyResources(Me.TextBox3, "TextBox3")
+        Me.TextBox3.Name = "TextBox3"
+        '
+        'DateTimePicker1
+        '
+        resources.ApplyResources(Me.DateTimePicker1, "DateTimePicker1")
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        '
+        'GroupBox6
+        '
+        resources.ApplyResources(Me.GroupBox6, "GroupBox6")
+        Me.GroupBox6.Controls.Add(Me.Label2)
+        Me.GroupBox6.Controls.Add(Me.Label1)
+        Me.GroupBox6.Controls.Add(Me.TextBox5)
+        Me.GroupBox6.Controls.Add(Me.TextBox2)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.TabStop = False
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label2.Name = "Label2"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.Name = "Label1"
+        '
+        'TextBox5
+        '
+        resources.ApplyResources(Me.TextBox5, "TextBox5")
+        Me.TextBox5.Name = "TextBox5"
+        '
+        'TextBox2
+        '
+        resources.ApplyResources(Me.TextBox2, "TextBox2")
+        Me.TextBox2.Name = "TextBox2"
+        '
+        'DataGridView2
+        '
+        resources.ApplyResources(Me.DataGridView2, "DataGridView2")
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nombre, Me.Fecha, Me.Serie})
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersVisible = False
+        '
+        'Nombre
+        '
+        resources.ApplyResources(Me.Nombre, "Nombre")
+        Me.Nombre.Name = "Nombre"
+        '
+        'Fecha
+        '
+        resources.ApplyResources(Me.Fecha, "Fecha")
+        Me.Fecha.Name = "Fecha"
+        '
+        'Serie
+        '
+        resources.ApplyResources(Me.Serie, "Serie")
+        Me.Serie.Name = "Serie"
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -245,11 +397,21 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.dgvPrograma, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.gbTandas.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pStatus.ResumeLayout(False)
         Me.pCMain.ResumeLayout(False)
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage3.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -273,4 +435,23 @@ Partial Class frmPrincipal
     Friend WithEvents dgvPrograma As DataGridView
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents dtp As DateTimePicker
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents Nombre As DataGridViewTextBoxColumn
+    Friend WithEvents Fecha As DataGridViewTextBoxColumn
+    Friend WithEvents Serie As DataGridViewTextBoxColumn
 End Class
