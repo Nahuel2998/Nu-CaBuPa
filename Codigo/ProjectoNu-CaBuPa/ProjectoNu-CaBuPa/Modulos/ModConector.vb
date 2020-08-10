@@ -240,9 +240,7 @@ Module ModConector
             objCmd.Prepare()
             Dim dt As DataTable = ESQLSelect(objCmd, True)
             If Not IsNothing(dt) Then
-                If dt.Rows.Count = 0 Then
-                    MessageBox.Show("No hay programas")
-                Else
+                If Not dt.Rows.Count = 0 Then
                     Return dt
                 End If
             End If

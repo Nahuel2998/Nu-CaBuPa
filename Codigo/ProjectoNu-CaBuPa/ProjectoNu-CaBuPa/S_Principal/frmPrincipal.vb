@@ -17,10 +17,10 @@ Public Class frmPrincipal
         dt_programa = ModConector.APrograma(dtp.Value.Date)
     End Sub
     Private Sub ActualizarProgramas()
+        For i As Integer = 0 To dgvPrograma.Columns.Count - 1
+            dgvPrograma.Columns.RemoveAt(0)
+        Next
         If Not IsNothing(dt_programa) Then
-            For i As Integer = 0 To dgvPrograma.Columns.Count - 1
-                dgvPrograma.Columns.RemoveAt(0)
-            Next
             dgvPrograma.DataSource = dt_programa
             dgvProgramaColor()
             For i As Integer = 0 To dgvPrograma.Columns.Count - 1
@@ -33,22 +33,26 @@ Public Class frmPrincipal
         Dim fin As TimeSpan
         Dim inicio As TimeSpan
         Dim colores As Color
-        For i As Integer = 0 To dgvPrograma.Rows.Count - 1
-            Inicio = dgvPrograma.Rows(i).Cells(0).Value()
-            fin = dgvPrograma.Rows(i).Cells(1).Value()
-            colores = dgvPrograma.Rows(i).DefaultCellStyle.BackColor
-            If (inicio < Now.TimeOfDay) Then
-                If (Now.TimeOfDay < fin) Then
+        If (Now.Date >= dtp.Value.Date) Then
+            For i As Integer = 0 To dgvPrograma.Rows.Count - 1
+                inicio = dgvPrograma.Rows(i).Cells(0).Value()
+                fin = dgvPrograma.Rows(i).Cells(1).Value()
+                colores = dgvPrograma.Rows(i).DefaultCellStyle.BackColor
 
-                    dgvPrograma.Rows(i).DefaultCellStyle.BackColor = Color.FromArgb(colores.R * 1.5, 0, 0)
+                If (inicio < Now.TimeOfDay) Then
+                    If (Now.TimeOfDay < fin And Now.Date = dtp.Value.Date) Then
 
-                Else
-                    dgvPrograma.Rows(i).DefaultCellStyle.BackColor = Color.FromArgb(colores.R * 1.5, 0, colores.B * 1.5)
+                        dgvPrograma.Rows(i).DefaultCellStyle.BackColor = Color.FromArgb(colores.R * 1.5, 0, 0)
 
+                    Else
+                        dgvPrograma.Rows(i).DefaultCellStyle.BackColor = Color.FromArgb(colores.R * 1.5, 0, colores.B * 1.5)
+
+                    End If
+                    dgvPrograma.Rows(i).DefaultCellStyle.ForeColor = Color.FromArgb(235, 235, 235)
                 End If
-                dgvPrograma.Rows(i).DefaultCellStyle.ForeColor = Color.FromArgb(235, 235, 235)
-            End If
-        Next
+
+            Next
+        End If
     End Sub
     Private Sub BWNumberOne_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWNumberOne.RunWorkerCompleted
         ActualizarProgramas()
@@ -67,6 +71,10 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub dgvvideo_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub pCMain_Paint(sender As Object, e As PaintEventArgs) Handles pCMain.Paint
 
     End Sub
 End Class
