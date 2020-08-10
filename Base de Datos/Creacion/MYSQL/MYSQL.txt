@@ -23,6 +23,7 @@ create table Programa
 	(
 	ID_Programa int(6) unsigned auto_increment not null primary key,
 	Nombre_Programa varchar(64) not null,
+	Descripcion varchar(256),
 	Fecha_Finalizacion datetime
 	);
 

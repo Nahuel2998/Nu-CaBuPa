@@ -186,21 +186,7 @@ Module ModConector
             dt.Columns.Add(ds.Tables("usuarios").Columns("Nombre Usuarios"))
             Return dt
         Else
-            Try
-                objCmd = New MySqlCommand(PSQL("id_usuario as 'ID', nombre as 'Nombre Usuarios'", "usuarios", "True"), conn)
-                objCmd.Prepare()
-                Dim dt As DataTable = ESQLSelect(objCmd, True)
-                If Not IsNothing(dt) Then
-                    If dt.Rows.Count = 0 Then
-                        MessageBox.Show("No hay usuarios")
-                    Else
-                        Return dt
-                    End If
-                End If
-            Catch e As Exception
-                MessageBox.Show(e.ToString)
-            End Try
-            Return Nothing
+            Return DevolverTabla(PSQL("id_usuario as 'ID', nombre as 'Nombre Usuarios'", "usuarios", "True"))
         End If
 
     End Function
@@ -235,8 +221,11 @@ Module ModConector
 #End Region
 #Region "Main"
     Public Function APrograma(fecha As Date) As DataTable
+        Return DevolverTabla(PSQL("p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa'", "fechaprograma f inner join programa p on f.id_programa=p.id_programa", "fecha = '" + Format(CDate(fecha), "yyyy-MM-dd") + "'"))
+    End Function
+    Public Function DevolverTabla(ByVal Datos As String) As DataTable
         Try
-            objCmd = New MySqlCommand(PSQL("hora_inicio as 'Inicio', hora_fin as 'Fin', Nombre_programa as 'Programa'", "fechaprograma f inner join programa p on f.id_programa=p.id_programa", "fecha = '" + Format(CDate(fecha), "yyyy-MM-dd") + "'"), conn)
+            objCmd = New MySqlCommand(Datos, conn)
             objCmd.Prepare()
             Dim dt As DataTable = ESQLSelect(objCmd, True)
             If Not IsNothing(dt) Then
@@ -248,7 +237,14 @@ Module ModConector
             MessageBox.Show(e.ToString)
         End Try
         Return Nothing
-
+    End Function
+    Public Function AFPrograma(idPrograma As Integer) As DataTable
+        Return DevolverTabla(PSQL("Nombre, Telefono",
+                                  "programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario", "p.id_programa = '" + idPrograma.ToString + "'"))
+    End Function
+    Public Function ADPrograma(idPrograma As Integer) As String
+        Dim dt As DataTable = DevolverTabla(PSQL("Descripcion", "programa", "id_programa = '" + idPrograma.ToString + "'"))
+        Return dt.Rows(0)(0).ToString
     End Function
 #End Region
 End Module

@@ -1,4 +1,4 @@
-Programa: {*ID_Programa*, Nombre_Programa, Fecha_Finalizacion}
+Programa: {*ID_Programa*, Nombre_Programa, Descripcion, Fecha_Finalizacion}
 ---
 FechaPrograma: {*Fecha*, *Hora_Inicio*, Hora_Fin, ID_Programa}
 ProgramaCuota: {*ID_Programa_Cuota*,*ID_Programa*,Fecha_Pago,Fecha_Emision, Precio}

@@ -17,7 +17,7 @@
     Private Sub btnEntrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEntrar.Click
         If ModConector.BUsuario(txtUsuario.Text, txtPass.Text) Then
             ModInicializador.Principal()
-            Me.SetVisibleCore(False)
+            Me.Dispose()
         End If
     End Sub
 

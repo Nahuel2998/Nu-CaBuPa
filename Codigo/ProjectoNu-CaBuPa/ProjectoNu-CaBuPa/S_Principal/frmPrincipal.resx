@@ -153,23 +153,29 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="TBNotas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 26</value>
+  <data name="TBNotas.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt</value>
   </data>
-  <data name="TBNotas.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="TBNotas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="TBNotas.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
   </data>
   <data name="TBNotas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 169</value>
+    <value>181, 165</value>
   </data>
   <data name="TBNotas.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
+  </data>
+  <data name="TBNotas.Text" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;TBNotas.Name" xml:space="preserve">
     <value>TBNotas</value>
   </data>
   <data name="&gt;&gt;TBNotas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TBNotas.Parent" xml:space="preserve">
     <value>gbNotas</value>
@@ -357,6 +363,33 @@
   <data name="dgvPrograma.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <metadata name="Inicio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Inicio.HeaderText" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="Inicio.MinimumWidth" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <metadata name="Final.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Final.HeaderText" xml:space="preserve">
+    <value>Final</value>
+  </data>
+  <data name="Final.MinimumWidth" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <metadata name="Programa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Programa.HeaderText" xml:space="preserve">
+    <value>Programa</value>
+  </data>
+  <data name="Programa.MinimumWidth" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
   <data name="dgvPrograma.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 65</value>
   </data>
@@ -405,34 +438,148 @@
   <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="GroupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="GBFuncionarios.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="GroupBox2.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+  <data name="GBFuncionarios.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
-  <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 3</value>
+  <data name="GBFuncionario.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 371</value>
+  <data name="GBFuncionario.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
-  <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
+  <data name="dgvFuncionarios.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="dgvFuncionarios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 21</value>
+  </data>
+  <data name="dgvFuncionarios.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="dgvFuncionarios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 142</value>
+  </data>
+  <data name="dgvFuncionarios.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="GroupBox2.Text" xml:space="preserve">
-    <value>Datos del programas</value>
+  <data name="&gt;&gt;dgvFuncionarios.Name" xml:space="preserve">
+    <value>dgvFuncionarios</value>
   </data>
-  <data name="&gt;&gt;GroupBox2.Name" xml:space="preserve">
-    <value>GroupBox2</value>
+  <data name="&gt;&gt;dgvFuncionarios.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GroupBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;dgvFuncionarios.Parent" xml:space="preserve">
+    <value>GBFuncionario</value>
+  </data>
+  <data name="&gt;&gt;dgvFuncionarios.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GBFuncionario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 196</value>
+  </data>
+  <data name="GBFuncionario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 169</value>
+  </data>
+  <data name="GBFuncionario.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GBFuncionario.Text" xml:space="preserve">
+    <value>Funcionarios</value>
+  </data>
+  <data name="&gt;&gt;GBFuncionario.Name" xml:space="preserve">
+    <value>GBFuncionario</value>
+  </data>
+  <data name="&gt;&gt;GBFuncionario.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GroupBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GBFuncionario.Parent" xml:space="preserve">
+    <value>GBFuncionarios</value>
+  </data>
+  <data name="&gt;&gt;GBFuncionario.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GBDEscripcion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="GBDEscripcion.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="TBDescripcion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="TBDescripcion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 26</value>
+  </data>
+  <data name="TBDescripcion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 132</value>
+  </data>
+  <data name="TBDescripcion.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TBDescripcion.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;TBDescripcion.Name" xml:space="preserve">
+    <value>TBDescripcion</value>
+  </data>
+  <data name="&gt;&gt;TBDescripcion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBDescripcion.Parent" xml:space="preserve">
+    <value>GBDEscripcion</value>
+  </data>
+  <data name="&gt;&gt;TBDescripcion.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GBDEscripcion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="GBDEscripcion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 164</value>
+  </data>
+  <data name="GBDEscripcion.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GBDEscripcion.Text" xml:space="preserve">
+    <value>Descripcion</value>
+  </data>
+  <data name="&gt;&gt;GBDEscripcion.Name" xml:space="preserve">
+    <value>GBDEscripcion</value>
+  </data>
+  <data name="&gt;&gt;GBDEscripcion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBDEscripcion.Parent" xml:space="preserve">
+    <value>GBFuncionarios</value>
+  </data>
+  <data name="&gt;&gt;GBDEscripcion.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GBFuncionarios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 3</value>
+  </data>
+  <data name="GBFuncionarios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 371</value>
+  </data>
+  <data name="GBFuncionarios.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GBFuncionarios.Text" xml:space="preserve">
+    <value>Datos del programas</value>
+  </data>
+  <data name="&gt;&gt;GBFuncionarios.Name" xml:space="preserve">
+    <value>GBFuncionarios</value>
+  </data>
+  <data name="&gt;&gt;GBFuncionarios.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBFuncionarios.Parent" xml:space="preserve">
     <value>TableLayoutPanel2</value>
   </data>
-  <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GBFuncionarios.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="TableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
@@ -460,7 +607,7 @@
     <value>0</value>
   </data>
   <data name="TableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="GroupBox1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GroupBox2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,52,15232,Percent,47,84768" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="GroupBox1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GBFuncionarios" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,52,15232,Percent,47,84768" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="TabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
@@ -831,7 +978,7 @@
   <data name="GroupBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="DataGridView2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="dgvVideo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -843,9 +990,6 @@
   <data name="Nombre.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="Nombre.Width" type="System.Int32, mscorlib">
-    <value>150</value>
-  </data>
   <metadata name="Fecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -854,9 +998,6 @@
   </data>
   <data name="Fecha.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
-  </data>
-  <data name="Fecha.Width" type="System.Int32, mscorlib">
-    <value>150</value>
   </data>
   <metadata name="Serie.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -867,34 +1008,31 @@
   <data name="Serie.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="Serie.Width" type="System.Int32, mscorlib">
-    <value>150</value>
-  </data>
-  <data name="DataGridView2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dgvVideo.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="DataGridView2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="dgvVideo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
-  <data name="DataGridView2.RowHeadersWidth" type="System.Int32, mscorlib">
+  <data name="dgvVideo.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
-  <data name="DataGridView2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dgvVideo.Size" type="System.Drawing.Size, System.Drawing">
     <value>206, 285</value>
   </data>
-  <data name="DataGridView2.TabIndex" type="System.Int32, mscorlib">
+  <data name="dgvVideo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;DataGridView2.Name" xml:space="preserve">
-    <value>DataGridView2</value>
+  <data name="&gt;&gt;dgvVideo.Name" xml:space="preserve">
+    <value>dgvVideo</value>
   </data>
-  <data name="&gt;&gt;DataGridView2.Type" xml:space="preserve">
+  <data name="&gt;&gt;dgvVideo.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DataGridView2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dgvVideo.Parent" xml:space="preserve">
     <value>GroupBox3</value>
   </data>
-  <data name="&gt;&gt;DataGridView2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dgvVideo.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="GroupBox3.Location" type="System.Drawing.Point, System.Drawing">
@@ -1167,10 +1305,10 @@
   <data name="&gt;&gt;pCMain.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="BWNumberOne.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="BWProgramas.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="BWNotas.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="BWDPRogramas.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>208, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -3634,6 +3772,24 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Inicio</value>
   </data>
+  <data name="&gt;&gt;Inicio.Name" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="&gt;&gt;Inicio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Final.Name" xml:space="preserve">
+    <value>Final</value>
+  </data>
+  <data name="&gt;&gt;Final.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Programa.Name" xml:space="preserve">
+    <value>Programa</value>
+  </data>
+  <data name="&gt;&gt;Programa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Nombre.Name" xml:space="preserve">
     <value>Nombre</value>
   </data>
@@ -3652,16 +3808,16 @@
   <data name="&gt;&gt;Serie.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BWNumberOne.Name" xml:space="preserve">
-    <value>BWNumberOne</value>
+  <data name="&gt;&gt;BWProgramas.Name" xml:space="preserve">
+    <value>BWProgramas</value>
   </data>
-  <data name="&gt;&gt;BWNumberOne.Type" xml:space="preserve">
+  <data name="&gt;&gt;BWProgramas.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BWNotas.Name" xml:space="preserve">
-    <value>BWNotas</value>
+  <data name="&gt;&gt;BWDPRogramas.Name" xml:space="preserve">
+    <value>BWDPRogramas</value>
   </data>
-  <data name="&gt;&gt;BWNotas.Type" xml:space="preserve">
+  <data name="&gt;&gt;BWDPRogramas.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

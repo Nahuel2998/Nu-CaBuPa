@@ -27,10 +27,14 @@ Partial Class frmPrincipal
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pMain = New System.Windows.Forms.TableLayoutPanel()
         Me.spNotEven = New System.Windows.Forms.TableLayoutPanel()
         Me.gbNotas = New System.Windows.Forms.GroupBox()
-        Me.TBNotas = New System.Windows.Forms.TextBox()
+        Me.TBNotas = New System.Windows.Forms.RichTextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -40,7 +44,14 @@ Partial Class frmPrincipal
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Programa = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GBFuncionarios = New System.Windows.Forms.GroupBox()
+        Me.GBFuncionario = New System.Windows.Forms.GroupBox()
+        Me.dgvFuncionarios = New System.Windows.Forms.DataGridView()
+        Me.GBDEscripcion = New System.Windows.Forms.GroupBox()
+        Me.TBDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -56,7 +67,7 @@ Partial Class frmPrincipal
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.dgvVideo = New System.Windows.Forms.DataGridView()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Serie = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,8 +75,8 @@ Partial Class frmPrincipal
         Me.pStatus = New System.Windows.Forms.Panel()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.pCMain = New System.Windows.Forms.Panel()
-        Me.BWNumberOne = New System.ComponentModel.BackgroundWorker()
-        Me.BWNotas = New System.ComponentModel.BackgroundWorker()
+        Me.BWProgramas = New System.ComponentModel.BackgroundWorker()
+        Me.BWDPRogramas = New System.ComponentModel.BackgroundWorker()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -77,6 +88,10 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvPrograma, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GBFuncionarios.SuspendLayout()
+        Me.GBFuncionario.SuspendLayout()
+        CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GBDEscripcion.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -84,7 +99,7 @@ Partial Class frmPrincipal
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvVideo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pStatus.SuspendLayout()
         Me.pCMain.SuspendLayout()
         Me.SuspendLayout()
@@ -113,7 +128,6 @@ Partial Class frmPrincipal
         'TBNotas
         '
         resources.ApplyResources(Me.TBNotas, "TBNotas")
-        Me.TBNotas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TBNotas.Name = "TBNotas"
         '
         'Panel2
@@ -155,7 +169,7 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.TableLayoutPanel2, "TableLayoutPanel2")
         Me.TableLayoutPanel2.Controls.Add(Me.GroupBox1, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.GroupBox2, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.GBFuncionarios, 1, 0)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         '
         'GroupBox1
@@ -183,7 +197,7 @@ Partial Class frmPrincipal
         Me.dgvPrograma.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Aquamarine
         Me.dgvPrograma.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
@@ -199,6 +213,7 @@ Partial Class frmPrincipal
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvPrograma.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvPrograma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPrograma.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Inicio, Me.Final, Me.Programa})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -212,18 +227,102 @@ Partial Class frmPrincipal
         Me.dgvPrograma.ReadOnly = True
         Me.dgvPrograma.RowHeadersVisible = False
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
         Me.dgvPrograma.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvPrograma.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvPrograma.RowTemplate.Height = 28
         Me.dgvPrograma.RowTemplate.ReadOnly = True
         Me.dgvPrograma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
-        'GroupBox2
+        'Inicio
         '
-        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.TabStop = False
+        resources.ApplyResources(Me.Inicio, "Inicio")
+        Me.Inicio.Name = "Inicio"
+        Me.Inicio.ReadOnly = True
+        '
+        'Final
+        '
+        resources.ApplyResources(Me.Final, "Final")
+        Me.Final.Name = "Final"
+        Me.Final.ReadOnly = True
+        '
+        'Programa
+        '
+        resources.ApplyResources(Me.Programa, "Programa")
+        Me.Programa.Name = "Programa"
+        Me.Programa.ReadOnly = True
+        '
+        'GBFuncionarios
+        '
+        resources.ApplyResources(Me.GBFuncionarios, "GBFuncionarios")
+        Me.GBFuncionarios.Controls.Add(Me.GBFuncionario)
+        Me.GBFuncionarios.Controls.Add(Me.GBDEscripcion)
+        Me.GBFuncionarios.Name = "GBFuncionarios"
+        Me.GBFuncionarios.TabStop = False
+        '
+        'GBFuncionario
+        '
+        resources.ApplyResources(Me.GBFuncionario, "GBFuncionario")
+        Me.GBFuncionario.Controls.Add(Me.dgvFuncionarios)
+        Me.GBFuncionario.Name = "GBFuncionario"
+        Me.GBFuncionario.TabStop = False
+        '
+        'dgvFuncionarios
+        '
+        Me.dgvFuncionarios.AllowUserToAddRows = False
+        Me.dgvFuncionarios.AllowUserToDeleteRows = False
+        Me.dgvFuncionarios.AllowUserToResizeColumns = False
+        Me.dgvFuncionarios.AllowUserToResizeRows = False
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Aquamarine
+        Me.dgvFuncionarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        resources.ApplyResources(Me.dgvFuncionarios, "dgvFuncionarios")
+        Me.dgvFuncionarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvFuncionarios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Plum
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvFuncionarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Aquamarine
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvFuncionarios.DefaultCellStyle = DataGridViewCellStyle7
+        Me.dgvFuncionarios.MultiSelect = False
+        Me.dgvFuncionarios.Name = "dgvFuncionarios"
+        Me.dgvFuncionarios.ReadOnly = True
+        Me.dgvFuncionarios.RowHeadersVisible = False
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        Me.dgvFuncionarios.RowsDefaultCellStyle = DataGridViewCellStyle8
+        Me.dgvFuncionarios.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.dgvFuncionarios.RowTemplate.Height = 28
+        Me.dgvFuncionarios.RowTemplate.ReadOnly = True
+        Me.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
+        'GBDEscripcion
+        '
+        resources.ApplyResources(Me.GBDEscripcion, "GBDEscripcion")
+        Me.GBDEscripcion.Controls.Add(Me.TBDescripcion)
+        Me.GBDEscripcion.Name = "GBDEscripcion"
+        Me.GBDEscripcion.TabStop = False
+        '
+        'TBDescripcion
+        '
+        resources.ApplyResources(Me.TBDescripcion, "TBDescripcion")
+        Me.TBDescripcion.Name = "TBDescripcion"
+        Me.TBDescripcion.ReadOnly = True
         '
         'TabPage2
         '
@@ -323,17 +422,20 @@ Partial Class frmPrincipal
         'GroupBox3
         '
         resources.ApplyResources(Me.GroupBox3, "GroupBox3")
-        Me.GroupBox3.Controls.Add(Me.DataGridView2)
+        Me.GroupBox3.Controls.Add(Me.dgvVideo)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.TabStop = False
         '
-        'DataGridView2
+        'dgvVideo
         '
-        resources.ApplyResources(Me.DataGridView2, "DataGridView2")
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nombre, Me.Fecha, Me.Serie})
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowHeadersVisible = False
+        Me.dgvVideo.AllowUserToDeleteRows = False
+        resources.ApplyResources(Me.dgvVideo, "dgvVideo")
+        Me.dgvVideo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvVideo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvVideo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nombre, Me.Fecha, Me.Serie})
+        Me.dgvVideo.MultiSelect = False
+        Me.dgvVideo.Name = "dgvVideo"
+        Me.dgvVideo.RowHeadersVisible = False
         '
         'Nombre
         '
@@ -377,10 +479,10 @@ Partial Class frmPrincipal
         Me.pCMain.Controls.Add(Me.pStatus)
         Me.pCMain.Name = "pCMain"
         '
-        'BWNumberOne
+        'BWProgramas
         '
         '
-        'BWNotas
+        'BWDPRogramas
         '
         '
         'frmPrincipal
@@ -395,7 +497,6 @@ Partial Class frmPrincipal
         Me.pMain.ResumeLayout(False)
         Me.spNotEven.ResumeLayout(False)
         Me.gbNotas.ResumeLayout(False)
-        Me.gbNotas.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.gbTandas.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -404,6 +505,10 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.dgvPrograma, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GBFuncionarios.ResumeLayout(False)
+        Me.GBFuncionario.ResumeLayout(False)
+        CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GBDEscripcion.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
@@ -413,7 +518,7 @@ Partial Class frmPrincipal
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvVideo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pStatus.ResumeLayout(False)
         Me.pCMain.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -428,12 +533,11 @@ Partial Class frmPrincipal
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents gbNotas As GroupBox
-    Friend WithEvents TBNotas As TextBox
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents GBFuncionarios As GroupBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents BWNumberOne As System.ComponentModel.BackgroundWorker
+    Friend WithEvents BWProgramas As System.ComponentModel.BackgroundWorker
     Friend WithEvents lblStatus As Label
     Friend WithEvents gbTandas As GroupBox
     Friend WithEvents dgvPrograma As DataGridView
@@ -454,9 +558,17 @@ Partial Class frmPrincipal
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents dgvVideo As DataGridView
     Friend WithEvents Nombre As DataGridViewTextBoxColumn
     Friend WithEvents Fecha As DataGridViewTextBoxColumn
     Friend WithEvents Serie As DataGridViewTextBoxColumn
-    Friend WithEvents BWNotas As System.ComponentModel.BackgroundWorker
+    Friend WithEvents BWDPRogramas As System.ComponentModel.BackgroundWorker
+    Friend WithEvents TBNotas As RichTextBox
+    Friend WithEvents GBFuncionario As GroupBox
+    Friend WithEvents dgvFuncionarios As DataGridView
+    Friend WithEvents GBDEscripcion As GroupBox
+    Friend WithEvents TBDescripcion As RichTextBox
+    Friend WithEvents Inicio As DataGridViewTextBoxColumn
+    Friend WithEvents Final As DataGridViewTextBoxColumn
+    Friend WithEvents Programa As DataGridViewTextBoxColumn
 End Class
