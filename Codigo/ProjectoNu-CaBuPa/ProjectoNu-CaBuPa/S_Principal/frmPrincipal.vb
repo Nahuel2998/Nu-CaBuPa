@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.Drawing.Drawing2D
+Imports System.IO
 
 Public Class frmPrincipal
     Private dt_programa As DataTable
@@ -11,6 +12,7 @@ Public Class frmPrincipal
         Me.Width = Screen.PrimaryScreen.WorkingArea.Width * 0.85
         Me.Height = Screen.PrimaryScreen.WorkingArea.Height * 0.8
         BWNumberOne.RunWorkerAsync()
+        LeerNotas()
     End Sub
 
     Private Sub BWNumberOne_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BWNumberOne.DoWork
@@ -76,5 +78,39 @@ Public Class frmPrincipal
 
     Private Sub pCMain_Paint(sender As Object, e As PaintEventArgs) Handles pCMain.Paint
 
+    End Sub
+
+    Private Sub BWNotas_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWNotas.DoWork
+
+    End Sub
+
+    Private Sub frmPrincipal_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        GuardarNotas()
+    End Sub
+
+    Public Sub GuardarNotas()
+        Dim ruta As String = "..\User\"
+        Dim archivo As String = "Notas.txt"
+        Dim escribir As New StreamWriter(ruta & archivo, False)
+            escribir.Write(TBNotas.Text)
+        escribir.Close()
+    End Sub
+    Public Sub LeerNotas()
+        Dim ruta As String = "..\User\"
+        Dim archivo As String = "Notas.txt"
+        If File.Exists(ruta & archivo) Then
+            TBNotas.Text = ""
+            Dim leer As New StreamReader(ruta & archivo)
+            While leer.Peek <> -1
+                'Leemos cada linea del archivo TXT
+                Dim linea As String = leer.ReadLine()
+                'Agregramos los datos
+                TBNotas.Text += linea + vbNewLine
+            End While
+            leer.Close()
+        End If
+    End Sub
+    Private Sub frmPrincipal_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        GuardarNotas()
     End Sub
 End Class
