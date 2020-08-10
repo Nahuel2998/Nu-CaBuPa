@@ -239,8 +239,10 @@ Module ModConector
         Return Nothing
     End Function
     Public Function AFPrograma(idPrograma As Integer) As DataTable
-        Return DevolverTabla(PSQL("Nombre, Telefono",
-                                  "programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario", "p.id_programa = '" + idPrograma.ToString + "'"))
+        Return DevolverTabla(PSQL("Nombre, Telefono", "programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario", "p.id_programa = '" + idPrograma.ToString + "'"))
+    End Function
+    Public Function AEventos() As DataTable
+        Return DevolverTabla(PSQL("e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre", "evento e inner join fechaevento f on f.id_evento=e.id_evento", "f.fecha >= now()"))
     End Function
     Public Function ADPrograma(idPrograma As Integer) As String
         Dim dt As DataTable = DevolverTabla(PSQL("Descripcion", "programa", "id_programa = '" + idPrograma.ToString + "'"))

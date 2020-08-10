@@ -5,19 +5,22 @@ Imports System.IO
 Public Class frmPrincipal
     Private dt_programa As DataTable
     Private dt_dprograma As DataTable
+    Private dt_evento As DataTable
+    Private dt_prueba As DataTable
     Private DescripcionP As String
     Private Sub frmPrincipal_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         ModConector.desconectar()
+        End
     End Sub
 
     Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Width = Screen.PrimaryScreen.WorkingArea.Width * 0.85
         Me.Height = Screen.PrimaryScreen.WorkingArea.Height * 0.8
-        BWProgramas.RunWorkerAsync()
+        BWEventos.RunWorkerAsync()
         LeerNotas()
     End Sub
 
-    Private Sub BWNumberOne_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BWProgramas.DoWork
+    Private Sub BWNumberOne_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWProgramas.DoWork
         dt_programa = ModConector.APrograma(dtp.Value.Date)
     End Sub
     Private Sub ActualizarProgramas()
@@ -29,6 +32,30 @@ Public Class frmPrincipal
             For i As Integer = 0 To dgvPrograma.Columns.Count - 1
                 dgvPrograma.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
             Next
+        Else
+            dgvPrograma.Columns.Clear()
+            dgvPrograma.DataSource = New DataTable
+            dgvPrograma.Columns.Add("PInicio", "Inicio")
+            dgvPrograma.Columns.Add("PFinal", "Final")
+            dgvPrograma.Columns.Add("PPrograma", "Programa")
+        End If
+
+
+    End Sub
+    Private Sub ActualizarEvento()
+        dgvEventos.Columns.Clear()
+        dgvFuncionarios.Rows.Clear()
+        If Not IsNothing(dt_evento) Then
+            dgvEventos.DataSource = dt_evento
+            If dt_evento.Rows.Count > 0 Then
+                dgvEventos.Columns().RemoveAt(0)
+            End If
+            dgvEventos.ClearSelection()
+        Else
+            dt_programa = New DataTable
+            dgvEventos.DataSource = dt_programa
+            dgvEventos.Columns.Add("EFecha", "EFecha")
+            dgvEventos.Columns.Add("ENombre", "Nombre")
         End If
     End Sub
     Public Sub dgvProgramaColor()
@@ -93,14 +120,28 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWDPRogramas_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWDPRogramas.DoWork
-
-        Dim idRow As Integer = dgvPrograma.SelectedRows(0).Index
-        Dim id As Integer = CInt(dt_programa.Rows(idRow)(0).ToString)
-        dt_dprograma = ModConector.AFPrograma(id)
-        DescripcionP = ModConector.ADPrograma(id)
+        If (dgvPrograma.Rows.Count > 0) Then
+            Dim idRow As Integer = dgvPrograma.SelectedRows(0).Index
+            If (idRow >= 0) And Not IsNothing(dt_programa) Then
+                Dim id As Integer = CInt(dt_programa.Rows(idRow)(0).ToString)
+                dt_dprograma = ModConector.AFPrograma(id)
+                DescripcionP = ModConector.ADPrograma(id)
+            End If
+        Else
+            dt_dprograma = Nothing
+        End If
     End Sub
 
     Private Sub BWDPRogramas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWDPRogramas.RunWorkerCompleted
+        dgvFuncionarios.Columns.Clear()
+        If Not IsNothing(dt_dprograma) Then
+            dgvFuncionarios.Columns.Clear()
+            dgvFuncionarios.ClearSelection()
+        Else
+            dt_dprograma = New DataTable
+            dgvFuncionarios.Columns.Add("FNombre", "Nombre")
+            dgvFuncionarios.Columns.Add("FTelefono", "Telefono")
+        End If
         dgvFuncionarios.DataSource = dt_dprograma
         TBDescripcion.Text = DescripcionP
     End Sub
@@ -115,7 +156,16 @@ Public Class frmPrincipal
         Funcionarios()
     End Sub
 
-    Private Sub frmPrincipal_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+    Private Sub BWEventos_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWEventos.DoWork
+        dt_evento = ModConector.AEventos()
+    End Sub
+
+    Private Sub BWEventos_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWEventos.RunWorkerCompleted
+        ActualizarEvento()
+        BWProgramas.RunWorkerAsync()
+    End Sub
+
+    Private Sub dgvPrograma_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellContentClick
 
     End Sub
 End Class

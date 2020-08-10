@@ -31,10 +31,18 @@ Partial Class frmPrincipal
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pMain = New System.Windows.Forms.TableLayoutPanel()
         Me.spNotEven = New System.Windows.Forms.TableLayoutPanel()
         Me.gbNotas = New System.Windows.Forms.GroupBox()
         Me.TBNotas = New System.Windows.Forms.RichTextBox()
+        Me.GBEventos = New System.Windows.Forms.GroupBox()
+        Me.dgvEventos = New System.Windows.Forms.DataGridView()
+        Me.EFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ENombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -48,8 +56,11 @@ Partial Class frmPrincipal
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Programa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBFuncionarios = New System.Windows.Forms.GroupBox()
+        Me.tlpProgramas = New System.Windows.Forms.TableLayoutPanel()
         Me.GBFuncionario = New System.Windows.Forms.GroupBox()
         Me.dgvFuncionarios = New System.Windows.Forms.DataGridView()
+        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBDEscripcion = New System.Windows.Forms.GroupBox()
         Me.TBDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -77,9 +88,12 @@ Partial Class frmPrincipal
         Me.pCMain = New System.Windows.Forms.Panel()
         Me.BWProgramas = New System.ComponentModel.BackgroundWorker()
         Me.BWDPRogramas = New System.ComponentModel.BackgroundWorker()
+        Me.BWEventos = New System.ComponentModel.BackgroundWorker()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
+        Me.GBEventos.SuspendLayout()
+        CType(Me.dgvEventos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.gbTandas.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,6 +103,7 @@ Partial Class frmPrincipal
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvPrograma, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBFuncionarios.SuspendLayout()
+        Me.tlpProgramas.SuspendLayout()
         Me.GBFuncionario.SuspendLayout()
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBDEscripcion.SuspendLayout()
@@ -116,6 +131,7 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.spNotEven, "spNotEven")
         Me.spNotEven.Controls.Add(Me.gbNotas, 0, 1)
+        Me.spNotEven.Controls.Add(Me.GBEventos, 0, 0)
         Me.spNotEven.Name = "spNotEven"
         '
         'gbNotas
@@ -129,6 +145,70 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.TBNotas, "TBNotas")
         Me.TBNotas.Name = "TBNotas"
+        '
+        'GBEventos
+        '
+        resources.ApplyResources(Me.GBEventos, "GBEventos")
+        Me.GBEventos.Controls.Add(Me.dgvEventos)
+        Me.GBEventos.Name = "GBEventos"
+        Me.GBEventos.TabStop = False
+        '
+        'dgvEventos
+        '
+        Me.dgvEventos.AllowUserToAddRows = False
+        Me.dgvEventos.AllowUserToDeleteRows = False
+        Me.dgvEventos.AllowUserToResizeColumns = False
+        Me.dgvEventos.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Aquamarine
+        Me.dgvEventos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        resources.ApplyResources(Me.dgvEventos, "dgvEventos")
+        Me.dgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvEventos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Plum
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvEventos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEventos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EFecha, Me.ENombre})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Aquamarine
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvEventos.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvEventos.MultiSelect = False
+        Me.dgvEventos.Name = "dgvEventos"
+        Me.dgvEventos.ReadOnly = True
+        Me.dgvEventos.RowHeadersVisible = False
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        Me.dgvEventos.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvEventos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.dgvEventos.RowTemplate.Height = 28
+        Me.dgvEventos.RowTemplate.ReadOnly = True
+        Me.dgvEventos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
+        'EFecha
+        '
+        resources.ApplyResources(Me.EFecha, "EFecha")
+        Me.EFecha.Name = "EFecha"
+        Me.EFecha.ReadOnly = True
+        '
+        'ENombre
+        '
+        resources.ApplyResources(Me.ENombre, "ENombre")
+        Me.ENombre.Name = "ENombre"
+        Me.ENombre.ReadOnly = True
         '
         'Panel2
         '
@@ -195,40 +275,40 @@ Partial Class frmPrincipal
         Me.dgvPrograma.AllowUserToDeleteRows = False
         Me.dgvPrograma.AllowUserToResizeColumns = False
         Me.dgvPrograma.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Aquamarine
-        Me.dgvPrograma.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Aquamarine
+        Me.dgvPrograma.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         resources.ApplyResources(Me.dgvPrograma, "dgvPrograma")
         Me.dgvPrograma.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvPrograma.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Plum
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvPrograma.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Plum
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPrograma.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvPrograma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPrograma.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Inicio, Me.Final, Me.Programa})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Aquamarine
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvPrograma.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Aquamarine
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvPrograma.DefaultCellStyle = DataGridViewCellStyle7
         Me.dgvPrograma.MultiSelect = False
         Me.dgvPrograma.Name = "dgvPrograma"
         Me.dgvPrograma.ReadOnly = True
         Me.dgvPrograma.RowHeadersVisible = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        Me.dgvPrograma.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        Me.dgvPrograma.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvPrograma.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvPrograma.RowTemplate.Height = 28
         Me.dgvPrograma.RowTemplate.ReadOnly = True
@@ -255,10 +335,16 @@ Partial Class frmPrincipal
         'GBFuncionarios
         '
         resources.ApplyResources(Me.GBFuncionarios, "GBFuncionarios")
-        Me.GBFuncionarios.Controls.Add(Me.GBFuncionario)
-        Me.GBFuncionarios.Controls.Add(Me.GBDEscripcion)
+        Me.GBFuncionarios.Controls.Add(Me.tlpProgramas)
         Me.GBFuncionarios.Name = "GBFuncionarios"
         Me.GBFuncionarios.TabStop = False
+        '
+        'tlpProgramas
+        '
+        resources.ApplyResources(Me.tlpProgramas, "tlpProgramas")
+        Me.tlpProgramas.Controls.Add(Me.GBFuncionario, 0, 1)
+        Me.tlpProgramas.Controls.Add(Me.GBDEscripcion, 0, 0)
+        Me.tlpProgramas.Name = "tlpProgramas"
         '
         'GBFuncionario
         '
@@ -273,43 +359,56 @@ Partial Class frmPrincipal
         Me.dgvFuncionarios.AllowUserToDeleteRows = False
         Me.dgvFuncionarios.AllowUserToResizeColumns = False
         Me.dgvFuncionarios.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Aquamarine
-        Me.dgvFuncionarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Aquamarine
+        Me.dgvFuncionarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
         resources.ApplyResources(Me.dgvFuncionarios, "dgvFuncionarios")
         Me.dgvFuncionarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvFuncionarios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Plum
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvFuncionarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Plum
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvFuncionarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Aquamarine
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvFuncionarios.DefaultCellStyle = DataGridViewCellStyle7
+        Me.dgvFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FNombre, Me.Telefono})
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Aquamarine
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvFuncionarios.DefaultCellStyle = DataGridViewCellStyle11
         Me.dgvFuncionarios.MultiSelect = False
         Me.dgvFuncionarios.Name = "dgvFuncionarios"
         Me.dgvFuncionarios.ReadOnly = True
         Me.dgvFuncionarios.RowHeadersVisible = False
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        Me.dgvFuncionarios.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+        Me.dgvFuncionarios.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.dgvFuncionarios.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvFuncionarios.RowTemplate.Height = 28
         Me.dgvFuncionarios.RowTemplate.ReadOnly = True
         Me.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
+        'FNombre
+        '
+        resources.ApplyResources(Me.FNombre, "FNombre")
+        Me.FNombre.Name = "FNombre"
+        Me.FNombre.ReadOnly = True
+        '
+        'Telefono
+        '
+        resources.ApplyResources(Me.Telefono, "Telefono")
+        Me.Telefono.Name = "Telefono"
+        Me.Telefono.ReadOnly = True
         '
         'GBDEscripcion
         '
@@ -485,6 +584,9 @@ Partial Class frmPrincipal
         'BWDPRogramas
         '
         '
+        'BWEventos
+        '
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -497,6 +599,8 @@ Partial Class frmPrincipal
         Me.pMain.ResumeLayout(False)
         Me.spNotEven.ResumeLayout(False)
         Me.gbNotas.ResumeLayout(False)
+        Me.GBEventos.ResumeLayout(False)
+        CType(Me.dgvEventos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.gbTandas.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -506,6 +610,7 @@ Partial Class frmPrincipal
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.dgvPrograma, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBFuncionarios.ResumeLayout(False)
+        Me.tlpProgramas.ResumeLayout(False)
         Me.GBFuncionario.ResumeLayout(False)
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBDEscripcion.ResumeLayout(False)
@@ -571,4 +676,12 @@ Partial Class frmPrincipal
     Friend WithEvents Inicio As DataGridViewTextBoxColumn
     Friend WithEvents Final As DataGridViewTextBoxColumn
     Friend WithEvents Programa As DataGridViewTextBoxColumn
+    Friend WithEvents GBEventos As GroupBox
+    Friend WithEvents dgvEventos As DataGridView
+    Friend WithEvents FNombre As DataGridViewTextBoxColumn
+    Friend WithEvents Telefono As DataGridViewTextBoxColumn
+    Friend WithEvents EFecha As DataGridViewTextBoxColumn
+    Friend WithEvents ENombre As DataGridViewTextBoxColumn
+    Friend WithEvents BWEventos As System.ComponentModel.BackgroundWorker
+    Friend WithEvents tlpProgramas As TableLayoutPanel
 End Class

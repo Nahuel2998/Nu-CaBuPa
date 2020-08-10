@@ -207,6 +207,81 @@
   <data name="&gt;&gt;gbNotas.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="GBEventos.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="GBEventos.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="dgvEventos.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="EFecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="EFecha.HeaderText" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="EFecha.MinimumWidth" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <metadata name="ENombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ENombre.HeaderText" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="ENombre.MinimumWidth" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="dgvEventos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="dgvEventos.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="dgvEventos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 168</value>
+  </data>
+  <data name="dgvEventos.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dgvEventos.Name" xml:space="preserve">
+    <value>dgvEventos</value>
+  </data>
+  <data name="&gt;&gt;dgvEventos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvEventos.Parent" xml:space="preserve">
+    <value>GBEventos</value>
+  </data>
+  <data name="&gt;&gt;dgvEventos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GBEventos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="GBEventos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 199</value>
+  </data>
+  <data name="GBEventos.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GBEventos.Text" xml:space="preserve">
+    <value>Proximos eventos</value>
+  </data>
+  <data name="&gt;&gt;GBEventos.Name" xml:space="preserve">
+    <value>GBEventos</value>
+  </data>
+  <data name="&gt;&gt;GBEventos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBEventos.Parent" xml:space="preserve">
+    <value>spNotEven</value>
+  </data>
+  <data name="&gt;&gt;GBEventos.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="spNotEven.Location" type="System.Drawing.Point, System.Drawing">
     <value>853, 6</value>
   </data>
@@ -232,7 +307,7 @@
     <value>0</value>
   </data>
   <data name="spNotEven.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="gbNotas" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="gbNotas" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GBEventos" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="Panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -283,7 +358,7 @@
     <value>2</value>
   </data>
   <data name="gbTandas.Text" xml:space="preserve">
-    <value>Proximas Tandas</value>
+    <value>Proxima Tandas</value>
   </data>
   <data name="&gt;&gt;gbTandas.Name" xml:space="preserve">
     <value>gbTandas</value>
@@ -444,6 +519,15 @@
   <data name="GBFuncionarios.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
+  <data name="tlpProgramas.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="tlpProgramas.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="tlpProgramas.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="GBFuncionario.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -452,6 +536,24 @@
   </data>
   <data name="dgvFuncionarios.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="FNombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="FNombre.HeaderText" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="FNombre.MinimumWidth" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <metadata name="Telefono.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Telefono.HeaderText" xml:space="preserve">
+    <value>Telefono</value>
+  </data>
+  <data name="Telefono.MinimumWidth" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="dgvFuncionarios.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 21</value>
@@ -478,7 +580,7 @@
     <value>0</value>
   </data>
   <data name="GBFuncionario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 196</value>
+    <value>3, 161</value>
   </data>
   <data name="GBFuncionario.Size" type="System.Drawing.Size, System.Drawing">
     <value>265, 169</value>
@@ -496,7 +598,7 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GBFuncionario.Parent" xml:space="preserve">
-    <value>GBFuncionarios</value>
+    <value>tlpProgramas</value>
   </data>
   <data name="&gt;&gt;GBFuncionario.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -514,7 +616,7 @@
     <value>7, 26</value>
   </data>
   <data name="TBDescripcion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 132</value>
+    <value>252, 120</value>
   </data>
   <data name="TBDescripcion.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -535,10 +637,10 @@
     <value>0</value>
   </data>
   <data name="GBDEscripcion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 25</value>
+    <value>3, 3</value>
   </data>
   <data name="GBDEscripcion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 164</value>
+    <value>265, 152</value>
   </data>
   <data name="GBDEscripcion.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -553,10 +655,37 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GBDEscripcion.Parent" xml:space="preserve">
-    <value>GBFuncionarios</value>
+    <value>tlpProgramas</value>
   </data>
   <data name="&gt;&gt;GBDEscripcion.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="tlpProgramas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 32</value>
+  </data>
+  <data name="tlpProgramas.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tlpProgramas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 333</value>
+  </data>
+  <data name="tlpProgramas.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tlpProgramas.Name" xml:space="preserve">
+    <value>tlpProgramas</value>
+  </data>
+  <data name="&gt;&gt;tlpProgramas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpProgramas.Parent" xml:space="preserve">
+    <value>GBFuncionarios</value>
+  </data>
+  <data name="&gt;&gt;tlpProgramas.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpProgramas.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="GBFuncionario" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GBDEscripcion" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,47,64706,Percent,52,35294" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="GBFuncionarios.Location" type="System.Drawing.Point, System.Drawing">
     <value>318, 3</value>
@@ -1311,8 +1440,14 @@
   <metadata name="BWDPRogramas.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>208, 17</value>
   </metadata>
+  <metadata name="BWEventos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>403, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>88</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>9, 20</value>
@@ -3772,6 +3907,18 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Inicio</value>
   </data>
+  <data name="&gt;&gt;EFecha.Name" xml:space="preserve">
+    <value>EFecha</value>
+  </data>
+  <data name="&gt;&gt;EFecha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ENombre.Name" xml:space="preserve">
+    <value>ENombre</value>
+  </data>
+  <data name="&gt;&gt;ENombre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Inicio.Name" xml:space="preserve">
     <value>Inicio</value>
   </data>
@@ -3788,6 +3935,18 @@
     <value>Programa</value>
   </data>
   <data name="&gt;&gt;Programa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FNombre.Name" xml:space="preserve">
+    <value>FNombre</value>
+  </data>
+  <data name="&gt;&gt;FNombre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Telefono.Name" xml:space="preserve">
+    <value>Telefono</value>
+  </data>
+  <data name="&gt;&gt;Telefono.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Nombre.Name" xml:space="preserve">
@@ -3818,6 +3977,12 @@
     <value>BWDPRogramas</value>
   </data>
   <data name="&gt;&gt;BWDPRogramas.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BWEventos.Name" xml:space="preserve">
+    <value>BWEventos</value>
+  </data>
+  <data name="&gt;&gt;BWEventos.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
