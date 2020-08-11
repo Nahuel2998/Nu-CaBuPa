@@ -1,6 +1,6 @@
 Programa: {*ID_Programa*, Nombre_Programa, Descripcion, Fecha_Finalizacion}
 ---
-FechaPrograma: {*Fecha*, *Hora_Inicio*, Hora_Fin, +ID_Programa+}
+FechaPrograma: {*Fecha*, *Hora_Inicio*, Hora_Fin, ID_Programa}
 ProgramaCuota: {*ID_Programa_Cuota*,*ID_Programa*,Fecha_Pago,Fecha_Emision, Precio}
 
 ---
@@ -15,7 +15,7 @@ UsTieneAcceso:	{*id_usuario, id_acceso*}
 ---
 
 PMuestraPubli: {*ID_Publicidad*, *ID_Programa*, *Fecha_Inicio*, Fecha_Finalizacion}
-PublicidadCuota: {*ID_Publicidad_Cuota*, Fecha_Pago,Fecha_Emision, Precio, +ID_Publicidad+}
+PublicidadCuota: {*ID_Publicidad_Cuota*, Fecha_Pago,Fecha_Emision, Precio, ID_Publicidad}
 
 ---
 
@@ -47,11 +47,11 @@ Funcionario:	{*ID_Funcionario*, Telefono, Nombre}
 Funcion:	{*ID_Funcion*, Descripcion}
 TrabajaComo:	{*ID_Funcionario, ID_Funcion*}
 
-FunTrabaja:	{*ID_Funcionario*, *ID_Funcion*, *ID_Programa*, *Fecha_Inicio*, Fecha_Finalizacion}
+FunTrabaja:	{*ID_Funcionario, ID_Funcion, ID_Programa*, *Fecha_Inicio*, Fecha_Finalizacion}
 
 - - - -
 
-Video:		{*ID_Video*, Contenido, Nombre, +ID_Serie+, Fecha}
+Video:		{*ID_Video*, Contenido, Nombre, ID_Serie, Fecha}
 Serie:		{*ID_Serie*, Fecha_Finalizacion, Nombre}
 
 
