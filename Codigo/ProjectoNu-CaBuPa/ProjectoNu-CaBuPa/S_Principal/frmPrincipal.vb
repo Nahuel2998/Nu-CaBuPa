@@ -48,19 +48,16 @@ Public Class frmPrincipal
     End Sub
     Private Sub ActualizarEvento()
         dgvEventos.Columns.Clear()
-        dgvFuncionarios.Rows.Clear()
-        If Not IsNothing(dt_evento) Then
+        If Not IsNothing(dt_evento) And dt_evento.Rows.Count > 0 Then
             dgvEventos.DataSource = dt_evento
-            If dt_evento.Rows.Count > 0 Then
-                dgvEventos.Columns().RemoveAt(0)
-            End If
-            dgvEventos.ClearSelection()
+            dgvEventos.Columns().RemoveAt(0)
         Else
             dt_evento = New DataTable
             dgvEventos.DataSource = dt_evento
-            dgvEventos.Columns.Add("EFecha", "EFecha")
+            dgvEventos.Columns.Add("EFecha", "Fecha")
             dgvEventos.Columns.Add("ENombre", "Nombre")
         End If
+        dgvEventos.ClearSelection()
     End Sub
     Public Sub dgvProgramaColor()
         Dim fin As TimeSpan
@@ -70,8 +67,8 @@ Public Class frmPrincipal
         Dim Activo As Integer = -1
         If (Now.Date >= dtp.Value.Date) And dgvPrograma.Rows.Count > 0 Then
             For i As Integer = 0 To dgvPrograma.Rows.Count - 1
-                inicio = TimeSpan.Parse(dgvPrograma.Rows(i).Cells(0).Value())
-                fin = TimeSpan.Parse(dgvPrograma.Rows(i).Cells(1).Value())
+                inicio = TimeSpan.Parse(dgvPrograma.Rows(i).Cells(0).Value().ToString)
+                fin = TimeSpan.Parse(dgvPrograma.Rows(i).Cells(1).Value().ToString)
                 If (inicio < Now.TimeOfDay Or Now.Date > dtp.Value.Date) Then
                     If (Now.TimeOfDay < fin And Now.Date = dtp.Value.Date) Then
                         colorNuevo = Color.FromArgb(245, 94, 94)
@@ -224,7 +221,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub dgvTandas_Click(sender As Object, e As EventArgs) Handles dgvTandas.Click
-        If BWPublicidades.IsBusy Then
+        If Not BWPublicidades.IsBusy Then
             BWPublicidades.RunWorkerAsync()
         End If
     End Sub

@@ -431,3 +431,28 @@
 11/08/2020 11:09:20 DESKTOP-SDVEG3U ' ID_Publicidad,ID_Programa,Fecha_Inicio,Fecha_Finalizacion'3','1','2020-02-19','2020-12-12' 
 11/08/2020 11:09:23 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 11/08/2020 11:16:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:32:20 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:33:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:43:18 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:44:42 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:45:17 DESKTOP-SDVEG3U ' tanda 
+11/08/2020 12:45:42 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'01:00:00','03:00:00' 
+11/08/2020 12:45:54 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'03:00:00','05:00:00' 
+11/08/2020 12:46:04 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'05:00:00','010:00:00' 
+11/08/2020 12:46:14 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'10:00:00','05:00:00' 
+11/08/2020 12:46:25 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'15:00:00','16:00:00' 
+11/08/2020 12:46:35 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'16:00:00','20:00:00' 
+11/08/2020 12:46:47 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'20:00:00','24:00:00' 
+11/08/2020 12:46:52 DESKTOP-SDVEG3U ' publicidad 
+11/08/2020 12:47:36 DESKTOP-SDVEG3U ' aparecepubli 
+11/08/2020 12:48:20 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'1','05:00:00','2020-02-09','2020-08-19' 
+11/08/2020 12:48:32 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'2','15:00:00','2020-02-09','2020-08-19' 
+11/08/2020 12:48:37 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'3','15:00:00','2020-02-09','2020-08-19' 
+11/08/2020 12:48:44 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'2','16:00:00','2020-02-09','2020-08-19' 
+11/08/2020 12:48:52 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'1','20:00:00','2020-02-09','2020-08-19' 
+11/08/2020 12:48:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:51:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:54:18 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:56:11 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 13:01:22 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 13:01:32 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

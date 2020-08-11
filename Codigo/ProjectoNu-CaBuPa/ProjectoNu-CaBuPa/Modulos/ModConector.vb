@@ -231,14 +231,9 @@ Module ModConector
 
 #End Region
 #Region "Main"
-    Public Function APrograma(fecha As Date) As DataTable
-        Return DevolverTabla(PSQL("p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa'", "fechaprograma f inner join programa p on f.id_programa=p.id_programa", "fecha = '" + Format(CDate(fecha), "yyyy-MM-dd") + "'"))
-    End Function
     Public Function DevolverTabla(ByVal Datos As String) As DataTable
-
         Dim conT = New MySqlConnection(connStr)
         conT.Open()
-
         Try
             objCmd = New MySqlCommand(Datos, conT)
             objCmd.Prepare()
@@ -255,6 +250,10 @@ Module ModConector
             MessageBox.Show(e.ToString)
         End Try
         Return Nothing
+    End Function
+#Region "Actualizar"
+    Public Function APrograma(fecha As Date) As DataTable
+        Return DevolverTabla(PSQL("p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa'", "fechaprograma f inner join programa p on f.id_programa=p.id_programa", "fecha = '" + Format(CDate(fecha), "yyyy-MM-dd") + "'"))
     End Function
     Public Function AFPrograma(idPrograma As Integer) As DataTable
         Return DevolverTabla(PSQL("Nombre, Telefono", "programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario", "p.id_programa = '" + idPrograma.ToString + "'"))
@@ -275,5 +274,6 @@ Module ModConector
         Dim dt As DataTable = DevolverTabla(PSQL("Descripcion", "programa", "id_programa = '" + idPrograma.ToString + "'"))
         Return dt.Rows(0)(0).ToString
     End Function
+#End Region
 #End Region
 End Module
