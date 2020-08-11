@@ -12,7 +12,6 @@ Module ModConector
     Private objCmd As New MySqlCommand
     Private ds As New DataSet
     Private dt As New DataTable
-    Private sqladapter As MySqlDataAdapter
 
 #Region "GetDirection"
     Public Function GDT(ByVal Nombre As String) As DataTable
@@ -113,18 +112,28 @@ Module ModConector
 #End Region
 #Region "Interpretar"
     Public Function ESQL(ByVal sql As String) As Boolean
+        Dim conT = New MySqlConnection(connStr)
+        conT.Open()
+
         Try
             objCmd = New MySqlCommand(sql, conn)
             objCmd.Prepare()
             objCmd.ExecuteNonQuery()
+
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
             Return False
         End Try
+        conT.Close()
         Return True
     End Function
     Public Function ESQLSelect(ByVal sql As String) As DataTable
         Dim dt As New DataTable
+
+        Dim sqladapter As MySqlDataAdapter
+        Dim conT = New MySqlConnection(connStr)
+        conT.Open()
+
         Try
             objCmd = New MySqlCommand(sql, conn)
             objCmd.Prepare()
@@ -135,10 +144,12 @@ Module ModConector
             MessageBox.Show(ex.ToString)
             Return Nothing
         End Try
+        conT.Close()
         Return dt
     End Function
     Public Function ESQLSelect(ByVal objCmd As MySqlCommand, ByVal guardar As Boolean) As DataTable
         dt = New DataTable
+        Dim sqladapter As MySqlDataAdapter
         Try
             sqladapter = New MySqlDataAdapter(objCmd)
             sqladapter.Fill(dt)
@@ -224,16 +235,23 @@ Module ModConector
         Return DevolverTabla(PSQL("p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa'", "fechaprograma f inner join programa p on f.id_programa=p.id_programa", "fecha = '" + Format(CDate(fecha), "yyyy-MM-dd") + "'"))
     End Function
     Public Function DevolverTabla(ByVal Datos As String) As DataTable
+
+        Dim conT = New MySqlConnection(connStr)
+        conT.Open()
+
         Try
-            objCmd = New MySqlCommand(Datos, conn)
+            objCmd = New MySqlCommand(Datos, conT)
             objCmd.Prepare()
             Dim dt As DataTable = ESQLSelect(objCmd, True)
+            conT.Close()
+
             If Not IsNothing(dt) Then
                 If Not dt.Rows.Count = 0 Then
                     Return dt
                 End If
             End If
         Catch e As Exception
+            conT.Close()
             MessageBox.Show(e.ToString)
         End Try
         Return Nothing

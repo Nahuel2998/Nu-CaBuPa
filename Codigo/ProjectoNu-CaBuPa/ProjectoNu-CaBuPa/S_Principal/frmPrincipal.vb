@@ -8,7 +8,6 @@ Public Class frmPrincipal
     Private dt_evento As DataTable
     Private dt_tandas As DataTable
     Private dt_publi As DataTable
-    Private Ejecucion As Integer = -1
     Private DescripcionP As String
     Private Sub frmPrincipal_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         ModConector.desconectar()
@@ -19,6 +18,8 @@ Public Class frmPrincipal
         Me.Width = Screen.PrimaryScreen.WorkingArea.Width * 0.85
         Me.Height = Screen.PrimaryScreen.WorkingArea.Height * 0.8
         BWEventos.RunWorkerAsync()
+        BWProgramas.RunWorkerAsync()
+        BWTandas.RunWorkerAsync()
         LeerNotas()
     End Sub
 
@@ -95,7 +96,9 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub dtp_ValueChanged(sender As Object, e As EventArgs) Handles dtp.ValueChanged
-        BWProgramas.RunWorkerAsync()
+        If Not BWProgramas.IsBusy Then
+            BWProgramas.RunWorkerAsync()
+        End If
     End Sub
 
 
@@ -144,10 +147,6 @@ Public Class frmPrincipal
         dgvFuncionarios.DataSource = dt_dprograma
         dgvFuncionarios.ClearSelection()
         TBDescripcion.Text = DescripcionP
-        If Ejecucion = -1 Then
-            BWTandas.RunWorkerAsync()
-            Ejecucion = 0
-        End If
     End Sub
     Public Sub Funcionarios()
         If Not (BWDPRogramas.IsBusy) Then
@@ -166,9 +165,6 @@ Public Class frmPrincipal
 
     Private Sub BWEventos_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWEventos.RunWorkerCompleted
         ActualizarEvento()
-        If Ejecucion = -1 Then
-            BWProgramas.RunWorkerAsync()
-        End If
     End Sub
 
     Private Sub dgvPrograma_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellContentClick
