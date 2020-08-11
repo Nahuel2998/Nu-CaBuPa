@@ -32,7 +32,9 @@ Public Class frmPrincipal
         If Not IsNothing(dt_programa) Then
             dgvPrograma.DataSource = dt_programa
             dgvPrograma.Columns().RemoveAt(0)
-                dgvProgramaColor()
+
+            dgvPrograma.Columns.Add("PEstado", "Estado")
+            dgvProgramaColor()
                 For i As Integer = 0 To dgvPrograma.Columns.Count - 1
                     dgvPrograma.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
                 Next
@@ -42,6 +44,7 @@ Public Class frmPrincipal
             dgvPrograma.Columns.Add("PInicio", "Inicio")
             dgvPrograma.Columns.Add("PFinal", "Final")
             dgvPrograma.Columns.Add("PPrograma", "Programa")
+            dgvPrograma.Columns.Add("PEstado", "Estado")
         End If
 
 
@@ -64,29 +67,41 @@ Public Class frmPrincipal
         Dim inicio As TimeSpan
         Dim colores As Color = dgvPrograma.DefaultCellStyle.ForeColor
         Dim colorNuevo As Color
+        Dim estado As String
         Dim Activo As Integer = -1
         If (Now.Date >= dtp.Value.Date) And dgvPrograma.Rows.Count > 0 Then
             For i As Integer = 0 To dgvPrograma.Rows.Count - 1
+
                 inicio = TimeSpan.Parse(dgvPrograma.Rows(i).Cells(0).Value().ToString)
                 fin = TimeSpan.Parse(dgvPrograma.Rows(i).Cells(1).Value().ToString)
                 If (inicio < Now.TimeOfDay Or Now.Date > dtp.Value.Date) Then
                     If (Now.TimeOfDay < fin And Now.Date = dtp.Value.Date) Then
                         colorNuevo = Color.FromArgb(245, 94, 94)
+                        estado = "Activo"
                         dgvPrograma.Rows(i).Selected = True
                         Activo = i
                     Else
+                        estado = "Finalizado"
                         colorNuevo = Color.FromArgb(154, 94, 245)
                     End If
-                    dgvPrograma.Rows(i).DefaultCellStyle.ForeColor = colorNuevo
+
+                    dgvPrograma.Rows(i).Cells(dgvPrograma.Rows(i).Cells.Count - 1).Style.ForeColor = colorNuevo
+
                 Else
                     If Activo = -1 Then
                         Activo = i
                         dgvPrograma.Rows(i).Selected = True
                     End If
+                    estado = "Activo"
                 End If
-
+                dgvPrograma.Rows(i).Cells(dgvPrograma.Rows(i).Cells.Count - 1).Value = estado
+            Next
+        Else
+            For i As Integer = 0 To dgvPrograma.Rows.Count - 1
+                dgvPrograma.Rows(i).Cells(dgvPrograma.Rows(i).Cells.Count - 1).Value = "Proximo"
             Next
         End If
+
     End Sub
     Private Sub BWNumberOne_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWProgramas.RunWorkerCompleted
         ActualizarProgramas()
