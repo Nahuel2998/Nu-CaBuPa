@@ -8,6 +8,7 @@ Public Class frmPrincipal
     Private dt_evento As DataTable
     Private dt_tandas As DataTable
     Private dt_publi As DataTable
+    Private dt_Ppubli As DataTable
     Private DescripcionP As String
     Private Sub frmPrincipal_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         ModConector.desconectar()
@@ -31,12 +32,12 @@ Public Class frmPrincipal
         If Not IsNothing(dt_programa) Then
             dgvPrograma.DataSource = dt_programa
             dgvPrograma.Columns().RemoveAt(0)
-            dgvProgramaColor()
-            For i As Integer = 0 To dgvPrograma.Columns.Count - 1
-                dgvPrograma.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
-            Next
-        Else
-            dt_programa = New DataTable
+                dgvProgramaColor()
+                For i As Integer = 0 To dgvPrograma.Columns.Count - 1
+                    dgvPrograma.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
+                Next
+            Else
+                dt_programa = New DataTable
             dgvPrograma.DataSource = dt_programa
             dgvPrograma.Columns.Add("PInicio", "Inicio")
             dgvPrograma.Columns.Add("PFinal", "Final")
@@ -55,8 +56,8 @@ Public Class frmPrincipal
             End If
             dgvEventos.ClearSelection()
         Else
-            dt_programa = New DataTable
-            dgvEventos.DataSource = dt_programa
+            dt_evento = New DataTable
+            dgvEventos.DataSource = dt_evento
             dgvEventos.Columns.Add("EFecha", "EFecha")
             dgvEventos.Columns.Add("ENombre", "Nombre")
         End If
@@ -131,22 +132,31 @@ Public Class frmPrincipal
                 Dim id As Integer = CInt(dt_programa.Rows(idRow)(0).ToString)
                 dt_dprograma = ModConector.AFPrograma(id)
                 DescripcionP = ModConector.ADPrograma(id)
+                dt_Ppubli = ModConector.APPublicidad(dtp.Value.Date, id)
             End If
         Else
+            dt_Ppubli = Nothing
             dt_dprograma = Nothing
         End If
     End Sub
 
     Private Sub BWDPRogramas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWDPRogramas.RunWorkerCompleted
         dgvFuncionarios.Columns.Clear()
+        dgvPPublicidades.Columns.Clear()
         If IsNothing(dt_dprograma) Then
             dt_dprograma = New DataTable
             dgvFuncionarios.Columns.Add("FNombre", "Nombre")
             dgvFuncionarios.Columns.Add("FTelefono", "Telefono")
+
+        End If
+        If IsNothing(dt_Ppubli) Then
+            dt_Ppubli = New DataTable
+            dgvPPublicidades.Columns.Add("PPDescripcion", "Descripcion")
         End If
         dgvFuncionarios.DataSource = dt_dprograma
-        dgvFuncionarios.ClearSelection()
         TBDescripcion.Text = DescripcionP
+        dgvPPublicidades.DataSource = dt_Ppubli
+        dgvPPublicidades.ClearSelection()
     End Sub
     Public Sub Funcionarios()
         If Not (BWDPRogramas.IsBusy) Then
@@ -217,5 +227,9 @@ Public Class frmPrincipal
         If BWPublicidades.IsBusy Then
             BWPublicidades.RunWorkerAsync()
         End If
+    End Sub
+
+    Private Sub BWPPublicidad_DoWork(sender As Object, e As DoWorkEventArgs)
+
     End Sub
 End Class

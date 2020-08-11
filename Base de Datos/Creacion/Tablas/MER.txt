@@ -32,7 +32,7 @@ Evento:		{*ID_Evento*, Nombre, Descripcion}
 
 ---
 
-EventoTrataDeV:	{*ID_Evento, ID_Video, ID_Serie*}
+EventoTrataDeV:	{*ID_Evento*, *ID_Video*}
 FechaEvento:	{*ID_Evento, Fecha*} 
 
 ---

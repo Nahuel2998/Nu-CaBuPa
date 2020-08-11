@@ -137,9 +137,6 @@
   <data name="spNotEven.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
-  <data name="spNotEven.CellBorderStyle" type="System.Windows.Forms.TableLayoutPanelCellBorderStyle, System.Windows.Forms">
-    <value>OutsetDouble</value>
-  </data>
   <data name="spNotEven.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
@@ -163,7 +160,7 @@
     <value>Vertical</value>
   </data>
   <data name="TBNotas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 165</value>
+    <value>187, 169</value>
   </data>
   <data name="TBNotas.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -184,10 +181,10 @@
     <value>0</value>
   </data>
   <data name="gbNotas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 214</value>
+    <value>3, 213</value>
   </data>
   <data name="gbNotas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 200</value>
+    <value>199, 204</value>
   </data>
   <data name="gbNotas.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -241,7 +238,7 @@
     <value>62</value>
   </data>
   <data name="dgvEventos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 168</value>
+    <value>187, 173</value>
   </data>
   <data name="dgvEventos.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -259,10 +256,10 @@
     <value>0</value>
   </data>
   <data name="GBEventos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
+    <value>3, 3</value>
   </data>
   <data name="GBEventos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 199</value>
+    <value>199, 204</value>
   </data>
   <data name="GBEventos.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -702,6 +699,72 @@
   <data name="tlpProgramas.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="GBPubli.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="GBPubli.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="dgvPPublicidades.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="DataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="DataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Descripcion</value>
+  </data>
+  <data name="DataGridViewTextBoxColumn3.MinimumWidth" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="dgvPPublicidades.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 25</value>
+  </data>
+  <data name="dgvPPublicidades.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="dgvPPublicidades.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 105</value>
+  </data>
+  <data name="dgvPPublicidades.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dgvPPublicidades.Name" xml:space="preserve">
+    <value>dgvPPublicidades</value>
+  </data>
+  <data name="&gt;&gt;dgvPPublicidades.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvPPublicidades.Parent" xml:space="preserve">
+    <value>GBPubli</value>
+  </data>
+  <data name="&gt;&gt;dgvPPublicidades.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GBPubli.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 201</value>
+  </data>
+  <data name="GBPubli.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 136</value>
+  </data>
+  <data name="GBPubli.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="GBPubli.Text" xml:space="preserve">
+    <value>Publicidades</value>
+  </data>
+  <data name="&gt;&gt;GBPubli.Name" xml:space="preserve">
+    <value>GBPubli</value>
+  </data>
+  <data name="&gt;&gt;GBPubli.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBPubli.Parent" xml:space="preserve">
+    <value>tlpProgramas</value>
+  </data>
+  <data name="&gt;&gt;GBPubli.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="GBFuncionario.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -736,7 +799,7 @@
     <value>62</value>
   </data>
   <data name="dgvFuncionarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 142</value>
+    <value>252, 79</value>
   </data>
   <data name="dgvFuncionarios.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -754,10 +817,10 @@
     <value>0</value>
   </data>
   <data name="GBFuncionario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 161</value>
+    <value>3, 89</value>
   </data>
   <data name="GBFuncionario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 169</value>
+    <value>265, 106</value>
   </data>
   <data name="GBFuncionario.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -775,7 +838,7 @@
     <value>tlpProgramas</value>
   </data>
   <data name="&gt;&gt;GBFuncionario.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="GBDEscripcion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -790,7 +853,7 @@
     <value>7, 26</value>
   </data>
   <data name="TBDescripcion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 120</value>
+    <value>252, 48</value>
   </data>
   <data name="TBDescripcion.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -814,7 +877,7 @@
     <value>3, 3</value>
   </data>
   <data name="GBDEscripcion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 152</value>
+    <value>265, 80</value>
   </data>
   <data name="GBDEscripcion.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -832,16 +895,16 @@
     <value>tlpProgramas</value>
   </data>
   <data name="&gt;&gt;GBDEscripcion.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tlpProgramas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 32</value>
-  </data>
-  <data name="tlpProgramas.RowCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="tlpProgramas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="tlpProgramas.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="tlpProgramas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 333</value>
+    <value>271, 340</value>
   </data>
   <data name="tlpProgramas.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -859,7 +922,7 @@
     <value>0</value>
   </data>
   <data name="tlpProgramas.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="GBFuncionario" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GBDEscripcion" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,47,64706,Percent,52,35294" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="GBPubli" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GBFuncionario" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GBDEscripcion" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,43,29004,Percent,56,70996,Absolute,141" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="GBFuncionarios.Location" type="System.Drawing.Point, System.Drawing">
     <value>318, 3</value>
@@ -904,7 +967,7 @@
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TableLayoutPanel2.Parent" xml:space="preserve">
-    <value>TabPage1</value>
+    <value>tbPrograma</value>
   </data>
   <data name="&gt;&gt;TableLayoutPanel2.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -912,31 +975,31 @@
   <data name="TableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="GroupBox1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GBFuncionarios" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,52,15232,Percent,47,84768" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="TabPage1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tbPrograma.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
   </data>
-  <data name="TabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tbPrograma.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="TabPage1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tbPrograma.Size" type="System.Drawing.Size, System.Drawing">
     <value>617, 387</value>
   </data>
-  <data name="TabPage1.TabIndex" type="System.Int32, mscorlib">
+  <data name="tbPrograma.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="TabPage1.Text" xml:space="preserve">
+  <data name="tbPrograma.Text" xml:space="preserve">
     <value>Programas</value>
   </data>
-  <data name="&gt;&gt;TabPage1.Name" xml:space="preserve">
-    <value>TabPage1</value>
+  <data name="&gt;&gt;tbPrograma.Name" xml:space="preserve">
+    <value>tbPrograma</value>
   </data>
-  <data name="&gt;&gt;TabPage1.Type" xml:space="preserve">
+  <data name="&gt;&gt;tbPrograma.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TabPage1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tbPrograma.Parent" xml:space="preserve">
     <value>tcSecciones</value>
   </data>
-  <data name="&gt;&gt;TabPage1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tbPrograma.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="TabControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -4194,6 +4257,12 @@
   </data>
   <data name="&gt;&gt;BWPublicidades.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>DataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmPrincipal</value>

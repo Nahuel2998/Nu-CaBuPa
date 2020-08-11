@@ -82,10 +82,9 @@ create table PublicidadCuota
 
 create table Tanda
 	(
-	Fecha Date not null,
 	Hora_Inicio time not null,
 	Hora_Fin time not null,
-	Primary key (Fecha, Hora_Inicio)
+	Primary key (Hora_Inicio)
 	);
 create table AparecePubli
 	(
@@ -187,10 +186,8 @@ create table EventoEsDeV
 	(
 	ID_Evento INT(6) unsigned not null,
 	ID_Video INT(6) unsigned not null,
-	ID_Serie INT(6) unsigned not null,
 	foreign key (ID_Evento ) references Evento(ID_Evento),
 	foreign key (ID_Video ) references Video(ID_Video),
-	foreign key (ID_Serie ) references Serie(ID_Serie),
-	PRIMARY KEY(ID_Evento, ID_Video, ID_Serie)
+	PRIMARY KEY(ID_Evento, ID_Video)
 	);
 	
