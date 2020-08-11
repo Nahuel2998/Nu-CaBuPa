@@ -19,9 +19,10 @@ Public Class frmPrincipal
     Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Width = Screen.PrimaryScreen.WorkingArea.Width * 0.85
         Me.Height = Screen.PrimaryScreen.WorkingArea.Height * 0.8
-        BWEventos.RunWorkerAsync()
+
         BWProgramas.RunWorkerAsync()
         BWTandas.RunWorkerAsync()
+        BWEventos.RunWorkerAsync()
         LeerNotas()
     End Sub
 
@@ -52,9 +53,12 @@ Public Class frmPrincipal
     End Sub
     Private Sub ActualizarEvento()
         dgvEventos.Columns.Clear()
-        If Not IsNothing(dt_evento) And dt_evento.Rows.Count > 0 Then
+        If Not IsNothing(dt_evento) Then
             dgvEventos.DataSource = dt_evento
-            dgvEventos.Columns().RemoveAt(0)
+            If dt_evento.Rows.Count > 0 Then
+                dgvEventos.Columns().RemoveAt(0)
+            End If
+
         Else
             dt_evento = New DataTable
             dgvEventos.DataSource = dt_evento
@@ -246,7 +250,7 @@ Public Class frmPrincipal
         End If
     End Sub
 
-    Private Sub BWPPublicidad_DoWork(sender As Object, e As DoWorkEventArgs)
 
-    End Sub
+
+
 End Class
