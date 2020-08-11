@@ -14,8 +14,8 @@ UsTieneAcceso:	{*id_usuario, id_acceso*}
 
 ---
 
-PMuestraPubli: {*ID_Publicidad*, *ID_Programa*, Fecha_Finalizacion}
-PublicidadCuota: {*ID_Publicidad_Cuota*, Fecha_Pago, Precio, ID_Publicidad}
+PMuestraPubli: {*ID_Publicidad*, *ID_Programa*, *Fecha_Inicio*, Fecha_Finalizacion}
+PublicidadCuota: {*ID_Publicidad_Cuota*, Fecha_Pago,Fecha_Emision, Precio, ID_Publicidad}
 
 ---
 
@@ -24,7 +24,7 @@ Empresa:	{*ID_Empresa*, Nombre, Telefono}
 ---
 
 Tanda:		{*Hora_Inicio*, Hora_Fin}
-AparecePubli:	{*ID_Publicidad*, *Hora_Inicio*, Fecha_Inicio, Fecha_Finalizacion}
+AparecePubli:	{*ID_Publicidad*, *Hora_Inicio*, *Fecha_Inicio*, Fecha_Finalizacion}
 
 ---
 
@@ -47,7 +47,7 @@ Funcionario:	{*ID_Funcionario*, Telefono, Nombre}
 Funcion:	{*ID_Funcion*, Descripcion}
 TrabajaComo:	{*ID_Funcionario, ID_Funcion*}
 
-FunTrabaja:	{*ID_Funcionario, ID_Funcion, ID_Programa*, Fecha_Inicio, Fecha_Finalizacion}
+FunTrabaja:	{*ID_Funcionario, ID_Funcion, ID_Programa*, *Fecha_Inicio*, Fecha_Finalizacion}
 
 - - - -
 

@@ -241,8 +241,14 @@ Module ModConector
     Public Function AFPrograma(idPrograma As Integer) As DataTable
         Return DevolverTabla(PSQL("Nombre, Telefono", "programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario", "p.id_programa = '" + idPrograma.ToString + "'"))
     End Function
+    Public Function APublicidad(Fecha As Date, Hora As TimeSpan) As DataTable
+        Return DevolverTabla(PSQL("Tema", "publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad inner join tanda t on t.Hora_Inicio = a.hora_inicio", "a.fecha_inicio <= '" + Format(CDate(Fecha), "yyyy-MM-dd") + "' and a.fecha_finalizacion >= '" + Format(CDate(Fecha), "yyyy-MM-dd").ToString + "' and t.hora_inicio = '" + Hora.ToString + "'"))
+    End Function
     Public Function AEventos() As DataTable
         Return DevolverTabla(PSQL("e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre", "evento e inner join fechaevento f on f.id_evento=e.id_evento", "f.fecha >= now()"))
+    End Function
+    Public Function ATandas() As DataTable
+        Return DevolverTabla(PSQL("time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final'", "tanda", "(hora_inicio <= curtime() and hora_fin >= curtime()) or hora_inicio >= curtime()"))
     End Function
     Public Function ADPrograma(idPrograma As Integer) As String
         Dim dt As DataTable = DevolverTabla(PSQL("Descripcion", "programa", "id_programa = '" + idPrograma.ToString + "'"))

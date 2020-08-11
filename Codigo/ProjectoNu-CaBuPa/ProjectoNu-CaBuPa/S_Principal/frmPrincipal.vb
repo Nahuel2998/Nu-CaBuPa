@@ -6,7 +6,9 @@ Public Class frmPrincipal
     Private dt_programa As DataTable
     Private dt_dprograma As DataTable
     Private dt_evento As DataTable
-    Private dt_prueba As DataTable
+    Private dt_tandas As DataTable
+    Private dt_publi As DataTable
+    Private Ejecucion As Integer = -1
     Private DescripcionP As String
     Private Sub frmPrincipal_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         ModConector.desconectar()
@@ -24,8 +26,8 @@ Public Class frmPrincipal
         dt_programa = ModConector.APrograma(dtp.Value.Date)
     End Sub
     Private Sub ActualizarProgramas()
+        dgvPrograma.Columns.Clear()
         If Not IsNothing(dt_programa) Then
-            dgvPrograma.Columns.Clear()
             dgvPrograma.DataSource = dt_programa
             dgvPrograma.Columns().RemoveAt(0)
             dgvProgramaColor()
@@ -33,8 +35,8 @@ Public Class frmPrincipal
                 dgvPrograma.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
             Next
         Else
-            dgvPrograma.Columns.Clear()
-            dgvPrograma.DataSource = New DataTable
+            dt_programa = New DataTable
+            dgvPrograma.DataSource = dt_programa
             dgvPrograma.Columns.Add("PInicio", "Inicio")
             dgvPrograma.Columns.Add("PFinal", "Final")
             dgvPrograma.Columns.Add("PPrograma", "Programa")
@@ -134,16 +136,18 @@ Public Class frmPrincipal
 
     Private Sub BWDPRogramas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWDPRogramas.RunWorkerCompleted
         dgvFuncionarios.Columns.Clear()
-        If Not IsNothing(dt_dprograma) Then
-            dgvFuncionarios.Columns.Clear()
-            dgvFuncionarios.ClearSelection()
-        Else
+        If IsNothing(dt_dprograma) Then
             dt_dprograma = New DataTable
             dgvFuncionarios.Columns.Add("FNombre", "Nombre")
             dgvFuncionarios.Columns.Add("FTelefono", "Telefono")
         End If
         dgvFuncionarios.DataSource = dt_dprograma
+        dgvFuncionarios.ClearSelection()
         TBDescripcion.Text = DescripcionP
+        If Ejecucion = -1 Then
+            BWTandas.RunWorkerAsync()
+            Ejecucion = 0
+        End If
     End Sub
     Public Sub Funcionarios()
         If Not (BWDPRogramas.IsBusy) Then
@@ -162,10 +166,60 @@ Public Class frmPrincipal
 
     Private Sub BWEventos_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWEventos.RunWorkerCompleted
         ActualizarEvento()
-        BWProgramas.RunWorkerAsync()
+        If Ejecucion = -1 Then
+            BWProgramas.RunWorkerAsync()
+        End If
     End Sub
 
     Private Sub dgvPrograma_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellContentClick
 
+    End Sub
+
+    Private Sub BWPublicidades_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWPublicidades.DoWork
+        If (dgvTandas.Rows.Count > 0) Then
+            Dim Hora As TimeSpan = TimeSpan.Parse(dgvTandas.SelectedRows(0).Cells(0).Value)
+            If Not IsNothing(dt_tandas) Then
+                dt_publi = ModConector.APublicidad(dtpTanda.Value.Date, Hora)
+            End If
+        Else
+            dt_publi = Nothing
+        End If
+    End Sub
+
+    Private Sub BWPublicidades_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWPublicidades.RunWorkerCompleted
+        dgvPublicidades.Columns.Clear()
+        If IsNothing(dt_publi) Then
+            dt_publi = New DataTable
+            dgvPublicidades.Columns.Add("PDescripcion", "Descripcion")
+        End If
+        dgvPublicidades.DataSource = dt_publi
+        dgvPublicidades.ClearSelection()
+    End Sub
+
+    Private Sub BWTandas_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWTandas.DoWork
+        dt_tandas = ModConector.ATandas()
+    End Sub
+
+    Private Sub BWTandas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWTandas.RunWorkerCompleted
+        dgvTandas.Columns.Clear()
+        If Not IsNothing(dt_tandas) Then
+            dgvTandas.DataSource = dt_tandas
+        Else
+            dt_tandas = New DataTable
+            dgvTandas.DataSource = dt_tandas
+            dgvTandas.Columns.Add("TInicio", "Inicio")
+            dgvTandas.Columns.Add("TFinal", "Final")
+        End If
+        BWPublicidades.RunWorkerAsync()
+    End Sub
+
+    Private Sub dtpTanda_ValueChanged(sender As Object, e As EventArgs) Handles dtpTanda.ValueChanged
+        BWPublicidades.RunWorkerAsync()
+    End Sub
+
+    Private Sub dgvTandas_Click(sender As Object, e As EventArgs) Handles dgvTandas.Click
+        If BWPublicidades.IsBusy Then
+            BWPublicidades.RunWorkerAsync()
+        End If
     End Sub
 End Class

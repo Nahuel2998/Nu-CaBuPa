@@ -64,7 +64,9 @@ create table Publicidad
 create table PMuestraPubli 
 	(ID_Publicidad int(6) unsigned not null,
 	ID_Programa int(6) unsigned not null,
+	Fecha_Inicio date not null,
 	Fecha_Finalizacion date,
+	primary key(Fecha_Inicio,ID_Programa,ID_Publicidad),
 	foreign key (ID_Programa ) references Programa(ID_Programa),
 	foreign key (ID_Publicidad ) references Publicidad(ID_Publicidad)
 	);
@@ -80,8 +82,10 @@ create table PublicidadCuota
 
 create table Tanda
 	(
-	Hora_Inicio time not null primary key,
-	Hora_Fin time not null
+	Fecha Date not null,
+	Hora_Inicio time not null,
+	Hora_Fin time not null,
+	Primary key (Fecha, Hora_Inicio)
 	);
 create table AparecePubli
 	(
@@ -89,7 +93,7 @@ create table AparecePubli
 	Hora_Inicio time not null,
 	Fecha_Inicio date not null,
 	Fecha_Finalizacion date,
-	primary key(ID_Publicidad,Hora_Inicio),
+	primary key(ID_Publicidad,Hora_Inicio, Fecha_Inicio),
 	foreign key (ID_Publicidad ) references Publicidad(ID_Publicidad),
 	foreign key (Hora_Inicio ) references Tanda(Hora_Inicio)
 	);
@@ -157,7 +161,7 @@ create table FunTrabaja
 	foreign key (ID_Funcionario ) references Funcionario(ID_Funcionario),
 	foreign key (ID_Funcion ) references Funcion(ID_Funcion),
 	foreign key (ID_Programa ) references Programa(ID_Programa),
-	PRIMARY KEY(ID_Funcionario, ID_Funcion, ID_Programa)
+	PRIMARY KEY(ID_Funcionario, ID_Funcion, ID_Programa, Fecha_Inicio)
 	);
 	
   
