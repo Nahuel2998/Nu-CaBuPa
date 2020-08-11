@@ -67,7 +67,7 @@ Public Class frmPrincipal
         Dim colores As Color = dgvPrograma.DefaultCellStyle.ForeColor
         Dim colorNuevo As Color
         Dim Activo As Integer = -1
-        If (Now.Date >= dtp.Value.Date) Then
+        If (Now.Date >= dtp.Value.Date) And dgvPrograma.Rows.Count > 0 Then
             For i As Integer = 0 To dgvPrograma.Rows.Count - 1
                 inicio = TimeSpan.Parse(dgvPrograma.Rows(i).Cells(0).Value())
                 fin = TimeSpan.Parse(dgvPrograma.Rows(i).Cells(1).Value())
