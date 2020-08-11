@@ -72,6 +72,10 @@ Partial Class frmPrincipal
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
+        Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Programa = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBFuncionarios = New System.Windows.Forms.GroupBox()
         Me.tlpProgramas = New System.Windows.Forms.TableLayoutPanel()
         Me.GBPubli = New System.Windows.Forms.GroupBox()
@@ -111,10 +115,6 @@ Partial Class frmPrincipal
         Me.BWEventos = New System.ComponentModel.BackgroundWorker()
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
-        Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Programa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -475,6 +475,30 @@ Partial Class frmPrincipal
         Me.dgvPrograma.RowTemplate.ReadOnly = True
         Me.dgvPrograma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
+        'Inicio
+        '
+        resources.ApplyResources(Me.Inicio, "Inicio")
+        Me.Inicio.Name = "Inicio"
+        Me.Inicio.ReadOnly = True
+        '
+        'Final
+        '
+        resources.ApplyResources(Me.Final, "Final")
+        Me.Final.Name = "Final"
+        Me.Final.ReadOnly = True
+        '
+        'Programa
+        '
+        resources.ApplyResources(Me.Programa, "Programa")
+        Me.Programa.Name = "Programa"
+        Me.Programa.ReadOnly = True
+        '
+        'PEstado
+        '
+        resources.ApplyResources(Me.PEstado, "PEstado")
+        Me.PEstado.Name = "PEstado"
+        Me.PEstado.ReadOnly = True
+        '
         'GBFuncionarios
         '
         resources.ApplyResources(Me.GBFuncionarios, "GBFuncionarios")
@@ -794,30 +818,6 @@ Partial Class frmPrincipal
         '
         'BWPublicidades
         '
-        '
-        'Inicio
-        '
-        resources.ApplyResources(Me.Inicio, "Inicio")
-        Me.Inicio.Name = "Inicio"
-        Me.Inicio.ReadOnly = True
-        '
-        'Final
-        '
-        resources.ApplyResources(Me.Final, "Final")
-        Me.Final.Name = "Final"
-        Me.Final.ReadOnly = True
-        '
-        'Programa
-        '
-        resources.ApplyResources(Me.Programa, "Programa")
-        Me.Programa.Name = "Programa"
-        Me.Programa.ReadOnly = True
-        '
-        'PEstado
-        '
-        resources.ApplyResources(Me.PEstado, "PEstado")
-        Me.PEstado.Name = "PEstado"
-        Me.PEstado.ReadOnly = True
         '
         'frmPrincipal
         '

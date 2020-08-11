@@ -10,6 +10,7 @@ Public Class frmPrincipal
     Private dt_publi As DataTable
     Private dt_Ppubli As DataTable
     Private DescripcionP As String
+    Private PNombre As String = "Datos del programa"
     Private Sub frmPrincipal_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         ModConector.desconectar()
         End
@@ -71,9 +72,9 @@ Public Class frmPrincipal
         Dim Activo As Integer = -1
         If (Now.Date >= dtp.Value.Date) And dgvPrograma.Rows.Count > 0 Then
             For i As Integer = 0 To dgvPrograma.Rows.Count - 1
-
-                inicio = TimeSpan.Parse(dgvPrograma.Rows(i).Cells(0).Value().ToString)
-                fin = TimeSpan.Parse(dgvPrograma.Rows(i).Cells(1).Value().ToString)
+                If Not (TimeSpan.TryParse(dgvPrograma.Rows(i).Cells(0).Value().ToString, inicio) And TimeSpan.TryParse(dgvPrograma.Rows(i).Cells(1).Value().ToString, fin)) Then
+                    Exit Sub
+                End If
                 If (inicio < Now.TimeOfDay Or Now.Date > dtp.Value.Date) Then
                     If (Now.TimeOfDay < fin And Now.Date = dtp.Value.Date) Then
                         colorNuevo = Color.FromArgb(245, 94, 94)
@@ -101,7 +102,6 @@ Public Class frmPrincipal
                 dgvPrograma.Rows(i).Cells(dgvPrograma.Rows(i).Cells.Count - 1).Value = "Proximo"
             Next
         End If
-
     End Sub
     Private Sub BWNumberOne_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWProgramas.RunWorkerCompleted
         ActualizarProgramas()
@@ -138,15 +138,17 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWDPRogramas_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWDPRogramas.DoWork
-        If (dgvPrograma.Rows.Count > 0) Then
+        If (dgvPrograma.Rows.Count > 0) And dgvPrograma.SelectedRows.Count > 0 Then
             Dim idRow As Integer = dgvPrograma.SelectedRows(0).Index
             If (idRow >= 0) And Not IsNothing(dt_programa) Then
                 Dim id As Integer = CInt(dt_programa.Rows(idRow)(0).ToString)
                 dt_dprograma = ModConector.AFPrograma(id)
                 DescripcionP = ModConector.ADPrograma(id)
                 dt_Ppubli = ModConector.APPublicidad(dtp.Value.Date, id)
+                PNombre = "Datos del programa : " + dt_programa.Rows(idRow)(3).ToString
             End If
         Else
+            PNombre = "Datos del programa"
             dt_Ppubli = Nothing
             dt_dprograma = Nothing
         End If
@@ -163,12 +165,15 @@ Public Class frmPrincipal
         End If
         If IsNothing(dt_Ppubli) Then
             dt_Ppubli = New DataTable
-            dgvPPublicidades.Columns.Add("PPDescripcion", "Descripcion")
+            dgvPPublicidades.Columns.Add("PPTema", "Tema")
         End If
+        GBFuncionarios.Text = PNombre
         dgvFuncionarios.DataSource = dt_dprograma
         TBDescripcion.Text = DescripcionP
         dgvPPublicidades.DataSource = dt_Ppubli
+        dgvFuncionarios.ClearSelection()
         dgvPPublicidades.ClearSelection()
+        dgvPrograma.ClearSelection()
     End Sub
     Public Sub Funcionarios()
         If Not (BWDPRogramas.IsBusy) Then
@@ -194,7 +199,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWPublicidades_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWPublicidades.DoWork
-        If (dgvTandas.Rows.Count > 0) Then
+        If dgvTandas.Rows.Count > 0 And dgvTandas.SelectedRows.Count > 0 Then
             Dim Hora As TimeSpan = TimeSpan.Parse(dgvTandas.SelectedRows(0).Cells(0).Value)
             If Not IsNothing(dt_tandas) Then
                 dt_publi = ModConector.APublicidad(dtpTanda.Value.Date, Hora)
@@ -208,7 +213,7 @@ Public Class frmPrincipal
         dgvPublicidades.Columns.Clear()
         If IsNothing(dt_publi) Then
             dt_publi = New DataTable
-            dgvPublicidades.Columns.Add("PDescripcion", "Descripcion")
+            dgvPublicidades.Columns.Add("PTema", "Tema")
         End If
         dgvPublicidades.DataSource = dt_publi
         dgvPublicidades.ClearSelection()
