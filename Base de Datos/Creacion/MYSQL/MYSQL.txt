@@ -22,7 +22,7 @@ CREATE TABLE UsTieneAcceso (
 create table Programa
 	(
 	ID_Programa int(6) unsigned auto_increment not null primary key,
-	Nombre_Programa varchar(24) not null,
+	Nombre_Programa varchar(48) not null,
 	Descripcion varchar(128),
 	Fecha_Finalizacion datetime
 	);
@@ -49,7 +49,7 @@ create table ProgramaCuota
 create table Empresa
 	(
 	ID_Empresa int(6) unsigned auto_increment not null primary key,
-	Nombre varchar(32) not null,
+	Nombre varchar(64) not null,
 	Telefono int(9) unsigned
 	);
 
@@ -169,7 +169,7 @@ create table Video
 	(
 	ID_Video INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	contenido VARCHAR(128) NOT NULL,
-	nombre VARCHAR(32) NOT NULL,
+	nombre VARCHAR(48) NOT NULL,
 	ID_Serie INT(6) unsigned,
 	foreign key (ID_Serie ) references Serie(ID_Serie),
 	fecha DATETIME
@@ -179,7 +179,7 @@ create table Serie
 	(
 	ID_Serie INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	fecha_finalizacion DATE,
-	nombre VARCHAR(32) NOT NULL
+	nombre VARCHAR(48) NOT NULL
 	);
 	
 create table EventoEsDeV
