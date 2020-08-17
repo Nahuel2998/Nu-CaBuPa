@@ -3,12 +3,12 @@ use JVRPDATABASE;
 
 CREATE TABLE usuarios (
   id_usuario int(6) unsigned auto_increment not null primary key,
-  nombre varchar(64) NOT NULL,
+  nombre varchar(16) NOT NULL,
   contrasena varbinary(256) NOT NULL
 );
 CREATE TABLE acceso (
   id_acceso int(6) unsigned auto_increment not null primary key,
-  seccion varchar(64) NOT NULL,
+  seccion varchar(8) NOT NULL,
 	tipo varchar(2) not null
 );
 CREATE TABLE UsTieneAcceso (
@@ -22,8 +22,8 @@ CREATE TABLE UsTieneAcceso (
 create table Programa
 	(
 	ID_Programa int(6) unsigned auto_increment not null primary key,
-	Nombre_Programa varchar(64) not null,
-	Descripcion varchar(256),
+	Nombre_Programa varchar(24) not null,
+	Descripcion varchar(128),
 	Fecha_Finalizacion datetime
 	);
 
@@ -49,14 +49,14 @@ create table ProgramaCuota
 create table Empresa
 	(
 	ID_Empresa int(6) unsigned auto_increment not null primary key,
-	Nombre varchar(64) not null,
+	Nombre varchar(32) not null,
 	Telefono int(9) unsigned
 	);
 
 create table Publicidad
 	(
 	ID_Publicidad int(6) unsigned auto_increment not null primary key,
-	Tema varchar(256) not null,
+	Tema varchar(64) not null,
 	ID_Empresa int(6) unsigned not null,
 	foreign key (ID_Empresa ) references Empresa(ID_Empresa)
 	);
@@ -101,8 +101,8 @@ create table AparecePubli
 create table Evento
 	(
 	ID_Evento INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	nombre VARCHAR(64) NOT NULL,
-	descripcion VARCHAR(256) NOT NULL
+	nombre VARCHAR(32) NOT NULL,
+	descripcion VARCHAR(128) NOT NULL
 	);
 	
 create table FechaEvento
@@ -131,14 +131,14 @@ create table EventoEsDeP
 create table Funcionario
 	(
 	ID_Funcionario INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	telefono INT(9) NOT NULL,
-	nombre VARCHAR(64) NOT NULL
+	telefono INT(9) unsigned NOT NULL,
+	nombre VARCHAR(48) NOT NULL
 	);
 	
 create table Funcion
 	(
 	ID_Funcion INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	descripcion VARCHAR(256) NOT NULL
+	descripcion VARCHAR(128) NOT NULL
 	);
 	
 create table TrabajaComo
@@ -168,8 +168,8 @@ create table FunTrabaja
 create table Video
 	(
 	ID_Video INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	contenido VARCHAR(256) NOT NULL,
-	nombre VARCHAR(64) NOT NULL,
+	contenido VARCHAR(128) NOT NULL,
+	nombre VARCHAR(32) NOT NULL,
 	ID_Serie INT(6) unsigned,
 	foreign key (ID_Serie ) references Serie(ID_Serie),
 	fecha DATETIME
@@ -179,7 +179,7 @@ create table Serie
 	(
 	ID_Serie INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	fecha_finalizacion DATE,
-	nombre VARCHAR(64) NOT NULL
+	nombre VARCHAR(32) NOT NULL
 	);
 	
 create table EventoEsDeV

@@ -47,7 +47,7 @@ Funcionario:	{*ID_Funcionario*, Telefono, Nombre}
 Funcion:	{*ID_Funcion*, Descripcion}
 TrabajaComo:	{*ID_Funcionario, ID_Funcion*}
 
-FunTrabaja:	{*ID_Funcionario, ID_Funcion, ID_Programa*, *Fecha_Inicio*, Fecha_Finalizacion}
+FunTrabaja:	{*ID_Funcionario, *ID_Funcion*, ID_Programa*, *Fecha_Inicio*, Fecha_Finalizacion}
 
 - - - -
 
