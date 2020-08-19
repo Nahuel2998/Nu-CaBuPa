@@ -129,11 +129,9 @@ Module ModConector
     End Function
     Public Function ESQLSelect(ByVal sql As String) As DataTable
         Dim dt As New DataTable
-
         Dim sqladapter As MySqlDataAdapter
         Dim conT = New MySqlConnection(connStr)
         conT.OpenAsync()
-
         Try
             objCmd = New MySqlCommand(sql, conT)
             objCmd.Prepare()

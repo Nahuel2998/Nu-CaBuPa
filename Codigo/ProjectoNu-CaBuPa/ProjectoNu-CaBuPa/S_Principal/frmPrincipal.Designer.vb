@@ -99,12 +99,12 @@ Partial Class frmPrincipal
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.tbnombre = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.tbcontenido = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dtpvfecha = New System.Windows.Forms.DateTimePicker()
         Me.limpiar = New System.Windows.Forms.Button()
         Me.buscar = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -742,12 +742,6 @@ Partial Class frmPrincipal
         resources.ApplyResources(Me.tbnombre, "tbnombre")
         Me.tbnombre.Name = "tbnombre"
         '
-        'Label3
-        '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Name = "Label3"
-        '
         'tbcontenido
         '
         resources.ApplyResources(Me.tbcontenido, "tbcontenido")
@@ -778,6 +772,12 @@ Partial Class frmPrincipal
         Me.buscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.buscar.Name = "buscar"
         Me.buscar.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Name = "Label3"
         '
         'TabPage1
         '
