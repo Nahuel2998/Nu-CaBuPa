@@ -198,9 +198,6 @@ Public Class frmPrincipal
         ActualizarEvento()
     End Sub
 
-    Private Sub dgvPrograma_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellContentClick
-
-    End Sub
 
     Private Sub BWPublicidades_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWPublicidades.DoWork
         If dgvTandas.Rows.Count > 0 And dgvTandas.SelectedRows.Count > 0 Then
@@ -225,9 +222,9 @@ Public Class frmPrincipal
 
     Private Sub BWTandas_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWTandas.DoWork
         dt_tandas = ModConector.ATandas()
-    End Sub
 
-    Private Sub BWTandas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWTandas.RunWorkerCompleted
+    End Sub
+    Public Sub Tandas()
         dgvTandas.Columns.Clear()
         If Not IsNothing(dt_tandas) Then
             dgvTandas.DataSource = dt_tandas
@@ -237,11 +234,16 @@ Public Class frmPrincipal
             dgvTandas.Columns.Add("TInicio", "Inicio")
             dgvTandas.Columns.Add("TFinal", "Final")
         End If
+    End Sub
+    Private Sub BWTandas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWTandas.RunWorkerCompleted
+        Tandas()
         BWPublicidades.RunWorkerAsync()
     End Sub
 
     Private Sub dtpTanda_ValueChanged(sender As Object, e As EventArgs) Handles dtpTanda.ValueChanged
-        BWPublicidades.RunWorkerAsync()
+        If Not BWTandas.IsBusy Then
+            BWPublicidades.RunWorkerAsync()
+        End If
     End Sub
 
     Private Sub dgvTandas_Click(sender As Object, e As EventArgs) Handles dgvTandas.Click

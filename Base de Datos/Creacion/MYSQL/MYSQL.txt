@@ -40,7 +40,7 @@ create table ProgramaCuota
 	ID_Programa_Cuota int(6) unsigned not null,
 	ID_Programa int(6) unsigned not null,
 	Fecha_Pago date,
-	Precio int(5) unsigned not null,
+	Precio decimal(5,2) unsigned not null,
 	Fecha_Emision date not null,
 	primary key(ID_Programa_Cuota),
 	foreign key (ID_Programa ) references Programa(ID_Programa)

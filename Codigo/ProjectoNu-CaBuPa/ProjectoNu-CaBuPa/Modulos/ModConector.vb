@@ -132,19 +132,18 @@ Module ModConector
 
         Dim sqladapter As MySqlDataAdapter
         Dim conT = New MySqlConnection(connStr)
-        conT.Open()
+        conT.OpenAsync()
 
         Try
-            objCmd = New MySqlCommand(sql, conn)
+            objCmd = New MySqlCommand(sql, conT)
             objCmd.Prepare()
             sqladapter = New MySqlDataAdapter(objCmd)
-            sqladapter.Fill(dt)
-            ds.Tables.Add(dt)
+            sqladapter.FillAsync(dt)
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
             Return Nothing
         End Try
-        conT.Close()
+        conT.CloseAsync()
         Return dt
     End Function
     Public Function ESQLSelect(ByVal objCmd As MySqlCommand, ByVal guardar As Boolean) As DataTable
@@ -163,6 +162,7 @@ Module ModConector
             MessageBox.Show(ex.ToString)
             Return Nothing
         End Try
+        sqladapter.Dispose()
         Return dt
     End Function
 #End Region
@@ -232,13 +232,8 @@ Module ModConector
 #End Region
 #Region "Main"
     Public Function DevolverTabla(ByVal Datos As String) As DataTable
-        Dim conT = New MySqlConnection(connStr)
-        conT.Open()
         Try
-            objCmd = New MySqlCommand(Datos, conT)
-            objCmd.Prepare()
-            Dim dt As DataTable = ESQLSelect(objCmd, True)
-            conT.Close()
+            Dim dt As DataTable = ESQLSelect(Datos)
 
             If Not IsNothing(dt) Then
                 If Not dt.Rows.Count = 0 Then
@@ -246,7 +241,6 @@ Module ModConector
                 End If
             End If
         Catch e As Exception
-            conT.Close()
             MessageBox.Show(e.ToString)
         End Try
         Return Nothing
