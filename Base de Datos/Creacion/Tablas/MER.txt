@@ -19,7 +19,7 @@ PublicidadCuota: {*ID_Publicidad_Cuota*, Fecha_Pago,Fecha_Emision, Precio, ID_Pu
 
 ---
 
-Empresa:	{*ID_Empresa*, Nombre, Telefono}
+Empresa:	{*ID_Empresa*, Nombre, Telefono, Mail}
 
 ---
 
@@ -40,7 +40,7 @@ FechaEvento:	{*ID_Evento, Fecha*}
 EventoMuestraPubli: {*ID_Evento*, *ID_Publicidad*}
 EventoEsDeP:	{*ID_Programa*,*ID_Evento*}
 ---
-Funcionario:	{*ID_Funcionario*, Telefono, Nombre}
+Funcionario:	{*ID_Funcionario*, Telefono, Nombre, Mail}
 
 ---
 

@@ -26,7 +26,7 @@ DROP TABLE IF EXISTS `acceso`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `acceso` (
   `id_acceso` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `seccion` varchar(64) NOT NULL,
+  `seccion` varchar(8) NOT NULL,
   `tipo` varchar(2) NOT NULL,
   PRIMARY KEY (`id_acceso`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -79,7 +79,8 @@ DROP TABLE IF EXISTS `empresa`;
 CREATE TABLE `empresa` (
   `ID_Empresa` int(6) unsigned NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(64) NOT NULL,
-  `Telefono` int(9) unsigned DEFAULT NULL,
+  `Telefono` varchar(16) DEFAULT NULL,
+  `Mail` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`ID_Empresa`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -90,7 +91,7 @@ CREATE TABLE `empresa` (
 
 LOCK TABLES `empresa` WRITE;
 /*!40000 ALTER TABLE `empresa` DISABLE KEYS */;
-INSERT INTO `empresa` VALUES (1,'Mil',113),(2,'DosMil',45);
+INSERT INTO `empresa` VALUES (1,'Mil','113',NULL),(2,'DosMil','45',NULL);
 /*!40000 ALTER TABLE `empresa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -103,8 +104,8 @@ DROP TABLE IF EXISTS `evento`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `evento` (
   `ID_Evento` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(64) NOT NULL,
-  `descripcion` varchar(256) NOT NULL,
+  `nombre` varchar(32) NOT NULL,
+  `descripcion` varchar(128) NOT NULL,
   PRIMARY KEY (`ID_Evento`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -251,7 +252,7 @@ DROP TABLE IF EXISTS `funcion`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `funcion` (
   `ID_Funcion` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `descripcion` varchar(256) NOT NULL,
+  `descripcion` varchar(128) NOT NULL,
   PRIMARY KEY (`ID_Funcion`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -275,8 +276,9 @@ DROP TABLE IF EXISTS `funcionario`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `funcionario` (
   `ID_Funcionario` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `telefono` int(9) NOT NULL,
-  `nombre` varchar(64) NOT NULL,
+  `Telefono` varchar(16) DEFAULT NULL,
+  `nombre` varchar(48) NOT NULL,
+  `Mail` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`ID_Funcionario`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -287,7 +289,7 @@ CREATE TABLE `funcionario` (
 
 LOCK TABLES `funcionario` WRITE;
 /*!40000 ALTER TABLE `funcionario` DISABLE KEYS */;
-INSERT INTO `funcionario` VALUES (1,34244,'Manuel'),(2,34244,'Mili'),(3,9483948,'Mateo'),(4,2998,'Nahuel');
+INSERT INTO `funcionario` VALUES (1,'34244','Manuel',NULL),(2,'34244','Mili',NULL),(3,'9483948','Mateo',NULL),(4,'2998','Nahuel',NULL);
 /*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -357,8 +359,8 @@ DROP TABLE IF EXISTS `programa`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `programa` (
   `ID_Programa` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `Nombre_Programa` varchar(64) NOT NULL,
-  `Descripcion` varchar(256) DEFAULT NULL,
+  `Nombre_Programa` varchar(48) NOT NULL,
+  `Descripcion` varchar(128) DEFAULT NULL,
   `Fecha_Finalizacion` datetime DEFAULT NULL,
   PRIMARY KEY (`ID_Programa`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -370,7 +372,7 @@ CREATE TABLE `programa` (
 
 LOCK TABLES `programa` WRITE;
 /*!40000 ALTER TABLE `programa` DISABLE KEYS */;
-INSERT INTO `programa` VALUES (1,'lol',NULL,NULL),(2,'A es una vocal',NULL,'0000-00-00 00:00:00'),(3,'Meles program',NULL,'0000-00-00 00:00:00'),(4,'Relleno con Mateo',NULL,'0000-00-00 00:00:00'),(5,'Proof or report Manuel',NULL,NULL);
+INSERT INTO `programa` VALUES (1,'lol','The best',NULL),(2,'A es una vocal','The best program','0000-00-00 00:00:00'),(3,'Meles program','The program','0000-00-00 00:00:00'),(4,'Relleno con Mateo','The','0000-00-00 00:00:00'),(5,'Proof or report Manuel','The',NULL);
 /*!40000 ALTER TABLE `programa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -385,7 +387,7 @@ CREATE TABLE `programacuota` (
   `ID_Programa_Cuota` int(6) unsigned NOT NULL,
   `ID_Programa` int(6) unsigned NOT NULL,
   `Fecha_Pago` date DEFAULT NULL,
-  `Precio` int(5) unsigned NOT NULL,
+  `Precio` decimal(5,2) unsigned NOT NULL,
   `Fecha_Emision` date NOT NULL,
   PRIMARY KEY (`ID_Programa_Cuota`),
   KEY `ID_Programa` (`ID_Programa`)
@@ -410,7 +412,7 @@ DROP TABLE IF EXISTS `publicidad`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publicidad` (
   `ID_Publicidad` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `Tema` varchar(256) NOT NULL,
+  `Tema` varchar(64) NOT NULL,
   `ID_Empresa` int(6) unsigned NOT NULL,
   PRIMARY KEY (`ID_Publicidad`),
   KEY `ID_Empresa` (`ID_Empresa`)
@@ -463,7 +465,7 @@ DROP TABLE IF EXISTS `serie`;
 CREATE TABLE `serie` (
   `ID_Serie` int(6) unsigned NOT NULL AUTO_INCREMENT,
   `fecha_finalizacion` date DEFAULT NULL,
-  `nombre` varchar(64) NOT NULL,
+  `nombre` varchar(48) NOT NULL,
   PRIMARY KEY (`ID_Serie`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -558,7 +560,7 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
   `id_usuario` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(64) NOT NULL,
+  `nombre` varchar(16) NOT NULL,
   `contrasena` varbinary(256) NOT NULL,
   PRIMARY KEY (`id_usuario`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -583,8 +585,8 @@ DROP TABLE IF EXISTS `video`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `video` (
   `ID_Video` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `contenido` varchar(256) NOT NULL,
-  `nombre` varchar(64) NOT NULL,
+  `contenido` varchar(128) NOT NULL,
+  `nombre` varchar(48) NOT NULL,
   `ID_Serie` int(6) unsigned DEFAULT NULL,
   `fecha` datetime DEFAULT NULL,
   PRIMARY KEY (`ID_Video`),
@@ -610,4 +612,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-11 18:42:34
+-- Dump completed on 2020-08-25 11:39:35

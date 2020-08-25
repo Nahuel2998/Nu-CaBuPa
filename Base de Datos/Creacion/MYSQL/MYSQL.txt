@@ -50,7 +50,8 @@ create table Empresa
 	(
 	ID_Empresa int(6) unsigned auto_increment not null primary key,
 	Nombre varchar(64) not null,
-	Telefono int(9) unsigned
+	Telefono varchar(16),
+	Mail varchar(64)
 	);
 
 create table Publicidad
@@ -131,8 +132,9 @@ create table EventoEsDeP
 create table Funcionario
 	(
 	ID_Funcionario INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	telefono INT(9) unsigned NOT NULL,
-	nombre VARCHAR(48) NOT NULL
+	Telefono varchar(16),
+	nombre VARCHAR(48) NOT NULL,
+	Mail varchar(64)
 	);
 	
 create table Funcion
