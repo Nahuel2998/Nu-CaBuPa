@@ -94,17 +94,6 @@ Partial Class frmPrincipal
         Me.Vídeo = New System.Windows.Forms.GroupBox()
         Me.dgvvideos = New System.Windows.Forms.DataGridView()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.dtpfechaserie = New System.Windows.Forms.DateTimePicker()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.tbnombre = New System.Windows.Forms.TextBox()
-        Me.tbcontenido = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.dtpvfecha = New System.Windows.Forms.DateTimePicker()
-        Me.limpiar = New System.Windows.Forms.Button()
-        Me.buscar = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -118,6 +107,15 @@ Partial Class frmPrincipal
         Me.BWEventos = New System.ComponentModel.BackgroundWorker()
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
+        Me.txbVContenido = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txbVNombre = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.tbpBV = New System.Windows.Forms.TableLayoutPanel()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -149,12 +147,15 @@ Partial Class frmPrincipal
         Me.Vídeo.SuspendLayout()
         CType(Me.dgvvideos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pStatus.SuspendLayout()
         Me.pCMain.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.tbpBV.SuspendLayout()
         Me.SuspendLayout()
         '
         'pMain
@@ -208,7 +209,7 @@ Partial Class frmPrincipal
         Me.dgvEventos.BackgroundColor = System.Drawing.Color.Black
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
@@ -218,7 +219,7 @@ Partial Class frmPrincipal
         Me.dgvEventos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EFecha, Me.ENombre})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Aquamarine
@@ -293,7 +294,7 @@ Partial Class frmPrincipal
         Me.dgvPublicidades.BackgroundColor = System.Drawing.Color.Black
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle6.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
@@ -303,7 +304,7 @@ Partial Class frmPrincipal
         Me.dgvPublicidades.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PDescripcion})
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Black
         DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Aquamarine
@@ -357,7 +358,7 @@ Partial Class frmPrincipal
         Me.dgvTandas.BackgroundColor = System.Drawing.Color.Black
         DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle10.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
         DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
@@ -367,7 +368,7 @@ Partial Class frmPrincipal
         Me.dgvTandas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Black
         DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Aquamarine
@@ -453,7 +454,7 @@ Partial Class frmPrincipal
         Me.dgvPrograma.BackgroundColor = System.Drawing.Color.Black
         DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle14.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
         DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
@@ -463,7 +464,7 @@ Partial Class frmPrincipal
         Me.dgvPrograma.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Inicio, Me.Final, Me.Programa, Me.PEstado})
         DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Black
         DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Aquamarine
@@ -544,7 +545,7 @@ Partial Class frmPrincipal
         Me.dgvPPublicidades.BackgroundColor = System.Drawing.Color.Black
         DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle18.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
         DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
@@ -554,7 +555,7 @@ Partial Class frmPrincipal
         Me.dgvPPublicidades.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3})
         DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Black
         DataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Aquamarine
@@ -602,7 +603,7 @@ Partial Class frmPrincipal
         Me.dgvFuncionarios.BackgroundColor = System.Drawing.Color.Black
         DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle22.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
         DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(80, Byte), Integer))
@@ -612,7 +613,7 @@ Partial Class frmPrincipal
         Me.dgvFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FNombre, Me.Telefono})
         DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Corbel", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Rockwell", 10.0!)
         DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Black
         DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Aquamarine
@@ -680,8 +681,8 @@ Partial Class frmPrincipal
         'TLPmultimedia
         '
         resources.ApplyResources(Me.TLPmultimedia, "TLPmultimedia")
-        Me.TLPmultimedia.Controls.Add(Me.Vídeo, 1, 0)
         Me.TLPmultimedia.Controls.Add(Me.GroupBox4, 0, 0)
+        Me.TLPmultimedia.Controls.Add(Me.Vídeo, 0, 1)
         Me.TLPmultimedia.Name = "TLPmultimedia"
         '
         'Vídeo
@@ -703,81 +704,6 @@ Partial Class frmPrincipal
         Me.GroupBox4.Controls.Add(Me.TableLayoutPanel3)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.TabStop = False
-        '
-        'TableLayoutPanel3
-        '
-        resources.ApplyResources(Me.TableLayoutPanel3, "TableLayoutPanel3")
-        Me.TableLayoutPanel3.Controls.Add(Me.dtpfechaserie, 1, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label6, 0, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label5, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.tbnombre, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.tbcontenido, 1, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label4, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.dtpvfecha, 1, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.limpiar, 0, 4)
-        Me.TableLayoutPanel3.Controls.Add(Me.buscar, 1, 4)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label3, 0, 2)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        '
-        'dtpfechaserie
-        '
-        resources.ApplyResources(Me.dtpfechaserie, "dtpfechaserie")
-        Me.dtpfechaserie.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpfechaserie.Name = "dtpfechaserie"
-        '
-        'Label6
-        '
-        resources.ApplyResources(Me.Label6, "Label6")
-        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label6.Name = "Label6"
-        '
-        'Label5
-        '
-        resources.ApplyResources(Me.Label5, "Label5")
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label5.Name = "Label5"
-        '
-        'tbnombre
-        '
-        resources.ApplyResources(Me.tbnombre, "tbnombre")
-        Me.tbnombre.Name = "tbnombre"
-        '
-        'tbcontenido
-        '
-        resources.ApplyResources(Me.tbcontenido, "tbcontenido")
-        Me.tbcontenido.Name = "tbcontenido"
-        '
-        'Label4
-        '
-        resources.ApplyResources(Me.Label4, "Label4")
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Name = "Label4"
-        '
-        'dtpvfecha
-        '
-        resources.ApplyResources(Me.dtpvfecha, "dtpvfecha")
-        Me.dtpvfecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpvfecha.Name = "dtpvfecha"
-        '
-        'limpiar
-        '
-        resources.ApplyResources(Me.limpiar, "limpiar")
-        Me.limpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.limpiar.Name = "limpiar"
-        Me.limpiar.UseVisualStyleBackColor = True
-        '
-        'buscar
-        '
-        resources.ApplyResources(Me.buscar, "buscar")
-        Me.buscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.buscar.Name = "buscar"
-        Me.buscar.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Name = "Label3"
         '
         'TabPage1
         '
@@ -849,6 +775,61 @@ Partial Class frmPrincipal
         'BWPublicidades
         '
         '
+        'txbVContenido
+        '
+        resources.ApplyResources(Me.txbVContenido, "txbVContenido")
+        Me.txbVContenido.Name = "txbVContenido"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.Name = "Label3"
+        '
+        'txbVNombre
+        '
+        resources.ApplyResources(Me.txbVNombre, "txbVNombre")
+        Me.txbVNombre.Name = "txbVNombre"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        resources.ApplyResources(Me.DateTimePicker1, "DateTimePicker1")
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        '
+        'Label6
+        '
+        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.Name = "Label6"
+        '
+        'GroupBox6
+        '
+        resources.ApplyResources(Me.GroupBox6, "GroupBox6")
+        Me.GroupBox6.Controls.Add(Me.txbVContenido)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.TabStop = False
+        '
+        'TableLayoutPanel3
+        '
+        resources.ApplyResources(Me.TableLayoutPanel3, "TableLayoutPanel3")
+        Me.TableLayoutPanel3.Controls.Add(Me.GroupBox6, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.Panel1, 0, 0)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        '
+        'Panel1
+        '
+        resources.ApplyResources(Me.Panel1, "Panel1")
+        Me.Panel1.Controls.Add(Me.tbpBV)
+        Me.Panel1.Name = "Panel1"
+        '
+        'tbpBV
+        '
+        resources.ApplyResources(Me.tbpBV, "tbpBV")
+        Me.tbpBV.Controls.Add(Me.DateTimePicker1, 3, 0)
+        Me.tbpBV.Controls.Add(Me.txbVNombre, 1, 0)
+        Me.tbpBV.Controls.Add(Me.Label3, 0, 0)
+        Me.tbpBV.Controls.Add(Me.Label6, 2, 0)
+        Me.tbpBV.Name = "tbpBV"
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -890,14 +871,18 @@ Partial Class frmPrincipal
         Me.Vídeo.ResumeLayout(False)
         CType(Me.dgvvideos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
-        Me.TableLayoutPanel3.ResumeLayout(False)
-        Me.TableLayoutPanel3.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pStatus.ResumeLayout(False)
         Me.pCMain.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.tbpBV.ResumeLayout(False)
+        Me.tbpBV.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -913,7 +898,6 @@ Partial Class frmPrincipal
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GBFuncionarios As GroupBox
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents BWProgramas As System.ComponentModel.BackgroundWorker
     Friend WithEvents lblStatus As Label
     Friend WithEvents gbTandas As GroupBox
@@ -963,14 +947,13 @@ Partial Class frmPrincipal
     Friend WithEvents Label2 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents tbnombre As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents tbcontenido As TextBox
-    Friend WithEvents dtpvfecha As DateTimePicker
-    Friend WithEvents dtpfechaserie As DateTimePicker
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents txbVContenido As TextBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents txbVNombre As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents buscar As Button
-    Friend WithEvents limpiar As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents tbpBV As TableLayoutPanel
 End Class
