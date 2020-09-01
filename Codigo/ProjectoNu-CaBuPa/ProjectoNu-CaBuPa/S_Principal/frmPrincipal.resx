@@ -1057,7 +1057,7 @@
     <value>True</value>
   </data>
   <data name="txbVContenido.Size" type="System.Drawing.Size, System.Drawing">
-    <value>498, 78</value>
+    <value>498, 79</value>
   </data>
   <data name="txbVContenido.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -1084,7 +1084,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="GroupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>514, 107</value>
+    <value>514, 108</value>
   </data>
   <data name="GroupBox6.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -1300,7 +1300,7 @@
     <value>2</value>
   </data>
   <data name="TableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>520, 172</value>
+    <value>520, 173</value>
   </data>
   <data name="TableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -1330,7 +1330,7 @@
     <value>5, 4, 5, 4</value>
   </data>
   <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>538, 194</value>
+    <value>538, 195</value>
   </data>
   <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1366,7 +1366,7 @@
     <value>51</value>
   </data>
   <data name="dgvvideos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>526, 74</value>
+    <value>526, 75</value>
   </data>
   <data name="dgvvideos.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1384,7 +1384,7 @@
     <value>0</value>
   </data>
   <data name="Vídeo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 206</value>
+    <value>5, 207</value>
   </data>
   <data name="Vídeo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>
@@ -1393,7 +1393,7 @@
     <value>5, 4, 5, 4</value>
   </data>
   <data name="Vídeo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>538, 109</value>
+    <value>538, 110</value>
   </data>
   <data name="Vídeo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1423,7 +1423,7 @@
     <value>2</value>
   </data>
   <data name="TLPmultimedia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 319</value>
+    <value>548, 321</value>
   </data>
   <data name="TLPmultimedia.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1555,7 +1555,7 @@
     <value>51</value>
   </data>
   <data name="DataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>424, 317</value>
+    <value>424, 319</value>
   </data>
   <data name="DataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1582,7 +1582,7 @@
     <value>5, 4, 5, 4</value>
   </data>
   <data name="GroupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 464</value>
+    <value>435, 466</value>
   </data>
   <data name="GroupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4285,9 +4285,6 @@
         DjgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>
   </data>
@@ -4313,6 +4310,18 @@
     <value>PDescripcion</value>
   </data>
   <data name="&gt;&gt;PDescripcion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>DataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>DataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn2.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Inicio.Name" xml:space="preserve">
@@ -4386,18 +4395,6 @@
   </data>
   <data name="&gt;&gt;BWPublicidades.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn2.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn2</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn1</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmPrincipal</value>
