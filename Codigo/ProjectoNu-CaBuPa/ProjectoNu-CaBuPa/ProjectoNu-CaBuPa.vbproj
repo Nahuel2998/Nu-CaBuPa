@@ -151,6 +151,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="S_Video\Video.Designer.vb">
+      <DependentUpon>Video.vb</DependentUpon>
+    </Compile>
+    <Compile Include="S_Video\Video.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ayudas de desarrollo\Generador_DB.resx">
@@ -185,6 +191,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_Video\Video.resx">
+      <DependentUpon>Video.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

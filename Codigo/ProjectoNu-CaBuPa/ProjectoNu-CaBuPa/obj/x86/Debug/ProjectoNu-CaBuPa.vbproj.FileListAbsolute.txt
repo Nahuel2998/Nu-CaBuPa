@@ -74,3 +74,4 @@ C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-
 C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\aa\ProjectoNu-CaBuPa.resources.dll
 C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.ControlActivo.resources
 C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.ControlActivo.resources
+C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.Video.resources
