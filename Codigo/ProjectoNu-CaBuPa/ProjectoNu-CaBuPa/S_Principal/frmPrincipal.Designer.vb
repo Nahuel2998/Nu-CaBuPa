@@ -61,7 +61,6 @@ Partial Class frmPrincipal
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
         Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dtpTanda = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvTandas = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -70,7 +69,6 @@ Partial Class frmPrincipal
         Me.tbPrograma = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -116,6 +114,8 @@ Partial Class frmPrincipal
         Me.BWEventos = New System.ComponentModel.BackgroundWorker()
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -212,7 +212,7 @@ Partial Class frmPrincipal
         Me.dgvEventos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvEventos.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black
@@ -276,8 +276,8 @@ Partial Class frmPrincipal
         'GroupBox7
         '
         resources.ApplyResources(Me.GroupBox7, "GroupBox7")
-        Me.GroupBox7.Controls.Add(Me.dgvPublicidades)
         Me.GroupBox7.Controls.Add(Me.dtpTanda)
+        Me.GroupBox7.Controls.Add(Me.dgvPublicidades)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
         '
@@ -298,7 +298,7 @@ Partial Class frmPrincipal
         Me.dgvPublicidades.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvPublicidades.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         DataGridViewCellStyle6.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black
@@ -333,12 +333,6 @@ Partial Class frmPrincipal
         Me.PDescripcion.Name = "PDescripcion"
         Me.PDescripcion.ReadOnly = True
         '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
-        '
         'GroupBox2
         '
         resources.ApplyResources(Me.GroupBox2, "GroupBox2")
@@ -363,7 +357,7 @@ Partial Class frmPrincipal
         Me.dgvTandas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvTandas.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
         DataGridViewCellStyle10.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         DataGridViewCellStyle10.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Black
@@ -414,7 +408,7 @@ Partial Class frmPrincipal
         '
         'tbPrograma
         '
-        Me.tbPrograma.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.tbPrograma.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.tbPrograma.Controls.Add(Me.TableLayoutPanel2)
         resources.ApplyResources(Me.tbPrograma, "tbPrograma")
         Me.tbPrograma.Name = "tbPrograma"
@@ -434,15 +428,6 @@ Partial Class frmPrincipal
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.CalendarForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.dtp.CalendarMonthBackground = System.Drawing.Color.DimGray
-        Me.dtp.CalendarTitleBackColor = System.Drawing.Color.DimGray
-        Me.dtp.CalendarTitleForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.dtp.Name = "dtp"
-        '
         'dgvPrograma
         '
         Me.dgvPrograma.AllowUserToAddRows = False
@@ -460,7 +445,7 @@ Partial Class frmPrincipal
         Me.dgvPrograma.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvPrograma.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
         DataGridViewCellStyle14.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         DataGridViewCellStyle14.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Black
@@ -552,7 +537,7 @@ Partial Class frmPrincipal
         Me.dgvPPublicidades.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvPPublicidades.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
         DataGridViewCellStyle18.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         DataGridViewCellStyle18.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Black
@@ -611,7 +596,7 @@ Partial Class frmPrincipal
         Me.dgvFuncionarios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvFuncionarios.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
         DataGridViewCellStyle22.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         DataGridViewCellStyle22.ForeColor = System.Drawing.Color.GhostWhite
         DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Black
@@ -663,13 +648,14 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.TBDescripcion, "TBDescripcion")
         Me.TBDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TBDescripcion.CausesValidation = False
         Me.TBDescripcion.ForeColor = System.Drawing.Color.White
         Me.TBDescripcion.Name = "TBDescripcion"
         Me.TBDescripcion.ReadOnly = True
         '
         'buscarvideo
         '
-        Me.buscarvideo.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.buscarvideo.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.buscarvideo.Controls.Add(Me.TabControl1)
         resources.ApplyResources(Me.buscarvideo, "buscarvideo")
         Me.buscarvideo.Name = "buscarvideo"
@@ -841,11 +827,22 @@ Partial Class frmPrincipal
         'BWPublicidades
         '
         '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
+        '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.Controls.Add(Me.pCMain)
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -913,7 +910,6 @@ Partial Class frmPrincipal
     Friend WithEvents lblStatus As Label
     Friend WithEvents gbTandas As GroupBox
     Friend WithEvents dgvPrograma As DataGridView
-    Friend WithEvents dtp As DateTimePicker
     Friend WithEvents BWDPRogramas As System.ComponentModel.BackgroundWorker
     Friend WithEvents TBNotas As RichTextBox
     Friend WithEvents GBFuncionario As GroupBox
@@ -932,7 +928,6 @@ Partial Class frmPrincipal
     Friend WithEvents GroupBox7 As GroupBox
     Friend WithEvents dgvPublicidades As DataGridView
     Friend WithEvents PDescripcion As DataGridViewTextBoxColumn
-    Friend WithEvents dtpTanda As DateTimePicker
     Friend WithEvents BWTandas As System.ComponentModel.BackgroundWorker
     Friend WithEvents BWPublicidades As System.ComponentModel.BackgroundWorker
     Friend WithEvents GBPubli As GroupBox
@@ -967,4 +962,6 @@ Partial Class frmPrincipal
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents dtp As ColorDateTimePicker
+    Friend WithEvents dtpTanda As ColorDateTimePicker
 End Class

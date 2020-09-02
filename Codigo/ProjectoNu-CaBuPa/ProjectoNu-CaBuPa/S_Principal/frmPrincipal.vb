@@ -19,7 +19,10 @@ Public Class frmPrincipal
     Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Width = Screen.PrimaryScreen.WorkingArea.Width * 0.85
         Me.Height = Screen.PrimaryScreen.WorkingArea.Height * 0.8
-
+        dtp.BackColor = Color.FromArgb(64, 64, 64)
+        dtp.ForeColor = Color.White
+        dtpTanda.BackColor = Color.FromArgb(64, 64, 64)
+        dtpTanda.ForeColor = Color.White
         BWProgramas.RunWorkerAsync()
         BWTandas.RunWorkerAsync()
         BWEventos.RunWorkerAsync()
@@ -112,7 +115,7 @@ Public Class frmPrincipal
         Funcionarios()
     End Sub
 
-    Private Sub dtp_ValueChanged(sender As Object, e As EventArgs) Handles dtp.ValueChanged
+    Private Sub dtp_ValueChanged(sender As Object, e As EventArgs)
         If Not BWProgramas.IsBusy Then
             BWProgramas.RunWorkerAsync()
         End If
@@ -240,7 +243,7 @@ Public Class frmPrincipal
         BWPublicidades.RunWorkerAsync()
     End Sub
 
-    Private Sub dtpTanda_ValueChanged(sender As Object, e As EventArgs) Handles dtpTanda.ValueChanged
+    Private Sub dtpTanda_ValueChanged(sender As Object, e As EventArgs)
         If Not BWTandas.IsBusy Then
             BWPublicidades.RunWorkerAsync()
         End If
@@ -252,7 +255,15 @@ Public Class frmPrincipal
         End If
     End Sub
 
+    Private Sub dtp_ValueChanged_1(sender As Object, e As EventArgs) Handles dtp.ValueChanged
+        If Not BWProgramas.IsBusy Then
+            BWProgramas.RunWorkerAsync()
+        End If
+    End Sub
 
-
-
+    Private Sub dtpTanda_ValueChanged_1(sender As Object, e As EventArgs) Handles dtpTanda.ValueChanged
+        If Not BWTandas.IsBusy Then
+            BWPublicidades.RunWorkerAsync()
+        End If
+    End Sub
 End Class

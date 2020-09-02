@@ -330,6 +330,30 @@
   <data name="GroupBox7.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
+  <data name="dtpTanda.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="dtpTanda.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 23</value>
+  </data>
+  <data name="dtpTanda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 27</value>
+  </data>
+  <data name="dtpTanda.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dtpTanda.Name" xml:space="preserve">
+    <value>dtpTanda</value>
+  </data>
+  <data name="&gt;&gt;dtpTanda.Type" xml:space="preserve">
+    <value>ProjectoNu_CaBuPa.ColorDateTimePicker, ProjectoNu-CaBuPa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dtpTanda.Parent" xml:space="preserve">
+    <value>GroupBox7</value>
+  </data>
+  <data name="&gt;&gt;dtpTanda.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="dgvPublicidades.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -364,30 +388,6 @@
     <value>GroupBox7</value>
   </data>
   <data name="&gt;&gt;dgvPublicidades.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dtpTanda.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="dtpTanda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 22</value>
-  </data>
-  <data name="dtpTanda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 27</value>
-  </data>
-  <data name="dtpTanda.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dtpTanda.Name" xml:space="preserve">
-    <value>dtpTanda</value>
-  </data>
-  <data name="&gt;&gt;dtpTanda.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtpTanda.Parent" xml:space="preserve">
-    <value>GroupBox7</value>
-  </data>
-  <data name="&gt;&gt;dtpTanda.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="GroupBox7.Location" type="System.Drawing.Point, System.Drawing">
@@ -583,19 +583,19 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="dtp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 30</value>
+    <value>8, 26</value>
   </data>
   <data name="dtp.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 27</value>
   </data>
   <data name="dtp.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;dtp.Name" xml:space="preserve">
     <value>dtp</value>
   </data>
   <data name="&gt;&gt;dtp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>ProjectoNu_CaBuPa.ColorDateTimePicker, ProjectoNu-CaBuPa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;dtp.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -1057,7 +1057,7 @@
     <value>True</value>
   </data>
   <data name="txbVContenido.Size" type="System.Drawing.Size, System.Drawing">
-    <value>498, 79</value>
+    <value>498, 80</value>
   </data>
   <data name="txbVContenido.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -1084,7 +1084,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="GroupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>514, 108</value>
+    <value>514, 109</value>
   </data>
   <data name="GroupBox6.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -1300,7 +1300,7 @@
     <value>2</value>
   </data>
   <data name="TableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>520, 173</value>
+    <value>520, 174</value>
   </data>
   <data name="TableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -1330,7 +1330,7 @@
     <value>5, 4, 5, 4</value>
   </data>
   <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>538, 195</value>
+    <value>538, 196</value>
   </data>
   <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1366,7 +1366,7 @@
     <value>51</value>
   </data>
   <data name="dgvvideos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>526, 75</value>
+    <value>526, 76</value>
   </data>
   <data name="dgvvideos.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1384,7 +1384,7 @@
     <value>0</value>
   </data>
   <data name="Vídeo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 207</value>
+    <value>5, 208</value>
   </data>
   <data name="Vídeo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>
@@ -1393,7 +1393,7 @@
     <value>5, 4, 5, 4</value>
   </data>
   <data name="Vídeo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>538, 110</value>
+    <value>538, 111</value>
   </data>
   <data name="Vídeo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1423,7 +1423,7 @@
     <value>2</value>
   </data>
   <data name="TLPmultimedia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 321</value>
+    <value>548, 323</value>
   </data>
   <data name="TLPmultimedia.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1555,7 +1555,7 @@
     <value>51</value>
   </data>
   <data name="DataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>424, 319</value>
+    <value>424, 321</value>
   </data>
   <data name="DataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1582,7 +1582,7 @@
     <value>5, 4, 5, 4</value>
   </data>
   <data name="GroupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 466</value>
+    <value>435, 468</value>
   </data>
   <data name="GroupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
