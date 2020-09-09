@@ -1140,79 +1140,79 @@
   <data name="Información.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
-  <data name="DateTimePicker1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="dtpfechavideo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="DateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dtpfechavideo.Location" type="System.Drawing.Point, System.Drawing">
     <value>62, 181</value>
   </data>
-  <data name="DateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dtpfechavideo.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 23</value>
   </data>
-  <data name="DateTimePicker1.TabIndex" type="System.Int32, mscorlib">
+  <data name="dtpfechavideo.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;DateTimePicker1.Name" xml:space="preserve">
-    <value>DateTimePicker1</value>
+  <data name="&gt;&gt;dtpfechavideo.Name" xml:space="preserve">
+    <value>dtpfechavideo</value>
   </data>
-  <data name="&gt;&gt;DateTimePicker1.Type" xml:space="preserve">
+  <data name="&gt;&gt;dtpfechavideo.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DateTimePicker1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dtpfechavideo.Parent" xml:space="preserve">
     <value>Información</value>
   </data>
-  <data name="&gt;&gt;DateTimePicker1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dtpfechavideo.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="TextBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="txtcontenido.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="TextBox2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtcontenido.Location" type="System.Drawing.Point, System.Drawing">
     <value>68, 60</value>
   </data>
-  <data name="TextBox2.Multiline" type="System.Boolean, mscorlib">
+  <data name="txtcontenido.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TextBox2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtcontenido.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 105</value>
   </data>
-  <data name="TextBox2.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtcontenido.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;TextBox2.Name" xml:space="preserve">
-    <value>TextBox2</value>
+  <data name="&gt;&gt;txtcontenido.Name" xml:space="preserve">
+    <value>txtcontenido</value>
   </data>
-  <data name="&gt;&gt;TextBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtcontenido.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TextBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtcontenido.Parent" xml:space="preserve">
     <value>Información</value>
   </data>
-  <data name="&gt;&gt;TextBox2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtcontenido.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="TextBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="txtnombre.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="TextBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtnombre.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 19</value>
   </data>
-  <data name="TextBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtnombre.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 23</value>
   </data>
-  <data name="TextBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtnombre.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
-    <value>TextBox1</value>
+  <data name="&gt;&gt;txtnombre.Name" xml:space="preserve">
+    <value>txtnombre</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtnombre.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtnombre.Parent" xml:space="preserve">
     <value>Información</value>
   </data>
-  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtnombre.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
@@ -1309,7 +1309,7 @@
     <value>245, 3</value>
   </data>
   <data name="Información.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 233</value>
+    <value>193, 237</value>
   </data>
   <data name="Información.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1332,35 +1332,62 @@
   <data name="GroupBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="DataGridView2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="dgvbbvideos.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="DataGridView2.Location" type="System.Drawing.Point, System.Drawing">
+  <metadata name="Fecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Fecha.HeaderText" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Nombre.HeaderText" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <metadata name="Contenido.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Contenido.HeaderText" xml:space="preserve">
+    <value>Contenido</value>
+  </data>
+  <metadata name="Serie.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Serie.HeaderText" xml:space="preserve">
+    <value>Serie</value>
+  </data>
+  <data name="dgvbbvideos.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dgvbbvideos.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="DataGridView2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 205</value>
+  <data name="dgvbbvideos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 209</value>
   </data>
-  <data name="DataGridView2.TabIndex" type="System.Int32, mscorlib">
+  <data name="dgvbbvideos.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;DataGridView2.Name" xml:space="preserve">
-    <value>DataGridView2</value>
+  <data name="&gt;&gt;dgvbbvideos.Name" xml:space="preserve">
+    <value>dgvbbvideos</value>
   </data>
-  <data name="&gt;&gt;DataGridView2.Type" xml:space="preserve">
+  <data name="&gt;&gt;dgvbbvideos.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DataGridView2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dgvbbvideos.Parent" xml:space="preserve">
     <value>GroupBox4</value>
   </data>
-  <data name="&gt;&gt;DataGridView2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dgvbbvideos.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="GroupBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
   <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 233</value>
+    <value>236, 237</value>
   </data>
   <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1384,7 +1411,7 @@
     <value>Bottom</value>
   </data>
   <data name="btnbuscarv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 242</value>
+    <value>304, 246</value>
   </data>
   <data name="btnbuscarv.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -1417,7 +1444,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnlimpiarv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 242</value>
+    <value>83, 246</value>
   </data>
   <data name="btnlimpiarv.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -1447,7 +1474,7 @@
     <value>2</value>
   </data>
   <data name="TableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 268</value>
+    <value>441, 272</value>
   </data>
   <data name="TableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4195,9 +4222,6 @@
         DjgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
@@ -4308,6 +4332,30 @@
   </data>
   <data name="&gt;&gt;BWPublicidades.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Fecha.Name" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="&gt;&gt;Fecha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Nombre.Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="&gt;&gt;Nombre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Contenido.Name" xml:space="preserve">
+    <value>Contenido</value>
+  </data>
+  <data name="&gt;&gt;Contenido.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Serie.Name" xml:space="preserve">
+    <value>Serie</value>
+  </data>
+  <data name="&gt;&gt;Serie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmPrincipal</value>
