@@ -91,6 +91,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Modulos\ModLog.vb" />
+    <Compile Include="Publicidad\Publicidad.Designer.vb">
+      <DependentUpon>Publicidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Publicidad\Publicidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="S_Principal\ControlActivo.Designer.vb">
       <DependentUpon>ControlActivo.vb</DependentUpon>
     </Compile>
@@ -164,6 +170,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Ayudas de desarrollo\Generador_DB.resx">
       <DependentUpon>Generador_DB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Publicidad\Publicidad.resx">
+      <DependentUpon>Publicidad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="S_Principal\ControlActivo.resx">
       <DependentUpon>ControlActivo.vb</DependentUpon>
