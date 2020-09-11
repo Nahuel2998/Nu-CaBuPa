@@ -100,6 +100,10 @@ Partial Class frmPrincipal
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.dgvbbvideos = New System.Windows.Forms.DataGridView()
+        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Contenido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Serie = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnbuscarv = New System.Windows.Forms.Button()
         Me.btnlimpiarv = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -111,10 +115,6 @@ Partial Class frmPrincipal
         Me.BWEventos = New System.ComponentModel.BackgroundWorker()
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
-        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Contenido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Serie = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -753,6 +753,26 @@ Partial Class frmPrincipal
         Me.dgvbbvideos.RowHeadersVisible = False
         Me.dgvbbvideos.TabStop = False
         '
+        'Fecha
+        '
+        resources.ApplyResources(Me.Fecha, "Fecha")
+        Me.Fecha.Name = "Fecha"
+        '
+        'Nombre
+        '
+        resources.ApplyResources(Me.Nombre, "Nombre")
+        Me.Nombre.Name = "Nombre"
+        '
+        'Contenido
+        '
+        resources.ApplyResources(Me.Contenido, "Contenido")
+        Me.Contenido.Name = "Contenido"
+        '
+        'Serie
+        '
+        resources.ApplyResources(Me.Serie, "Serie")
+        Me.Serie.Name = "Serie"
+        '
         'btnbuscarv
         '
         resources.ApplyResources(Me.btnbuscarv, "btnbuscarv")
@@ -807,26 +827,6 @@ Partial Class frmPrincipal
         '
         'BWPublicidades
         '
-        '
-        'Fecha
-        '
-        resources.ApplyResources(Me.Fecha, "Fecha")
-        Me.Fecha.Name = "Fecha"
-        '
-        'Nombre
-        '
-        resources.ApplyResources(Me.Nombre, "Nombre")
-        Me.Nombre.Name = "Nombre"
-        '
-        'Contenido
-        '
-        resources.ApplyResources(Me.Contenido, "Contenido")
-        Me.Contenido.Name = "Contenido"
-        '
-        'Serie
-        '
-        resources.ApplyResources(Me.Serie, "Serie")
-        Me.Serie.Name = "Serie"
         '
         'frmPrincipal
         '

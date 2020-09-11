@@ -40,34 +40,38 @@ Partial Class Video
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(68, 18)
+        Me.Label1.Location = New System.Drawing.Point(85, 20)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 17)
+        Me.Label1.Size = New System.Drawing.Size(65, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(133, 18)
+        Me.TextBox1.Location = New System.Drawing.Point(166, 20)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(111, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(138, 27)
         Me.TextBox1.TabIndex = 1
         '
         'TextBox2
         '
         Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox2.Location = New System.Drawing.Point(6, 21)
+        Me.TextBox2.Location = New System.Drawing.Point(8, 24)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(293, 131)
+        Me.TextBox2.Size = New System.Drawing.Size(365, 147)
         Me.TextBox2.TabIndex = 3
         '
         'VFecha
         '
         Me.VFecha.AutoSize = True
-        Me.VFecha.Location = New System.Drawing.Point(79, 59)
+        Me.VFecha.Location = New System.Drawing.Point(99, 66)
+        Me.VFecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.VFecha.Name = "VFecha"
-        Me.VFecha.Size = New System.Drawing.Size(47, 17)
+        Me.VFecha.Size = New System.Drawing.Size(50, 18)
         Me.VFecha.TabIndex = 2
         Me.VFecha.Text = "Fecha"
         '
@@ -85,9 +89,11 @@ Partial Class Video
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.VFecha)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(15, 14)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(318, 320)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.GroupBox1.Size = New System.Drawing.Size(398, 360)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos"
@@ -95,63 +101,72 @@ Partial Class Video
         'ColorDateTimePicker1
         '
         Me.ColorDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.ColorDateTimePicker1.Location = New System.Drawing.Point(133, 59)
+        Me.ColorDateTimePicker1.Location = New System.Drawing.Point(166, 66)
+        Me.ColorDateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
-        Me.ColorDateTimePicker1.Size = New System.Drawing.Size(111, 22)
+        Me.ColorDateTimePicker1.Size = New System.Drawing.Size(138, 27)
         Me.ColorDateTimePicker1.TabIndex = 11
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(132, 96)
+        Me.TextBox3.Location = New System.Drawing.Point(165, 108)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(112, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(139, 27)
         Me.TextBox3.TabIndex = 10
         '
         'VSerie
         '
         Me.VSerie.AutoSize = True
-        Me.VSerie.Location = New System.Drawing.Point(85, 96)
+        Me.VSerie.Location = New System.Drawing.Point(106, 108)
+        Me.VSerie.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.VSerie.Name = "VSerie"
-        Me.VSerie.Size = New System.Drawing.Size(41, 17)
+        Me.VSerie.Size = New System.Drawing.Size(44, 18)
         Me.VSerie.TabIndex = 9
         Me.VSerie.Text = "Serie"
         '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.TextBox2)
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 124)
+        Me.GroupBox3.Location = New System.Drawing.Point(8, 140)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(305, 164)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.GroupBox3.Size = New System.Drawing.Size(381, 184)
         Me.GroupBox3.TabIndex = 8
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Contenido"
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(229, 291)
+        Me.btnEditar.Location = New System.Drawing.Point(286, 327)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditar.Size = New System.Drawing.Size(94, 26)
         Me.btnEditar.TabIndex = 12
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = True
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(6, 291)
+        Me.btnSalir.Location = New System.Drawing.Point(8, 327)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalir.Size = New System.Drawing.Size(94, 26)
         Me.btnSalir.TabIndex = 13
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'Video
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(342, 344)
+        Me.ClientSize = New System.Drawing.Size(428, 387)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.ForeColor = System.Drawing.Color.White
+        Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "Video"
         Me.Text = "Video"
         Me.GroupBox1.ResumeLayout(False)
