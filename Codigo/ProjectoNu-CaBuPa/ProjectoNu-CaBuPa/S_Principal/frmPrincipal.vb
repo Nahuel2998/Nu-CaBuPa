@@ -3,31 +3,37 @@ Imports System.Drawing.Drawing2D
 Imports System.IO
 
 Public Class frmPrincipal
-    Private dt_programa As DataTable
-    Private dt_dprograma As DataTable
-    Private dt_evento As DataTable
-    Private dt_tandas As DataTable
-    Private dt_publi As DataTable
-    Private dt_Ppubli As DataTable
     Private DescripcionP As String
     Private PNombre As String = "Datos del programa"
+    Private TBuscada As String = ""
+    Private TBusca As New DataTable
+#Region "Carga y descarga"
     Private Sub frmPrincipal_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         ModConector.desconectar()
         End
     End Sub
-
-    Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmPrincipal_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        GuardarNotas()
+    End Sub
+    Public Sub EPropiedades()
         Me.Width = Screen.PrimaryScreen.WorkingArea.Width * 0.85
         Me.Height = Screen.PrimaryScreen.WorkingArea.Height * 0.8
         dtp.BackColor = Color.FromArgb(64, 64, 64)
         dtp.ForeColor = Color.White
         dtpTanda.BackColor = Color.FromArgb(64, 64, 64)
         dtpTanda.ForeColor = Color.White
+    End Sub
+    Public Sub ONBW()
         BWProgramas.RunWorkerAsync()
         BWTandas.RunWorkerAsync()
         BWEventos.RunWorkerAsync()
+    End Sub
+    Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        EPropiedades()
+        ONBW()
         LeerNotas()
     End Sub
+#End Region
 
     Private Sub BWNumberOne_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWProgramas.DoWork
         dt_programa = ModConector.APrograma(dtp.Value.Date)
@@ -40,11 +46,11 @@ Public Class frmPrincipal
 
             dgvPrograma.Columns.Add("PEstado", "Estado")
             dgvProgramaColor()
-                For i As Integer = 0 To dgvPrograma.Columns.Count - 1
-                    dgvPrograma.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
-                Next
-            Else
-                dt_programa = New DataTable
+            For i As Integer = 0 To dgvPrograma.Columns.Count - 1
+                dgvPrograma.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
+            Next
+        Else
+            dt_programa = New DataTable
             dgvPrograma.DataSource = dt_programa
             dgvPrograma.Columns.Add("PInicio", "Inicio")
             dgvPrograma.Columns.Add("PFinal", "Final")
@@ -94,7 +100,6 @@ Public Class frmPrincipal
                     End If
 
                     dgvPrograma.Rows(i).Cells(dgvPrograma.Rows(i).Cells.Count - 1).Style.ForeColor = colorNuevo
-
                 Else
                     If Activo = -1 Then
                         Activo = i
@@ -119,11 +124,6 @@ Public Class frmPrincipal
         If Not BWProgramas.IsBusy Then
             BWProgramas.RunWorkerAsync()
         End If
-    End Sub
-
-
-    Private Sub frmPrincipal_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        GuardarNotas()
     End Sub
 
     Public Sub GuardarNotas()
@@ -267,7 +267,31 @@ Public Class frmPrincipal
         End If
     End Sub
 
-    Private Sub btnlimpiarv_Click(sender As Object, e As EventArgs) Handles btnlimpiarv.Click
 
+
+    Private Sub BWBuscador_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWBuscador.DoWork
+        TBusca = DevolverTabla(e.Argument)
+    End Sub
+
+    Private Sub btnbuscarv_Click(sender As Object, e As EventArgs) Handles btnbuscarv.Click
+        TBuscada = "Video"
+        Dim condicion As String = "true"
+        If (Not String.IsNullOrWhiteSpace(txtVnombre.Text)) Then
+            condicion = "v.nombre = '" + txtVnombre.Text + "'"
+        End If
+        If (cbFecha.Checked) Then
+            condicion += " and fecha = '" + Format(CDate(dtpfechavideo.Value), "yyyy-MM-dd").ToString + "'"
+        End If
+        If (Not String.IsNullOrWhiteSpace(txtVcontenido.Text)) Then
+            condicion += " and v.contenido = '" + txtVcontenido.Text + "'"
+        End If
+        BWBuscador.RunWorkerAsync(PSQL("fecha as Fecha, v.nombre as Nombre, s.nombre as Serie", "video v inner join serie s on v.ID_Serie=s.ID_Serie", condicion))
+    End Sub
+
+    Private Sub BWBuscador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWBuscador.RunWorkerCompleted
+        Select Case TBuscada
+            Case "Video"
+                dgvVB.DataSource = TBusca
+        End Select
     End Sub
 End Class

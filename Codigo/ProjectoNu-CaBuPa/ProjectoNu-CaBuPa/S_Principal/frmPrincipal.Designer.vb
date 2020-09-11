@@ -96,13 +96,22 @@ Partial Class frmPrincipal
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Información = New System.Windows.Forms.GroupBox()
-        Me.dtpfechavideo = New System.Windows.Forms.DateTimePicker()
-        Me.txtcontenido = New System.Windows.Forms.TextBox()
-        Me.txtnombre = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtVnombre = New System.Windows.Forms.TextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.cbFecha = New System.Windows.Forms.CheckBox()
+        Me.dtpfechavideo = New System.Windows.Forms.DateTimePicker()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtVcontenido = New System.Windows.Forms.TextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.dgvVB = New System.Windows.Forms.DataGridView()
+        Me.VFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnbuscarv = New System.Windows.Forms.Button()
         Me.btnlimpiarv = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -114,14 +123,7 @@ Partial Class frmPrincipal
         Me.BWEventos = New System.ComponentModel.BackgroundWorker()
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.VFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -151,14 +153,14 @@ Partial Class frmPrincipal
         Me.TabPage4.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.Información.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
-        Me.pStatus.SuspendLayout()
-        Me.pCMain.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        CType(Me.dgvVB, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pStatus.SuspendLayout()
+        Me.pCMain.SuspendLayout()
         Me.SuspendLayout()
         '
         'pMain
@@ -706,43 +708,143 @@ Partial Class frmPrincipal
         Me.Información.Name = "Información"
         Me.Información.TabStop = False
         '
-        'dtpfechavideo
+        'TableLayoutPanel4
         '
-        resources.ApplyResources(Me.dtpfechavideo, "dtpfechavideo")
-        Me.dtpfechavideo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpfechavideo.Name = "dtpfechavideo"
+        resources.ApplyResources(Me.TableLayoutPanel4, "TableLayoutPanel4")
+        Me.TableLayoutPanel4.Controls.Add(Me.Panel1, 0, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.Panel3, 0, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.Panel4, 0, 2)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         '
-        'txtcontenido
+        'Panel1
         '
-        resources.ApplyResources(Me.txtcontenido, "txtcontenido")
-        Me.txtcontenido.Name = "txtcontenido"
-        '
-        'txtnombre
-        '
-        resources.ApplyResources(Me.txtnombre, "txtnombre")
-        Me.txtnombre.Name = "txtnombre"
-        '
-        'Label5
-        '
-        resources.ApplyResources(Me.Label5, "Label5")
-        Me.Label5.Name = "Label5"
-        '
-        'Label4
-        '
-        resources.ApplyResources(Me.Label4, "Label4")
-        Me.Label4.Name = "Label4"
+        resources.ApplyResources(Me.Panel1, "Panel1")
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.txtVnombre)
+        Me.Panel1.Name = "Panel1"
         '
         'Label3
         '
         resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
         '
+        'txtVnombre
+        '
+        resources.ApplyResources(Me.txtVnombre, "txtVnombre")
+        Me.txtVnombre.Name = "txtVnombre"
+        '
+        'Panel3
+        '
+        resources.ApplyResources(Me.Panel3, "Panel3")
+        Me.Panel3.Controls.Add(Me.cbFecha)
+        Me.Panel3.Controls.Add(Me.dtpfechavideo)
+        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Name = "Panel3"
+        '
+        'cbFecha
+        '
+        resources.ApplyResources(Me.cbFecha, "cbFecha")
+        Me.cbFecha.Name = "cbFecha"
+        Me.cbFecha.UseVisualStyleBackColor = True
+        '
+        'dtpfechavideo
+        '
+        resources.ApplyResources(Me.dtpfechavideo, "dtpfechavideo")
+        Me.dtpfechavideo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpfechavideo.Name = "dtpfechavideo"
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.Name = "Label5"
+        '
+        'Panel4
+        '
+        resources.ApplyResources(Me.Panel4, "Panel4")
+        Me.Panel4.Controls.Add(Me.Label4)
+        Me.Panel4.Controls.Add(Me.txtVcontenido)
+        Me.Panel4.Name = "Panel4"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.Name = "Label4"
+        '
+        'txtVcontenido
+        '
+        resources.ApplyResources(Me.txtVcontenido, "txtVcontenido")
+        Me.txtVcontenido.Name = "txtVcontenido"
+        '
         'GroupBox4
         '
         resources.ApplyResources(Me.GroupBox4, "GroupBox4")
-        Me.GroupBox4.Controls.Add(Me.DataGridView1)
+        Me.GroupBox4.Controls.Add(Me.dgvVB)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.TabStop = False
+        '
+        'dgvVB
+        '
+        Me.dgvVB.AllowUserToAddRows = False
+        Me.dgvVB.AllowUserToDeleteRows = False
+        Me.dgvVB.AllowUserToResizeColumns = False
+        Me.dgvVB.AllowUserToResizeRows = False
+        DataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvVB.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle25
+        resources.ApplyResources(Me.dgvVB, "dgvVB")
+        Me.dgvVB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvVB.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.dgvVB.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvVB.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
+        Me.dgvVB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvVB.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.VFecha, Me.VNombre, Me.VSerie})
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvVB.DefaultCellStyle = DataGridViewCellStyle27
+        Me.dgvVB.MultiSelect = False
+        Me.dgvVB.Name = "dgvVB"
+        Me.dgvVB.ReadOnly = True
+        Me.dgvVB.RowHeadersVisible = False
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.White
+        Me.dgvVB.RowsDefaultCellStyle = DataGridViewCellStyle28
+        Me.dgvVB.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.dgvVB.RowTemplate.Height = 28
+        Me.dgvVB.RowTemplate.ReadOnly = True
+        Me.dgvVB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
+        'VFecha
+        '
+        resources.ApplyResources(Me.VFecha, "VFecha")
+        Me.VFecha.Name = "VFecha"
+        Me.VFecha.ReadOnly = True
+        '
+        'VNombre
+        '
+        resources.ApplyResources(Me.VNombre, "VNombre")
+        Me.VNombre.Name = "VNombre"
+        Me.VNombre.ReadOnly = True
+        '
+        'VSerie
+        '
+        resources.ApplyResources(Me.VSerie, "VSerie")
+        Me.VSerie.Name = "VSerie"
+        Me.VSerie.ReadOnly = True
         '
         'btnbuscarv
         '
@@ -799,98 +901,8 @@ Partial Class frmPrincipal
         'BWPublicidades
         '
         '
-        'DataGridView1
+        'BWBuscador
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToResizeColumns = False
-        Me.DataGridView1.AllowUserToResizeRows = False
-        DataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle25.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle25
-        resources.ApplyResources(Me.DataGridView1, "DataGridView1")
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
-        DataGridViewCellStyle26.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.VFecha, Me.VNombre, Me.VSerie})
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle27.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle27
-        Me.DataGridView1.MultiSelect = False
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersVisible = False
-        DataGridViewCellStyle28.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.White
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle28
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.RowTemplate.ReadOnly = True
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'VFecha
-        '
-        resources.ApplyResources(Me.VFecha, "VFecha")
-        Me.VFecha.Name = "VFecha"
-        Me.VFecha.ReadOnly = True
-        '
-        'VNombre
-        '
-        resources.ApplyResources(Me.VNombre, "VNombre")
-        Me.VNombre.Name = "VNombre"
-        Me.VNombre.ReadOnly = True
-        '
-        'VSerie
-        '
-        resources.ApplyResources(Me.VSerie, "VSerie")
-        Me.VSerie.Name = "VSerie"
-        Me.VSerie.ReadOnly = True
-        '
-        'TableLayoutPanel4
-        '
-        resources.ApplyResources(Me.TableLayoutPanel4, "TableLayoutPanel4")
-        Me.TableLayoutPanel4.Controls.Add(Me.Panel1, 0, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.Panel3, 0, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.Panel4, 0, 2)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        '
-        'Panel1
-        '
-        resources.ApplyResources(Me.Panel1, "Panel1")
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.txtnombre)
-        Me.Panel1.Name = "Panel1"
-        '
-        'Panel3
-        '
-        resources.ApplyResources(Me.Panel3, "Panel3")
-        Me.Panel3.Controls.Add(Me.dtpfechavideo)
-        Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Name = "Panel3"
-        '
-        'Panel4
-        '
-        resources.ApplyResources(Me.Panel4, "Panel4")
-        Me.Panel4.Controls.Add(Me.Label4)
-        Me.Panel4.Controls.Add(Me.txtcontenido)
-        Me.Panel4.Name = "Panel4"
         '
         'frmPrincipal
         '
@@ -931,10 +943,6 @@ Partial Class frmPrincipal
         Me.TabPage4.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.Información.ResumeLayout(False)
-        Me.GroupBox4.ResumeLayout(False)
-        Me.pStatus.ResumeLayout(False)
-        Me.pCMain.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -942,6 +950,10 @@ Partial Class frmPrincipal
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        CType(Me.dgvVB, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pStatus.ResumeLayout(False)
+        Me.pCMain.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1000,15 +1012,15 @@ Partial Class frmPrincipal
     Friend WithEvents Información As GroupBox
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents dtpfechavideo As DateTimePicker
-    Friend WithEvents txtcontenido As TextBox
-    Friend WithEvents txtnombre As TextBox
+    Friend WithEvents txtVcontenido As TextBox
+    Friend WithEvents txtVnombre As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnbuscarv As Button
     Friend WithEvents btnlimpiarv As Button
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvVB As DataGridView
     Friend WithEvents VFecha As DataGridViewTextBoxColumn
     Friend WithEvents VNombre As DataGridViewTextBoxColumn
     Friend WithEvents VSerie As DataGridViewTextBoxColumn
@@ -1017,4 +1029,6 @@ Partial Class frmPrincipal
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents cbFecha As CheckBox
+    Friend WithEvents BWBuscador As System.ComponentModel.BackgroundWorker
 End Class

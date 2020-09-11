@@ -87,9 +87,12 @@
     <Compile Include="Ayudas de desarrollo\Generador_DB.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Buscadores\ModBuscador.vb" />
+    <Compile Include="Buscadores\Tablas.vb" />
     <Compile Include="Form_Personalizado\ColorDateTimePicker.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Modulos\ModConector.vb" />
     <Compile Include="Modulos\ModLog.vb" />
     <Compile Include="Publicidad\Publicidad.Designer.vb">
       <DependentUpon>Publicidad.vb</DependentUpon>
@@ -141,7 +144,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\ModCodificador.vb" />
-    <Compile Include="Modulos\ModConector.vb" />
     <Compile Include="Modulos\ModInicializador.vb" />
     <Compile Include="Modulos\ModUser.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

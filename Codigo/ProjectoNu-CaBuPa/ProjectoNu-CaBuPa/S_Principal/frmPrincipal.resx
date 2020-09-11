@@ -1185,38 +1185,38 @@
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="txtnombre.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="txtVnombre.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="txtnombre.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtVnombre.Location" type="System.Drawing.Point, System.Drawing">
     <value>77, 4</value>
   </data>
-  <data name="txtnombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="txtVnombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="txtnombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 27</value>
+  <data name="txtVnombre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 27</value>
   </data>
-  <data name="txtnombre.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtVnombre.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;txtnombre.Name" xml:space="preserve">
-    <value>txtnombre</value>
+  <data name="&gt;&gt;txtVnombre.Name" xml:space="preserve">
+    <value>txtVnombre</value>
   </data>
-  <data name="&gt;&gt;txtnombre.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtVnombre.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtnombre.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtVnombre.Parent" xml:space="preserve">
     <value>Panel1</value>
   </data>
-  <data name="&gt;&gt;txtnombre.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtVnombre.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
   <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 39</value>
+    <value>230, 39</value>
   </data>
   <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1236,6 +1236,27 @@
   <data name="Panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="cbFecha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>207, 8</value>
+  </data>
+  <data name="cbFecha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 25</value>
+  </data>
+  <data name="cbFecha.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cbFecha.Name" xml:space="preserve">
+    <value>cbFecha</value>
+  </data>
+  <data name="&gt;&gt;cbFecha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbFecha.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;cbFecha.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="dtpfechavideo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -1246,7 +1267,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="dtpfechavideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 27</value>
+    <value>123, 27</value>
   </data>
   <data name="dtpfechavideo.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1261,7 +1282,7 @@
     <value>Panel3</value>
   </data>
   <data name="&gt;&gt;dtpfechavideo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1294,13 +1315,13 @@
     <value>Panel3</value>
   </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 48</value>
   </data>
   <data name="Panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 45</value>
+    <value>230, 45</value>
   </data>
   <data name="Panel3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1353,41 +1374,41 @@
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="txtcontenido.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="txtVcontenido.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="txtcontenido.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtVcontenido.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 33</value>
   </data>
-  <data name="txtcontenido.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="txtVcontenido.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="txtcontenido.Multiline" type="System.Boolean, mscorlib">
+  <data name="txtVcontenido.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="txtcontenido.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 117</value>
+  <data name="txtVcontenido.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 125</value>
   </data>
-  <data name="txtcontenido.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtVcontenido.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;txtcontenido.Name" xml:space="preserve">
-    <value>txtcontenido</value>
+  <data name="&gt;&gt;txtVcontenido.Name" xml:space="preserve">
+    <value>txtVcontenido</value>
   </data>
-  <data name="&gt;&gt;txtcontenido.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtVcontenido.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtcontenido.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtVcontenido.Parent" xml:space="preserve">
     <value>Panel4</value>
   </data>
-  <data name="&gt;&gt;txtcontenido.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtVcontenido.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="Panel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 99</value>
   </data>
   <data name="Panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 154</value>
+    <value>230, 162</value>
   </data>
   <data name="Panel4.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1411,7 +1432,7 @@
     <value>3</value>
   </data>
   <data name="TableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 256</value>
+    <value>236, 264</value>
   </data>
   <data name="TableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1432,7 +1453,7 @@
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="Panel1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Panel3" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Panel4" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="Información.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 4</value>
+    <value>319, 4</value>
   </data>
   <data name="Información.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1441,7 +1462,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Información.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 285</value>
+    <value>250, 293</value>
   </data>
   <data name="Información.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1464,7 +1485,7 @@
   <data name="GroupBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="DataGridView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="dgvVB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <metadata name="VFecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1494,31 +1515,31 @@
   <data name="VSerie.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="DataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dgvVB.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 23</value>
   </data>
-  <data name="DataGridView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="dgvVB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="DataGridView1.RowHeadersWidth" type="System.Int32, mscorlib">
+  <data name="dgvVB.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
-  <data name="DataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 256</value>
+  <data name="dgvVB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 264</value>
   </data>
-  <data name="DataGridView1.TabIndex" type="System.Int32, mscorlib">
+  <data name="dgvVB.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;DataGridView1.Name" xml:space="preserve">
-    <value>DataGridView1</value>
+  <data name="&gt;&gt;dgvVB.Name" xml:space="preserve">
+    <value>dgvVB</value>
   </data>
-  <data name="&gt;&gt;DataGridView1.Type" xml:space="preserve">
+  <data name="&gt;&gt;dgvVB.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DataGridView1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dgvVB.Parent" xml:space="preserve">
     <value>GroupBox4</value>
   </data>
-  <data name="&gt;&gt;DataGridView1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dgvVB.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="GroupBox4.Location" type="System.Drawing.Point, System.Drawing">
@@ -1531,7 +1552,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 285</value>
+    <value>307, 293</value>
   </data>
   <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1555,7 +1576,7 @@
     <value>Bottom</value>
   </data>
   <data name="btnbuscarv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>381, 297</value>
+    <value>397, 306</value>
   </data>
   <data name="btnbuscarv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1591,7 +1612,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnlimpiarv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 297</value>
+    <value>79, 306</value>
   </data>
   <data name="btnlimpiarv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1627,7 +1648,7 @@
     <value>2</value>
   </data>
   <data name="TableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 328</value>
+    <value>573, 337</value>
   </data>
   <data name="TableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1657,7 +1678,7 @@
     <value>5, 4, 5, 4</value>
   </data>
   <data name="TabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>554, 329</value>
+    <value>575, 334</value>
   </data>
   <data name="TabPage4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1684,7 +1705,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="TabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>554, 329</value>
+    <value>575, 334</value>
   </data>
   <data name="TabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1705,13 +1726,13 @@
     <value>1</value>
   </data>
   <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 5</value>
+    <value>-1, 0</value>
   </data>
   <data name="TabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>
   </data>
   <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>562, 360</value>
+    <value>583, 365</value>
   </data>
   <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1919,6 +1940,9 @@
   </metadata>
   <metadata name="BWPublicidades.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>703, 17</value>
+  </metadata>
+  <metadata name="BWBuscador.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>868, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -4459,6 +4483,24 @@
   <data name="&gt;&gt;Telefono.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;VFecha.Name" xml:space="preserve">
+    <value>VFecha</value>
+  </data>
+  <data name="&gt;&gt;VFecha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VNombre.Name" xml:space="preserve">
+    <value>VNombre</value>
+  </data>
+  <data name="&gt;&gt;VNombre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VSerie.Name" xml:space="preserve">
+    <value>VSerie</value>
+  </data>
+  <data name="&gt;&gt;VSerie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;BWProgramas.Name" xml:space="preserve">
     <value>BWProgramas</value>
   </data>
@@ -4489,23 +4531,11 @@
   <data name="&gt;&gt;BWPublicidades.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;VFecha.Name" xml:space="preserve">
-    <value>VFecha</value>
+  <data name="&gt;&gt;BWBuscador.Name" xml:space="preserve">
+    <value>BWBuscador</value>
   </data>
-  <data name="&gt;&gt;VFecha.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;VNombre.Name" xml:space="preserve">
-    <value>VNombre</value>
-  </data>
-  <data name="&gt;&gt;VNombre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;VSerie.Name" xml:space="preserve">
-    <value>VSerie</value>
-  </data>
-  <data name="&gt;&gt;VSerie.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;BWBuscador.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmPrincipal</value>
