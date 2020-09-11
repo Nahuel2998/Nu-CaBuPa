@@ -47,6 +47,10 @@ Partial Class frmPrincipal
         Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pMain = New System.Windows.Forms.TableLayoutPanel()
         Me.spNotEven = New System.Windows.Forms.TableLayoutPanel()
         Me.gbNotas = New System.Windows.Forms.GroupBox()
@@ -99,11 +103,6 @@ Partial Class frmPrincipal
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.dgvbbvideos = New System.Windows.Forms.DataGridView()
-        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Contenido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Serie = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnbuscarv = New System.Windows.Forms.Button()
         Me.btnlimpiarv = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -115,6 +114,14 @@ Partial Class frmPrincipal
         Me.BWEventos = New System.ComponentModel.BackgroundWorker()
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.VFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -145,9 +152,13 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel3.SuspendLayout()
         Me.Información.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.dgvbbvideos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pStatus.SuspendLayout()
         Me.pCMain.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel4.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'pMain
@@ -691,12 +702,7 @@ Partial Class frmPrincipal
         'Información
         '
         resources.ApplyResources(Me.Información, "Información")
-        Me.Información.Controls.Add(Me.dtpfechavideo)
-        Me.Información.Controls.Add(Me.txtcontenido)
-        Me.Información.Controls.Add(Me.txtnombre)
-        Me.Información.Controls.Add(Me.Label5)
-        Me.Información.Controls.Add(Me.Label4)
-        Me.Información.Controls.Add(Me.Label3)
+        Me.Información.Controls.Add(Me.TableLayoutPanel4)
         Me.Información.Name = "Información"
         Me.Información.TabStop = False
         '
@@ -734,44 +740,9 @@ Partial Class frmPrincipal
         'GroupBox4
         '
         resources.ApplyResources(Me.GroupBox4, "GroupBox4")
-        Me.GroupBox4.Controls.Add(Me.dgvbbvideos)
+        Me.GroupBox4.Controls.Add(Me.DataGridView1)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.TabStop = False
-        '
-        'dgvbbvideos
-        '
-        Me.dgvbbvideos.AllowUserToAddRows = False
-        Me.dgvbbvideos.AllowUserToDeleteRows = False
-        Me.dgvbbvideos.AllowUserToResizeColumns = False
-        Me.dgvbbvideos.AllowUserToResizeRows = False
-        resources.ApplyResources(Me.dgvbbvideos, "dgvbbvideos")
-        Me.dgvbbvideos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.dgvbbvideos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvbbvideos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Fecha, Me.Nombre, Me.Contenido, Me.Serie})
-        Me.dgvbbvideos.MultiSelect = False
-        Me.dgvbbvideos.Name = "dgvbbvideos"
-        Me.dgvbbvideos.RowHeadersVisible = False
-        Me.dgvbbvideos.TabStop = False
-        '
-        'Fecha
-        '
-        resources.ApplyResources(Me.Fecha, "Fecha")
-        Me.Fecha.Name = "Fecha"
-        '
-        'Nombre
-        '
-        resources.ApplyResources(Me.Nombre, "Nombre")
-        Me.Nombre.Name = "Nombre"
-        '
-        'Contenido
-        '
-        resources.ApplyResources(Me.Contenido, "Contenido")
-        Me.Contenido.Name = "Contenido"
-        '
-        'Serie
-        '
-        resources.ApplyResources(Me.Serie, "Serie")
-        Me.Serie.Name = "Serie"
         '
         'btnbuscarv
         '
@@ -828,6 +799,99 @@ Partial Class frmPrincipal
         'BWPublicidades
         '
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.AllowUserToResizeRows = False
+        DataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle25
+        resources.ApplyResources(Me.DataGridView1, "DataGridView1")
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.VFecha, Me.VNombre, Me.VSerie})
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle27
+        Me.DataGridView1.MultiSelect = False
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersVisible = False
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.White
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle28
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.DataGridView1.RowTemplate.Height = 28
+        Me.DataGridView1.RowTemplate.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
+        'VFecha
+        '
+        resources.ApplyResources(Me.VFecha, "VFecha")
+        Me.VFecha.Name = "VFecha"
+        Me.VFecha.ReadOnly = True
+        '
+        'VNombre
+        '
+        resources.ApplyResources(Me.VNombre, "VNombre")
+        Me.VNombre.Name = "VNombre"
+        Me.VNombre.ReadOnly = True
+        '
+        'VSerie
+        '
+        resources.ApplyResources(Me.VSerie, "VSerie")
+        Me.VSerie.Name = "VSerie"
+        Me.VSerie.ReadOnly = True
+        '
+        'TableLayoutPanel4
+        '
+        resources.ApplyResources(Me.TableLayoutPanel4, "TableLayoutPanel4")
+        Me.TableLayoutPanel4.Controls.Add(Me.Panel1, 0, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.Panel3, 0, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.Panel4, 0, 2)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        '
+        'Panel1
+        '
+        resources.ApplyResources(Me.Panel1, "Panel1")
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.txtnombre)
+        Me.Panel1.Name = "Panel1"
+        '
+        'Panel3
+        '
+        resources.ApplyResources(Me.Panel3, "Panel3")
+        Me.Panel3.Controls.Add(Me.dtpfechavideo)
+        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Name = "Panel3"
+        '
+        'Panel4
+        '
+        resources.ApplyResources(Me.Panel4, "Panel4")
+        Me.Panel4.Controls.Add(Me.Label4)
+        Me.Panel4.Controls.Add(Me.txtcontenido)
+        Me.Panel4.Name = "Panel4"
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -867,11 +931,17 @@ Partial Class frmPrincipal
         Me.TabPage4.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.Información.ResumeLayout(False)
-        Me.Información.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
-        CType(Me.dgvbbvideos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pStatus.ResumeLayout(False)
         Me.pCMain.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel4.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -920,7 +990,6 @@ Partial Class frmPrincipal
     Friend WithEvents PEstado As DataGridViewTextBoxColumn
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents dgvTandas As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
@@ -930,7 +999,6 @@ Partial Class frmPrincipal
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Información As GroupBox
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents dgvbbvideos As DataGridView
     Friend WithEvents dtpfechavideo As DateTimePicker
     Friend WithEvents txtcontenido As TextBox
     Friend WithEvents txtnombre As TextBox
@@ -940,8 +1008,13 @@ Partial Class frmPrincipal
     Friend WithEvents btnbuscarv As Button
     Friend WithEvents btnlimpiarv As Button
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents Fecha As DataGridViewTextBoxColumn
-    Friend WithEvents Nombre As DataGridViewTextBoxColumn
-    Friend WithEvents Contenido As DataGridViewTextBoxColumn
-    Friend WithEvents Serie As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents VFecha As DataGridViewTextBoxColumn
+    Friend WithEvents VNombre As DataGridViewTextBoxColumn
+    Friend WithEvents VSerie As DataGridViewTextBoxColumn
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel4 As Panel
 End Class

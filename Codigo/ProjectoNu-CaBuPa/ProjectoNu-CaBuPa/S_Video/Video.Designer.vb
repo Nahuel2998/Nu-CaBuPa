@@ -23,16 +23,16 @@ Partial Class Video
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.tbVideo = New System.Windows.Forms.TextBox()
+        Me.tbContenido = New System.Windows.Forms.TextBox()
         Me.VFecha = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.ColorDateTimePicker1 = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.VSerie = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.cbSerie = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -40,35 +40,37 @@ Partial Class Video
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(85, 20)
+        Me.Label1.Location = New System.Drawing.Point(85, 33)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre"
         '
-        'TextBox1
+        'tbVideo
         '
-        Me.TextBox1.Location = New System.Drawing.Point(166, 20)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(138, 27)
-        Me.TextBox1.TabIndex = 1
+        Me.tbVideo.Location = New System.Drawing.Point(166, 30)
+        Me.tbVideo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.tbVideo.Name = "tbVideo"
+        Me.tbVideo.ReadOnly = True
+        Me.tbVideo.Size = New System.Drawing.Size(138, 27)
+        Me.tbVideo.TabIndex = 1
         '
-        'TextBox2
+        'tbContenido
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox2.Location = New System.Drawing.Point(8, 24)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(365, 147)
-        Me.TextBox2.TabIndex = 3
+        Me.tbContenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.tbContenido.Location = New System.Drawing.Point(8, 24)
+        Me.tbContenido.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.tbContenido.Multiline = True
+        Me.tbContenido.Name = "tbContenido"
+        Me.tbContenido.ReadOnly = True
+        Me.tbContenido.Size = New System.Drawing.Size(365, 147)
+        Me.tbContenido.TabIndex = 3
         '
         'VFecha
         '
         Me.VFecha.AutoSize = True
-        Me.VFecha.Location = New System.Drawing.Point(99, 66)
+        Me.VFecha.Location = New System.Drawing.Point(100, 72)
         Me.VFecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.VFecha.Name = "VFecha"
         Me.VFecha.Size = New System.Drawing.Size(50, 18)
@@ -80,15 +82,15 @@ Partial Class Video
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.cbSerie)
         Me.GroupBox1.Controls.Add(Me.btnSalir)
         Me.GroupBox1.Controls.Add(Me.btnEditar)
-        Me.GroupBox1.Controls.Add(Me.ColorDateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.dtpFecha)
         Me.GroupBox1.Controls.Add(Me.VSerie)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.VFecha)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.tbVideo)
         Me.GroupBox1.Location = New System.Drawing.Point(15, 14)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox1.Name = "GroupBox1"
@@ -98,44 +100,15 @@ Partial Class Video
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos"
         '
-        'ColorDateTimePicker1
+        'btnSalir
         '
-        Me.ColorDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.ColorDateTimePicker1.Location = New System.Drawing.Point(166, 66)
-        Me.ColorDateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
-        Me.ColorDateTimePicker1.Size = New System.Drawing.Size(138, 27)
-        Me.ColorDateTimePicker1.TabIndex = 11
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(165, 108)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(139, 27)
-        Me.TextBox3.TabIndex = 10
-        '
-        'VSerie
-        '
-        Me.VSerie.AutoSize = True
-        Me.VSerie.Location = New System.Drawing.Point(106, 108)
-        Me.VSerie.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.VSerie.Name = "VSerie"
-        Me.VSerie.Size = New System.Drawing.Size(44, 18)
-        Me.VSerie.TabIndex = 9
-        Me.VSerie.Text = "Serie"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.TextBox2)
-        Me.GroupBox3.Location = New System.Drawing.Point(8, 140)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox3.Size = New System.Drawing.Size(381, 184)
-        Me.GroupBox3.TabIndex = 8
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Contenido"
+        Me.btnSalir.Location = New System.Drawing.Point(8, 327)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(94, 26)
+        Me.btnSalir.TabIndex = 13
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
         '
         'btnEditar
         '
@@ -147,15 +120,46 @@ Partial Class Video
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = True
         '
-        'btnSalir
+        'dtpFecha
         '
-        Me.btnSalir.Location = New System.Drawing.Point(8, 327)
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(94, 26)
-        Me.btnSalir.TabIndex = 13
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
+        Me.dtpFecha.Enabled = False
+        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFecha.Location = New System.Drawing.Point(166, 66)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(138, 27)
+        Me.dtpFecha.TabIndex = 11
+        '
+        'VSerie
+        '
+        Me.VSerie.AutoSize = True
+        Me.VSerie.Location = New System.Drawing.Point(106, 105)
+        Me.VSerie.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.VSerie.Name = "VSerie"
+        Me.VSerie.Size = New System.Drawing.Size(44, 18)
+        Me.VSerie.TabIndex = 9
+        Me.VSerie.Text = "Serie"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.tbContenido)
+        Me.GroupBox3.Location = New System.Drawing.Point(8, 140)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.GroupBox3.Size = New System.Drawing.Size(381, 184)
+        Me.GroupBox3.TabIndex = 8
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Contenido"
+        '
+        'cbSerie
+        '
+        Me.cbSerie.Enabled = False
+        Me.cbSerie.FormattingEnabled = True
+        Me.cbSerie.Location = New System.Drawing.Point(166, 102)
+        Me.cbSerie.Name = "cbSerie"
+        Me.cbSerie.Size = New System.Drawing.Size(138, 26)
+        Me.cbSerie.TabIndex = 14
         '
         'Video
         '
@@ -178,14 +182,14 @@ Partial Class Video
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents tbVideo As TextBox
+    Friend WithEvents tbContenido As TextBox
     Friend WithEvents VFecha As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents VSerie As Label
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents ColorDateTimePicker1 As ColorDateTimePicker
+    Friend WithEvents dtpFecha As ColorDateTimePicker
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnEditar As Button
+    Friend WithEvents cbSerie As ComboBox
 End Class

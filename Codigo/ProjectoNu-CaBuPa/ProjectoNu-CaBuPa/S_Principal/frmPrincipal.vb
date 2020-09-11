@@ -267,5 +267,7 @@ Public Class frmPrincipal
         End If
     End Sub
 
+    Private Sub btnlimpiarv_Click(sender As Object, e As EventArgs) Handles btnlimpiarv.Click
 
+    End Sub
 End Class
