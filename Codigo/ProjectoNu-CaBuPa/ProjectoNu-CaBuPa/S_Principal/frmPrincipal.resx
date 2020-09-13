@@ -1189,13 +1189,13 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="txtVnombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 4</value>
+    <value>68, 4</value>
   </data>
   <data name="txtVnombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="txtVnombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 27</value>
+    <value>158, 27</value>
   </data>
   <data name="txtVnombre.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1236,11 +1236,20 @@
   <data name="Panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="cbFecha.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="cbFecha.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbFecha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="cbFecha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 8</value>
+    <value>207, 15</value>
   </data>
   <data name="cbFecha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 25</value>
+    <value>18, 17</value>
   </data>
   <data name="cbFecha.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1261,13 +1270,13 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="dtpfechavideo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 9</value>
+    <value>68, 9</value>
   </data>
   <data name="dtpfechavideo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="dtpfechavideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 27</value>
+    <value>132, 27</value>
   </data>
   <data name="dtpfechavideo.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1387,7 +1396,7 @@
     <value>True</value>
   </data>
   <data name="txtVcontenido.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 125</value>
+    <value>219, 127</value>
   </data>
   <data name="txtVcontenido.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1408,7 +1417,7 @@
     <value>3, 99</value>
   </data>
   <data name="Panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 162</value>
+    <value>230, 164</value>
   </data>
   <data name="Panel4.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1432,7 +1441,7 @@
     <value>3</value>
   </data>
   <data name="TableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 264</value>
+    <value>236, 266</value>
   </data>
   <data name="TableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1462,7 +1471,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Información.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 293</value>
+    <value>250, 295</value>
   </data>
   <data name="Información.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1525,7 +1534,7 @@
     <value>62</value>
   </data>
   <data name="dgvVB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 264</value>
+    <value>295, 266</value>
   </data>
   <data name="dgvVB.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1552,7 +1561,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 293</value>
+    <value>307, 295</value>
   </data>
   <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1575,8 +1584,11 @@
   <data name="btnbuscarv.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
   </data>
+  <data name="btnbuscarv.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnbuscarv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 306</value>
+    <value>397, 308</value>
   </data>
   <data name="btnbuscarv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1612,7 +1624,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnlimpiarv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 306</value>
+    <value>79, 308</value>
   </data>
   <data name="btnlimpiarv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1648,7 +1660,7 @@
     <value>2</value>
   </data>
   <data name="TableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>573, 337</value>
+    <value>573, 339</value>
   </data>
   <data name="TableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4401,6 +4413,9 @@
         YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYfHE4f8HceZN3Q9v
         DjgAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>

@@ -7,6 +7,7 @@ Public Class frmPrincipal
     Private PNombre As String = "Datos del programa"
     Private TBuscada As String = ""
     Private TBusca As New DataTable
+    Public dt_Buscada As New DataTable
 #Region "Carga y descarga"
     Private Sub frmPrincipal_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         ModConector.desconectar()
@@ -61,19 +62,8 @@ Public Class frmPrincipal
 
     End Sub
     Private Sub ActualizarEvento()
-        dgvEventos.Columns.Clear()
-        If Not IsNothing(dt_evento) Then
-            dgvEventos.DataSource = dt_evento
-            If dt_evento.Rows.Count > 0 Then
-                dgvEventos.Columns().RemoveAt(0)
-            End If
-
-        Else
-            dt_evento = New DataTable
-            dgvEventos.DataSource = dt_evento
-            dgvEventos.Columns.Add("EFecha", "Fecha")
-            dgvEventos.Columns.Add("ENombre", "Nombre")
-        End If
+        ActualizarTabla(dt_evento, dgvEventos)
+        dgvEventos.Columns().RemoveAt(0)
         dgvEventos.ClearSelection()
     End Sub
     Public Sub dgvProgramaColor()
@@ -162,22 +152,10 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWDPRogramas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWDPRogramas.RunWorkerCompleted
-        dgvFuncionarios.Columns.Clear()
-        dgvPPublicidades.Columns.Clear()
-        If IsNothing(dt_dprograma) Then
-            dt_dprograma = New DataTable
-            dgvFuncionarios.Columns.Add("FNombre", "Nombre")
-            dgvFuncionarios.Columns.Add("FTelefono", "Telefono")
-
-        End If
-        If IsNothing(dt_Ppubli) Then
-            dt_Ppubli = New DataTable
-            dgvPPublicidades.Columns.Add("PPTema", "Tema")
-        End If
+        ActualizarTabla(dt_dprograma, dgvFuncionarios)
+        ActualizarTabla(dt_publi, dgvPPublicidades)
         GBFuncionarios.Text = PNombre
-        dgvFuncionarios.DataSource = dt_dprograma
         TBDescripcion.Text = DescripcionP
-        dgvPPublicidades.DataSource = dt_Ppubli
         dgvFuncionarios.ClearSelection()
         dgvPPublicidades.ClearSelection()
         dgvPrograma.ClearSelection()
@@ -214,13 +192,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWPublicidades_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWPublicidades.RunWorkerCompleted
-        dgvPublicidades.Columns.Clear()
-        If IsNothing(dt_publi) Then
-            dt_publi = New DataTable
-            dgvPublicidades.Columns.Add("PTema", "Tema")
-        End If
-        dgvPublicidades.DataSource = dt_publi
-        dgvPublicidades.ClearSelection()
+        ActualizarTabla(dt_publi, dgvPublicidades)
     End Sub
 
     Private Sub BWTandas_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWTandas.DoWork
@@ -228,15 +200,20 @@ Public Class frmPrincipal
 
     End Sub
     Public Sub Tandas()
-        dgvTandas.Columns.Clear()
-        If Not IsNothing(dt_tandas) Then
-            dgvTandas.DataSource = dt_tandas
+        ActualizarTabla(dt_tandas, dgvTandas)
+    End Sub
+    Public Sub ActualizarTabla(ByRef Tabla As DataTable, ByRef Dgv As DataGridView)
+        If Not IsNothing(Tabla) Then
+            Dgv.Columns.Clear()
+            Dgv.DataSource = Tabla
+            Dgv.Refresh()
         Else
-            dt_tandas = New DataTable
-            dgvTandas.DataSource = dt_tandas
-            dgvTandas.Columns.Add("TInicio", "Inicio")
-            dgvTandas.Columns.Add("TFinal", "Final")
+            If (Dgv.Rows.Count > 0) Then
+                Dgv.DataSource.Rows.Clear()
+                Dgv.Refresh()
+            End If
         End If
+
     End Sub
     Private Sub BWTandas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWTandas.RunWorkerCompleted
         Tandas()
@@ -271,6 +248,7 @@ Public Class frmPrincipal
 
     Private Sub BWBuscador_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWBuscador.DoWork
         TBusca = DevolverTabla(e.Argument)
+        ModLog.Guardar(e.Argument)
     End Sub
 
     Private Sub btnbuscarv_Click(sender As Object, e As EventArgs) Handles btnbuscarv.Click
@@ -285,13 +263,16 @@ Public Class frmPrincipal
         If (Not String.IsNullOrWhiteSpace(txtVcontenido.Text)) Then
             condicion += " and v.contenido = '" + txtVcontenido.Text + "'"
         End If
-        BWBuscador.RunWorkerAsync(PSQL("fecha as Fecha, v.nombre as Nombre, s.nombre as Serie", "video v inner join serie s on v.ID_Serie=s.ID_Serie", condicion))
+        BWBuscador.RunWorkerAsync(PSQL("fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie", "video v", condicion))
     End Sub
 
     Private Sub BWBuscador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWBuscador.RunWorkerCompleted
         Select Case TBuscada
             Case "Video"
-                dgvVB.DataSource = TBusca
+                dt_Video = TBusca
+                ActualizarTabla(dt_Video, dgvVB)
         End Select
+        TBusca = Nothing
+        TBuscada = ""
     End Sub
 End Class
