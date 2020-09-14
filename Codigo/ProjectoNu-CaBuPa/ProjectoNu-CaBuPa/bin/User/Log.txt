@@ -654,3 +654,4 @@
 13/09/2020 14:43:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 13/09/2020 14:44:08 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-08-08' 
 13/09/2020 14:44:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/9/2020 21:07:06 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

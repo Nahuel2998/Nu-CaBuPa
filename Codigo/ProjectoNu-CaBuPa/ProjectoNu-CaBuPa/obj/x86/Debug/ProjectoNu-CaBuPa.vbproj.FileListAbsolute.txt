@@ -82,3 +82,9 @@ C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-Ca
 C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\Interop.VBRUN.dll
 C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu-CaBuPa.vbproj.ResolveComReference.cache
 C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.Publicidad.resources
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\Interop.MSComctlLib.dll
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\Interop.MSDATASRC.dll
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\Interop.VBRUN.dll
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu-CaBuPa.vbproj.ResolveComReference.cache
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.Publicidad.resources
+C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.Video.resources
