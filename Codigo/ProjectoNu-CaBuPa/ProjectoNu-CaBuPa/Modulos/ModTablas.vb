@@ -22,8 +22,17 @@
         End If
     End Sub
     Public Sub ActualizarTablaC(ByRef Tabla As DataTable, ByRef Dgv As DataGridView)
-        ActualizarTabla(Tabla, Dgv)
-        Dgv.Columns.RemoveAt(0)
+        If Not IsNothing(Tabla) Then
+            Dgv.Columns.Clear()
+            Dgv.DataSource = Tabla
+            Dgv.Columns.RemoveAt(0)
+            Dgv.Refresh()
+        Else
+            If (Dgv.Rows.Count > 0) Then
+                Dgv.DataSource.Rows.Clear()
+                Dgv.Refresh()
+            End If
+        End If
     End Sub
 
     Public Sub PrepararUpdate(ByVal tabla As String, ByVal datos() As String, ByVal id As String)

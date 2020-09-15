@@ -27,13 +27,13 @@ Partial Class frmVideo
         Me.txtContenido = New System.Windows.Forms.TextBox()
         Me.VFecha = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtTapar = New System.Windows.Forms.TextBox()
         Me.cbSerie = New System.Windows.Forms.ComboBox()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
-        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.VSerie = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.txtTapar = New System.Windows.Forms.TextBox()
+        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -50,7 +50,9 @@ Partial Class frmVideo
         '
         'txtNombre
         '
+        Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtNombre.Enabled = False
+        Me.txtNombre.ForeColor = System.Drawing.Color.White
         Me.txtNombre.Location = New System.Drawing.Point(166, 30)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtNombre.Name = "txtNombre"
@@ -104,9 +106,22 @@ Partial Class frmVideo
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos"
         '
+        'txtTapar
+        '
+        Me.txtTapar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtTapar.Enabled = False
+        Me.txtTapar.Location = New System.Drawing.Point(166, 66)
+        Me.txtTapar.Name = "txtTapar"
+        Me.txtTapar.Size = New System.Drawing.Size(138, 27)
+        Me.txtTapar.TabIndex = 15
+        Me.txtTapar.Text = "No posee fecha"
+        Me.txtTapar.Visible = False
+        '
         'cbSerie
         '
+        Me.cbSerie.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.cbSerie.Enabled = False
+        Me.cbSerie.ForeColor = System.Drawing.Color.White
         Me.cbSerie.FormattingEnabled = True
         Me.cbSerie.Location = New System.Drawing.Point(166, 102)
         Me.cbSerie.Name = "cbSerie"
@@ -133,16 +148,6 @@ Partial Class frmVideo
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = True
         '
-        'dtpFecha
-        '
-        Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(166, 66)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(138, 27)
-        Me.dtpFecha.TabIndex = 11
-        '
         'VSerie
         '
         Me.VSerie.AutoSize = True
@@ -165,15 +170,15 @@ Partial Class frmVideo
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Contenido"
         '
-        'txtTapar
+        'dtpFecha
         '
-        Me.txtTapar.Enabled = False
-        Me.txtTapar.Location = New System.Drawing.Point(166, 66)
-        Me.txtTapar.Name = "txtTapar"
-        Me.txtTapar.Size = New System.Drawing.Size(138, 27)
-        Me.txtTapar.TabIndex = 15
-        Me.txtTapar.Text = "No posee fecha"
-        Me.txtTapar.Visible = False
+        Me.dtpFecha.Enabled = False
+        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFecha.Location = New System.Drawing.Point(166, 66)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(138, 27)
+        Me.dtpFecha.TabIndex = 11
         '
         'frmVideo
         '

@@ -30,18 +30,23 @@
         If (Not IsNothing(dtV)) Then
             cbSerie.DataSource = dtV
             cbSerie.ValueMember = "nombre"
+            cbSerie.DisplayMember = "nombre"
             ExtraerDatos()
             cbSerie.SelectedIndex = pos
         End If
+        txtNombre.ForeColor = Color.White
+        txtContenido.ForeColor = Color.White
+        cbSerie.BackColor = Color.FromArgb(64, 64, 64)
         ''tmpNombre = datosI(0)
         ''tmpFecha = datosI(1)
         ''tmpContenido = datosI(2)
     End Sub
     Public Sub ExtraerDatos()
-        For j As Integer = 0 To dtV.Rows.Count
-            position(j) = dtV.Rows(1).Item(j).ToString
+        ReDim position(dtV.Rows.Count)
+        For j As Integer = 0 To dtV.Rows.Count - 1
+            position(j) = dtV.Rows(j).Item(0).ToString
         Next
-        For i As Integer = 0 To position.Length
+        For i As Integer = 0 To position.Length - 1
             If (videoID = position(i)) Then
                 pos = i
                 Exit For
@@ -82,5 +87,8 @@
 
     Private Sub frmVideo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Rellenar()
+        dtpFecha.BackColor = Color.FromArgb(64, 64, 64)
+        dtpFecha.ForeColor = Color.White
+
     End Sub
 End Class
