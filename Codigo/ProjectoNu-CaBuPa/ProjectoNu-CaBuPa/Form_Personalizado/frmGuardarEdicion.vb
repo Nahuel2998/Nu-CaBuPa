@@ -20,7 +20,7 @@
     End Sub
 
     Private Sub btnNoGuardar_Click(sender As Object, e As EventArgs) Handles btnNoGuardar.Click
-        ParentForm.Dispose()
+        frm.Dispose()
         Close()
     End Sub
 

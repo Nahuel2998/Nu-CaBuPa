@@ -106,10 +106,10 @@
     <Compile Include="Publicidad\Publicidad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Serie\Serie.Designer.vb">
-      <DependentUpon>Serie.vb</DependentUpon>
+    <Compile Include="Serie\frmSerie.Designer.vb">
+      <DependentUpon>frmSerie.vb</DependentUpon>
     </Compile>
-    <Compile Include="Serie\Serie.vb">
+    <Compile Include="Serie\frmSerie.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="S_Principal\ControlActivo.Designer.vb">
@@ -191,8 +191,8 @@
     <EmbeddedResource Include="Publicidad\Publicidad.resx">
       <DependentUpon>Publicidad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Serie\Serie.resx">
-      <DependentUpon>Serie.vb</DependentUpon>
+    <EmbeddedResource Include="Serie\frmSerie.resx">
+      <DependentUpon>frmSerie.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="S_Principal\ControlActivo.resx">
       <DependentUpon>ControlActivo.vb</DependentUpon>
