@@ -245,16 +245,16 @@ Module ModConector
     End Function
 #Region "Actualizar"
     Public Function APrograma(fecha As Date) As DataTable
-        Return DevolverTabla(PSQL("p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa'", "fechaprograma f inner join programa p on f.id_programa=p.id_programa", "fecha = '" + Format(CDate(fecha), "yyyy-MM-dd") + "'"))
+        Return DevolverTabla(PSQL("p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa'", "fechaprograma f inner join programa p on f.id_programa=p.id_programa", "fecha = '" + Format(fecha, "yyyy-MM-dd") + "'"))
     End Function
     Public Function AFPrograma(idPrograma As Integer) As DataTable
         Return DevolverTabla(PSQL("Nombre, Telefono", "programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario", "p.id_programa = '" + idPrograma.ToString + "'"))
     End Function
     Public Function APublicidad(Fecha As Date, Hora As TimeSpan) As DataTable
-        Return DevolverTabla(PSQL("Tema", "publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad inner join tanda t on t.Hora_Inicio = a.hora_inicio", "a.fecha_inicio <= '" + Format(CDate(Fecha), "yyyy-MM-dd") + "' and a.fecha_finalizacion >= '" + Format(CDate(Fecha), "yyyy-MM-dd").ToString + "' and t.hora_inicio = '" + Hora.ToString + "'"))
+        Return DevolverTabla(PSQL("Tema", "publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad inner join tanda t on t.Hora_Inicio = a.hora_inicio", "a.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd").ToString + "' and t.hora_inicio = '" + Hora.ToString + "'"))
     End Function
     Public Function APPublicidad(Fecha As Date, idPrograma As Integer) As DataTable
-        Return DevolverTabla(PSQL("Tema", "programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad", "pp.fecha_inicio <= '" + Format(CDate(Fecha), "yyyy-MM-dd") + "' and pp.fecha_finalizacion >= '" + Format(CDate(Fecha), "yyyy-MM-dd").ToString + "' and pp.id_programa = '" + idPrograma.ToString + "'"))
+        Return DevolverTabla(PSQL("Tema", "programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad", "pp.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and pp.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd").ToString + "' and pp.id_programa = '" + idPrograma.ToString + "'"))
     End Function
     Public Function AEventos() As DataTable
         Return DevolverTabla(PSQL("e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre", "evento e inner join fechaevento f on f.id_evento=e.id_evento", "f.fecha >= now()"))

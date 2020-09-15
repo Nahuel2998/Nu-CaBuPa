@@ -23,11 +23,14 @@ Public Class Serie
     End Sub
 
     Private Sub btnSSalir_Click(sender As Object, e As EventArgs) Handles btnSSalir.Click
-        Me.Close()
+        Close()
     End Sub
 
     Private Sub Serie_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If editando Then
+            Dim datos() As String = {Format(dtpFecha.Value, "yyyy-MM-dd"), txtNombre.Text}
+            Dim g As New frmGuardarEdicion("Serie", datos, serieID, Me)
+            g.ShowDialog()
             e.Cancel = True
         End If
     End Sub

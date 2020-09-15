@@ -18,4 +18,16 @@
             End If
         End If
     End Sub
+
+    Public Sub PrepararUpdate(ByVal tabla As String, ByVal datos() As String, ByVal id As String)
+        Dim res As String = ""
+        Dim dt As DataTable = ESQLSelect("describe " + tabla)
+        Dim i As Integer = 1
+        For Each dato In datos
+            res += String.Format("{0} = '{1}',", dt.Rows(i).Item(0).ToString, dato)
+            i += 1
+        Next
+        res = res.Remove(res.Length - 1)
+        USQL(tabla, res, String.Format("{0} = '{1}'", dt.Rows(0).Item(0).ToString, id))
+    End Sub
 End Module
