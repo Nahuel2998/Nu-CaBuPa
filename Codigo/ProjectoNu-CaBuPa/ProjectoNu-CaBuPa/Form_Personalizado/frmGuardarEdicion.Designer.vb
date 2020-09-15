@@ -70,7 +70,7 @@ Partial Class frmGuardarEdicion
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(75, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(188, 36)
+        Me.Label1.Size = New System.Drawing.Size(225, 46)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Hay cambios sin guardar." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Desea guardarlos?"
         '
@@ -87,7 +87,7 @@ Partial Class frmGuardarEdicion
         '
         'frmGuardarEdicion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(306, 100)

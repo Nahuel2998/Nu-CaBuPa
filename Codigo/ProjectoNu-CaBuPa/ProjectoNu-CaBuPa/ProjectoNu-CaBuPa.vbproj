@@ -174,10 +174,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="S_Video\Video.Designer.vb">
-      <DependentUpon>Video.vb</DependentUpon>
+    <Compile Include="S_Video\frmVideo.Designer.vb">
+      <DependentUpon>frmVideo.vb</DependentUpon>
     </Compile>
-    <Compile Include="S_Video\Video.vb">
+    <Compile Include="S_Video\frmVideo.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -224,8 +224,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="S_Video\Video.resx">
-      <DependentUpon>Video.vb</DependentUpon>
+    <EmbeddedResource Include="S_Video\frmVideo.resx">
+      <DependentUpon>frmVideo.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

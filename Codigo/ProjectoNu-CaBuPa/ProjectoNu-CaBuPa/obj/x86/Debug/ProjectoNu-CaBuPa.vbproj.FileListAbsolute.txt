@@ -74,7 +74,6 @@ C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-
 C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\aa\ProjectoNu-CaBuPa.resources.dll
 C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.ControlActivo.resources
 C:\Users\Usuario\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.ControlActivo.resources
-C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.Video.resources
 C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\Interop.ComCtl3.dll
 C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\Interop.MSComCtl2.dll
 C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\Interop.MSComctlLib.dll
@@ -133,3 +132,6 @@ C:\Users\nahue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-Ca
 C:\Users\nahue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu-CaBuPa.pdb
 C:\Users\nahue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.frmGuardarEdicion.resources
 C:\Users\nahue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.frmSerie.resources
+C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.frmGuardarEdicion.resources
+C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.frmSerie.resources
+C:\Users\manue\Documents\GitHub\Nu-CaBuPa\Codigo\ProjectoNu-CaBuPa\ProjectoNu-CaBuPa\obj\x86\Debug\ProjectoNu_CaBuPa.frmVideo.resources

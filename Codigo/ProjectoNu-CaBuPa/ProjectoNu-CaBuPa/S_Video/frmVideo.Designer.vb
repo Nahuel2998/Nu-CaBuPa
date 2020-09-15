@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Video
+Partial Class frmVideo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,16 +23,17 @@ Partial Class Video
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.tbVideo = New System.Windows.Forms.TextBox()
-        Me.tbContenido = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtContenido = New System.Windows.Forms.TextBox()
         Me.VFecha = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cbSerie = New System.Windows.Forms.ComboBox()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.VSerie = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.cbSerie = New System.Windows.Forms.ComboBox()
+        Me.txtTapar = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -47,25 +48,27 @@ Partial Class Video
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre"
         '
-        'tbVideo
+        'txtNombre
         '
-        Me.tbVideo.Location = New System.Drawing.Point(166, 30)
-        Me.tbVideo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.tbVideo.Name = "tbVideo"
-        Me.tbVideo.ReadOnly = True
-        Me.tbVideo.Size = New System.Drawing.Size(138, 27)
-        Me.tbVideo.TabIndex = 1
+        Me.txtNombre.Enabled = False
+        Me.txtNombre.Location = New System.Drawing.Point(166, 30)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.ReadOnly = True
+        Me.txtNombre.Size = New System.Drawing.Size(138, 27)
+        Me.txtNombre.TabIndex = 1
         '
-        'tbContenido
+        'txtContenido
         '
-        Me.tbContenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.tbContenido.Location = New System.Drawing.Point(8, 24)
-        Me.tbContenido.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.tbContenido.Multiline = True
-        Me.tbContenido.Name = "tbContenido"
-        Me.tbContenido.ReadOnly = True
-        Me.tbContenido.Size = New System.Drawing.Size(365, 147)
-        Me.tbContenido.TabIndex = 3
+        Me.txtContenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtContenido.Enabled = False
+        Me.txtContenido.Location = New System.Drawing.Point(8, 24)
+        Me.txtContenido.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtContenido.Multiline = True
+        Me.txtContenido.Name = "txtContenido"
+        Me.txtContenido.ReadOnly = True
+        Me.txtContenido.Size = New System.Drawing.Size(365, 147)
+        Me.txtContenido.TabIndex = 3
         '
         'VFecha
         '
@@ -82,6 +85,7 @@ Partial Class Video
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.txtTapar)
         Me.GroupBox1.Controls.Add(Me.cbSerie)
         Me.GroupBox1.Controls.Add(Me.btnSalir)
         Me.GroupBox1.Controls.Add(Me.btnEditar)
@@ -90,19 +94,28 @@ Partial Class Video
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.VFecha)
-        Me.GroupBox1.Controls.Add(Me.tbVideo)
+        Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Location = New System.Drawing.Point(15, 14)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox1.Size = New System.Drawing.Size(398, 360)
+        Me.GroupBox1.Size = New System.Drawing.Size(394, 356)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos"
         '
+        'cbSerie
+        '
+        Me.cbSerie.Enabled = False
+        Me.cbSerie.FormattingEnabled = True
+        Me.cbSerie.Location = New System.Drawing.Point(166, 102)
+        Me.cbSerie.Name = "cbSerie"
+        Me.cbSerie.Size = New System.Drawing.Size(138, 26)
+        Me.cbSerie.TabIndex = 14
+        '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(8, 327)
+        Me.btnSalir.Location = New System.Drawing.Point(296, 328)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(94, 26)
@@ -112,7 +125,7 @@ Partial Class Video
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(286, 327)
+        Me.btnEditar.Location = New System.Drawing.Point(8, 328)
         Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(94, 26)
@@ -142,7 +155,7 @@ Partial Class Video
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.tbContenido)
+        Me.GroupBox3.Controls.Add(Me.txtContenido)
         Me.GroupBox3.Location = New System.Drawing.Point(8, 140)
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox3.Name = "GroupBox3"
@@ -152,16 +165,17 @@ Partial Class Video
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Contenido"
         '
-        'cbSerie
+        'txtTapar
         '
-        Me.cbSerie.Enabled = False
-        Me.cbSerie.FormattingEnabled = True
-        Me.cbSerie.Location = New System.Drawing.Point(166, 102)
-        Me.cbSerie.Name = "cbSerie"
-        Me.cbSerie.Size = New System.Drawing.Size(138, 26)
-        Me.cbSerie.TabIndex = 14
+        Me.txtTapar.Enabled = False
+        Me.txtTapar.Location = New System.Drawing.Point(166, 66)
+        Me.txtTapar.Name = "txtTapar"
+        Me.txtTapar.Size = New System.Drawing.Size(138, 27)
+        Me.txtTapar.TabIndex = 15
+        Me.txtTapar.Text = "No posee fecha"
+        Me.txtTapar.Visible = False
         '
-        'Video
+        'frmVideo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -170,8 +184,13 @@ Partial Class Video
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Name = "Video"
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(446, 434)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(446, 434)
+        Me.Name = "frmVideo"
         Me.Text = "Video"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -182,8 +201,8 @@ Partial Class Video
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents tbVideo As TextBox
-    Friend WithEvents tbContenido As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents txtContenido As TextBox
     Friend WithEvents VFecha As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents VSerie As Label
@@ -192,4 +211,5 @@ Partial Class Video
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnEditar As Button
     Friend WithEvents cbSerie As ComboBox
+    Friend WithEvents txtTapar As TextBox
 End Class

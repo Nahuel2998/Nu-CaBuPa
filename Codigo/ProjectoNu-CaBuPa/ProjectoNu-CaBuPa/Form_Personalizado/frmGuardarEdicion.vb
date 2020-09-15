@@ -26,7 +26,6 @@
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         PrepararUpdate(tabla, datos, id)
-
         frm.Dispose()
         Close()
     End Sub

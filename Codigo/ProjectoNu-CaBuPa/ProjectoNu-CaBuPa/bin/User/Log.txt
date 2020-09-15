@@ -680,3 +680,38 @@
 14/9/2020 23:05:54 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 14/9/2020 23:07:40 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 14/9/2020 23:08:37 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:40:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:40:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:41:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:43:26 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+15/09/2020 7:46:26 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:46:41 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+15/09/2020 7:52:42 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:52:55 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+15/09/2020 7:53:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:54:01 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+15/09/2020 7:54:01 DESKTOP-SDVEG3U ' select video FROM Nombre,DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha,Contenido,id_serie WHERE id_video = '1' 
+15/09/2020 7:56:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:56:22 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'no' 
+15/09/2020 7:56:22 DESKTOP-SDVEG3U ' select video FROM Nombre,DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha,Contenido,id_serie WHERE id_video = '3' 
+15/09/2020 7:57:36 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:57:45 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'no
+' 
+15/09/2020 7:57:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'no' 
+15/09/2020 7:57:53 DESKTOP-SDVEG3U ' select video FROM Nombre,DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha,Contenido,id_serie WHERE id_video = '3' 
+15/09/2020 8:00:56 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:01:47 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:03:53 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:04:00 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:04:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:04:42 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:05:47 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:05:55 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:08:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:08:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:11:47 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:11:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:14:41 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:14:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:15:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:15:43 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 

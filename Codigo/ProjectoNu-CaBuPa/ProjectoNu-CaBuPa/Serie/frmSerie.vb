@@ -17,6 +17,7 @@ Public Class frmSerie
         txtNombre.Text = nombre
         dtpFecha.Value = fecha
     End Sub
+    
 
     Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnSEditar.Click
         ' editando = True   -> Se guardaran los cambios
@@ -86,4 +87,5 @@ Public Class frmSerie
             cambio = True
         End If
     End Sub
+
 End Class

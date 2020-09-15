@@ -250,16 +250,21 @@ Public Class frmPrincipal
         If (Not String.IsNullOrWhiteSpace(txtVcontenido.Text)) Then
             condicion += " and v.contenido = '" + txtVcontenido.Text + "'"
         End If
-        BWBuscador.RunWorkerAsync(PSQL("fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie", "video v", condicion))
+        BWBuscador.RunWorkerAsync(PSQL("id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie", "video v", condicion))
     End Sub
 
     Private Sub BWBuscador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWBuscador.RunWorkerCompleted
         Select Case TBuscada
             Case "Video"
                 dt_Video = TBusca
-                ActualizarTabla(dt_Video, dgvVB)
+                ActualizarTablaC(dt_Video, dgvVB)
         End Select
         TBusca = Nothing
         TBuscada = ""
+    End Sub
+
+    Private Sub dgvVB_Click(sender As Object, e As EventArgs) Handles dgvVB.Click
+        Dim formVideo As New frmVideo(CargarID(dt_Video, dgvVB))
+        formVideo.ShowDialog()
     End Sub
 End Class
