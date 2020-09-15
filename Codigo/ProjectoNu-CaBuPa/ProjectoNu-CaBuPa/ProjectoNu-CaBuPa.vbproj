@@ -306,9 +306,6 @@
   <ItemGroup>
     <None Include="Resources\1600127379895.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\png-clipart-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

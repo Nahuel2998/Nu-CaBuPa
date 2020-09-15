@@ -1020,3 +1020,9 @@
 15/09/2020 12:21:46 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
 15/9/2020 19:09:57 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 15/9/2020 19:11:08 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/9/2020 20:02:42 LAPTOP-J0MPD84C ' DataSource=; Port=; Database=; Uid=; Pwd=; CharSet=utf8 
+15/9/2020 20:03:40 LAPTOP-J0MPD84C ' DataSource=localhost; Port=; Database=; Uid=; Pwd=; CharSet=utf8 
+15/9/2020 20:04:21 LAPTOP-J0MPD84C ' DataSource=localhost; Port=; Database=; Uid=; Pwd=; CharSet=utf8 
+15/9/2020 20:04:44 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=d; Pwd=d; CharSet=utf8 
+15/9/2020 20:05:23 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/9/2020 20:13:10 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

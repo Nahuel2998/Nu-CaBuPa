@@ -124,7 +124,4 @@
   <data name="1600127379895" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1600127379895.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="png-clipart-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-clipart-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
