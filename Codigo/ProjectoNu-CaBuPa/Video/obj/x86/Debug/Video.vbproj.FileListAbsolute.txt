@@ -1,9 +1,0 @@
-C:\Users\Usuario\documents\visual studio 2010\Projects\Video\Video\bin\Debug\Video.exe
-C:\Users\Usuario\documents\visual studio 2010\Projects\Video\Video\bin\Debug\Video.pdb
-C:\Users\Usuario\documents\visual studio 2010\Projects\Video\Video\bin\Debug\Video.xml
-C:\Users\Usuario\documents\visual studio 2010\Projects\Video\Video\obj\x86\Debug\Video.Form1.resources
-C:\Users\Usuario\documents\visual studio 2010\Projects\Video\Video\obj\x86\Debug\Video.Resources.resources
-C:\Users\Usuario\documents\visual studio 2010\Projects\Video\Video\obj\x86\Debug\Video.vbproj.GenerateResource.Cache
-C:\Users\Usuario\documents\visual studio 2010\Projects\Video\Video\obj\x86\Debug\Video.exe
-C:\Users\Usuario\documents\visual studio 2010\Projects\Video\Video\obj\x86\Debug\Video.xml
-C:\Users\Usuario\documents\visual studio 2010\Projects\Video\Video\obj\x86\Debug\Video.pdb
