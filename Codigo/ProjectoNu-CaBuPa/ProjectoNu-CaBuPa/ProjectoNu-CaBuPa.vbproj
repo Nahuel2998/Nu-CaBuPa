@@ -88,16 +88,28 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Buscadores\ModBuscador.vb" />
-    <Compile Include="Buscadores\Tablas.vb" />
     <Compile Include="Form_Personalizado\ColorDateTimePicker.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Form_Personalizado\GuardarEdicionForm.Designer.vb">
+      <DependentUpon>GuardarEdicionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Personalizado\GuardarEdicionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modulos\ModConector.vb" />
     <Compile Include="Modulos\ModLog.vb" />
+    <Compile Include="Modulos\ModTablas.vb" />
     <Compile Include="Publicidad\Publicidad.Designer.vb">
       <DependentUpon>Publicidad.vb</DependentUpon>
     </Compile>
     <Compile Include="Publicidad\Publicidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serie\Serie.Designer.vb">
+      <DependentUpon>Serie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Serie\Serie.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="S_Principal\ControlActivo.Designer.vb">
@@ -173,8 +185,14 @@
     <EmbeddedResource Include="Ayudas de desarrollo\Generador_DB.resx">
       <DependentUpon>Generador_DB.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Personalizado\GuardarEdicionForm.resx">
+      <DependentUpon>GuardarEdicionForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Publicidad\Publicidad.resx">
       <DependentUpon>Publicidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Serie\Serie.resx">
+      <DependentUpon>Serie.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="S_Principal\ControlActivo.resx">
       <DependentUpon>ControlActivo.vb</DependentUpon>
@@ -284,6 +302,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1600127379895.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

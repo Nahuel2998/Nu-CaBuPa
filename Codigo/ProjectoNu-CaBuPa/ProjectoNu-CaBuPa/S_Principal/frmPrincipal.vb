@@ -202,19 +202,6 @@ Public Class frmPrincipal
     Public Sub Tandas()
         ActualizarTabla(dt_tandas, dgvTandas)
     End Sub
-    Public Sub ActualizarTabla(ByRef Tabla As DataTable, ByRef Dgv As DataGridView)
-        If Not IsNothing(Tabla) Then
-            Dgv.Columns.Clear()
-            Dgv.DataSource = Tabla
-            Dgv.Refresh()
-        Else
-            If (Dgv.Rows.Count > 0) Then
-                Dgv.DataSource.Rows.Clear()
-                Dgv.Refresh()
-            End If
-        End If
-
-    End Sub
     Private Sub BWTandas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWTandas.RunWorkerCompleted
         Tandas()
         BWPublicidades.RunWorkerAsync()
