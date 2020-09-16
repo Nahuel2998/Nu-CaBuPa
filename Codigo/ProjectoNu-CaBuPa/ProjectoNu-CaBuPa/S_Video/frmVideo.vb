@@ -9,6 +9,7 @@
     Dim cambio As Boolean = False
     Dim position() As String
     Dim pos As UInt16 = 0
+    Dim serieID As String = ""
 
     Public Sub New(ByVal vid As Integer)
 
@@ -25,17 +26,13 @@
             txtTapar.Visible = True
         End If
         txtContenido.Text = datosI(2)
+        serieID = If(datosI(3) = "", 0, datosI(3))
         dtV = DevolverTabla(PSQL("id_serie, nombre", "Serie", "True"))
+        LlenarCombo(cbSerie, dtV, "nombre")
         If (Not IsNothing(dtV)) Then
-            cbSerie.Items.Add("Ninguna")
-            cbSerie.DataSource = dtV
-            cbSerie.ValueMember = "nombre"
             ExtraerDatos()
-            If (pos <> 0) Then
-                cbSerie.SelectedIndex = pos
-            End If
-
         End If
+        cbSerie.SelectedIndex = pos
         txtNombre.ForeColor = Color.White
         txtContenido.ForeColor = Color.White
         cbSerie.BackColor = Color.FromArgb(64, 64, 64)
@@ -46,8 +43,8 @@
             position(j) = dtV.Rows(j).Item(0).ToString
         Next
         For i As Integer = 0 To position.Length - 1
-            If (videoID = position(i)) Then
-                pos = i
+            If (serieID = position(i)) Then
+                pos = i + 1
                 Exit For
             End If
         Next
@@ -89,6 +86,5 @@
         Rellenar()
         dtpFecha.BackColor = Color.FromArgb(64, 64, 64)
         dtpFecha.ForeColor = Color.White
-
     End Sub
 End Class

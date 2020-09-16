@@ -62,4 +62,12 @@
         End If
         Return resultado
     End Function
+
+    Public Sub LlenarCombo(ByRef con As ComboBox, ByVal dt As DataTable, ByVal col As String)
+        con.Items.Clear()
+        con.Items.Add("No está relacionado")
+        For j As Integer = 0 To dt.Rows.Count - 1
+            con.Items.Add(dt.Rows(j).Item(col).ToString)
+        Next
+    End Sub
 End Module

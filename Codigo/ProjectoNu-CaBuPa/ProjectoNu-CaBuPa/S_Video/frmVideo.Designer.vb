@@ -119,6 +119,7 @@ Partial Class frmVideo
         '
         'cbSerie
         '
+        Me.cbSerie.AutoCompleteCustomSource.AddRange(New String() {""})
         Me.cbSerie.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.cbSerie.Enabled = False
         Me.cbSerie.ForeColor = System.Drawing.Color.White
