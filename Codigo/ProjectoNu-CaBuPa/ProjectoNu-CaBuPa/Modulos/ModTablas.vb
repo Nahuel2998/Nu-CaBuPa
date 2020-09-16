@@ -48,17 +48,18 @@
     End Sub
     Public Function BuscarDatos(ByVal tabla As String, ByVal Columnas() As String, ByVal campo As String, ByVal id As String) As String()
         Dim res As String = ""
-        Dim i As Integer = 1
         Dim resultado(Columnas.Length) As String
         For Each columna In Columnas
-            res += String.Format("{0},", columna)
-            i += 1
+            res += String.Format("{0}, ", columna)
         Next
-        res = res.Remove(res.Length - 1)
+        res = res.Remove(res.Length - 2)
+        ModLog.Guardar(PSQL(res, tabla, String.Format("{0} = '{1}'", campo, id)))
         Dim dtN As DataTable = DevolverTabla(PSQL(res, tabla, String.Format("{0} = '{1}'", campo, id)))
-        For j As Integer = 0 To dtN.Rows.Count
-            resultado(j) = dtN.Rows(0).Item(j).ToString
-        Next
+        If (Not IsNothing(dtN)) Then
+            For j As Integer = 0 To dtN.Columns.Count - 1
+                resultado(j) = dtN.Rows(0).Item(j).ToString
+            Next
+        End If
         Return resultado
     End Function
 End Module

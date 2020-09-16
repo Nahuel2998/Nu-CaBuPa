@@ -8,7 +8,7 @@
     Dim dtV As DataTable
     Dim cambio As Boolean = False
     Dim position() As String
-    Dim pos As UInt16
+    Dim pos As UInt16 = 0
 
     Public Sub New(ByVal vid As Integer)
 
@@ -16,7 +16,7 @@
         videoID = vid
     End Sub
     Private Sub Rellenar()
-        Dim columnas() As String = {"Nombre", "DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha", "Contenido", "id_serie"}
+        Dim columnas() As String = {"Nombre", "DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha", "contenido", "id_serie"}
         Dim datosI() As String = BuscarDatos("video", columnas, "id_video", videoID)
         txtNombre.Text = datosI(0)
         If (datosI(1) <> "") Then
@@ -24,22 +24,21 @@
         Else
             txtTapar.Visible = True
         End If
-
         txtContenido.Text = datosI(2)
         dtV = DevolverTabla(PSQL("id_serie, nombre", "Serie", "True"))
         If (Not IsNothing(dtV)) Then
+            cbSerie.Items.Add("Ninguna")
             cbSerie.DataSource = dtV
             cbSerie.ValueMember = "nombre"
-            cbSerie.DisplayMember = "nombre"
             ExtraerDatos()
-            cbSerie.SelectedIndex = pos
+            If (pos <> 0) Then
+                cbSerie.SelectedIndex = pos
+            End If
+
         End If
         txtNombre.ForeColor = Color.White
         txtContenido.ForeColor = Color.White
         cbSerie.BackColor = Color.FromArgb(64, 64, 64)
-        ''tmpNombre = datosI(0)
-        ''tmpFecha = datosI(1)
-        ''tmpContenido = datosI(2)
     End Sub
     Public Sub ExtraerDatos()
         ReDim position(dtV.Rows.Count)
@@ -56,12 +55,13 @@
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         If editando Then
             If cambio Then
-                Dim datos() As String = {Format(dtpFecha.Value, "yyyy-MM-dd"), txtNombre.Text}
+                Dim datos() As String = {txtContenido.Text, txtNombre.Text, If(pos = 0, "null", pos), Format(dtpFecha.Value, "yyyy-MM-dd"), txtNombre.Text}
                 PrepararUpdate("video", datos, videoID)
 
                 cambio = False
             End If
         Else
+            tmpContenido = txtContenido.Text
             tmpFecha = dtpFecha.Value
             tmpNombre = txtNombre.Text
         End If
