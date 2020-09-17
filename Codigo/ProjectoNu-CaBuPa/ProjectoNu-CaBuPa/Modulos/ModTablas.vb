@@ -53,7 +53,6 @@
             res += String.Format("{0}, ", columna)
         Next
         res = res.Remove(res.Length - 2)
-        ModLog.Guardar(PSQL(res, tabla, String.Format("{0} = '{1}'", campo, id)))
         Dim dtN As DataTable = DevolverTabla(PSQL(res, tabla, String.Format("{0} = '{1}'", campo, id)))
         If (Not IsNothing(dtN)) Then
             For j As Integer = 0 To dtN.Columns.Count - 1
@@ -72,9 +71,6 @@
     End Sub
 
     Public Function CompararValores(ByVal s1() As String, ByVal s2() As String) As Boolean
-        If s1.Length <> s2.Length Then
-            Return False
-        End If
         For j As Integer = 0 To s2.Length - 1
             If s1(j) <> s2(j) Then
                 Return False
@@ -83,11 +79,13 @@
         Return True
     End Function
     Public Function VaciarNull(ByVal s1() As String) As String()
+        Dim sN(s1.Length - 1) As String
         For j As Integer = 0 To s1.Length - 1
+            sN(j) = s1(j)
             If s1(j) = "null" Then
-                s1(j) = ""
+                sN(j) = ""
             End If
         Next
-        Return s1
+        Return sN
     End Function
 End Module

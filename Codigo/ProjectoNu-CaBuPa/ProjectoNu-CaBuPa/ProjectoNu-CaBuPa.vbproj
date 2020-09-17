@@ -100,7 +100,6 @@
     <Compile Include="Modulos\ModConector.vb" />
     <Compile Include="Modulos\ModLog.vb" />
     <Compile Include="Modulos\ModTablas.vb" />
-    <Compile Include="Modulos\ModTransferencia.vb" />
     <Compile Include="Publicidad\Publicidad.Designer.vb">
       <DependentUpon>Publicidad.vb</DependentUpon>
     </Compile>

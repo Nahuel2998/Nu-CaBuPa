@@ -18,9 +18,8 @@ Public Class frmGuardarEdicion
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        ModInicializador.Cancelar = True
+        ModInicializador.Cancelar += tabla
         Close()
-
     End Sub
 
     Private Sub btnNoGuardar_Click(sender As Object, e As EventArgs) Handles btnNoGuardar.Click
@@ -30,9 +29,5 @@ Public Class frmGuardarEdicion
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         PrepararUpdate(tabla, datos, id)
         Close()
-    End Sub
-
-    Private Sub frmGuardarEdicion_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        ModInicializador.Cancelar = False
     End Sub
 End Class

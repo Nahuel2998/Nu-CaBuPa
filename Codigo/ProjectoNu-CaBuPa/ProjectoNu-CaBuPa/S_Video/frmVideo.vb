@@ -1,6 +1,6 @@
 ﻿Public Class frmVideo
     Dim videoID As Integer
-    Dim editando As Boolean = False
+    Public editando As Boolean = False
     Dim datos() As String
     Dim datosI() As String
     Dim dtV As DataTable
@@ -26,7 +26,14 @@
             txtTapar.Visible = True
         End If
         txtContenido.Text = datosI(0)
-        serieID = If(datosI(2) = "", 0, datosI(2))
+        If (datosI(2) = "") Then
+            serieID = 0
+        Else
+            serieID = datosI(2)
+            If (datosI(2) = 0) Then
+                datosI(2) = ""
+            End If
+        End If
         dtV = DevolverTabla(PSQL("id_serie, nombre", "Serie", "True"))
         LlenarCombo(cbSerie, dtV, "nombre")
         If (Not IsNothing(dtV)) Then
@@ -36,7 +43,7 @@
     End Sub
 
     Public Sub ExtraerDatos()
-        ReDim position(dtV.Rows.Count)
+        ReDim position(dtV.Rows.Count - 1)
         For j As Integer = 0 To dtV.Rows.Count - 1
             position(j) = dtV.Rows(j).Item(0).ToString
         Next
@@ -103,11 +110,10 @@
             If Not CompararValores(VaciarNull(datos), datosI) Then
                 Dim g As New frmGuardarEdicion("Video", datos, videoID, Me)
                 g.ShowDialog()
-                If (ModInicializador.Cancelar) Then
+                If ModInicializador.Cancelar.Contains("Video") Then
                     e.Cancel = True
-                    ModInicializador.Cancelar = False
+                    ModInicializador.Cancelar = ModInicializador.Cancelar.Replace("Video", "")
                 Else
-                    e.Cancel = False
                     ModInicializador.frmPrin.btnbuscarv.PerformClick()
                 End If
             End If

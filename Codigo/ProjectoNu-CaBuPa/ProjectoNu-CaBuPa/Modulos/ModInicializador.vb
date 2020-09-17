@@ -1,6 +1,6 @@
 ﻿' El modulo trabaja como union y acceso entre los formularios
 Module ModInicializador
-    Public Cancelar As Boolean = False
+    Public Cancelar As String = ""
     Public frmPrin As frmPrincipal
     Public Sub Configuracion()
         Dim frmConfig As New frmConfiguracion
