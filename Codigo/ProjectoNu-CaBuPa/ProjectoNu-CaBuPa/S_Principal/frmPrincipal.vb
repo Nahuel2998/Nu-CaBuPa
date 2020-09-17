@@ -250,7 +250,9 @@ Public Class frmPrincipal
         If (Not String.IsNullOrWhiteSpace(txtVcontenido.Text)) Then
             condicion += " and v.contenido = '" + txtVcontenido.Text + "'"
         End If
-        BWBuscador.RunWorkerAsync(PSQL("id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie", "video v", condicion))
+        If Not (BWBuscador.IsBusy) Then
+            BWBuscador.RunWorkerAsync(PSQL("id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie", "video v", condicion))
+        End If
     End Sub
 
     Private Sub BWBuscador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWBuscador.RunWorkerCompleted
@@ -263,7 +265,7 @@ Public Class frmPrincipal
         TBuscada = ""
     End Sub
 
-    Private Sub dgvVB_Click(sender As Object, e As EventArgs) Handles dgvVB.Click
+    Private Sub dgvVB_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellDoubleClick
         Dim formVideo As New frmVideo(CargarID(dt_Video, dgvVB))
         formVideo.ShowDialog()
     End Sub

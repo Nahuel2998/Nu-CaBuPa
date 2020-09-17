@@ -15,10 +15,6 @@
     Public Sub Buscar()
         Dim columnas() As String = {"contenido", "Nombre", "id_serie", "DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha"}
         datosI = BuscarDatos("video", columnas, "id_video", videoID)
-
-        ModLog.Guardar(datosI.Length)
-        datos = datosI
-
         Rellenar()
     End Sub
 
@@ -55,9 +51,9 @@
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         If editando Then
             ActualizarDatos()
-            If Not CompararValores(datos, datosI) Then
+            If Not CompararValores(VaciarNull(datos), datosI) Then
                 PrepararUpdate("video", datos, videoID)
-                datosI = datos
+                datosI = VaciarNull(datos)
             End If
         End If
         Alternar()
@@ -74,14 +70,9 @@
         btnSalir.Text = If(editando, "Cancelar", "Salir")
 
         chbTieneFecha.Visible = editando
-
-        If editando Then
+        chbTieneFecha.Checked = datosI(3) <> ""
+            If editando Then
             txtTapar.Visible = False
-
-            ' FIXED: Ahora sirve
-            If datosI(3) <> "" Then
-                chbTieneFecha.Checked = True
-            End If
         Else
             If datosI(3) = "" Then
                 txtTapar.Visible = True
@@ -103,17 +94,22 @@
         Buscar()
         dtpFecha.BackColor = Color.FromArgb(64, 64, 64)
         dtpFecha.ForeColor = Color.White
+        btnSalir.Select()
     End Sub
 
     Private Sub frmVideo_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If editando Then
             ActualizarDatos()
-            If Not CompararValores(datos, datosI) Then
+            If Not CompararValores(VaciarNull(datos), datosI) Then
                 Dim g As New frmGuardarEdicion("Video", datos, videoID, Me)
                 g.ShowDialog()
-
-                Alternar()
-                e.Cancel = True
+                If (ModInicializador.Cancelar) Then
+                    e.Cancel = True
+                    ModInicializador.Cancelar = False
+                Else
+                    e.Cancel = False
+                    ModInicializador.frmPrin.btnbuscarv.PerformClick()
+                End If
             End If
         End If
     End Sub

@@ -1,5 +1,7 @@
 ﻿' El modulo trabaja como union y acceso entre los formularios
 Module ModInicializador
+    Public Cancelar As Boolean = False
+    Public frmPrin As frmPrincipal
     Public Sub Configuracion()
         Dim frmConfig As New frmConfiguracion
         ' Muestra el formulario de configuracion
@@ -11,7 +13,7 @@ Module ModInicializador
         Gen.ShowDialog()
     End Sub
     Public Sub Principal()
-        Dim frmPrin As New frmPrincipal
+        frmPrin = New frmPrincipal
         ' Muestra el formulario de configuracion
         frmPrin.Show()
     End Sub

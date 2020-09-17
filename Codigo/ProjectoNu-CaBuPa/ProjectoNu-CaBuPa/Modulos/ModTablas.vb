@@ -76,13 +76,18 @@
             Return False
         End If
         For j As Integer = 0 To s2.Length - 1
-            If s1(j) = "null" Then
-                s1(j) = ""
-            End If
             If s1(j) <> s2(j) Then
                 Return False
             End If
         Next
         Return True
+    End Function
+    Public Function VaciarNull(ByVal s1() As String) As String()
+        For j As Integer = 0 To s1.Length - 1
+            If s1(j) = "null" Then
+                s1(j) = ""
+            End If
+        Next
+        Return s1
     End Function
 End Module
