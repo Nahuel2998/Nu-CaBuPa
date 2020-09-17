@@ -1,13 +1,14 @@
 *.driveupload
 
-# Archivos de usuario (VS)
+### Archivos de usuario (VS)
 **/*.rsuser
-**/*.suo			# Fuera de aqui
+# Fuera de aqui
+**/*.suo			
 **/*.user
 **/*.userosscache
 **/*.sln.docstates
 
-# Resultados de Builds
+### Resultados de Builds
 **/bld/
 **/[Bb]in/*
 !**/[Bb]in/User/
@@ -15,11 +16,12 @@
 **/[Ll]og/
 **/[Ll]ogs/
 
-# Archivos de usuario (Local)
-Codigo/ProjectoNu-CaBuPa/ProjectoNu-CaBuPa/bin/User/User.txt	# "Quiero ser capaz de cambiar el puerto" -Jefe
+### Archivos de usuario (Local)
+# "Quiero ser capaz de cambiar el puerto" -Jefe
+Codigo/ProjectoNu-CaBuPa/ProjectoNu-CaBuPa/bin/User/User.txt  
 
-# Odio el ve ese
+### Odio el ve ese
 **/.vs/
 
-# Quiero usar vim
+### Quiero usar vim
 **~

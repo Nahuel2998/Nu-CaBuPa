@@ -1,0 +1,1398 @@
+7/27/2020 4:33:01 PM acceso
+7/27/2020 4:36:20 PM acceso
+7/27/2020 4:37:18 PM eventoesdep
+7/27/2020 4:38:21 PM acceso
+7/27/2020 4:38:26 PM evento
+7/27/2020 4:38:28 PM funcionario
+7/27/2020 4:38:31 PM publicidad
+7/27/2020 4:43:56 PM acceso
+7/27/2020 4:56:40 PM acceso
+7/27/2020 5:04:40 PM acceso
+7/27/2020 6:21:43 PM acceso
+7/27/2020 6:22:12 PM acceso
+7/27/2020 6:22:14 PM eventoesdep
+7/27/2020 6:22:17 PM funtrabaja
+7/27/2020 6:22:23 PM publicidadcuota
+7/27/2020 6:24:56 PM acceso
+7/27/2020 6:29:18 PM acceso
+7/27/2020 6:30:03 PM acceso
+7/27/2020 6:30:26 PM acceso
+7/27/2020 6:31:41 PM acceso
+7/27/2020 6:31:42 PM acceso
+7/27/2020 6:31:43 PM acceso
+7/27/2020 6:31:43 PM acceso
+7/27/2020 6:32:08 PM acceso
+7/27/2020 6:33:13 PM acceso
+7/27/2020 6:33:50 PM acceso
+7/27/2020 6:34:41 PM acceso
+7/27/2020 7:25:12 PM acceso
+7/27/2020 7:27:07 PM acceso
+7/27/2020 7:27:40 PM usuarios
+7/27/2020 7:27:45 PM usuarios
+7/27/2020 7:27:45 PM usuarios
+7/27/2020 7:27:46 PM usuarios
+7/27/2020 7:27:46 PM usuarios
+7/27/2020 7:27:52 PM usuarios
+7/27/2020 7:27:55 PM trabajacomo
+7/27/2020 7:27:56 PM trabajacomo
+7/27/2020 7:27:58 PM usuarios
+7/27/2020 7:28:42 PM usuarios
+7/27/2020 7:30:40 PM usuarios
+7/27/2020 7:31:48 PM usuarios
+7/27/2020 7:32:32 PM usuarios
+7/27/2020 7:32:37 PM id_usuario, nombre, contrasena,id_usuario, nombre, contrasena,
+7/27/2020 7:34:37 PM usuarios
+7/27/2020 7:34:41 PM 'id_usuario','nombre','contrasena''id_usuario','nombre','contrasena'
+7/27/2020 7:35:42 PM usuarios
+7/27/2020 7:35:47 PM 'id_usuario','nombre','contrasena''15','er','er'
+7/27/2020 7:36:19 PM usuarios
+7/27/2020 7:36:24 PM id_usuario,nombre,contrasena'15','er','er'
+7/27/2020 7:39:44 PM System.Data.DataRowView
+7/27/2020 7:40:55 PM System.Data.DataRowView
+7/27/2020 7:42:11 PM usuarios
+7/27/2020 7:42:17 PM id_usuario,nombre,contrasena'15','3','4'
+7/27/2020 7:50:34 PM usuarios
+7/27/2020 7:50:47 PM id_usuario,nombre,contrasena'4','g','h'
+7/27/2020 7:50:55 PM id_usuario,nombre,contrasena'6','g','h'
+7/27/2020 7:53:05 PM usuarios
+7/27/2020 7:53:13 PM id_usuario,nombre,contrasena'66','g','h'
+7/27/2020 7:53:54 PM usuarios
+7/27/2020 7:54:01 PM id_usuario,nombre,contrasena'77','g','h'
+7/27/2020 7:54:44 PM nombre,contrasena'g','h'
+7/27/2020 8:02:01 PM usuarios
+7/27/2020 9:04:54 PM evento
+7/27/2020 9:06:49 PM acceso
+7/27/2020 9:06:57 PM acceso
+7/27/2020 9:06:59 PM acceso
+7/27/2020 9:06:59 PM acceso
+7/27/2020 9:06:59 PM acceso
+7/27/2020 9:07:00 PM acceso
+7/27/2020 9:07:00 PM acceso
+7/27/2020 9:07:01 PM acceso
+7/27/2020 9:07:01 PM acceso
+7/27/2020 9:07:01 PM acceso
+7/27/2020 9:07:02 PM acceso
+7/27/2020 9:07:48 PM acceso
+7/27/2020 9:08:12 PM acceso
+7/27/2020 9:10:03 PM acceso
+7/27/2020 9:10:05 PM acceso
+7/27/2020 9:10:17 PM acceso
+7/27/2020 9:11:21 PM acceso
+7/27/2020 9:11:41 PM acceso
+7/27/2020 9:11:43 PM acceso
+7/27/2020 9:11:44 PM acceso
+7/27/2020 9:11:44 PM acceso
+7/27/2020 9:11:45 PM acceso
+7/27/2020 9:11:50 PM acceso
+7/27/2020 9:11:53 PM eventoesdep
+7/27/2020 9:11:54 PM eventoesdep
+7/27/2020 9:11:57 PM pmuestrapubli
+7/27/2020 9:12:39 PM acceso
+7/27/2020 9:12:43 PM acceso
+7/27/2020 9:12:44 PM acceso
+7/27/2020 9:12:45 PM acceso
+7/27/2020 9:12:46 PM acceso
+7/27/2020 9:12:46 PM acceso
+7/27/2020 9:12:47 PM acceso
+7/27/2020 9:12:47 PM acceso
+7/27/2020 9:13:03 PM acceso
+7/27/2020 9:14:00 PM acceso
+7/27/2020 9:14:00 PM acceso
+7/27/2020 9:14:01 PM acceso
+7/27/2020 9:14:01 PM acceso
+7/27/2020 9:14:03 PM eventomuestrapubli
+7/27/2020 9:17:32 PM DESKTOP-SDVEG3U'DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8'
+7/27/2020 9:17:36 PM DESKTOP-SDVEG3U'DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8'
+05/08/2020 20:37:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+06/08/2020 19:31:14 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+06/08/2020 19:31:28 DESKTOP-SDVEG3U ' video 
+06/08/2020 19:32:54 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+06/08/2020 19:33:05 DESKTOP-SDVEG3U ' serie 
+06/08/2020 19:35:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+06/08/2020 19:35:16 DESKTOP-SDVEG3U ' acceso 
+06/08/2020 19:36:07 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+06/08/2020 19:36:26 DESKTOP-SDVEG3U ' acceso 
+06/08/2020 19:36:35 DESKTOP-SDVEG3U ' id_acceso,seccion,tipo'1','none','rw' 
+06/08/2020 19:37:23 DESKTOP-SDVEG3U ' id_acceso,seccion,tipo'3','ninguna','xr' 
+06/08/2020 19:37:29 DESKTOP-SDVEG3U ' id_acceso,seccion,tipo'4','ninguna','xr' 
+06/08/2020 19:37:40 DESKTOP-SDVEG3U ' seccion,tipo'nnnn','xr' 
+06/08/2020 19:38:27 DESKTOP-SDVEG3U ' usuarios 
+07/08/2020 19:40:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+07/08/2020 19:40:20 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+07/08/2020 20:10:18 DESKTOP-SDVEG3U ' 1730 
+07/08/2020 20:12:40 DESKTOP-SDVEG3U ' 1088 
+07/08/2020 20:12:40 DESKTOP-SDVEG3U ' 544 
+07/08/2020 20:13:05 DESKTOP-SDVEG3U ' 1088 
+07/08/2020 20:13:05 DESKTOP-SDVEG3U ' 544 
+07/08/2020 20:13:26 DESKTOP-SDVEG3U ' 1088 
+07/08/2020 20:13:26 DESKTOP-SDVEG3U ' 544 
+07/08/2020 20:21:45 DESKTOP-SDVEG3U ' 1088 
+07/08/2020 20:21:45 DESKTOP-SDVEG3U ' 544 
+07/08/2020 20:29:16 DESKTOP-SDVEG3U ' 1088 
+07/08/2020 20:29:17 DESKTOP-SDVEG3U ' 544 
+08/08/2020 10:25:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 10:26:04 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 10:26:10 DESKTOP-SDVEG3U ' acceso 
+08/08/2020 10:26:21 DESKTOP-SDVEG3U ' fechaprograma 
+08/08/2020 10:28:15 DESKTOP-SDVEG3U ' programa 
+08/08/2020 10:30:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 10:30:17 DESKTOP-SDVEG3U ' acceso 
+08/08/2020 10:30:23 DESKTOP-SDVEG3U ' programa 
+08/08/2020 10:36:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 10:36:42 DESKTOP-SDVEG3U ' programa 
+08/08/2020 10:36:46 DESKTOP-SDVEG3U ' Nombre_Programa'ff' 
+08/08/2020 10:39:01 DESKTOP-SDVEG3U ' fechaprograma 
+08/08/2020 10:40:42 DESKTOP-SDVEG3U ' Fecha,Hora_Inicio,Hora_Fin,ID_Programa'2020-08-08','17:14:10','18:14:10','1' 
+08/08/2020 10:41:11 DESKTOP-SDVEG3U ' Fecha,Hora_Inicio,Hora_Fin,ID_Programa'2020-08-08','16:14:10','17:14:10','1' 
+08/08/2020 10:41:21 DESKTOP-SDVEG3U ' Fecha,Hora_Inicio,Hora_Fin,ID_Programa'2020-08-08','10:14:10','12:14:10','1' 
+08/08/2020 10:41:32 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 10:46:36 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:15:47 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:16:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:17:10 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:17:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:25:22 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:27:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:29:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:33:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:34:46 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:38:00 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:38:49 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:55:14 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:55:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:58:44 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 11:59:54 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 12:02:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 12:09:10 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 12:15:22 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 12:15:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 12:17:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 12:28:09 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 17:09:22 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 17:13:59 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 17:33:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:21:40 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:34:19 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:35:02 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:39:10 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:40:14 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:45:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:47:19 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:49:56 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:51:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:51:45 DESKTOP-SDVEG3U ' programa 
+08/08/2020 18:51:55 DESKTOP-SDVEG3U ' Nombre_Programa'Meles program' 
+08/08/2020 18:52:18 DESKTOP-SDVEG3U ' Nombre_Programa'Relleno con Mateo' 
+08/08/2020 18:52:38 DESKTOP-SDVEG3U ' Nombre_Programa'Proof or report Manuel' 
+08/08/2020 18:52:42 DESKTOP-SDVEG3U ' fechaprograma 
+08/08/2020 18:53:57 DESKTOP-SDVEG3U ' Fecha,Hora_Inicio,Hora_Fin,ID_Programa'2020-08-08','19:05:00','20:05:00','3' 
+08/08/2020 18:54:42 DESKTOP-SDVEG3U ' Fecha,Hora_Inicio,Hora_Fin,ID_Programa'2020-08-09','12:30','13','4' 
+08/08/2020 18:54:53 DESKTOP-SDVEG3U ' Fecha,Hora_Inicio,Hora_Fin,ID_Programa'2020-08-09','13:30','14','5' 
+08/08/2020 18:54:56 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:57:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 18:59:36 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:00:25 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:02:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:06:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:07:25 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:08:54 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:10:04 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:12:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:19:49 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:28:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:29:53 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:30:44 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:39:16 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 19:42:02 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:05:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:09:16 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:11:23 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:13:58 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:14:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:14:56 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:18:03 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:18:08 DESKTOP-SDVEG3U ' 10:14:10 20:18:08.9203074 10:14:10 
+08/08/2020 20:18:08 DESKTOP-SDVEG3U ' 16:14:10 20:18:08.9233071 16:14:10 
+08/08/2020 20:18:08 DESKTOP-SDVEG3U ' 17:14:10 20:18:08.9253045 17:14:10 
+08/08/2020 20:18:08 DESKTOP-SDVEG3U ' 19:05:00 20:18:08.9283050 19:05:00 
+08/08/2020 20:19:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:19:13 DESKTOP-SDVEG3U ' 10:14:10 20:19:13.6913440 12:14:10 
+08/08/2020 20:19:13 DESKTOP-SDVEG3U ' 16:14:10 20:19:13.6983385 17:14:10 
+08/08/2020 20:19:13 DESKTOP-SDVEG3U ' 17:14:10 20:19:13.7213258 18:14:10 
+08/08/2020 20:19:13 DESKTOP-SDVEG3U ' 19:05:00 20:19:13.7243240 21:20:00 
+08/08/2020 20:31:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:37:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:39:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:43:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:52:54 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/08/2020 20:57:36 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 17:57:14 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 17:57:38 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 17:58:07 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:16:08 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:20:12 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:21:48 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:29:23 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:29:36 LAPTOP-701EDAA0 ' programa 
+9/8/2020 18:30:01 LAPTOP-701EDAA0 ' Nombre_Programa,Fecha_Finalizacion'Hola','9-9-2020' 
+9/8/2020 18:30:25 LAPTOP-701EDAA0 ' Nombre_Programa,Fecha_Finalizacion'Hola','09/09/2020' 
+9/8/2020 18:31:10 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:32:48 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 18:33:04 LAPTOP-701EDAA0 ' programa 
+9/8/2020 18:33:24 LAPTOP-701EDAA0 ' ID_Programa,Nombre_Programa,Fecha_Finalizacion'1','Hola','10/10/2020' 
+9/8/2020 18:33:48 LAPTOP-701EDAA0 ' ID_Programa,Nombre_Programa,Fecha_Finalizacion'1','Hola','09-10-2020' 
+9/8/2020 18:34:30 LAPTOP-701EDAA0 ' fechaprograma 
+9/8/2020 18:35:03 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:18:31 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:19:20 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:20:29 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:26:10 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:27:17 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:28:28 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:31:30 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:33:54 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:35:05 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+9/8/2020 19:39:36 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+09/08/2020 20:58:27 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+09/08/2020 20:59:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+09/08/2020 21:53:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+09/08/2020 21:54:35 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+09/08/2020 21:56:08 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+09/08/2020 21:56:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+09/08/2020 21:58:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+09/08/2020 21:59:00 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:15:04 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:15:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:19:07 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:22:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:28:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:37:58 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:44:52 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:48:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:54:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:54:59 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:57:25 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 9:57:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:00:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:00:44 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:08:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:11:59 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:12:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:14:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:17:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:18:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:19:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:21:11 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:22:00 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:22:32 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:24:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:24:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:26:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:26:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:29:19 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:31:30 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:35:03 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:38:14 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:39:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 10:56:00 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:26:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:27:26 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:28:42 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:31:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:32:56 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:35:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:37:09 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:38:21 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:38:59 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:40:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:41:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:41:48 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:42:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:42:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:44:04 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:45:11 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:46:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:47:04 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:48:44 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:50:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:56:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:56:41 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 11:56:51 DESKTOP-SDVEG3U ' funcionario 
+10/08/2020 11:57:06 DESKTOP-SDVEG3U ' telefono,nombre'34244','Manuel' 
+10/08/2020 11:57:12 DESKTOP-SDVEG3U ' telefono,nombre'34244','Mili' 
+10/08/2020 11:57:20 DESKTOP-SDVEG3U ' telefono,nombre'9483948','Mateo' 
+10/08/2020 11:57:29 DESKTOP-SDVEG3U ' telefono,nombre'2998','Nahuel' 
+10/08/2020 11:57:35 DESKTOP-SDVEG3U ' funtrabaja 
+10/08/2020 11:57:46 DESKTOP-SDVEG3U ' funcion 
+10/08/2020 11:58:21 DESKTOP-SDVEG3U ' ID_Funcion,descripcion'1','Trabaja' 
+10/08/2020 11:58:25 DESKTOP-SDVEG3U ' ID_Funcion,descripcion'2','Trabaja' 
+10/08/2020 11:58:27 DESKTOP-SDVEG3U ' ID_Funcion,descripcion'3','Trabaja' 
+10/08/2020 11:58:30 DESKTOP-SDVEG3U ' ID_Funcion,descripcion'4','Trabaja' 
+10/08/2020 11:58:53 DESKTOP-SDVEG3U ' funtrabaja 
+10/08/2020 11:59:36 DESKTOP-SDVEG3U ' ID_Funcionario,ID_Funcion,ID_Programa'1','1','3' 
+10/08/2020 11:59:42 DESKTOP-SDVEG3U ' ID_Funcionario,ID_Funcion,ID_Programa'2','1','3' 
+10/08/2020 11:59:45 DESKTOP-SDVEG3U ' ID_Funcionario,ID_Funcion,ID_Programa'3','1','3' 
+10/08/2020 11:59:47 DESKTOP-SDVEG3U ' ID_Funcionario,ID_Funcion,ID_Programa'4','1','3' 
+10/08/2020 11:59:54 DESKTOP-SDVEG3U ' ID_Funcionario,ID_Funcion,ID_Programa'1','1','4' 
+10/08/2020 11:59:57 DESKTOP-SDVEG3U ' ID_Funcionario,ID_Funcion,ID_Programa'2','1','4' 
+10/08/2020 12:00:00 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 12:02:09 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 12:04:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 15:17:11 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 15:17:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 15:23:47 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 15:25:36 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 15:26:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 15:30:35 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 15:37:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 15:52:21 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 15:54:30 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 15:59:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 16:00:20 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 16:02:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 16:05:14 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 16:06:19 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 16:08:14 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 16:08:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 16:11:00 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 16:11:17 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 16:12:12 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 17:48:56 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 20:42:37 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 20:44:07 DESKTOP-SDVEG3U ' tanda 
+10/08/2020 20:44:16 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'20','22' 
+10/08/2020 20:44:22 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'22','24' 
+10/08/2020 20:44:36 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'23','00' 
+10/08/2020 20:44:43 DESKTOP-SDVEG3U ' publicidad 
+10/08/2020 20:44:50 DESKTOP-SDVEG3U ' empresa 
+10/08/2020 20:44:57 DESKTOP-SDVEG3U ' Nombre,Telefono'Mil','113' 
+10/08/2020 20:45:05 DESKTOP-SDVEG3U ' Nombre,Telefono'DosMil','45' 
+10/08/2020 20:45:09 DESKTOP-SDVEG3U ' publicidad 
+10/08/2020 20:45:20 DESKTOP-SDVEG3U ' Tema,ID_Empresa'De todo un poco','1' 
+10/08/2020 20:45:26 DESKTOP-SDVEG3U ' Tema,ID_Empresa'Nadita','2' 
+10/08/2020 20:45:32 DESKTOP-SDVEG3U ' aparecepubli 
+10/08/2020 20:46:07 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'1','20','2020-08-10','2020-08-20' 
+10/08/2020 20:46:44 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'2','22','2020-08-08','2020-08-9' 
+10/08/2020 20:46:51 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'2','23','2020-08-08','2020-08-9' 
+10/08/2020 20:47:04 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 20:47:59 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 20:53:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 20:54:08 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 20:54:25 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 20:58:21 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:03:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:04:30 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:21:12 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:22:22 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:25:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:26:23 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:27:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:28:30 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:29:12 DESKTOP-SDVEG3U ' aparecepubli 
+10/08/2020 21:30:14 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'1','21:05:00','2020-08-09','2020-08-12' 
+10/08/2020 21:30:16 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'2','21:05:00','2020-08-09','2020-08-12' 
+10/08/2020 21:30:26 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'1','21:05:00','2020-08-09','2020-08-09' 
+10/08/2020 21:30:40 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'1','21:05:00','2020-08-08','2020-08-09' 
+10/08/2020 21:31:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:36:20 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:36:43 DESKTOP-SDVEG3U ' aparecepubli 
+10/08/2020 21:37:26 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'1','20:05:00','2020-08-9','2020-08-10' 
+10/08/2020 21:37:39 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'2','20:05:00','2020-08-9','2020-08-31' 
+10/08/2020 21:37:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+10/08/2020 21:38:00 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 5:26:52 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 5:28:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 5:35:44 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 5:36:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 7:48:21 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 8:49:17 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 8:51:07 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 10:10:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 10:32:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 10:37:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 10:55:19 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 10:56:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 10:57:41 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 10:58:34 DESKTOP-SDVEG3U ' pmuestrapubli 
+11/08/2020 10:59:26 DESKTOP-SDVEG3U ' ID_Publicidad,ID_Programa,Fecha_Inicio,Fecha_Finalizacion'1','3','2020-04-09','2020-10-10' 
+11/08/2020 10:59:31 DESKTOP-SDVEG3U ' ID_Publicidad,ID_Programa,Fecha_Inicio,Fecha_Finalizacion'2','3','2020-04-09','2020-10-10' 
+11/08/2020 10:59:59 DESKTOP-SDVEG3U ' ID_Publicidad,ID_Programa,Fecha_Inicio,Fecha_Finalizacion'1','4','2020-04-09','2020-08-09' 
+11/08/2020 11:00:23 DESKTOP-SDVEG3U ' ID_Publicidad,ID_Programa,Fecha_Inicio,Fecha_Finalizacion'2','1','2020-04-09','2020-08-10' 
+11/08/2020 11:00:26 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 11:02:41 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 11:05:12 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 11:08:04 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 11:08:15 DESKTOP-SDVEG3U ' acceso 
+11/08/2020 11:08:19 DESKTOP-SDVEG3U ' acceso 
+11/08/2020 11:08:25 DESKTOP-SDVEG3U ' acceso 
+11/08/2020 11:08:38 DESKTOP-SDVEG3U ' publicidad 
+11/08/2020 11:08:48 DESKTOP-SDVEG3U ' Tema,ID_Empresa'Mili','1' 
+11/08/2020 11:08:54 DESKTOP-SDVEG3U ' pmuestrapubli 
+11/08/2020 11:09:20 DESKTOP-SDVEG3U ' ID_Publicidad,ID_Programa,Fecha_Inicio,Fecha_Finalizacion'3','1','2020-02-19','2020-12-12' 
+11/08/2020 11:09:23 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 11:16:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:32:20 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:33:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:43:18 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:44:42 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:45:17 DESKTOP-SDVEG3U ' tanda 
+11/08/2020 12:45:42 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'01:00:00','03:00:00' 
+11/08/2020 12:45:54 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'03:00:00','05:00:00' 
+11/08/2020 12:46:04 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'05:00:00','010:00:00' 
+11/08/2020 12:46:14 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'10:00:00','05:00:00' 
+11/08/2020 12:46:25 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'15:00:00','16:00:00' 
+11/08/2020 12:46:35 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'16:00:00','20:00:00' 
+11/08/2020 12:46:47 DESKTOP-SDVEG3U ' Hora_Inicio,Hora_Fin'20:00:00','24:00:00' 
+11/08/2020 12:46:52 DESKTOP-SDVEG3U ' publicidad 
+11/08/2020 12:47:36 DESKTOP-SDVEG3U ' aparecepubli 
+11/08/2020 12:48:20 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'1','05:00:00','2020-02-09','2020-08-19' 
+11/08/2020 12:48:32 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'2','15:00:00','2020-02-09','2020-08-19' 
+11/08/2020 12:48:37 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'3','15:00:00','2020-02-09','2020-08-19' 
+11/08/2020 12:48:44 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'2','16:00:00','2020-02-09','2020-08-19' 
+11/08/2020 12:48:52 DESKTOP-SDVEG3U ' ID_Publicidad,Hora_Inicio,Fecha_Inicio,Fecha_Finalizacion'1','20:00:00','2020-02-09','2020-08-19' 
+11/08/2020 12:48:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:51:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:54:18 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 12:56:11 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 13:01:22 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 13:01:32 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 13:24:09 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 14:20:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 14:21:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 14:21:21 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 14:25:32 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 14:28:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 14:34:19 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 14:38:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 14:55:09 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 14:56:32 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 14:58:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 15:00:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 15:00:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 17:28:42 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 17:36:17 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 17:39:53 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 17:40:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 17:42:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 17:44:44 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 17:49:16 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 17:52:52 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 18:00:23 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 18:02:12 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 18:11:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 18:13:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 18:14:46 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/08/2020 18:17:46 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 18:52:25 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 18:53:56 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:14:27 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:18:01 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:18:54 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:21:42 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:36:08 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:37:37 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:39:24 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:40:43 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:47:03 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:48:20 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:49:59 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:50:16 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:51:53 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/8/2020 19:53:26 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/08/2020 14:08:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/08/2020 14:09:21 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/08/2020 14:11:00 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 9:52:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 9:53:22 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:00:12 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:03:07 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:04:49 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:11:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:12:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:16:03 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:19:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:21:03 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:31:00 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:33:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:33:56 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:38:03 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:42:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:44:32 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:47:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 10:48:09 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 12:01:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/08/2020 12:16:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:13:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:16:07 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:17:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:25:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:26:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:32:10 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:36:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:38:17 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:38:44 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:43:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:49:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/08/2020 10:54:02 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 20:38:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 20:43:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 20:46:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 20:53:48 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 20:56:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 21:01:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 21:03:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 21:04:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 21:06:16 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 21:07:11 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 21:08:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 21:14:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 21:23:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/08/2020 21:30:03 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+01/09/2020 10:43:37 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+01/09/2020 11:01:02 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+01/09/2020 11:14:35 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 18:27:48 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 18:33:16 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 18:37:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 18:37:54 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 18:41:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 18:49:11 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 18:50:27 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 18:51:32 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 18:54:11 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 19:06:52 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 19:28:54 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/09/2020 19:32:59 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+08/09/2020 16:53:32 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+09/09/2020 21:05:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/09/2020 5:46:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/09/2020 6:12:12 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/09/2020 6:12:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/09/2020 6:19:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/09/2020 6:20:35 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/09/2020 6:22:58 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 13:45:46 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 13:46:08 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 13:46:26 DESKTOP-SDVEG3U ' video 
+13/09/2020 13:46:54 DESKTOP-SDVEG3U ' contenido,nombre'Manu','LOL' 
+13/09/2020 13:47:05 DESKTOP-SDVEG3U ' contenido,nombre,fecha'Manu','LOL','2020-08-08' 
+13/09/2020 13:47:10 DESKTOP-SDVEG3U ' contenido,nombre,fecha'no','LOL','2020-08-08' 
+13/09/2020 13:47:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 13:50:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 13:50:47 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, s.nombre as Serie FROM video v inner join serie s on v.ID_Serie=s.ID_Serie WHERE v.nombre = 'LOL' 
+13/09/2020 13:58:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 13:58:59 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 13:59:12 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 13:59:14 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 13:59:15 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 13:59:17 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 13:59:31 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 13:59:32 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:01:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:02:00 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:02:02 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:02:12 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:02:12 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:02:12 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:02:12 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:02:13 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:02:13 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:02:13 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:06:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:06:25 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:06:29 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:06:30 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:06:31 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:06:31 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:06:34 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:06:35 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:06:35 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:06:37 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:07:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:07:34 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:07:37 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:07:37 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:07:41 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'j' 
+13/09/2020 14:09:02 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:09:09 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'f' 
+13/09/2020 14:16:47 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:16:56 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:16:59 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LO' 
+13/09/2020 14:23:03 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:23:20 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:23:24 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LO' 
+13/09/2020 14:31:03 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:32:17 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:33:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:33:47 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:33:51 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LO' 
+13/09/2020 14:33:52 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LO' 
+13/09/2020 14:33:53 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LO' 
+13/09/2020 14:33:53 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LO' 
+13/09/2020 14:40:30 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:40:58 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:41:04 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:05 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:08 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:08 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:08 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:08 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:08 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:09 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:09 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:09 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:09 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:09 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+13/09/2020 14:41:15 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:41:16 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:41:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:41:59 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+13/09/2020 14:42:02 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOLh' 
+13/09/2020 14:42:08 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' and v.contenido = 'no' 
+13/09/2020 14:42:13 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' and fecha = '2020-09-13' and v.contenido = 'no' 
+13/09/2020 14:42:16 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' and v.contenido = 'no' 
+13/09/2020 14:43:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/09/2020 14:44:08 DESKTOP-SDVEG3U ' select fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-08-08' 
+13/09/2020 14:44:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/9/2020 21:07:06 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+13/9/2020 21:34:05 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 15:23:59 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 15:54:42 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 15:55:13 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3608; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 15:57:35 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 15:57:41 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 17:58:51 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 18:17:33 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 21:18:13 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 21:18:31 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 21:18:49 LAPTOP-J0MPD84C ' empresa 
+14/9/2020 21:19:19 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 21:33:01 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 21:33:55 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 21:44:09 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 21:44:22 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 21:49:34 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 22:55:02 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 22:55:14 LAPTOP-J0MPD84C ' serie 
+14/9/2020 22:55:58 LAPTOP-J0MPD84C ' fecha_finalizacion,nombre'2020-09-14','SerieEspecial' 
+14/9/2020 22:56:06 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 23:04:39 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 23:05:54 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 23:07:40 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+14/9/2020 23:08:37 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:40:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:40:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:41:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:43:26 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+15/09/2020 7:46:26 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:46:41 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+15/09/2020 7:52:42 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:52:55 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+15/09/2020 7:53:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:54:01 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+15/09/2020 7:54:01 DESKTOP-SDVEG3U ' select video FROM Nombre,DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha,Contenido,id_serie WHERE id_video = '1' 
+15/09/2020 7:56:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:56:22 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'no' 
+15/09/2020 7:56:22 DESKTOP-SDVEG3U ' select video FROM Nombre,DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha,Contenido,id_serie WHERE id_video = '3' 
+15/09/2020 7:57:36 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 7:57:45 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'no
+' 
+15/09/2020 7:57:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'no' 
+15/09/2020 7:57:53 DESKTOP-SDVEG3U ' select video FROM Nombre,DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha,Contenido,id_serie WHERE id_video = '3' 
+15/09/2020 8:00:56 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:01:47 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:03:53 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:04:00 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:04:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:04:42 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:05:47 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:05:55 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:08:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:08:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:11:47 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:11:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:14:41 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:14:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 8:15:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 8:15:43 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:43:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 11:43:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+15/09/2020 11:44:00 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:04 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:05 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:05 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:05 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:06 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:06 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:06 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:06 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:07 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:07 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:07 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:07 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:08 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:08 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:08 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:08 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:08 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:09 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:09 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:09 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:10 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:11 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:11 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:11 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:12 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:12 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:12 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:12 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:13 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:13 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:13 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:13 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:13 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:14 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:15 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:15 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:15 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:16 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:16 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:16 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:17 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:17 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:18 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:18 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:19 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:19 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:20 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:20 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:21 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:22 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:22 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:22 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:22 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:22 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:23 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:23 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:24 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:24 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:24 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:24 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:25 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:25 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:25 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:25 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:26 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:28 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:28 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:28 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:29 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:29 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:29 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:29 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:53 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:53 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:55 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:44:55 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:48 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:48 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:48 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:53 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:53 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:45:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:12 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 11:50:23 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:24 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:25 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:25 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:25 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:26 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:26 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:26 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:26 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:27 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:27 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:27 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:27 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:27 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:28 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:28 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:28 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:28 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:29 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:29 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:29 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:29 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:30 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:30 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:30 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:30 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:31 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:31 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:31 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:31 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:31 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:32 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:32 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:32 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:32 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:33 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:33 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:33 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:33 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:34 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:34 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:34 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:35 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:35 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:36 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:36 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:36 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:37 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:37 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:37 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:37 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:38 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:38 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:38 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:38 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:38 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:39 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:39 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:39 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:39 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:40 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:40 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:40 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:40 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:41 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:41 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:42 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:43 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:43 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:43 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:43 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:50:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:44 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:44 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:45 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:45 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:45 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:45 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:45 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:46 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:46 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:46 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:46 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:46 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:47 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:47 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:47 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:47 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:48 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:48 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:48 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:48 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:50 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:51 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:52 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:53 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:53 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:53 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:53 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:56 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:57 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:57 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:57 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:58 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:58 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:58 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:59 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:59 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:51:59 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:52:00 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:52:00 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:52:54 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 11:53:01 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:53:02 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:53:02 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:53:02 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:53:03 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:53:03 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:53:12 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-08-08' 
+15/09/2020 11:53:20 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-08-08' 
+15/09/2020 11:53:20 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-08-08' 
+15/09/2020 11:53:20 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-08-08' 
+15/09/2020 11:53:21 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-08-08' 
+15/09/2020 11:53:21 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-08-08' 
+15/09/2020 11:53:21 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-08-08' 
+15/09/2020 11:56:25 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 11:56:33 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 11:56:46 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+15/09/2020 11:56:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'no' 
+15/09/2020 11:59:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 11:59:23 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre = 'LOL' 
+15/09/2020 11:59:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 11:59:54 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 12:02:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:02:32 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 12:03:35 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:03:42 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 12:04:30 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:04:38 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 12:09:12 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:09:20 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 12:10:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:10:11 DESKTOP-SDVEG3U ' video 
+15/09/2020 12:11:12 DESKTOP-SDVEG3U ' serie 
+15/09/2020 12:11:16 DESKTOP-SDVEG3U ' nombre'no' 
+15/09/2020 12:11:19 DESKTOP-SDVEG3U ' nombre'si' 
+15/09/2020 12:12:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:12:34 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 12:13:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:13:23 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 12:14:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:14:19 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:14:28 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 12:16:59 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:17:07 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 12:19:10 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:19:18 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 12:21:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:21:13 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/09/2020 12:21:40 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/09/2020 12:21:46 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+15/9/2020 19:09:57 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/9/2020 19:11:08 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/9/2020 20:02:42 LAPTOP-J0MPD84C ' DataSource=; Port=; Database=; Uid=; Pwd=; CharSet=utf8 
+15/9/2020 20:03:40 LAPTOP-J0MPD84C ' DataSource=localhost; Port=; Database=; Uid=; Pwd=; CharSet=utf8 
+15/9/2020 20:04:21 LAPTOP-J0MPD84C ' DataSource=localhost; Port=; Database=; Uid=; Pwd=; CharSet=utf8 
+15/9/2020 20:04:44 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=d; Pwd=d; CharSet=utf8 
+15/9/2020 20:05:23 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/9/2020 20:13:10 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 11:34:39 DESKTOP-SDVEG3U ' DataSource=; Port=; Database=; Uid=; Pwd=; CharSet=utf8 
+16/09/2020 11:36:09 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 11:37:02 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 12:14:03 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 12:14:11 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 12:17:16 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 12:17:23 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 12:22:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 12:22:22 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 12:23:32 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 12:24:18 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 12:24:19 DESKTOP-SDVEG3U '  
+16/09/2020 12:43:08 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 12:43:15 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 12:46:40 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 12:46:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 12:48:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 12:48:34 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 12:48:35 DESKTOP-SDVEG3U '  
+16/09/2020 12:48:43 DESKTOP-SDVEG3U '  
+16/09/2020 12:48:46 DESKTOP-SDVEG3U '  
+16/09/2020 12:49:18 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 12:49:26 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 12:49:27 DESKTOP-SDVEG3U '  
+16/09/2020 12:50:02 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 12:50:09 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 12:50:10 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 12:50:10 DESKTOP-SDVEG3U '  
+16/09/2020 12:53:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 12:54:11 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 12:54:12 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 14:51:53 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 14:52:16 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 14:52:17 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 14:52:46 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 14:52:53 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 14:52:55 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 14:57:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 14:57:57 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 14:57:58 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:15:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:15:42 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:15:43 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:16:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:17:14 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:17:15 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:28:27 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:28:34 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:28:35 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:28:38 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:28:40 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/09/2020 15:28:43 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:28:45 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:29:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:30:01 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:30:02 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:30:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:30:56 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:30:56 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:31:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:31:22 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:31:22 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:31:25 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:31:27 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/09/2020 15:34:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:34:13 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:34:14 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:34:16 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:34:22 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/09/2020 15:34:27 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:36:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:37:04 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:37:05 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:37:10 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:37:12 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/09/2020 15:37:35 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:38:01 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:38:07 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:38:08 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:39:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:40:13 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:40:13 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:41:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:41:41 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:41:42 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/09/2020 15:45:41 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:45:48 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:45:49 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:45:52 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:45:53 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/09/2020 15:46:36 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:46:38 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:46:39 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/09/2020 15:46:53 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:46:55 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:46:57 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/09/2020 15:47:18 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:49:42 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:49:49 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:49:50 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:49:52 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:49:53 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/09/2020 15:50:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:50:32 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:50:32 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:50:44 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:50:46 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/09/2020 15:50:53 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:51:17 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/09/2020 15:51:30 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/09/2020 15:51:31 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/09/2020 15:51:33 DESKTOP-SDVEG3U ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 19:26:27 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 19:30:02 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 19:31:00 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 19:38:51 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 19:39:48 LAPTOP-J0MPD84C ' video 
+16/9/2020 19:47:45 LAPTOP-J0MPD84C ' contenido,nombre'Tiene','Video de Mili [GONEWRONG] [YNOSABRASLOQUEPASOLUEGO]' 
+16/9/2020 19:49:11 LAPTOP-J0MPD84C ' contenido,nombre,fecha'Tiene o no?','Video de Manu [GONERIGHT]','2020-08-17' 
+16/9/2020 19:50:02 LAPTOP-J0MPD84C ' contenido,nombre,ID_Serie'Este no tiene','Video de gatitos muriendo','1' 
+16/9/2020 19:50:06 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 19:51:06 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 19:51:07 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:52:41 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:53:13 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:54:21 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:54:23 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:54:25 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:54:26 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:54:27 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:54:28 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:54:29 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:54:31 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:54:32 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:54:33 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:54:35 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:54:36 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:54:38 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:54:39 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:54:40 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:54:43 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:54:44 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:54:46 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:54:48 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:54:49 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:54:53 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:54:59 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:55:01 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:55:32 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:55:34 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 19:55:37 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:55:40 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:55:51 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:55:53 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 19:55:54 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 19:55:56 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:55:58 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:56:00 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:56:49 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:57:07 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:57:23 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:57:25 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:57:26 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:57:58 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 19:58:10 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'Tiene' 
+16/9/2020 19:58:16 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'tiene' 
+16/9/2020 19:58:16 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'tiene' 
+16/9/2020 19:58:18 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'tiene' 
+16/9/2020 19:58:42 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'Tien' 
+16/9/2020 19:58:48 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'Este tiene' 
+16/9/2020 19:58:49 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'Este tiene' 
+16/9/2020 19:58:54 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'Este Tiene' 
+16/9/2020 19:58:56 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 19:58:57 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 19:59:00 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:05 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and v.contenido = 'Este no tiene' 
+16/9/2020 19:59:07 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:09 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:11 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:13 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:14 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:16 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:17 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:18 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:19 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:20 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:21 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:22 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:23 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:24 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 19:59:25 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 20:00:03 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 20:00:13 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:00:14 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:00:18 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:31:39 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 20:31:52 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:31:55 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 20:34:44 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 20:34:57 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:35:04 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 20:45:56 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 20:46:05 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:46:06 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:47:35 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 20:47:51 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:47:52 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 20:47:58 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:48:05 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:48:06 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:48:10 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:48:10 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:48:10 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:48:10 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:48:24 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:48:26 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:48:30 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:48:36 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:43 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:43 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:44 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:44 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:44 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:44 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:44 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:45 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:45 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:45 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:45 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true and fecha = '2020-09-16' 
+16/9/2020 20:48:55 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 20:49:05 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:49:34 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:49:34 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:49:34 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:49:34 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:49:35 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:49:35 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:51:24 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 20:51:54 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 20:52:04 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:52:14 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:52:42 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:53:04 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:53:14 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:53:18 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:53:27 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:53:53 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 20:53:59 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:54:03 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:54:08 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:54:19 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:57:06 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 20:57:44 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:57:47 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:57:54 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 20:58:05 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:58:08 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 20:58:26 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:58:27 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 20:58:29 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 20:58:39 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:58:40 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 20:58:48 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:58:50 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 20:59:26 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 20:59:32 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:59:34 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 20:59:40 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 20:59:45 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 20:59:50 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 21:00:02 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 21:00:50 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 21:00:57 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 21:01:53 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:01:54 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '1' 
+16/9/2020 21:02:04 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 21:02:14 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 21:04:19 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 21:04:29 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:04:30 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '2' 
+16/9/2020 21:18:26 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 21:18:37 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:18:39 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 21:22:56 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 21:23:03 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:23:05 LAPTOP-J0MPD84C ' select Nombre, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, contenido, id_serie FROM video WHERE id_video = '3' 
+16/9/2020 21:23:06 LAPTOP-J0MPD84C ' 1 
+16/9/2020 21:23:24 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 21:28:59 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 21:29:08 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:29:11 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 21:29:14 LAPTOP-J0MPD84C ' 16/09/2020 
+16/9/2020 21:29:36 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:29:40 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '2' 
+16/9/2020 21:29:41 LAPTOP-J0MPD84C '  
+16/9/2020 21:29:55 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:30:08 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 21:33:20 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 21:33:30 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:33:32 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 21:33:34 LAPTOP-J0MPD84C '  
+16/9/2020 21:54:47 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 21:55:01 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:55:03 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 21:55:48 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:55:50 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 21:56:05 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 21:58:53 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 21:59:02 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:59:03 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 21:59:41 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 21:59:48 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:59:49 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 21:59:52 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:59:54 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 21:59:55 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 22:00:12 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 22:00:17 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 22:00:26 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 22:00:35 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:00:38 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:03:18 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 22:03:31 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:03:33 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:05:29 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 22:05:36 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:05:37 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:05:57 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:08:10 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 22:08:39 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 22:08:47 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:08:48 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:08:52 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:08:53 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 22:09:09 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 22:09:23 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 22:09:26 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:09:27 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:09:27 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 22:09:36 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:11:19 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 22:11:27 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:11:28 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:12:11 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:12:12 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:12:19 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:12:20 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 22:12:32 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 22:12:40 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '1' 
+16/9/2020 22:23:09 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 22:23:20 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:23:31 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:24:12 LAPTOP-J0MPD84C ' False 
+16/9/2020 22:24:18 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:24:28 LAPTOP-J0MPD84C ' False 
+16/9/2020 22:24:33 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:24:38 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:25:07 LAPTOP-J0MPD84C ' False 
+16/9/2020 22:30:35 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 22:30:43 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:30:45 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:31:08 LAPTOP-J0MPD84C ' False 
+16/9/2020 22:31:33 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:31:43 LAPTOP-J0MPD84C ' False 
+16/9/2020 22:36:49 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 22:36:59 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:37:01 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, Fecha FROM video WHERE id_video = '3' 
+16/9/2020 22:41:26 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/9/2020 22:41:36 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+16/9/2020 22:41:39 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha FROM video WHERE id_video = '1' 

@@ -40,7 +40,7 @@
         Dim dt As DataTable = ESQLSelect("describe " + tabla)
         Dim i As Integer = 1
         For Each dato In datos
-            res += String.Format("{0} = '{1}',", dt.Rows(i).Item(0).ToString, dato)
+            res += String.Format(If(dato = "null", "{0} = {1},", "{0} = '{1}',"), dt.Rows(i).Item(0).ToString, dato)
             i += 1
         Next
         res = res.Remove(res.Length - 1)
@@ -48,7 +48,7 @@
     End Sub
     Public Function BuscarDatos(ByVal tabla As String, ByVal Columnas() As String, ByVal campo As String, ByVal id As String) As String()
         Dim res As String = ""
-        Dim resultado(Columnas.Length) As String
+        Dim resultado(Columnas.Length - 1) As String
         For Each columna In Columnas
             res += String.Format("{0}, ", columna)
         Next
@@ -70,4 +70,19 @@
             con.Items.Add(dt.Rows(j).Item(col).ToString)
         Next
     End Sub
+
+    Public Function CompararValores(ByVal s1() As String, ByVal s2() As String) As Boolean
+        If s1.Length <> s2.Length Then
+            Return False
+        End If
+        For j As Integer = 0 To s2.Length - 1
+            If s1(j) = "null" Then
+                s1(j) = ""
+            End If
+            If s1(j) <> s2(j) Then
+                Return False
+            End If
+        Next
+        Return True
+    End Function
 End Module

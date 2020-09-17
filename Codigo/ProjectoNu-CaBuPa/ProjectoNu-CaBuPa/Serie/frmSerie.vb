@@ -9,15 +9,15 @@ Public Class frmSerie
     Dim tmpFecha As Date
     Dim cambio As Boolean = False   ' Controla si han habido cambios desde el ultimo modo de edicion
 
-    Public Sub New(ByVal sid As Integer, ByVal nombre As String, ByVal fecha As Date)
-        InitializeComponent()
+    'Public Sub New(ByVal sid As Integer, ByVal nombre As String, ByVal fecha As Date)
+    '   InitializeComponent()
 
-        ' Los siguientes datos se obtienen de la tabla en el elemento padre
-        serieID = sid
-        txtNombre.Text = nombre
-        dtpFecha.Value = fecha
-    End Sub
-    
+    ' Los siguientes datos se obtienen de la tabla en el elemento padre
+    '  serieID = sid
+    ' txtNombre.Text = nombre
+    'dtpFecha.Value = fecha
+    'End Sub
+
 
     Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnSEditar.Click
         ' editando = True   -> Se guardaran los cambios
@@ -79,13 +79,6 @@ Public Class frmSerie
     End Sub
 
     ' Checkea si hay cambios hechos
-    Private Sub dtpFecha_ValueChanged(sender As Object, e As EventArgs) Handles dtpFecha.ValueChanged
-        cambio = True
-    End Sub
-    Private Sub txtNombre_ModifiedChanged(sender As Object, e As EventArgs) Handles txtNombre.ModifiedChanged
-        If txtNombre.Modified Then
-            cambio = True
-        End If
-    End Sub
-
+    ' TODO: ...;-;
+    ' Aqui yace mi variable, recordatorio de lo que una vez fue
 End Class

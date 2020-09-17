@@ -1,2 +1,3 @@
 Finalizar el programa...
 Cambiar el color de este cuadro de texto
+Documentar las funciones del TS
