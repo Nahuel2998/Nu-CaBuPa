@@ -14,7 +14,6 @@ Public Class frmGuardarEdicion
         id = identificador
         frm = f
         Beep()
-
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click

@@ -9,6 +9,7 @@
     Public Function CargarID(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As Integer
         Return Tabla.Rows(Dgv.SelectedRows(0).Index).Item(0).ToString
     End Function
+
     Public Sub ActualizarTabla(ByRef Tabla As DataTable, ByRef Dgv As DataGridView)
         If Not IsNothing(Tabla) Then
             Dgv.Columns.Clear()
@@ -21,6 +22,7 @@
             End If
         End If
     End Sub
+
     Public Sub ActualizarTablaC(ByRef Tabla As DataTable, ByRef Dgv As DataGridView)
         If Not IsNothing(Tabla) Then
             Dgv.Columns.Clear()
@@ -46,6 +48,7 @@
         res = res.Remove(res.Length - 1)
         USQL(tabla, res, String.Format("{0} = '{1}'", dt.Rows(0).Item(0).ToString, id))
     End Sub
+
     Public Function BuscarDatos(ByVal tabla As String, ByVal Columnas() As String, ByVal campo As String, ByVal id As String) As String()
         Dim res As String = ""
         Dim resultado(Columnas.Length - 1) As String
@@ -78,6 +81,7 @@
         Next
         Return True
     End Function
+
     Public Function VaciarNull(ByVal s1() As String) As String()
         Dim sN(s1.Length - 1) As String
         For j As Integer = 0 To s1.Length - 1

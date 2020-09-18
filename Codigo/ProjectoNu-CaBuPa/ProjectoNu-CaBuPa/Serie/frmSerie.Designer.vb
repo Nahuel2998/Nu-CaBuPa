@@ -85,7 +85,7 @@ Partial Class frmSerie
         Me.GroupBox1.Location = New System.Drawing.Point(3, 101)
         Me.GroupBox1.MinimumSize = New System.Drawing.Size(100, 40)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(655, 196)
+        Me.GroupBox1.Size = New System.Drawing.Size(655, 195)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Videos"
@@ -140,7 +140,7 @@ Partial Class frmSerie
         Me.dgvVSM.RowTemplate.Height = 28
         Me.dgvVSM.RowTemplate.ReadOnly = True
         Me.dgvVSM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvVSM.Size = New System.Drawing.Size(645, 170)
+        Me.dgvVSM.Size = New System.Drawing.Size(645, 169)
         Me.dgvVSM.TabIndex = 2
         '
         'VFecha
@@ -164,7 +164,7 @@ Partial Class frmSerie
         Me.SplitContainer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SplitContainer1.Location = New System.Drawing.Point(3, 303)
+        Me.SplitContainer1.Location = New System.Drawing.Point(3, 302)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
@@ -174,7 +174,7 @@ Partial Class frmSerie
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.btnSSalir)
-        Me.SplitContainer1.Size = New System.Drawing.Size(655, 48)
+        Me.SplitContainer1.Size = New System.Drawing.Size(655, 49)
         Me.SplitContainer1.SplitterDistance = 410
         Me.SplitContainer1.TabIndex = 2
         '
@@ -186,7 +186,7 @@ Partial Class frmSerie
         Me.btnSEditar.Location = New System.Drawing.Point(0, 0)
         Me.btnSEditar.MinimumSize = New System.Drawing.Size(90, 12)
         Me.btnSEditar.Name = "btnSEditar"
-        Me.btnSEditar.Size = New System.Drawing.Size(146, 48)
+        Me.btnSEditar.Size = New System.Drawing.Size(146, 49)
         Me.btnSEditar.TabIndex = 1
         Me.btnSEditar.Text = "Editar"
         Me.btnSEditar.UseVisualStyleBackColor = True
@@ -199,7 +199,7 @@ Partial Class frmSerie
         Me.btnSSalir.Location = New System.Drawing.Point(95, 0)
         Me.btnSSalir.MinimumSize = New System.Drawing.Size(90, 12)
         Me.btnSSalir.Name = "btnSSalir"
-        Me.btnSSalir.Size = New System.Drawing.Size(146, 48)
+        Me.btnSSalir.Size = New System.Drawing.Size(146, 49)
         Me.btnSSalir.TabIndex = 2
         Me.btnSSalir.Text = "Salir"
         Me.btnSSalir.UseVisualStyleBackColor = True
