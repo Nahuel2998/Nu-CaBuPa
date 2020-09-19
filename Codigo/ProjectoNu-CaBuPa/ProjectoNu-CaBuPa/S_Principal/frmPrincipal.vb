@@ -269,4 +269,8 @@ Public Class frmPrincipal
         Dim formVideo As New frmVideo(CargarID(dt_Video, dgvVB))
         formVideo.ShowDialog()
     End Sub
+
+    Private Sub btnLimpiarBS_Click(sender As Object, e As EventArgs) Handles btnLimpiarBS.Click
+
+    End Sub
 End Class
