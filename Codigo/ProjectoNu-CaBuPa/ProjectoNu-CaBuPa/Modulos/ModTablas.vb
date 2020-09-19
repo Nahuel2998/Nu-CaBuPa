@@ -21,6 +21,7 @@
                 Dgv.Refresh()
             End If
         End If
+        Dgv.AllowUserToOrderColumns = False
     End Sub
 
     Public Sub ActualizarTablaC(ByRef Tabla As DataTable, ByRef Dgv As DataGridView)
@@ -29,6 +30,9 @@
             Dgv.DataSource = Tabla
             Dgv.Columns.RemoveAt(0)
             Dgv.Refresh()
+            For i As Integer = 0 To Dgv.Columns.Count - 1
+                Dgv.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
+            Next
         Else
             If (Dgv.Rows.Count > 0) Then
                 Dgv.DataSource.Rows.Clear()

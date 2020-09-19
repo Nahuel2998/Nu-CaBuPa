@@ -273,4 +273,8 @@ Public Class frmPrincipal
     Private Sub btnLimpiarBS_Click(sender As Object, e As EventArgs) Handles btnLimpiarBS.Click
 
     End Sub
+
+    Private Sub frmPrincipal_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+        Me.Refresh()
+    End Sub
 End Class

@@ -58,6 +58,8 @@ Partial Class frmPrincipal
         Me.pMain = New System.Windows.Forms.TableLayoutPanel()
         Me.spNotEven = New System.Windows.Forms.TableLayoutPanel()
         Me.gbNotas = New System.Windows.Forms.GroupBox()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.TBNotas = New System.Windows.Forms.RichTextBox()
         Me.GBEventos = New System.Windows.Forms.GroupBox()
         Me.dgvEventos = New System.Windows.Forms.DataGridView()
         Me.EFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -66,6 +68,7 @@ Partial Class frmPrincipal
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
         Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -76,6 +79,7 @@ Partial Class frmPrincipal
         Me.tbPrograma = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -121,6 +125,9 @@ Partial Class frmPrincipal
         Me.dgvBS = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.btnLimpiarBS = New System.Windows.Forms.Button()
+        Me.btnBuscarBS = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -128,6 +135,7 @@ Partial Class frmPrincipal
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.ColorDateTimePicker1 = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.pStatus = New System.Windows.Forms.Panel()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.pCMain = New System.Windows.Forms.Panel()
@@ -137,17 +145,10 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.TBNotas = New System.Windows.Forms.RichTextBox()
-        Me.btnBuscarBS = New System.Windows.Forms.Button()
-        Me.btnLimpiarBS = New System.Windows.Forms.Button()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.ColorDateTimePicker1 = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
+        Me.Panel7.SuspendLayout()
         Me.GBEventos.SuspendLayout()
         CType(Me.dgvEventos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -184,17 +185,16 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel5.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvBS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
+        Me.SplitContainer1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.TableLayoutPanel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.pStatus.SuspendLayout()
         Me.pCMain.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer1.Panel1.SuspendLayout()
-        Me.SplitContainer1.Panel2.SuspendLayout()
-        Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'pMain
@@ -218,6 +218,21 @@ Partial Class frmPrincipal
         Me.gbNotas.Controls.Add(Me.Panel7)
         Me.gbNotas.Name = "gbNotas"
         Me.gbNotas.TabStop = False
+        '
+        'Panel7
+        '
+        resources.ApplyResources(Me.Panel7, "Panel7")
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel7.Controls.Add(Me.TBNotas)
+        Me.Panel7.Name = "Panel7"
+        '
+        'TBNotas
+        '
+        resources.ApplyResources(Me.TBNotas, "TBNotas")
+        Me.TBNotas.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TBNotas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TBNotas.ForeColor = System.Drawing.Color.White
+        Me.TBNotas.Name = "TBNotas"
         '
         'GBEventos
         '
@@ -311,6 +326,12 @@ Partial Class frmPrincipal
         Me.GroupBox7.Controls.Add(Me.dgvPublicidades)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
+        '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
         '
         'dgvPublicidades
         '
@@ -458,6 +479,11 @@ Partial Class frmPrincipal
         Me.GroupBox1.Controls.Add(Me.dgvPrograma)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
+        '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
         '
         'dgvPrograma
         '
@@ -959,6 +985,31 @@ Partial Class frmPrincipal
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
+        'SplitContainer1
+        '
+        resources.ApplyResources(Me.SplitContainer1, "SplitContainer1")
+        Me.SplitContainer1.Name = "SplitContainer1"
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btnLimpiarBS)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.btnBuscarBS)
+        '
+        'btnLimpiarBS
+        '
+        resources.ApplyResources(Me.btnLimpiarBS, "btnLimpiarBS")
+        Me.btnLimpiarBS.Name = "btnLimpiarBS"
+        Me.btnLimpiarBS.UseVisualStyleBackColor = True
+        '
+        'btnBuscarBS
+        '
+        resources.ApplyResources(Me.btnBuscarBS, "btnBuscarBS")
+        Me.btnBuscarBS.Name = "btnBuscarBS"
+        Me.btnBuscarBS.UseVisualStyleBackColor = True
+        '
         'GroupBox5
         '
         resources.ApplyResources(Me.GroupBox5, "GroupBox5")
@@ -1008,6 +1059,11 @@ Partial Class frmPrincipal
         Me.Panel6.Controls.Add(Me.ColorDateTimePicker1)
         Me.Panel6.Name = "Panel6"
         '
+        'ColorDateTimePicker1
+        '
+        resources.ApplyResources(Me.ColorDateTimePicker1, "ColorDateTimePicker1")
+        Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
+        '
         'pStatus
         '
         resources.ApplyResources(Me.pStatus, "pStatus")
@@ -1047,62 +1103,6 @@ Partial Class frmPrincipal
         'BWBuscador
         '
         '
-        'Panel7
-        '
-        resources.ApplyResources(Me.Panel7, "Panel7")
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel7.Controls.Add(Me.TBNotas)
-        Me.Panel7.Name = "Panel7"
-        '
-        'TBNotas
-        '
-        resources.ApplyResources(Me.TBNotas, "TBNotas")
-        Me.TBNotas.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TBNotas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TBNotas.ForeColor = System.Drawing.Color.White
-        Me.TBNotas.Name = "TBNotas"
-        '
-        'btnBuscarBS
-        '
-        resources.ApplyResources(Me.btnBuscarBS, "btnBuscarBS")
-        Me.btnBuscarBS.Name = "btnBuscarBS"
-        Me.btnBuscarBS.UseVisualStyleBackColor = True
-        '
-        'btnLimpiarBS
-        '
-        resources.ApplyResources(Me.btnLimpiarBS, "btnLimpiarBS")
-        Me.btnLimpiarBS.Name = "btnLimpiarBS"
-        Me.btnLimpiarBS.UseVisualStyleBackColor = True
-        '
-        'SplitContainer1
-        '
-        resources.ApplyResources(Me.SplitContainer1, "SplitContainer1")
-        Me.SplitContainer1.Name = "SplitContainer1"
-        '
-        'SplitContainer1.Panel1
-        '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnLimpiarBS)
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.btnBuscarBS)
-        '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
-        '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.Name = "dtp"
-        '
-        'ColorDateTimePicker1
-        '
-        resources.ApplyResources(Me.ColorDateTimePicker1, "ColorDateTimePicker1")
-        Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
-        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -1115,6 +1115,7 @@ Partial Class frmPrincipal
         Me.pMain.ResumeLayout(False)
         Me.spNotEven.ResumeLayout(False)
         Me.gbNotas.ResumeLayout(False)
+        Me.Panel7.ResumeLayout(False)
         Me.GBEventos.ResumeLayout(False)
         CType(Me.dgvEventos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
@@ -1155,6 +1156,10 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel5.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         CType(Me.dgvBS, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.TableLayoutPanel6.ResumeLayout(False)
         Me.TableLayoutPanel6.PerformLayout()
@@ -1162,11 +1167,6 @@ Partial Class frmPrincipal
         Me.Panel6.ResumeLayout(False)
         Me.pStatus.ResumeLayout(False)
         Me.pCMain.ResumeLayout(False)
-        Me.Panel7.ResumeLayout(False)
-        Me.SplitContainer1.Panel1.ResumeLayout(False)
-        Me.SplitContainer1.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

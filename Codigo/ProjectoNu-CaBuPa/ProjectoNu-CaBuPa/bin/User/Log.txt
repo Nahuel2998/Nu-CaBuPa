@@ -389,3 +389,58 @@
 18/9/2020 22:54:38 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 18/9/2020 22:54:48 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
 18/9/2020 22:56:35 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:21:26 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:23:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:25:35 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+19/09/2020 13:26:36 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:26:47 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+19/09/2020 13:34:42 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:39:58 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:40:04 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+19/09/2020 13:42:22 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:42:32 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+19/09/2020 13:44:03 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:45:14 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:46:37 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:47:27 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:27 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:27 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:27 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:29 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:36 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:38 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:39 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:40 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:43 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:45 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:47 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:47:48 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:48:54 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:48:59 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:48:59 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:48:59 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:48:59 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:49:01 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:49:13 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:49:34 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:49:35 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:51:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:51:49 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:51:49 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:51:50 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:51:50 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:51:53 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:51:57 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:51:59 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:52:00 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:52:02 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:52:04 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:52:08 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:53:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+19/09/2020 13:53:24 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:53:24 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:53:24 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:53:24 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:53:27 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:53:29 DESKTOP-SDVEG3U ' Cambio 
+19/09/2020 13:53:32 DESKTOP-SDVEG3U ' Cambio 
