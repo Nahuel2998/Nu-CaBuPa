@@ -22,9 +22,8 @@ Public Class frmSerie
         chbIncluir.Checked = DatosI(1) <> ""
         AddHandler chbIncluir.CheckedChanged, AddressOf chbIncluir_CheckedChanged
         ' ...Esto tambien, supongo.....
+        ''ModLog.Guardar(PSQL("id_video, fecha as Fecha, nombre as Nombre", "video", String.Format("id_serie = '{0}'", DatosI(0))))
 
-        dt_Video = DevolverTabla(PSQL("id_video, fecha as Fecha, nombre as Nombre", "video", String.Format("id_serie = '{0}'", DatosI(0))))
-        ActualizarTablaC(dt_Video, dgvVSM)
     End Sub
 
     Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnSEditar.Click
@@ -144,5 +143,18 @@ Public Class frmSerie
             RemoveHandler chbIncluir.CheckedChanged, AddressOf chbIncluir_CheckedChanged
         End If
         cambio = Not cambio
+    End Sub
+
+    Private Sub frmSerie_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dt_Video = DevolverTabla(PSQL("id_video, fecha as Fecha, nombre as Nombre", "video", String.Format("id_serie = '{0}'", serieID)))
+        ActualizarTablaC(dt_Video, dgvVSM)
+    End Sub
+
+    Private Sub dgvVSM_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVSM.CellDoubleClick
+        Dim i As Integer = CargarID(dt_Video, dgvVSM)
+        If (i <> -1) Then
+            Dim formVideo As New frmVideo(i)
+            formVideo.ShowDialog()
+        End If
     End Sub
 End Class
