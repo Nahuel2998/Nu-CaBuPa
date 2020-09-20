@@ -6,14 +6,39 @@
     Public dt_publi As DataTable
     Public dt_Ppubli As DataTable
     Public dt_Video As DataTable
+    Public dt_Serie As DataTable
     Public Function CargarID(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As Integer
-        Return Tabla.Rows(Dgv.SelectedRows(0).Index).Item(0).ToString
+        If (Not IsNothing(Tabla)) Then
+            Return Tabla.Rows(Dgv.SelectedRows(0).Index).Item(0).ToString
+        End If
+        Return -1
+    End Function
+    Public Function CargarID(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, ByVal NumCol() As Byte) As String()
+        If (Not IsNothing(Tabla)) Then
+            Dim res(NumCol.Length - 1) As String
+            Dim j As Byte = 0
+            For Each i As Byte In NumCol
+                res(j) = Tabla.Rows(Dgv.SelectedRows(0).Index).Item(i).ToString
+                j += 1
+            Next
+            Return res
+        End If
+        Dim err(0) As String
+        Return err
     End Function
 
     Public Sub ActualizarTabla(ByRef Tabla As DataTable, ByRef Dgv As DataGridView)
         If Not IsNothing(Tabla) Then
+            Dim Tamanos(Dgv.Columns.Count() - 1) As Single
+            For i As Integer = 0 To Dgv.Columns.Count - 1
+                Tamanos(i) = Dgv.Columns(i).FillWeight()
+            Next
             Dgv.Columns.Clear()
             Dgv.DataSource = Tabla
+            For i As Integer = 0 To Dgv.Columns.Count - 1
+                Dgv.Columns(i).FillWeight() = Tamanos(i)
+                Dgv.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
+            Next
             Dgv.Refresh()
         Else
             If (Dgv.Rows.Count > 0) Then
@@ -26,13 +51,18 @@
 
     Public Sub ActualizarTablaC(ByRef Tabla As DataTable, ByRef Dgv As DataGridView)
         If Not IsNothing(Tabla) Then
+            Dim Tamanos(Dgv.Columns.Count() - 1) As Single
+            For i As Integer = 0 To Dgv.Columns.Count - 1
+                Tamanos(i) = Dgv.Columns(i).FillWeight()
+            Next
             Dgv.Columns.Clear()
             Dgv.DataSource = Tabla
             Dgv.Columns.RemoveAt(0)
-            Dgv.Refresh()
             For i As Integer = 0 To Dgv.Columns.Count - 1
+                Dgv.Columns(i).FillWeight() = Tamanos(i)
                 Dgv.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
             Next
+            Dgv.Refresh()
         Else
             If (Dgv.Rows.Count > 0) Then
                 Dgv.DataSource.Rows.Clear()

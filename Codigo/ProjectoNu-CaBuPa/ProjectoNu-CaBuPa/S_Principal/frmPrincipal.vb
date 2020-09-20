@@ -240,15 +240,15 @@ Public Class frmPrincipal
 
     Private Sub btnbuscarv_Click(sender As Object, e As EventArgs) Handles btnbuscarv.Click
         TBuscada = "Video"
-        Dim condicion As String = "true"
+        Dim condicion As String = "true limit 50"
         If (Not String.IsNullOrWhiteSpace(txtVnombre.Text)) Then
-            condicion = "v.nombre = '" + txtVnombre.Text + "'"
+            condicion = "v.nombre like '%" + txtVnombre.Text + "%'"
         End If
         If (cbFecha.Checked) Then
             condicion += " and fecha = '" + Format(CDate(dtpfechavideo.Value), "yyyy-MM-dd").ToString + "'"
         End If
         If (Not String.IsNullOrWhiteSpace(txtVcontenido.Text)) Then
-            condicion += " and v.contenido = '" + txtVcontenido.Text + "'"
+            condicion += " and v.contenido like '%" + txtVcontenido.Text + "%'"
         End If
         If Not (BWBuscador.IsBusy) Then
             BWBuscador.RunWorkerAsync(PSQL("id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie", "video v", condicion))
@@ -260,14 +260,20 @@ Public Class frmPrincipal
             Case "Video"
                 dt_Video = TBusca
                 ActualizarTablaC(dt_Video, dgvVB)
+            Case "Serie"
+                dt_Serie = TBusca
+                ActualizarTablaC(dt_Serie, dgvBS)
         End Select
         TBusca = Nothing
         TBuscada = ""
     End Sub
 
-    Private Sub dgvVB_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellDoubleClick
-        Dim formVideo As New frmVideo(CargarID(dt_Video, dgvVB))
-        formVideo.ShowDialog()
+    Private Sub DgvVB_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellDoubleClick
+        Dim i As Integer = CargarID(dt_Video, dgvVB)
+        If (i <> -1) Then
+            Dim formVideo As New frmVideo(i)
+            formVideo.ShowDialog()
+        End If
     End Sub
 
     Private Sub btnLimpiarBS_Click(sender As Object, e As EventArgs) Handles btnLimpiarBS.Click
@@ -276,5 +282,38 @@ Public Class frmPrincipal
 
     Private Sub frmPrincipal_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         Me.Refresh()
+    End Sub
+
+    Private Sub btnlimpiarv_Click(sender As Object, e As EventArgs) Handles btnlimpiarv.Click
+        txtVcontenido.Text = ""
+        txtVnombre.Text = ""
+        dtpfechavideo.Value = Now.Date
+        ActualizarTabla(Nothing, dgvVB)
+    End Sub
+
+    Private Sub btnBuscarBS_Click(sender As Object, e As EventArgs) Handles btnBuscarBS.Click
+        TBuscada = "Serie"
+        Dim condicion As String = "true limit 50"
+        If (Not String.IsNullOrWhiteSpace(txtBSnombre.Text)) Then
+            condicion = "nombre like '%" + txtBSnombre.Text + "%'"
+        End If
+        If (cbS.Checked) Then
+            condicion += " and fecha = '" + Format(CDate(ctpSerie.Value), "yyyy-MM-dd").ToString + "'"
+        End If
+        If Not (BWBuscador.IsBusy) Then
+            BWBuscador.RunWorkerAsync(PSQL("id_serie, fecha_finalizacion as Fecha, nombre as Nombre", "serie", condicion))
+        End If
+    End Sub
+
+    Private Sub dgvBS_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBS.CellDoubleClick
+        Dim i() As String = CargarID(dt_Serie, dgvBS, {0, 1, 2})
+        If (i.Length <> 1) Then
+            Dim formSerie As New frmSerie(i)
+            formSerie.ShowDialog()
+            TBNotas.Text += "good"
+        Else
+
+            TBNotas.Text += "a"
+        End If
     End Sub
 End Class

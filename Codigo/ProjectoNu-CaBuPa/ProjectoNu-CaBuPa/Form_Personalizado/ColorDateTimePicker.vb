@@ -8,12 +8,12 @@ Public Class ColorDateTimePicker
         SetStyle(ControlStyles.UserPaint, True)
         ForeColor = Color.Black
         BackColor = Color.White
+        DropDownAlign = LeftRightAlignment.Right
     End Sub
 
     Public Overrides Property ForeColor As Color
 
     Public Overrides Property BackColor As Color
-
     Protected Overrides Sub OnPaint(e As PaintEventArgs)
         Dim g As Graphics = Me.CreateGraphics()
 

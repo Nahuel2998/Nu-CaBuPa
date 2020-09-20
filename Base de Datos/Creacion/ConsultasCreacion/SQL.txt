@@ -170,7 +170,7 @@ create table Video
 	nombre VARCHAR(64) NOT NULL,
 	ID_Serie INT(6) unsigned,
 	foreign key (ID_Serie ) references Serie(ID_Serie),
-	fecha DATETIME
+	fecha DATE
 	);
 	
 create table Serie

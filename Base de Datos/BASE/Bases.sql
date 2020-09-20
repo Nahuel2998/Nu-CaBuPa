@@ -572,7 +572,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'d',_binary 'å∞ê6µ\œ\Ì¶#˜B˝O†9');
+INSERT INTO `usuarios` VALUES (1,'d',_binary '¬å¬∞¬ê6¬µ\√è\√≠¬¶#√∑B√ΩO¬†9');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -588,7 +588,7 @@ CREATE TABLE `video` (
   `contenido` varchar(128) NOT NULL,
   `nombre` varchar(48) NOT NULL,
   `ID_Serie` int(6) unsigned DEFAULT NULL,
-  `fecha` datetime DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
   PRIMARY KEY (`ID_Video`),
   KEY `ID_Serie` (`ID_Serie`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

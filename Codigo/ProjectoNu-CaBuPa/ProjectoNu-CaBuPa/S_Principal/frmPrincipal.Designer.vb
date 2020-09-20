@@ -68,9 +68,7 @@ Partial Class frmPrincipal
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
-        Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvTandas = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -79,7 +77,6 @@ Partial Class frmPrincipal
         Me.tbPrograma = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -133,9 +130,8 @@ Partial Class frmPrincipal
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.txtBSnombre = New System.Windows.Forms.RichTextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.ColorDateTimePicker1 = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.pStatus = New System.Windows.Forms.Panel()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.pCMain = New System.Windows.Forms.Panel()
@@ -145,6 +141,11 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cbS = New System.Windows.Forms.CheckBox()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -327,12 +328,6 @@ Partial Class frmPrincipal
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
         '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
-        '
         'dgvPublicidades
         '
         Me.dgvPublicidades.AllowUserToAddRows = False
@@ -378,12 +373,6 @@ Partial Class frmPrincipal
         Me.dgvPublicidades.RowTemplate.Height = 28
         Me.dgvPublicidades.RowTemplate.ReadOnly = True
         Me.dgvPublicidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'PDescripcion
-        '
-        resources.ApplyResources(Me.PDescripcion, "PDescripcion")
-        Me.PDescripcion.Name = "PDescripcion"
-        Me.PDescripcion.ReadOnly = True
         '
         'GroupBox2
         '
@@ -479,11 +468,6 @@ Partial Class frmPrincipal
         Me.GroupBox1.Controls.Add(Me.dgvPrograma)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
-        '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.Name = "dtp"
         '
         'dgvPrograma
         '
@@ -1042,27 +1026,23 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.Panel5, "Panel5")
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.RichTextBox1)
+        Me.Panel5.Controls.Add(Me.txtBSnombre)
         Me.Panel5.Name = "Panel5"
         '
-        'RichTextBox1
+        'txtBSnombre
         '
-        resources.ApplyResources(Me.RichTextBox1, "RichTextBox1")
-        Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.RichTextBox1.ForeColor = System.Drawing.Color.White
-        Me.RichTextBox1.Name = "RichTextBox1"
+        resources.ApplyResources(Me.txtBSnombre, "txtBSnombre")
+        Me.txtBSnombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtBSnombre.ForeColor = System.Drawing.Color.White
+        Me.txtBSnombre.Name = "txtBSnombre"
         '
         'Panel6
         '
         resources.ApplyResources(Me.Panel6, "Panel6")
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.ColorDateTimePicker1)
+        Me.Panel6.Controls.Add(Me.cbS)
+        Me.Panel6.Controls.Add(Me.ctpSerie)
         Me.Panel6.Name = "Panel6"
-        '
-        'ColorDateTimePicker1
-        '
-        resources.ApplyResources(Me.ColorDateTimePicker1, "ColorDateTimePicker1")
-        Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
         '
         'pStatus
         '
@@ -1102,6 +1082,34 @@ Partial Class frmPrincipal
         '
         'BWBuscador
         '
+        '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
+        '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
+        '
+        'ctpSerie
+        '
+        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
+        Me.ctpSerie.Name = "ctpSerie"
+        '
+        'PDescripcion
+        '
+        resources.ApplyResources(Me.PDescripcion, "PDescripcion")
+        Me.PDescripcion.Name = "PDescripcion"
+        Me.PDescripcion.ReadOnly = True
+        '
+        'cbS
+        '
+        resources.ApplyResources(Me.cbS, "cbS")
+        Me.cbS.Name = "cbS"
+        Me.cbS.UseVisualStyleBackColor = True
         '
         'frmPrincipal
         '
@@ -1165,6 +1173,7 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel6.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
         Me.pStatus.ResumeLayout(False)
         Me.pCMain.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -1202,7 +1211,6 @@ Partial Class frmPrincipal
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents GroupBox7 As GroupBox
     Friend WithEvents dgvPublicidades As DataGridView
-    Friend WithEvents PDescripcion As DataGridViewTextBoxColumn
     Friend WithEvents BWTandas As System.ComponentModel.BackgroundWorker
     Friend WithEvents BWPublicidades As System.ComponentModel.BackgroundWorker
     Friend WithEvents GBPubli As GroupBox
@@ -1251,9 +1259,9 @@ Partial Class frmPrincipal
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents txtBSnombre As RichTextBox
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents ColorDateTimePicker1 As ColorDateTimePicker
+    Friend WithEvents ctpSerie As ColorDateTimePicker
     Friend WithEvents Panel7 As Panel
     Friend WithEvents TBNotas As RichTextBox
     Friend WithEvents Panel2 As Panel
@@ -1261,4 +1269,6 @@ Partial Class frmPrincipal
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents btnLimpiarBS As Button
     Friend WithEvents btnBuscarBS As Button
+    Friend WithEvents PDescripcion As DataGridViewTextBoxColumn
+    Friend WithEvents cbS As CheckBox
 End Class

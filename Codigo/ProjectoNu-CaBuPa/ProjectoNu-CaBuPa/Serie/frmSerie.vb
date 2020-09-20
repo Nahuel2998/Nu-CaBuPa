@@ -4,15 +4,20 @@ Public Class frmSerie
     Dim editando As Boolean = False ' Controla si se esta en modo de edicion o no
     Dim tmpDatos(1) As String
     Dim cambio As Boolean = False   ' Controla si han habido cambios desde el ultimo modo de edicion
-
-    'Public Sub New(ByVal sid As Integer, ByVal nombre As String, ByVal fecha As Date)
-    '   InitializeComponent()
-    '
-    ' Los siguientes datos se obtienen de la tabla en el elemento padre
-    '  serieID = sid
-    ' txtNombre.Text = nombre
-    'dtpFecha.Value = fecha
-    'End Sub
+    Dim dt_Video As New DataTable
+    Public Sub New(ByVal DatosI() As String)
+        InitializeComponent()
+        'Los siguientes datos se obtienen de la tabla en el elemento padre
+        serieID = DatosI(0)
+        txtNombre.Text = DatosI(2)
+        If DatosI(1) <> "" Then
+            dtpFecha.Value = CDate(DatosI(1))
+        Else
+            txtTapar.Visible = True
+        End If
+        dt_Video = DevolverTabla(PSQL("id_video, fecha as Fecha, nombre as Nombre", "video", "id_serie = '" + DatosI(0) + "'"))
+        ActualizarTablaC(dt_Video, dgvVSM)
+    End Sub
 
     Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnSEditar.Click
         '' editando = True   -> Se guardaran los cambios
