@@ -39,6 +39,7 @@ Public Class frmPrincipal
     Private Sub BWNumberOne_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWProgramas.DoWork
         dt_programa = ModConector.APrograma(dtp.Value.Date)
     End Sub
+
     Private Sub ActualizarProgramas()
         dgvPrograma.Columns.Clear()
         If Not IsNothing(dt_programa) Then
@@ -58,14 +59,14 @@ Public Class frmPrincipal
             dgvPrograma.Columns.Add("PPrograma", "Programa")
             dgvPrograma.Columns.Add("PEstado", "Estado")
         End If
-
-
     End Sub
+
     Private Sub ActualizarEvento()
         ActualizarTabla(dt_evento, dgvEventos)
         dgvEventos.Columns().RemoveAt(0)
         dgvEventos.ClearSelection()
     End Sub
+
     Public Sub dgvProgramaColor()
         Dim fin As TimeSpan
         Dim inicio As TimeSpan
@@ -105,6 +106,7 @@ Public Class frmPrincipal
             Next
         End If
     End Sub
+
     Private Sub BWNumberOne_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWProgramas.RunWorkerCompleted
         ActualizarProgramas()
         Funcionarios()
@@ -123,6 +125,7 @@ Public Class frmPrincipal
         escribir.Write(TBNotas.Text)
         escribir.Close()
     End Sub
+
     Public Sub LeerNotas()
         Dim ruta As String = "..\User\"
         Dim archivo As String = "Notas.txt"
@@ -160,6 +163,7 @@ Public Class frmPrincipal
         dgvPPublicidades.ClearSelection()
         dgvPrograma.ClearSelection()
     End Sub
+
     Public Sub Funcionarios()
         If Not (BWDPRogramas.IsBusy) Then
             If Not (BWProgramas.IsBusy) Then
@@ -167,6 +171,7 @@ Public Class frmPrincipal
             End If
         End If
     End Sub
+
     Private Sub dgvPrograma_Click(sender As Object, e As EventArgs) Handles dgvPrograma.Click
         Funcionarios()
     End Sub
@@ -178,7 +183,6 @@ Public Class frmPrincipal
     Private Sub BWEventos_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWEventos.RunWorkerCompleted
         ActualizarEvento()
     End Sub
-
 
     Private Sub BWPublicidades_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWPublicidades.DoWork
         If dgvTandas.Rows.Count > 0 And dgvTandas.SelectedRows.Count > 0 Then
@@ -197,11 +201,11 @@ Public Class frmPrincipal
 
     Private Sub BWTandas_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWTandas.DoWork
         dt_tandas = ModConector.ATandas()
-
     End Sub
     Public Sub Tandas()
         ActualizarTabla(dt_tandas, dgvTandas)
     End Sub
+
     Private Sub BWTandas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWTandas.RunWorkerCompleted
         Tandas()
         BWPublicidades.RunWorkerAsync()
@@ -231,8 +235,6 @@ Public Class frmPrincipal
         End If
     End Sub
 
-
-
     Private Sub BWBuscador_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWBuscador.DoWork
         TBusca = DevolverTabla(e.Argument)
         ModLog.Guardar(e.Argument)
@@ -240,15 +242,15 @@ Public Class frmPrincipal
 
     Private Sub btnbuscarv_Click(sender As Object, e As EventArgs) Handles btnbuscarv.Click
         TBuscada = "Video"
-        Dim condicion As String = "true limit 50"
+        Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtVnombre.Text)) Then
-            condicion = "v.nombre like '%" + txtVnombre.Text + "%'"
+            condicion = String.Format("v.nombre like '%{0}%'", txtVnombre.Text)
         End If
         If (cbFecha.Checked) Then
-            condicion += " and fecha = '" + Format(CDate(dtpfechavideo.Value), "yyyy-MM-dd").ToString + "'"
+            condicion += String.Format(" and fecha = '{0}'", Format(dtpfechavideo.Value, "yyyy-MM-dd").ToString)
         End If
         If (Not String.IsNullOrWhiteSpace(txtVcontenido.Text)) Then
-            condicion += " and v.contenido like '%" + txtVcontenido.Text + "%'"
+            condicion += String.Format(" and v.contenido like '%{0}%'", txtVcontenido.Text)
         End If
         If Not (BWBuscador.IsBusy) Then
             BWBuscador.RunWorkerAsync(PSQL("id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie", "video v", condicion))
@@ -277,28 +279,32 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnLimpiarBS_Click(sender As Object, e As EventArgs) Handles btnLimpiarBS.Click
-
+        txtBSnombre.Clear()
+        ctpSerie.Value = Now.Date
+        cbS.Checked = False
+        ActualizarTabla(Nothing, dgvBS)
     End Sub
 
     Private Sub frmPrincipal_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-        Me.Refresh()
+        Refresh()
     End Sub
 
     Private Sub btnlimpiarv_Click(sender As Object, e As EventArgs) Handles btnlimpiarv.Click
-        txtVcontenido.Text = ""
-        txtVnombre.Text = ""
+        txtVcontenido.Clear()
+        txtVnombre.Clear()
         dtpfechavideo.Value = Now.Date
+        cbFecha.Checked = False
         ActualizarTabla(Nothing, dgvVB)
     End Sub
 
     Private Sub btnBuscarBS_Click(sender As Object, e As EventArgs) Handles btnBuscarBS.Click
         TBuscada = "Serie"
-        Dim condicion As String = "true limit 50"
+        Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtBSnombre.Text)) Then
             condicion = "nombre like '%" + txtBSnombre.Text + "%'"
         End If
         If (cbS.Checked) Then
-            condicion += " and fecha = '" + Format(CDate(ctpSerie.Value), "yyyy-MM-dd").ToString + "'"
+            condicion += String.Format(" and fecha_finalizacion = '{0}'", Format(ctpSerie.Value, "yyyy-MM-dd").ToString)
         End If
         If Not (BWBuscador.IsBusy) Then
             BWBuscador.RunWorkerAsync(PSQL("id_serie, fecha_finalizacion as Fecha, nombre as Nombre", "serie", condicion))
@@ -312,7 +318,6 @@ Public Class frmPrincipal
             formSerie.ShowDialog()
             TBNotas.Text += "good"
         Else
-
             TBNotas.Text += "a"
         End If
     End Sub

@@ -68,7 +68,9 @@ Partial Class frmPrincipal
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
+        Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvTandas = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -77,6 +79,7 @@ Partial Class frmPrincipal
         Me.tbPrograma = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -132,6 +135,8 @@ Partial Class frmPrincipal
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.txtBSnombre = New System.Windows.Forms.RichTextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.cbS = New System.Windows.Forms.CheckBox()
+        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.pStatus = New System.Windows.Forms.Panel()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.pCMain = New System.Windows.Forms.Panel()
@@ -141,11 +146,6 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
-        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cbS = New System.Windows.Forms.CheckBox()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -328,6 +328,12 @@ Partial Class frmPrincipal
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
         '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
+        '
         'dgvPublicidades
         '
         Me.dgvPublicidades.AllowUserToAddRows = False
@@ -373,6 +379,12 @@ Partial Class frmPrincipal
         Me.dgvPublicidades.RowTemplate.Height = 28
         Me.dgvPublicidades.RowTemplate.ReadOnly = True
         Me.dgvPublicidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
+        'PDescripcion
+        '
+        resources.ApplyResources(Me.PDescripcion, "PDescripcion")
+        Me.PDescripcion.Name = "PDescripcion"
+        Me.PDescripcion.ReadOnly = True
         '
         'GroupBox2
         '
@@ -468,6 +480,11 @@ Partial Class frmPrincipal
         Me.GroupBox1.Controls.Add(Me.dgvPrograma)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
+        '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
         '
         'dgvPrograma
         '
@@ -1044,6 +1061,17 @@ Partial Class frmPrincipal
         Me.Panel6.Controls.Add(Me.ctpSerie)
         Me.Panel6.Name = "Panel6"
         '
+        'cbS
+        '
+        resources.ApplyResources(Me.cbS, "cbS")
+        Me.cbS.Name = "cbS"
+        Me.cbS.UseVisualStyleBackColor = True
+        '
+        'ctpSerie
+        '
+        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
+        Me.ctpSerie.Name = "ctpSerie"
+        '
         'pStatus
         '
         resources.ApplyResources(Me.pStatus, "pStatus")
@@ -1082,34 +1110,6 @@ Partial Class frmPrincipal
         '
         'BWBuscador
         '
-        '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
-        '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.Name = "dtp"
-        '
-        'ctpSerie
-        '
-        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
-        Me.ctpSerie.Name = "ctpSerie"
-        '
-        'PDescripcion
-        '
-        resources.ApplyResources(Me.PDescripcion, "PDescripcion")
-        Me.PDescripcion.Name = "PDescripcion"
-        Me.PDescripcion.ReadOnly = True
-        '
-        'cbS
-        '
-        resources.ApplyResources(Me.cbS, "cbS")
-        Me.cbS.Name = "cbS"
-        Me.cbS.UseVisualStyleBackColor = True
         '
         'frmPrincipal
         '
