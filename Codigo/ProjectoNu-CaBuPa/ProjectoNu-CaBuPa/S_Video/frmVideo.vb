@@ -61,7 +61,7 @@
             If Not CompararValores(VaciarNull(datos), datosI) Then
                 PrepararUpdate("video", datos, videoID)
                 datosI = VaciarNull(datos)
-                ModInicializador.frmPrin.btnbuscarv.PerformClick()
+                ' ModInicializador.frmPrin.btnbuscarv.PerformClick()
             End If
         End If
         Alternar()
@@ -115,7 +115,7 @@
                     e.Cancel = True
                     ModInicializador.Cancelar = ModInicializador.Cancelar.Replace("Video", "")
                 Else
-                    ModInicializador.frmPrin.btnbuscarv.PerformClick()
+                    ' ModInicializador.frmPrin.btnbuscarv.PerformClick()
                 End If
             End If
         End If

@@ -23,7 +23,12 @@ Public Class frmSerie
         AddHandler chbIncluir.CheckedChanged, AddressOf chbIncluir_CheckedChanged
         ' ...Esto tambien, supongo.....
         ''ModLog.Guardar(PSQL("id_video, fecha as Fecha, nombre as Nombre", "video", String.Format("id_serie = '{0}'", DatosI(0))))
+    End Sub
 
+    Private Sub frmSerie_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dtpFecha.BackColor = Color.FromArgb(64, 64, 64)
+        dtpFecha.ForeColor = Color.White
+        ActualizarTabla()
     End Sub
 
     Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnSEditar.Click
@@ -81,8 +86,6 @@ Public Class frmSerie
                 End If
             End If
         End If
-        ' FIXME: Probablemente mover esto?
-        frmPrin.btnBuscarBS.PerformClick()
     End Sub
 
     '' Alternar botones
@@ -145,16 +148,22 @@ Public Class frmSerie
         cambio = Not cambio
     End Sub
 
-    Private Sub frmSerie_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dt_Video = DevolverTabla(PSQL("id_video, fecha as Fecha, nombre as Nombre", "video", String.Format("id_serie = '{0}'", serieID)))
-        ActualizarTablaC(dt_Video, dgvVSM)
-    End Sub
-
     Private Sub dgvVSM_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVSM.CellDoubleClick
         Dim i As Integer = CargarID(dt_Video, dgvVSM)
         If (i <> -1) Then
             Dim formVideo As New frmVideo(i)
+            AddHandler formVideo.FormClosed, AddressOf FormVideo_FormClosed
             formVideo.ShowDialog()
         End If
+    End Sub
+
+    '' Actualiza la tabla mostrando los videos asociados cuando el formulario de mostrar video se ha cerrado
+    Private Sub FormVideo_FormClosed(sender As Object, e As FormClosedEventArgs)
+        ActualizarTabla()
+    End Sub
+
+    Private Sub ActualizarTabla()
+        dt_Video = DevolverTabla(PSQL("id_video, fecha as Fecha, nombre as Nombre", "video", String.Format("id_serie = '{0}'", serieID)))
+        ActualizarTablaC(dt_Video, dgvVSM)
     End Sub
 End Class

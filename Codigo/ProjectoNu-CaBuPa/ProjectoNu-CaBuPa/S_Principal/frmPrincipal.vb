@@ -274,6 +274,7 @@ Public Class frmPrincipal
         Dim i As Integer = CargarID(dt_Video, dgvVB)
         If (i <> -1) Then
             Dim formVideo As New frmVideo(i)
+            AddHandler formVideo.FormClosed, AddressOf FormVideo_FormClosed
             formVideo.ShowDialog()
         End If
     End Sub
@@ -315,10 +316,19 @@ Public Class frmPrincipal
         Dim i() As String = CargarID(dt_Serie, dgvBS, {0, 1, 2})
         If (i.Length <> 1) Then
             Dim formSerie As New frmSerie(i)
+            AddHandler formSerie.FormClosed, AddressOf FormSerie_FormClosed
             formSerie.ShowDialog()
             TBNotas.Text += "good"
         Else
             TBNotas.Text += "a"
         End If
+    End Sub
+
+    Private Sub FormVideo_FormClosed(sender As Object, e As FormClosedEventArgs)
+        btnbuscarv.PerformClick()
+    End Sub
+
+    Private Sub FormSerie_FormClosed(sender As Object, e As FormClosedEventArgs)
+        btnBuscarBS.PerformClick()
     End Sub
 End Class

@@ -857,3 +857,21 @@
 20/09/2020 13:11:25 DESKTOP-SDVEG3U ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
 20/09/2020 13:11:52 DESKTOP-SDVEG3U ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
 20/09/2020 13:11:58 DESKTOP-SDVEG3U ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 20:10:54 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/9/2020 20:11:12 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 20:14:07 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 20:14:22 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 20:14:28 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 21:05:54 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/9/2020 21:06:01 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 21:06:16 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 21:15:05 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/9/2020 21:15:11 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 21:15:13 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 21:15:30 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 21:15:38 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 21:15:43 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+20/9/2020 21:15:57 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+20/9/2020 22:28:21 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/9/2020 22:28:34 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+20/9/2020 22:28:38 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
