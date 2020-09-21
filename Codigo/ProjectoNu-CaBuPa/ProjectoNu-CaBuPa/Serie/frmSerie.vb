@@ -76,7 +76,7 @@ Public Class frmSerie
         If cambio Then
             Dim datos() As String = {If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null"), txtNombre.Text}
             If Not CompararValores(VaciarNull(datos), tmpDatos) Then
-                Dim g As New frmGuardarEdicion("Serie", datos, serieID, Me)
+                Dim g As New frmGuardarEdicion("Serie", datos, serieID)
                 g.ShowDialog()
                 If ModInicializador.Cancelar.Contains("Serie") Then
                     e.Cancel = True
@@ -166,4 +166,10 @@ Public Class frmSerie
         dt_Video = DevolverTabla(PSQL("id_video, fecha as Fecha, nombre as Nombre", "video", String.Format("id_serie = '{0}'", serieID)))
         ActualizarTablaC(dt_Video, dgvVSM)
     End Sub
+
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+        Dim formDelete As New frmConfirmarBorrado("Serie", serieID)
+        formDelete.ShowDialog(Me)
+    End Sub
+
 End Class

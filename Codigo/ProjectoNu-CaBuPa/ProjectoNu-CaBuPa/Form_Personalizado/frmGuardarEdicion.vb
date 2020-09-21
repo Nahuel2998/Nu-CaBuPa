@@ -3,16 +3,14 @@
 Public Class frmGuardarEdicion
     Dim tabla As String
     Dim datos() As String
-    Dim frm As Form
     Dim id As String
 
-    Public Sub New(ByVal t As String, ByVal d() As String, ByVal identificador As String, ByRef f As Form)
+    Public Sub New(ByVal t As String, ByVal d() As String, ByVal identificador As String)
         InitializeComponent()
 
         tabla = t
         datos = d
         id = identificador
-        frm = f
         Beep()
     End Sub
 
@@ -28,5 +26,9 @@ Public Class frmGuardarEdicion
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         PrepararUpdate(tabla, datos, id)
         Close()
+    End Sub
+
+    Private Sub frmGuardarEdicion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

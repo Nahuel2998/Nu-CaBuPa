@@ -331,4 +331,6 @@ Public Class frmPrincipal
     Private Sub FormSerie_FormClosed(sender As Object, e As FormClosedEventArgs)
         btnBuscarBS.PerformClick()
     End Sub
+
+
 End Class

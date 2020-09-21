@@ -35,6 +35,7 @@ Partial Class frmVideo
         Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.VSerie = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnBorrar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -87,6 +88,7 @@ Partial Class frmVideo
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.btnBorrar)
         Me.GroupBox1.Controls.Add(Me.chbTieneFecha)
         Me.GroupBox1.Controls.Add(Me.txtTapar)
         Me.GroupBox1.Controls.Add(Me.cbSerie)
@@ -165,6 +167,7 @@ Partial Class frmVideo
         '
         'dtpFecha
         '
+        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.dtpFecha.Enabled = False
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFecha.Location = New System.Drawing.Point(166, 66)
@@ -194,6 +197,16 @@ Partial Class frmVideo
         Me.GroupBox3.TabIndex = 8
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Contenido"
+        '
+        'btnBorrar
+        '
+        Me.btnBorrar.Location = New System.Drawing.Point(194, 328)
+        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(94, 26)
+        Me.btnBorrar.TabIndex = 10
+        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.UseVisualStyleBackColor = True
         '
         'frmVideo
         '
@@ -234,4 +247,5 @@ Partial Class frmVideo
     Friend WithEvents cbSerie As ComboBox
     Friend WithEvents txtTapar As TextBox
     Friend WithEvents chbTieneFecha As CheckBox
+    Friend WithEvents btnBorrar As Button
 End Class

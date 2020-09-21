@@ -82,6 +82,33 @@
         res = res.Remove(res.Length - 1)
         USQL(tabla, res, String.Format("{0} = '{1}'", dt.Rows(0).Item(0).ToString, id))
     End Sub
+    Public Sub PrepararUpdate(ByVal tabla As String, ByVal Columna() As String, ByVal datos() As String, ByVal Condiciones() As String, ByVal id() As String)
+        Dim res As String = ""
+        Dim i As Integer = 0
+        For Each dato In datos
+            res += String.Format(If(dato = "null", "{0} = {1},", "{0} = '{1}',"), Columna(i), dato)
+            i += 1
+        Next
+        i = 0
+        res = res.Remove(res.Length - 1)
+        Dim condicion As String = ""
+        For Each con In Condiciones
+            condicion += String.Format(If(id(i) = "null", "{0} = {1} and", "{0} = '{1}' and"), con, id(i))
+            i += 1
+        Next
+        condicion = condicion.Remove(condicion.Length - 4)
+        USQL(tabla, res, condicion)
+    End Sub
+    Public Sub PrepararDelete(ByVal tabla As String, ByVal datos() As String, ByVal ids() As String)
+        Dim res As String = ""
+        Dim i As Integer = 0
+        For Each dato In datos
+            res += String.Format(If(dato = "null", "{0} = {1} and", "{0} = '{1}' and"), datos(i), ids(i))
+            i += 1
+        Next
+        res = res.Remove(res.Length - 3)
+        BSQL(tabla, res)
+    End Sub
 
     Public Function BuscarDatos(ByVal tabla As String, ByVal Columnas() As String, ByVal campo As String, ByVal id As String) As String()
         Dim res As String = ""
@@ -102,9 +129,13 @@
     Public Sub LlenarCombo(ByRef con As ComboBox, ByVal dt As DataTable, ByVal col As String)
         con.Items.Clear()
         con.Items.Add("No está relacionado")
-        For j As Integer = 0 To dt.Rows.Count - 1
-            con.Items.Add(dt.Rows(j).Item(col).ToString)
-        Next
+        If (Not IsNothing(dt)) Then
+            If (dt.Rows.Count > 0) Then
+                For j As Integer = 0 To dt.Rows.Count - 1
+                    con.Items.Add(dt.Rows(j).Item(col).ToString)
+                Next
+            End If
+        End If
     End Sub
 
     Public Function CompararValores(ByVal s1() As String, ByVal s2() As String) As Boolean

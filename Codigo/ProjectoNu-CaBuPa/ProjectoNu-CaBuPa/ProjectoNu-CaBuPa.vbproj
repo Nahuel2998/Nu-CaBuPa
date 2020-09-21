@@ -91,6 +91,12 @@
     <Compile Include="Form_Personalizado\ColorDateTimePicker.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Form_Personalizado\frmConfirmarBorrado.Designer.vb">
+      <DependentUpon>frmConfirmarBorrado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Personalizado\frmConfirmarBorrado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Personalizado\frmGuardarEdicion.Designer.vb">
       <DependentUpon>frmGuardarEdicion.vb</DependentUpon>
     </Compile>
@@ -190,6 +196,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Ayudas de desarrollo\Generador_DB.resx">
       <DependentUpon>Generador_DB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Personalizado\frmConfirmarBorrado.resx">
+      <DependentUpon>frmConfirmarBorrado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Personalizado\frmGuardarEdicion.resx">
       <DependentUpon>frmGuardarEdicion.vb</DependentUpon>

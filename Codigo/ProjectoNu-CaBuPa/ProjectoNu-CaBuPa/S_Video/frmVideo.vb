@@ -109,7 +109,7 @@
         If editando Then
             ActualizarDatos()
             If Not CompararValores(VaciarNull(datos), datosI) Then
-                Dim g As New frmGuardarEdicion("Video", datos, videoID, Me)
+                Dim g As New frmGuardarEdicion("Video", datos, videoID)
                 g.ShowDialog()
                 If ModInicializador.Cancelar.Contains("Video") Then
                     e.Cancel = True
@@ -123,5 +123,10 @@
 
     Private Sub ActualizarDatos()
         datos = {txtContenido.Text, txtNombre.Text, If(cbSerie.SelectedIndex = 0, "null", position(cbSerie.SelectedIndex - 1)), If(chbTieneFecha.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null")}
+    End Sub
+
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+        Dim formDelete As New frmConfirmarBorrado("Video", videoID)
+        formDelete.ShowDialog(Me)
     End Sub
 End Class
