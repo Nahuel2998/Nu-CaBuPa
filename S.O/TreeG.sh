@@ -22,6 +22,7 @@ RecD () {
             CA=`expr $CA + 1`
             Num=`expr $RL + 1`
             RecD "$1/$i" $Num
+            echo $RL
         done
 }
 TD=""
