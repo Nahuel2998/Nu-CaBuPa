@@ -100,6 +100,9 @@ Partial Class frmPrincipal
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.btnIngresarV = New System.Windows.Forms.Button()
+        Me.btnbuscarv = New System.Windows.Forms.Button()
         Me.Información = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -121,7 +124,6 @@ Partial Class frmPrincipal
         Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.btnbuscarv = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -151,8 +153,6 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
-        Me.btnIngresarV = New System.Windows.Forms.Button()
-        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -182,6 +182,7 @@ Partial Class frmPrincipal
         Me.TabControl1.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
+        Me.Panel9.SuspendLayout()
         Me.Información.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -204,7 +205,6 @@ Partial Class frmPrincipal
         Me.Panel6.SuspendLayout()
         Me.pStatus.SuspendLayout()
         Me.pCMain.SuspendLayout()
-        Me.Panel9.SuspendLayout()
         Me.SuspendLayout()
         '
         'pMain
@@ -752,6 +752,25 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel3.Controls.Add(Me.GroupBox4, 0, 0)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         '
+        'Panel9
+        '
+        Me.Panel9.Controls.Add(Me.btnIngresarV)
+        Me.Panel9.Controls.Add(Me.btnbuscarv)
+        resources.ApplyResources(Me.Panel9, "Panel9")
+        Me.Panel9.Name = "Panel9"
+        '
+        'btnIngresarV
+        '
+        resources.ApplyResources(Me.btnIngresarV, "btnIngresarV")
+        Me.btnIngresarV.Name = "btnIngresarV"
+        Me.btnIngresarV.UseVisualStyleBackColor = True
+        '
+        'btnbuscarv
+        '
+        resources.ApplyResources(Me.btnbuscarv, "btnbuscarv")
+        Me.btnbuscarv.Name = "btnbuscarv"
+        Me.btnbuscarv.UseVisualStyleBackColor = True
+        '
         'Información
         '
         resources.ApplyResources(Me.Información, "Información")
@@ -927,12 +946,6 @@ Partial Class frmPrincipal
         resources.ApplyResources(Me.VEliminar, "VEliminar")
         Me.VEliminar.Name = "VEliminar"
         Me.VEliminar.TrueValue = "True"
-        '
-        'btnbuscarv
-        '
-        resources.ApplyResources(Me.btnbuscarv, "btnbuscarv")
-        Me.btnbuscarv.Name = "btnbuscarv"
-        Me.btnbuscarv.UseVisualStyleBackColor = True
         '
         'TabPage1
         '
@@ -1156,19 +1169,6 @@ Partial Class frmPrincipal
         'BWBuscador
         '
         '
-        'btnIngresarV
-        '
-        resources.ApplyResources(Me.btnIngresarV, "btnIngresarV")
-        Me.btnIngresarV.Name = "btnIngresarV"
-        Me.btnIngresarV.UseVisualStyleBackColor = True
-        '
-        'Panel9
-        '
-        Me.Panel9.Controls.Add(Me.btnIngresarV)
-        Me.Panel9.Controls.Add(Me.btnbuscarv)
-        resources.ApplyResources(Me.Panel9, "Panel9")
-        Me.Panel9.Name = "Panel9"
-        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -1208,6 +1208,7 @@ Partial Class frmPrincipal
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage4.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.Panel9.ResumeLayout(False)
         Me.Información.ResumeLayout(False)
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
@@ -1235,7 +1236,6 @@ Partial Class frmPrincipal
         Me.Panel6.PerformLayout()
         Me.pStatus.ResumeLayout(False)
         Me.pCMain.ResumeLayout(False)
-        Me.Panel9.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

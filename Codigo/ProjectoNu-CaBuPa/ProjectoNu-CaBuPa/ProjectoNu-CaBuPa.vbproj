@@ -103,6 +103,12 @@
     <Compile Include="Form_Personalizado\frmGuardarEdicion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Funcionario\FmFuncionario.Designer.vb">
+      <DependentUpon>FmFuncionario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionario\FmFuncionario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modulos\ModConector.vb" />
     <Compile Include="Modulos\ModLog.vb" />
     <Compile Include="Modulos\ModTablas.vb" />
@@ -192,6 +198,12 @@
     <Compile Include="S_Video\frmVideo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Tandas\FmTandas.Designer.vb">
+      <DependentUpon>FmTandas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tandas\FmTandas.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ayudas de desarrollo\Generador_DB.resx">
@@ -202,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Personalizado\frmGuardarEdicion.resx">
       <DependentUpon>frmGuardarEdicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funcionario\FmFuncionario.resx">
+      <DependentUpon>FmFuncionario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Publicidad\Publicidad.resx">
       <DependentUpon>Publicidad.vb</DependentUpon>
@@ -244,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="S_Video\frmVideo.resx">
       <DependentUpon>frmVideo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tandas\FmTandas.resx">
+      <DependentUpon>FmTandas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
