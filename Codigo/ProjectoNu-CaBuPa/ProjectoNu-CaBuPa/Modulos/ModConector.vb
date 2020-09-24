@@ -167,7 +167,7 @@ Module ModConector
 #Region "Comandos"
     Public Sub BSQL(ByVal nTabla As String, ByVal Condition As String)
         ESQL("DELETE FROM " + nTabla + " WHERE " + Condition)
-
+        'ModLog.Guardar("DELETE FROM " + nTabla + " WHERE " + Condition)
     End Sub
     Public Sub ISQL(ByVal nTabla As String, ByVal Column As String, ByVal Data As String)
         ESQL("Insert into " + nTabla + " ( " + Column + " ) values (" + Data + " )")
@@ -187,7 +187,7 @@ Module ModConector
     End Function
     Public Sub USQL(ByVal nTabla As String, ByVal Orden As String, ByVal Condition As String)
 
-        ModLog.Guardar("update " + nTabla + " set " + Orden + " WHERE " + Condition)
+
         ESQL("update " + nTabla + " set " + Orden + " WHERE " + Condition)
     End Sub
 #End Region

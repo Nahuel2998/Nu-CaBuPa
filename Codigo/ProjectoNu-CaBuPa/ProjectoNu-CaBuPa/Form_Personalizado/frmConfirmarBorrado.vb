@@ -1,11 +1,12 @@
 ﻿Public Class frmConfirmarBorrado
     Dim tabla As String
-    Dim id As String
-    Public Sub New(ByVal t As String, ByVal identificador As String)
+    Dim id() As String
+    Dim c As Boolean = False
+    Public Sub New(ByVal t As String, ByVal identificador() As String, ByVal Cerrar As Boolean)
         InitializeComponent()
         tabla = t
         id = identificador
-        Beep()
+        c = Cerrar
     End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Close()
@@ -14,22 +15,26 @@
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
         Select Case tabla
             Case "Serie"
-                PrepararDelete("video", {"id_serie"}, {id})
-                PrepararDelete("Serie", {"id_serie"}, {id})
+                PrepararDelete("video", "id_serie", id)
+                PrepararDelete("Serie", "id_serie", id)
             Case "Video"
-                PrepararDelete("Video", {"id_video"}, {id})
+                PrepararDelete("Video", "id_video", id)
         End Select
-        Owner.Close()
+        If (c) Then
+            Owner.Close()
+        End If
         Close()
     End Sub
 
     Private Sub BtnBorrarTodo_Click(sender As Object, e As EventArgs) Handles btnBorrarSerie.Click
-        PrepararUpdate("video", {"id_serie"}, {"null"}, {"id_serie"}, {id})
-        PrepararDelete("Serie", {"id_serie"}, {id})
+        PrepararUpdate("video", {"id_serie"}, {"null"}, {"id_serie"}, id)
+        PrepararDelete("Serie", "id_serie", id)
         If (Not IsNothing(dt_Video)) Then
             frmPrin.btnlimpiarv.PerformClick()
         End If
-        Owner.Close()
+        If (c) Then
+            Owner.Close()
+        End If
         Close()
     End Sub
 

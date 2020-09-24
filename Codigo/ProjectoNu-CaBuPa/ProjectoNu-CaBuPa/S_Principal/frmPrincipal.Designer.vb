@@ -112,20 +112,25 @@ Partial Class frmPrincipal
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtVcontenido = New System.Windows.Forms.TextBox()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.btnBorrar = New System.Windows.Forms.Button()
+        Me.btnlimpiarv = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.dgvVB = New System.Windows.Forms.DataGridView()
         Me.VFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.btnbuscarv = New System.Windows.Forms.Button()
-        Me.btnlimpiarv = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.dgvBS = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnLimpiarBS = New System.Windows.Forms.Button()
         Me.btnBuscarBS = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
@@ -146,6 +151,8 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
+        Me.btnIngresarV = New System.Windows.Forms.Button()
+        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -180,6 +187,7 @@ Partial Class frmPrincipal
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.Panel8.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvVB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -196,6 +204,7 @@ Partial Class frmPrincipal
         Me.Panel6.SuspendLayout()
         Me.pStatus.SuspendLayout()
         Me.pCMain.SuspendLayout()
+        Me.Panel9.SuspendLayout()
         Me.SuspendLayout()
         '
         'pMain
@@ -737,10 +746,10 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.TableLayoutPanel3, "TableLayoutPanel3")
         Me.TableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TableLayoutPanel3.Controls.Add(Me.Panel9, 1, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Información, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.Panel8, 0, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.GroupBox4, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnbuscarv, 1, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnlimpiarv, 0, 1)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         '
         'Información
@@ -819,6 +828,25 @@ Partial Class frmPrincipal
         resources.ApplyResources(Me.txtVcontenido, "txtVcontenido")
         Me.txtVcontenido.Name = "txtVcontenido"
         '
+        'Panel8
+        '
+        Me.Panel8.Controls.Add(Me.btnBorrar)
+        Me.Panel8.Controls.Add(Me.btnlimpiarv)
+        resources.ApplyResources(Me.Panel8, "Panel8")
+        Me.Panel8.Name = "Panel8"
+        '
+        'btnBorrar
+        '
+        resources.ApplyResources(Me.btnBorrar, "btnBorrar")
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.UseVisualStyleBackColor = True
+        '
+        'btnlimpiarv
+        '
+        resources.ApplyResources(Me.btnlimpiarv, "btnlimpiarv")
+        Me.btnlimpiarv.Name = "btnlimpiarv"
+        Me.btnlimpiarv.UseVisualStyleBackColor = True
+        '
         'GroupBox4
         '
         resources.ApplyResources(Me.GroupBox4, "GroupBox4")
@@ -851,7 +879,7 @@ Partial Class frmPrincipal
         DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvVB.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
         Me.dgvVB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvVB.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.VFecha, Me.VNombre, Me.VSerie})
+        Me.dgvVB.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.VFecha, Me.VNombre, Me.VSerie, Me.VEliminar})
         DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         DataGridViewCellStyle27.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
@@ -862,7 +890,6 @@ Partial Class frmPrincipal
         Me.dgvVB.DefaultCellStyle = DataGridViewCellStyle27
         Me.dgvVB.MultiSelect = False
         Me.dgvVB.Name = "dgvVB"
-        Me.dgvVB.ReadOnly = True
         Me.dgvVB.RowHeadersVisible = False
         DataGridViewCellStyle28.BackColor = System.Drawing.Color.Black
         DataGridViewCellStyle28.ForeColor = System.Drawing.Color.White
@@ -874,33 +901,38 @@ Partial Class frmPrincipal
         '
         'VFecha
         '
+        Me.VFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.VFecha.Frozen = True
         resources.ApplyResources(Me.VFecha, "VFecha")
         Me.VFecha.Name = "VFecha"
-        Me.VFecha.ReadOnly = True
         '
         'VNombre
         '
+        Me.VNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.VNombre.Frozen = True
         resources.ApplyResources(Me.VNombre, "VNombre")
         Me.VNombre.Name = "VNombre"
-        Me.VNombre.ReadOnly = True
         '
         'VSerie
         '
+        Me.VSerie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.VSerie.Frozen = True
         resources.ApplyResources(Me.VSerie, "VSerie")
         Me.VSerie.Name = "VSerie"
-        Me.VSerie.ReadOnly = True
+        '
+        'VEliminar
+        '
+        Me.VEliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.VEliminar.FalseValue = "False"
+        resources.ApplyResources(Me.VEliminar, "VEliminar")
+        Me.VEliminar.Name = "VEliminar"
+        Me.VEliminar.TrueValue = "True"
         '
         'btnbuscarv
         '
         resources.ApplyResources(Me.btnbuscarv, "btnbuscarv")
         Me.btnbuscarv.Name = "btnbuscarv"
         Me.btnbuscarv.UseVisualStyleBackColor = True
-        '
-        'btnlimpiarv
-        '
-        resources.ApplyResources(Me.btnlimpiarv, "btnlimpiarv")
-        Me.btnlimpiarv.Name = "btnlimpiarv"
-        Me.btnlimpiarv.UseVisualStyleBackColor = True
         '
         'TabPage1
         '
@@ -951,7 +983,7 @@ Partial Class frmPrincipal
         DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvBS.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle30
         Me.dgvBS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBS.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.dgvBS.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.SEliminar})
         DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         DataGridViewCellStyle31.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
@@ -986,6 +1018,12 @@ Partial Class frmPrincipal
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
+        'SEliminar
+        '
+        resources.ApplyResources(Me.SEliminar, "SEliminar")
+        Me.SEliminar.Name = "SEliminar"
+        Me.SEliminar.ReadOnly = True
+        '
         'SplitContainer1
         '
         resources.ApplyResources(Me.SplitContainer1, "SplitContainer1")
@@ -993,11 +1031,18 @@ Partial Class frmPrincipal
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnLimpiarBS)
         '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.btnBuscarBS)
+        '
+        'Button1
+        '
+        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.Name = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'btnLimpiarBS
         '
@@ -1111,6 +1156,19 @@ Partial Class frmPrincipal
         'BWBuscador
         '
         '
+        'btnIngresarV
+        '
+        resources.ApplyResources(Me.btnIngresarV, "btnIngresarV")
+        Me.btnIngresarV.Name = "btnIngresarV"
+        Me.btnIngresarV.UseVisualStyleBackColor = True
+        '
+        'Panel9
+        '
+        Me.Panel9.Controls.Add(Me.btnIngresarV)
+        Me.Panel9.Controls.Add(Me.btnbuscarv)
+        resources.ApplyResources(Me.Panel9, "Panel9")
+        Me.Panel9.Name = "Panel9"
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -1158,6 +1216,7 @@ Partial Class frmPrincipal
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         CType(Me.dgvVB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
@@ -1176,6 +1235,7 @@ Partial Class frmPrincipal
         Me.Panel6.PerformLayout()
         Me.pStatus.ResumeLayout(False)
         Me.pCMain.ResumeLayout(False)
+        Me.Panel9.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1241,9 +1301,6 @@ Partial Class frmPrincipal
     Friend WithEvents btnlimpiarv As Button
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents dgvVB As DataGridView
-    Friend WithEvents VFecha As DataGridViewTextBoxColumn
-    Friend WithEvents VNombre As DataGridViewTextBoxColumn
-    Friend WithEvents VSerie As DataGridViewTextBoxColumn
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
@@ -1271,4 +1328,14 @@ Partial Class frmPrincipal
     Friend WithEvents btnBuscarBS As Button
     Friend WithEvents PDescripcion As DataGridViewTextBoxColumn
     Friend WithEvents cbS As CheckBox
+    Friend WithEvents VFecha As DataGridViewTextBoxColumn
+    Friend WithEvents VNombre As DataGridViewTextBoxColumn
+    Friend WithEvents VSerie As DataGridViewTextBoxColumn
+    Friend WithEvents VEliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents btnBorrar As Button
+    Friend WithEvents SEliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents btnIngresarV As Button
 End Class

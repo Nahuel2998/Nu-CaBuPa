@@ -58,7 +58,7 @@ Partial Class frmConfirmarBorrado
         Me.btnBorrar.ForeColor = System.Drawing.Color.White
         Me.btnBorrar.Location = New System.Drawing.Point(5, 72)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(112, 24)
+        Me.btnBorrar.Size = New System.Drawing.Size(127, 32)
         Me.btnBorrar.TabIndex = 7
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = True
@@ -69,7 +69,7 @@ Partial Class frmConfirmarBorrado
         Me.btnCancelar.ForeColor = System.Drawing.Color.White
         Me.btnCancelar.Location = New System.Drawing.Point(292, 72)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(90, 24)
+        Me.btnCancelar.Size = New System.Drawing.Size(99, 32)
         Me.btnCancelar.TabIndex = 6
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
@@ -80,7 +80,7 @@ Partial Class frmConfirmarBorrado
         Me.btnBorrarSerie.ForeColor = System.Drawing.Color.White
         Me.btnBorrarSerie.Location = New System.Drawing.Point(138, 72)
         Me.btnBorrarSerie.Name = "btnBorrarSerie"
-        Me.btnBorrarSerie.Size = New System.Drawing.Size(133, 24)
+        Me.btnBorrarSerie.Size = New System.Drawing.Size(148, 32)
         Me.btnBorrarSerie.TabIndex = 5
         Me.btnBorrarSerie.Text = "Borrar solo serie"
         Me.btnBorrarSerie.UseVisualStyleBackColor = True

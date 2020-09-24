@@ -26,7 +26,31 @@
         Dim err(0) As String
         Return err
     End Function
-
+    Public Sub ClickCheck(ByRef Dgv As DataGridView)
+        Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value = Not Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value
+    End Sub
+    Public Function ObtenerCheck(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As String()
+        Dim UltiCol As Integer = Dgv.Columns.Count - 1
+        Dim Ids(UltiCol) As String
+        Dim Valores As Integer = 0
+        For i As Integer = 0 To Dgv.Rows.Count - 1
+            If (Dgv.Rows(i).Cells(UltiCol).Value = True) Then
+                Ids(i) = Tabla.Rows(Dgv.Rows(i).Index).Item(0).ToString
+                Valores += 1
+            Else
+                Ids(i) = ""
+            End If
+        Next
+        Dim ID(Valores - 1) As String
+        Dim iter As Integer = 0
+        For Each i As String In Ids
+            If (i <> "") Then
+                ID(iter) = i
+                iter += 1
+            End If
+        Next
+        Return ID
+    End Function
     Public Sub ActualizarTabla(ByRef Tabla As DataTable, ByRef Dgv As DataGridView)
         If Not IsNothing(Tabla) Then
             Dim Tamanos(Dgv.Columns.Count() - 1) As Single
@@ -55,12 +79,20 @@
             For i As Integer = 0 To Dgv.Columns.Count - 1
                 Tamanos(i) = Dgv.Columns(i).FillWeight()
             Next
+            Dim Columna As DataGridViewColumn
+            Columna = Dgv.Columns(Tamanos.Length - 1)
+            Columna.ReadOnly = False
             Dgv.Columns.Clear()
             Dgv.DataSource = Tabla
             Dgv.Columns.RemoveAt(0)
+            If (Tabla.Columns.Count = Tamanos.Length) Then
+                Dgv.Columns.Add(Columna)
+            End If
             For i As Integer = 0 To Dgv.Columns.Count - 1
                 Dgv.Columns(i).FillWeight() = Tamanos(i)
                 Dgv.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
+                Dgv.Columns(i).ReadOnly = If(Tabla.Columns.Count = Tamanos.Length, False, True)
+
             Next
             Dgv.Refresh()
         Else
@@ -81,6 +113,20 @@
         Next
         res = res.Remove(res.Length - 1)
         USQL(tabla, res, String.Format("{0} = '{1}'", dt.Rows(0).Item(0).ToString, id))
+    End Sub
+    Public Sub PrepararInsert(ByVal tabla As String, ByVal datos() As String)
+        Dim col As String = ""
+        Dim valu As String = ""
+        Dim dt As DataTable = ESQLSelect("describe " + tabla)
+        Dim i As Integer = 1
+        For Each dato In datos
+            col += String.Format("{0},", dt.Rows(i).Item(0).ToString)
+            valu += String.Format(If(dato = "null", "{0},", "'{0}',"), dato)
+            i += 1
+        Next
+        col = col.Remove(col.Length - 1)
+        valu = valu.Remove(valu.Length - 1)
+        ISQL(tabla, col, valu)
     End Sub
     Public Sub PrepararUpdate(ByVal tabla As String, ByVal Columna() As String, ByVal datos() As String, ByVal Condiciones() As String, ByVal id() As String)
         Dim res As String = ""
@@ -103,10 +149,19 @@
         Dim res As String = ""
         Dim i As Integer = 0
         For Each dato In datos
-            res += String.Format(If(dato = "null", "{0} = {1} and", "{0} = '{1}' and"), datos(i), ids(i))
+            res += String.Format(If(ids(i) = "null", "{0} = {1} and", "{0} = '{1}' and"), datos(i), ids(i))
             i += 1
         Next
         res = res.Remove(res.Length - 3)
+        BSQL(tabla, res)
+    End Sub
+    Public Sub PrepararDelete(ByVal tabla As String, ByVal datos As String, ByVal ids() As String)
+        Dim res As String = datos + " in ("
+        For Each id In ids
+            res += String.Format(If(id = "null", "{0} ,", "'{0}' ,"), id)
+        Next
+        res = res.Remove(res.Length - 1)
+        res += ")"
         BSQL(tabla, res)
     End Sub
 

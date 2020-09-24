@@ -1167,6 +1167,90 @@
   <data name="TableLayoutPanel3.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="btnIngresarV.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnIngresarV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnIngresarV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 44</value>
+  </data>
+  <data name="btnIngresarV.TabIndex" type="System.Int32, mscorlib">
+    <value>12394294</value>
+  </data>
+  <data name="btnIngresarV.Text" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+  <data name="&gt;&gt;btnIngresarV.Name" xml:space="preserve">
+    <value>btnIngresarV</value>
+  </data>
+  <data name="&gt;&gt;btnIngresarV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnIngresarV.Parent" xml:space="preserve">
+    <value>Panel9</value>
+  </data>
+  <data name="&gt;&gt;btnIngresarV.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnbuscarv.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="btnbuscarv.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnbuscarv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 0</value>
+  </data>
+  <data name="btnbuscarv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnbuscarv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 44</value>
+  </data>
+  <data name="btnbuscarv.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnbuscarv.Text" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="&gt;&gt;btnbuscarv.Name" xml:space="preserve">
+    <value>btnbuscarv</value>
+  </data>
+  <data name="&gt;&gt;btnbuscarv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnbuscarv.Parent" xml:space="preserve">
+    <value>Panel9</value>
+  </data>
+  <data name="&gt;&gt;btnbuscarv.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Panel9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Panel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>313, 279</value>
+  </data>
+  <data name="Panel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 44</value>
+  </data>
+  <data name="Panel9.TabIndex" type="System.Int32, mscorlib">
+    <value>12394295</value>
+  </data>
+  <data name="&gt;&gt;Panel9.Name" xml:space="preserve">
+    <value>Panel9</value>
+  </data>
+  <data name="&gt;&gt;Panel9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel9.Parent" xml:space="preserve">
+    <value>TableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;Panel9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Información.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -1537,7 +1621,97 @@
     <value>TableLayoutPanel3</value>
   </data>
   <data name="&gt;&gt;Información.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnBorrar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="btnBorrar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnBorrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 0</value>
+  </data>
+  <data name="btnBorrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="btnBorrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 44</value>
+  </data>
+  <data name="btnBorrar.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btnBorrar.Text" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="&gt;&gt;btnBorrar.Name" xml:space="preserve">
+    <value>btnBorrar</value>
+  </data>
+  <data name="&gt;&gt;btnBorrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBorrar.Parent" xml:space="preserve">
+    <value>Panel8</value>
+  </data>
+  <data name="&gt;&gt;btnBorrar.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="btnlimpiarv.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnlimpiarv.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnlimpiarv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnlimpiarv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnlimpiarv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 44</value>
+  </data>
+  <data name="btnlimpiarv.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnlimpiarv.Text" xml:space="preserve">
+    <value>Limpiar busqueda</value>
+  </data>
+  <data name="&gt;&gt;btnlimpiarv.Name" xml:space="preserve">
+    <value>btnlimpiarv</value>
+  </data>
+  <data name="&gt;&gt;btnlimpiarv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnlimpiarv.Parent" xml:space="preserve">
+    <value>Panel8</value>
+  </data>
+  <data name="&gt;&gt;btnlimpiarv.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Panel8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Panel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 279</value>
+  </data>
+  <data name="Panel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 44</value>
+  </data>
+  <data name="Panel8.TabIndex" type="System.Int32, mscorlib">
+    <value>12394294</value>
+  </data>
+  <data name="&gt;&gt;Panel8.Name" xml:space="preserve">
+    <value>Panel8</value>
+  </data>
+  <data name="&gt;&gt;Panel8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel8.Parent" xml:space="preserve">
+    <value>TableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;Panel8.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="GroupBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1554,6 +1728,9 @@
   <data name="VFecha.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="VFecha.Width" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
   <metadata name="VNombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1562,6 +1739,9 @@
   </data>
   <data name="VNombre.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="VNombre.Width" type="System.Int32, mscorlib">
+    <value>97</value>
   </data>
   <metadata name="VSerie.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1572,6 +1752,21 @@
   <data name="VSerie.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="VSerie.Width" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <metadata name="VEliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="VEliminar.HeaderText" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="VEliminar.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="VEliminar.Width" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
   <data name="dgvVB.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 23</value>
   </data>
@@ -1580,6 +1775,9 @@
   </data>
   <data name="dgvVB.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
+  </data>
+  <data name="dgvVB.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
   </data>
   <data name="dgvVB.Size" type="System.Drawing.Size, System.Drawing">
     <value>290, 239</value>
@@ -1627,72 +1825,6 @@
     <value>TableLayoutPanel3</value>
   </data>
   <data name="&gt;&gt;GroupBox4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnbuscarv.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="btnbuscarv.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnbuscarv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>314, 280</value>
-  </data>
-  <data name="btnbuscarv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="btnbuscarv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 42</value>
-  </data>
-  <data name="btnbuscarv.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btnbuscarv.Text" xml:space="preserve">
-    <value>Buscar</value>
-  </data>
-  <data name="&gt;&gt;btnbuscarv.Name" xml:space="preserve">
-    <value>btnbuscarv</value>
-  </data>
-  <data name="&gt;&gt;btnbuscarv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnbuscarv.Parent" xml:space="preserve">
-    <value>TableLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;btnbuscarv.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnlimpiarv.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="btnlimpiarv.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnlimpiarv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 280</value>
-  </data>
-  <data name="btnlimpiarv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="btnlimpiarv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>302, 42</value>
-  </data>
-  <data name="btnlimpiarv.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnlimpiarv.Text" xml:space="preserve">
-    <value>Limpiar busqueda</value>
-  </data>
-  <data name="&gt;&gt;btnlimpiarv.Name" xml:space="preserve">
-    <value>btnlimpiarv</value>
-  </data>
-  <data name="&gt;&gt;btnlimpiarv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnlimpiarv.Parent" xml:space="preserve">
-    <value>TableLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;btnlimpiarv.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="TableLayoutPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1726,7 +1858,7 @@
     <value>0</value>
   </data>
   <data name="TableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="Información" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="GroupBox4" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnbuscarv" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnlimpiarv" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,55,10204,Percent,44,89796" /&gt;&lt;Rows Styles="Percent,100,Absolute,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="Panel9" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Información" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Panel8" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GroupBox4" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,55,10204,Percent,44,89796" /&gt;&lt;Rows Styles="Percent,100,Absolute,50,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="TabPage4.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 27</value>
@@ -1791,6 +1923,15 @@
   <data name="DataGridViewTextBoxColumn5.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <metadata name="SEliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SEliminar.HeaderText" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="SEliminar.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <data name="dgvBS.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 20</value>
   </data>
@@ -1801,7 +1942,7 @@
     <value>62</value>
   </data>
   <data name="dgvBS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>551, 123</value>
+    <value>552, 124</value>
   </data>
   <data name="dgvBS.TabIndex" type="System.Int32, mscorlib">
     <value>2342325</value>
@@ -1834,7 +1975,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>565, 151</value>
+    <value>566, 152</value>
   </data>
   <data name="GroupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1861,16 +2002,49 @@
     <value>True</value>
   </data>
   <data name="SplitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 281</value>
+    <value>4, 282</value>
   </data>
   <data name="SplitContainer1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
+  </data>
+  <data name="Button1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 0</value>
+  </data>
+  <data name="Button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 48</value>
+  </data>
+  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="Button1.Text" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>SplitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="btnLimpiarBS.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
   <data name="btnLimpiarBS.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+    <value>Left</value>
   </data>
   <data name="btnLimpiarBS.Font" type="System.Drawing.Font, System.Drawing">
     <value>Mongolian Baiti, 10.2pt</value>
@@ -1888,7 +2062,7 @@
     <value>112, 10</value>
   </data>
   <data name="btnLimpiarBS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 48</value>
+    <value>164, 48</value>
   </data>
   <data name="btnLimpiarBS.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1906,7 +2080,7 @@
     <value>SplitContainer1.Panel1</value>
   </data>
   <data name="&gt;&gt;btnLimpiarBS.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;SplitContainer1.Panel1.Name" xml:space="preserve">
     <value>SplitContainer1.Panel1</value>
@@ -1942,7 +2116,7 @@
     <value>112, 10</value>
   </data>
   <data name="btnBuscarBS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 48</value>
+    <value>275, 48</value>
   </data>
   <data name="btnBuscarBS.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1975,7 +2149,7 @@
     <value>1</value>
   </data>
   <data name="SplitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>565, 48</value>
+    <value>566, 48</value>
   </data>
   <data name="SplitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>286</value>
@@ -2110,7 +2284,7 @@
     <value>False</value>
   </data>
   <data name="txtBSnombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>449, 25</value>
+    <value>450, 25</value>
   </data>
   <data name="txtBSnombre.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2137,7 +2311,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 33</value>
+    <value>460, 33</value>
   </data>
   <data name="Panel5.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2167,7 +2341,7 @@
     <value>NoControl</value>
   </data>
   <data name="cbS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>436, 8</value>
+    <value>437, 8</value>
   </data>
   <data name="cbS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -2203,7 +2377,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="ctpSerie.Size" type="System.Drawing.Size, System.Drawing">
-    <value>426, 27</value>
+    <value>427, 27</value>
   </data>
   <data name="ctpSerie.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2227,7 +2401,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Panel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 33</value>
+    <value>460, 33</value>
   </data>
   <data name="Panel6.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2254,7 +2428,7 @@
     <value>2</value>
   </data>
   <data name="TableLayoutPanel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>550, 82</value>
+    <value>551, 82</value>
   </data>
   <data name="TableLayoutPanel6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2290,7 +2464,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>565, 110</value>
+    <value>566, 110</value>
   </data>
   <data name="GroupBox5.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2326,7 +2500,7 @@
     <value>3</value>
   </data>
   <data name="TableLayoutPanel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>573, 333</value>
+    <value>574, 334</value>
   </data>
   <data name="TableLayoutPanel5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2353,7 +2527,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="TabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>573, 333</value>
+    <value>574, 334</value>
   </data>
   <data name="TabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2596,7 +2770,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>99</value>
+    <value>100</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>10, 18</value>
@@ -5149,6 +5323,12 @@
   <data name="&gt;&gt;VSerie.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;VEliminar.Name" xml:space="preserve">
+    <value>VEliminar</value>
+  </data>
+  <data name="&gt;&gt;VEliminar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;DataGridViewTextBoxColumn4.Name" xml:space="preserve">
     <value>DataGridViewTextBoxColumn4</value>
   </data>
@@ -5160,6 +5340,12 @@
   </data>
   <data name="&gt;&gt;DataGridViewTextBoxColumn5.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SEliminar.Name" xml:space="preserve">
+    <value>SEliminar</value>
+  </data>
+  <data name="&gt;&gt;SEliminar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BWProgramas.Name" xml:space="preserve">
     <value>BWProgramas</value>

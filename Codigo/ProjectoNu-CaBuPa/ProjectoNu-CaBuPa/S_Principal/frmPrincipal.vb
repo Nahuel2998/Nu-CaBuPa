@@ -270,6 +270,7 @@ Public Class frmPrincipal
         TBuscada = ""
     End Sub
 
+
     Private Sub DgvVB_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellDoubleClick
         Dim i As Integer = CargarID(dt_Video, dgvVB)
         If (i <> -1) Then
@@ -318,7 +319,6 @@ Public Class frmPrincipal
             Dim formSerie As New frmSerie(i)
             AddHandler formSerie.FormClosed, AddressOf FormSerie_FormClosed
             formSerie.ShowDialog()
-            TBNotas.Text += "good"
         Else
             TBNotas.Text += "a"
         End If
@@ -332,5 +332,34 @@ Public Class frmPrincipal
         btnBuscarBS.PerformClick()
     End Sub
 
+    Private Sub dgvVB_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellClick
+        ClickCheck(dgvVB)
+    End Sub
 
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+        If (dt_Video.Rows.Count > 0) Then
+            Dim Id() As String = ObtenerCheck(dt_Video, dgvVB)
+            Dim formDelete As New frmConfirmarBorrado("Video", Id, False)
+            formDelete.ShowDialog(Me)
+            btnbuscarv.PerformClick()
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If (dt_Serie.Rows.Count > 0) Then
+            Dim Id() As String = ObtenerCheck(dt_Serie, dgvBS)
+            Dim formDelete As New frmConfirmarBorrado("Serie", Id, False)
+            formDelete.ShowDialog(Me)
+            btnBuscarBS.PerformClick()
+        End If
+    End Sub
+
+    Private Sub dgvBS_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBS.CellClick
+        ClickCheck(dgvBS)
+    End Sub
+
+    Private Sub btnIngresarV_Click(sender As Object, e As EventArgs) Handles btnIngresarV.Click
+        Dim formVideo As New frmVideo(-1)
+        formVideo.ShowDialog()
+    End Sub
 End Class

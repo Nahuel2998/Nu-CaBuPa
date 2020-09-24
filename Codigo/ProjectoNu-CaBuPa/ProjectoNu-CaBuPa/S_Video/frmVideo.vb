@@ -34,6 +34,9 @@
                 datosI(2) = ""
             End If
         End If
+        CargarCombo()
+    End Sub
+    Sub CargarCombo()
         dtV = DevolverTabla(PSQL("id_serie, nombre", "Serie", "True"))
         LlenarCombo(cbSerie, dtV, "nombre")
         If (Not IsNothing(dtV)) Then
@@ -56,28 +59,34 @@
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        If editando Then
+        If videoID = -1 Then
+            ActualizarDatos()
+            PrepararInsert("video", datos)
+            vaciar()
+        ElseIf editando Then
             ActualizarDatos()
             If Not CompararValores(VaciarNull(datos), datosI) Then
                 PrepararUpdate("video", datos, videoID)
                 datosI = VaciarNull(datos)
                 ' ModInicializador.frmPrin.btnbuscarv.PerformClick()
             End If
+            Alternar()
+        Else
+            Alternar()
         End If
-        Alternar()
     End Sub
-
-    Private Sub Alternar()
+    Sub Activar()
         txtNombre.ReadOnly = editando
         txtContenido.ReadOnly = editando
         editando = Not editando
         cbSerie.Enabled = editando
         dtpFecha.Enabled = editando
-
+        chbTieneFecha.Visible = editando
+    End Sub
+    Private Sub Alternar()
+        Activar()
         btnEditar.Text = If(editando, "Guardar", "Editar")
         btnSalir.Text = If(editando, "Cancelar", "Salir")
-
-        chbTieneFecha.Visible = editando
         chbTieneFecha.Checked = datosI(3) <> ""
             If editando Then
             txtTapar.Visible = False
@@ -90,7 +99,7 @@
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        If Not editando Then
+        If Not editando Or videoID = -1 Then
             Close()
         Else
             Rellenar()
@@ -99,14 +108,28 @@
     End Sub
 
     Private Sub frmVideo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Buscar()
+        If videoID <> -1 Then
+            Buscar()
+            btnSalir.Select()
+        Else
+            btnEditar.Text = "Insertar"
+            btnBorrar.Visible = False
+            Activar()
+        End If
         dtpFecha.BackColor = Color.FromArgb(64, 64, 64)
         dtpFecha.ForeColor = Color.White
         btnSalir.Select()
     End Sub
+    Sub vaciar()
+        txtNombre.Text = ""
+        txtContenido.Text = ""
+        cbSerie.SelectedIndex = -1
+        dtpFecha.Value = Now.Date
+        chbTieneFecha.Checked = False
+    End Sub
 
     Private Sub frmVideo_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If editando Then
+        If editando And videoID <> -1 Then
             ActualizarDatos()
             If Not CompararValores(VaciarNull(datos), datosI) Then
                 Dim g As New frmGuardarEdicion("Video", datos, videoID)
@@ -114,7 +137,7 @@
                 If ModInicializador.Cancelar.Contains("Video") Then
                     e.Cancel = True
                     ModInicializador.Cancelar = ModInicializador.Cancelar.Replace("Video", "")
-                Else
+
                     ' ModInicializador.frmPrin.btnbuscarv.PerformClick()
                 End If
             End If
@@ -122,11 +145,16 @@
     End Sub
 
     Private Sub ActualizarDatos()
-        datos = {txtContenido.Text, txtNombre.Text, If(cbSerie.SelectedIndex = 0, "null", position(cbSerie.SelectedIndex - 1)), If(chbTieneFecha.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null")}
+        Dim con As String = txtContenido.Text
+        Dim nom As String = txtNombre.Text
+        Dim dat As String = If(chbTieneFecha.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null")
+        ModLog.Guardar(cbSerie.SelectedIndex)
+        Dim ser As String = If(cbSerie.SelectedIndex <= 0, "null", position(cbSerie.SelectedIndex - 1))
+        datos = {con, nom, ser, dat}
     End Sub
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        Dim formDelete As New frmConfirmarBorrado("Video", videoID)
+        Dim formDelete As New frmConfirmarBorrado("Video", {videoID}, True)
         formDelete.ShowDialog(Me)
     End Sub
 End Class
