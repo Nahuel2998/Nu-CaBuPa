@@ -7,6 +7,7 @@
     Public dt_Ppubli As DataTable
     Public dt_Video As DataTable
     Public dt_Serie As DataTable
+    Public dt_Empresa As DataTable
     Public Function CargarID(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As Integer
         If (Not IsNothing(Tabla)) Then
             Return Tabla.Rows(Dgv.SelectedRows(0).Index).Item(0).ToString

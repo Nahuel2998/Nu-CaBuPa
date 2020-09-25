@@ -265,6 +265,9 @@ Public Class frmPrincipal
             Case "Serie"
                 dt_Serie = TBusca
                 ActualizarTablaC(dt_Serie, dgvBS)
+            Case "Empresa"
+                dt_Empresa = TBusca
+                ActualizarTablaC(dt_Empresa, dgvClientes)
         End Select
         TBusca = Nothing
         TBuscada = ""
@@ -345,7 +348,7 @@ Public Class frmPrincipal
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBorrarS.Click
         If (dt_Serie.Rows.Count > 0) Then
             Dim Id() As String = ObtenerCheck(dt_Serie, dgvBS)
             Dim formDelete As New frmConfirmarBorrado("Serie", Id, False)
@@ -363,8 +366,38 @@ Public Class frmPrincipal
         formVideo.ShowDialog()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnsIngresar.Click
         Dim formSerie As New frmSerie({-1, Now.Date.ToString, ""})
         formSerie.ShowDialog()
+    End Sub
+
+    Private Sub btncBuscar_Click(sender As Object, e As EventArgs) Handles btncBuscar.Click
+        TBuscada = "Empresa"
+        Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
+        If (Not String.IsNullOrWhiteSpace(txtCNombre.Text)) Then
+            condicion = "Nombre like '%" + txtCNombre.Text + "%'"
+        End If
+        If (Not String.IsNullOrWhiteSpace(txtCTel.Text)) Then
+            condicion += " and Telefono = '" + txtCTel.Text + "'"
+        End If
+        If (Not String.IsNullOrWhiteSpace(txtCMail.Text)) Then
+            condicion += " and Mail = '" + txtCMail.Text + "'"
+        End If
+        If Not (BWBuscador.IsBusy) Then
+            BWBuscador.RunWorkerAsync(PSQL("id_Empresa, Nombre, Telefono, Mail", "empresa", condicion))
+        End If
+    End Sub
+
+    Private Sub btncBorrar_Click(sender As Object, e As EventArgs) Handles btncBorrar.Click
+        If (dt_Empresa.Rows.Count > 0) Then
+            Dim Id() As String = ObtenerCheck(dt_Empresa, dgvClientes)
+            Dim formDelete As New frmConfirmarBorrado("Empresa", Id, False)
+            formDelete.ShowDialog(Me)
+            btncBuscar.PerformClick()
+        End If
+    End Sub
+
+    Private Sub dgvClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellClick
+        ClickCheck(dgvClientes)
     End Sub
 End Class

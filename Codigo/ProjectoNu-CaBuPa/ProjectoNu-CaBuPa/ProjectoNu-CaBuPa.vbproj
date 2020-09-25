@@ -198,10 +198,10 @@
     <Compile Include="S_Video\frmVideo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tandas\FmTandas.Designer.vb">
-      <DependentUpon>FmTandas.vb</DependentUpon>
+    <Compile Include="Tandas\frmTandas.Designer.vb">
+      <DependentUpon>frmTandas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Tandas\FmTandas.vb">
+    <Compile Include="Tandas\frmTandas.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -260,8 +260,8 @@
     <EmbeddedResource Include="S_Video\frmVideo.resx">
       <DependentUpon>frmVideo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tandas\FmTandas.resx">
-      <DependentUpon>FmTandas.vb</DependentUpon>
+    <EmbeddedResource Include="Tandas\frmTandas.resx">
+      <DependentUpon>frmTandas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
