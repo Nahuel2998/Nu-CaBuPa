@@ -362,4 +362,9 @@ Public Class frmPrincipal
         Dim formVideo As New frmVideo(-1)
         formVideo.ShowDialog()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim formSerie As New frmSerie({-1, Now.Date.ToString, ""})
+        formSerie.ShowDialog()
+    End Sub
 End Class

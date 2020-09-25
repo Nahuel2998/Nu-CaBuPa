@@ -29,12 +29,19 @@ Public Class frmSerie
         dtpFecha.BackColor = Color.FromArgb(64, 64, 64)
         dtpFecha.ForeColor = Color.White
         ActualizarTabla()
+        If (serieID = -1) Then
+            Alternar()
+        End If
     End Sub
 
     Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnSEditar.Click
         '' editando = True   -> Se guardaran los cambios
         '' editando = False  -> Se le permitira al usuario escribir en los campos
-        If editando Then
+        If serieID = -1 Then
+            Dim datos() As String = {If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null"), txtNombre.Text}
+            PrepararInsert("Serie", datos)
+            vaciar()
+        ElseIf editando Then
             If cambio Then
                 Dim datos() As String = {If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null"), txtNombre.Text}
                 If Not CompararValores(VaciarNull(datos), tmpDatos) Then
@@ -50,9 +57,14 @@ Public Class frmSerie
 
         Alternar()
     End Sub
+    Sub vaciar()
+        txtNombre.Text = ""
+        dtpFecha.Value = Now.Date
+        chbIncluir.Checked = True
+    End Sub
 
     Private Sub btnSSalir_Click(sender As Object, e As EventArgs) Handles btnSSalir.Click
-        If Not editando Then
+        If Not editando Or serieID <> -1 Then
             Close()
         Else
             If cambio Then
@@ -73,7 +85,7 @@ Public Class frmSerie
     End Sub
 
     Private Sub Serie_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If cambio Then
+        If cambio And serieID <> -1 Then
             Dim datos() As String = {If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null"), txtNombre.Text}
             If Not CompararValores(VaciarNull(datos), tmpDatos) Then
                 Dim g As New frmGuardarEdicion("Serie", datos, serieID)
@@ -90,7 +102,14 @@ Public Class frmSerie
 
     '' Alternar botones
     Private Sub Alternar()
-        If editando Then
+        If serieID = -1 Then
+            btnSEditar.Text = "Ingresar"
+            btnBorrar.Visible = False
+            btnSSalir.Text = "Salir"
+            ActiveForm.Text = "Ingresar Serie"
+
+            txtTapar.Visible = False
+        ElseIf editando Then
             btnSEditar.Text = "Editar"
             btnSSalir.Text = "Salir"
             ActiveForm.Text = "Ver Serie"

@@ -134,6 +134,8 @@ Partial Class frmPrincipal
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnLimpiarBS = New System.Windows.Forms.Button()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.btnBuscarBS = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
@@ -199,6 +201,7 @@ Partial Class frmPrincipal
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.Panel10.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.TableLayoutPanel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -1049,7 +1052,7 @@ Partial Class frmPrincipal
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.btnBuscarBS)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Panel10)
         '
         'Button1
         '
@@ -1062,6 +1065,19 @@ Partial Class frmPrincipal
         resources.ApplyResources(Me.btnLimpiarBS, "btnLimpiarBS")
         Me.btnLimpiarBS.Name = "btnLimpiarBS"
         Me.btnLimpiarBS.UseVisualStyleBackColor = True
+        '
+        'Panel10
+        '
+        Me.Panel10.Controls.Add(Me.Button2)
+        Me.Panel10.Controls.Add(Me.btnBuscarBS)
+        resources.ApplyResources(Me.Panel10, "Panel10")
+        Me.Panel10.Name = "Panel10"
+        '
+        'Button2
+        '
+        resources.ApplyResources(Me.Button2, "Button2")
+        Me.Button2.Name = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'btnBuscarBS
         '
@@ -1228,6 +1244,7 @@ Partial Class frmPrincipal
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.Panel10.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.TableLayoutPanel6.ResumeLayout(False)
         Me.TableLayoutPanel6.PerformLayout()
@@ -1338,4 +1355,6 @@ Partial Class frmPrincipal
     Friend WithEvents Button1 As Button
     Friend WithEvents Panel9 As Panel
     Friend WithEvents btnIngresarV As Button
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Button2 As Button
 End Class
