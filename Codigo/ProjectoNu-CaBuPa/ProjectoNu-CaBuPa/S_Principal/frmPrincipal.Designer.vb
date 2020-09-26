@@ -72,6 +72,7 @@ Partial Class frmPrincipal
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
         Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -82,6 +83,7 @@ Partial Class frmPrincipal
         Me.tbMenu = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -128,15 +130,18 @@ Partial Class frmPrincipal
         Me.VEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnsIngresar = New System.Windows.Forms.Button()
+        Me.btnBorrarS = New System.Windows.Forms.Button()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.btnBuscarBS = New System.Windows.Forms.Button()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.btnLimpiarBS = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.dgvBS = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.btnBorrarS = New System.Windows.Forms.Button()
-        Me.btnLimpiarBS = New System.Windows.Forms.Button()
-        Me.btnsIngresar = New System.Windows.Forms.Button()
-        Me.btnBuscarBS = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -145,19 +150,23 @@ Partial Class frmPrincipal
         Me.txtBSnombre = New System.Windows.Forms.RichTextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.cbS = New System.Windows.Forms.CheckBox()
+        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.tbPublicidad = New System.Windows.Forms.TabPage()
         Me.tbEmpresa = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btncBorrar = New System.Windows.Forms.Button()
+        Me.btncIngresar = New System.Windows.Forms.Button()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.btncBuscar = New System.Windows.Forms.Button()
+        Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.btncLimpiar = New System.Windows.Forms.Button()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cTelefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cMail = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.btncBorrar = New System.Windows.Forms.Button()
-        Me.btncLimpiar = New System.Windows.Forms.Button()
-        Me.btncIngresar = New System.Windows.Forms.Button()
-        Me.btncBuscar = New System.Windows.Forms.Button()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -178,15 +187,6 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
-        Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel16 = New System.Windows.Forms.Panel()
-        Me.Panel17 = New System.Windows.Forms.Panel()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -227,6 +227,9 @@ Partial Class frmPrincipal
         CType(Me.dgvVB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
+        Me.TableLayoutPanel10.SuspendLayout()
+        Me.Panel16.SuspendLayout()
+        Me.Panel17.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvBS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
@@ -235,6 +238,9 @@ Partial Class frmPrincipal
         Me.Panel6.SuspendLayout()
         Me.tbEmpresa.SuspendLayout()
         Me.TableLayoutPanel7.SuspendLayout()
+        Me.TableLayoutPanel9.SuspendLayout()
+        Me.Panel11.SuspendLayout()
+        Me.Panel15.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox8.SuspendLayout()
@@ -244,12 +250,6 @@ Partial Class frmPrincipal
         Me.Panel14.SuspendLayout()
         Me.pStatus.SuspendLayout()
         Me.pCMain.SuspendLayout()
-        Me.TableLayoutPanel9.SuspendLayout()
-        Me.Panel11.SuspendLayout()
-        Me.Panel15.SuspendLayout()
-        Me.TableLayoutPanel10.SuspendLayout()
-        Me.Panel16.SuspendLayout()
-        Me.Panel17.SuspendLayout()
         Me.SuspendLayout()
         '
         'pMain
@@ -381,6 +381,12 @@ Partial Class frmPrincipal
         Me.GroupBox7.Controls.Add(Me.dgvPublicidades)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
+        '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
         '
         'dgvPublicidades
         '
@@ -530,6 +536,11 @@ Partial Class frmPrincipal
         Me.GroupBox1.Controls.Add(Me.dgvPrograma)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
+        '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
         '
         'dgvPrograma
         '
@@ -999,6 +1010,51 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel5.ForeColor = System.Drawing.Color.White
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
         '
+        'TableLayoutPanel10
+        '
+        resources.ApplyResources(Me.TableLayoutPanel10, "TableLayoutPanel10")
+        Me.TableLayoutPanel10.Controls.Add(Me.btnsIngresar, 1, 0)
+        Me.TableLayoutPanel10.Controls.Add(Me.btnBorrarS, 3, 0)
+        Me.TableLayoutPanel10.Controls.Add(Me.Panel16, 2, 0)
+        Me.TableLayoutPanel10.Controls.Add(Me.Panel17, 0, 0)
+        Me.TableLayoutPanel10.Name = "TableLayoutPanel10"
+        '
+        'btnsIngresar
+        '
+        resources.ApplyResources(Me.btnsIngresar, "btnsIngresar")
+        Me.btnsIngresar.Name = "btnsIngresar"
+        Me.btnsIngresar.UseVisualStyleBackColor = True
+        '
+        'btnBorrarS
+        '
+        resources.ApplyResources(Me.btnBorrarS, "btnBorrarS")
+        Me.btnBorrarS.Name = "btnBorrarS"
+        Me.btnBorrarS.UseVisualStyleBackColor = True
+        '
+        'Panel16
+        '
+        Me.Panel16.Controls.Add(Me.btnBuscarBS)
+        resources.ApplyResources(Me.Panel16, "Panel16")
+        Me.Panel16.Name = "Panel16"
+        '
+        'btnBuscarBS
+        '
+        resources.ApplyResources(Me.btnBuscarBS, "btnBuscarBS")
+        Me.btnBuscarBS.Name = "btnBuscarBS"
+        Me.btnBuscarBS.UseVisualStyleBackColor = True
+        '
+        'Panel17
+        '
+        Me.Panel17.Controls.Add(Me.btnLimpiarBS)
+        resources.ApplyResources(Me.Panel17, "Panel17")
+        Me.Panel17.Name = "Panel17"
+        '
+        'btnLimpiarBS
+        '
+        resources.ApplyResources(Me.btnLimpiarBS, "btnLimpiarBS")
+        Me.btnLimpiarBS.Name = "btnLimpiarBS"
+        Me.btnLimpiarBS.UseVisualStyleBackColor = True
+        '
         'GroupBox3
         '
         resources.ApplyResources(Me.GroupBox3, "GroupBox3")
@@ -1072,30 +1128,6 @@ Partial Class frmPrincipal
         Me.SEliminar.Name = "SEliminar"
         Me.SEliminar.ReadOnly = True
         '
-        'btnBorrarS
-        '
-        resources.ApplyResources(Me.btnBorrarS, "btnBorrarS")
-        Me.btnBorrarS.Name = "btnBorrarS"
-        Me.btnBorrarS.UseVisualStyleBackColor = True
-        '
-        'btnLimpiarBS
-        '
-        resources.ApplyResources(Me.btnLimpiarBS, "btnLimpiarBS")
-        Me.btnLimpiarBS.Name = "btnLimpiarBS"
-        Me.btnLimpiarBS.UseVisualStyleBackColor = True
-        '
-        'btnsIngresar
-        '
-        resources.ApplyResources(Me.btnsIngresar, "btnsIngresar")
-        Me.btnsIngresar.Name = "btnsIngresar"
-        Me.btnsIngresar.UseVisualStyleBackColor = True
-        '
-        'btnBuscarBS
-        '
-        resources.ApplyResources(Me.btnBuscarBS, "btnBuscarBS")
-        Me.btnBuscarBS.Name = "btnBuscarBS"
-        Me.btnBuscarBS.UseVisualStyleBackColor = True
-        '
         'GroupBox5
         '
         resources.ApplyResources(Me.GroupBox5, "GroupBox5")
@@ -1152,6 +1184,11 @@ Partial Class frmPrincipal
         Me.cbS.Name = "cbS"
         Me.cbS.UseVisualStyleBackColor = True
         '
+        'ctpSerie
+        '
+        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
+        Me.ctpSerie.Name = "ctpSerie"
+        '
         'tbPublicidad
         '
         Me.tbPublicidad.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -1173,6 +1210,51 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel7.Controls.Add(Me.GroupBox8, 0, 0)
         Me.TableLayoutPanel7.ForeColor = System.Drawing.Color.White
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
+        '
+        'TableLayoutPanel9
+        '
+        resources.ApplyResources(Me.TableLayoutPanel9, "TableLayoutPanel9")
+        Me.TableLayoutPanel9.Controls.Add(Me.btncBorrar, 3, 0)
+        Me.TableLayoutPanel9.Controls.Add(Me.btncIngresar, 1, 0)
+        Me.TableLayoutPanel9.Controls.Add(Me.Panel11, 2, 0)
+        Me.TableLayoutPanel9.Controls.Add(Me.Panel15, 0, 0)
+        Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
+        '
+        'btncBorrar
+        '
+        resources.ApplyResources(Me.btncBorrar, "btncBorrar")
+        Me.btncBorrar.Name = "btncBorrar"
+        Me.btncBorrar.UseVisualStyleBackColor = True
+        '
+        'btncIngresar
+        '
+        resources.ApplyResources(Me.btncIngresar, "btncIngresar")
+        Me.btncIngresar.Name = "btncIngresar"
+        Me.btncIngresar.UseVisualStyleBackColor = True
+        '
+        'Panel11
+        '
+        Me.Panel11.Controls.Add(Me.btncBuscar)
+        resources.ApplyResources(Me.Panel11, "Panel11")
+        Me.Panel11.Name = "Panel11"
+        '
+        'btncBuscar
+        '
+        resources.ApplyResources(Me.btncBuscar, "btncBuscar")
+        Me.btncBuscar.Name = "btncBuscar"
+        Me.btncBuscar.UseVisualStyleBackColor = True
+        '
+        'Panel15
+        '
+        Me.Panel15.Controls.Add(Me.btncLimpiar)
+        resources.ApplyResources(Me.Panel15, "Panel15")
+        Me.Panel15.Name = "Panel15"
+        '
+        'btncLimpiar
+        '
+        resources.ApplyResources(Me.btncLimpiar, "btncLimpiar")
+        Me.btncLimpiar.Name = "btncLimpiar"
+        Me.btncLimpiar.UseVisualStyleBackColor = True
         '
         'GroupBox6
         '
@@ -1252,30 +1334,6 @@ Partial Class frmPrincipal
         resources.ApplyResources(Me.DataGridViewCheckBoxColumn1, "DataGridViewCheckBoxColumn1")
         Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
         Me.DataGridViewCheckBoxColumn1.ReadOnly = True
-        '
-        'btncBorrar
-        '
-        resources.ApplyResources(Me.btncBorrar, "btncBorrar")
-        Me.btncBorrar.Name = "btncBorrar"
-        Me.btncBorrar.UseVisualStyleBackColor = True
-        '
-        'btncLimpiar
-        '
-        resources.ApplyResources(Me.btncLimpiar, "btncLimpiar")
-        Me.btncLimpiar.Name = "btncLimpiar"
-        Me.btncLimpiar.UseVisualStyleBackColor = True
-        '
-        'btncIngresar
-        '
-        resources.ApplyResources(Me.btncIngresar, "btncIngresar")
-        Me.btncIngresar.Name = "btncIngresar"
-        Me.btncIngresar.UseVisualStyleBackColor = True
-        '
-        'btncBuscar
-        '
-        resources.ApplyResources(Me.btncBuscar, "btncBuscar")
-        Me.btncBuscar.Name = "btncBuscar"
-        Me.btncBuscar.UseVisualStyleBackColor = True
         '
         'GroupBox8
         '
@@ -1394,64 +1452,6 @@ Partial Class frmPrincipal
         'BWBuscador
         '
         '
-        'TableLayoutPanel9
-        '
-        resources.ApplyResources(Me.TableLayoutPanel9, "TableLayoutPanel9")
-        Me.TableLayoutPanel9.Controls.Add(Me.btncBorrar, 3, 0)
-        Me.TableLayoutPanel9.Controls.Add(Me.btncIngresar, 1, 0)
-        Me.TableLayoutPanel9.Controls.Add(Me.Panel11, 2, 0)
-        Me.TableLayoutPanel9.Controls.Add(Me.Panel15, 0, 0)
-        Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
-        '
-        'Panel11
-        '
-        Me.Panel11.Controls.Add(Me.btncBuscar)
-        resources.ApplyResources(Me.Panel11, "Panel11")
-        Me.Panel11.Name = "Panel11"
-        '
-        'Panel15
-        '
-        Me.Panel15.Controls.Add(Me.btncLimpiar)
-        resources.ApplyResources(Me.Panel15, "Panel15")
-        Me.Panel15.Name = "Panel15"
-        '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
-        '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.Name = "dtp"
-        '
-        'ctpSerie
-        '
-        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
-        Me.ctpSerie.Name = "ctpSerie"
-        '
-        'TableLayoutPanel10
-        '
-        resources.ApplyResources(Me.TableLayoutPanel10, "TableLayoutPanel10")
-        Me.TableLayoutPanel10.Controls.Add(Me.btnsIngresar, 1, 0)
-        Me.TableLayoutPanel10.Controls.Add(Me.btnBorrarS, 3, 0)
-        Me.TableLayoutPanel10.Controls.Add(Me.Panel16, 2, 0)
-        Me.TableLayoutPanel10.Controls.Add(Me.Panel17, 0, 0)
-        Me.TableLayoutPanel10.Name = "TableLayoutPanel10"
-        '
-        'Panel16
-        '
-        Me.Panel16.Controls.Add(Me.btnBuscarBS)
-        resources.ApplyResources(Me.Panel16, "Panel16")
-        Me.Panel16.Name = "Panel16"
-        '
-        'Panel17
-        '
-        Me.Panel17.Controls.Add(Me.btnLimpiarBS)
-        resources.ApplyResources(Me.Panel17, "Panel17")
-        Me.Panel17.Name = "Panel17"
-        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -1505,6 +1505,9 @@ Partial Class frmPrincipal
         CType(Me.dgvVB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
         Me.TableLayoutPanel5.ResumeLayout(False)
+        Me.TableLayoutPanel10.ResumeLayout(False)
+        Me.Panel16.ResumeLayout(False)
+        Me.Panel17.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         CType(Me.dgvBS, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
@@ -1515,6 +1518,9 @@ Partial Class frmPrincipal
         Me.Panel6.PerformLayout()
         Me.tbEmpresa.ResumeLayout(False)
         Me.TableLayoutPanel7.ResumeLayout(False)
+        Me.TableLayoutPanel9.ResumeLayout(False)
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel15.ResumeLayout(False)
         Me.GroupBox6.ResumeLayout(False)
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox8.ResumeLayout(False)
@@ -1525,12 +1531,6 @@ Partial Class frmPrincipal
         Me.Panel14.ResumeLayout(False)
         Me.pStatus.ResumeLayout(False)
         Me.pCMain.ResumeLayout(False)
-        Me.TableLayoutPanel9.ResumeLayout(False)
-        Me.Panel11.ResumeLayout(False)
-        Me.Panel15.ResumeLayout(False)
-        Me.TableLayoutPanel10.ResumeLayout(False)
-        Me.Panel16.ResumeLayout(False)
-        Me.Panel17.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

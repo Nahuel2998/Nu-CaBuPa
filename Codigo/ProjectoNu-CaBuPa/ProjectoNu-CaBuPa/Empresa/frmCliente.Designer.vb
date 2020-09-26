@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmSerie
+Partial Class frmCliente
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,10 +22,10 @@ Partial Class frmSerie
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnSSalir = New System.Windows.Forms.Button()
@@ -33,17 +33,15 @@ Partial Class frmSerie
         Me.btnSEditar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dgvVSM = New System.Windows.Forms.DataGridView()
-        Me.VFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CTema = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.txtTapar = New System.Windows.Forms.RichTextBox()
-        Me.chbIncluir = New System.Windows.Forms.CheckBox()
-        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.RichTextBox()
+        Me.txtTelefono = New System.Windows.Forms.RichTextBox()
+        Me.txtMail = New System.Windows.Forms.RichTextBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -51,7 +49,6 @@ Partial Class frmSerie
         CType(Me.dgvVSM, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -71,8 +68,8 @@ Partial Class frmSerie
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.7975!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.2025!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.32578!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.67422!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(881, 436)
         Me.TableLayoutPanel1.TabIndex = 0
@@ -144,15 +141,15 @@ Partial Class frmSerie
         Me.GroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.GroupBox1.Controls.Add(Me.dgvVSM)
         Me.GroupBox1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.GroupBox1.Location = New System.Drawing.Point(4, 120)
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 164)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.MinimumSize = New System.Drawing.Size(133, 49)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(873, 229)
+        Me.GroupBox1.Size = New System.Drawing.Size(873, 185)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Videos"
+        Me.GroupBox1.Text = "Publicidades"
         '
         'dgvVSM
         '
@@ -160,36 +157,36 @@ Partial Class frmSerie
         Me.dgvVSM.AllowUserToDeleteRows = False
         Me.dgvVSM.AllowUserToResizeColumns = False
         Me.dgvVSM.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvVSM.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvVSM.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvVSM.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvVSM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvVSM.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvVSM.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvVSM.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvVSM.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvVSM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvVSM.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.VFecha, Me.VNombre})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvVSM.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvVSM.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTema})
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvVSM.DefaultCellStyle = DataGridViewCellStyle7
         Me.dgvVSM.Location = New System.Drawing.Point(7, 26)
         Me.dgvVSM.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvVSM.MultiSelect = False
@@ -197,31 +194,23 @@ Partial Class frmSerie
         Me.dgvVSM.ReadOnly = True
         Me.dgvVSM.RowHeadersVisible = False
         Me.dgvVSM.RowHeadersWidth = 62
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        Me.dgvVSM.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        Me.dgvVSM.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvVSM.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvVSM.RowTemplate.Height = 28
         Me.dgvVSM.RowTemplate.ReadOnly = True
         Me.dgvVSM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvVSM.Size = New System.Drawing.Size(860, 199)
+        Me.dgvVSM.Size = New System.Drawing.Size(860, 155)
         Me.dgvVSM.TabIndex = 28876923
         '
-        'VFecha
+        'CTema
         '
-        Me.VFecha.FillWeight = 40.28429!
-        Me.VFecha.HeaderText = "Fecha"
-        Me.VFecha.MinimumWidth = 6
-        Me.VFecha.Name = "VFecha"
-        Me.VFecha.ReadOnly = True
-        '
-        'VNombre
-        '
-        Me.VNombre.FillWeight = 150.7157!
-        Me.VNombre.HeaderText = "Nombre"
-        Me.VNombre.MinimumWidth = 6
-        Me.VNombre.Name = "VNombre"
-        Me.VNombre.ReadOnly = True
+        Me.CTema.FillWeight = 40.28429!
+        Me.CTema.HeaderText = "Tema"
+        Me.CTema.MinimumWidth = 6
+        Me.CTema.Name = "CTema"
+        Me.CTema.ReadOnly = True
         '
         'GroupBox2
         '
@@ -235,7 +224,7 @@ Partial Class frmSerie
         Me.GroupBox2.MinimumSize = New System.Drawing.Size(133, 37)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(873, 108)
+        Me.GroupBox2.Size = New System.Drawing.Size(873, 152)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Informacion"
@@ -246,69 +235,36 @@ Partial Class frmSerie
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Panel1, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.txtNombre, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtTelefono, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtMail, 1, 2)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(9, 28)
         Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(856, 70)
+        Me.TableLayoutPanel2.RowCount = 3
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(856, 114)
         Me.TableLayoutPanel2.TabIndex = 0
         '
-        'Panel1
+        'Label3
         '
-        Me.Panel1.Controls.Add(Me.txtTapar)
-        Me.Panel1.Controls.Add(Me.chbIncluir)
-        Me.Panel1.Controls.Add(Me.dtpFecha)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(88, 37)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(765, 31)
-        Me.Panel1.TabIndex = 28876925
-        '
-        'txtTapar
-        '
-        Me.txtTapar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtTapar.ForeColor = System.Drawing.Color.White
-        Me.txtTapar.Location = New System.Drawing.Point(1, 0)
-        Me.txtTapar.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtTapar.Multiline = False
-        Me.txtTapar.Name = "txtTapar"
-        Me.txtTapar.ReadOnly = True
-        Me.txtTapar.Size = New System.Drawing.Size(763, 31)
-        Me.txtTapar.TabIndex = 5
-        Me.txtTapar.Text = "No posee fecha."
-        Me.txtTapar.Visible = False
-        '
-        'chbIncluir
-        '
-        Me.chbIncluir.AutoSize = True
-        Me.chbIncluir.Enabled = False
-        Me.chbIncluir.Location = New System.Drawing.Point(676, 5)
-        Me.chbIncluir.Margin = New System.Windows.Forms.Padding(4)
-        Me.chbIncluir.Name = "chbIncluir"
-        Me.chbIncluir.Size = New System.Drawing.Size(78, 22)
-        Me.chbIncluir.TabIndex = 4
-        Me.chbIncluir.Text = "Incluir"
-        Me.chbIncluir.UseVisualStyleBackColor = True
-        '
-        'dtpFecha
-        '
-        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
-        Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(667, 27)
-        Me.dtpFecha.TabIndex = 3
+        Me.Label3.AutoSize = True
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label3.Location = New System.Drawing.Point(4, 74)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.MinimumSize = New System.Drawing.Size(81, 15)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(82, 40)
+        Me.Label3.TabIndex = 28876926
+        Me.Label3.Text = "Mail:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '
@@ -318,7 +274,7 @@ Partial Class frmSerie
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.MinimumSize = New System.Drawing.Size(81, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 35)
+        Me.Label1.Size = New System.Drawing.Size(82, 37)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -327,13 +283,13 @@ Partial Class frmSerie
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(4, 35)
+        Me.Label2.Location = New System.Drawing.Point(4, 37)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.MinimumSize = New System.Drawing.Size(81, 15)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 35)
+        Me.Label2.Size = New System.Drawing.Size(82, 37)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Fecha:"
+        Me.Label2.Text = "Télefono:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtNombre
@@ -341,16 +297,44 @@ Partial Class frmSerie
         Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtNombre.ForeColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(89, 4)
+        Me.txtNombre.Location = New System.Drawing.Point(94, 4)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.Multiline = False
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(763, 27)
+        Me.txtNombre.Size = New System.Drawing.Size(758, 29)
         Me.txtNombre.TabIndex = 2
         Me.txtNombre.Text = ""
         '
-        'frmSerie
+        'txtTelefono
+        '
+        Me.txtTelefono.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtTelefono.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtTelefono.ForeColor = System.Drawing.Color.White
+        Me.txtTelefono.Location = New System.Drawing.Point(94, 41)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTelefono.Multiline = False
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.ReadOnly = True
+        Me.txtTelefono.Size = New System.Drawing.Size(758, 29)
+        Me.txtTelefono.TabIndex = 28876928
+        Me.txtTelefono.Text = ""
+        '
+        'txtMail
+        '
+        Me.txtMail.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtMail.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtMail.ForeColor = System.Drawing.Color.White
+        Me.txtMail.Location = New System.Drawing.Point(94, 78)
+        Me.txtMail.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMail.Multiline = False
+        Me.txtMail.Name = "txtMail"
+        Me.txtMail.ReadOnly = True
+        Me.txtMail.Size = New System.Drawing.Size(758, 32)
+        Me.txtMail.TabIndex = 28876929
+        Me.txtMail.Text = ""
+        '
+        'frmCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -364,7 +348,7 @@ Partial Class frmSerie
         Me.MaximumSize = New System.Drawing.Size(929, 488)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(929, 488)
-        Me.Name = "frmSerie"
+        Me.Name = "frmCliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Ver Serie"
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -374,8 +358,6 @@ Partial Class frmSerie
         Me.GroupBox2.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -383,20 +365,18 @@ Partial Class frmSerie
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents dgvVSM As DataGridView
-    Friend WithEvents VFecha As DataGridViewTextBoxColumn
-    Friend WithEvents VNombre As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txtNombre As RichTextBox
-    Friend WithEvents dtpFecha As ColorDateTimePicker
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents txtTapar As RichTextBox
-    Friend WithEvents chbIncluir As CheckBox
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents btnSSalir As Button
     Friend WithEvents btnBorrar As Button
     Friend WithEvents btnSEditar As Button
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents CTema As DataGridViewTextBoxColumn
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtTelefono As RichTextBox
+    Friend WithEvents txtMail As RichTextBox
 End Class

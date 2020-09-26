@@ -85,7 +85,10 @@
             Columna.ReadOnly = False
             Dgv.Columns.Clear()
             Dgv.DataSource = Tabla
-            Dgv.Columns.RemoveAt(0)
+            If (Tabla.Columns.Count > 1) Then
+
+                Dgv.Columns.RemoveAt(0)
+            End If
             If (Tabla.Columns.Count = Tamanos.Length) Then
                 Dgv.Columns.Add(Columna)
             End If

@@ -88,6 +88,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Buscadores\ModBuscador.vb" />
+    <Compile Include="Empresa\frmCliente.Designer.vb">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa\frmCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Personalizado\ColorDateTimePicker.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -124,7 +130,7 @@
     <Compile Include="Serie\frmAsignarVideos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Serie\frmSerie.Designer.vb">
+    <Compile Include="Serie\frmSerie.designer.vb">
       <DependentUpon>frmSerie.vb</DependentUpon>
     </Compile>
     <Compile Include="Serie\frmSerie.vb">
@@ -208,6 +214,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Ayudas de desarrollo\Generador_DB.resx">
       <DependentUpon>Generador_DB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empresa\frmCliente.resx">
+      <DependentUpon>frmCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Personalizado\frmConfirmarBorrado.resx">
       <DependentUpon>frmConfirmarBorrado.vb</DependentUpon>

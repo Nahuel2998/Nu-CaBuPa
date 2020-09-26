@@ -400,4 +400,29 @@ Public Class frmPrincipal
     Private Sub dgvClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellClick
         ClickCheck(dgvClientes)
     End Sub
+    Private Sub FormCliente_FormClosed(sender As Object, e As FormClosedEventArgs)
+        btncBuscar.PerformClick()
+    End Sub
+    Private Sub dgvClientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellDoubleClick
+        Dim i() As String = CargarID(dt_Empresa, dgvClientes, {0, 1, 2, 3})
+        If (i.Length <> 1) Then
+            Dim formCliente As New frmCliente(i)
+            AddHandler formCliente.FormClosed, AddressOf FormCliente_FormClosed
+            formCliente.ShowDialog()
+        Else
+            TBNotas.Text += "a"
+        End If
+    End Sub
+
+    Private Sub btncIngresar_Click(sender As Object, e As EventArgs) Handles btncIngresar.Click
+        Dim formCliente As New frmCliente({-1, "", "", ""})
+        formCliente.ShowDialog()
+    End Sub
+
+    Private Sub btncLimpiar_Click(sender As Object, e As EventArgs) Handles btncLimpiar.Click
+        txtCNombre.Clear()
+        txtCMail.Clear()
+        txtCTel.Clear()
+        ActualizarTabla(Nothing, dgvClientes)
+    End Sub
 End Class
