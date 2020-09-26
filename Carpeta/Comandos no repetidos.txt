@@ -1,0 +1,51 @@
+ DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+
+ describe Empresa
+ describe video
+ describe Serie
+
+ DELETE FROM video WHERE id_serie in ('9' )
+ DELETE FROM Video WHERE id_video in ('6' )
+ DELETE FROM Serie WHERE id_serie in ('8' )
+ DELETE FROM Empresa WHERE id_empresa in ('2' )
+
+select id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256)) 
+
+select time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final' FROM tanda WHERE (hora_inicio <= curtime() and hora_fin >= curtime()) or hora_inicio >= curtime() 
+
+select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-09-26'
+
+select e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre FROM evento e inner join fechaevento f on f.id_evento=e.id_evento WHERE f.fecha >= now() 
+
+select Tema FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad inner join tanda t on t.Hora_Inicio = a.hora_inicio WHERE a.fecha_inicio <= '2020-09-26' and a.fecha_finalizacion >= '2020-09-26' and t.hora_inicio = '15:00:00'
+
+select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '3' 
+
+select Descripcion FROM programa WHERE id_programa = '3'  
+
+select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-10' and pp.fecha_finalizacion >= '2020-08-10' and pp.id_programa = '1'
+
+select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+
+select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha FROM video WHERE id_video = '6' 
+
+select id_serie, nombre FROM Serie WHERE True  
+
+update video set contenido = 'sid',nombre = 'no',ID_Serie = null,fecha = null WHERE ID_Video = '6'  
+
+select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true
+
+select e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre FROM evento e inner join fechaevento f on f.id_evento=e.id_evento WHERE f.fecha >= now() 
+
+select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+  
+update Serie set fecha_finalizacion = null,nombre = 'holid' WHERE ID_Serie = '6' 
+
+select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+
+select ID_Publicidad, Tema FROM publicidad WHERE ID_Empresa = '1' 
+
+update Empresa set Nombre = 'Mil',Telefono = '113',Mail = 'dd' WHERE ID_Empresa = '1'  
+
+select ID_Publicidad, Tema FROM publicidad WHERE ID_Empresa = '2' 
+ 
