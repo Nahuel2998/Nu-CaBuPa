@@ -19,6 +19,8 @@
                 PrepararDelete("Serie", "id_serie", id)
             Case "Video"
                 PrepararDelete("Video", "id_video", id)
+            Case "Empresa"
+                PrepararDelete("Empresa", "id_empresa", id)
         End Select
         If (c) Then
             Owner.Close()

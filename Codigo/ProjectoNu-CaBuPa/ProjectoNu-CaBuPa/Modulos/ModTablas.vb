@@ -32,11 +32,11 @@
     End Sub
     Public Function ObtenerCheck(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As String()
         Dim UltiCol As Integer = Dgv.Columns.Count - 1
-        Dim Ids(UltiCol) As String
+        Dim Ids(Dgv.Rows.Count - 1) As String
         Dim Valores As Integer = 0
         For i As Integer = 0 To Dgv.Rows.Count - 1
             If (Dgv.Rows(i).Cells(UltiCol).Value = True) Then
-                Ids(i) = Tabla.Rows(Dgv.Rows(i).Index).Item(0).ToString
+                Ids(i) = Tabla.Rows(i).Item(0).ToString
                 Valores += 1
             Else
                 Ids(i) = ""

@@ -1,0 +1,140 @@
+ 37  DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+ 30  DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+ 34  select id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256)) 
+ 34  select time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final' FROM tanda WHERE (hora_inicio <= curtime() and hora_fin >= curtime()) or hora_inicio >= curtime() 
+ 34  select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-09-26' 
+ 35  select e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre FROM evento e inner join fechaevento f on f.id_evento=e.id_evento WHERE f.fecha >= now() 
+ 35  select Tema FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad inner join tanda t on t.Hora_Inicio = a.hora_inicio WHERE a.fecha_inicio <= '2020-09-26' and a.fecha_finalizacion >= '2020-09-26' and t.hora_inicio = '15:00:00' 
+ select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-08-26' 
+ 43  select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-08-11' 
+ 43  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '3' 
+ 43  select Descripcion FROM programa WHERE id_programa = '3' 
+ 43  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-11' and pp.fecha_finalizacion >= '2020-08-11' and pp.id_programa = '3' 
+ 44  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '4' 
+ 44  select Descripcion FROM programa WHERE id_programa = '4' 
+ 44  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-11' and pp.fecha_finalizacion >= '2020-08-11' and pp.id_programa = '4' 
+ 44  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '3' 
+ 44  select Descripcion FROM programa WHERE id_programa = '3' 
+ 44  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-11' and pp.fecha_finalizacion >= '2020-08-11' and pp.id_programa = '3' 
+ 46  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '4' 
+ 46  select Descripcion FROM programa WHERE id_programa = '4' 
+ 46  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-11' and pp.fecha_finalizacion >= '2020-08-11' and pp.id_programa = '4' 
+ 49  select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-08-10' 
+ 49  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '1' 
+ 49  select Descripcion FROM programa WHERE id_programa = '1' 
+ 49  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-10' and pp.fecha_finalizacion >= '2020-08-10' and pp.id_programa = '1' 
+ 49  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '1' 
+ 49  select Descripcion FROM programa WHERE id_programa = '1' 
+ 49  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-10' and pp.fecha_finalizacion >= '2020-08-10' and pp.id_programa = '1' 
+ 50  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '1' 
+ 50  select Descripcion FROM programa WHERE id_programa = '1' 
+ 50  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-10' and pp.fecha_finalizacion >= '2020-08-10' and pp.id_programa = '1' 
+ 50  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '1' 
+ 50  select Descripcion FROM programa WHERE id_programa = '1' 
+ 50  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-10' and pp.fecha_finalizacion >= '2020-08-10' and pp.id_programa = '1' 
+ 51  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '1' 
+ 51  select Descripcion FROM programa WHERE id_programa = '1' 
+ 51  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-10' and pp.fecha_finalizacion >= '2020-08-10' and pp.id_programa = '1' 
+ 51  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '1' 
+ 51  select Descripcion FROM programa WHERE id_programa = '1' 
+ 51  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-10' and pp.fecha_finalizacion >= '2020-08-10' and pp.id_programa = '1' 
+ 54  select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-08-12' 
+ 54  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '5' 
+ 54  select Descripcion FROM programa WHERE id_programa = '5' 
+ 54  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-12' and pp.fecha_finalizacion >= '2020-08-12' and pp.id_programa = '5' 
+ 55  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '5' 
+ 55  select Descripcion FROM programa WHERE id_programa = '5' 
+ 55  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-12' and pp.fecha_finalizacion >= '2020-08-12' and pp.id_programa = '5' 
+	select Tema FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad inner join tanda t on t.Hora_Inicio = a.hora_inicio WHERE a.fecha_inicio <= '2020-08-26' and a.fecha_finalizacion >= '2020-08-26' and t.hora_inicio = '15:00:00' 
+ 12:47:06  select Tema FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad inner join tanda t on t.Hora_Inicio = a.hora_inicio WHERE a.fecha_inicio <= '2020-08-19' and a.fecha_finalizacion >= '2020-08-19' and t.hora_inicio = '15:00:00' 
+ 12:47:10  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:47:11  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:47:12  select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha FROM video WHERE id_video = '6' 
+ 12:47:12  select id_serie, nombre FROM Serie WHERE True 
+ 12:47:18  0 
+ 12:47:18  describe video 
+ 12:47:18  update video set contenido = 'sid',nombre = 'no',ID_Serie = null,fecha = null WHERE ID_Video = '6' 
+ 12:47:20  DELETE FROM Video WHERE id_video in ('6' ) 
+ 12:47:20  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:47:20  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:49:15  DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+ 12:49:18  select id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256)) 
+ 12:49:19  select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-09-26' 
+ 12:49:29  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:49:29  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:50:49  DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+ 12:50:52  select id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256)) 
+ 12:50:52  select e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre FROM evento e inner join fechaevento f on f.id_evento=e.id_evento WHERE f.fecha >= now() 
+ 12:50:52  select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-09-26' 
+ 12:50:56  select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+ 12:50:56  select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+ 12:51:51  DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+ 12:51:55  select id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256)) 
+ 12:51:56  select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-09-26' 
+ 12:51:56  select time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final' FROM tanda WHERE (hora_inicio <= curtime() and hora_fin >= curtime()) or hora_inicio >= curtime() 
+ 12:51:56  select Tema FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad inner join tanda t on t.Hora_Inicio = a.hora_inicio WHERE a.fecha_inicio <= '2020-09-26' and a.fecha_finalizacion >= '2020-09-26' and t.hora_inicio = '15:00:00' 
+ 12:52:18  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:52:18  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:53:55  DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+ 12:53:58  select id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256)) 
+ 12:53:59  select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-09-26' 
+ 12:53:59  select e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre FROM evento e inner join fechaevento f on f.id_evento=e.id_evento WHERE f.fecha >= now() 
+ 12:54:03  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:54:03  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:54:06  DELETE FROM Video WHERE id_video in ('8' ) 
+ 12:54:06  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:54:06  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:55:51  DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+ 12:55:54  select id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256)) 
+ 12:55:55  select e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre FROM evento e inner join fechaevento f on f.id_evento=e.id_evento WHERE f.fecha >= now() 
+ 12:55:55  select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-09-26' 
+ 12:55:58  select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+ 12:55:58  select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+ 12:56:04  DELETE FROM video WHERE id_serie in ('9' ) 
+ 12:56:04  DELETE FROM Serie WHERE id_serie in ('9' ) 
+ 12:56:04  select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+ 12:56:04  select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+ 12:56:07  update video set id_serie = null WHERE id_serie = '8' 
+ 12:56:07  DELETE FROM Serie WHERE id_serie in ('8' ) 
+ 12:56:07  select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+ 12:56:07  select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+ 12:56:10  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:56:10  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:56:13  DELETE FROM Video WHERE id_video in ('7' ) 
+ 12:56:13  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:56:13  select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+ 12:56:15  select id_video, fecha as Fecha, nombre as Nombre FROM video WHERE id_serie = '6' 
+ 12:56:19  describe Serie 
+ 12:56:19  update Serie set fecha_finalizacion = null,nombre = 'holid' WHERE ID_Serie = '6' 
+ 12:56:25  DELETE FROM video WHERE id_serie in ('6' ) 
+ 12:56:25  select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+ 12:56:29  select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+ 12:56:30  select ID_Publicidad, Tema FROM publicidad WHERE ID_Empresa = '1' 
+ 12:56:37  describe Empresa 
+ 12:56:37  update Empresa set Nombre = 'Mil',Telefono = '113',Mail = 'dd' WHERE ID_Empresa = '1' 
+ 12:56:48  select ID_Publicidad, Tema FROM publicidad WHERE ID_Empresa = '1' 
+ select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+ 08  DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+ 11  select id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256)) 
+ 11  select time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final' FROM tanda WHERE (hora_inicio <= curtime() and hora_fin >= curtime()) or hora_inicio >= curtime() 
+ 12  select e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre FROM evento e inner join fechaevento f on f.id_evento=e.id_evento WHERE f.fecha >= now() 
+ 12  select Tema FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad inner join tanda t on t.Hora_Inicio = a.hora_inicio WHERE a.fecha_inicio <= '2020-09-26' and a.fecha_finalizacion >= '2020-09-26' and t.hora_inicio = '15:00:00' 
+ 17  select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+ 17  select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+ 18  select ID_Publicidad, Tema FROM publicidad WHERE ID_Empresa = '1' 
+ 21  select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+ 21  select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+ 22  select ID_Publicidad, Tema FROM publicidad WHERE ID_Empresa = '2' 
+ 24  DELETE FROM Empresa WHERE id_empresa in ('2' ) 
+ 24  select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+ 24  select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+ 28  select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+ 28  select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+ 33  select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-08-26' 
+ 33  select p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa' FROM fechaprograma f inner join programa p on f.id_programa=p.id_programa WHERE fecha = '2020-08-11' 
+ 33  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '3' 
+ 33  select Descripcion FROM programa WHERE id_programa = '3' 
+ 33  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-11' and pp.fecha_finalizacion >= '2020-08-11' and pp.id_programa = '3' 
+ 34  select Nombre, Telefono FROM programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario WHERE p.id_programa = '4' 
+ 34  select Descripcion FROM programa WHERE id_programa = '4' 
+ 34  select Tema FROM programa p inner join pmuestrapubli pp on p.id_programa=pp.id_programa inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad WHERE pp.fecha_inicio <= '2020-08-11' and pp.fecha_finalizacion >= '2020-08-11' and pp.id_programa = '4' 

@@ -114,7 +114,7 @@ Module ModConector
     Public Function ESQL(ByVal sql As String) As Boolean
         Dim conT = New MySqlConnection(connStr)
         conT.Open()
-
+        ModLog.Guardar(sql)
         Try
             objCmd = New MySqlCommand(sql, conn)
             objCmd.Prepare()
@@ -132,6 +132,7 @@ Module ModConector
         Dim sqladapter As MySqlDataAdapter
         Dim conT = New MySqlConnection(connStr)
         conT.OpenAsync()
+        ModLog.Guardar(sql)
         Try
             objCmd = New MySqlCommand(sql, conT)
             objCmd.Prepare()
@@ -147,6 +148,7 @@ Module ModConector
     Public Function ESQLSelect(ByVal objCmd As MySqlCommand, ByVal guardar As Boolean) As DataTable
         dt = New DataTable
         Dim sqladapter As MySqlDataAdapter
+        ModLog.Guardar(objCmd.CommandText)
         Try
             sqladapter = New MySqlDataAdapter(objCmd)
             sqladapter.Fill(dt)
