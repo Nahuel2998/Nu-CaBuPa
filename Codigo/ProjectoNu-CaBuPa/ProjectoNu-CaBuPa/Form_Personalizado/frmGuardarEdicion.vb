@@ -28,7 +28,4 @@ Public Class frmGuardarEdicion
         Close()
     End Sub
 
-    Private Sub frmGuardarEdicion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

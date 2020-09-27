@@ -87,7 +87,6 @@
     <Compile Include="Ayudas de desarrollo\Generador_DB.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Buscadores\ModBuscador.vb" />
     <Compile Include="Empresa\frmCliente.Designer.vb">
       <DependentUpon>frmCliente.vb</DependentUpon>
     </Compile>
@@ -290,6 +289,7 @@
     <None Include="Resources\IcnAjustes.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Buscadores\" />
     <Folder Include="Objetos\" />
   </ItemGroup>
   <ItemGroup>

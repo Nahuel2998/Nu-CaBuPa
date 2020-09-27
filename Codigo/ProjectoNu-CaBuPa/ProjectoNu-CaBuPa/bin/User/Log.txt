@@ -1,0 +1,20 @@
+27/09/2020 11:40:27 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/09/2020 11:40:31 DESKTOP-SDVEG3U ' select id_usuario FROM usuarios as User WHERE nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256)) 
+27/09/2020 11:40:33 DESKTOP-SDVEG3U ' show tables 
+27/09/2020 11:40:40 DESKTOP-SDVEG3U ' video 
+27/09/2020 11:40:40 DESKTOP-SDVEG3U ' describe video 
+27/09/2020 11:41:05 DESKTOP-SDVEG3U ' contenido,nombre,fecha'None','Voces de ...','2020-02-02' 
+27/09/2020 11:41:05 DESKTOP-SDVEG3U ' Insert into video ( contenido,nombre,fecha ) values ('None','Voces de ...','2020-02-02' ) 
+27/09/2020 11:41:09 DESKTOP-SDVEG3U ' serie 
+27/09/2020 11:41:09 DESKTOP-SDVEG3U ' describe serie 
+27/09/2020 11:41:22 DESKTOP-SDVEG3U ' ID_Serie,nombre'10','Voces' 
+27/09/2020 11:41:22 DESKTOP-SDVEG3U ' Insert into serie ( ID_Serie,nombre ) values ('10','Voces' ) 
+27/09/2020 11:41:29 DESKTOP-SDVEG3U ' video 
+27/09/2020 11:41:29 DESKTOP-SDVEG3U ' describe video 
+27/09/2020 11:41:41 DESKTOP-SDVEG3U ' ID_Video,nombre,ID_Serie'15','None','10' 
+27/09/2020 11:41:41 DESKTOP-SDVEG3U ' Insert into video ( ID_Video,nombre,ID_Serie ) values ('15','None','10' ) 
+27/09/2020 11:41:48 DESKTOP-SDVEG3U ' empresa 
+27/09/2020 11:41:48 DESKTOP-SDVEG3U ' describe empresa 
+27/09/2020 11:42:00 DESKTOP-SDVEG3U ' Nombre'NuCaBuPA' 
+27/09/2020 11:42:00 DESKTOP-SDVEG3U ' Insert into empresa ( Nombre ) values ('NuCaBuPA' ) 
+27/09/2020 11:42:02 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
