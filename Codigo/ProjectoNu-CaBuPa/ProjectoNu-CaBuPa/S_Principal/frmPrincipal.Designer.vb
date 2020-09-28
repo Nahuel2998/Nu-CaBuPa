@@ -59,6 +59,10 @@ Partial Class frmPrincipal
         Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pMain = New System.Windows.Forms.TableLayoutPanel()
         Me.spNotEven = New System.Windows.Forms.TableLayoutPanel()
         Me.gbNotas = New System.Windows.Forms.GroupBox()
@@ -72,7 +76,6 @@ Partial Class frmPrincipal
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
         Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -81,9 +84,10 @@ Partial Class frmPrincipal
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tcSecciones = New System.Windows.Forms.TabControl()
         Me.tbMenu = New System.Windows.Forms.TabPage()
+        Me.TabControl2 = New System.Windows.Forms.TabControl()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -100,6 +104,28 @@ Partial Class frmPrincipal
         Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBDEscripcion = New System.Windows.Forms.GroupBox()
         Me.TBDescripcion = New System.Windows.Forms.RichTextBox()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel12 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnIngresarBP = New System.Windows.Forms.Button()
+        Me.btnBorrarBP = New System.Windows.Forms.Button()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.btnBuscarBP = New System.Windows.Forms.Button()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.btnLimpiarBP = New System.Windows.Forms.Button()
+        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
+        Me.dgvBProgramas = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel13 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.txtNombreBP = New System.Windows.Forms.RichTextBox()
+        Me.Panel20 = New System.Windows.Forms.Panel()
+        Me.txtDescripcionBP = New System.Windows.Forms.RichTextBox()
         Me.buscarvideo = New System.Windows.Forms.TabPage()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
@@ -124,10 +150,6 @@ Partial Class frmPrincipal
         Me.btnlimpiarv = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.dgvVB = New System.Windows.Forms.DataGridView()
-        Me.VFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
@@ -150,7 +172,6 @@ Partial Class frmPrincipal
         Me.txtBSnombre = New System.Windows.Forms.RichTextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.cbS = New System.Windows.Forms.CheckBox()
-        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.tbPublicidad = New System.Windows.Forms.TabPage()
         Me.tbEmpresa = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
@@ -187,6 +208,13 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.VFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -202,6 +230,8 @@ Partial Class frmPrincipal
         CType(Me.dgvTandas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcSecciones.SuspendLayout()
         Me.tbMenu.SuspendLayout()
+        Me.TabControl2.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvPrograma, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,6 +242,17 @@ Partial Class frmPrincipal
         Me.GBFuncionario.SuspendLayout()
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBDEscripcion.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.TableLayoutPanel11.SuspendLayout()
+        Me.TableLayoutPanel12.SuspendLayout()
+        Me.Panel10.SuspendLayout()
+        Me.Panel18.SuspendLayout()
+        Me.GroupBox9.SuspendLayout()
+        CType(Me.dgvBProgramas, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox10.SuspendLayout()
+        Me.TableLayoutPanel13.SuspendLayout()
+        Me.Panel19.SuspendLayout()
+        Me.Panel20.SuspendLayout()
         Me.buscarvideo.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage4.SuspendLayout()
@@ -382,12 +423,6 @@ Partial Class frmPrincipal
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
         '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
-        '
         'dgvPublicidades
         '
         Me.dgvPublicidades.AllowUserToAddRows = False
@@ -518,9 +553,24 @@ Partial Class frmPrincipal
         'tbMenu
         '
         Me.tbMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.tbMenu.Controls.Add(Me.TableLayoutPanel2)
+        Me.tbMenu.Controls.Add(Me.TabControl2)
         resources.ApplyResources(Me.tbMenu, "tbMenu")
         Me.tbMenu.Name = "tbMenu"
+        '
+        'TabControl2
+        '
+        Me.TabControl2.Controls.Add(Me.TabPage2)
+        Me.TabControl2.Controls.Add(Me.TabPage3)
+        resources.ApplyResources(Me.TabControl2, "TabControl2")
+        Me.TabControl2.Name = "TabControl2"
+        Me.TabControl2.SelectedIndex = 0
+        '
+        'TabPage2
+        '
+        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.TabPage2.Controls.Add(Me.TableLayoutPanel2)
+        resources.ApplyResources(Me.TabPage2, "TabPage2")
+        Me.TabPage2.Name = "TabPage2"
         '
         'TableLayoutPanel2
         '
@@ -536,11 +586,6 @@ Partial Class frmPrincipal
         Me.GroupBox1.Controls.Add(Me.dgvPrograma)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
-        '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.Name = "dtp"
         '
         'dgvPrograma
         '
@@ -767,6 +812,197 @@ Partial Class frmPrincipal
         Me.TBDescripcion.Name = "TBDescripcion"
         Me.TBDescripcion.ReadOnly = True
         '
+        'TabPage3
+        '
+        Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.TabPage3.Controls.Add(Me.TableLayoutPanel11)
+        resources.ApplyResources(Me.TabPage3, "TabPage3")
+        Me.TabPage3.Name = "TabPage3"
+        '
+        'TableLayoutPanel11
+        '
+        resources.ApplyResources(Me.TableLayoutPanel11, "TableLayoutPanel11")
+        Me.TableLayoutPanel11.Controls.Add(Me.TableLayoutPanel12, 0, 2)
+        Me.TableLayoutPanel11.Controls.Add(Me.GroupBox9, 0, 1)
+        Me.TableLayoutPanel11.Controls.Add(Me.GroupBox10, 0, 0)
+        Me.TableLayoutPanel11.ForeColor = System.Drawing.Color.White
+        Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
+        '
+        'TableLayoutPanel12
+        '
+        resources.ApplyResources(Me.TableLayoutPanel12, "TableLayoutPanel12")
+        Me.TableLayoutPanel12.Controls.Add(Me.btnIngresarBP, 1, 0)
+        Me.TableLayoutPanel12.Controls.Add(Me.btnBorrarBP, 3, 0)
+        Me.TableLayoutPanel12.Controls.Add(Me.Panel10, 2, 0)
+        Me.TableLayoutPanel12.Controls.Add(Me.Panel18, 0, 0)
+        Me.TableLayoutPanel12.Name = "TableLayoutPanel12"
+        '
+        'btnIngresarBP
+        '
+        resources.ApplyResources(Me.btnIngresarBP, "btnIngresarBP")
+        Me.btnIngresarBP.Name = "btnIngresarBP"
+        Me.btnIngresarBP.UseVisualStyleBackColor = True
+        '
+        'btnBorrarBP
+        '
+        resources.ApplyResources(Me.btnBorrarBP, "btnBorrarBP")
+        Me.btnBorrarBP.Name = "btnBorrarBP"
+        Me.btnBorrarBP.UseVisualStyleBackColor = True
+        '
+        'Panel10
+        '
+        Me.Panel10.Controls.Add(Me.btnBuscarBP)
+        resources.ApplyResources(Me.Panel10, "Panel10")
+        Me.Panel10.Name = "Panel10"
+        '
+        'btnBuscarBP
+        '
+        resources.ApplyResources(Me.btnBuscarBP, "btnBuscarBP")
+        Me.btnBuscarBP.Name = "btnBuscarBP"
+        Me.btnBuscarBP.UseVisualStyleBackColor = True
+        '
+        'Panel18
+        '
+        Me.Panel18.Controls.Add(Me.btnLimpiarBP)
+        resources.ApplyResources(Me.Panel18, "Panel18")
+        Me.Panel18.Name = "Panel18"
+        '
+        'btnLimpiarBP
+        '
+        resources.ApplyResources(Me.btnLimpiarBP, "btnLimpiarBP")
+        Me.btnLimpiarBP.Name = "btnLimpiarBP"
+        Me.btnLimpiarBP.UseVisualStyleBackColor = True
+        '
+        'GroupBox9
+        '
+        resources.ApplyResources(Me.GroupBox9, "GroupBox9")
+        Me.GroupBox9.Controls.Add(Me.dgvBProgramas)
+        Me.GroupBox9.Name = "GroupBox9"
+        Me.GroupBox9.TabStop = False
+        '
+        'dgvBProgramas
+        '
+        Me.dgvBProgramas.AllowUserToAddRows = False
+        Me.dgvBProgramas.AllowUserToDeleteRows = False
+        Me.dgvBProgramas.AllowUserToResizeColumns = False
+        Me.dgvBProgramas.AllowUserToResizeRows = False
+        DataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvBProgramas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle25
+        resources.ApplyResources(Me.dgvBProgramas, "dgvBProgramas")
+        Me.dgvBProgramas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvBProgramas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.dgvBProgramas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBProgramas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
+        Me.dgvBProgramas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvBProgramas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn8, Me.DataGridViewCheckBoxColumn2})
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvBProgramas.DefaultCellStyle = DataGridViewCellStyle27
+        Me.dgvBProgramas.MultiSelect = False
+        Me.dgvBProgramas.Name = "dgvBProgramas"
+        Me.dgvBProgramas.ReadOnly = True
+        Me.dgvBProgramas.RowHeadersVisible = False
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.White
+        Me.dgvBProgramas.RowsDefaultCellStyle = DataGridViewCellStyle28
+        Me.dgvBProgramas.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.dgvBProgramas.RowTemplate.Height = 28
+        Me.dgvBProgramas.RowTemplate.ReadOnly = True
+        Me.dgvBProgramas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.FillWeight = 80.28429!
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn6, "DataGridViewTextBoxColumn6")
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.FillWeight = 150.7157!
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn8, "DataGridViewTextBoxColumn8")
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'DataGridViewCheckBoxColumn2
+        '
+        Me.DataGridViewCheckBoxColumn2.FillWeight = 40.0!
+        resources.ApplyResources(Me.DataGridViewCheckBoxColumn2, "DataGridViewCheckBoxColumn2")
+        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
+        Me.DataGridViewCheckBoxColumn2.ReadOnly = True
+        '
+        'GroupBox10
+        '
+        resources.ApplyResources(Me.GroupBox10, "GroupBox10")
+        Me.GroupBox10.Controls.Add(Me.TableLayoutPanel13)
+        Me.GroupBox10.Name = "GroupBox10"
+        Me.GroupBox10.TabStop = False
+        '
+        'TableLayoutPanel13
+        '
+        resources.ApplyResources(Me.TableLayoutPanel13, "TableLayoutPanel13")
+        Me.TableLayoutPanel13.Controls.Add(Me.Label9, 0, 0)
+        Me.TableLayoutPanel13.Controls.Add(Me.Label10, 0, 1)
+        Me.TableLayoutPanel13.Controls.Add(Me.Panel19, 1, 0)
+        Me.TableLayoutPanel13.Controls.Add(Me.Panel20, 1, 1)
+        Me.TableLayoutPanel13.Name = "TableLayoutPanel13"
+        '
+        'Label9
+        '
+        resources.ApplyResources(Me.Label9, "Label9")
+        Me.Label9.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Label9.Name = "Label9"
+        '
+        'Label10
+        '
+        resources.ApplyResources(Me.Label10, "Label10")
+        Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Label10.Name = "Label10"
+        '
+        'Panel19
+        '
+        resources.ApplyResources(Me.Panel19, "Panel19")
+        Me.Panel19.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel19.Controls.Add(Me.txtNombreBP)
+        Me.Panel19.Name = "Panel19"
+        '
+        'txtNombreBP
+        '
+        resources.ApplyResources(Me.txtNombreBP, "txtNombreBP")
+        Me.txtNombreBP.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtNombreBP.ForeColor = System.Drawing.Color.White
+        Me.txtNombreBP.Name = "txtNombreBP"
+        '
+        'Panel20
+        '
+        resources.ApplyResources(Me.Panel20, "Panel20")
+        Me.Panel20.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel20.Controls.Add(Me.txtDescripcionBP)
+        Me.Panel20.Name = "Panel20"
+        '
+        'txtDescripcionBP
+        '
+        resources.ApplyResources(Me.txtDescripcionBP, "txtDescripcionBP")
+        Me.txtDescripcionBP.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtDescripcionBP.ForeColor = System.Drawing.Color.White
+        Me.txtDescripcionBP.Name = "txtDescripcionBP"
+        '
         'buscarvideo
         '
         Me.buscarvideo.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -776,9 +1012,9 @@ Partial Class frmPrincipal
         '
         'TabControl1
         '
-        resources.ApplyResources(Me.TabControl1, "TabControl1")
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage1)
+        resources.ApplyResources(Me.TabControl1, "TabControl1")
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         '
@@ -836,6 +1072,7 @@ Partial Class frmPrincipal
         'Panel1
         '
         resources.ApplyResources(Me.Panel1, "Panel1")
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.txtVnombre)
         Me.Panel1.Name = "Panel1"
@@ -879,6 +1116,7 @@ Partial Class frmPrincipal
         'Panel4
         '
         resources.ApplyResources(Me.Panel4, "Panel4")
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.txtVcontenido)
         Me.Panel4.Name = "Panel4"
@@ -925,73 +1163,44 @@ Partial Class frmPrincipal
         Me.dgvVB.AllowUserToDeleteRows = False
         Me.dgvVB.AllowUserToResizeColumns = False
         Me.dgvVB.AllowUserToResizeRows = False
-        DataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle25.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvVB.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle29.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle29.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvVB.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle29
         resources.ApplyResources(Me.dgvVB, "dgvVB")
-        Me.dgvVB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvVB.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvVB.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
-        DataGridViewCellStyle26.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvVB.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle30.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle30.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvVB.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle30
         Me.dgvVB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVB.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.VFecha, Me.VNombre, Me.VSerie, Me.VEliminar})
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle27.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvVB.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle31.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvVB.DefaultCellStyle = DataGridViewCellStyle31
         Me.dgvVB.MultiSelect = False
         Me.dgvVB.Name = "dgvVB"
+        Me.dgvVB.ReadOnly = True
         Me.dgvVB.RowHeadersVisible = False
-        DataGridViewCellStyle28.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.White
-        Me.dgvVB.RowsDefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle32.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle32.ForeColor = System.Drawing.Color.White
+        Me.dgvVB.RowsDefaultCellStyle = DataGridViewCellStyle32
         Me.dgvVB.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvVB.RowTemplate.Height = 28
         Me.dgvVB.RowTemplate.ReadOnly = True
         Me.dgvVB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'VFecha
-        '
-        Me.VFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.VFecha.Frozen = True
-        resources.ApplyResources(Me.VFecha, "VFecha")
-        Me.VFecha.Name = "VFecha"
-        '
-        'VNombre
-        '
-        Me.VNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.VNombre.Frozen = True
-        resources.ApplyResources(Me.VNombre, "VNombre")
-        Me.VNombre.Name = "VNombre"
-        '
-        'VSerie
-        '
-        Me.VSerie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.VSerie.Frozen = True
-        resources.ApplyResources(Me.VSerie, "VSerie")
-        Me.VSerie.Name = "VSerie"
-        '
-        'VEliminar
-        '
-        Me.VEliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.VEliminar.FalseValue = "False"
-        resources.ApplyResources(Me.VEliminar, "VEliminar")
-        Me.VEliminar.Name = "VEliminar"
-        Me.VEliminar.TrueValue = "True"
         '
         'TabPage1
         '
@@ -1068,41 +1277,41 @@ Partial Class frmPrincipal
         Me.dgvBS.AllowUserToDeleteRows = False
         Me.dgvBS.AllowUserToResizeColumns = False
         Me.dgvBS.AllowUserToResizeRows = False
-        DataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle29.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle29.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvBS.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle33.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle33.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvBS.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle33
         resources.ApplyResources(Me.dgvBS, "dgvBS")
         Me.dgvBS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvBS.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvBS.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
-        DataGridViewCellStyle30.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle30.ForeColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBS.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle34.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle34.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBS.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle34
         Me.dgvBS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvBS.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.SEliminar})
-        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle31.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle31.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvBS.DefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle35.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle35.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvBS.DefaultCellStyle = DataGridViewCellStyle35
         Me.dgvBS.MultiSelect = False
         Me.dgvBS.Name = "dgvBS"
         Me.dgvBS.ReadOnly = True
         Me.dgvBS.RowHeadersVisible = False
-        DataGridViewCellStyle32.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle32.ForeColor = System.Drawing.Color.White
-        Me.dgvBS.RowsDefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle36.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle36.ForeColor = System.Drawing.Color.White
+        Me.dgvBS.RowsDefaultCellStyle = DataGridViewCellStyle36
         Me.dgvBS.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvBS.RowTemplate.Height = 28
         Me.dgvBS.RowTemplate.ReadOnly = True
@@ -1184,11 +1393,6 @@ Partial Class frmPrincipal
         Me.cbS.Name = "cbS"
         Me.cbS.UseVisualStyleBackColor = True
         '
-        'ctpSerie
-        '
-        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
-        Me.ctpSerie.Name = "ctpSerie"
-        '
         'tbPublicidad
         '
         Me.tbPublicidad.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -1269,41 +1473,41 @@ Partial Class frmPrincipal
         Me.dgvClientes.AllowUserToDeleteRows = False
         Me.dgvClientes.AllowUserToResizeColumns = False
         Me.dgvClientes.AllowUserToResizeRows = False
-        DataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle33.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle33.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvClientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle37.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle37.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvClientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle37
         resources.ApplyResources(Me.dgvClientes, "dgvClientes")
         Me.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
-        DataGridViewCellStyle34.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle34.ForeColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle38.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle38.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle38
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.cTelefono, Me.cMail, Me.DataGridViewCheckBoxColumn1})
-        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle35.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle35.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvClientes.DefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle39.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle39.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvClientes.DefaultCellStyle = DataGridViewCellStyle39
         Me.dgvClientes.MultiSelect = False
         Me.dgvClientes.Name = "dgvClientes"
         Me.dgvClientes.ReadOnly = True
         Me.dgvClientes.RowHeadersVisible = False
-        DataGridViewCellStyle36.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle36.ForeColor = System.Drawing.Color.White
-        Me.dgvClientes.RowsDefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle40.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle40.ForeColor = System.Drawing.Color.White
+        Me.dgvClientes.RowsDefaultCellStyle = DataGridViewCellStyle40
         Me.dgvClientes.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvClientes.RowTemplate.Height = 28
         Me.dgvClientes.RowTemplate.ReadOnly = True
@@ -1452,6 +1656,52 @@ Partial Class frmPrincipal
         'BWBuscador
         '
         '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
+        '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
+        '
+        'ctpSerie
+        '
+        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
+        Me.ctpSerie.Name = "ctpSerie"
+        '
+        'VFecha
+        '
+        Me.VFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        resources.ApplyResources(Me.VFecha, "VFecha")
+        Me.VFecha.Name = "VFecha"
+        Me.VFecha.ReadOnly = True
+        '
+        'VNombre
+        '
+        Me.VNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        resources.ApplyResources(Me.VNombre, "VNombre")
+        Me.VNombre.Name = "VNombre"
+        Me.VNombre.ReadOnly = True
+        '
+        'VSerie
+        '
+        Me.VSerie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        resources.ApplyResources(Me.VSerie, "VSerie")
+        Me.VSerie.Name = "VSerie"
+        Me.VSerie.ReadOnly = True
+        '
+        'VEliminar
+        '
+        Me.VEliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.VEliminar.FalseValue = "False"
+        resources.ApplyResources(Me.VEliminar, "VEliminar")
+        Me.VEliminar.Name = "VEliminar"
+        Me.VEliminar.ReadOnly = True
+        Me.VEliminar.TrueValue = "True"
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -1476,6 +1726,8 @@ Partial Class frmPrincipal
         CType(Me.dgvTandas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tcSecciones.ResumeLayout(False)
         Me.tbMenu.ResumeLayout(False)
+        Me.TabControl2.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.dgvPrograma, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1487,6 +1739,18 @@ Partial Class frmPrincipal
         Me.GBFuncionario.ResumeLayout(False)
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBDEscripcion.ResumeLayout(False)
+        Me.TabPage3.ResumeLayout(False)
+        Me.TableLayoutPanel11.ResumeLayout(False)
+        Me.TableLayoutPanel12.ResumeLayout(False)
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel18.ResumeLayout(False)
+        Me.GroupBox9.ResumeLayout(False)
+        CType(Me.dgvBProgramas, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox10.ResumeLayout(False)
+        Me.TableLayoutPanel13.ResumeLayout(False)
+        Me.TableLayoutPanel13.PerformLayout()
+        Me.Panel19.ResumeLayout(False)
+        Me.Panel20.ResumeLayout(False)
         Me.buscarvideo.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage4.ResumeLayout(False)
@@ -1543,45 +1807,26 @@ Partial Class frmPrincipal
     Friend WithEvents tbMenu As TabPage
     Friend WithEvents buscarvideo As TabPage
     Friend WithEvents gbNotas As GroupBox
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GBFuncionarios As GroupBox
     Friend WithEvents BWProgramas As System.ComponentModel.BackgroundWorker
     Friend WithEvents lblStatus As Label
     Friend WithEvents gbTandas As GroupBox
-    Friend WithEvents dgvPrograma As DataGridView
     Friend WithEvents BWDPRogramas As System.ComponentModel.BackgroundWorker
-    Friend WithEvents GBFuncionario As GroupBox
-    Friend WithEvents dgvFuncionarios As DataGridView
-    Friend WithEvents GBDEscripcion As GroupBox
-    Friend WithEvents TBDescripcion As RichTextBox
     Friend WithEvents GBEventos As GroupBox
     Friend WithEvents dgvEventos As DataGridView
-    Friend WithEvents FNombre As DataGridViewTextBoxColumn
-    Friend WithEvents Telefono As DataGridViewTextBoxColumn
     Friend WithEvents EFecha As DataGridViewTextBoxColumn
     Friend WithEvents ENombre As DataGridViewTextBoxColumn
     Friend WithEvents BWEventos As System.ComponentModel.BackgroundWorker
-    Friend WithEvents tlpProgramas As TableLayoutPanel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents GroupBox7 As GroupBox
     Friend WithEvents dgvPublicidades As DataGridView
     Friend WithEvents BWTandas As System.ComponentModel.BackgroundWorker
     Friend WithEvents BWPublicidades As System.ComponentModel.BackgroundWorker
-    Friend WithEvents GBPubli As GroupBox
-    Friend WithEvents dgvPPublicidades As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents Inicio As DataGridViewTextBoxColumn
-    Friend WithEvents Final As DataGridViewTextBoxColumn
-    Friend WithEvents Programa As DataGridViewTextBoxColumn
-    Friend WithEvents PEstado As DataGridViewTextBoxColumn
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents dgvTandas As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents dtp As ColorDateTimePicker
     Friend WithEvents dtpTanda As ColorDateTimePicker
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Información As GroupBox
@@ -1620,10 +1865,6 @@ Partial Class frmPrincipal
     Friend WithEvents btnBuscarBS As Button
     Friend WithEvents PDescripcion As DataGridViewTextBoxColumn
     Friend WithEvents cbS As CheckBox
-    Friend WithEvents VFecha As DataGridViewTextBoxColumn
-    Friend WithEvents VNombre As DataGridViewTextBoxColumn
-    Friend WithEvents VSerie As DataGridViewTextBoxColumn
-    Friend WithEvents VEliminar As DataGridViewCheckBoxColumn
     Friend WithEvents Panel8 As Panel
     Friend WithEvents btnBorrar As Button
     Friend WithEvents SEliminar As DataGridViewCheckBoxColumn
@@ -1663,4 +1904,51 @@ Partial Class frmPrincipal
     Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
     Friend WithEvents Panel16 As Panel
     Friend WithEvents Panel17 As Panel
+    Friend WithEvents TabControl2 As TabControl
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents dtp As ColorDateTimePicker
+    Friend WithEvents dgvPrograma As DataGridView
+    Friend WithEvents Inicio As DataGridViewTextBoxColumn
+    Friend WithEvents Final As DataGridViewTextBoxColumn
+    Friend WithEvents Programa As DataGridViewTextBoxColumn
+    Friend WithEvents PEstado As DataGridViewTextBoxColumn
+    Friend WithEvents GBFuncionarios As GroupBox
+    Friend WithEvents tlpProgramas As TableLayoutPanel
+    Friend WithEvents GBPubli As GroupBox
+    Friend WithEvents dgvPPublicidades As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents GBFuncionario As GroupBox
+    Friend WithEvents dgvFuncionarios As DataGridView
+    Friend WithEvents FNombre As DataGridViewTextBoxColumn
+    Friend WithEvents Telefono As DataGridViewTextBoxColumn
+    Friend WithEvents GBDEscripcion As GroupBox
+    Friend WithEvents TBDescripcion As RichTextBox
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents TableLayoutPanel11 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel12 As TableLayoutPanel
+    Friend WithEvents btnIngresarBP As Button
+    Friend WithEvents btnBorrarBP As Button
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents btnBuscarBP As Button
+    Friend WithEvents Panel18 As Panel
+    Friend WithEvents btnLimpiarBP As Button
+    Friend WithEvents GroupBox9 As GroupBox
+    Friend WithEvents dgvBProgramas As DataGridView
+    Friend WithEvents GroupBox10 As GroupBox
+    Friend WithEvents TableLayoutPanel13 As TableLayoutPanel
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Panel19 As Panel
+    Friend WithEvents txtNombreBP As RichTextBox
+    Friend WithEvents Panel20 As Panel
+    Friend WithEvents txtDescripcionBP As RichTextBox
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
+    Friend WithEvents VFecha As DataGridViewTextBoxColumn
+    Friend WithEvents VNombre As DataGridViewTextBoxColumn
+    Friend WithEvents VSerie As DataGridViewTextBoxColumn
+    Friend WithEvents VEliminar As DataGridViewCheckBoxColumn
 End Class

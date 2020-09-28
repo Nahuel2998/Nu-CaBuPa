@@ -67,31 +67,32 @@ Partial Class frmSerie
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox2, 0, 0)
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.TableLayoutPanel1.ForeColor = System.Drawing.Color.White
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(16, 6)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 5)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.7975!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.2025!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(881, 436)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(661, 354)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'TableLayoutPanel3
         '
-        Me.TableLayoutPanel3.ColumnCount = 3
+        Me.TableLayoutPanel3.ColumnCount = 5
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 249.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.btnSSalir, 2, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnBorrar, 1, 0)
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel3.Controls.Add(Me.btnSSalir, 4, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.btnBorrar, 2, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnSEditar, 0, 0)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 355)
-        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(2, 288)
+        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(875, 78)
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(656, 63)
         Me.TableLayoutPanel3.TabIndex = 28876924
         '
         'btnSSalir
@@ -100,11 +101,10 @@ Partial Class frmSerie
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnSSalir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnSSalir.Location = New System.Drawing.Point(720, 4)
-        Me.btnSSalir.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnSSalir.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnSSalir.Location = New System.Drawing.Point(540, 3)
+        Me.btnSSalir.MinimumSize = New System.Drawing.Size(90, 12)
         Me.btnSSalir.Name = "btnSSalir"
-        Me.btnSSalir.Size = New System.Drawing.Size(151, 70)
+        Me.btnSSalir.Size = New System.Drawing.Size(113, 57)
         Me.btnSSalir.TabIndex = 0
         Me.btnSSalir.Text = "Salir"
         Me.btnSSalir.UseVisualStyleBackColor = True
@@ -112,13 +112,12 @@ Partial Class frmSerie
         'btnBorrar
         '
         Me.btnBorrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnBorrar.Location = New System.Drawing.Point(427, 4)
-        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnBorrar.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnBorrar.Location = New System.Drawing.Point(251, 3)
+        Me.btnBorrar.MinimumSize = New System.Drawing.Size(90, 12)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(195, 70)
+        Me.btnBorrar.Size = New System.Drawing.Size(186, 57)
         Me.btnBorrar.TabIndex = 2
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = True
@@ -127,11 +126,10 @@ Partial Class frmSerie
         '
         Me.btnSEditar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnSEditar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnSEditar.Location = New System.Drawing.Point(4, 4)
-        Me.btnSEditar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnSEditar.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnSEditar.Location = New System.Drawing.Point(3, 3)
+        Me.btnSEditar.MinimumSize = New System.Drawing.Size(90, 12)
         Me.btnSEditar.Name = "btnSEditar"
-        Me.btnSEditar.Size = New System.Drawing.Size(195, 70)
+        Me.btnSEditar.Size = New System.Drawing.Size(146, 57)
         Me.btnSEditar.TabIndex = 1
         Me.btnSEditar.Text = "Editar"
         Me.btnSEditar.UseVisualStyleBackColor = True
@@ -144,12 +142,10 @@ Partial Class frmSerie
         Me.GroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.GroupBox1.Controls.Add(Me.dgvVSM)
         Me.GroupBox1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.GroupBox1.Location = New System.Drawing.Point(4, 120)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.MinimumSize = New System.Drawing.Size(133, 49)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 97)
+        Me.GroupBox1.MinimumSize = New System.Drawing.Size(100, 40)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(873, 229)
+        Me.GroupBox1.Size = New System.Drawing.Size(655, 186)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Videos"
@@ -190,8 +186,8 @@ Partial Class frmSerie
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvVSM.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvVSM.Location = New System.Drawing.Point(7, 26)
-        Me.dgvVSM.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvVSM.Location = New System.Drawing.Point(5, 21)
+        Me.dgvVSM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvVSM.MultiSelect = False
         Me.dgvVSM.Name = "dgvVSM"
         Me.dgvVSM.ReadOnly = True
@@ -204,7 +200,7 @@ Partial Class frmSerie
         Me.dgvVSM.RowTemplate.Height = 28
         Me.dgvVSM.RowTemplate.ReadOnly = True
         Me.dgvVSM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvVSM.Size = New System.Drawing.Size(860, 199)
+        Me.dgvVSM.Size = New System.Drawing.Size(645, 162)
         Me.dgvVSM.TabIndex = 28876923
         '
         'VFecha
@@ -230,12 +226,10 @@ Partial Class frmSerie
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.Controls.Add(Me.TableLayoutPanel2)
         Me.GroupBox2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.GroupBox2.Location = New System.Drawing.Point(4, 4)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.MinimumSize = New System.Drawing.Size(133, 37)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 3)
+        Me.GroupBox2.MinimumSize = New System.Drawing.Size(100, 30)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(873, 108)
+        Me.GroupBox2.Size = New System.Drawing.Size(655, 88)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Informacion"
@@ -246,19 +240,18 @@ Partial Class frmSerie
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Panel1, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.txtNombre, 1, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(9, 28)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(7, 23)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(856, 70)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(642, 57)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'Panel1
@@ -267,10 +260,10 @@ Partial Class frmSerie
         Me.Panel1.Controls.Add(Me.chbIncluir)
         Me.Panel1.Controls.Add(Me.dtpFecha)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(88, 37)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Location = New System.Drawing.Point(66, 30)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(765, 31)
+        Me.Panel1.Size = New System.Drawing.Size(574, 25)
         Me.Panel1.TabIndex = 28876925
         '
         'txtTapar
@@ -278,11 +271,10 @@ Partial Class frmSerie
         Me.txtTapar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtTapar.ForeColor = System.Drawing.Color.White
         Me.txtTapar.Location = New System.Drawing.Point(1, 0)
-        Me.txtTapar.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTapar.Multiline = False
         Me.txtTapar.Name = "txtTapar"
         Me.txtTapar.ReadOnly = True
-        Me.txtTapar.Size = New System.Drawing.Size(763, 31)
+        Me.txtTapar.Size = New System.Drawing.Size(573, 26)
         Me.txtTapar.TabIndex = 5
         Me.txtTapar.Text = "No posee fecha."
         Me.txtTapar.Visible = False
@@ -291,10 +283,9 @@ Partial Class frmSerie
         '
         Me.chbIncluir.AutoSize = True
         Me.chbIncluir.Enabled = False
-        Me.chbIncluir.Location = New System.Drawing.Point(676, 5)
-        Me.chbIncluir.Margin = New System.Windows.Forms.Padding(4)
+        Me.chbIncluir.Location = New System.Drawing.Point(507, 4)
         Me.chbIncluir.Name = "chbIncluir"
-        Me.chbIncluir.Size = New System.Drawing.Size(78, 22)
+        Me.chbIncluir.Size = New System.Drawing.Size(64, 19)
         Me.chbIncluir.TabIndex = 4
         Me.chbIncluir.Text = "Incluir"
         Me.chbIncluir.UseVisualStyleBackColor = True
@@ -305,20 +296,18 @@ Partial Class frmSerie
         Me.dtpFecha.Enabled = False
         Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(667, 27)
+        Me.dtpFecha.Size = New System.Drawing.Size(501, 23)
         Me.dtpFecha.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Location = New System.Drawing.Point(4, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.MinimumSize = New System.Drawing.Size(81, 15)
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.MinimumSize = New System.Drawing.Size(61, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 35)
+        Me.Label1.Size = New System.Drawing.Size(61, 28)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -327,11 +316,10 @@ Partial Class frmSerie
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(4, 35)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.MinimumSize = New System.Drawing.Size(81, 15)
+        Me.Label2.Location = New System.Drawing.Point(3, 28)
+        Me.Label2.MinimumSize = New System.Drawing.Size(61, 12)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 35)
+        Me.Label2.Size = New System.Drawing.Size(61, 29)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Fecha:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -341,29 +329,27 @@ Partial Class frmSerie
         Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtNombre.ForeColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(89, 4)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombre.Location = New System.Drawing.Point(67, 3)
         Me.txtNombre.Multiline = False
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(763, 27)
+        Me.txtNombre.Size = New System.Drawing.Size(572, 22)
         Me.txtNombre.TabIndex = 2
         Me.txtNombre.Text = ""
         '
         'frmSerie
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(911, 441)
+        Me.ClientSize = New System.Drawing.Size(685, 365)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(929, 488)
+        Me.MaximumSize = New System.Drawing.Size(701, 404)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(929, 488)
+        Me.MinimumSize = New System.Drawing.Size(701, 404)
         Me.Name = "frmSerie"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Ver Serie"

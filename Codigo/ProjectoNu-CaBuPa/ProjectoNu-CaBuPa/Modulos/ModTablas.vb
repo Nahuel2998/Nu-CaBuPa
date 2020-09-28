@@ -1,5 +1,6 @@
 ﻿Module ModTablas
     Public dt_programa As DataTable
+    Public dt_BPrograma As DataTable
     Public dt_dprograma As DataTable
     Public dt_evento As DataTable
     Public dt_tandas As DataTable
@@ -28,7 +29,9 @@
         Return err
     End Function
     Public Sub ClickCheck(ByRef Dgv As DataGridView)
-        Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value = Not Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value
+        If Dgv.Rows.Count > 0 Then
+            Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value = Not Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value
+        End If
     End Sub
     Public Function ObtenerCheck(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As String()
         Dim UltiCol As Integer = Dgv.Columns.Count - 1

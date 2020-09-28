@@ -135,12 +135,6 @@
     <Compile Include="Serie\frmSerie.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="S_Principal\ControlActivo.Designer.vb">
-      <DependentUpon>ControlActivo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="S_Principal\ControlActivo.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="S_Usuario\Accesos.Designer.vb">
       <DependentUpon>Accesos.vb</DependentUpon>
     </Compile>
@@ -234,9 +228,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Serie\frmSerie.resx">
       <DependentUpon>frmSerie.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="S_Principal\ControlActivo.resx">
-      <DependentUpon>ControlActivo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="S_Principal\frmPrincipal.aa.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>

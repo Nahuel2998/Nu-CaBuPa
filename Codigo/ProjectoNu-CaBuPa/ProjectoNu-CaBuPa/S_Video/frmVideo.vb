@@ -39,7 +39,7 @@
     Sub CargarCombo()
         dtV = DevolverTabla(PSQL("id_serie, nombre", "Serie", "True"))
         LlenarCombo(cbSerie, dtV, "nombre")
-        If (Not IsNothing(dtV)) Then
+        If Not IsNothing(dtV) Then
             ExtraerDatos()
         End If
         cbSerie.SelectedIndex = pos
@@ -68,7 +68,6 @@
             If Not CompararValores(VaciarNull(datos), datosI) Then
                 PrepararUpdate("video", datos, videoID)
                 datosI = VaciarNull(datos)
-                ' ModInicializador.frmPrin.btnbuscarv.PerformClick()
             End If
             Alternar()
         Else
@@ -115,6 +114,7 @@
             btnEditar.Text = "Insertar"
             btnBorrar.Visible = False
             Activar()
+            CargarCombo()
         End If
         dtpFecha.BackColor = Color.FromArgb(64, 64, 64)
         dtpFecha.ForeColor = Color.White

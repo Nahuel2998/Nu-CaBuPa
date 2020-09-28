@@ -172,7 +172,7 @@ Public Class frmPrincipal
         End If
     End Sub
 
-    Private Sub dgvPrograma_Click(sender As Object, e As EventArgs) Handles dgvPrograma.Click
+    Private Sub dgvPrograma_Click(sender As Object, e As EventArgs)
         Funcionarios()
     End Sub
 
@@ -223,7 +223,7 @@ Public Class frmPrincipal
         End If
     End Sub
 
-    Private Sub dtp_ValueChanged_1(sender As Object, e As EventArgs) Handles dtp.ValueChanged
+    Private Sub dtp_ValueChanged_1(sender As Object, e As EventArgs)
         If Not BWProgramas.IsBusy Then
             BWProgramas.RunWorkerAsync()
         End If
@@ -268,6 +268,9 @@ Public Class frmPrincipal
             Case "Empresa"
                 dt_Empresa = TBusca
                 ActualizarTablaC(dt_Empresa, dgvClientes)
+            Case "Programa"
+                dt_BPrograma = TBusca
+                ActualizarTablaC(dt_BPrograma, dgvBProgramas)
         End Select
         TBusca = Nothing
         TBuscada = ""
@@ -323,6 +326,7 @@ Public Class frmPrincipal
             AddHandler formSerie.FormClosed, AddressOf FormSerie_FormClosed
             formSerie.ShowDialog()
         Else
+            ' FIXME: Remove this, es de debug.
             TBNotas.Text += "a"
         End If
     End Sub
@@ -340,20 +344,28 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        If (dt_Video.Rows.Count > 0) Then
-            Dim Id() As String = ObtenerCheck(dt_Video, dgvVB)
-            Dim formDelete As New frmConfirmarBorrado("Video", Id, False)
-            formDelete.ShowDialog(Me)
-            btnbuscarv.PerformClick()
+        If Not IsNothing(dt_Video) Then
+            If dt_Video.Rows.Count > 0 Then
+                Dim Id() As String = ObtenerCheck(dt_Video, dgvVB)
+                If Not Id.Length = 0 Then
+                    Dim formDelete As New frmConfirmarBorrado("Video", Id, False)
+                    formDelete.ShowDialog(Me)
+                    btnbuscarv.PerformClick()
+                End If
+            End If
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBorrarS.Click
-        If (dt_Serie.Rows.Count > 0) Then
-            Dim Id() As String = ObtenerCheck(dt_Serie, dgvBS)
-            Dim formDelete As New frmConfirmarBorrado("Serie", Id, False)
-            formDelete.ShowDialog(Me)
-            btnBuscarBS.PerformClick()
+    Private Sub btnBorrarS_Click(sender As Object, e As EventArgs) Handles btnBorrarS.Click
+        If Not IsNothing(dt_Serie) Then
+            If dt_Serie.Rows.Count > 0 Then
+                Dim Id() As String = ObtenerCheck(dt_Serie, dgvBS)
+                If Not Id.Length = 0 Then
+                    Dim formDelete As New frmConfirmarBorrado("Serie", Id, False)
+                    formDelete.ShowDialog(Me)
+                    btnBuscarBS.PerformClick()
+                End If
+            End If
         End If
     End Sub
 
@@ -363,11 +375,13 @@ Public Class frmPrincipal
 
     Private Sub btnIngresarV_Click(sender As Object, e As EventArgs) Handles btnIngresarV.Click
         Dim formVideo As New frmVideo(-1)
+        AddHandler formVideo.FormClosed, AddressOf FormVideo_FormClosed
         formVideo.ShowDialog()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnsIngresar.Click
+    Private Sub btnsIngresar_Click(sender As Object, e As EventArgs) Handles btnsIngresar.Click
         Dim formSerie As New frmSerie({-1, Now.Date.ToString, ""})
+        AddHandler formSerie.FormClosed, AddressOf FormSerie_FormClosed
         formSerie.ShowDialog()
     End Sub
 
@@ -389,11 +403,15 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btncBorrar_Click(sender As Object, e As EventArgs) Handles btncBorrar.Click
-        If (dt_Empresa.Rows.Count > 0) Then
-            Dim Id() As String = ObtenerCheck(dt_Empresa, dgvClientes)
-            Dim formDelete As New frmConfirmarBorrado("Empresa", Id, False)
-            formDelete.ShowDialog(Me)
-            btncBuscar.PerformClick()
+        If Not IsNothing(dt_Empresa) Then
+            If (dt_Empresa.Rows.Count > 0) Then
+                Dim Id() As String = ObtenerCheck(dt_Empresa, dgvClientes)
+                If Not Id.Length = 0 Then
+                    Dim formDelete As New frmConfirmarBorrado("Empresa", Id, False)
+                    formDelete.ShowDialog(Me)
+                    btncBuscar.PerformClick()
+                End If
+            End If
         End If
     End Sub
 
@@ -424,5 +442,42 @@ Public Class frmPrincipal
         txtCMail.Clear()
         txtCTel.Clear()
         ActualizarTabla(Nothing, dgvClientes)
+    End Sub
+
+    Private Sub btnLimpiarBP_Click(sender As Object, e As EventArgs) Handles btnLimpiarBP.Click
+        txtNombreBP.Clear()
+        txtDescripcionBP.Clear()
+        ActualizarTabla(Nothing, dgvBProgramas)
+    End Sub
+
+    Private Sub btnBuscarBP_Click(sender As Object, e As EventArgs) Handles btnBuscarBP.Click
+        TBuscada = "Programa"
+        Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
+        If Not String.IsNullOrWhiteSpace(txtNombreBP.Text) Then
+            condicion = String.Format("Nombre_Programa like '%{0}%'", txtNombreBP.Text)
+        End If
+        If Not String.IsNullOrWhiteSpace(txtDescripcionBP.Text) Then
+            condicion += String.Format("Descripcion like '%{0}%'", txtDescripcionBP.Text)
+        End If
+        If Not BWBuscador.IsBusy Then
+            BWBuscador.RunWorkerAsync(PSQL("ID_Programa, Nombre_Programa as Nombre, Descripcion", "programa", condicion))
+        End If
+    End Sub
+
+    Private Sub btnBorrarBP_Click(sender As Object, e As EventArgs) Handles btnBorrarBP.Click
+        If Not IsNothing(dt_BPrograma) Then
+            If dt_BPrograma.Rows.Count > 0 Then
+                Dim Id() As String = ObtenerCheck(dt_BPrograma, dgvBProgramas)
+                If Not Id.Length = 0 Then
+                    Dim formDelete As New frmConfirmarBorrado("Programa", Id, False)
+                    formDelete.ShowDialog(Me)
+                    btnBuscarBP.PerformClick()
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub dgvBProgramas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBProgramas.CellClick
+        ClickCheck(dgvBProgramas)
     End Sub
 End Class

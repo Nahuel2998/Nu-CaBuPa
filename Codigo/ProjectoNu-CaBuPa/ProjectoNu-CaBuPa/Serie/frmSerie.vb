@@ -1,9 +1,9 @@
-﻿' TODO: Indicador de editar (?)
+﻿' TODO: Indicador de editar e ingresado correctamente.
 Public Class frmSerie
     Dim serieID As Integer
-    Dim editando As Boolean = False ' Controla si se esta en modo de edicion o no
+    Dim editando As Boolean = False     ' Controla si se esta en modo de edicion o no
     Dim tmpDatos(1) As String
-    Dim cambio As Boolean = False    ' Controla si han habido cambios desde el ultimo modo de edicion
+    Dim cambio As Boolean = False       ' Controla si han habido cambios desde el ultimo modo de edicion
     Dim dt_Video As New DataTable
     Public Sub New(ByVal DatosI() As String)
         InitializeComponent()
@@ -40,7 +40,7 @@ Public Class frmSerie
         If serieID = -1 Then
             Dim datos() As String = {If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null"), txtNombre.Text}
             PrepararInsert("Serie", datos)
-            vaciar()
+            Vaciar()
         ElseIf editando Then
             If cambio Then
                 Dim datos() As String = {If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null"), txtNombre.Text}
@@ -50,37 +50,39 @@ Public Class frmSerie
 
                 AlternarCambioHandlers()
             End If
+
+            Alternar()
         Else
             tmpDatos(0) = If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "")
             tmpDatos(1) = txtNombre.Text
-        End If
 
-        Alternar()
+            Alternar()
+        End If
     End Sub
-    Sub vaciar()
+    Private Sub Vaciar()
         txtNombre.Text = ""
         dtpFecha.Value = Now.Date
         chbIncluir.Checked = True
     End Sub
 
     Private Sub btnSSalir_Click(sender As Object, e As EventArgs) Handles btnSSalir.Click
-        If Not editando Or serieID <> -1 Then
+        If Not editando Or serieID = -1 Then
             Close()
         Else
             If cambio Then
-                If tmpDatos(0) <> "" Then
-                    dtpFecha.Value = CDate(tmpDatos(0))
-                Else
-                    dtpFecha.Value = Now.Date
+            If tmpDatos(0) <> "" Then
+                dtpFecha.Value = CDate(tmpDatos(0))
+            Else
+                dtpFecha.Value = Now.Date
 
-                    chbIncluir.Checked = False
-                End If
-                txtNombre.Text = tmpDatos(1)
-
-                AlternarCambioHandlers()
+                chbIncluir.Checked = False
             End If
+            txtNombre.Text = tmpDatos(1)
 
-            Alternar()
+            AlternarCambioHandlers()
+        End If
+
+        Alternar()
         End If
     End Sub
 
@@ -106,7 +108,7 @@ Public Class frmSerie
             btnSEditar.Text = "Ingresar"
             btnBorrar.Visible = False
             btnSSalir.Text = "Salir"
-            ActiveForm.Text = "Ingresar Serie"
+            Me.Text = "Ingresar Serie"
 
             txtTapar.Visible = False
         ElseIf editando Then
