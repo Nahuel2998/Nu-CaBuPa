@@ -114,6 +114,12 @@
     <Compile Include="Funcionario\FmFuncionario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Funcion\FmFuncion.Designer.vb">
+      <DependentUpon>FmFuncion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Funcion\FmFuncion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modulos\ModConector.vb" />
     <Compile Include="Modulos\ModLog.vb" />
     <Compile Include="Modulos\ModTablas.vb" />
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Funcionario\FmFuncionario.resx">
       <DependentUpon>FmFuncionario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funcion\FmFuncion.resx">
+      <DependentUpon>FmFuncion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Publicidad\Publicidad.resx">
       <DependentUpon>Publicidad.vb</DependentUpon>
