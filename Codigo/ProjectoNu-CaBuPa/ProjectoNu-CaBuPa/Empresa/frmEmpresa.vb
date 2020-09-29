@@ -1,5 +1,5 @@
 ﻿' TODO: Indicador de editar (?)
-Public Class frmCliente
+Public Class frmEmpresa
     Dim empresaID As Integer
     Dim editando As Boolean = False ' Controla si se esta en modo de edicion o no
     Dim tmpDatos(2) As String
@@ -95,15 +95,15 @@ Public Class frmCliente
             btnSEditar.Text = "Ingresar"
             btnBorrar.Visible = False
             btnSSalir.Text = "Salir"
-            ActiveForm.Text = "Ingresar Cliente"
+            ActiveForm.Text = "Ingresar empresa"
         ElseIf editando Then
             btnSEditar.Text = "Editar"
             btnSSalir.Text = "Salir"
-            ActiveForm.Text = "Ver Cliente"
+            ActiveForm.Text = "Empresa"
         Else
             btnSSalir.Text = "Cancelar"
             btnSEditar.Text = "Guardar"
-            ActiveForm.Text = "Editar Cliente"
+            ActiveForm.Text = "Editar empresa"
         End If
         editando = Not editando
 

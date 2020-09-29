@@ -112,12 +112,6 @@ Public Class frmPrincipal
         Funcionarios()
     End Sub
 
-    Private Sub dtp_ValueChanged(sender As Object, e As EventArgs)
-        If Not BWProgramas.IsBusy Then
-            BWProgramas.RunWorkerAsync()
-        End If
-    End Sub
-
     Public Sub GuardarNotas()
         Dim ruta As String = "..\User\"
         Dim archivo As String = "Notas.txt"
@@ -211,11 +205,6 @@ Public Class frmPrincipal
         BWPublicidades.RunWorkerAsync()
     End Sub
 
-    Private Sub dtpTanda_ValueChanged(sender As Object, e As EventArgs)
-        If Not BWTandas.IsBusy Then
-            BWPublicidades.RunWorkerAsync()
-        End If
-    End Sub
 
     Private Sub dgvTandas_Click(sender As Object, e As EventArgs) Handles dgvTandas.Click
         If Not BWPublicidades.IsBusy Then
@@ -223,13 +212,13 @@ Public Class frmPrincipal
         End If
     End Sub
 
-    Private Sub dtp_ValueChanged_1(sender As Object, e As EventArgs)
+    Private Sub dtp_ValueChanged(sender As Object, e As EventArgs) Handles dtp.ValueChanged
         If Not BWProgramas.IsBusy Then
             BWProgramas.RunWorkerAsync()
         End If
     End Sub
 
-    Private Sub dtpTanda_ValueChanged_1(sender As Object, e As EventArgs) Handles dtpTanda.ValueChanged
+    Private Sub dtpTanda_ValueChanged(sender As Object, e As EventArgs) Handles dtpTanda.ValueChanged
         If Not BWTandas.IsBusy Then
             BWPublicidades.RunWorkerAsync()
         End If
@@ -424,7 +413,7 @@ Public Class frmPrincipal
     Private Sub dgvClientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellDoubleClick
         Dim i() As String = CargarID(dt_Empresa, dgvClientes, {0, 1, 2, 3})
         If (i.Length <> 1) Then
-            Dim formCliente As New frmCliente(i)
+            Dim formCliente As New frmEmpresa(i)
             AddHandler formCliente.FormClosed, AddressOf FormCliente_FormClosed
             formCliente.ShowDialog()
         Else
@@ -433,7 +422,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btncIngresar_Click(sender As Object, e As EventArgs) Handles btncIngresar.Click
-        Dim formCliente As New frmCliente({-1, "", "", ""})
+        Dim formCliente As New frmEmpresa({-1, "", "", ""})
         formCliente.ShowDialog()
     End Sub
 
@@ -480,4 +469,5 @@ Public Class frmPrincipal
     Private Sub dgvBProgramas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBProgramas.CellClick
         ClickCheck(dgvBProgramas)
     End Sub
+
 End Class
