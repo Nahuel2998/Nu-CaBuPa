@@ -5,6 +5,7 @@ Public Class frmCliente
     Dim tmpDatos(2) As String
     Dim cambio As Boolean = False    ' Controla si han habido cambios desde el ultimo modo de edicion
     Dim dt_Publicidad As New DataTable
+    Dim datos() As String
     Public Sub New(ByVal DatosI() As String)
         InitializeComponent()
         'Los siguientes datos se obtienen de la tabla en el elemento padre
@@ -22,17 +23,20 @@ Public Class frmCliente
             Alternar()
         End If
     End Sub
+    Sub CargarDatos()
+        datos = {txtNombre.Text, txtTelefono.Text, If(ValidarEmail(txtMail.Text), txtMail.Text, "")}
+    End Sub
 
     Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnSEditar.Click
         '' editando = True   -> Se guardaran los cambios
         '' editando = False  -> Se le permitira al usuario escribir en los campos
         If empresaID = -1 Then
-            Dim datos() As String = {txtNombre.Text, txtTelefono.Text, txtMail.Text}
+            CargarDatos()
             PrepararInsert("Empresa", datos)
             vaciar()
         ElseIf editando Then
             If cambio Then
-                Dim datos() As String = {txtNombre.Text, txtTelefono.Text, txtMail.Text}
+                CargarDatos()
                 If Not CompararValores(VaciarNull(datos), tmpDatos) Then
                     PrepararUpdate("Empresa", datos, empresaID)
                 End If
@@ -70,7 +74,8 @@ Public Class frmCliente
 
     Private Sub Serie_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If cambio And empresaID <> -1 Then
-            Dim datos() As String = {txtNombre.Text, txtTelefono.Text, txtMail.Text}
+            CargarDatos()
+
             If Not CompararValores(VaciarNull(datos), tmpDatos) Then
                 Dim g As New frmGuardarEdicion("Empresa", datos, empresaID)
                 g.ShowDialog()
