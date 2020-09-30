@@ -44,7 +44,6 @@ Partial Class frmSerie
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.RichTextBox()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -68,7 +67,7 @@ Partial Class frmSerie
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.TableLayoutPanel1.ForeColor = System.Drawing.Color.White
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(16, 6)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.7975!))
@@ -103,7 +102,7 @@ Partial Class frmSerie
         Me.btnSSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnSSalir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnSSalir.Location = New System.Drawing.Point(720, 4)
-        Me.btnSSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSSalir.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnSSalir.Name = "btnSSalir"
         Me.btnSSalir.Size = New System.Drawing.Size(151, 70)
@@ -117,7 +116,7 @@ Partial Class frmSerie
         Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrar.Location = New System.Drawing.Point(335, 4)
-        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBorrar.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(248, 70)
@@ -130,7 +129,7 @@ Partial Class frmSerie
         Me.btnSEditar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnSEditar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnSEditar.Location = New System.Drawing.Point(4, 4)
-        Me.btnSEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSEditar.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnSEditar.Name = "btnSEditar"
         Me.btnSEditar.Size = New System.Drawing.Size(195, 70)
@@ -147,10 +146,10 @@ Partial Class frmSerie
         Me.GroupBox1.Controls.Add(Me.dgvVSM)
         Me.GroupBox1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.GroupBox1.Location = New System.Drawing.Point(4, 120)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.MinimumSize = New System.Drawing.Size(133, 49)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(873, 229)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
@@ -233,10 +232,10 @@ Partial Class frmSerie
         Me.GroupBox2.Controls.Add(Me.TableLayoutPanel2)
         Me.GroupBox2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.GroupBox2.Location = New System.Drawing.Point(4, 4)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.MinimumSize = New System.Drawing.Size(133, 37)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(873, 108)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
@@ -255,7 +254,7 @@ Partial Class frmSerie
         Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.txtNombre, 1, 0)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(9, 28)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -280,7 +279,7 @@ Partial Class frmSerie
         Me.txtTapar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtTapar.ForeColor = System.Drawing.Color.White
         Me.txtTapar.Location = New System.Drawing.Point(1, 0)
-        Me.txtTapar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTapar.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTapar.Multiline = False
         Me.txtTapar.Name = "txtTapar"
         Me.txtTapar.ReadOnly = True
@@ -294,7 +293,7 @@ Partial Class frmSerie
         Me.chbIncluir.AutoSize = True
         Me.chbIncluir.Enabled = False
         Me.chbIncluir.Location = New System.Drawing.Point(676, 5)
-        Me.chbIncluir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chbIncluir.Margin = New System.Windows.Forms.Padding(4)
         Me.chbIncluir.Name = "chbIncluir"
         Me.chbIncluir.Size = New System.Drawing.Size(78, 22)
         Me.chbIncluir.TabIndex = 4
@@ -307,7 +306,7 @@ Partial Class frmSerie
         Me.dtpFecha.Enabled = False
         Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(667, 27)
         Me.dtpFecha.TabIndex = 3
@@ -344,7 +343,7 @@ Partial Class frmSerie
         Me.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtNombre.ForeColor = System.Drawing.Color.White
         Me.txtNombre.Location = New System.Drawing.Point(89, 4)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.MaxLength = 48
         Me.txtNombre.Multiline = False
         Me.txtNombre.Name = "txtNombre"
@@ -362,7 +361,7 @@ Partial Class frmSerie
         Me.ClientSize = New System.Drawing.Size(911, 439)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(929, 486)
         Me.MinimizeBox = False
@@ -394,7 +393,6 @@ Partial Class frmSerie
     Friend WithEvents Label2 As Label
     Friend WithEvents txtNombre As RichTextBox
     Friend WithEvents dtpFecha As ColorDateTimePicker
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents txtTapar As RichTextBox
     Friend WithEvents chbIncluir As CheckBox
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
