@@ -108,25 +108,25 @@
     <Compile Include="Form_Personalizado\frmGuardarEdicion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Funcionario\FmFuncionario.Designer.vb">
-      <DependentUpon>FmFuncionario.vb</DependentUpon>
+    <Compile Include="Funcionario\frmFuncionario.Designer.vb">
+      <DependentUpon>frmFuncionario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Funcionario\FmFuncionario.vb">
+    <Compile Include="Funcionario\frmFuncionario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Funcion\FmFuncion.Designer.vb">
-      <DependentUpon>FmFuncion.vb</DependentUpon>
+    <Compile Include="Funcion\frmFuncion.Designer.vb">
+      <DependentUpon>frmFuncion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Funcion\FmFuncion.vb">
+    <Compile Include="Funcion\frmFuncion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\ModConector.vb" />
     <Compile Include="Modulos\ModLog.vb" />
     <Compile Include="Modulos\ModTablas.vb" />
-    <Compile Include="Publicidad\Publicidad.Designer.vb">
-      <DependentUpon>Publicidad.vb</DependentUpon>
+    <Compile Include="Publicidad\frmPublicidad.Designer.vb">
+      <DependentUpon>frmPublicidad.vb</DependentUpon>
     </Compile>
-    <Compile Include="Publicidad\Publicidad.vb">
+    <Compile Include="Publicidad\frmPublicidad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Serie\frmAsignarVideos.Designer.vb">
@@ -223,14 +223,14 @@
     <EmbeddedResource Include="Form_Personalizado\frmGuardarEdicion.resx">
       <DependentUpon>frmGuardarEdicion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Funcionario\FmFuncionario.resx">
-      <DependentUpon>FmFuncionario.vb</DependentUpon>
+    <EmbeddedResource Include="Funcionario\frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Funcion\FmFuncion.resx">
-      <DependentUpon>FmFuncion.vb</DependentUpon>
+    <EmbeddedResource Include="Funcion\frmFuncion.resx">
+      <DependentUpon>frmFuncion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Publicidad\Publicidad.resx">
-      <DependentUpon>Publicidad.vb</DependentUpon>
+    <EmbeddedResource Include="Publicidad\frmPublicidad.resx">
+      <DependentUpon>frmPublicidad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Serie\frmAsignarVideos.resx">
       <DependentUpon>frmAsignarVideos.vb</DependentUpon>

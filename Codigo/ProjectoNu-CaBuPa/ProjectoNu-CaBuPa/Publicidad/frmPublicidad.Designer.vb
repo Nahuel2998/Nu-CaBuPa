@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Publicidad
+Partial Class frmPublicidad
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -27,7 +27,7 @@ Partial Class Publicidad
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbNotas = New System.Windows.Forms.GroupBox()
-        Me.TBNotas = New System.Windows.Forms.RichTextBox()
+        Me.txtTema = New System.Windows.Forms.RichTextBox()
         Me.dgvPPublicidades = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -41,29 +41,30 @@ Partial Class Publicidad
         'gbNotas
         '
         Me.gbNotas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.gbNotas.Controls.Add(Me.TBNotas)
+        Me.gbNotas.Controls.Add(Me.txtTema)
         Me.gbNotas.Location = New System.Drawing.Point(12, 12)
         Me.gbNotas.Name = "gbNotas"
         Me.gbNotas.Size = New System.Drawing.Size(388, 155)
         Me.gbNotas.TabIndex = 2
         Me.gbNotas.TabStop = False
-        Me.gbNotas.Text = "Contenido"
+        Me.gbNotas.Text = "Tema"
         '
-        'TBNotas
+        'txtTema
         '
-        Me.TBNotas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtTema.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TBNotas.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TBNotas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TBNotas.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.TBNotas.ForeColor = System.Drawing.Color.White
-        Me.TBNotas.Location = New System.Drawing.Point(7, 22)
-        Me.TBNotas.Name = "TBNotas"
-        Me.TBNotas.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.TBNotas.Size = New System.Drawing.Size(372, 123)
-        Me.TBNotas.TabIndex = 1
-        Me.TBNotas.Text = ""
+        Me.txtTema.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtTema.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtTema.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtTema.ForeColor = System.Drawing.Color.White
+        Me.txtTema.Location = New System.Drawing.Point(7, 22)
+        Me.txtTema.MaxLength = 64
+        Me.txtTema.Name = "txtTema"
+        Me.txtTema.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
+        Me.txtTema.Size = New System.Drawing.Size(372, 127)
+        Me.txtTema.TabIndex = 1
+        Me.txtTema.Text = ""
         '
         'dgvPPublicidades
         '
@@ -155,7 +156,7 @@ Partial Class Publicidad
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = True
         '
-        'Publicidad
+        'frmPublicidad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -167,7 +168,7 @@ Partial Class Publicidad
         Me.Controls.Add(Me.GroupBox2)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Name = "Publicidad"
+        Me.Name = "frmPublicidad"
         Me.Text = "Publicidad"
         Me.gbNotas.ResumeLayout(False)
         CType(Me.dgvPPublicidades, System.ComponentModel.ISupportInitialize).EndInit()
@@ -176,7 +177,7 @@ Partial Class Publicidad
 
     End Sub
     Friend WithEvents gbNotas As GroupBox
-    Friend WithEvents TBNotas As RichTextBox
+    Friend WithEvents txtTema As RichTextBox
     Friend WithEvents dgvPPublicidades As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox2 As GroupBox

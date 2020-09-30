@@ -27,6 +27,7 @@ Partial Class frmVideo
         Me.txtContenido = New System.Windows.Forms.TextBox()
         Me.VFecha = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnBorrar = New System.Windows.Forms.Button()
         Me.chbTieneFecha = New System.Windows.Forms.CheckBox()
         Me.txtTapar = New System.Windows.Forms.TextBox()
         Me.cbSerie = New System.Windows.Forms.ComboBox()
@@ -35,7 +36,6 @@ Partial Class frmVideo
         Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.VSerie = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.btnBorrar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -56,6 +56,7 @@ Partial Class frmVideo
         Me.txtNombre.ForeColor = System.Drawing.Color.White
         Me.txtNombre.Location = New System.Drawing.Point(166, 30)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtNombre.MaxLength = 48
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
         Me.txtNombre.Size = New System.Drawing.Size(138, 27)
@@ -65,12 +66,13 @@ Partial Class frmVideo
         '
         Me.txtContenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtContenido.ForeColor = System.Drawing.Color.White
-        Me.txtContenido.Location = New System.Drawing.Point(8, 24)
+        Me.txtContenido.Location = New System.Drawing.Point(8, 26)
         Me.txtContenido.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtContenido.MaxLength = 128
         Me.txtContenido.Multiline = True
         Me.txtContenido.Name = "txtContenido"
         Me.txtContenido.ReadOnly = True
-        Me.txtContenido.Size = New System.Drawing.Size(365, 147)
+        Me.txtContenido.Size = New System.Drawing.Size(365, 150)
         Me.txtContenido.TabIndex = 3
         '
         'VFecha
@@ -108,6 +110,16 @@ Partial Class frmVideo
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos"
+        '
+        'btnBorrar
+        '
+        Me.btnBorrar.Location = New System.Drawing.Point(194, 328)
+        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(94, 26)
+        Me.btnBorrar.TabIndex = 10
+        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.UseVisualStyleBackColor = True
         '
         'chbTieneFecha
         '
@@ -193,20 +205,10 @@ Partial Class frmVideo
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox3.Size = New System.Drawing.Size(381, 184)
+        Me.GroupBox3.Size = New System.Drawing.Size(381, 182)
         Me.GroupBox3.TabIndex = 8
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Contenido"
-        '
-        'btnBorrar
-        '
-        Me.btnBorrar.Location = New System.Drawing.Point(194, 328)
-        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(94, 26)
-        Me.btnBorrar.TabIndex = 10
-        Me.btnBorrar.Text = "Borrar"
-        Me.btnBorrar.UseVisualStyleBackColor = True
         '
         'frmVideo
         '

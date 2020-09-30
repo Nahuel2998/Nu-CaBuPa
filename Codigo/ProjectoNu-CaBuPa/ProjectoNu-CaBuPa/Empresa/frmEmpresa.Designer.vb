@@ -299,6 +299,7 @@ Partial Class frmEmpresa
         Me.txtNombre.ForeColor = System.Drawing.Color.White
         Me.txtNombre.Location = New System.Drawing.Point(94, 4)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombre.MaxLength = 64
         Me.txtNombre.Multiline = False
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
@@ -313,6 +314,7 @@ Partial Class frmEmpresa
         Me.txtTelefono.ForeColor = System.Drawing.Color.White
         Me.txtTelefono.Location = New System.Drawing.Point(94, 42)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTelefono.MaxLength = 16
         Me.txtTelefono.Multiline = False
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.ReadOnly = True
@@ -327,6 +329,7 @@ Partial Class frmEmpresa
         Me.txtMail.ForeColor = System.Drawing.Color.White
         Me.txtMail.Location = New System.Drawing.Point(94, 80)
         Me.txtMail.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMail.MaxLength = 64
         Me.txtMail.Multiline = False
         Me.txtMail.Name = "txtMail"
         Me.txtMail.ReadOnly = True
@@ -334,7 +337,7 @@ Partial Class frmEmpresa
         Me.txtMail.TabIndex = 28876929
         Me.txtMail.Text = ""
         '
-        'frmCliente
+        'frmEmpresa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -348,7 +351,7 @@ Partial Class frmEmpresa
         Me.MaximumSize = New System.Drawing.Size(929, 488)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(929, 488)
-        Me.Name = "frmCliente"
+        Me.Name = "frmEmpresa"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Empresa"
         Me.TableLayoutPanel1.ResumeLayout(False)

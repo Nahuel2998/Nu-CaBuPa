@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FmFuncionario
+Partial Class frmFuncionario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -61,7 +61,7 @@ Partial Class FmFuncionario
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 2)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(1, -1)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.75221!))
@@ -84,9 +84,9 @@ Partial Class FmFuncionario
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(4, 4)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(540, 227)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
@@ -98,7 +98,7 @@ Partial Class FmFuncionario
         Me.txtfuncion.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.txtfuncion.ForeColor = System.Drawing.Color.White
         Me.txtfuncion.Location = New System.Drawing.Point(119, 153)
-        Me.txtfuncion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtfuncion.Margin = New System.Windows.Forms.Padding(4)
         Me.txtfuncion.Multiline = True
         Me.txtfuncion.Name = "txtfuncion"
         Me.txtfuncion.Size = New System.Drawing.Size(403, 64)
@@ -110,7 +110,7 @@ Partial Class FmFuncionario
         Me.txttelefonofun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.txttelefonofun.ForeColor = System.Drawing.Color.White
         Me.txttelefonofun.Location = New System.Drawing.Point(119, 70)
-        Me.txttelefonofun.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txttelefonofun.Margin = New System.Windows.Forms.Padding(4)
         Me.txttelefonofun.Name = "txttelefonofun"
         Me.txttelefonofun.Size = New System.Drawing.Size(403, 27)
         Me.txttelefonofun.TabIndex = 6
@@ -121,7 +121,7 @@ Partial Class FmFuncionario
         Me.txtemailfun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.txtemailfun.ForeColor = System.Drawing.Color.White
         Me.txtemailfun.Location = New System.Drawing.Point(119, 114)
-        Me.txtemailfun.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtemailfun.Margin = New System.Windows.Forms.Padding(4)
         Me.txtemailfun.Name = "txtemailfun"
         Me.txtemailfun.Size = New System.Drawing.Size(403, 27)
         Me.txtemailfun.TabIndex = 5
@@ -132,7 +132,7 @@ Partial Class FmFuncionario
         Me.txtnombrefun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.txtnombrefun.ForeColor = System.Drawing.Color.White
         Me.txtnombrefun.Location = New System.Drawing.Point(119, 31)
-        Me.txtnombrefun.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtnombrefun.Margin = New System.Windows.Forms.Padding(4)
         Me.txtnombrefun.Name = "txtnombrefun"
         Me.txtnombrefun.Size = New System.Drawing.Size(403, 27)
         Me.txtnombrefun.TabIndex = 4
@@ -192,9 +192,9 @@ Partial Class FmFuncionario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.Controls.Add(Me.dgvFuncionarios)
         Me.GroupBox2.Location = New System.Drawing.Point(4, 239)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(540, 178)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
@@ -213,7 +213,7 @@ Partial Class FmFuncionario
         Me.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nombre, Me.Telefono, Me.contacto, Me.funcion})
         Me.dgvFuncionarios.Location = New System.Drawing.Point(8, 11)
-        Me.dgvFuncionarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvFuncionarios.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvFuncionarios.MultiSelect = False
         Me.dgvFuncionarios.Name = "dgvFuncionarios"
         Me.dgvFuncionarios.ReadOnly = True
@@ -266,7 +266,7 @@ Partial Class FmFuncionario
         Me.TableLayoutPanel2.Controls.Add(Me.btnbuscarfun, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btnborrarfun, 3, 0)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(4, 425)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -282,7 +282,7 @@ Partial Class FmFuncionario
         Me.btnlimpiarfun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnlimpiarfun.ForeColor = System.Drawing.Color.White
         Me.btnlimpiarfun.Location = New System.Drawing.Point(4, 4)
-        Me.btnlimpiarfun.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnlimpiarfun.Margin = New System.Windows.Forms.Padding(4)
         Me.btnlimpiarfun.Name = "btnlimpiarfun"
         Me.btnlimpiarfun.Size = New System.Drawing.Size(127, 48)
         Me.btnlimpiarfun.TabIndex = 0
@@ -298,7 +298,7 @@ Partial Class FmFuncionario
         Me.btningresarfun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btningresarfun.ForeColor = System.Drawing.Color.White
         Me.btningresarfun.Location = New System.Drawing.Point(139, 4)
-        Me.btningresarfun.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btningresarfun.Margin = New System.Windows.Forms.Padding(4)
         Me.btningresarfun.Name = "btningresarfun"
         Me.btningresarfun.Size = New System.Drawing.Size(127, 48)
         Me.btningresarfun.TabIndex = 1
@@ -314,7 +314,7 @@ Partial Class FmFuncionario
         Me.btnbuscarfun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnbuscarfun.ForeColor = System.Drawing.Color.White
         Me.btnbuscarfun.Location = New System.Drawing.Point(274, 4)
-        Me.btnbuscarfun.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnbuscarfun.Margin = New System.Windows.Forms.Padding(4)
         Me.btnbuscarfun.Name = "btnbuscarfun"
         Me.btnbuscarfun.Size = New System.Drawing.Size(127, 48)
         Me.btnbuscarfun.TabIndex = 2
@@ -330,7 +330,7 @@ Partial Class FmFuncionario
         Me.btnborrarfun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnborrarfun.ForeColor = System.Drawing.Color.White
         Me.btnborrarfun.Location = New System.Drawing.Point(409, 4)
-        Me.btnborrarfun.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnborrarfun.Margin = New System.Windows.Forms.Padding(4)
         Me.btnborrarfun.Name = "btnborrarfun"
         Me.btnborrarfun.Size = New System.Drawing.Size(127, 48)
         Me.btnborrarfun.TabIndex = 3
@@ -344,7 +344,7 @@ Partial Class FmFuncionario
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(551, 482)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FmFuncionario"
         Me.Text = "Funcionario"
         Me.TableLayoutPanel1.ResumeLayout(False)

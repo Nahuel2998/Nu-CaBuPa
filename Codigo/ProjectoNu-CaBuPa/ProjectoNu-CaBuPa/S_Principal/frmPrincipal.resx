@@ -2361,6 +2361,9 @@
   <data name="txtBSnombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
+  <data name="txtBSnombre.MaxLength" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
   <data name="txtBSnombre.Multiline" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2784,6 +2787,9 @@
   <data name="txtVnombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
+  <data name="txtVnombre.MaxLength" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
   <data name="txtVnombre.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 27</value>
   </data>
@@ -2993,6 +2999,9 @@
   </data>
   <data name="txtVcontenido.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVcontenido.MaxLength" type="System.Int32, mscorlib">
+    <value>128</value>
   </data>
   <data name="txtVcontenido.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3918,6 +3927,9 @@
   <data name="txtCNombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
+  <data name="txtCNombre.MaxLength" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
   <data name="txtCNombre.Multiline" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -3978,6 +3990,9 @@
   <data name="txtCTel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
+  <data name="txtCTel.MaxLength" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
   <data name="txtCTel.Multiline" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -4037,6 +4052,9 @@
   </data>
   <data name="txtCMail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtCMail.MaxLength" type="System.Int32, mscorlib">
+    <value>64</value>
   </data>
   <data name="txtCMail.Multiline" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -6868,9 +6886,6 @@
         DjgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>
   </data>
@@ -6970,6 +6985,24 @@
   <data name="&gt;&gt;DataGridViewCheckBoxColumn2.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>DataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn5.Name" xml:space="preserve">
+    <value>DataGridViewTextBoxColumn5</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SEliminar.Name" xml:space="preserve">
+    <value>SEliminar</value>
+  </data>
+  <data name="&gt;&gt;SEliminar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;VFecha.Name" xml:space="preserve">
     <value>VFecha</value>
   </data>
@@ -6992,24 +7025,6 @@
     <value>VEliminar</value>
   </data>
   <data name="&gt;&gt;VEliminar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn4.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn4</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn5.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn5</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SEliminar.Name" xml:space="preserve">
-    <value>SEliminar</value>
-  </data>
-  <data name="&gt;&gt;SEliminar.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;DataGridViewTextBoxColumn7.Name" xml:space="preserve">

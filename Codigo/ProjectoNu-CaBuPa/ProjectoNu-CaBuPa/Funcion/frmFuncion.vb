@@ -1,4 +1,4 @@
-﻿Public Class FmFuncion
+﻿Public Class frmFuncion
     Private Sub FmFuncion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
