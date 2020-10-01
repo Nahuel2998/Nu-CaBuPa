@@ -35,9 +35,15 @@ Partial Class frmPrograma
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvPPublicidades = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBFuncionario = New System.Windows.Forms.GroupBox()
         Me.dgvFuncionarios = New System.Windows.Forms.DataGridView()
+        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FTelefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FMail = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFuncion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFechaI = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFechaF = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GBDEscripcion = New System.Windows.Forms.GroupBox()
         Me.TBDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -45,8 +51,6 @@ Partial Class frmPrograma
         Me.btnSSalir = New System.Windows.Forms.Button()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnSEditar = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dgvVSM = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -56,39 +60,57 @@ Partial Class frmPrograma
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.RichTextBox()
-        Me.GBPubli = New System.Windows.Forms.GroupBox()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ColorDateTimePicker1 = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dgvVSM = New System.Windows.Forms.DataGridView()
         Me.PFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PFechaPago = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProgramaPrecio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GBPubli = New System.Windows.Forms.GroupBox()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tbDatos = New System.Windows.Forms.TabPage()
         Me.tbFuncionarios = New System.Windows.Forms.TabPage()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnBorrarF = New System.Windows.Forms.Button()
+        Me.btnAnadirF = New System.Windows.Forms.Button()
         Me.tbBublicidades = New System.Windows.Forms.TabPage()
         Me.tbAlquiler = New System.Windows.Forms.TabPage()
         Me.tbFechas = New System.Windows.Forms.TabPage()
-        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FTelefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FMail = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.cbPagados = New System.Windows.Forms.CheckBox()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.dgvPPublicidades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBFuncionario.SuspendLayout()
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBDEscripcion.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.dgvVSM, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.dgvVSM, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBPubli.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.tbDatos.SuspendLayout()
         Me.tbFuncionarios.SuspendLayout()
+        Me.TableLayoutPanel4.SuspendLayout()
         Me.tbBublicidades.SuspendLayout()
         Me.tbAlquiler.SuspendLayout()
+        Me.tbFechas.SuspendLayout()
+        Me.TableLayoutPanel5.SuspendLayout()
+        Me.TableLayoutPanel6.SuspendLayout()
+        Me.TableLayoutPanel7.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvPPublicidades
@@ -118,7 +140,7 @@ Partial Class frmPrograma
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvPPublicidades.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvPPublicidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPPublicidades.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3})
+        Me.dgvPPublicidades.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.PEliminar})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -141,29 +163,21 @@ Partial Class frmPrograma
         Me.dgvPPublicidades.RowTemplate.Height = 28
         Me.dgvPPublicidades.RowTemplate.ReadOnly = True
         Me.dgvPPublicidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPPublicidades.Size = New System.Drawing.Size(616, 254)
+        Me.dgvPPublicidades.Size = New System.Drawing.Size(616, 195)
         Me.dgvPPublicidades.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Descripcion"
-        Me.DataGridViewTextBoxColumn3.MinimumWidth = 8
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'GBFuncionario
         '
         Me.GBFuncionario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GBFuncionario.AutoSize = True
         Me.GBFuncionario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.GBFuncionario.Controls.Add(Me.dgvFuncionarios)
         Me.GBFuncionario.Location = New System.Drawing.Point(5, 5)
         Me.GBFuncionario.Margin = New System.Windows.Forms.Padding(2)
         Me.GBFuncionario.Name = "GBFuncionario"
         Me.GBFuncionario.Padding = New System.Windows.Forms.Padding(2)
-        Me.GBFuncionario.Size = New System.Drawing.Size(627, 232)
+        Me.GBFuncionario.Size = New System.Drawing.Size(637, 252)
         Me.GBFuncionario.TabIndex = 1
         Me.GBFuncionario.TabStop = False
         Me.GBFuncionario.Text = "Funcionarios"
@@ -195,7 +209,7 @@ Partial Class frmPrograma
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvFuncionarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FNombre, Me.FTelefono, Me.FMail, Me.FEliminar})
+        Me.dgvFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FNombre, Me.FTelefono, Me.FMail, Me.FFuncion, Me.FFechaI, Me.FFechaF, Me.FEliminar})
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -218,8 +232,57 @@ Partial Class frmPrograma
         Me.dgvFuncionarios.RowTemplate.Height = 28
         Me.dgvFuncionarios.RowTemplate.ReadOnly = True
         Me.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvFuncionarios.Size = New System.Drawing.Size(611, 206)
+        Me.dgvFuncionarios.Size = New System.Drawing.Size(621, 226)
         Me.dgvFuncionarios.TabIndex = 1
+        '
+        'FNombre
+        '
+        Me.FNombre.HeaderText = "Nombre"
+        Me.FNombre.MinimumWidth = 8
+        Me.FNombre.Name = "FNombre"
+        Me.FNombre.ReadOnly = True
+        '
+        'FTelefono
+        '
+        Me.FTelefono.HeaderText = "Telefono"
+        Me.FTelefono.MinimumWidth = 8
+        Me.FTelefono.Name = "FTelefono"
+        Me.FTelefono.ReadOnly = True
+        '
+        'FMail
+        '
+        Me.FMail.HeaderText = "Mail"
+        Me.FMail.MinimumWidth = 6
+        Me.FMail.Name = "FMail"
+        Me.FMail.ReadOnly = True
+        '
+        'FFuncion
+        '
+        Me.FFuncion.HeaderText = "Función"
+        Me.FFuncion.MinimumWidth = 6
+        Me.FFuncion.Name = "FFuncion"
+        Me.FFuncion.ReadOnly = True
+        '
+        'FFechaI
+        '
+        Me.FFechaI.HeaderText = "Inicio de la función"
+        Me.FFechaI.MinimumWidth = 6
+        Me.FFechaI.Name = "FFechaI"
+        Me.FFechaI.ReadOnly = True
+        '
+        'FFechaF
+        '
+        Me.FFechaF.HeaderText = "Fin de la función"
+        Me.FFechaF.MinimumWidth = 6
+        Me.FFechaF.Name = "FFechaF"
+        Me.FFechaF.ReadOnly = True
+        '
+        'FEliminar
+        '
+        Me.FEliminar.HeaderText = "Eliminar"
+        Me.FEliminar.MinimumWidth = 6
+        Me.FEliminar.Name = "FEliminar"
+        Me.FEliminar.ReadOnly = True
         '
         'GBDEscripcion
         '
@@ -228,11 +291,11 @@ Partial Class frmPrograma
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GBDEscripcion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.GBDEscripcion.Controls.Add(Me.TBDescripcion)
-        Me.GBDEscripcion.Location = New System.Drawing.Point(2, 148)
+        Me.GBDEscripcion.Location = New System.Drawing.Point(2, 104)
         Me.GBDEscripcion.Margin = New System.Windows.Forms.Padding(2)
         Me.GBDEscripcion.Name = "GBDEscripcion"
         Me.GBDEscripcion.Padding = New System.Windows.Forms.Padding(2)
-        Me.GBDEscripcion.Size = New System.Drawing.Size(626, 164)
+        Me.GBDEscripcion.Size = New System.Drawing.Size(626, 113)
         Me.GBDEscripcion.TabIndex = 0
         Me.GBDEscripcion.TabStop = False
         Me.GBDEscripcion.Text = "Descripcion"
@@ -250,7 +313,7 @@ Partial Class frmPrograma
         Me.TBDescripcion.Margin = New System.Windows.Forms.Padding(2)
         Me.TBDescripcion.Name = "TBDescripcion"
         Me.TBDescripcion.ReadOnly = True
-        Me.TBDescripcion.Size = New System.Drawing.Size(610, 133)
+        Me.TBDescripcion.Size = New System.Drawing.Size(610, 82)
         Me.TBDescripcion.TabIndex = 0
         Me.TBDescripcion.Text = ""
         '
@@ -274,7 +337,7 @@ Partial Class frmPrograma
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.51899!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.48101!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(630, 397)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(630, 302)
         Me.TableLayoutPanel1.TabIndex = 3
         '
         'TableLayoutPanel3
@@ -288,7 +351,7 @@ Partial Class frmPrograma
         Me.TableLayoutPanel3.Controls.Add(Me.btnSSalir, 4, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnBorrar, 2, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnSEditar, 0, 0)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 316)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 221)
         Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
@@ -338,12 +401,142 @@ Partial Class frmPrograma
         Me.btnSEditar.Text = "Editar"
         Me.btnSEditar.UseVisualStyleBackColor = True
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.TableLayoutPanel2)
+        Me.GroupBox2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.GroupBox2.Location = New System.Drawing.Point(4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.MinimumSize = New System.Drawing.Size(133, 37)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Size = New System.Drawing.Size(622, 94)
+        Me.GroupBox2.TabIndex = 3
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Informacion"
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Panel1, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtNombre, 1, 0)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(9, 28)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(605, 56)
+        Me.TableLayoutPanel2.TabIndex = 0
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.txtTapar)
+        Me.Panel1.Controls.Add(Me.chbIncluir)
+        Me.Panel1.Controls.Add(Me.dtpFecha)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(187, 30)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(415, 24)
+        Me.Panel1.TabIndex = 28876925
+        '
+        'txtTapar
+        '
+        Me.txtTapar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtTapar.ForeColor = System.Drawing.Color.White
+        Me.txtTapar.Location = New System.Drawing.Point(1, 0)
+        Me.txtTapar.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTapar.Multiline = False
+        Me.txtTapar.Name = "txtTapar"
+        Me.txtTapar.ReadOnly = True
+        Me.txtTapar.Size = New System.Drawing.Size(763, 31)
+        Me.txtTapar.TabIndex = 5
+        Me.txtTapar.Text = "No posee fecha."
+        Me.txtTapar.Visible = False
+        '
+        'chbIncluir
+        '
+        Me.chbIncluir.AutoSize = True
+        Me.chbIncluir.Enabled = False
+        Me.chbIncluir.Location = New System.Drawing.Point(676, 5)
+        Me.chbIncluir.Margin = New System.Windows.Forms.Padding(4)
+        Me.chbIncluir.Name = "chbIncluir"
+        Me.chbIncluir.Size = New System.Drawing.Size(78, 22)
+        Me.chbIncluir.TabIndex = 4
+        Me.chbIncluir.Text = "Incluir"
+        Me.chbIncluir.UseVisualStyleBackColor = True
+        '
+        'dtpFecha
+        '
+        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFecha.Enabled = False
+        Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(667, 27)
+        Me.dtpFecha.TabIndex = 3
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Location = New System.Drawing.Point(4, 0)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.MinimumSize = New System.Drawing.Size(81, 15)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(176, 28)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Nombre:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Location = New System.Drawing.Point(4, 28)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.MinimumSize = New System.Drawing.Size(81, 15)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(176, 28)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Fecha de finalización:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtNombre
+        '
+        Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtNombre.ForeColor = System.Drawing.Color.White
+        Me.txtNombre.Location = New System.Drawing.Point(188, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombre.MaxLength = 48
+        Me.txtNombre.Multiline = False
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.ReadOnly = True
+        Me.txtNombre.Size = New System.Drawing.Size(413, 20)
+        Me.txtNombre.TabIndex = 2
+        Me.txtNombre.Text = ""
+        '
         'GroupBox1
         '
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.GroupBox1.Controls.Add(Me.TableLayoutPanel6)
+        Me.GroupBox1.Controls.Add(Me.cbPagados)
         Me.GroupBox1.Controls.Add(Me.ColorDateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.dgvVSM)
         Me.GroupBox1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
@@ -352,10 +545,23 @@ Partial Class frmPrograma
         Me.GroupBox1.MinimumSize = New System.Drawing.Size(133, 49)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(639, 338)
+        Me.GroupBox1.Size = New System.Drawing.Size(639, 310)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Alquiler"
+        '
+        'ColorDateTimePicker1
+        '
+        Me.ColorDateTimePicker1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ColorDateTimePicker1.CustomFormat = "yyyy"
+        Me.ColorDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.ColorDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ColorDateTimePicker1.Location = New System.Drawing.Point(505, 26)
+        Me.ColorDateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
+        Me.ColorDateTimePicker1.Size = New System.Drawing.Size(122, 27)
+        Me.ColorDateTimePicker1.TabIndex = 28876924
         '
         'dgvVSM
         '
@@ -404,177 +610,8 @@ Partial Class frmPrograma
         Me.dgvVSM.RowTemplate.Height = 28
         Me.dgvVSM.RowTemplate.ReadOnly = True
         Me.dgvVSM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvVSM.Size = New System.Drawing.Size(614, 170)
+        Me.dgvVSM.Size = New System.Drawing.Size(614, 193)
         Me.dgvVSM.TabIndex = 28876923
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Controls.Add(Me.TableLayoutPanel2)
-        Me.GroupBox2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.GroupBox2.Location = New System.Drawing.Point(4, 4)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.MinimumSize = New System.Drawing.Size(133, 37)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(622, 138)
-        Me.GroupBox2.TabIndex = 3
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Informacion"
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Panel1, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtNombre, 1, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(9, 28)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(605, 100)
-        Me.TableLayoutPanel2.TabIndex = 0
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.txtTapar)
-        Me.Panel1.Controls.Add(Me.chbIncluir)
-        Me.Panel1.Controls.Add(Me.dtpFecha)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(187, 52)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(415, 46)
-        Me.Panel1.TabIndex = 28876925
-        '
-        'txtTapar
-        '
-        Me.txtTapar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtTapar.ForeColor = System.Drawing.Color.White
-        Me.txtTapar.Location = New System.Drawing.Point(1, 0)
-        Me.txtTapar.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtTapar.Multiline = False
-        Me.txtTapar.Name = "txtTapar"
-        Me.txtTapar.ReadOnly = True
-        Me.txtTapar.Size = New System.Drawing.Size(763, 31)
-        Me.txtTapar.TabIndex = 5
-        Me.txtTapar.Text = "No posee fecha."
-        Me.txtTapar.Visible = False
-        '
-        'chbIncluir
-        '
-        Me.chbIncluir.AutoSize = True
-        Me.chbIncluir.Enabled = False
-        Me.chbIncluir.Location = New System.Drawing.Point(676, 5)
-        Me.chbIncluir.Margin = New System.Windows.Forms.Padding(4)
-        Me.chbIncluir.Name = "chbIncluir"
-        Me.chbIncluir.Size = New System.Drawing.Size(78, 22)
-        Me.chbIncluir.TabIndex = 4
-        Me.chbIncluir.Text = "Incluir"
-        Me.chbIncluir.UseVisualStyleBackColor = True
-        '
-        'dtpFecha
-        '
-        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
-        Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(667, 27)
-        Me.dtpFecha.TabIndex = 3
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Location = New System.Drawing.Point(4, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.MinimumSize = New System.Drawing.Size(81, 15)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(176, 50)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Nombre:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(4, 50)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.MinimumSize = New System.Drawing.Size(81, 15)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(176, 50)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Fecha de finalización:"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'txtNombre
-        '
-        Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtNombre.ForeColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(188, 4)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtNombre.MaxLength = 48
-        Me.txtNombre.Multiline = False
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(413, 42)
-        Me.txtNombre.TabIndex = 2
-        Me.txtNombre.Text = ""
-        '
-        'GBPubli
-        '
-        Me.GBPubli.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GBPubli.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.GBPubli.Controls.Add(Me.dtp)
-        Me.GBPubli.Controls.Add(Me.dgvPPublicidades)
-        Me.GBPubli.Location = New System.Drawing.Point(2, 2)
-        Me.GBPubli.Margin = New System.Windows.Forms.Padding(2)
-        Me.GBPubli.Name = "GBPubli"
-        Me.GBPubli.Padding = New System.Windows.Forms.Padding(2)
-        Me.GBPubli.Size = New System.Drawing.Size(643, 327)
-        Me.GBPubli.TabIndex = 3
-        Me.GBPubli.TabStop = False
-        Me.GBPubli.Text = "Publicidades"
-        '
-        'dtp
-        '
-        Me.dtp.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtp.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtp.Location = New System.Drawing.Point(13, 28)
-        Me.dtp.Margin = New System.Windows.Forms.Padding(2)
-        Me.dtp.Name = "dtp"
-        Me.dtp.Size = New System.Drawing.Size(616, 22)
-        Me.dtp.TabIndex = 4
-        '
-        'ColorDateTimePicker1
-        '
-        Me.ColorDateTimePicker1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ColorDateTimePicker1.CustomFormat = "MM/yyyy"
-        Me.ColorDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.ColorDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.ColorDateTimePicker1.Location = New System.Drawing.Point(13, 26)
-        Me.ColorDateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
-        Me.ColorDateTimePicker1.Size = New System.Drawing.Size(614, 27)
-        Me.ColorDateTimePicker1.TabIndex = 28876924
         '
         'PFecha
         '
@@ -598,6 +635,35 @@ Partial Class frmPrograma
         Me.ProgramaPrecio.Name = "ProgramaPrecio"
         Me.ProgramaPrecio.ReadOnly = True
         '
+        'GBPubli
+        '
+        Me.GBPubli.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GBPubli.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.GBPubli.Controls.Add(Me.TableLayoutPanel5)
+        Me.GBPubli.Controls.Add(Me.dtp)
+        Me.GBPubli.Controls.Add(Me.dgvPPublicidades)
+        Me.GBPubli.Location = New System.Drawing.Point(2, 2)
+        Me.GBPubli.Margin = New System.Windows.Forms.Padding(2)
+        Me.GBPubli.Name = "GBPubli"
+        Me.GBPubli.Padding = New System.Windows.Forms.Padding(2)
+        Me.GBPubli.Size = New System.Drawing.Size(643, 312)
+        Me.GBPubli.TabIndex = 3
+        Me.GBPubli.TabStop = False
+        Me.GBPubli.Text = "Publicidades"
+        '
+        'dtp
+        '
+        Me.dtp.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtp.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtp.Location = New System.Drawing.Point(13, 28)
+        Me.dtp.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtp.Name = "dtp"
+        Me.dtp.Size = New System.Drawing.Size(616, 22)
+        Me.dtp.TabIndex = 4
+        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.tbDatos)
@@ -605,10 +671,10 @@ Partial Class frmPrograma
         Me.TabControl1.Controls.Add(Me.tbBublicidades)
         Me.TabControl1.Controls.Add(Me.tbAlquiler)
         Me.TabControl1.Controls.Add(Me.tbFechas)
-        Me.TabControl1.Location = New System.Drawing.Point(14, 13)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(655, 440)
+        Me.TabControl1.Size = New System.Drawing.Size(655, 345)
         Me.TabControl1.TabIndex = 4
         '
         'tbDatos
@@ -618,20 +684,64 @@ Partial Class frmPrograma
         Me.tbDatos.Location = New System.Drawing.Point(4, 25)
         Me.tbDatos.Name = "tbDatos"
         Me.tbDatos.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbDatos.Size = New System.Drawing.Size(647, 411)
+        Me.tbDatos.Size = New System.Drawing.Size(647, 316)
         Me.tbDatos.TabIndex = 0
         Me.tbDatos.Text = "Datos"
         '
         'tbFuncionarios
         '
         Me.tbFuncionarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.tbFuncionarios.Controls.Add(Me.TableLayoutPanel4)
         Me.tbFuncionarios.Controls.Add(Me.GBFuncionario)
         Me.tbFuncionarios.Location = New System.Drawing.Point(4, 25)
         Me.tbFuncionarios.Name = "tbFuncionarios"
         Me.tbFuncionarios.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbFuncionarios.Size = New System.Drawing.Size(647, 411)
+        Me.tbFuncionarios.Size = New System.Drawing.Size(647, 316)
         Me.tbFuncionarios.TabIndex = 1
         Me.tbFuncionarios.Text = "Funcionarios"
+        '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.ColumnCount = 2
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel4.Controls.Add(Me.btnBorrarF, 1, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.btnAnadirF, 0, 0)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(6, 261)
+        Me.TableLayoutPanel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 1
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(635, 50)
+        Me.TableLayoutPanel4.TabIndex = 28876925
+        '
+        'btnBorrarF
+        '
+        Me.btnBorrarF.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnBorrarF.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnBorrarF.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnBorrarF.Location = New System.Drawing.Point(318, 4)
+        Me.btnBorrarF.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBorrarF.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnBorrarF.Name = "btnBorrarF"
+        Me.btnBorrarF.Size = New System.Drawing.Size(313, 42)
+        Me.btnBorrarF.TabIndex = 2
+        Me.btnBorrarF.Text = "Borrar"
+        Me.btnBorrarF.UseVisualStyleBackColor = True
+        '
+        'btnAnadirF
+        '
+        Me.btnAnadirF.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnAnadirF.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnAnadirF.Location = New System.Drawing.Point(4, 4)
+        Me.btnAnadirF.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAnadirF.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnAnadirF.Name = "btnAnadirF"
+        Me.btnAnadirF.Size = New System.Drawing.Size(306, 42)
+        Me.btnAnadirF.TabIndex = 1
+        Me.btnAnadirF.Text = "Añadir"
+        Me.btnAnadirF.UseVisualStyleBackColor = True
         '
         'tbBublicidades
         '
@@ -639,7 +749,7 @@ Partial Class frmPrograma
         Me.tbBublicidades.Controls.Add(Me.GBPubli)
         Me.tbBublicidades.Location = New System.Drawing.Point(4, 25)
         Me.tbBublicidades.Name = "tbBublicidades"
-        Me.tbBublicidades.Size = New System.Drawing.Size(647, 439)
+        Me.tbBublicidades.Size = New System.Drawing.Size(647, 316)
         Me.tbBublicidades.TabIndex = 2
         Me.tbBublicidades.Text = "Publicidades"
         '
@@ -649,53 +759,183 @@ Partial Class frmPrograma
         Me.tbAlquiler.Controls.Add(Me.GroupBox1)
         Me.tbAlquiler.Location = New System.Drawing.Point(4, 25)
         Me.tbAlquiler.Name = "tbAlquiler"
-        Me.tbAlquiler.Size = New System.Drawing.Size(647, 411)
+        Me.tbAlquiler.Size = New System.Drawing.Size(647, 316)
         Me.tbAlquiler.TabIndex = 3
         Me.tbAlquiler.Text = "Alquiler"
         '
         'tbFechas
         '
         Me.tbFechas.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.tbFechas.Controls.Add(Me.TableLayoutPanel7)
         Me.tbFechas.Location = New System.Drawing.Point(4, 25)
         Me.tbFechas.Name = "tbFechas"
-        Me.tbFechas.Size = New System.Drawing.Size(647, 411)
+        Me.tbFechas.Size = New System.Drawing.Size(647, 316)
         Me.tbFechas.TabIndex = 4
         Me.tbFechas.Text = "Fechas"
         '
-        'FNombre
+        'cbPagados
         '
-        Me.FNombre.HeaderText = "Nombre"
-        Me.FNombre.MinimumWidth = 8
-        Me.FNombre.Name = "FNombre"
-        Me.FNombre.ReadOnly = True
+        Me.cbPagados.AutoSize = True
+        Me.cbPagados.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cbPagados.Location = New System.Drawing.Point(13, 27)
+        Me.cbPagados.Name = "cbPagados"
+        Me.cbPagados.Size = New System.Drawing.Size(89, 22)
+        Me.cbPagados.TabIndex = 28876925
+        Me.cbPagados.Text = "Pagados"
+        Me.cbPagados.UseVisualStyleBackColor = True
         '
-        'FTelefono
+        'DataGridViewTextBoxColumn3
         '
-        Me.FTelefono.HeaderText = "Telefono"
-        Me.FTelefono.MinimumWidth = 8
-        Me.FTelefono.Name = "FTelefono"
-        Me.FTelefono.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Descripcion"
+        Me.DataGridViewTextBoxColumn3.MinimumWidth = 8
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
-        'FMail
+        'PEliminar
         '
-        Me.FMail.HeaderText = "Mail"
-        Me.FMail.MinimumWidth = 6
-        Me.FMail.Name = "FMail"
-        Me.FMail.ReadOnly = True
+        Me.PEliminar.FillWeight = 20.0!
+        Me.PEliminar.HeaderText = "Eliminar"
+        Me.PEliminar.MinimumWidth = 6
+        Me.PEliminar.Name = "PEliminar"
+        Me.PEliminar.ReadOnly = True
+        Me.PEliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.PEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
-        'FEliminar
+        'TableLayoutPanel5
         '
-        Me.FEliminar.HeaderText = "Eliminar"
-        Me.FEliminar.MinimumWidth = 6
-        Me.FEliminar.Name = "FEliminar"
-        Me.FEliminar.ReadOnly = True
+        Me.TableLayoutPanel5.ColumnCount = 2
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel5.Controls.Add(Me.Button1, 1, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.Button2, 0, 0)
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(3, 258)
+        Me.TableLayoutPanel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        Me.TableLayoutPanel5.RowCount = 1
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(635, 50)
+        Me.TableLayoutPanel5.TabIndex = 28876926
+        '
+        'Button1
+        '
+        Me.Button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.Button1.Location = New System.Drawing.Point(318, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(313, 42)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Borrar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.Button2.Location = New System.Drawing.Point(4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(306, 42)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Añadir"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel6
+        '
+        Me.TableLayoutPanel6.ColumnCount = 2
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel6.Controls.Add(Me.Button3, 1, 0)
+        Me.TableLayoutPanel6.Controls.Add(Me.Button4, 0, 0)
+        Me.TableLayoutPanel6.Location = New System.Drawing.Point(4, 254)
+        Me.TableLayoutPanel6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
+        Me.TableLayoutPanel6.RowCount = 1
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(635, 50)
+        Me.TableLayoutPanel6.TabIndex = 28876926
+        '
+        'Button3
+        '
+        Me.Button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button3.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.Button3.Location = New System.Drawing.Point(318, 4)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button3.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(313, 42)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Borrar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button4.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.Button4.Location = New System.Drawing.Point(4, 4)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button4.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(306, 42)
+        Me.Button4.TabIndex = 1
+        Me.Button4.Text = "Añadir"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel7
+        '
+        Me.TableLayoutPanel7.ColumnCount = 2
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel7.Controls.Add(Me.Button5, 1, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.Button6, 0, 0)
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(3, 264)
+        Me.TableLayoutPanel7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
+        Me.TableLayoutPanel7.RowCount = 1
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(635, 50)
+        Me.TableLayoutPanel7.TabIndex = 28876926
+        '
+        'Button5
+        '
+        Me.Button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button5.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.Button5.Location = New System.Drawing.Point(318, 4)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button5.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(313, 42)
+        Me.Button5.TabIndex = 2
+        Me.Button5.Text = "Borrar"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button6.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.Button6.Location = New System.Drawing.Point(4, 4)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button6.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(306, 42)
+        Me.Button6.TabIndex = 1
+        Me.Button6.Text = "Añadir"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'frmPrograma
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(683, 466)
+        Me.ClientSize = New System.Drawing.Size(682, 367)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "frmPrograma"
         Me.Text = "Programa"
@@ -705,25 +945,29 @@ Partial Class frmPrograma
         Me.GBDEscripcion.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        CType(Me.dgvVSM, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.dgvVSM, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBPubli.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.tbDatos.ResumeLayout(False)
         Me.tbFuncionarios.ResumeLayout(False)
-        Me.tbFuncionarios.PerformLayout()
+        Me.TableLayoutPanel4.ResumeLayout(False)
         Me.tbBublicidades.ResumeLayout(False)
         Me.tbAlquiler.ResumeLayout(False)
+        Me.tbFechas.ResumeLayout(False)
+        Me.TableLayoutPanel5.ResumeLayout(False)
+        Me.TableLayoutPanel6.ResumeLayout(False)
+        Me.TableLayoutPanel7.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents dgvPPublicidades As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents GBFuncionario As GroupBox
     Friend WithEvents dgvFuncionarios As DataGridView
     Friend WithEvents GBDEscripcion As GroupBox
@@ -744,10 +988,6 @@ Partial Class frmPrograma
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txtNombre As RichTextBox
-    Friend WithEvents FNombre As DataGridViewTextBoxColumn
-    Friend WithEvents FTelefono As DataGridViewTextBoxColumn
-    Friend WithEvents FMail As DataGridViewTextBoxColumn
-    Friend WithEvents FEliminar As DataGridViewCheckBoxColumn
     Friend WithEvents ColorDateTimePicker1 As ColorDateTimePicker
     Friend WithEvents PFecha As DataGridViewTextBoxColumn
     Friend WithEvents PFechaPago As DataGridViewTextBoxColumn
@@ -760,4 +1000,26 @@ Partial Class frmPrograma
     Friend WithEvents tbBublicidades As TabPage
     Friend WithEvents tbAlquiler As TabPage
     Friend WithEvents tbFechas As TabPage
+    Friend WithEvents FNombre As DataGridViewTextBoxColumn
+    Friend WithEvents FTelefono As DataGridViewTextBoxColumn
+    Friend WithEvents FMail As DataGridViewTextBoxColumn
+    Friend WithEvents FFuncion As DataGridViewTextBoxColumn
+    Friend WithEvents FFechaI As DataGridViewTextBoxColumn
+    Friend WithEvents FFechaF As DataGridViewTextBoxColumn
+    Friend WithEvents FEliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents btnBorrarF As Button
+    Friend WithEvents btnAnadirF As Button
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents PEliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents cbPagados As CheckBox
+    Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class
