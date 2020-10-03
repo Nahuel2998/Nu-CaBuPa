@@ -93,6 +93,12 @@
     <Compile Include="Empresa\frmEmpresa.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Evento\FmEventos.Designer.vb">
+      <DependentUpon>FmEventos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Evento\FmEventos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Personalizado\ColorDateTimePicker.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empresa\frmEmpresa.resx">
       <DependentUpon>frmEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evento\FmEventos.resx">
+      <DependentUpon>FmEventos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Personalizado\frmConfirmarBorrado.resx">
       <DependentUpon>frmConfirmarBorrado.vb</DependentUpon>
