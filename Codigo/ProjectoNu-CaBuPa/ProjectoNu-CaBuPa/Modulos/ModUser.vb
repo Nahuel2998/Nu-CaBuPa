@@ -38,7 +38,6 @@ Module ModUser
         End If
     End Sub
     Function RandomString(r As Random, ByVal cnt As Byte)
-
         Dim s As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
         Dim sb As New Text.StringBuilder
         For i As Integer = 1 To cnt

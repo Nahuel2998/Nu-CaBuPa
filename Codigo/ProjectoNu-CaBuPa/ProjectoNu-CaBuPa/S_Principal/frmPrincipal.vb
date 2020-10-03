@@ -316,7 +316,8 @@ Public Class frmPrincipal
             formSerie.ShowDialog()
         Else
             ' FIXME: Remove this, es de debug.
-            TBNotas.Text += "a"
+            'TBNotas.Text += "a"
+            'Removido
         End If
     End Sub
 
@@ -470,4 +471,23 @@ Public Class frmPrincipal
         ClickCheck(dgvBProgramas)
     End Sub
 
+    Private Sub dgvBProgramas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBProgramas.CellDoubleClick
+        Dim i() As String = CargarID(dt_BPrograma, dgvBProgramas, {0})
+        If (i.Length <> 0) Then
+            Dim formPrograma As New frmPrograma(i(0))
+            'AddHandler formSerie.FormClosed, AddressOf FormSerie_FormClosed
+            formPrograma.ShowDialog()
+        End If
+
+
+    End Sub
+
+    Private Sub dgvPrograma_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellDoubleClick
+        Dim i() As String = CargarID(dt_programa, dgvPrograma, {0})
+        If (i.Length <> 0) Then
+            Dim formPrograma As New frmPrograma(i(0))
+            'AddHandler formSerie.FormClosed, AddressOf FormSerie_FormClosed
+            formPrograma.ShowDialog()
+        End If
+    End Sub
 End Class
