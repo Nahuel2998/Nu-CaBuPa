@@ -185,6 +185,7 @@ Module ModTablas
         Next
         res = res.Remove(res.Length - 2)
         Dim dtN As DataTable = DevolverTabla(PSQL(res, tabla, String.Format("{0} = '{1}'", campo, id)))
+        'ModLog.Guardar(PSQL(res, tabla, String.Format("{0} = '{1}'", campo, id)))
         If (Not IsNothing(dtN)) Then
             For j As Integer = 0 To dtN.Columns.Count - 1
                 resultado(j) = dtN.Rows(0).Item(j).ToString

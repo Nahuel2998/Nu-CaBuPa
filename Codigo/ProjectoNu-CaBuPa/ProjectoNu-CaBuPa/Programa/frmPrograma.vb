@@ -12,7 +12,7 @@ Public Class frmPrograma
     End Sub
 
     Public Sub Buscar()
-        Dim columnas() As String = {"Nombre_Programa", "Descripcion", "Fecha_Finalizacion", "DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha"}
+        Dim columnas() As String = {"Nombre_Programa", "Descripcion", "DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion"}
         datosI = BuscarDatos("programa", columnas, "id_programa", programaID)
     End Sub
 

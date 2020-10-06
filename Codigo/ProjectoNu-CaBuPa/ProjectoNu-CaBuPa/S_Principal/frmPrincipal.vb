@@ -62,8 +62,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub ActualizarEvento()
-        ActualizarTabla(dt_evento, dgvEventos)
-        dgvEventos.Columns().RemoveAt(0)
+        ActualizarTablaC(dt_evento, dgvEventos)
         dgvEventos.ClearSelection()
     End Sub
 
@@ -108,7 +107,9 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWNumberOne_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWProgramas.RunWorkerCompleted
-        ActualizarProgramas()
+        'ActualizarProgramas()
+        ActualizarTablaC(dt_programa, dgvPrograma)
+        dgvProgramaColor()
         Funcionarios()
     End Sub
 
