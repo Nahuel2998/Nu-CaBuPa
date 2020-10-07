@@ -30,6 +30,8 @@ Partial Class frmFuncion
         Me.BtnbuscarFunci = New System.Windows.Forms.Button()
         Me.btneditarfunci = New System.Windows.Forms.Button()
         Me.btningresarfunc = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -45,12 +47,11 @@ Partial Class frmFuncion
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 1)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(1, 2)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.35135!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.64865!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(347, 280)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(260, 228)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'GroupBox1
@@ -58,24 +59,23 @@ Partial Class frmFuncion
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(4, 4)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(339, 191)
+        Me.GroupBox1.Size = New System.Drawing.Size(254, 156)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(10, 51)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Location = New System.Drawing.Point(120, 67)
         Me.TextBox1.MaxLength = 128
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(321, 132)
+        Me.TextBox1.Size = New System.Drawing.Size(126, 64)
         Me.TextBox1.TabIndex = 1
         '
         'Label1
@@ -83,12 +83,11 @@ Partial Class frmFuncion
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(7, 19)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(2, 67)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(99, 18)
+        Me.Label1.Size = New System.Drawing.Size(78, 15)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Descripcion:"
+        Me.Label1.Text = "Descripción:"
         '
         'TableLayoutPanel2
         '
@@ -102,12 +101,11 @@ Partial Class frmFuncion
         Me.TableLayoutPanel2.Controls.Add(Me.BtnbuscarFunci, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btneditarfunci, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btningresarfunc, 2, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(4, 203)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 165)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(339, 73)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(254, 60)
         Me.TableLayoutPanel2.TabIndex = 1
         '
         'BtnbuscarFunci
@@ -117,10 +115,9 @@ Partial Class frmFuncion
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnbuscarFunci.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.BtnbuscarFunci.ForeColor = System.Drawing.Color.White
-        Me.BtnbuscarFunci.Location = New System.Drawing.Point(4, 4)
-        Me.BtnbuscarFunci.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnbuscarFunci.Location = New System.Drawing.Point(3, 3)
         Me.BtnbuscarFunci.Name = "BtnbuscarFunci"
-        Me.BtnbuscarFunci.Size = New System.Drawing.Size(102, 65)
+        Me.BtnbuscarFunci.Size = New System.Drawing.Size(77, 54)
         Me.BtnbuscarFunci.TabIndex = 0
         Me.BtnbuscarFunci.Text = "Borrar"
         Me.BtnbuscarFunci.UseVisualStyleBackColor = True
@@ -132,10 +129,9 @@ Partial Class frmFuncion
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btneditarfunci.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btneditarfunci.ForeColor = System.Drawing.Color.White
-        Me.btneditarfunci.Location = New System.Drawing.Point(114, 4)
-        Me.btneditarfunci.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btneditarfunci.Location = New System.Drawing.Point(86, 3)
         Me.btneditarfunci.Name = "btneditarfunci"
-        Me.btneditarfunci.Size = New System.Drawing.Size(109, 65)
+        Me.btneditarfunci.Size = New System.Drawing.Size(81, 54)
         Me.btneditarfunci.TabIndex = 1
         Me.btneditarfunci.Text = "Editar Nombre"
         Me.btneditarfunci.UseVisualStyleBackColor = True
@@ -147,24 +143,41 @@ Partial Class frmFuncion
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btningresarfunc.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btningresarfunc.ForeColor = System.Drawing.Color.White
-        Me.btningresarfunc.Location = New System.Drawing.Point(231, 4)
-        Me.btningresarfunc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btningresarfunc.Location = New System.Drawing.Point(173, 3)
         Me.btningresarfunc.Name = "btningresarfunc"
-        Me.btningresarfunc.Size = New System.Drawing.Size(104, 65)
+        Me.btningresarfunc.Size = New System.Drawing.Size(78, 54)
         Me.btningresarfunc.TabIndex = 2
         Me.btningresarfunc.Text = "Ingresar"
         Me.btningresarfunc.UseVisualStyleBackColor = True
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(120, 30)
+        Me.TextBox2.MaxLength = 128
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(126, 20)
+        Me.TextBox2.TabIndex = 3
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(23, 35)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(57, 15)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Nombre:"
+        '
         'frmFuncion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(349, 286)
+        Me.ClientSize = New System.Drawing.Size(262, 232)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmFuncion"
-        Me.Text = "Función"
+        Me.Text = "Ver Función"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -181,4 +194,6 @@ Partial Class frmFuncion
     Friend WithEvents BtnbuscarFunci As Button
     Friend WithEvents btneditarfunci As Button
     Friend WithEvents btningresarfunc As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label2 As Label
 End Class

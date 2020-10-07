@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FmEventos
+Partial Class FrmEventos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -24,6 +24,8 @@ Partial Class FmEventos
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtEventoVideo = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.dtpEventoF = New System.Windows.Forms.DateTimePicker()
         Me.txtProgEvento = New System.Windows.Forms.TextBox()
         Me.txtdescripevento = New System.Windows.Forms.TextBox()
@@ -34,17 +36,15 @@ Partial Class FmEventos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvEvento = New System.Windows.Forms.DataGridView()
-        Me.txtEventoVideo = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnAgregarEvento = New System.Windows.Forms.Button()
-        Me.btnBuscarEvento = New System.Windows.Forms.Button()
-        Me.btnborrarevento = New System.Windows.Forms.Button()
         Me.nombreEven = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descripeven = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fechaEven = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.programaEven = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.videoEven = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnAñadirEv = New System.Windows.Forms.Button()
+        Me.btnBuscarEv = New System.Windows.Forms.Button()
+        Me.btnBorrarEv = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -92,6 +92,24 @@ Partial Class FmEventos
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información"
+        '
+        'txtEventoVideo
+        '
+        Me.txtEventoVideo.Location = New System.Drawing.Point(337, 89)
+        Me.txtEventoVideo.Name = "txtEventoVideo"
+        Me.txtEventoVideo.Size = New System.Drawing.Size(137, 20)
+        Me.txtEventoVideo.TabIndex = 9
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(289, 94)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(41, 15)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "Video"
         '
         'dtpEventoF
         '
@@ -194,81 +212,8 @@ Partial Class FmEventos
         Me.dgvEvento.ShowCellToolTips = False
         Me.dgvEvento.ShowEditingIcon = False
         Me.dgvEvento.ShowRowErrors = False
-        Me.dgvEvento.Size = New System.Drawing.Size(488, 176)
+        Me.dgvEvento.Size = New System.Drawing.Size(509, 176)
         Me.dgvEvento.TabIndex = 0
-        '
-        'txtEventoVideo
-        '
-        Me.txtEventoVideo.Location = New System.Drawing.Point(337, 89)
-        Me.txtEventoVideo.Name = "txtEventoVideo"
-        Me.txtEventoVideo.Size = New System.Drawing.Size(137, 20)
-        Me.txtEventoVideo.TabIndex = 9
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(289, 94)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(41, 15)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Video"
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 3
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.btnBuscarEvento, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnborrarevento, 2, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnAgregarEvento, 0, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 327)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 1
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(500, 56)
-        Me.TableLayoutPanel2.TabIndex = 2
-        '
-        'btnAgregarEvento
-        '
-        Me.btnAgregarEvento.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAgregarEvento.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnAgregarEvento.Location = New System.Drawing.Point(3, 3)
-        Me.btnAgregarEvento.Name = "btnAgregarEvento"
-        Me.btnAgregarEvento.Size = New System.Drawing.Size(164, 50)
-        Me.btnAgregarEvento.TabIndex = 0
-        Me.btnAgregarEvento.Text = "Agregar"
-        Me.btnAgregarEvento.UseVisualStyleBackColor = True
-        '
-        'btnBuscarEvento
-        '
-        Me.btnBuscarEvento.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBuscarEvento.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnBuscarEvento.Location = New System.Drawing.Point(173, 3)
-        Me.btnBuscarEvento.Name = "btnBuscarEvento"
-        Me.btnBuscarEvento.Size = New System.Drawing.Size(164, 50)
-        Me.btnBuscarEvento.TabIndex = 1
-        Me.btnBuscarEvento.Text = "Buscar"
-        Me.btnBuscarEvento.UseVisualStyleBackColor = True
-        '
-        'btnborrarevento
-        '
-        Me.btnborrarevento.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnborrarevento.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnborrarevento.Location = New System.Drawing.Point(343, 3)
-        Me.btnborrarevento.Name = "btnborrarevento"
-        Me.btnborrarevento.Size = New System.Drawing.Size(154, 50)
-        Me.btnborrarevento.TabIndex = 2
-        Me.btnborrarevento.Text = "Borrar"
-        Me.btnborrarevento.UseVisualStyleBackColor = True
         '
         'nombreEven
         '
@@ -295,14 +240,69 @@ Partial Class FmEventos
         Me.videoEven.HeaderText = "Video"
         Me.videoEven.Name = "videoEven"
         '
-        'FmEventos
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 3
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.btnBorrarEv, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnAñadirEv, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnBuscarEv, 2, 0)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 327)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(500, 56)
+        Me.TableLayoutPanel2.TabIndex = 2
+        '
+        'btnAñadirEv
+        '
+        Me.btnAñadirEv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAñadirEv.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnAñadirEv.Location = New System.Drawing.Point(173, 3)
+        Me.btnAñadirEv.Name = "btnAñadirEv"
+        Me.btnAñadirEv.Size = New System.Drawing.Size(164, 50)
+        Me.btnAñadirEv.TabIndex = 1
+        Me.btnAñadirEv.Text = "Añadir"
+        Me.btnAñadirEv.UseVisualStyleBackColor = True
+        '
+        'btnBuscarEv
+        '
+        Me.btnBuscarEv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBuscarEv.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnBuscarEv.Location = New System.Drawing.Point(343, 3)
+        Me.btnBuscarEv.Name = "btnBuscarEv"
+        Me.btnBuscarEv.Size = New System.Drawing.Size(154, 50)
+        Me.btnBuscarEv.TabIndex = 2
+        Me.btnBuscarEv.Text = "Buscar"
+        Me.btnBuscarEv.UseVisualStyleBackColor = True
+        '
+        'btnBorrarEv
+        '
+        Me.btnBorrarEv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBorrarEv.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnBorrarEv.Location = New System.Drawing.Point(3, 3)
+        Me.btnBorrarEv.Name = "btnBorrarEv"
+        Me.btnBorrarEv.Size = New System.Drawing.Size(164, 50)
+        Me.btnBorrarEv.TabIndex = 0
+        Me.btnBorrarEv.Text = "Borrar"
+        Me.btnBorrarEv.UseVisualStyleBackColor = True
+        '
+        'FrmEventos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(509, 386)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Name = "FmEventos"
+        Me.Name = "FrmEventos"
         Me.Text = "Eventos"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
@@ -329,9 +329,9 @@ Partial Class FmEventos
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents dgvEvento As DataGridView
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents btnBuscarEvento As Button
-    Friend WithEvents btnborrarevento As Button
-    Friend WithEvents btnAgregarEvento As Button
+    Friend WithEvents btnAñadirEv As Button
+    Friend WithEvents btnBuscarEv As Button
+    Friend WithEvents btnBorrarEv As Button
     Friend WithEvents nombreEven As DataGridViewTextBoxColumn
     Friend WithEvents descripeven As DataGridViewTextBoxColumn
     Friend WithEvents fechaEven As DataGridViewTextBoxColumn

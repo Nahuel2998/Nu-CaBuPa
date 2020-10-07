@@ -93,10 +93,10 @@
     <Compile Include="Empresa\frmEmpresa.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Evento\FmEventos.Designer.vb">
-      <DependentUpon>FmEventos.vb</DependentUpon>
+    <Compile Include="Evento\FrmEventos.Designer.vb">
+      <DependentUpon>FrmEventos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Evento\FmEventos.vb">
+    <Compile Include="Evento\FrmEventos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Personalizado\ColorDateTimePicker.vb">
@@ -229,8 +229,8 @@
     <EmbeddedResource Include="Empresa\frmEmpresa.resx">
       <DependentUpon>frmEmpresa.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Evento\FmEventos.resx">
-      <DependentUpon>FmEventos.vb</DependentUpon>
+    <EmbeddedResource Include="Evento\FrmEventos.resx">
+      <DependentUpon>FrmEventos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Personalizado\frmConfirmarBorrado.resx">
       <DependentUpon>frmConfirmarBorrado.vb</DependentUpon>
@@ -306,9 +306,7 @@
   <ItemGroup>
     <None Include="Resources\IcnAjustes.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Buscadores\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <COMReference Include="ComCtl3">
       <Guid>{38911DA0-E448-11D0-84A3-00DD01104159}</Guid>
