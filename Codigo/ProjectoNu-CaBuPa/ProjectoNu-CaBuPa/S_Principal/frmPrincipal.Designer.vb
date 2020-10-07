@@ -215,6 +215,7 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -333,6 +334,7 @@ Partial Class frmPrincipal
         'GBEventos
         '
         resources.ApplyResources(Me.GBEventos, "GBEventos")
+        Me.GBEventos.Controls.Add(Me.Button1)
         Me.GBEventos.Controls.Add(Me.dgvEventos)
         Me.GBEventos.Name = "GBEventos"
         Me.GBEventos.TabStop = False
@@ -1702,6 +1704,12 @@ Partial Class frmPrincipal
         'BWBuscador
         '
         '
+        'Button1
+        '
+        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.Name = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -1951,4 +1959,5 @@ Partial Class frmPrincipal
     Friend WithEvents VNombre As DataGridViewTextBoxColumn
     Friend WithEvents VSerie As DataGridViewTextBoxColumn
     Friend WithEvents VEliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents Button1 As Button
 End Class

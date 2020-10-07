@@ -45,7 +45,6 @@ Partial Class frmFuncionario
         Me.btnborrarfun = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
@@ -67,7 +66,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.75221!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.24779!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(548, 485)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(922, 485)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'GroupBox1
@@ -75,6 +74,7 @@ Partial Class frmFuncionario
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.dgvFuncionarios)
         Me.GroupBox1.Controls.Add(Me.txtfuncion)
         Me.GroupBox1.Controls.Add(Me.txttelefonofun)
         Me.GroupBox1.Controls.Add(Me.txtemailfun)
@@ -87,7 +87,7 @@ Partial Class frmFuncionario
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(540, 227)
+        Me.GroupBox1.Size = New System.Drawing.Size(914, 227)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información"
@@ -190,12 +190,11 @@ Partial Class frmFuncionario
         Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Controls.Add(Me.dgvFuncionarios)
         Me.GroupBox2.Location = New System.Drawing.Point(4, 239)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(540, 178)
+        Me.GroupBox2.Size = New System.Drawing.Size(914, 178)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         '
@@ -212,7 +211,7 @@ Partial Class frmFuncionario
         Me.dgvFuncionarios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nombre, Me.Telefono, Me.contacto, Me.funcion})
-        Me.dgvFuncionarios.Location = New System.Drawing.Point(8, 11)
+        Me.dgvFuncionarios.Location = New System.Drawing.Point(542, 20)
         Me.dgvFuncionarios.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvFuncionarios.MultiSelect = False
         Me.dgvFuncionarios.Name = "dgvFuncionarios"
@@ -220,7 +219,7 @@ Partial Class frmFuncionario
         Me.dgvFuncionarios.RowHeadersVisible = False
         Me.dgvFuncionarios.RowHeadersWidth = 51
         Me.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvFuncionarios.Size = New System.Drawing.Size(532, 160)
+        Me.dgvFuncionarios.Size = New System.Drawing.Size(222, 199)
         Me.dgvFuncionarios.TabIndex = 0
         '
         'Nombre
@@ -270,7 +269,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(540, 56)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(914, 56)
         Me.TableLayoutPanel2.TabIndex = 2
         '
         'btnlimpiarfun
@@ -284,7 +283,7 @@ Partial Class frmFuncionario
         Me.btnlimpiarfun.Location = New System.Drawing.Point(4, 4)
         Me.btnlimpiarfun.Margin = New System.Windows.Forms.Padding(4)
         Me.btnlimpiarfun.Name = "btnlimpiarfun"
-        Me.btnlimpiarfun.Size = New System.Drawing.Size(127, 48)
+        Me.btnlimpiarfun.Size = New System.Drawing.Size(220, 48)
         Me.btnlimpiarfun.TabIndex = 0
         Me.btnlimpiarfun.Text = "Limpiar busqueda"
         Me.btnlimpiarfun.UseVisualStyleBackColor = False
@@ -297,10 +296,10 @@ Partial Class frmFuncionario
         Me.btningresarfun.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btningresarfun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btningresarfun.ForeColor = System.Drawing.Color.White
-        Me.btningresarfun.Location = New System.Drawing.Point(139, 4)
+        Me.btningresarfun.Location = New System.Drawing.Point(232, 4)
         Me.btningresarfun.Margin = New System.Windows.Forms.Padding(4)
         Me.btningresarfun.Name = "btningresarfun"
-        Me.btningresarfun.Size = New System.Drawing.Size(127, 48)
+        Me.btningresarfun.Size = New System.Drawing.Size(220, 48)
         Me.btningresarfun.TabIndex = 1
         Me.btningresarfun.Text = "Ingresar"
         Me.btningresarfun.UseVisualStyleBackColor = False
@@ -313,10 +312,10 @@ Partial Class frmFuncionario
         Me.btnbuscarfun.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnbuscarfun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnbuscarfun.ForeColor = System.Drawing.Color.White
-        Me.btnbuscarfun.Location = New System.Drawing.Point(274, 4)
+        Me.btnbuscarfun.Location = New System.Drawing.Point(460, 4)
         Me.btnbuscarfun.Margin = New System.Windows.Forms.Padding(4)
         Me.btnbuscarfun.Name = "btnbuscarfun"
-        Me.btnbuscarfun.Size = New System.Drawing.Size(127, 48)
+        Me.btnbuscarfun.Size = New System.Drawing.Size(220, 48)
         Me.btnbuscarfun.TabIndex = 2
         Me.btnbuscarfun.Text = "Buscar"
         Me.btnbuscarfun.UseVisualStyleBackColor = False
@@ -329,28 +328,27 @@ Partial Class frmFuncionario
         Me.btnborrarfun.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnborrarfun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnborrarfun.ForeColor = System.Drawing.Color.White
-        Me.btnborrarfun.Location = New System.Drawing.Point(409, 4)
+        Me.btnborrarfun.Location = New System.Drawing.Point(688, 4)
         Me.btnborrarfun.Margin = New System.Windows.Forms.Padding(4)
         Me.btnborrarfun.Name = "btnborrarfun"
-        Me.btnborrarfun.Size = New System.Drawing.Size(127, 48)
+        Me.btnborrarfun.Size = New System.Drawing.Size(222, 48)
         Me.btnborrarfun.TabIndex = 3
         Me.btnborrarfun.Text = "Borrar"
         Me.btnborrarfun.UseVisualStyleBackColor = False
         '
-        'FmFuncionario
+        'frmFuncionario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(551, 482)
+        Me.ClientSize = New System.Drawing.Size(925, 482)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "FmFuncionario"
+        Me.Name = "frmFuncionario"
         Me.Text = "Funcionario"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
