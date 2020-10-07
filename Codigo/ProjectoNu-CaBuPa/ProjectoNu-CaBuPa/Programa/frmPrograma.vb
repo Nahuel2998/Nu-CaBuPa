@@ -5,6 +5,9 @@ Public Class frmPrograma
     Public editando As Boolean = False
     Dim datos() As String
     Dim datosI() As String
+    Private TBusca As DataTable
+    Private dt_funcionario As DataTable
+    Private TBuscada As String
 
     Public Sub New(ByVal pid As Integer)
         InitializeComponent()
@@ -31,6 +34,10 @@ Public Class frmPrograma
             bwDatos.RunWorkerAsync()
             btnPSalir.Select()
         Else
+            tcP.TabPages.RemoveAt(1)
+            tcP.TabPages.RemoveAt(2)
+            tcP.TabPages.RemoveAt(3)
+            tcP.TabPages.RemoveAt(4)
             btnPEditar.Text = "Insertar"
             btnBorrar.Visible = False
             Activar()
@@ -126,5 +133,54 @@ Public Class frmPrograma
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
         Dim formDelete As New frmConfirmarBorrado("Programa", {programaID}, True)
         formDelete.ShowDialog(Me)
+    End Sub
+
+    Private Sub bwCargador_DoWork(sender As Object, e As DoWorkEventArgs) Handles bwCargador.DoWork
+        TBusca = DevolverTabla(e.Argument)
+    End Sub
+
+    Private Sub tcP_DoubleClick(sender As Object, e As EventArgs) Handles tcP.DoubleClick
+        If editando And programaID <> -1 Then
+            ActualizarDatos()
+            If Not CompararValores(VaciarNull(datos), datosI) Then
+                Dim g As New frmGuardarEdicion("Programa", datos, programaID)
+                g.ShowDialog()
+                If ModInicializador.Cancelar.Contains("Programa") Then
+                    tcP.SelectedIndex = 0
+                    ModInicializador.Cancelar = ModInicializador.Cancelar.Replace("Programa", "")
+                    ' ModInicializador.frmPrin.btnbuscarv.PerformClick()
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
+        Select Case tcP.SelectedIndex
+            Case 1
+                TBuscada = "Funcionario"
+                Dim consulta As String = "select "        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
+        End Select
+        If Not (bwCargador.IsBusy) Then
+            bwCargador.RunWorkerAsync(PSQL("id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie", "video v", condicion))
+        End If
+    End Sub
+
+    Private Sub bwCargador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwCargador.RunWorkerCompleted
+        Select Case TBuscada
+            Case "Funcionario"
+                dt_funcionario = TBusca
+                ActualizarTablaC(dt_funcionario, dgvFuncionarios)
+            Case "Publicidades"
+                dt_Serie = TBusca
+                'ActualizarTablaC(dt_Serie, dgvBS)
+            Case "FechaPrograma"
+                dt_Empresa = TBusca
+               ' ActualizarTablaC(dt_Empresa, dgvClientes)
+            Case "CuotaPrograma"
+                dt_BPrograma = TBusca
+                ' ActualizarTablaC(dt_BPrograma, dgvBProgramas)
+        End Select
+        TBusca = Nothing
+        TBuscada = ""
     End Sub
 End Class
