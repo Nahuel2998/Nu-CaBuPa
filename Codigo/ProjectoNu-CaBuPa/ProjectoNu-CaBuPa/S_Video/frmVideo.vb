@@ -148,7 +148,6 @@
         Dim con As String = txtContenido.Text
         Dim nom As String = txtNombre.Text
         Dim dat As String = If(chbTieneFecha.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null")
-        ModLog.Guardar(cbSerie.SelectedIndex)
         Dim ser As String = If(cbSerie.SelectedIndex <= 0, "null", position(cbSerie.SelectedIndex - 1))
         datos = {con, nom, ser, dat}
     End Sub

@@ -214,3 +214,13 @@
 05/10/2020 21:07:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 05/10/2020 21:08:05 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
 05/10/2020 21:08:15 DESKTOP-SDVEG3U ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+06/10/2020 21:33:34 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+07/10/2020 5:21:26 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+07/10/2020 5:21:38 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+07/10/2020 5:25:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+07/10/2020 5:26:05 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+07/10/2020 5:26:16 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+07/10/2020 5:26:27 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+07/10/2020 5:28:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+07/10/2020 5:29:06 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+07/10/2020 5:29:40 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 

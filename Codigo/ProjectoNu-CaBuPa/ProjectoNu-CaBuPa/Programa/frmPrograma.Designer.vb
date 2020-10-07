@@ -22,18 +22,18 @@ Partial Class frmPrograma
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvPPublicidades = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
@@ -50,15 +50,16 @@ Partial Class frmPrograma
         Me.txtDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnSSalir = New System.Windows.Forms.Button()
+        Me.btnPSalir = New System.Windows.Forms.Button()
         Me.btnBorrar = New System.Windows.Forms.Button()
-        Me.btnSEditar = New System.Windows.Forms.Button()
+        Me.btnPEditar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.chbTieneFecha = New System.Windows.Forms.CheckBox()
         Me.txtTapar = New System.Windows.Forms.RichTextBox()
         Me.chbIncluir = New System.Windows.Forms.CheckBox()
+        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.RichTextBox()
@@ -67,6 +68,7 @@ Partial Class frmPrograma
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.cbPagados = New System.Windows.Forms.CheckBox()
+        Me.ColorDateTimePicker1 = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvVSM = New System.Windows.Forms.DataGridView()
         Me.PFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PFechaPago = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -75,6 +77,7 @@ Partial Class frmPrograma
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tbDatos = New System.Windows.Forms.TabPage()
         Me.tbFuncionarios = New System.Windows.Forms.TabPage()
@@ -88,9 +91,6 @@ Partial Class frmPrograma
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.bwDatos = New System.ComponentModel.BackgroundWorker()
-        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.ColorDateTimePicker1 = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         CType(Me.dgvPPublicidades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBFuncionario.SuspendLayout()
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -121,36 +121,36 @@ Partial Class frmPrograma
         Me.dgvPPublicidades.AllowUserToDeleteRows = False
         Me.dgvPPublicidades.AllowUserToResizeColumns = False
         Me.dgvPPublicidades.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvPPublicidades.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvPPublicidades.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
         Me.dgvPPublicidades.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvPPublicidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvPPublicidades.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvPPublicidades.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvPPublicidades.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPPublicidades.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.dgvPPublicidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPPublicidades.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.PEliminar})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvPPublicidades.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvPPublicidades.DefaultCellStyle = DataGridViewCellStyle15
         Me.dgvPPublicidades.Location = New System.Drawing.Point(13, 56)
         Me.dgvPPublicidades.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvPPublicidades.MultiSelect = False
@@ -158,9 +158,9 @@ Partial Class frmPrograma
         Me.dgvPPublicidades.ReadOnly = True
         Me.dgvPPublicidades.RowHeadersVisible = False
         Me.dgvPPublicidades.RowHeadersWidth = 62
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        Me.dgvPPublicidades.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.White
+        Me.dgvPPublicidades.RowsDefaultCellStyle = DataGridViewCellStyle16
         Me.dgvPPublicidades.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvPPublicidades.RowTemplate.Height = 28
         Me.dgvPPublicidades.RowTemplate.ReadOnly = True
@@ -207,36 +207,36 @@ Partial Class frmPrograma
         Me.dgvFuncionarios.AllowUserToDeleteRows = False
         Me.dgvFuncionarios.AllowUserToResizeColumns = False
         Me.dgvFuncionarios.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvFuncionarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvFuncionarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle17
         Me.dgvFuncionarios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvFuncionarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvFuncionarios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvFuncionarios.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvFuncionarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvFuncionarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
         Me.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FNombre, Me.FTelefono, Me.FMail, Me.FFuncion, Me.FFechaI, Me.FFechaF, Me.FEliminar})
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvFuncionarios.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvFuncionarios.DefaultCellStyle = DataGridViewCellStyle19
         Me.dgvFuncionarios.Location = New System.Drawing.Point(8, 19)
         Me.dgvFuncionarios.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvFuncionarios.MultiSelect = False
@@ -244,9 +244,9 @@ Partial Class frmPrograma
         Me.dgvFuncionarios.ReadOnly = True
         Me.dgvFuncionarios.RowHeadersVisible = False
         Me.dgvFuncionarios.RowHeadersWidth = 62
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        Me.dgvFuncionarios.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.White
+        Me.dgvFuncionarios.RowsDefaultCellStyle = DataGridViewCellStyle20
         Me.dgvFuncionarios.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvFuncionarios.RowTemplate.Height = 28
         Me.dgvFuncionarios.RowTemplate.ReadOnly = True
@@ -326,7 +326,6 @@ Partial Class frmPrograma
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtDescripcion.CausesValidation = False
-        Me.txtDescripcion.Enabled = False
         Me.txtDescripcion.ForeColor = System.Drawing.Color.White
         Me.txtDescripcion.Location = New System.Drawing.Point(8, 23)
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(2)
@@ -367,9 +366,9 @@ Partial Class frmPrograma
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel3.Controls.Add(Me.btnSSalir, 4, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.btnPSalir, 4, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnBorrar, 2, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnSEditar, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.btnPEditar, 0, 0)
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 238)
         Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -378,20 +377,20 @@ Partial Class frmPrograma
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(624, 61)
         Me.TableLayoutPanel3.TabIndex = 28876924
         '
-        'btnSSalir
+        'btnPSalir
         '
-        Me.btnSSalir.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.btnPSalir.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnSSalir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnSSalir.Location = New System.Drawing.Point(469, 4)
-        Me.btnSSalir.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnSSalir.MinimumSize = New System.Drawing.Size(120, 15)
-        Me.btnSSalir.Name = "btnSSalir"
-        Me.btnSSalir.Size = New System.Drawing.Size(151, 53)
-        Me.btnSSalir.TabIndex = 0
-        Me.btnSSalir.Text = "Salir"
-        Me.btnSSalir.UseVisualStyleBackColor = True
+        Me.btnPSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnPSalir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnPSalir.Location = New System.Drawing.Point(469, 4)
+        Me.btnPSalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPSalir.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnPSalir.Name = "btnPSalir"
+        Me.btnPSalir.Size = New System.Drawing.Size(151, 53)
+        Me.btnPSalir.TabIndex = 0
+        Me.btnPSalir.Text = "Salir"
+        Me.btnPSalir.UseVisualStyleBackColor = True
         '
         'btnBorrar
         '
@@ -407,18 +406,18 @@ Partial Class frmPrograma
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = True
         '
-        'btnSEditar
+        'btnPEditar
         '
-        Me.btnSEditar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnSEditar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnSEditar.Location = New System.Drawing.Point(4, 4)
-        Me.btnSEditar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnSEditar.MinimumSize = New System.Drawing.Size(120, 15)
-        Me.btnSEditar.Name = "btnSEditar"
-        Me.btnSEditar.Size = New System.Drawing.Size(195, 53)
-        Me.btnSEditar.TabIndex = 1
-        Me.btnSEditar.Text = "Editar"
-        Me.btnSEditar.UseVisualStyleBackColor = True
+        Me.btnPEditar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnPEditar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnPEditar.Location = New System.Drawing.Point(4, 4)
+        Me.btnPEditar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPEditar.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnPEditar.Name = "btnPEditar"
+        Me.btnPEditar.Size = New System.Drawing.Size(195, 53)
+        Me.btnPEditar.TabIndex = 1
+        Me.btnPEditar.Text = "Editar"
+        Me.btnPEditar.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -491,7 +490,7 @@ Partial Class frmPrograma
         Me.txtTapar.Multiline = False
         Me.txtTapar.Name = "txtTapar"
         Me.txtTapar.ReadOnly = True
-        Me.txtTapar.Size = New System.Drawing.Size(326, 26)
+        Me.txtTapar.Size = New System.Drawing.Size(326, 29)
         Me.txtTapar.TabIndex = 5
         Me.txtTapar.Text = "No posee fecha."
         Me.txtTapar.Visible = False
@@ -507,6 +506,17 @@ Partial Class frmPrograma
         Me.chbIncluir.TabIndex = 4
         Me.chbIncluir.Text = "Incluir"
         Me.chbIncluir.UseVisualStyleBackColor = True
+        '
+        'dtpFecha
+        '
+        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFecha.Enabled = False
+        Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(326, 27)
+        Me.dtpFecha.TabIndex = 3
         '
         'Label1
         '
@@ -624,39 +634,52 @@ Partial Class frmPrograma
         Me.cbPagados.Text = "Pagados"
         Me.cbPagados.UseVisualStyleBackColor = True
         '
+        'ColorDateTimePicker1
+        '
+        Me.ColorDateTimePicker1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ColorDateTimePicker1.CustomFormat = "yyyy"
+        Me.ColorDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.ColorDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ColorDateTimePicker1.Location = New System.Drawing.Point(505, 26)
+        Me.ColorDateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
+        Me.ColorDateTimePicker1.Size = New System.Drawing.Size(122, 27)
+        Me.ColorDateTimePicker1.TabIndex = 28876924
+        '
         'dgvVSM
         '
         Me.dgvVSM.AllowUserToAddRows = False
         Me.dgvVSM.AllowUserToDeleteRows = False
         Me.dgvVSM.AllowUserToResizeColumns = False
         Me.dgvVSM.AllowUserToResizeRows = False
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvVSM.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvVSM.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
         Me.dgvVSM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvVSM.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvVSM.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvVSM.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvVSM.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
         Me.dgvVSM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVSM.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PFecha, Me.PFechaPago, Me.ProgramaPrecio})
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvVSM.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvVSM.DefaultCellStyle = DataGridViewCellStyle23
         Me.dgvVSM.Location = New System.Drawing.Point(13, 57)
         Me.dgvVSM.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvVSM.MultiSelect = False
@@ -664,9 +687,9 @@ Partial Class frmPrograma
         Me.dgvVSM.ReadOnly = True
         Me.dgvVSM.RowHeadersVisible = False
         Me.dgvVSM.RowHeadersWidth = 62
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
-        Me.dgvVSM.RowsDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle24.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.White
+        Me.dgvVSM.RowsDefaultCellStyle = DataGridViewCellStyle24
         Me.dgvVSM.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvVSM.RowTemplate.Height = 28
         Me.dgvVSM.RowTemplate.ReadOnly = True
@@ -756,6 +779,17 @@ Partial Class frmPrograma
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Añadir"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'dtp
+        '
+        Me.dtp.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtp.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtp.Location = New System.Drawing.Point(13, 28)
+        Me.dtp.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtp.Name = "dtp"
+        Me.dtp.Size = New System.Drawing.Size(616, 22)
+        Me.dtp.TabIndex = 4
         '
         'TabControl1
         '
@@ -912,41 +946,6 @@ Partial Class frmPrograma
         'bwDatos
         '
         '
-        'dtpFecha
-        '
-        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
-        Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(326, 27)
-        Me.dtpFecha.TabIndex = 3
-        '
-        'dtp
-        '
-        Me.dtp.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtp.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtp.Location = New System.Drawing.Point(13, 28)
-        Me.dtp.Margin = New System.Windows.Forms.Padding(2)
-        Me.dtp.Name = "dtp"
-        Me.dtp.Size = New System.Drawing.Size(616, 22)
-        Me.dtp.TabIndex = 4
-        '
-        'ColorDateTimePicker1
-        '
-        Me.ColorDateTimePicker1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ColorDateTimePicker1.CustomFormat = "yyyy"
-        Me.ColorDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.ColorDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.ColorDateTimePicker1.Location = New System.Drawing.Point(505, 26)
-        Me.ColorDateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
-        Me.ColorDateTimePicker1.Size = New System.Drawing.Size(122, 27)
-        Me.ColorDateTimePicker1.TabIndex = 28876924
-        '
         'frmPrograma
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -991,9 +990,9 @@ Partial Class frmPrograma
     Friend WithEvents txtDescripcion As RichTextBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents btnSSalir As Button
+    Friend WithEvents btnPSalir As Button
     Friend WithEvents btnBorrar As Button
-    Friend WithEvents btnSEditar As Button
+    Friend WithEvents btnPEditar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents dgvVSM As DataGridView
     Friend WithEvents GroupBox2 As GroupBox

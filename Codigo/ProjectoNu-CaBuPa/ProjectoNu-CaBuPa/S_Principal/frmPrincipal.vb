@@ -491,4 +491,9 @@ Public Class frmPrincipal
             formPrograma.ShowDialog()
         End If
     End Sub
+
+    Private Sub btnIngresarBP_Click(sender As Object, e As EventArgs) Handles btnIngresarBP.Click
+        Dim formPrograma As New frmPrograma(-1)
+        formPrograma.ShowDialog()
+    End Sub
 End Class

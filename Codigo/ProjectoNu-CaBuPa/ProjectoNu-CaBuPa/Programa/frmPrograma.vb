@@ -27,7 +27,17 @@ Public Class frmPrograma
     End Sub
 
     Private Sub frmPrograma_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        bwDatos.RunWorkerAsync()
+        If programaID <> -1 Then
+            bwDatos.RunWorkerAsync()
+            btnPSalir.Select()
+        Else
+            btnPEditar.Text = "Insertar"
+            btnBorrar.Visible = False
+            Activar()
+        End If
+        dtpFecha.BackColor = Color.FromArgb(64, 64, 64)
+        dtpFecha.ForeColor = Color.White
+        btnPSalir.Select()
     End Sub
 
     Private Sub bwDatos_DoWork(sender As Object, e As DoWorkEventArgs) Handles bwDatos.DoWork
@@ -36,5 +46,85 @@ Public Class frmPrograma
 
     Private Sub bwDatos_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwDatos.RunWorkerCompleted
         Rellenar()
+    End Sub
+    Sub Activar()
+        txtNombre.ReadOnly = editando
+        txtDescripcion.ReadOnly = editando
+        editando = Not editando
+        dtpFecha.Enabled = editando
+        chbTieneFecha.Visible = editando
+    End Sub
+    Private Sub Alternar()
+        Activar()
+        btnPEditar.Text = If(editando, "Guardar", "Editar")
+        btnPSalir.Text = If(editando, "Cancelar", "Salir")
+        chbTieneFecha.Checked = datosI(2) <> ""
+        If editando Then
+            txtTapar.Visible = False
+        Else
+            If datosI(2) = "" Then
+                txtTapar.Visible = True
+                chbTieneFecha.Visible = False
+            End If
+        End If
+    End Sub
+    Sub vaciar()
+        txtNombre.Text = ""
+        txtDescripcion.Text = ""
+        dtpFecha.Value = Now.Date
+        chbTieneFecha.Checked = False
+    End Sub
+    Private Sub ActualizarDatos()
+        Dim des As String = txtDescripcion.Text
+        Dim nom As String = txtNombre.Text
+        Dim dat As String = If(chbTieneFecha.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null")
+        datos = {nom, des, dat}
+    End Sub
+
+    Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnPEditar.Click
+        If programaID = -1 Then
+            ActualizarDatos()
+            PrepararInsert("Programa", datos)
+            vaciar()
+        ElseIf editando Then
+            ActualizarDatos()
+            If Not CompararValores(VaciarNull(datos), datosI) Then
+                PrepararUpdate("Programa", datos, programaID)
+                datosI = VaciarNull(datos)
+            End If
+            Alternar()
+        Else
+            Alternar()
+        End If
+    End Sub
+
+    Private Sub frmPrograma_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If editando And programaID <> -1 Then
+            ActualizarDatos()
+            If Not CompararValores(VaciarNull(datos), datosI) Then
+                Dim g As New frmGuardarEdicion("Programa", datos, programaID)
+                g.ShowDialog()
+                If ModInicializador.Cancelar.Contains("Programa") Then
+                    e.Cancel = True
+                    ModInicializador.Cancelar = ModInicializador.Cancelar.Replace("Programa", "")
+
+                    ' ModInicializador.frmPrin.btnbuscarv.PerformClick()
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub btnPSalir_Click(sender As Object, e As EventArgs) Handles btnPSalir.Click
+        If Not editando Or programaID = -1 Then
+            Close()
+        Else
+            Rellenar()
+            Alternar()
+        End If
+    End Sub
+
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+        Dim formDelete As New frmConfirmarBorrado("Programa", {programaID}, True)
+        formDelete.ShowDialog(Me)
     End Sub
 End Class
