@@ -240,8 +240,37 @@
   <data name="GBEventos.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
+<<<<<<< Updated upstream
   <data name="dgvEventos.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+=======
+  <data name="btnIEvento.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="btnIEvento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 164</value>
+  </data>
+  <data name="btnIEvento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 29</value>
+  </data>
+  <data name="btnIEvento.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnIEvento.Text" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+  <data name="&gt;&gt;btnIEvento.Name" xml:space="preserve">
+    <value>btnIEvento</value>
+  </data>
+  <data name="&gt;&gt;btnIEvento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnIEvento.Parent" xml:space="preserve">
+    <value>GBEventos</value>
+  </data>
+  <data name="&gt;&gt;btnIEvento.ZOrder" xml:space="preserve">
+    <value>0</value>
+>>>>>>> Stashed changes
   </data>
   <metadata name="EFecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -261,8 +290,15 @@
   <data name="ENombre.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
+  <data name="dgvEventos.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
   <data name="dgvEventos.Location" type="System.Drawing.Point, System.Drawing">
+<<<<<<< Updated upstream
     <value>7, 20</value>
+=======
+    <value>2, 22</value>
+>>>>>>> Stashed changes
   </data>
   <data name="dgvEventos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -271,7 +307,11 @@
     <value>62</value>
   </data>
   <data name="dgvEventos.Size" type="System.Drawing.Size, System.Drawing">
+<<<<<<< Updated upstream
     <value>137, 136</value>
+=======
+    <value>186, 138</value>
+>>>>>>> Stashed changes
   </data>
   <data name="dgvEventos.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>

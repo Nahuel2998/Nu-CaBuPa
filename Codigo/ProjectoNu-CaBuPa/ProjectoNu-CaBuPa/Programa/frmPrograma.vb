@@ -137,6 +137,7 @@ Public Class frmPrograma
 
     Private Sub bwCargador_DoWork(sender As Object, e As DoWorkEventArgs) Handles bwCargador.DoWork
         TBusca = DevolverTabla(e.Argument)
+        ModLog.Guardar(e.Argument)
     End Sub
 
     Private Sub tcP_DoubleClick(sender As Object, e As EventArgs) Handles tcP.DoubleClick
@@ -155,13 +156,18 @@ Public Class frmPrograma
     End Sub
 
     Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
+        Dim Columna As String = ""
+        Dim Condicion As String = "true"
+        Dim Tablas As String = ""
         Select Case tcP.SelectedIndex
             Case 1
                 TBuscada = "Funcionario"
-                Dim consulta As String = "select "        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
+                Columna = "fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
+                Tablas = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
+                Tablas = String.Format(Tablas, programaID)
         End Select
         If Not (bwCargador.IsBusy) Then
-            bwCargador.RunWorkerAsync(PSQL("id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie", "video v", condicion))
+            bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
         End If
     End Sub
 
