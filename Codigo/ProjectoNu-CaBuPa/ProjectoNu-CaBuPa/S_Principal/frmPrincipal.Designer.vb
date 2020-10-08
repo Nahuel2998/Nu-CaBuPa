@@ -69,7 +69,6 @@ Partial Class frmPrincipal
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.TBNotas = New System.Windows.Forms.RichTextBox()
         Me.GBEventos = New System.Windows.Forms.GroupBox()
-        Me.btnIEvento = New System.Windows.Forms.Button()
         Me.dgvEventos = New System.Windows.Forms.DataGridView()
         Me.EFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ENombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -334,16 +333,9 @@ Partial Class frmPrincipal
         'GBEventos
         '
         resources.ApplyResources(Me.GBEventos, "GBEventos")
-        Me.GBEventos.Controls.Add(Me.btnIEvento)
         Me.GBEventos.Controls.Add(Me.dgvEventos)
         Me.GBEventos.Name = "GBEventos"
         Me.GBEventos.TabStop = False
-        '
-        'btnIEvento
-        '
-        resources.ApplyResources(Me.btnIEvento, "btnIEvento")
-        Me.btnIEvento.Name = "btnIEvento"
-        Me.btnIEvento.UseVisualStyleBackColor = True
         '
         'dgvEventos
         '
@@ -357,6 +349,7 @@ Partial Class frmPrincipal
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
         Me.dgvEventos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        resources.ApplyResources(Me.dgvEventos, "dgvEventos")
         Me.dgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvEventos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvEventos.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -378,7 +371,6 @@ Partial Class frmPrincipal
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvEventos.DefaultCellStyle = DataGridViewCellStyle3
-        resources.ApplyResources(Me.dgvEventos, "dgvEventos")
         Me.dgvEventos.MultiSelect = False
         Me.dgvEventos.Name = "dgvEventos"
         Me.dgvEventos.ReadOnly = True
@@ -1959,5 +1951,4 @@ Partial Class frmPrincipal
     Friend WithEvents VNombre As DataGridViewTextBoxColumn
     Friend WithEvents VSerie As DataGridViewTextBoxColumn
     Friend WithEvents VEliminar As DataGridViewCheckBoxColumn
-    Friend WithEvents btnIEvento As Button
 End Class
