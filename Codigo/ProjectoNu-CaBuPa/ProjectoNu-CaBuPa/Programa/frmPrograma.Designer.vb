@@ -39,13 +39,6 @@ Partial Class frmPrograma
         Me.PEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GBFuncionario = New System.Windows.Forms.GroupBox()
         Me.dgvFuncionarios = New System.Windows.Forms.DataGridView()
-        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FTelefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FMail = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FFuncion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FFechaI = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FFechaF = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GBDEscripcion = New System.Windows.Forms.GroupBox()
         Me.txtDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -59,7 +52,6 @@ Partial Class frmPrograma
         Me.chbTieneFecha = New System.Windows.Forms.CheckBox()
         Me.txtTapar = New System.Windows.Forms.RichTextBox()
         Me.chbIncluir = New System.Windows.Forms.CheckBox()
-        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.RichTextBox()
@@ -68,7 +60,6 @@ Partial Class frmPrograma
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.cbPagados = New System.Windows.Forms.CheckBox()
-        Me.ColorDateTimePicker1 = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvVSM = New System.Windows.Forms.DataGridView()
         Me.PFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PFechaPago = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -77,7 +68,6 @@ Partial Class frmPrograma
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.tcP = New System.Windows.Forms.TabControl()
         Me.tbDatos = New System.Windows.Forms.TabPage()
         Me.tbFuncionarios = New System.Windows.Forms.TabPage()
@@ -92,6 +82,16 @@ Partial Class frmPrograma
         Me.Button6 = New System.Windows.Forms.Button()
         Me.bwDatos = New System.ComponentModel.BackgroundWorker()
         Me.bwCargador = New System.ComponentModel.BackgroundWorker()
+        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.ColorDateTimePicker1 = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FTelefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FMail = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFuncion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFechaI = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFechaF = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.dgvPPublicidades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBFuncionario.SuspendLayout()
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -254,55 +254,6 @@ Partial Class frmPrograma
         Me.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvFuncionarios.Size = New System.Drawing.Size(621, 226)
         Me.dgvFuncionarios.TabIndex = 1
-        '
-        'FNombre
-        '
-        Me.FNombre.HeaderText = "Nombre"
-        Me.FNombre.MinimumWidth = 8
-        Me.FNombre.Name = "FNombre"
-        Me.FNombre.ReadOnly = True
-        '
-        'FTelefono
-        '
-        Me.FTelefono.HeaderText = "Telefono"
-        Me.FTelefono.MinimumWidth = 8
-        Me.FTelefono.Name = "FTelefono"
-        Me.FTelefono.ReadOnly = True
-        '
-        'FMail
-        '
-        Me.FMail.HeaderText = "Mail"
-        Me.FMail.MinimumWidth = 6
-        Me.FMail.Name = "FMail"
-        Me.FMail.ReadOnly = True
-        '
-        'FFuncion
-        '
-        Me.FFuncion.HeaderText = "Función"
-        Me.FFuncion.MinimumWidth = 6
-        Me.FFuncion.Name = "FFuncion"
-        Me.FFuncion.ReadOnly = True
-        '
-        'FFechaI
-        '
-        Me.FFechaI.HeaderText = "Inicio de la función"
-        Me.FFechaI.MinimumWidth = 6
-        Me.FFechaI.Name = "FFechaI"
-        Me.FFechaI.ReadOnly = True
-        '
-        'FFechaF
-        '
-        Me.FFechaF.HeaderText = "Fin de la función"
-        Me.FFechaF.MinimumWidth = 6
-        Me.FFechaF.Name = "FFechaF"
-        Me.FFechaF.ReadOnly = True
-        '
-        'FEliminar
-        '
-        Me.FEliminar.HeaderText = "Eliminar"
-        Me.FEliminar.MinimumWidth = 6
-        Me.FEliminar.Name = "FEliminar"
-        Me.FEliminar.ReadOnly = True
         '
         'GBDEscripcion
         '
@@ -508,17 +459,6 @@ Partial Class frmPrograma
         Me.chbIncluir.Text = "Incluir"
         Me.chbIncluir.UseVisualStyleBackColor = True
         '
-        'dtpFecha
-        '
-        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
-        Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(326, 27)
-        Me.dtpFecha.TabIndex = 3
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -634,19 +574,6 @@ Partial Class frmPrograma
         Me.cbPagados.TabIndex = 28876925
         Me.cbPagados.Text = "Pagados"
         Me.cbPagados.UseVisualStyleBackColor = True
-        '
-        'ColorDateTimePicker1
-        '
-        Me.ColorDateTimePicker1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ColorDateTimePicker1.CustomFormat = "yyyy"
-        Me.ColorDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.ColorDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.ColorDateTimePicker1.Location = New System.Drawing.Point(505, 26)
-        Me.ColorDateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
-        Me.ColorDateTimePicker1.Size = New System.Drawing.Size(122, 27)
-        Me.ColorDateTimePicker1.TabIndex = 28876924
         '
         'dgvVSM
         '
@@ -780,17 +707,6 @@ Partial Class frmPrograma
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Añadir"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'dtp
-        '
-        Me.dtp.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtp.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtp.Location = New System.Drawing.Point(13, 28)
-        Me.dtp.Margin = New System.Windows.Forms.Padding(2)
-        Me.dtp.Name = "dtp"
-        Me.dtp.Size = New System.Drawing.Size(616, 22)
-        Me.dtp.TabIndex = 4
         '
         'tcP
         '
@@ -950,6 +866,90 @@ Partial Class frmPrograma
         'bwCargador
         '
         '
+        'dtpFecha
+        '
+        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFecha.Enabled = False
+        Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(326, 27)
+        Me.dtpFecha.TabIndex = 3
+        '
+        'dtp
+        '
+        Me.dtp.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtp.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtp.Location = New System.Drawing.Point(13, 28)
+        Me.dtp.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtp.Name = "dtp"
+        Me.dtp.Size = New System.Drawing.Size(616, 22)
+        Me.dtp.TabIndex = 4
+        '
+        'ColorDateTimePicker1
+        '
+        Me.ColorDateTimePicker1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ColorDateTimePicker1.CustomFormat = "yyyy"
+        Me.ColorDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.ColorDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ColorDateTimePicker1.Location = New System.Drawing.Point(505, 26)
+        Me.ColorDateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
+        Me.ColorDateTimePicker1.Size = New System.Drawing.Size(122, 27)
+        Me.ColorDateTimePicker1.TabIndex = 28876924
+        '
+        'FNombre
+        '
+        Me.FNombre.HeaderText = "Nombre"
+        Me.FNombre.MinimumWidth = 8
+        Me.FNombre.Name = "FNombre"
+        Me.FNombre.ReadOnly = True
+        '
+        'FTelefono
+        '
+        Me.FTelefono.HeaderText = "Telefono"
+        Me.FTelefono.MinimumWidth = 8
+        Me.FTelefono.Name = "FTelefono"
+        Me.FTelefono.ReadOnly = True
+        '
+        'FMail
+        '
+        Me.FMail.HeaderText = "EMail"
+        Me.FMail.MinimumWidth = 6
+        Me.FMail.Name = "FMail"
+        Me.FMail.ReadOnly = True
+        '
+        'FFuncion
+        '
+        Me.FFuncion.HeaderText = "Función"
+        Me.FFuncion.MinimumWidth = 6
+        Me.FFuncion.Name = "FFuncion"
+        Me.FFuncion.ReadOnly = True
+        '
+        'FFechaI
+        '
+        Me.FFechaI.HeaderText = "Inicio de la función"
+        Me.FFechaI.MinimumWidth = 6
+        Me.FFechaI.Name = "FFechaI"
+        Me.FFechaI.ReadOnly = True
+        '
+        'FFechaF
+        '
+        Me.FFechaF.HeaderText = "Fin de la función"
+        Me.FFechaF.MinimumWidth = 6
+        Me.FFechaF.Name = "FFechaF"
+        Me.FFechaF.ReadOnly = True
+        '
+        'FEliminar
+        '
+        Me.FEliminar.HeaderText = "Eliminar"
+        Me.FEliminar.MinimumWidth = 6
+        Me.FEliminar.Name = "FEliminar"
+        Me.FEliminar.ReadOnly = True
+        '
         'frmPrograma
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1020,13 +1020,6 @@ Partial Class frmPrograma
     Friend WithEvents tbBublicidades As TabPage
     Friend WithEvents tbAlquiler As TabPage
     Friend WithEvents tbFechas As TabPage
-    Friend WithEvents FNombre As DataGridViewTextBoxColumn
-    Friend WithEvents FTelefono As DataGridViewTextBoxColumn
-    Friend WithEvents FMail As DataGridViewTextBoxColumn
-    Friend WithEvents FFuncion As DataGridViewTextBoxColumn
-    Friend WithEvents FFechaI As DataGridViewTextBoxColumn
-    Friend WithEvents FFechaF As DataGridViewTextBoxColumn
-    Friend WithEvents FEliminar As DataGridViewCheckBoxColumn
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents btnBorrarF As Button
     Friend WithEvents btnAnadirF As Button
@@ -1045,4 +1038,11 @@ Partial Class frmPrograma
     Friend WithEvents chbTieneFecha As CheckBox
     Friend WithEvents bwDatos As System.ComponentModel.BackgroundWorker
     Friend WithEvents bwCargador As System.ComponentModel.BackgroundWorker
+    Friend WithEvents FNombre As DataGridViewTextBoxColumn
+    Friend WithEvents FTelefono As DataGridViewTextBoxColumn
+    Friend WithEvents FMail As DataGridViewTextBoxColumn
+    Friend WithEvents FFuncion As DataGridViewTextBoxColumn
+    Friend WithEvents FFechaI As DataGridViewTextBoxColumn
+    Friend WithEvents FFechaF As DataGridViewTextBoxColumn
+    Friend WithEvents FEliminar As DataGridViewCheckBoxColumn
 End Class
