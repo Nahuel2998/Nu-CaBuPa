@@ -1,46 +1,50 @@
-Programa: {*ID_Programa*, Nombre_Programa, Descripcion, Fecha_Finalizacion}
----
-FechaPrograma: {*Fecha*, *Hora_Inicio*, Hora_Fin, ID_Programa}
-ProgramaCuota: {*ID_Programa_Cuota*,*ID_Programa*,Fecha_Pago,Fecha_Emision, Precio}
+Programa: { ID_Programa , Fecha_Finalizacion , Nombre_Programa, Descripción}
 
----
+FechaPrograma: { Fecha ,  Hora_Inicio , Hora_Fin, ID_Programa}
+ProgramaCuota: { ID_Programa_Cuota, ID_Programa , Fecha_Pago, Fecha_Emision, Precio}
 
-Publicidad: {*ID_Publicidad*, Tema, ID_Empresa}
 
----
-usuarios:	{*id_usuario*, nombre, contrasena}
-acceso:		{*id_acceso*, seccion, tipo}
-UsTieneAcceso:	{*id_usuario, id_acceso*} 
+Publicidad: { ID_Publicidad ,Nombre, Tema, ID_Empresa}
+Usuarios: {ID_usuario, Nombre, Contrasena}
+Acceso: {id_acceso, Seccion, Tipo}
+UsTieneAcceso:{id_usuario, id_acceso} 
 
----
+PMuestraPubli: {ID_Publicidad,  ID_Programa , Fecha_Finalizacion, Fecha_Inicio}
+PublicidadCuota: {ID_Cuota, Fecha_Pago, Fecha_Emision, Precio, ID_Publicidad}
 
-PMuestraPubli: {*ID_Publicidad*, *ID_Programa*, *Fecha_Inicio*, Fecha_Finalizacion}
-PublicidadCuota: {*ID_Publicidad_Cuota*, Fecha_Pago,Fecha_Emision, Precio, ID_Publicidad}
 
----
 
-Empresa:	{*ID_Empresa*, Nombre, Telefono, Mail}
+Empresa:{ID_Empresa , Nombre, Telefono, Mail}
 
----
 
-Tanda:		{*Hora_Inicio*, Hora_Fin}
-AparecePubli:	{*ID_Publicidad*, *Hora_Inicio*, *Fecha_Inicio*, Fecha_Finalizacion}
 
----
+Tanda:		{ Hora_Inicio, Hora_Fin}
+AparecePubli:	{ ID_Publicidad ,  Hora_Inicio , Fecha_Inicio, Fecha_Finalizacion}
 
-Evento:		{*ID_Evento*, Nombre, Descripcion}
 
----
 
-EventoTrataDeV:	{*ID_Evento*, *ID_Video*}
-FechaEvento:	{*ID_Evento, Fecha*} 
+Evento:	{ ID_Evento , Nombre, Descripcion}
 
----
 
-EventoMuestraPubli: {*ID_Evento*, *ID_Publicidad*}
-EventoEsDeP:	{*ID_Programa*,*ID_Evento*}
----
-Funcionario:	{*ID_Funcionario*, Telefono, Nombre, Mail}
+
+EventoTrataDeV:{ID_Evento, ID_Video}
+FechaEvento:	{ ID_Evento, Fecha } 
+
+
+EventoMuestraPubli: { ID_Evento ,  ID_Publicidad }
+EventoEsDeP:	{ ID_Programa , ID_Evento }
+
+Funcionario:	{ ID_Funcionario , Telefono, Nombre, Mail}
+
+
+Funcion:	{ ID_Funcion , Descripcion, Nombre}
+TrabajaComo:	{ ID_Funcionario, ID_Funcion }
+
+FunTrabaja:	{ ID_Funcionario, ID_Funcion, ID_Programa , Fecha_Inicio, Fecha_Finalizacion}
+
+
+Video:		{ ID_Video , Contenido, Nombre, ID_Serie, Fecha}
+Serie:		{ ID_Serie ,Fecha_Finalizacion, Nombre}
 
 ---
 

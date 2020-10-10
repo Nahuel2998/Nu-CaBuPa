@@ -1,195 +1,181 @@
 create database JVRPDATABASE;
 use JVRPDATABASE;
 
-CREATE TABLE usuarios (
-  id_usuario int(6) unsigned auto_increment not null primary key,
-  nombre varchar(16) NOT NULL,
-  contrasena varbinary(256) NOT NULL
+CREATE TABLE `acceso` (
+  `id_acceso` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `seccion` varchar(8) NOT NULL,
+  `tipo` varchar(2) NOT NULL,
+  PRIMARY KEY (`id_acceso`)
 );
-CREATE TABLE acceso (
-  id_acceso int(6) unsigned auto_increment not null primary key,
-  seccion varchar(8) NOT NULL,
-	tipo varchar(2) not null
+CREATE TABLE `aparecepubli` (
+  `ID_Publicidad` int(6) unsigned NOT NULL,
+`Hora_Inicio` time NOT NULL,
+  `Fecha_Inicio` date NOT NULL,
+  `Fecha_Finalizacion` date DEFAULT NULL,
+  PRIMARY KEY (`ID_Publicidad`,`Hora_Inicio`,`Fecha_Inicio`),
+ForeignKEY (Hora_Inicio) referencesTanda(Hora_Inicio),
+Foreign key (ID_Publicidad) references Publicidad(ID_Publicidad)
 );
-CREATE TABLE UsTieneAcceso (
-  id_usuario int(6) unsigned not null,
-  id_acceso int(6) unsigned not null,
-  PRIMARY KEY (id_usuario,id_acceso),
-  KEY id_acceso (id_acceso),
-  CONSTRAINT UsTieneAcceso_ibfk_1 FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario),
-  CONSTRAINT UsTieneAcceso_ibfk_2 FOREIGN KEY (id_acceso) REFERENCES acceso (id_acceso)
+CREATE TABLE `empresa` (
+  `ID_Empresa` int(6) unsigned NOT NULL AUTO_INCREMENT,
+`Nombre` varchar(64) NOT NULL,
+  `Telefono` varchar(16) DEFAULT NULL,
+`Mail` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`ID_Empresa`)
 );
-create table Programa
-	(
-	ID_Programa int(6) unsigned auto_increment not null primary key,
-	Nombre_Programa varchar(48) not null,
-	Descripcion varchar(128),
-	Fecha_Finalizacion datetime
-	);
-
-create table FechaPrograma
-	(
-	Fecha date, 
-	Hora_Inicio time not null, 
-	Hora_Fin time not null, 
-	ID_Programa int(6) unsigned, 
-	foreign key (ID_Programa ) references Programa(ID_Programa),
-	primary key(Fecha, Hora_Inicio));
-create table ProgramaCuota
-	(
-	ID_Programa_Cuota int(6) unsigned not null,
-	ID_Programa int(6) unsigned not null,
-	Fecha_Pago date,
-	Precio decimal(5,2) unsigned not null,
-	Fecha_Emision date not null,
-	primary key(ID_Programa_Cuota),
-	foreign key (ID_Programa ) references Programa(ID_Programa)
-	);
-
-create table Empresa
-	(
-	ID_Empresa int(6) unsigned auto_increment not null primary key,
-	Nombre varchar(64) not null,
-	Telefono varchar(16),
-	Mail varchar(64)
-	);
-
-create table Publicidad
-	(
-	ID_Publicidad int(6) unsigned auto_increment not null primary key,
-	Tema varchar(64) not null,
-	ID_Empresa int(6) unsigned not null,
-	foreign key (ID_Empresa ) references Empresa(ID_Empresa)
-	);
-
-create table PMuestraPubli 
-	(ID_Publicidad int(6) unsigned not null,
-	ID_Programa int(6) unsigned not null,
-	Fecha_Inicio date not null,
-	Fecha_Finalizacion date,
-	primary key(Fecha_Inicio,ID_Programa,ID_Publicidad),
-	foreign key (ID_Programa ) references Programa(ID_Programa),
-	foreign key (ID_Publicidad ) references Publicidad(ID_Publicidad)
-	);
-create table PublicidadCuota
-	(
-	ID_PublicidadCuota int(6) unsigned auto_increment not null primary key,
-	Fecha_Pago date,
-	Precio int(6) unsigned not null,
-	ID_Publicidad int(6) unsigned not null,
-	foreign key (ID_Publicidad ) references Publicidad(ID_Publicidad)
-	);
+CREATE TABLE `publicidad` (
+  `ID_Publicidad` int(6) unsigned NOT NULL AUTO_INCREMENT,
+ `Nombre` varchar(32) NOT NULL,
+  `Tema` varchar(64) NOT NULL,
+  `ID_Empresa` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`ID_Publicidad`),
+  Foreign KEY (ID_Empresa) references Empresa(`ID_Empresa`)
+);
+CREATE TABLE `evento` (
+  `ID_Evento` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(32) NOT NULL,
+  `descripcion` varchar(128) NOT NULL,
+  PRIMARY KEY (`ID_Evento`)
+);
+CREATE TABLE `eventoesdep` (
+  `ID_Programa` int(6) unsigned NOT NULL,
+  `ID_Evento` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`ID_Programa`,`ID_Evento`),
+  Foreign KEY (ID_Evento) references Evento(`ID_Evento`),
+Foreign KEY (ID_Programa) references Programa(`ID_Programa `)
+);
+CREATE TABLE `eventotratadev` (
+  `ID_Evento` int(6) unsigned NOT NULL,
+  `ID_Video` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`ID_Evento`,`ID_Video`),
+Foreign KEY (ID_Video)references Video(`ID_Video`),
+Foreign KEY (ID_Evento) references Evento(ID_Evento)
+);
 
 
-create table Tanda
-	(
-	Hora_Inicio time not null,
-	Hora_Fin time not null,
-	Primary key (Hora_Inicio)
-	);
-create table AparecePubli
-	(
-	ID_Publicidad int(6) unsigned not null,
-	Hora_Inicio time not null,
-	Fecha_Inicio date not null,
-	Fecha_Finalizacion date,
-	primary key(ID_Publicidad,Hora_Inicio, Fecha_Inicio),
-	foreign key (ID_Publicidad ) references Publicidad(ID_Publicidad),
-	foreign key (Hora_Inicio ) references Tanda(Hora_Inicio)
-	);
+CREATE TABLE `eventomuestrapubli` (
+  `ID_Evento` int(6) unsigned NOT NULL,
+  `ID_Publicidad` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`ID_Evento`,`ID_Publicidad`),
+  Foreign KEY (ID_Publicidad) references Publicidad(`ID_Publicidad`),
+Foreign KEY (ID_Evento) references Evento(ID_Evento)
+);
+CREATE TABLE `fechaevento` (
+  `ID_Evento` int(6) unsigned NOT NULL,
+  `fecha` datetime NOT NULL,
+  PRIMARY KEY (`ID_Evento`,`fecha`),
+Foreign key (ID_Evento) references Evento(ID_Evento)
+);
+CREATE TABLE `fechaprograma` (
+  `Fecha` date NOT NULL,
+  `Hora_Inicio` time NOT NULL,
+  `Hora_Fin` time NOT NULL,
+  `ID_Programa` int(6) unsigned DEFAULT NULL,
+PRIMARY KEY (`Fecha`,`Hora_Inicio`),
+Foreign KEY (ID_Programa) references Programa(`ID_Programa`)
+);
+CREATE TABLE `funcion` (
+  `ID_Funcion` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(128) NOT NULL,
+Nombrevarchar(16) not null
+  PRIMARY KEY (`ID_Funcion`)
+);
+CREATE TABLE `funcionario` (
+  `ID_Funcionario` int(6) unsigned NOT NULL AUTO_INCREMENT,
+`Telefono` varchar(16) DEFAULT NULL,
+  `nombre` varchar(48) NOT NULL,
+`Mail` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`ID_Funcionario`)
+);
+CREATE TABLE `trabajacomo` (
+ID_TrabajaComoint(6) unsigned not null auto_increment,
+  `ID_Funcionario` int(6) unsigned NOT NULL,
+  `ID_Funcion` int(6) unsigned NOT NULL,
+  PRIMARY KEY (ID_TrabajaComo),
+  Foreign KEY (ID_Funcion) references Funcion(`ID_Funcion`),
+Foreign KEY (ID_Funcionario) references Funcionario(ID_Funcionario)
+);
+CREATE TABLE `programa` (
+  `ID_Programa` int(6) unsigned NOT NULL AUTO_INCREMENT,
+`Nombre_Programa` varchar(48) NOT NULL,
+  `Descripcion` varchar(128) DEFAULT NULL,
+  `Fecha_Finalizacion` datetime DEFAULT NULL,
+PRIMARY KEY (`ID_Programa`)
+);
 
 
-create table Evento
-	(
-	ID_Evento INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	nombre VARCHAR(32) NOT NULL,
-	descripcion VARCHAR(128) NOT NULL
-	);
-	
-create table FechaEvento
-	(
-	ID_Evento INT(6) unsigned,
-	fecha DATETIME NOT NULL,
-	foreign key (ID_Evento ) references Evento(ID_Evento),
-	PRIMARY KEY(ID_Evento, fecha)
-	);
-create table EventoMuestraPubli 
-	(
-	ID_Evento int(6) unsigned not null,
-	ID_Publicidad int(6) unsigned not null,
-	primary key(ID_Evento, ID_Publicidad),
-	foreign key (ID_Publicidad ) references Publicidad(ID_Publicidad),
-	foreign key (ID_Evento ) references Evento(ID_Evento)
-	);
-create table EventoEsDeP
-	(
-	ID_Programa int(6) unsigned not null,
-	ID_Evento int(6) unsigned not null,
-	primary key(ID_Programa,ID_Evento),
-	foreign key (ID_Programa ) references Programa(ID_Programa),
-	foreign key (ID_Evento ) references Evento(ID_Evento)
-	);
-create table Funcionario
-	(
-	ID_Funcionario INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	Telefono varchar(16),
-	nombre VARCHAR(48) NOT NULL,
-	Mail varchar(64)
-	);
-	
-create table Funcion
-	(
-	ID_Funcion INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	descripcion VARCHAR(128) NOT NULL
-	);
-	
-create table TrabajaComo
-	(
-	ID_Funcionario INT(6) unsigned,
-	ID_Funcion INT(6) unsigned,
-	foreign key (ID_Funcionario ) references Funcionario(ID_Funcionario),
-	foreign key (ID_Funcion ) references Funcion(ID_Funcion),
-	PRIMARY KEY(ID_Funcionario, ID_Funcion)
-	);
-	
-create table FunTrabaja
-	(
-	ID_Funcionario INT(6) unsigned,
-	ID_Funcion INT(6) unsigned,
-	ID_Programa INT(6) unsigned,
-	fecha_inicio DATE NOT NULL,
-	fecha_finalizacion DATE,
-	foreign key (ID_Funcionario ) references Funcionario(ID_Funcionario),
-	foreign key (ID_Funcion ) references Funcion(ID_Funcion),
-	foreign key (ID_Programa ) references Programa(ID_Programa),
-	PRIMARY KEY(ID_Funcionario, ID_Funcion, ID_Programa, Fecha_Inicio)
-	);
-	
-  
 
-create table Video
-	(
-	ID_Video INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	contenido VARCHAR(128) NOT NULL,
-	nombre VARCHAR(48) NOT NULL,
-	ID_Serie INT(6) unsigned,
-	foreign key (ID_Serie ) references Serie(ID_Serie),
-	fecha DATETIME
-	);
-	
-create table Serie
-	(
-	ID_Serie INT(6) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	fecha_finalizacion DATE,
-	nombre VARCHAR(48) NOT NULL
-	);
-	
-create table EventoEsDeV
-	(
-	ID_Evento INT(6) unsigned not null,
-	ID_Video INT(6) unsigned not null,
-	foreign key (ID_Evento ) references Evento(ID_Evento),
-	foreign key (ID_Video ) references Video(ID_Video),
-	PRIMARY KEY(ID_Evento, ID_Video)
-	);
-	
+
+
+
+
+CREATE TABLE `funtrabaja` (
+  `ID_TrabajaComo` int(6) unsigned NOT NULL,
+  `ID_Programa` int(6) unsigned NOT NULL,
+`fecha_inicio` date NOT NULL,
+  `fecha_finalizacion` date DEFAULT NULL,
+  PRIMARY KEY (`ID_TrabajaComo`,`ID_Programa`,`fecha_inicio`),
+Foreign KEY (ID_TrabajaComo) references Funcion(`ID_Funcion`),
+Foreign KEY (ID_Programa)references Programa(`ID_Programa`)
+);
+CREATE TABLE `pmuestrapubli` (
+  `ID_Publicidad` int(6) unsigned NOT NULL,
+  `ID_Programa` int(6) unsigned NOT NULL,
+`Fecha_Inicio` date NOT NULL,
+  `Fecha_Finalizacion` date DEFAULT NULL,
+  PRIMARY KEY (`Fecha_Inicio`,`ID_Programa`,`ID_Publicidad`),
+Foreign KEY (ID_Programa) references Programa(`ID_Programa`),
+  Foreign KEY (ID_Publicidad) references Publicidad(`ID_Publicidad`)
+);
+CREATE TABLE `programacuota` (
+  `ID_Programa_Cuota` int(6) unsigned NOT NULL,
+  `ID_Programa` int(6) unsigned NOT NULL,
+`Fecha_Pago` date DEFAULT NULL,
+`Precio` decimal(5,2) unsigned NOT NULL,
+  `Fecha_Emision` date NOT NULL,
+  PRIMARY KEY (`ID_Programa_Cuota`),
+Foreign KEY (ID_Programa) references Programa(`ID_Programa`)
+);
+CREATE TABLE `publicidadcuota` (
+  `ID_PublicidadCuota` int(6) unsigned NOT NULL AUTO_INCREMENT,
+`Fecha_Pago` date DEFAULT NULL,
+`Precio` int(6) unsigned NOT NULL,
+  `ID_Publicidad` int(6) unsigned NOT NULL,
+  `Fecha_Emision` date NOT NULL,
+  PRIMARY KEY (`ID_PublicidadCuota`),
+  Foreign KEY (ID_Publicidad) references Publicidad(`ID_Publicidad`)
+);
+CREATE TABLE `serie` (
+  `ID_Serie` int(6) unsigned NOT NULL AUTO_INCREMENT,
+`fecha_finalizacion` date DEFAULT NULL,
+`nombre` varchar(48) NOT NULL,
+  PRIMARY KEY (`ID_Serie`)
+);
+CREATE TABLE `tanda` (
+  `Hora_Inicio` time NOT NULL,
+  `Hora_Fin` time NOT NULL,
+PRIMARY KEY (`Hora_Inicio`)
+);
+CREATE TABLE `ustieneacceso` (
+`id_usuario` int(6) unsigned NOT NULL,
+  `id_acceso` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`id_usuario`,`id_acceso`),
+  Foreign KEY (id_acceso) acceso(`id_acceso`)
+);
+
+
+CREATE TABLE `usuarios` (
+  `id_usuario` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(16) NOT NULL,
+  `contrasena` varbinary(256) NOT NULL,
+  PRIMARY KEY (`id_usuario`)
+);
+CREATE TABLE `video` (
+  `ID_Video` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `contenido` varchar(128) NOT NULL,
+  `nombre` varchar(48) NOT NULL,
+  `ID_Serie` int(6) unsigned DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
+  PRIMARY KEY (`ID_Video`),
+Foreign KEY (ID_Serie) Serie(`ID_Serie`)
+);
