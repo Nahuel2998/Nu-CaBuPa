@@ -126,11 +126,11 @@ Module ModTablas
         res = res.Remove(res.Length - 1)
         USQL(tabla, res, String.Format("{0} = '{1}'", dt.Rows(0).Item(0).ToString, id))
     End Sub
-    Public Sub PrepararInsert(ByVal tabla As String, ByVal datos() As String)
+    Public Sub PrepararInsert(ByVal tabla As String, ByVal datos() As String, Optional Inicio As Integer = 1)
         Dim col As String = ""
         Dim valu As String = ""
         Dim dt As DataTable = ESQLSelect("describe " + tabla)
-        Dim i As Integer = 1
+        Dim i As Integer = Inicio
         For Each dato In datos
             col += String.Format("{0},", dt.Rows(i).Item(0).ToString)
             valu += String.Format(If(dato = "null", "{0},", "'{0}',"), dato)

@@ -189,4 +189,17 @@ Public Class frmPrograma
         TBusca = Nothing
         TBuscada = ""
     End Sub
+
+
+
+    Private Sub dgvFuncionarios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionarios.CellContentClick
+
+    End Sub
+
+    Private Sub btnAnadir_Click(sender As Object, e As EventArgs) Handles btnAnadir.Click
+        Dim datos() As String = {"DATE_FORMAT(" + dtpAP.Value() + ",'%d/%m/%Y')", txtHI.Text, txtHF.Text, programaID}
+        PrepararInsert("fechaprograma", datos, 0)
+        txtHI.Text = ""
+        txtHF.Text = ""
+    End Sub
 End Class

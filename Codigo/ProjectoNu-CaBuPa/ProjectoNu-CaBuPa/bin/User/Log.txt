@@ -261,3 +261,15 @@
 09/10/2020 10:52:25 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
 09/10/2020 10:52:57 DESKTOP-SDVEG3U ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
 09/10/2020 10:53:19 DESKTOP-SDVEG3U ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+11/10/2020 11:39:23 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/10/2020 11:39:57 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+11/10/2020 11:40:00 DESKTOP-SDVEG3U ' select  FROM  WHERE true 
+11/10/2020 11:40:01 DESKTOP-SDVEG3U ' select  FROM  WHERE true 
+11/10/2020 11:48:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/10/2020 11:49:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/10/2020 11:50:48 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+11/10/2020 11:50:51 DESKTOP-SDVEG3U ' select  FROM  WHERE true 
+11/10/2020 11:55:05 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+11/10/2020 11:55:23 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+11/10/2020 11:55:25 DESKTOP-SDVEG3U ' select  FROM  WHERE true 
+11/10/2020 11:55:38 DESKTOP-SDVEG3U ' Insert into fechaprograma ( Fecha,Hora_Inicio,Hora_Fin,ID_Programa ) values ('11/10/2020','10:30','14:50','2' ) 

@@ -114,6 +114,7 @@ Module ModConector
     Public Function ESQL(ByVal sql As String) As Boolean
         Dim conT = New MySqlConnection(connStr)
         conT.Open()
+        ModLog.Guardar(sql)
         Try
             objCmd = New MySqlCommand(sql, conn)
             objCmd.Prepare()
