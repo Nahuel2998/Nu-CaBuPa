@@ -77,7 +77,6 @@ Partial Class frmPrograma
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.cbPagados = New System.Windows.Forms.CheckBox()
-        Me.ColorDateTimePicker1 = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvVSM = New System.Windows.Forms.DataGridView()
         Me.PFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PFechaPago = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -121,6 +120,7 @@ Partial Class frmPrograma
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.bwDatos = New System.ComponentModel.BackgroundWorker()
         Me.bwCargador = New System.ComponentModel.BackgroundWorker()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         CType(Me.dgvPPublicidades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBFuncionario.SuspendLayout()
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -608,9 +608,9 @@ Partial Class frmPrograma
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.GroupBox1.Controls.Add(Me.MaskedTextBox1)
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel6)
         Me.GroupBox1.Controls.Add(Me.cbPagados)
-        Me.GroupBox1.Controls.Add(Me.ColorDateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.dgvVSM)
         Me.GroupBox1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.GroupBox1.Location = New System.Drawing.Point(4, 4)
@@ -676,19 +676,6 @@ Partial Class frmPrograma
         Me.cbPagados.TabIndex = 28876925
         Me.cbPagados.Text = "Pagados"
         Me.cbPagados.UseVisualStyleBackColor = True
-        '
-        'ColorDateTimePicker1
-        '
-        Me.ColorDateTimePicker1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ColorDateTimePicker1.CustomFormat = "yyyy"
-        Me.ColorDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.ColorDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.ColorDateTimePicker1.Location = New System.Drawing.Point(505, 26)
-        Me.ColorDateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ColorDateTimePicker1.Name = "ColorDateTimePicker1"
-        Me.ColorDateTimePicker1.Size = New System.Drawing.Size(122, 27)
-        Me.ColorDateTimePicker1.TabIndex = 28876924
         '
         'dgvVSM
         '
@@ -968,6 +955,7 @@ Partial Class frmPrograma
         Me.txtHF.Name = "txtHF"
         Me.txtHF.Size = New System.Drawing.Size(102, 22)
         Me.txtHF.TabIndex = 5
+        Me.txtHF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtHF.ValidatingType = GetType(Date)
         '
         'txtHI
@@ -977,6 +965,7 @@ Partial Class frmPrograma
         Me.txtHI.Name = "txtHI"
         Me.txtHI.Size = New System.Drawing.Size(102, 22)
         Me.txtHI.TabIndex = 4
+        Me.txtHI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtHI.ValidatingType = GetType(Date)
         '
         'Label5
@@ -1264,6 +1253,17 @@ Partial Class frmPrograma
         'bwCargador
         '
         '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(504, 22)
+        Me.MaskedTextBox1.Mask = "9999"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(123, 27)
+        Me.MaskedTextBox1.TabIndex = 28876927
+        Me.MaskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.MaskedTextBox1.ValidatingType = GetType(Integer)
+        '
         'frmPrograma
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1330,7 +1330,6 @@ Partial Class frmPrograma
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txtNombre As RichTextBox
-    Friend WithEvents ColorDateTimePicker1 As ColorDateTimePicker
     Friend WithEvents PFecha As DataGridViewTextBoxColumn
     Friend WithEvents PFechaPago As DataGridViewTextBoxColumn
     Friend WithEvents ProgramaPrecio As DataGridViewTextBoxColumn
@@ -1388,4 +1387,5 @@ Partial Class frmPrograma
     Friend WithEvents dtpAP As DateTimePicker
     Friend WithEvents txtHF As MaskedTextBox
     Friend WithEvents txtHI As MaskedTextBox
+    Friend WithEvents MaskedTextBox1 As MaskedTextBox
 End Class

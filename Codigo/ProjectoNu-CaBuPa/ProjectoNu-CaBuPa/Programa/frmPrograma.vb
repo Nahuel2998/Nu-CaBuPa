@@ -7,6 +7,7 @@ Public Class frmPrograma
     Dim datosI() As String
     Private TBusca As DataTable
     Private dt_funcionario As DataTable
+    Private dt_fechas As DataTable
     Private TBuscada As String
 
     Public Sub New(ByVal pid As Integer)
@@ -169,8 +170,17 @@ Public Class frmPrograma
                 TBuscada = "fechaprograma"
                 Columna = "hora_inicio as 'Inicio', hora_fin as 'Final'"
                 Tablas = "fechaprograma"
-                Condicion = String.Format("id_programa = {0} and fecha = {1}", programaID, Format(Now.Date, "yyyy-MM-dd"))
+                Condicion = String.Format("id_programa = {0} and fecha = '{1}'", programaID, Format(Now.Date, "yyyy-MM-dd"))
         End Select
+        If Not (bwCargador.IsBusy) Then
+            bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
+        End If
+    End Sub
+    Public Sub BFecha()
+        Dim Columna As String = "hora_inicio as 'Inicio', hora_fin as 'Final'"
+        Dim Condicion As String = String.Format("id_programa = {0} and fecha = '{1}'", programaID, Format(dtpBP, "yyyy-MM-dd"))
+        Dim Tablas As String = "fechaprograma"
+        TBuscada = "fechaprograma"
         If Not (bwCargador.IsBusy) Then
             bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
         End If
@@ -181,9 +191,9 @@ Public Class frmPrograma
             Case "Funcionario"
                 dt_funcionario = TBusca
                 ActualizarTablaC(dt_funcionario, dgvFuncionarios)
-            Case "Publicidades"
-                dt_Serie = TBusca
-                'ActualizarTablaC(dt_Serie, dgvBS)
+            Case "fechaprograma"
+                dt_fechas = TBusca
+                ActualizarTabla(dt_fechas, dgvPrograma)
             Case "FechaPrograma"
                 dt_Empresa = TBusca
                ' ActualizarTablaC(dt_Empresa, dgvClientes)
@@ -206,5 +216,9 @@ Public Class frmPrograma
         PrepararInsert("fechaprograma", datos, 0)
         txtHI.Text = ""
         txtHF.Text = ""
+    End Sub
+
+    Private Sub dtpBP_ValueChanged(sender As Object, e As EventArgs) Handles dtpBP.ValueChanged
+
     End Sub
 End Class
