@@ -102,8 +102,6 @@ Partial Class frmPrincipal
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBFuncionario = New System.Windows.Forms.GroupBox()
         Me.dgvFuncionarios = New System.Windows.Forms.DataGridView()
-        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBDEscripcion = New System.Windows.Forms.GroupBox()
         Me.TBDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -215,6 +213,9 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
+        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFuncion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -774,7 +775,7 @@ Partial Class frmPrincipal
         DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvFuncionarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
         Me.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FNombre, Me.Telefono})
+        Me.dgvFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FNombre, Me.Telefono, Me.FFuncion})
         DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         DataGridViewCellStyle23.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
@@ -794,18 +795,6 @@ Partial Class frmPrincipal
         Me.dgvFuncionarios.RowTemplate.Height = 28
         Me.dgvFuncionarios.RowTemplate.ReadOnly = True
         Me.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'FNombre
-        '
-        resources.ApplyResources(Me.FNombre, "FNombre")
-        Me.FNombre.Name = "FNombre"
-        Me.FNombre.ReadOnly = True
-        '
-        'Telefono
-        '
-        resources.ApplyResources(Me.Telefono, "Telefono")
-        Me.Telefono.Name = "Telefono"
-        Me.Telefono.ReadOnly = True
         '
         'GBDEscripcion
         '
@@ -1702,6 +1691,24 @@ Partial Class frmPrincipal
         'BWBuscador
         '
         '
+        'FNombre
+        '
+        resources.ApplyResources(Me.FNombre, "FNombre")
+        Me.FNombre.Name = "FNombre"
+        Me.FNombre.ReadOnly = True
+        '
+        'Telefono
+        '
+        resources.ApplyResources(Me.Telefono, "Telefono")
+        Me.Telefono.Name = "Telefono"
+        Me.Telefono.ReadOnly = True
+        '
+        'FFuncion
+        '
+        resources.ApplyResources(Me.FFuncion, "FFuncion")
+        Me.FFuncion.Name = "FFuncion"
+        Me.FFuncion.ReadOnly = True
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -1921,8 +1928,6 @@ Partial Class frmPrincipal
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents GBFuncionario As GroupBox
     Friend WithEvents dgvFuncionarios As DataGridView
-    Friend WithEvents FNombre As DataGridViewTextBoxColumn
-    Friend WithEvents Telefono As DataGridViewTextBoxColumn
     Friend WithEvents GBDEscripcion As GroupBox
     Friend WithEvents TBDescripcion As RichTextBox
     Friend WithEvents TabPage3 As TabPage
@@ -1951,4 +1956,7 @@ Partial Class frmPrincipal
     Friend WithEvents VNombre As DataGridViewTextBoxColumn
     Friend WithEvents VSerie As DataGridViewTextBoxColumn
     Friend WithEvents VEliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents FNombre As DataGridViewTextBoxColumn
+    Friend WithEvents Telefono As DataGridViewTextBoxColumn
+    Friend WithEvents FFuncion As DataGridViewTextBoxColumn
 End Class

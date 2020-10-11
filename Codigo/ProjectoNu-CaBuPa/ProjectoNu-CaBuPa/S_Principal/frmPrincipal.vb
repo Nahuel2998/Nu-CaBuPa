@@ -150,7 +150,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWDPRogramas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWDPRogramas.RunWorkerCompleted
-        ActualizarTabla(dt_dprograma, dgvFuncionarios)
+        ActualizarTablaC(dt_dprograma, dgvFuncionarios)
         ActualizarTabla(dt_publi, dgvPPublicidades)
         GBFuncionarios.Text = PNombre
         TBDescripcion.Text = DescripcionP

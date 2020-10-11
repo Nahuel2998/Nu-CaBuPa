@@ -165,6 +165,11 @@ Public Class frmPrograma
                 Columna = "fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
                 Tablas = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
                 Tablas = String.Format(Tablas, programaID)
+            Case 4
+                TBuscada = "fechaprograma"
+                Columna = "hora_inicio as 'Inicio', hora_fin as 'Final'"
+                Tablas = "fechaprograma"
+                Condicion = String.Format("id_programa = {0} and fecha = {1}", programaID, Format(Now.Date, "yyyy-MM-dd"))
         End Select
         If Not (bwCargador.IsBusy) Then
             bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
@@ -197,7 +202,7 @@ Public Class frmPrograma
     End Sub
 
     Private Sub btnAnadir_Click(sender As Object, e As EventArgs) Handles btnAnadir.Click
-        Dim datos() As String = {"DATE_FORMAT(" + dtpAP.Value() + ",'%d/%m/%Y')", txtHI.Text, txtHF.Text, programaID}
+        Dim datos() As String = {Format(dtpAP.Value().Date, "yyyy-MM-dd"), txtHI.Text, txtHF.Text, programaID}
         PrepararInsert("fechaprograma", datos, 0)
         txtHI.Text = ""
         txtHF.Text = ""

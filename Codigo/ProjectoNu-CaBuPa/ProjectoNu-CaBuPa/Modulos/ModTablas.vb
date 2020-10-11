@@ -133,7 +133,7 @@ Module ModTablas
         Dim i As Integer = Inicio
         For Each dato In datos
             col += String.Format("{0},", dt.Rows(i).Item(0).ToString)
-            valu += String.Format(If(dato = "null", "{0},", "'{0}',"), dato)
+            valu += String.Format(If(dato = "null" Or dato.Contains("("), "{0},", "'{0}',"), dato)
             i += 1
         Next
         col = col.Remove(col.Length - 1)

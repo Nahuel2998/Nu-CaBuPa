@@ -250,7 +250,11 @@ Module ModConector
         Return DevolverTabla(PSQL("p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa'", "fechaprograma f inner join programa p on f.id_programa=p.id_programa", "fecha = '" + Format(fecha, "yyyy-MM-dd") + "'"))
     End Function
     Public Function AFPrograma(idPrograma As Integer) As DataTable
-        Return DevolverTabla(PSQL("Nombre, Telefono", "programa p inner join funtrabaja f on f.id_programa=p.id_programa inner join funcionario ff on ff.id_funcionario = f.id_funcionario", "p.id_programa = '" + idPrograma.ToString + "'"))
+        Dim Columna As String = "fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función"
+        Dim Tablas As String = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
+        Tablas = String.Format(Tablas, idPrograma)
+        ModLog.Guardar(PSQL(Columna, Tablas, "fecha_finalizacion = null"))
+        Return DevolverTabla(PSQL(Columna, Tablas, "fecha_finalizacion is null"))
     End Function
     Public Function APublicidad(Fecha As Date, Hora As TimeSpan) As DataTable
         Return DevolverTabla(PSQL("Tema", "publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad inner join tanda t on t.Hora_Inicio = a.hora_inicio", "a.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd").ToString + "' and t.hora_inicio = '" + Hora.ToString + "'"))
