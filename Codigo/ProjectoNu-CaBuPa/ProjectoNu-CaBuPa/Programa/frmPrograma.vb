@@ -178,7 +178,7 @@ Public Class frmPrograma
     End Sub
     Public Sub BFecha()
         Dim Columna As String = "hora_inicio as 'Inicio', hora_fin as 'Final'"
-        Dim Condicion As String = String.Format("id_programa = {0} and fecha = '{1}'", programaID, Format(dtpBP, "yyyy-MM-dd"))
+        Dim Condicion As String = String.Format("id_programa = {0} and fecha = '{1}'", programaID, Format(dtpBP.Value, "yyyy-MM-dd"))
         Dim Tablas As String = "fechaprograma"
         TBuscada = "fechaprograma"
         If Not (bwCargador.IsBusy) Then
@@ -193,7 +193,7 @@ Public Class frmPrograma
                 ActualizarTablaC(dt_funcionario, dgvFuncionarios)
             Case "fechaprograma"
                 dt_fechas = TBusca
-                ActualizarTabla(dt_fechas, dgvPrograma)
+                ActualizarTablaC(dt_fechas, dgvPrograma, False)
             Case "FechaPrograma"
                 dt_Empresa = TBusca
                ' ActualizarTablaC(dt_Empresa, dgvClientes)
@@ -207,9 +207,6 @@ Public Class frmPrograma
 
 
 
-    Private Sub dgvFuncionarios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionarios.CellContentClick
-
-    End Sub
 
     Private Sub btnAnadir_Click(sender As Object, e As EventArgs) Handles btnAnadir.Click
         Dim datos() As String = {Format(dtpAP.Value().Date, "yyyy-MM-dd"), txtHI.Text, txtHF.Text, programaID}
@@ -219,6 +216,23 @@ Public Class frmPrograma
     End Sub
 
     Private Sub dtpBP_ValueChanged(sender As Object, e As EventArgs) Handles dtpBP.ValueChanged
+        BFecha()
+    End Sub
 
+    Private Sub dgvPrograma_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellClick
+        ClickCheck(dgvPrograma)
+    End Sub
+
+    Private Sub btnABorrar_Click(sender As Object, e As EventArgs) Handles btnABorrar.Click
+        If Not IsNothing(dt_fechas) Then
+            If (dt_fechas.Rows.Count > 0) Then
+                Dim RId() As String = ObtenerCheck(dt_fechas, dgvPrograma, 0)
+                If Not RId.Length = 0 Then
+                    Dim formDelete As New frmConfirmarBorrado("Fechaprograma", {Format(dtpBP.Value, "yyyy-MM-dd")}, False, RId)
+                    formDelete.ShowDialog(Me)
+                    BFecha()
+                End If
+            End If
+        End If
     End Sub
 End Class

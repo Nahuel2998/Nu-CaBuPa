@@ -151,7 +151,7 @@ Public Class frmPrincipal
 
     Private Sub BWDPRogramas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWDPRogramas.RunWorkerCompleted
         ActualizarTablaC(dt_dprograma, dgvFuncionarios)
-        ActualizarTabla(dt_publi, dgvPPublicidades)
+        ActualizarTablaC(dt_publi, dgvPPublicidades, False) 'fix
         GBFuncionarios.Text = PNombre
         TBDescripcion.Text = DescripcionP
         dgvFuncionarios.ClearSelection()
@@ -191,14 +191,14 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWPublicidades_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWPublicidades.RunWorkerCompleted
-        ActualizarTabla(dt_publi, dgvPublicidades)
+        ActualizarTablaC(dt_publi, dgvPublicidades, False) 'fix
     End Sub
 
     Private Sub BWTandas_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWTandas.DoWork
         dt_tandas = ModConector.ATandas()
     End Sub
     Public Sub Tandas()
-        ActualizarTabla(dt_tandas, dgvTandas)
+        ActualizarTablaC(dt_tandas, dgvTandas, False) 'fix
     End Sub
 
     Private Sub BWTandas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWTandas.RunWorkerCompleted
@@ -280,7 +280,7 @@ Public Class frmPrincipal
         txtBSnombre.Clear()
         ctpSerie.Value = Now.Date
         cbS.Checked = False
-        ActualizarTabla(Nothing, dgvBS)
+        ActualizarTablaC(Nothing, dgvBS, False) 'fix
     End Sub
 
     Private Sub frmPrincipal_Resize(sender As Object, e As EventArgs) Handles Me.Resize
@@ -292,7 +292,7 @@ Public Class frmPrincipal
         txtVnombre.Clear()
         dtpfechavideo.Value = Now.Date
         cbFecha.Checked = False
-        ActualizarTabla(Nothing, dgvVB)
+        ActualizarTablaC(Nothing, dgvVB, False) 'fix
     End Sub
 
     Private Sub btnBuscarBS_Click(sender As Object, e As EventArgs) Handles btnBuscarBS.Click
@@ -432,13 +432,13 @@ Public Class frmPrincipal
         txtCNombre.Clear()
         txtCMail.Clear()
         txtCTel.Clear()
-        ActualizarTabla(Nothing, dgvClientes)
+        ActualizarTablaC(Nothing, dgvClientes, False) 'fix
     End Sub
 
     Private Sub btnLimpiarBP_Click(sender As Object, e As EventArgs) Handles btnLimpiarBP.Click
         txtNombreBP.Clear()
         txtDescripcionBP.Clear()
-        ActualizarTabla(Nothing, dgvBProgramas)
+        ActualizarTablaC(Nothing, dgvBProgramas, False) 'fix
     End Sub
 
     Private Sub btnBuscarBP_Click(sender As Object, e As EventArgs) Handles btnBuscarBP.Click
@@ -496,4 +496,6 @@ Public Class frmPrincipal
         Dim formPrograma As New frmPrograma(-1)
         formPrograma.ShowDialog()
     End Sub
+
+
 End Class

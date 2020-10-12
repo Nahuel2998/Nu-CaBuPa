@@ -38,13 +38,13 @@ Module ModTablas
             Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value = Not Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value
         End If
     End Sub
-    Public Function ObtenerCheck(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As String()
+    Public Function ObtenerCheck(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional ByVal Col As Integer = 0) As String()
         Dim UltiCol As Integer = Dgv.Columns.Count - 1
         Dim Ids(Dgv.Rows.Count - 1) As String
         Dim Valores As Integer = 0
         For i As Integer = 0 To Dgv.Rows.Count - 1
             If (Dgv.Rows(i).Cells(UltiCol).Value = True) Then
-                Ids(i) = Tabla.Rows(i).Item(0).ToString
+                Ids(i) = Tabla.Rows(i).Item(Col).ToString
                 Valores += 1
             Else
                 Ids(i) = ""
@@ -60,29 +60,8 @@ Module ModTablas
         Next
         Return ID
     End Function
-    Public Sub ActualizarTabla(ByRef Tabla As DataTable, ByRef Dgv As DataGridView)
-        If Not IsNothing(Tabla) Then
-            Dim Tamanos(Dgv.Columns.Count() - 1) As Single
-            For i As Integer = 0 To Dgv.Columns.Count - 1
-                Tamanos(i) = Dgv.Columns(i).FillWeight()
-            Next
-            Dgv.Columns.Clear()
-            Dgv.DataSource = Tabla
-            For i As Integer = 0 To Dgv.Columns.Count - 1
-                Dgv.Columns(i).FillWeight() = Tamanos(i)
-                Dgv.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
-            Next
-            Dgv.Refresh()
-        Else
-            If (Dgv.Rows.Count > 0) Then
-                Dgv.DataSource.Rows.Clear()
-                Dgv.Refresh()
-            End If
-        End If
-        Dgv.AllowUserToOrderColumns = False
-    End Sub
 
-    Public Sub ActualizarTablaC(ByRef Tabla As DataTable, ByRef Dgv As DataGridView)
+    Public Sub ActualizarTablaC(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional C As Boolean = True)
         If Not IsNothing(Tabla) Then
             Dim Tamanos(Dgv.Columns.Count() - 1) As Single
             For i As Integer = 0 To Dgv.Columns.Count - 1
@@ -93,18 +72,16 @@ Module ModTablas
             Columna.ReadOnly = False
             Dgv.Columns.Clear()
             Dgv.DataSource = Tabla
-            If (Tabla.Columns.Count > 1) Then
-
+            If (Tabla.Columns.Count > 1 And C) Then
                 Dgv.Columns.RemoveAt(0)
             End If
-            If (Tabla.Columns.Count = Tamanos.Length) Then
+            If ((Tabla.Columns.Count = Tamanos.Length And C) Or (Not C And Tabla.Columns.Count = Tamanos.Length - 1)) Then
                 Dgv.Columns.Add(Columna)
             End If
             For i As Integer = 0 To Dgv.Columns.Count - 1
                 Dgv.Columns(i).FillWeight() = Tamanos(i)
                 Dgv.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
                 Dgv.Columns(i).ReadOnly = If(Tabla.Columns.Count = Tamanos.Length, False, True)
-
             Next
             Dgv.Refresh()
         Else
@@ -176,6 +153,15 @@ Module ModTablas
         res += ")"
         BSQL(tabla, res)
     End Sub
+    Public Function CreadorCondicion(ByVal datos As String, ByVal ids() As String)
+        Dim res As String = datos + " in ("
+        For Each id In ids
+            res += String.Format(If(id = "null", "{0} ,", "'{0}' ,"), id)
+        Next
+        res = res.Remove(res.Length - 1)
+        res += ")"
+        Return res
+    End Function
 
     Public Function BuscarDatos(ByVal tabla As String, ByVal Columnas() As String, ByVal campo As String, ByVal id As String) As String()
         Dim res As String = ""

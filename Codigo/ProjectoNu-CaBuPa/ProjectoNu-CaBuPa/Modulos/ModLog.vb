@@ -9,6 +9,5 @@ Module ModLog
         Dim escribir As New StreamWriter(ruta & archivo, True)
         escribir.WriteLine(Now.ToString + " " + My.Computer.Name + " ' " + Acciones + " ")
         escribir.Close()
-
     End Sub
 End Module

@@ -313,3 +313,143 @@
 11/10/2020 20:09:09 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 11/10/2020 20:09:13 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
 11/10/2020 20:09:16 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-11' 
+12/10/2020 13:27:25 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 13:27:35 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+12/10/2020 13:27:37 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE true 
+12/10/2020 13:27:39 DESKTOP-SDVEG3U ' select  FROM  WHERE true 
+12/10/2020 13:27:40 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE true 
+12/10/2020 13:27:45 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 13:27:55 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+12/10/2020 13:27:57 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 13:28:27 DESKTOP-SDVEG3U ' Insert into fechaprograma ( Fecha,Hora_Inicio,Hora_Fin,ID_Programa ) values ('2020-10-12','12:34','13:44','2' ) 
+12/10/2020 13:35:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 13:35:25 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 13:35:28 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 13:36:14 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 13:36:34 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 13:36:36 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 13:36:38 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-11' 
+12/10/2020 13:36:41 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 13:40:17 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 13:40:21 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 13:40:24 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 13:40:27 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-11' 
+12/10/2020 13:44:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 13:44:53 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 13:44:55 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 13:55:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 13:57:49 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 13:57:52 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 13:58:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 13:58:48 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 13:59:47 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 13:59:51 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 14:01:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 14:02:03 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:02:03 DESKTOP-SDVEG3U ' dgvTandas 
+12/10/2020 14:02:03 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:02:03 DESKTOP-SDVEG3U ' dgvTandas 
+12/10/2020 14:02:03 DESKTOP-SDVEG3U ' 2 
+12/10/2020 14:02:03 DESKTOP-SDVEG3U ' dgvTandas 
+12/10/2020 14:03:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' 2 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' 3 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' dgvTandas 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' dgvTandas 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' dgvFuncionarios 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' dgvFuncionarios 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' 2 
+12/10/2020 14:03:41 DESKTOP-SDVEG3U ' dgvFuncionarios 
+12/10/2020 14:03:46 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 14:03:46 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:03:46 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:03:46 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:03:46 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:03:46 DESKTOP-SDVEG3U ' 2 
+12/10/2020 14:03:46 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:04:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 14:04:32 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:04:32 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:04:32 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:04:32 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:04:32 DESKTOP-SDVEG3U ' 2 
+12/10/2020 14:04:32 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:04:32 DESKTOP-SDVEG3U ' 3 
+12/10/2020 14:04:32 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:04:32 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:04:32 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 14:07:56 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 14:08:00 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:08:00 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:08:00 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:08:00 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:08:00 DESKTOP-SDVEG3U ' 2 
+12/10/2020 14:08:00 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:08:00 DESKTOP-SDVEG3U ' 3 
+12/10/2020 14:08:00 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:08:00 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 14:08:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' 2 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' 3 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' dgvTandas 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' dgvTandas 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' select fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE fecha_finalizacion = null 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' dgvFuncionarios 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' dgvFuncionarios 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' 2 
+12/10/2020 14:08:54 DESKTOP-SDVEG3U ' dgvFuncionarios 
+12/10/2020 14:08:59 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 14:08:59 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:08:59 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:08:59 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:08:59 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:08:59 DESKTOP-SDVEG3U ' 2 
+12/10/2020 14:08:59 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:09:02 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 14:09:02 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:09:02 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:09:02 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:09:02 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:09:02 DESKTOP-SDVEG3U ' 2 
+12/10/2020 14:09:02 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:09:05 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 14:09:05 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:09:05 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:09:05 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:09:05 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:09:05 DESKTOP-SDVEG3U ' 2 
+12/10/2020 14:09:05 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:09:07 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-11' 
+12/10/2020 14:09:07 DESKTOP-SDVEG3U ' 0 
+12/10/2020 14:09:07 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:09:07 DESKTOP-SDVEG3U ' 1 
+12/10/2020 14:09:07 DESKTOP-SDVEG3U ' dgvPrograma 
+12/10/2020 14:09:07 DESKTOP-SDVEG3U ' 2 12/10/2020 14:58:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 14:58:34 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 14:58:37 DESKTOP-SDVEG3U ' DELETE FROM Fechaprograma WHERE fecha in ('2020-10-12' ) and Hora_inicio in ('13:44:00' ) 
+12/10/2020 14:58:37 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 14:59:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+12/10/2020 14:59:51 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+12/10/2020 14:59:53 DESKTOP-SDVEG3U ' DELETE FROM Fechaprograma WHERE fecha in ('2020-10-12' ) and Hora_inicio in ('12:34:00' ) 
+12/10/2020 14:59:53 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 

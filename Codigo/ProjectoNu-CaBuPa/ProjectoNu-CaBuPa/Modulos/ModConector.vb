@@ -183,11 +183,8 @@ Module ModConector
     End Function
     Public Function PSQL(ByVal nColumn As String, ByVal nTabla As String, ByVal Condition As String) As String
         Return "select " + nColumn + " FROM " + nTabla + " WHERE " + Condition
-
     End Function
     Public Sub USQL(ByVal nTabla As String, ByVal Orden As String, ByVal Condition As String)
-
-
         ESQL("update " + nTabla + " set " + Orden + " WHERE " + Condition)
     End Sub
 #End Region
@@ -253,7 +250,6 @@ Module ModConector
         Dim Columna As String = "fun.id_funcionario, fun.Nombre, Telefono,f.Nombre as Función"
         Dim Tablas As String = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
         Tablas = String.Format(Tablas, idPrograma)
-        ModLog.Guardar(PSQL(Columna, Tablas, "fecha_finalizacion = null"))
         Return DevolverTabla(PSQL(Columna, Tablas, "fecha_finalizacion is null"))
     End Function
     Public Function APublicidad(Fecha As Date, Hora As TimeSpan) As DataTable

@@ -73,6 +73,7 @@ Partial Class frmPrograma
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -120,7 +121,6 @@ Partial Class frmPrograma
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.bwDatos = New System.ComponentModel.BackgroundWorker()
         Me.bwCargador = New System.ComponentModel.BackgroundWorker()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         CType(Me.dgvPPublicidades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBFuncionario.SuspendLayout()
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -622,6 +622,17 @@ Partial Class frmPrograma
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Alquiler"
+        '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(504, 22)
+        Me.MaskedTextBox1.Mask = "9999"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(123, 27)
+        Me.MaskedTextBox1.TabIndex = 28876927
+        Me.MaskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.MaskedTextBox1.ValidatingType = GetType(Integer)
         '
         'TableLayoutPanel6
         '
@@ -1252,17 +1263,6 @@ Partial Class frmPrograma
         '
         'bwCargador
         '
-        '
-        'MaskedTextBox1
-        '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(504, 22)
-        Me.MaskedTextBox1.Mask = "9999"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(123, 27)
-        Me.MaskedTextBox1.TabIndex = 28876927
-        Me.MaskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MaskedTextBox1.ValidatingType = GetType(Integer)
         '
         'frmPrograma
         '

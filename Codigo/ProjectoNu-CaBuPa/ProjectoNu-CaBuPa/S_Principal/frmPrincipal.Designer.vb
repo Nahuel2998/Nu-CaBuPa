@@ -102,6 +102,9 @@ Partial Class frmPrincipal
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBFuncionario = New System.Windows.Forms.GroupBox()
         Me.dgvFuncionarios = New System.Windows.Forms.DataGridView()
+        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFuncion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBDEscripcion = New System.Windows.Forms.GroupBox()
         Me.TBDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -213,9 +216,6 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
-        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FFuncion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -795,6 +795,24 @@ Partial Class frmPrincipal
         Me.dgvFuncionarios.RowTemplate.Height = 28
         Me.dgvFuncionarios.RowTemplate.ReadOnly = True
         Me.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
+        'FNombre
+        '
+        resources.ApplyResources(Me.FNombre, "FNombre")
+        Me.FNombre.Name = "FNombre"
+        Me.FNombre.ReadOnly = True
+        '
+        'Telefono
+        '
+        resources.ApplyResources(Me.Telefono, "Telefono")
+        Me.Telefono.Name = "Telefono"
+        Me.Telefono.ReadOnly = True
+        '
+        'FFuncion
+        '
+        resources.ApplyResources(Me.FFuncion, "FFuncion")
+        Me.FFuncion.Name = "FFuncion"
+        Me.FFuncion.ReadOnly = True
         '
         'GBDEscripcion
         '
@@ -1690,24 +1708,6 @@ Partial Class frmPrincipal
         '
         'BWBuscador
         '
-        '
-        'FNombre
-        '
-        resources.ApplyResources(Me.FNombre, "FNombre")
-        Me.FNombre.Name = "FNombre"
-        Me.FNombre.ReadOnly = True
-        '
-        'Telefono
-        '
-        resources.ApplyResources(Me.Telefono, "Telefono")
-        Me.Telefono.Name = "Telefono"
-        Me.Telefono.ReadOnly = True
-        '
-        'FFuncion
-        '
-        resources.ApplyResources(Me.FFuncion, "FFuncion")
-        Me.FFuncion.Name = "FFuncion"
-        Me.FFuncion.ReadOnly = True
         '
         'frmPrincipal
         '

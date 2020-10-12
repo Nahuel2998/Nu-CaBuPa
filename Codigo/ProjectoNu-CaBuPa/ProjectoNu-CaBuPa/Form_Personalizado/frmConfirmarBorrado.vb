@@ -1,11 +1,13 @@
 ﻿Public Class frmConfirmarBorrado
     Dim tabla As String
     Dim id() As String
+    Dim Rid() As String
     Dim c As Boolean = False
-    Public Sub New(ByVal t As String, ByVal identificador() As String, ByVal Cerrar As Boolean)
+    Public Sub New(ByVal t As String, ByVal identificador() As String, ByVal Cerrar As Boolean, Optional ByVal Eid() As String = Nothing)
         InitializeComponent()
         tabla = t
         id = identificador
+        Rid = Eid
         c = Cerrar
     End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -23,6 +25,8 @@
                 PrepararDelete("Empresa", "id_empresa", id)
             Case "Programa"
                 PrepararDelete("Programa", "ID_Programa", id)
+            Case "Fechaprograma"
+                BSQL("Fechaprograma", CreadorCondicion("fecha", id) + " and " + CreadorCondicion("Hora_inicio", Rid))
         End Select
         If (c) Then
             Owner.Close()
