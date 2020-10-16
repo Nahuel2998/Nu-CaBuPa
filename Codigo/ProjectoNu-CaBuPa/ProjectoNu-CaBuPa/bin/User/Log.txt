@@ -453,3 +453,5 @@
 12/10/2020 14:59:51 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
 12/10/2020 14:59:53 DESKTOP-SDVEG3U ' DELETE FROM Fechaprograma WHERE fecha in ('2020-10-12' ) and Hora_inicio in ('12:34:00' ) 
 12/10/2020 14:59:53 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
+15/10/2020 21:00:20 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+15/10/2020 21:00:57 LAPTOP-701EDAA0 ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 

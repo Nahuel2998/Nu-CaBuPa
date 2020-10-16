@@ -497,5 +497,7 @@ Public Class frmPrincipal
         formPrograma.ShowDialog()
     End Sub
 
+    Private Sub btnagendarEvento_Click(sender As Object, e As EventArgs) Handles btnagendarEvento.Click
 
+    End Sub
 End Class

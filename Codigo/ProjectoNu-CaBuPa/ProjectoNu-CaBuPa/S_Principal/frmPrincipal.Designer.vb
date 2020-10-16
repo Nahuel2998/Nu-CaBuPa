@@ -76,7 +76,6 @@ Partial Class frmPrincipal
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
         Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -89,7 +88,6 @@ Partial Class frmPrincipal
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -153,7 +151,6 @@ Partial Class frmPrincipal
         Me.txtBSnombre = New System.Windows.Forms.RichTextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.cbS = New System.Windows.Forms.CheckBox()
-        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -191,10 +188,6 @@ Partial Class frmPrincipal
         Me.btncLimpiar = New System.Windows.Forms.Button()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cTelefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cMail = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -216,6 +209,14 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
+        Me.btnagendarEvento = New System.Windows.Forms.Button()
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cTelefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cMail = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -334,6 +335,7 @@ Partial Class frmPrincipal
         'GBEventos
         '
         resources.ApplyResources(Me.GBEventos, "GBEventos")
+        Me.GBEventos.Controls.Add(Me.btnagendarEvento)
         Me.GBEventos.Controls.Add(Me.dgvEventos)
         Me.GBEventos.Name = "GBEventos"
         Me.GBEventos.TabStop = False
@@ -423,12 +425,6 @@ Partial Class frmPrincipal
         Me.GroupBox7.Controls.Add(Me.dgvPublicidades)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
-        '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
         '
         'dgvPublicidades
         '
@@ -593,11 +589,6 @@ Partial Class frmPrincipal
         Me.GroupBox1.Controls.Add(Me.dgvPrograma)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
-        '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.Name = "dtp"
         '
         'dgvPrograma
         '
@@ -857,15 +848,17 @@ Partial Class frmPrincipal
         '
         'btnIngresarBP
         '
+        Me.btnIngresarBP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnIngresarBP, "btnIngresarBP")
         Me.btnIngresarBP.Name = "btnIngresarBP"
-        Me.btnIngresarBP.UseVisualStyleBackColor = True
+        Me.btnIngresarBP.UseVisualStyleBackColor = False
         '
         'btnBorrarBP
         '
+        Me.btnBorrarBP.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnBorrarBP, "btnBorrarBP")
         Me.btnBorrarBP.Name = "btnBorrarBP"
-        Me.btnBorrarBP.UseVisualStyleBackColor = True
+        Me.btnBorrarBP.UseVisualStyleBackColor = False
         '
         'Panel10
         '
@@ -876,8 +869,9 @@ Partial Class frmPrincipal
         'btnBuscarBP
         '
         resources.ApplyResources(Me.btnBuscarBP, "btnBuscarBP")
+        Me.btnBuscarBP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnBuscarBP.Name = "btnBuscarBP"
-        Me.btnBuscarBP.UseVisualStyleBackColor = True
+        Me.btnBuscarBP.UseVisualStyleBackColor = False
         '
         'Panel18
         '
@@ -888,8 +882,9 @@ Partial Class frmPrincipal
         'btnLimpiarBP
         '
         resources.ApplyResources(Me.btnLimpiarBP, "btnLimpiarBP")
+        Me.btnLimpiarBP.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btnLimpiarBP.Name = "btnLimpiarBP"
-        Me.btnLimpiarBP.UseVisualStyleBackColor = True
+        Me.btnLimpiarBP.UseVisualStyleBackColor = False
         '
         'GroupBox9
         '
@@ -1064,15 +1059,17 @@ Partial Class frmPrincipal
         '
         'btnsIngresar
         '
+        Me.btnsIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnsIngresar, "btnsIngresar")
         Me.btnsIngresar.Name = "btnsIngresar"
-        Me.btnsIngresar.UseVisualStyleBackColor = True
+        Me.btnsIngresar.UseVisualStyleBackColor = False
         '
         'btnBorrarS
         '
+        Me.btnBorrarS.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnBorrarS, "btnBorrarS")
         Me.btnBorrarS.Name = "btnBorrarS"
-        Me.btnBorrarS.UseVisualStyleBackColor = True
+        Me.btnBorrarS.UseVisualStyleBackColor = False
         '
         'Panel16
         '
@@ -1083,8 +1080,9 @@ Partial Class frmPrincipal
         'btnBuscarBS
         '
         resources.ApplyResources(Me.btnBuscarBS, "btnBuscarBS")
+        Me.btnBuscarBS.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnBuscarBS.Name = "btnBuscarBS"
-        Me.btnBuscarBS.UseVisualStyleBackColor = True
+        Me.btnBuscarBS.UseVisualStyleBackColor = False
         '
         'Panel17
         '
@@ -1095,8 +1093,9 @@ Partial Class frmPrincipal
         'btnLimpiarBS
         '
         resources.ApplyResources(Me.btnLimpiarBS, "btnLimpiarBS")
+        Me.btnLimpiarBS.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btnLimpiarBS.Name = "btnLimpiarBS"
-        Me.btnLimpiarBS.UseVisualStyleBackColor = True
+        Me.btnLimpiarBS.UseVisualStyleBackColor = False
         '
         'GroupBox3
         '
@@ -1227,11 +1226,6 @@ Partial Class frmPrincipal
         Me.cbS.Name = "cbS"
         Me.cbS.UseVisualStyleBackColor = True
         '
-        'ctpSerie
-        '
-        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
-        Me.ctpSerie.Name = "ctpSerie"
-        '
         'TabPage4
         '
         Me.TabPage4.BackColor = System.Drawing.Color.Black
@@ -1258,15 +1252,17 @@ Partial Class frmPrincipal
         '
         'btnIngresarV
         '
+        Me.btnIngresarV.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnIngresarV, "btnIngresarV")
         Me.btnIngresarV.Name = "btnIngresarV"
-        Me.btnIngresarV.UseVisualStyleBackColor = True
+        Me.btnIngresarV.UseVisualStyleBackColor = False
         '
         'btnbuscarv
         '
+        Me.btnbuscarv.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         resources.ApplyResources(Me.btnbuscarv, "btnbuscarv")
         Me.btnbuscarv.Name = "btnbuscarv"
-        Me.btnbuscarv.UseVisualStyleBackColor = True
+        Me.btnbuscarv.UseVisualStyleBackColor = False
         '
         'Información
         '
@@ -1354,15 +1350,17 @@ Partial Class frmPrincipal
         '
         'btnBorrar
         '
+        Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnBorrar, "btnBorrar")
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.UseVisualStyleBackColor = True
+        Me.btnBorrar.UseVisualStyleBackColor = False
         '
         'btnlimpiarv
         '
+        Me.btnlimpiarv.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         resources.ApplyResources(Me.btnlimpiarv, "btnlimpiarv")
         Me.btnlimpiarv.Name = "btnlimpiarv"
-        Me.btnlimpiarv.UseVisualStyleBackColor = True
+        Me.btnlimpiarv.UseVisualStyleBackColor = False
         '
         'GroupBox4
         '
@@ -1473,15 +1471,17 @@ Partial Class frmPrincipal
         '
         'btncBorrar
         '
+        Me.btncBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btncBorrar, "btncBorrar")
         Me.btncBorrar.Name = "btncBorrar"
-        Me.btncBorrar.UseVisualStyleBackColor = True
+        Me.btncBorrar.UseVisualStyleBackColor = False
         '
         'btncIngresar
         '
+        Me.btncIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btncIngresar, "btncIngresar")
         Me.btncIngresar.Name = "btncIngresar"
-        Me.btncIngresar.UseVisualStyleBackColor = True
+        Me.btncIngresar.UseVisualStyleBackColor = False
         '
         'Panel11
         '
@@ -1492,8 +1492,9 @@ Partial Class frmPrincipal
         'btncBuscar
         '
         resources.ApplyResources(Me.btncBuscar, "btncBuscar")
+        Me.btncBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btncBuscar.Name = "btncBuscar"
-        Me.btncBuscar.UseVisualStyleBackColor = True
+        Me.btncBuscar.UseVisualStyleBackColor = False
         '
         'Panel15
         '
@@ -1504,8 +1505,9 @@ Partial Class frmPrincipal
         'btncLimpiar
         '
         resources.ApplyResources(Me.btncLimpiar, "btncLimpiar")
+        Me.btncLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btncLimpiar.Name = "btncLimpiar"
-        Me.btncLimpiar.UseVisualStyleBackColor = True
+        Me.btncLimpiar.UseVisualStyleBackColor = False
         '
         'GroupBox6
         '
@@ -1559,32 +1561,6 @@ Partial Class frmPrincipal
         Me.dgvClientes.RowTemplate.Height = 28
         Me.dgvClientes.RowTemplate.ReadOnly = True
         Me.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.FillWeight = 130.0!
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn7, "DataGridViewTextBoxColumn7")
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'cTelefono
-        '
-        resources.ApplyResources(Me.cTelefono, "cTelefono")
-        Me.cTelefono.Name = "cTelefono"
-        Me.cTelefono.ReadOnly = True
-        '
-        'cMail
-        '
-        resources.ApplyResources(Me.cMail, "cMail")
-        Me.cMail.Name = "cMail"
-        Me.cMail.ReadOnly = True
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.FillWeight = 60.0!
-        resources.ApplyResources(Me.DataGridViewCheckBoxColumn1, "DataGridViewCheckBoxColumn1")
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        Me.DataGridViewCheckBoxColumn1.ReadOnly = True
         '
         'GroupBox8
         '
@@ -1708,6 +1684,55 @@ Partial Class frmPrincipal
         '
         'BWBuscador
         '
+        '
+        'btnagendarEvento
+        '
+        resources.ApplyResources(Me.btnagendarEvento, "btnagendarEvento")
+        Me.btnagendarEvento.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnagendarEvento.Name = "btnagendarEvento"
+        Me.btnagendarEvento.UseVisualStyleBackColor = False
+        '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
+        '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
+        '
+        'ctpSerie
+        '
+        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
+        Me.ctpSerie.Name = "ctpSerie"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.FillWeight = 130.0!
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn7, "DataGridViewTextBoxColumn7")
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'cTelefono
+        '
+        resources.ApplyResources(Me.cTelefono, "cTelefono")
+        Me.cTelefono.Name = "cTelefono"
+        Me.cTelefono.ReadOnly = True
+        '
+        'cMail
+        '
+        resources.ApplyResources(Me.cMail, "cMail")
+        Me.cMail.Name = "cMail"
+        Me.cMail.ReadOnly = True
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.FillWeight = 60.0!
+        resources.ApplyResources(Me.DataGridViewCheckBoxColumn1, "DataGridViewCheckBoxColumn1")
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        Me.DataGridViewCheckBoxColumn1.ReadOnly = True
         '
         'frmPrincipal
         '
@@ -1894,10 +1919,6 @@ Partial Class frmPrincipal
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel12 As Panel
     Friend WithEvents txtCNombre As RichTextBox
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents cTelefono As DataGridViewTextBoxColumn
-    Friend WithEvents cMail As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel13 As Panel
     Friend WithEvents txtCTel As RichTextBox
@@ -1959,4 +1980,9 @@ Partial Class frmPrincipal
     Friend WithEvents FNombre As DataGridViewTextBoxColumn
     Friend WithEvents Telefono As DataGridViewTextBoxColumn
     Friend WithEvents FFuncion As DataGridViewTextBoxColumn
+    Friend WithEvents btnagendarEvento As Button
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents cTelefono As DataGridViewTextBoxColumn
+    Friend WithEvents cMail As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
 End Class

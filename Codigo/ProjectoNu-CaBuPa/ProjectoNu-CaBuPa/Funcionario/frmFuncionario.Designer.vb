@@ -32,22 +32,22 @@ Partial Class frmFuncionario
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnEditarFun = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.descrip = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dgvFuncionarios = New System.Windows.Forms.DataGridView()
+        Me.BuscarFunci = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.dgvFuncionarios = New System.Windows.Forms.DataGridView()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descrip = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnBorrar = New System.Windows.Forms.Button()
-        Me.BuscarFunci = New System.Windows.Forms.Button()
+        Me.btnEditarFun = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -174,56 +174,6 @@ Partial Class frmFuncionario
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre:"
         '
-        'btnEditarFun
-        '
-        Me.btnEditarFun.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEditarFun.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnEditarFun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnEditarFun.ForeColor = System.Drawing.Color.White
-        Me.btnEditarFun.Location = New System.Drawing.Point(3, 3)
-        Me.btnEditarFun.Name = "btnEditarFun"
-        Me.btnEditarFun.Size = New System.Drawing.Size(93, 40)
-        Me.btnEditarFun.TabIndex = 0
-        Me.btnEditarFun.Text = "Editar"
-        Me.btnEditarFun.UseVisualStyleBackColor = False
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnCancelar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.Location = New System.Drawing.Point(300, 3)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(95, 40)
-        Me.btnCancelar.TabIndex = 3
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = False
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel2.ColumnCount = 4
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.btnBorrar, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnEditarFun, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnCancelar, 3, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 345)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 1
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(398, 46)
-        Me.TableLayoutPanel2.TabIndex = 2
-        '
         'GroupBox2
         '
         Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -240,19 +190,38 @@ Partial Class frmFuncionario
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Función"
         '
-        'descrip
+        'BuscarFunci
         '
-        Me.descrip.HeaderText = "Descripción"
-        Me.descrip.MinimumWidth = 6
-        Me.descrip.Name = "descrip"
-        Me.descrip.ReadOnly = True
+        Me.BuscarFunci.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BuscarFunci.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.BuscarFunci.ForeColor = System.Drawing.Color.White
+        Me.BuscarFunci.Location = New System.Drawing.Point(268, 103)
+        Me.BuscarFunci.Name = "BuscarFunci"
+        Me.BuscarFunci.Size = New System.Drawing.Size(75, 23)
+        Me.BuscarFunci.TabIndex = 7
+        Me.BuscarFunci.Text = "Buscar"
+        Me.BuscarFunci.UseVisualStyleBackColor = False
         '
-        'Nombre
+        'TextBox1
         '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.MinimumWidth = 6
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.TextBox1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.TextBox1.ForeColor = System.Drawing.Color.White
+        Me.TextBox1.Location = New System.Drawing.Point(225, 52)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(141, 23)
+        Me.TextBox1.TabIndex = 6
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(265, 19)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(57, 15)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Nombre:"
         '
         'dgvFuncionarios
         '
@@ -277,53 +246,84 @@ Partial Class frmFuncionario
         Me.dgvFuncionarios.Size = New System.Drawing.Size(198, 120)
         Me.dgvFuncionarios.TabIndex = 0
         '
-        'TextBox1
+        'Nombre
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.TextBox1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(225, 52)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(141, 23)
-        Me.TextBox1.TabIndex = 6
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.MinimumWidth = 6
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
         '
-        'Label5
+        'descrip
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(265, 19)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(57, 15)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Nombre:"
+        Me.descrip.HeaderText = "Descripción"
+        Me.descrip.MinimumWidth = 6
+        Me.descrip.Name = "descrip"
+        Me.descrip.ReadOnly = True
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel2.ColumnCount = 4
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.62814!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.13065!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.86432!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.btnBorrar, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnEditarFun, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnCancelar, 3, 0)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 345)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(398, 46)
+        Me.TableLayoutPanel2.TabIndex = 2
         '
         'btnBorrar
         '
         Me.btnBorrar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnBorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrar.ForeColor = System.Drawing.Color.White
-        Me.btnBorrar.Location = New System.Drawing.Point(102, 3)
+        Me.btnBorrar.Location = New System.Drawing.Point(105, 3)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(93, 40)
+        Me.btnBorrar.Size = New System.Drawing.Size(98, 40)
         Me.btnBorrar.TabIndex = 4
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
         '
-        'BuscarFunci
+        'btnEditarFun
         '
-        Me.BuscarFunci.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BuscarFunci.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.BuscarFunci.ForeColor = System.Drawing.Color.White
-        Me.BuscarFunci.Location = New System.Drawing.Point(268, 103)
-        Me.BuscarFunci.Name = "BuscarFunci"
-        Me.BuscarFunci.Size = New System.Drawing.Size(75, 23)
-        Me.BuscarFunci.TabIndex = 7
-        Me.BuscarFunci.Text = "Buscar"
-        Me.BuscarFunci.UseVisualStyleBackColor = False
+        Me.btnEditarFun.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEditarFun.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnEditarFun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnEditarFun.ForeColor = System.Drawing.Color.White
+        Me.btnEditarFun.Location = New System.Drawing.Point(3, 3)
+        Me.btnEditarFun.Name = "btnEditarFun"
+        Me.btnEditarFun.Size = New System.Drawing.Size(96, 40)
+        Me.btnEditarFun.TabIndex = 0
+        Me.btnEditarFun.Text = "Editar"
+        Me.btnEditarFun.UseVisualStyleBackColor = False
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnCancelar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnCancelar.ForeColor = System.Drawing.Color.White
+        Me.btnCancelar.Location = New System.Drawing.Point(300, 3)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(95, 40)
+        Me.btnCancelar.TabIndex = 3
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'frmFuncionario
         '
@@ -337,10 +337,10 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

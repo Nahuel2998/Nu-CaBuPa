@@ -42,9 +42,9 @@ Partial Class FrmEventos
         Me.programaEven = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.videoEven = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnBorrarEv = New System.Windows.Forms.Button()
         Me.btnAñadirEv = New System.Windows.Forms.Button()
         Me.btnBuscarEv = New System.Windows.Forms.Button()
-        Me.btnBorrarEv = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -62,6 +62,7 @@ Partial Class FrmEventos
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 2)
+        Me.TableLayoutPanel1.ForeColor = System.Drawing.Color.White
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(2, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
@@ -246,9 +247,9 @@ Partial Class FrmEventos
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.btnBorrarEv, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btnAñadirEv, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btnBuscarEv, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnBorrarEv, 0, 0)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 327)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
@@ -256,44 +257,47 @@ Partial Class FrmEventos
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(500, 56)
         Me.TableLayoutPanel2.TabIndex = 2
         '
-        'btnAñadirEv
-        '
-        Me.btnAñadirEv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAñadirEv.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnAñadirEv.Location = New System.Drawing.Point(173, 3)
-        Me.btnAñadirEv.Name = "btnAñadirEv"
-        Me.btnAñadirEv.Size = New System.Drawing.Size(164, 50)
-        Me.btnAñadirEv.TabIndex = 1
-        Me.btnAñadirEv.Text = "Añadir"
-        Me.btnAñadirEv.UseVisualStyleBackColor = True
-        '
-        'btnBuscarEv
-        '
-        Me.btnBuscarEv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBuscarEv.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnBuscarEv.Location = New System.Drawing.Point(343, 3)
-        Me.btnBuscarEv.Name = "btnBuscarEv"
-        Me.btnBuscarEv.Size = New System.Drawing.Size(154, 50)
-        Me.btnBuscarEv.TabIndex = 2
-        Me.btnBuscarEv.Text = "Buscar"
-        Me.btnBuscarEv.UseVisualStyleBackColor = True
-        '
         'btnBorrarEv
         '
         Me.btnBorrarEv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBorrarEv.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnBorrarEv.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrarEv.Location = New System.Drawing.Point(3, 3)
         Me.btnBorrarEv.Name = "btnBorrarEv"
         Me.btnBorrarEv.Size = New System.Drawing.Size(164, 50)
         Me.btnBorrarEv.TabIndex = 0
         Me.btnBorrarEv.Text = "Borrar"
-        Me.btnBorrarEv.UseVisualStyleBackColor = True
+        Me.btnBorrarEv.UseVisualStyleBackColor = False
+        '
+        'btnAñadirEv
+        '
+        Me.btnAñadirEv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAñadirEv.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnAñadirEv.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnAñadirEv.Location = New System.Drawing.Point(173, 3)
+        Me.btnAñadirEv.Name = "btnAñadirEv"
+        Me.btnAñadirEv.Size = New System.Drawing.Size(164, 50)
+        Me.btnAñadirEv.TabIndex = 1
+        Me.btnAñadirEv.Text = "Añadir"
+        Me.btnAñadirEv.UseVisualStyleBackColor = False
+        '
+        'btnBuscarEv
+        '
+        Me.btnBuscarEv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBuscarEv.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnBuscarEv.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnBuscarEv.Location = New System.Drawing.Point(343, 3)
+        Me.btnBuscarEv.Name = "btnBuscarEv"
+        Me.btnBuscarEv.Size = New System.Drawing.Size(154, 50)
+        Me.btnBuscarEv.TabIndex = 2
+        Me.btnBuscarEv.Text = "Buscar"
+        Me.btnBuscarEv.UseVisualStyleBackColor = False
         '
         'FrmEventos
         '

@@ -24,14 +24,14 @@ Partial Class frmFuncion
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnbuscarFunci = New System.Windows.Forms.Button()
         Me.btneditarfunci = New System.Windows.Forms.Button()
         Me.btningresarfunc = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -68,6 +68,25 @@ Partial Class frmFuncion
         Me.GroupBox1.Size = New System.Drawing.Size(254, 156)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(120, 30)
+        Me.TextBox2.MaxLength = 128
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(126, 20)
+        Me.TextBox2.TabIndex = 3
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(23, 35)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(57, 15)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Nombre:"
         '
         'TextBox1
         '
@@ -113,6 +132,7 @@ Partial Class frmFuncion
         Me.BtnbuscarFunci.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnbuscarFunci.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BtnbuscarFunci.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.BtnbuscarFunci.ForeColor = System.Drawing.Color.White
         Me.BtnbuscarFunci.Location = New System.Drawing.Point(3, 3)
@@ -120,7 +140,7 @@ Partial Class frmFuncion
         Me.BtnbuscarFunci.Size = New System.Drawing.Size(77, 54)
         Me.BtnbuscarFunci.TabIndex = 0
         Me.BtnbuscarFunci.Text = "Borrar"
-        Me.BtnbuscarFunci.UseVisualStyleBackColor = True
+        Me.BtnbuscarFunci.UseVisualStyleBackColor = False
         '
         'btneditarfunci
         '
@@ -141,6 +161,7 @@ Partial Class frmFuncion
         Me.btningresarfunc.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btningresarfunc.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btningresarfunc.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btningresarfunc.ForeColor = System.Drawing.Color.White
         Me.btningresarfunc.Location = New System.Drawing.Point(173, 3)
@@ -148,26 +169,7 @@ Partial Class frmFuncion
         Me.btningresarfunc.Size = New System.Drawing.Size(78, 54)
         Me.btningresarfunc.TabIndex = 2
         Me.btningresarfunc.Text = "Ingresar"
-        Me.btningresarfunc.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(120, 30)
-        Me.TextBox2.MaxLength = 128
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(126, 20)
-        Me.TextBox2.TabIndex = 3
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(23, 35)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 15)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Nombre:"
+        Me.btningresarfunc.UseVisualStyleBackColor = False
         '
         'frmFuncion
         '
