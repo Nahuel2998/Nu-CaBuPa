@@ -1,6 +1,6 @@
 ﻿Public Class frmAcceso
     Private UID As Integer = 0
-    Public Sub New(ByVal Uid As Integer)
+    Public Sub New(Optional ByVal Uid As Integer = 1)
         InitializeComponent()
         Me.UID = Uid
     End Sub

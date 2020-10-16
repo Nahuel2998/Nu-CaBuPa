@@ -31,7 +31,7 @@
         End If
         If (EliminarP <> "") Then
             EliminarP = EliminarP.Remove(EliminarP.Length - 1)
-            Dim con As String = String.Format("id_acceso in {0} and id_usuario = '{1}'", EliminarP, USid)
+            Dim con As String = String.Format("id_acceso in ({0}) and id_usuario = '{1}'", EliminarP, USid)
             BSQL("ustieneacceso", con)
         End If
         CargarPermisosAll(USid)
@@ -53,31 +53,27 @@
         CargarPermiso(UID)
     End Sub
     Public Sub CheckearPermisos()
-        Dim e As Integer = 0
         For i As Integer = 0 To TieneP.Length - 1
             TieneP(i) = False
         Next
         If (Not IsNothing(Permisos)) Then
-
-            For a As Integer = 0 To Permisos.Rows.Count - 1
-                For i As Integer = e To PermisosT.Rows.Count - 1
-                    If (Permisos.Rows(a).Item(0) = Permisos.Rows(i).Item(0)) Then
-                        TieneP(e) = True
+            Dim e As Integer = 0
+            For a As Integer = 0 To PermisosT.Rows.Count - 1
+                For i As Integer = e To Permisos.Rows.Count - 1
+                    If (PermisosT.Rows(a).Item(0) = Permisos.Rows(i).Item(0)) Then
+                        TieneP(a) = True
                         e = i + 1
                         Exit For
                     End If
                 Next
             Next
-
         End If
-
     End Sub
     Public Sub EstablecerList(ByRef che As CheckedListBox)
         che.Items.Clear()
         If (Not IsNothing(PermisosT)) Then
-
             For i As Integer = 0 To TieneP.Length - 1
-                che.Items.Add(PermisosT.Rows(i).Item(1), TieneP(i))
+                che.Items.Add(String.Format("Sector: {0}. Acceso: {1}", PermisosT.Rows(i).Item(1), PermisosT.Rows(i).Item(2)), TieneP(i))
             Next
         End If
     End Sub
