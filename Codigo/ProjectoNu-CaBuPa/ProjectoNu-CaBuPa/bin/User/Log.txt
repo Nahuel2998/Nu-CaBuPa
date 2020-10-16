@@ -455,3 +455,26 @@
 12/10/2020 14:59:53 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-12' 
 15/10/2020 21:00:20 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 15/10/2020 21:00:57 LAPTOP-701EDAA0 ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+16/10/2020 0:08:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 0:09:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 0:09:49 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 0:13:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 0:14:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 0:15:12 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 0:15:16 DESKTOP-SDVEG3U ' acceso 
+16/10/2020 0:15:30 DESKTOP-SDVEG3U ' seccion,tipo'Hola','S' 
+16/10/2020 0:15:30 DESKTOP-SDVEG3U ' Insert into acceso ( seccion,tipo ) values ('Hola','S' ) 
+16/10/2020 0:15:30 DESKTOP-SDVEG3U ' seccion,tipo'Hola','S' 
+16/10/2020 0:15:30 DESKTOP-SDVEG3U ' Insert into acceso ( seccion,tipo ) values ('Hola','S' ) 
+16/10/2020 0:15:30 DESKTOP-SDVEG3U ' seccion,tipo'Hola','S' 
+16/10/2020 0:15:30 DESKTOP-SDVEG3U ' Insert into acceso ( seccion,tipo ) values ('Hola','S' ) 
+16/10/2020 0:15:30 DESKTOP-SDVEG3U ' seccion,tipo'Hola','S' 
+16/10/2020 0:15:31 DESKTOP-SDVEG3U ' Insert into acceso ( seccion,tipo ) values ('Hola','S' ) 
+16/10/2020 0:15:31 DESKTOP-SDVEG3U ' seccion,tipo'Hola','S' 
+16/10/2020 0:15:31 DESKTOP-SDVEG3U ' Insert into acceso ( seccion,tipo ) values ('Hola','S' ) 
+16/10/2020 0:15:31 DESKTOP-SDVEG3U ' seccion,tipo'Hola','S' 
+16/10/2020 0:15:31 DESKTOP-SDVEG3U ' Insert into acceso ( seccion,tipo ) values ('Hola','S' ) 
+16/10/2020 0:15:32 DESKTOP-SDVEG3U ' acceso 
+16/10/2020 0:15:37 DESKTOP-SDVEG3U ' update usuarios set nombre ='m',contrasena = AES_ENCRYPT('',sha2('RKx5ZH3M',256)) WHERE id_usuario ='2' 
+16/10/2020 0:16:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 0:16:44 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

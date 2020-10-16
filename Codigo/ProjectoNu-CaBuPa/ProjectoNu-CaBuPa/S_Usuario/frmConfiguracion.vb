@@ -1,7 +1,6 @@
 ﻿
 Public Class frmConfiguracion
     Private UserID As Integer = Nothing
-    Private UsuarioDatos As DataTable
     Public dt As DataTable
     Private Sub btnRestablecer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRestablecer.Click
         ModUser.Borrar()
@@ -157,6 +156,7 @@ Public Class frmConfiguracion
     End Sub
 
     Private Sub btnAccesos_Click(sender As Object, e As EventArgs) Handles btnAccesos.Click
-
+        Dim formAccesos As New frmAcceso(UserID)
+        formAccesos.ShowDialog()
     End Sub
 End Class

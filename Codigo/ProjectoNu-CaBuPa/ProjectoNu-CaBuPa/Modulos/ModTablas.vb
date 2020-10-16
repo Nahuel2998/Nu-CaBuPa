@@ -179,7 +179,11 @@ Module ModTablas
         End If
         Return resultado
     End Function
-
+    Public Sub CargarListBox(ByRef lis As CheckedListBox, ByVal dt As DataTable)
+        For i As Integer = 0 To dt.Rows.Count - 1
+            lis.Items.Add(dt.Rows(i).Item(1).ToString + dt.Rows(i).Item(1).ToString)
+        Next
+    End Sub
     Public Sub LlenarCombo(ByRef con As ComboBox, ByVal dt As DataTable, ByVal col As String)
         con.Items.Clear()
         con.Items.Add("No está relacionado")
