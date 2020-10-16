@@ -169,8 +169,14 @@ Module ModConector
         ESQL("DELETE FROM " + nTabla + " WHERE " + Condition)
         'ModLog.Guardar("DELETE FROM " + nTabla + " WHERE " + Condition)
     End Sub
-    Public Sub ISQL(ByVal nTabla As String, ByVal Column As String, ByVal Data As String)
-        ESQL("Insert into " + nTabla + " ( " + Column + " ) values (" + Data + " )")
+    Public Sub ISQL(ByVal nTabla As String, ByVal Column As String, ByVal Data As String, Optional comilla As Boolean = True)
+
+        If (comilla) Then
+            ESQL("Insert into " + nTabla + " ( " + Column + " ) values (" + Data + " )")
+        Else
+            ESQL("Insert into " + nTabla + " ( " + Column + " ) values " + Data)
+        End If
+
     End Sub
     Public Function SSQL(ByVal nColumn As String, ByVal nTabla As String, ByVal Condition As String) As DataTable
         If ds.Tables.Contains(nTabla) Then

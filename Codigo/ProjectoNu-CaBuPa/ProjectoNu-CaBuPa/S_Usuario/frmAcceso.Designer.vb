@@ -104,7 +104,7 @@ Partial Class frmAcceso
         Me.btnActualizar.Size = New System.Drawing.Size(249, 34)
         Me.btnActualizar.TabIndex = 2
         Me.btnActualizar.Text = "Actualizar"
-        Me.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnActualizar.Textcolor = System.Drawing.Color.White
         Me.btnActualizar.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '

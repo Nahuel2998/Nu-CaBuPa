@@ -15,6 +15,7 @@
     End Sub
 
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
-
+        CargaActualizacionP(cblP)
+        CompararPermisos(cblP)
     End Sub
 End Class

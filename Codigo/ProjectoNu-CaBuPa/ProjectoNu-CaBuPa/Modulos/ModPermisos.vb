@@ -1,29 +1,68 @@
 ﻿Module ModPermisos
     Public Permisos As DataTable
     Public PermisosT As DataTable
-    Public Tiene As Boolean()
+    Public TieneP As Boolean()
+    Public ActualizaP As Boolean()
+    Private EliminarP As String = ""
+    Private AgregarP As String = ""
+    Private USid As Integer
+    Public Sub CargaActualizacionP(ByVal che As CheckedListBox)
+        ReDim ActualizaP(TieneP.Length - 1)
+        For i As Integer = 0 To TieneP.Length - 1
+            ActualizaP(i) = False
+        Next
+        For i As Integer = 0 To che.CheckedItems.Count - 1
+            ActualizaP(che.CheckedIndices(i)) = True
+        Next
+    End Sub
+    Public Sub CompararPermisos(ByRef che As CheckedListBox)
+        For i As Integer = 0 To TieneP.Length - 1
+            If (TieneP(i) <> ActualizaP(i)) Then
+                If (TieneP(i) = False) Then
+                    AgregarP += String.Format("('{0}','{1}'),", USid, PermisosT.Rows(i).Item(0).ToString)
+                Else
+                    EliminarP += String.Format("'{0}',", PermisosT.Rows(i).Item(0).ToString)
+                End If
+            End If
+        Next
+        If (AgregarP <> "") Then
+            AgregarP = AgregarP.Remove(AgregarP.Length - 1)
+            ISQL("ustieneacceso", "id_usuario, id_acceso", AgregarP, False)
+        End If
+        If (EliminarP <> "") Then
+            EliminarP = EliminarP.Remove(EliminarP.Length - 1)
+            Dim con As String = String.Format("id_acceso in {0} and id_usuario = '{1}'", EliminarP, USid)
+            BSQL("ustieneacceso", con)
+        End If
+        CargarPermisosAll(USid)
+        CheckearPermisos()
+        EstablecerList(che)
+        AgregarP = ""
+        EliminarP = ""
+    End Sub
     Public Sub CargarPermiso(ByVal UID As Integer)
         Permisos = DevolverTabla(PSQL("a.*", "acceso a inner join ustieneacceso u on a.id_acceso = u.id_acceso", "id_usuario = " + UID.ToString))
     End Sub
     Public Sub CargarPermisoT()
         PermisosT = DevolverTabla(PSQL("*", "acceso", "true"))
-        ReDim Tiene(PermisosT.Rows.Count - 1)
+        ReDim TieneP(PermisosT.Rows.Count - 1)
     End Sub
     Public Sub CargarPermisosAll(ByVal UID As Integer)
+        USid = UID
         CargarPermisoT()
         CargarPermiso(UID)
     End Sub
     Public Sub CheckearPermisos()
         Dim e As Integer = 0
-        For i As Integer = 0 To Tiene.Length - 1
-            Tiene(i) = False
+        For i As Integer = 0 To TieneP.Length - 1
+            TieneP(i) = False
         Next
         If (Not IsNothing(Permisos)) Then
 
             For a As Integer = 0 To Permisos.Rows.Count - 1
                 For i As Integer = e To PermisosT.Rows.Count - 1
                     If (Permisos.Rows(a).Item(0) = Permisos.Rows(i).Item(0)) Then
-                        Tiene(e) = True
+                        TieneP(e) = True
                         e = i + 1
                         Exit For
                     End If
@@ -37,8 +76,8 @@
         che.Items.Clear()
         If (Not IsNothing(PermisosT)) Then
 
-            For i As Integer = 0 To Tiene.Length - 1
-                che.Items.Add(PermisosT.Rows(i).Item(1), Tiene(i))
+            For i As Integer = 0 To TieneP.Length - 1
+                che.Items.Add(PermisosT.Rows(i).Item(1), TieneP(i))
             Next
         End If
     End Sub

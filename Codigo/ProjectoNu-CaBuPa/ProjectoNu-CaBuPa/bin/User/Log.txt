@@ -478,3 +478,19 @@
 16/10/2020 0:15:37 DESKTOP-SDVEG3U ' update usuarios set nombre ='m',contrasena = AES_ENCRYPT('',sha2('RKx5ZH3M',256)) WHERE id_usuario ='2' 
 16/10/2020 0:16:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 16/10/2020 0:16:44 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 11:08:41 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 11:09:18 DESKTOP-SDVEG3U ' Insert into ustieneacceso ( id_usuario, id_acceso ) values (('0','1'),('0','3') ) 
+16/10/2020 11:11:12 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 11:11:26 DESKTOP-SDVEG3U ' Insert into ustieneacceso ( id_usuario, id_acceso ) values (('0','9'),('0','10') ) 
+16/10/2020 11:11:26 DESKTOP-SDVEG3U ' Insert into ustieneacceso ( id_usuario, id_acceso ) values (('0','9'),('0','10') ) 
+16/10/2020 11:13:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 11:14:04 DESKTOP-SDVEG3U ' Insert into ustieneacceso ( id_usuario, id_acceso ) values (('0','7'),('0','8'),('0','9') ) 
+16/10/2020 11:14:04 DESKTOP-SDVEG3U ' Insert into ustieneacceso ( id_usuario, id_acceso ) values (('0','7'),('0','8'),('0','9') ) 
+16/10/2020 11:16:17 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 11:16:33 DESKTOP-SDVEG3U ' Insert into ustieneacceso ( id_usuario, id_acceso ) values ('0','4'),('0','6') 
+16/10/2020 11:16:38 DESKTOP-SDVEG3U ' Insert into ustieneacceso ( id_usuario, id_acceso ) values ('0','4'),('0','6')('0','4'),('0','5'),('0','6'),('0','8') 
+16/10/2020 11:16:55 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 11:21:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+16/10/2020 11:22:22 DESKTOP-SDVEG3U ' Insert into ustieneacceso ( id_usuario, id_acceso ) values ('1','8'),('1','9') 
+16/10/2020 11:22:26 DESKTOP-SDVEG3U ' Insert into ustieneacceso ( id_usuario, id_acceso ) values ('1','6'),('1','8'),('1','10') 
+16/10/2020 11:22:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
