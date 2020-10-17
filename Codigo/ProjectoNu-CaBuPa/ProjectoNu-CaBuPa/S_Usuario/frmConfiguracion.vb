@@ -156,7 +156,9 @@ Public Class frmConfiguracion
     End Sub
 
     Private Sub btnAccesos_Click(sender As Object, e As EventArgs) Handles btnAccesos.Click
-        Dim formAccesos As New frmAcceso(UserID)
-        formAccesos.ShowDialog()
+        If Not IsNothing(UserID) Then
+            Dim formAccesos As New frmAcceso(UserID)
+            formAccesos.ShowDialog()
+        End If
     End Sub
 End Class

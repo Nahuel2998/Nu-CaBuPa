@@ -1,11 +1,17 @@
 ﻿Module ModPermisos
-    Public Permisos As DataTable
-    Public PermisosT As DataTable
+    Public Permisos As DataTable = Nothing
+    Public PermisosT As DataTable = Nothing
     Public TieneP As Boolean()
     Public ActualizaP As Boolean()
     Private EliminarP As String = ""
     Private AgregarP As String = ""
-    Private USid As Integer
+    Private USid As Integer = Nothing
+#Region "usuario"
+    Public Sub Esid(ByVal EUsid As Integer)
+        USid = EUsid
+    End Sub
+#End Region
+#Region "Cargadores"
     Public Sub CargaActualizacionP(ByVal che As CheckedListBox)
         ReDim ActualizaP(TieneP.Length - 1)
         For i As Integer = 0 To TieneP.Length - 1
@@ -43,6 +49,9 @@
     Public Sub CargarPermiso(ByVal UID As Integer)
         Permisos = DevolverTabla(PSQL("a.*", "acceso a inner join ustieneacceso u on a.id_acceso = u.id_acceso", "id_usuario = " + UID.ToString))
     End Sub
+    Public Sub CargarPermiso()
+        Permisos = DevolverTabla(PSQL("a.*", "acceso a inner join ustieneacceso u on a.id_acceso = u.id_acceso", "id_usuario = " + USid.ToString))
+    End Sub
     Public Sub CargarPermisoT()
         PermisosT = DevolverTabla(PSQL("*", "acceso", "true"))
         ReDim TieneP(PermisosT.Rows.Count - 1)
@@ -50,7 +59,7 @@
     Public Sub CargarPermisosAll(ByVal UID As Integer)
         USid = UID
         CargarPermisoT()
-        CargarPermiso(UID)
+        CargarPermiso()
     End Sub
     Public Sub CheckearPermisos()
         For i As Integer = 0 To TieneP.Length - 1
@@ -77,16 +86,19 @@
             Next
         End If
     End Sub
-    Public Function Comparar(ByVal Seccion As String, Optional tipo As String = "") As Boolean
-        For i As Integer = 0 To Permisos.Rows.Count - 1
-            If (Permisos.Rows(i).Item(1) = Seccion) Then
-                If (tipo <> "") Then
-                    If (Permisos.Rows(i).Item(2) = tipo) Then
-                        Return True
+#End Region
+    Public Function PoseePermiso(ByVal Seccion As String, Optional tipo As String = "") As Boolean
+        If Not IsNothing(Permisos) Then
+            For i As Integer = 0 To Permisos.Rows.Count - 1
+                If (Permisos.Rows(i).Item(1) = Seccion) Then
+                    If (tipo <> "") Then
+                        If (Permisos.Rows(i).Item(2) = tipo) Then
+                            Return True
+                        End If
                     End If
                 End If
-            End If
-        Next
+            Next
+        End If
         Return False
     End Function
 End Module

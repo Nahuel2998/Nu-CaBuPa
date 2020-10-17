@@ -172,7 +172,9 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWEventos_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWEventos.DoWork
-        dt_evento = ModConector.AEventos()
+        If PoseePermiso("Eventos", "ac") Then
+            dt_evento = ModConector.AEventos()
+        End If
     End Sub
 
     Private Sub BWEventos_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWEventos.RunWorkerCompleted

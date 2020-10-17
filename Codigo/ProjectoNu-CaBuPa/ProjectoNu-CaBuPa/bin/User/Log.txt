@@ -552,3 +552,10 @@
 16/10/2020 13:41:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 16/10/2020 13:41:56 DESKTOP-SDVEG3U ' Insert into ustieneacceso ( id_usuario, id_acceso ) values ('2','6') 
 16/10/2020 13:41:58 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+17/10/2020 19:21:27 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+17/10/2020 19:22:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+17/10/2020 19:23:23 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+17/10/2020 19:28:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+17/10/2020 19:35:02 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+17/10/2020 19:35:14 DESKTOP-SDVEG3U ' update usuarios set nombre ='m',contrasena = AES_ENCRYPT('m',sha2('RKx5ZH3M',256)) WHERE id_usuario ='2' 
+17/10/2020 19:35:15 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

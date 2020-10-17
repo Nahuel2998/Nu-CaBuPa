@@ -220,6 +220,8 @@ Module ModConector
                     Usuario = nombre
                     Password = contraseña
                     UsuarioID = Integer.Parse(dt.Rows(0)("id_usuario"))
+                    ModPermisos.Esid(UsuarioID)
+                    CargarPermiso()
                     Return True
                 End If
             End If

@@ -7,17 +7,17 @@
     End Sub
 
     Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        End
         ModConector.desconectar()
-    End Sub
-    Private Sub Limpiar()
-        txtUsuario.Text = ""
-        txtPass.Text = ""
+        End
     End Sub
     Private Sub btnEntrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEntrar.Click
         If ModConector.BUsuario(txtUsuario.Text, txtPass.Text) Then
-            ModInicializador.Principal()
-            Me.Dispose()
+            If PoseePermiso("Inicio", "ac") Then
+                ModInicializador.Principal()
+                Me.Dispose()
+            Else
+                MessageBox.Show("No posee permisos para ingresar")
+            End If
         End If
     End Sub
 
@@ -36,7 +36,4 @@
         End Try
     End Sub
 
-    Private Sub lblPass_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblPass.Click
-
-    End Sub
 End Class
