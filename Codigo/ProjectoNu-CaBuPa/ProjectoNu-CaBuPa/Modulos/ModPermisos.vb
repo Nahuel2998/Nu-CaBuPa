@@ -47,13 +47,13 @@
         EliminarP = ""
     End Sub
     Public Sub CargarPermiso(ByVal UID As Integer)
-        Permisos = DevolverTabla(PSQL("a.*", "acceso a inner join ustieneacceso u on a.id_acceso = u.id_acceso", "id_usuario = " + UID.ToString))
+        Permisos = DevolverTabla(PSQL("a.*", "acceso a inner join ustieneacceso u on a.id_acceso = u.id_acceso", "id_usuario = " + UID.ToString + " order by id_acceso"))
     End Sub
     Public Sub CargarPermiso()
-        Permisos = DevolverTabla(PSQL("a.*", "acceso a inner join ustieneacceso u on a.id_acceso = u.id_acceso", "id_usuario = " + USid.ToString))
+        Permisos = DevolverTabla(PSQL("a.*", "acceso a inner join ustieneacceso u on a.id_acceso = u.id_acceso", "id_usuario = " + USid.ToString + " order by id_acceso"))
     End Sub
     Public Sub CargarPermisoT()
-        PermisosT = DevolverTabla(PSQL("*", "acceso", "true"))
+        PermisosT = DevolverTabla(PSQL("*", "acceso", "true order by id_acceso"))
         ReDim TieneP(PermisosT.Rows.Count - 1)
     End Sub
     Public Sub CargarPermisosAll(ByVal UID As Integer)

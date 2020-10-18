@@ -33,32 +33,20 @@ Public Class frmPrincipal
         EPropiedades()
         ONBW()
         LeerNotas()
+        QuitarTab()
+    End Sub
+    Private Sub QuitarTab()
+        If Not (PoseePermiso("Serie")) Then
+            tcSecciones.TabPages.RemoveByKey("tbSeries")
+        End If
+        If Not (PoseePermiso("Empresa")) Then
+            tcSecciones.TabPages.RemoveByKey("tbEmpresa")
+        End If
     End Sub
 #End Region
 
     Private Sub BWNumberOne_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWProgramas.DoWork
         dt_programa = ModConector.APrograma(dtp.Value.Date)
-    End Sub
-
-    Private Sub ActualizarProgramas()
-        dgvPrograma.Columns.Clear()
-        If Not IsNothing(dt_programa) Then
-            dgvPrograma.DataSource = dt_programa
-            dgvPrograma.Columns().RemoveAt(0)
-
-            dgvPrograma.Columns.Add("PEstado", "Estado")
-            dgvProgramaColor()
-            For i As Integer = 0 To dgvPrograma.Columns.Count - 1
-                dgvPrograma.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
-            Next
-        Else
-            dt_programa = New DataTable
-            dgvPrograma.DataSource = dt_programa
-            dgvPrograma.Columns.Add("PInicio", "Inicio")
-            dgvPrograma.Columns.Add("PFinal", "Final")
-            dgvPrograma.Columns.Add("PPrograma", "Programa")
-            dgvPrograma.Columns.Add("PEstado", "Estado")
-        End If
     End Sub
 
     Private Sub ActualizarEvento()
