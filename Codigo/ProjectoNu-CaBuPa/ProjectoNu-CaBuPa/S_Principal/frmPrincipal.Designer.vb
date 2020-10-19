@@ -77,7 +77,6 @@ Partial Class frmPrincipal
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
         Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -90,7 +89,6 @@ Partial Class frmPrincipal
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -154,7 +152,6 @@ Partial Class frmPrincipal
         Me.txtBSnombre = New System.Windows.Forms.RichTextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.cbS = New System.Windows.Forms.CheckBox()
-        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -217,6 +214,9 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -344,6 +344,7 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.btnagendarEvento, "btnagendarEvento")
         Me.btnagendarEvento.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnagendarEvento.ForeColor = System.Drawing.Color.Black
         Me.btnagendarEvento.Name = "btnagendarEvento"
         Me.btnagendarEvento.UseVisualStyleBackColor = False
         '
@@ -432,12 +433,6 @@ Partial Class frmPrincipal
         Me.GroupBox7.Controls.Add(Me.dgvPublicidades)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
-        '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
         '
         'dgvPublicidades
         '
@@ -602,11 +597,6 @@ Partial Class frmPrincipal
         Me.GroupBox1.Controls.Add(Me.dgvPrograma)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
-        '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.Name = "dtp"
         '
         'dgvPrograma
         '
@@ -868,6 +858,7 @@ Partial Class frmPrincipal
         '
         Me.btnIngresarBP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnIngresarBP, "btnIngresarBP")
+        Me.btnIngresarBP.ForeColor = System.Drawing.Color.Black
         Me.btnIngresarBP.Name = "btnIngresarBP"
         Me.btnIngresarBP.UseVisualStyleBackColor = False
         '
@@ -875,6 +866,7 @@ Partial Class frmPrincipal
         '
         Me.btnBorrarBP.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnBorrarBP, "btnBorrarBP")
+        Me.btnBorrarBP.ForeColor = System.Drawing.Color.Black
         Me.btnBorrarBP.Name = "btnBorrarBP"
         Me.btnBorrarBP.UseVisualStyleBackColor = False
         '
@@ -888,6 +880,7 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.btnBuscarBP, "btnBuscarBP")
         Me.btnBuscarBP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnBuscarBP.ForeColor = System.Drawing.Color.Black
         Me.btnBuscarBP.Name = "btnBuscarBP"
         Me.btnBuscarBP.UseVisualStyleBackColor = False
         '
@@ -901,6 +894,7 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.btnLimpiarBP, "btnLimpiarBP")
         Me.btnLimpiarBP.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnLimpiarBP.ForeColor = System.Drawing.Color.Black
         Me.btnLimpiarBP.Name = "btnLimpiarBP"
         Me.btnLimpiarBP.UseVisualStyleBackColor = False
         '
@@ -1079,6 +1073,7 @@ Partial Class frmPrincipal
         '
         Me.btnsIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnsIngresar, "btnsIngresar")
+        Me.btnsIngresar.ForeColor = System.Drawing.Color.Black
         Me.btnsIngresar.Name = "btnsIngresar"
         Me.btnsIngresar.UseVisualStyleBackColor = False
         '
@@ -1086,6 +1081,7 @@ Partial Class frmPrincipal
         '
         Me.btnBorrarS.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnBorrarS, "btnBorrarS")
+        Me.btnBorrarS.ForeColor = System.Drawing.Color.Black
         Me.btnBorrarS.Name = "btnBorrarS"
         Me.btnBorrarS.UseVisualStyleBackColor = False
         '
@@ -1099,6 +1095,7 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.btnBuscarBS, "btnBuscarBS")
         Me.btnBuscarBS.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnBuscarBS.ForeColor = System.Drawing.Color.Black
         Me.btnBuscarBS.Name = "btnBuscarBS"
         Me.btnBuscarBS.UseVisualStyleBackColor = False
         '
@@ -1112,6 +1109,7 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.btnLimpiarBS, "btnLimpiarBS")
         Me.btnLimpiarBS.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnLimpiarBS.ForeColor = System.Drawing.Color.Black
         Me.btnLimpiarBS.Name = "btnLimpiarBS"
         Me.btnLimpiarBS.UseVisualStyleBackColor = False
         '
@@ -1244,11 +1242,6 @@ Partial Class frmPrincipal
         Me.cbS.Name = "cbS"
         Me.cbS.UseVisualStyleBackColor = True
         '
-        'ctpSerie
-        '
-        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
-        Me.ctpSerie.Name = "ctpSerie"
-        '
         'TabPage4
         '
         Me.TabPage4.BackColor = System.Drawing.Color.Black
@@ -1277,6 +1270,7 @@ Partial Class frmPrincipal
         '
         Me.btnIngresarV.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnIngresarV, "btnIngresarV")
+        Me.btnIngresarV.ForeColor = System.Drawing.Color.Black
         Me.btnIngresarV.Name = "btnIngresarV"
         Me.btnIngresarV.UseVisualStyleBackColor = False
         '
@@ -1284,6 +1278,7 @@ Partial Class frmPrincipal
         '
         Me.btnbuscarv.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         resources.ApplyResources(Me.btnbuscarv, "btnbuscarv")
+        Me.btnbuscarv.ForeColor = System.Drawing.Color.Black
         Me.btnbuscarv.Name = "btnbuscarv"
         Me.btnbuscarv.UseVisualStyleBackColor = False
         '
@@ -1375,6 +1370,7 @@ Partial Class frmPrincipal
         '
         Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btnBorrar, "btnBorrar")
+        Me.btnBorrar.ForeColor = System.Drawing.Color.Black
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
         '
@@ -1382,6 +1378,7 @@ Partial Class frmPrincipal
         '
         Me.btnlimpiarv.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         resources.ApplyResources(Me.btnlimpiarv, "btnlimpiarv")
+        Me.btnlimpiarv.ForeColor = System.Drawing.Color.Black
         Me.btnlimpiarv.Name = "btnlimpiarv"
         Me.btnlimpiarv.UseVisualStyleBackColor = False
         '
@@ -1496,6 +1493,7 @@ Partial Class frmPrincipal
         '
         Me.btncBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btncBorrar, "btncBorrar")
+        Me.btncBorrar.ForeColor = System.Drawing.Color.Black
         Me.btncBorrar.Name = "btncBorrar"
         Me.btncBorrar.UseVisualStyleBackColor = False
         '
@@ -1503,6 +1501,7 @@ Partial Class frmPrincipal
         '
         Me.btncIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.btncIngresar, "btncIngresar")
+        Me.btncIngresar.ForeColor = System.Drawing.Color.Black
         Me.btncIngresar.Name = "btncIngresar"
         Me.btncIngresar.UseVisualStyleBackColor = False
         '
@@ -1516,6 +1515,7 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.btncBuscar, "btncBuscar")
         Me.btncBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btncBuscar.ForeColor = System.Drawing.Color.Black
         Me.btncBuscar.Name = "btncBuscar"
         Me.btncBuscar.UseVisualStyleBackColor = False
         '
@@ -1529,6 +1529,7 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.btncLimpiar, "btncLimpiar")
         Me.btncLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btncLimpiar.ForeColor = System.Drawing.Color.Black
         Me.btncLimpiar.Name = "btncLimpiar"
         Me.btncLimpiar.UseVisualStyleBackColor = False
         '
@@ -1733,6 +1734,22 @@ Partial Class frmPrincipal
         '
         'BWBuscador
         '
+        '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
+        '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
+        '
+        'ctpSerie
+        '
+        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
+        Me.ctpSerie.Name = "ctpSerie"
         '
         'frmPrincipal
         '
