@@ -102,7 +102,7 @@ Partial Class frmPublicidad
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvPPublicidades.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvPPublicidades.Location = New System.Drawing.Point(7, 30)
+        Me.dgvPPublicidades.Location = New System.Drawing.Point(7, 25)
         Me.dgvPPublicidades.MultiSelect = False
         Me.dgvPPublicidades.Name = "dgvPPublicidades"
         Me.dgvPPublicidades.ReadOnly = True
@@ -115,7 +115,7 @@ Partial Class frmPublicidad
         Me.dgvPPublicidades.RowTemplate.Height = 28
         Me.dgvPPublicidades.RowTemplate.ReadOnly = True
         Me.dgvPPublicidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPPublicidades.Size = New System.Drawing.Size(379, 81)
+        Me.dgvPPublicidades.Size = New System.Drawing.Size(379, 86)
         Me.dgvPPublicidades.TabIndex = 2
         '
         'DataGridViewTextBoxColumn3

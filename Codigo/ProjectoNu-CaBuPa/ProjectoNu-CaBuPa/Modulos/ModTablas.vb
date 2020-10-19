@@ -8,6 +8,7 @@ Module ModTablas
     Public dt_tandas As DataTable
     Public dt_publi As DataTable
     Public dt_Ppubli As DataTable
+    Public dt_BPubli As DataTable
     Public dt_Video As DataTable
     Public dt_Serie As DataTable
     Public dt_Empresa As DataTable
