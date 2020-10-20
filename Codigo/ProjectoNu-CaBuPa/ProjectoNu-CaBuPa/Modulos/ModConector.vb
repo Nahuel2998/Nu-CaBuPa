@@ -269,8 +269,12 @@ Module ModConector
     Public Function AEventos() As DataTable
         Return DevolverTabla(PSQL("e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre", "evento e inner join fechaevento f on f.id_evento=e.id_evento", "f.fecha >= now()"))
     End Function
-    Public Function ATandas() As DataTable
-        Return DevolverTabla(PSQL("time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final'", "tanda", "(hora_inicio <= curtime() and hora_fin >= curtime()) or hora_inicio >= curtime()"))
+    Public Function ATandas(Optional siguiente As Boolean = True) As DataTable
+        Dim condicion As String = "true"
+        If (siguiente) Then
+            condicion = "(hora_inicio <= curtime() and hora_fin >= curtime()) or hora_inicio >= curtime()"
+        End If
+        Return DevolverTabla(PSQL("time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final'", "tanda", condicion))
     End Function
     Public Function ADPrograma(idPrograma As Integer) As String
         Dim dt As DataTable = DevolverTabla(PSQL("Descripcion", "programa", "id_programa = '" + idPrograma.ToString + "'"))

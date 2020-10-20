@@ -33,18 +33,21 @@ Partial Class frmPublicidad
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtNombre = New System.Windows.Forms.RichTextBox()
         Me.gbNotas.SuspendLayout()
         CType(Me.dgvPPublicidades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbNotas
         '
         Me.gbNotas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.gbNotas.Controls.Add(Me.txtTema)
-        Me.gbNotas.Location = New System.Drawing.Point(12, 12)
+        Me.gbNotas.Location = New System.Drawing.Point(12, 67)
         Me.gbNotas.Name = "gbNotas"
-        Me.gbNotas.Size = New System.Drawing.Size(388, 155)
+        Me.gbNotas.Size = New System.Drawing.Size(388, 120)
         Me.gbNotas.TabIndex = 2
         Me.gbNotas.TabStop = False
         Me.gbNotas.Text = "Tema"
@@ -62,7 +65,7 @@ Partial Class frmPublicidad
         Me.txtTema.MaxLength = 64
         Me.txtTema.Name = "txtTema"
         Me.txtTema.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.txtTema.Size = New System.Drawing.Size(372, 127)
+        Me.txtTema.Size = New System.Drawing.Size(372, 92)
         Me.txtTema.TabIndex = 1
         Me.txtTema.Text = ""
         '
@@ -115,7 +118,7 @@ Partial Class frmPublicidad
         Me.dgvPPublicidades.RowTemplate.Height = 28
         Me.dgvPPublicidades.RowTemplate.ReadOnly = True
         Me.dgvPPublicidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPPublicidades.Size = New System.Drawing.Size(379, 86)
+        Me.dgvPPublicidades.Size = New System.Drawing.Size(379, 66)
         Me.dgvPPublicidades.TabIndex = 2
         '
         'DataGridViewTextBoxColumn3
@@ -129,9 +132,9 @@ Partial Class frmPublicidad
         '
         Me.GroupBox2.Controls.Add(Me.dgvPPublicidades)
         Me.GroupBox2.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 173)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 193)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(392, 117)
+        Me.GroupBox2.Size = New System.Drawing.Size(392, 97)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Empresa"
@@ -158,12 +161,41 @@ Partial Class frmPublicidad
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.GroupBox1.Controls.Add(Me.txtNombre)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 3)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(388, 58)
+        Me.GroupBox1.TabIndex = 16
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Nombre"
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNombre.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtNombre.ForeColor = System.Drawing.Color.White
+        Me.txtNombre.Location = New System.Drawing.Point(7, 22)
+        Me.txtNombre.MaxLength = 64
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
+        Me.txtNombre.Size = New System.Drawing.Size(372, 30)
+        Me.txtNombre.TabIndex = 1
+        Me.txtNombre.Text = ""
+        '
         'frmPublicidad
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(412, 331)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.gbNotas)
@@ -175,6 +207,7 @@ Partial Class frmPublicidad
         Me.gbNotas.ResumeLayout(False)
         CType(Me.dgvPPublicidades, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -185,4 +218,6 @@ Partial Class frmPublicidad
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnEditar As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents txtNombre As RichTextBox
 End Class

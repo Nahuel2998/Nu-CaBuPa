@@ -81,7 +81,6 @@ Partial Class frmPrincipal
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
         Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -94,7 +93,6 @@ Partial Class frmPrincipal
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -158,7 +156,6 @@ Partial Class frmPrincipal
         Me.txtBSnombre = New System.Windows.Forms.RichTextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.cbS = New System.Windows.Forms.CheckBox()
-        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -226,12 +223,11 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel24 = New System.Windows.Forms.Panel()
         Me.cbPubli = New System.Windows.Forms.CheckBox()
-        Me.ctpPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel23 = New System.Windows.Forms.Panel()
-        Me.txtTema = New System.Windows.Forms.RichTextBox()
+        Me.txtNombre = New System.Windows.Forms.RichTextBox()
         Me.Panel25 = New System.Windows.Forms.Panel()
         Me.txtEmpresa = New System.Windows.Forms.RichTextBox()
         Me.pStatus = New System.Windows.Forms.Panel()
@@ -246,6 +242,11 @@ Partial Class frmPrincipal
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn3 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.cbTTodas = New System.Windows.Forms.CheckBox()
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.ctpPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -475,12 +476,6 @@ Partial Class frmPrincipal
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
         '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
-        '
         'dgvPublicidades
         '
         Me.dgvPublicidades.AllowUserToAddRows = False
@@ -536,6 +531,7 @@ Partial Class frmPrincipal
         'GroupBox2
         '
         resources.ApplyResources(Me.GroupBox2, "GroupBox2")
+        Me.GroupBox2.Controls.Add(Me.cbTTodas)
         Me.GroupBox2.Controls.Add(Me.dgvTandas)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.TabStop = False
@@ -644,11 +640,6 @@ Partial Class frmPrincipal
         Me.GroupBox1.Controls.Add(Me.dgvPrograma)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
-        '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.Name = "dtp"
         '
         'dgvPrograma
         '
@@ -1294,11 +1285,6 @@ Partial Class frmPrincipal
         Me.cbS.Name = "cbS"
         Me.cbS.UseVisualStyleBackColor = True
         '
-        'ctpSerie
-        '
-        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
-        Me.ctpSerie.Name = "ctpSerie"
-        '
         'TabPage4
         '
         Me.TabPage4.BackColor = System.Drawing.Color.Black
@@ -1901,11 +1887,6 @@ Partial Class frmPrincipal
         Me.cbPubli.Name = "cbPubli"
         Me.cbPubli.UseVisualStyleBackColor = True
         '
-        'ctpPubli
-        '
-        resources.ApplyResources(Me.ctpPubli, "ctpPubli")
-        Me.ctpPubli.Name = "ctpPubli"
-        '
         'Label11
         '
         resources.ApplyResources(Me.Label11, "Label11")
@@ -1928,15 +1909,15 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.Panel23, "Panel23")
         Me.Panel23.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Panel23.Controls.Add(Me.txtTema)
+        Me.Panel23.Controls.Add(Me.txtNombre)
         Me.Panel23.Name = "Panel23"
         '
-        'txtTema
+        'txtNombre
         '
-        resources.ApplyResources(Me.txtTema, "txtTema")
-        Me.txtTema.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtTema.ForeColor = System.Drawing.Color.White
-        Me.txtTema.Name = "txtTema"
+        resources.ApplyResources(Me.txtNombre, "txtNombre")
+        Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtNombre.ForeColor = System.Drawing.Color.White
+        Me.txtNombre.Name = "txtNombre"
         '
         'Panel25
         '
@@ -2011,6 +1992,33 @@ Partial Class frmPrincipal
         Me.DataGridViewCheckBoxColumn3.Name = "DataGridViewCheckBoxColumn3"
         Me.DataGridViewCheckBoxColumn3.ReadOnly = True
         '
+        'cbTTodas
+        '
+        resources.ApplyResources(Me.cbTTodas, "cbTTodas")
+        Me.cbTTodas.Name = "cbTTodas"
+        Me.cbTTodas.UseVisualStyleBackColor = True
+        '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
+        '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
+        '
+        'ctpSerie
+        '
+        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
+        Me.ctpSerie.Name = "ctpSerie"
+        '
+        'ctpPubli
+        '
+        resources.ApplyResources(Me.ctpPubli, "ctpPubli")
+        Me.ctpPubli.Name = "ctpPubli"
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -2032,6 +2040,7 @@ Partial Class frmPrincipal
         Me.GroupBox7.ResumeLayout(False)
         CType(Me.dgvPublicidades, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         CType(Me.dgvTandas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tcSecciones.ResumeLayout(False)
         Me.tbMenu.ResumeLayout(False)
@@ -2295,10 +2304,11 @@ Partial Class frmPrincipal
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Panel23 As Panel
-    Friend WithEvents txtTema As RichTextBox
+    Friend WithEvents txtNombre As RichTextBox
     Friend WithEvents Panel25 As Panel
     Friend WithEvents txtEmpresa As RichTextBox
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn3 As DataGridViewCheckBoxColumn
+    Friend WithEvents cbTTodas As CheckBox
 End Class
