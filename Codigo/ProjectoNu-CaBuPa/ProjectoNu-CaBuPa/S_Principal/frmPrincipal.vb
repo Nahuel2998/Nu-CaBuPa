@@ -517,10 +517,22 @@ Public Class frmPrincipal
         If Not (BWBuscador.IsBusy) Then
             BWBuscador.RunWorkerAsync(PSQL("p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa", "publicidad p inner join empresa e on p.id_empresa = e.id_empresa", condicion))
         End If
-        ModLog.Guardar(PSQL("p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa", "publicidad p inner join empresa e on p.id_empresa = e.id_empresa", condicion))
+        'ModLog.Guardar(PSQL("p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa", "publicidad p inner join empresa e on p.id_empresa = e.id_empresa", condicion))
     End Sub
 
     Private Sub cbTTodas_CheckedChanged(sender As Object, e As EventArgs) Handles cbTTodas.CheckedChanged
         BWTandas.RunWorkerAsync(Not cbTTodas.Checked)
+    End Sub
+
+    Private Sub dgvPubliB_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPubliB.CellDoubleClick
+        Dim i As String = CargarID(dt_BPubli, dgvPubliB)
+        If (i.Length <> 0) Then
+            Dim formPubli As New frmPublicidad(i)
+            formPubli.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub dgvPubliB_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPubliB.CellClick
+        ClickCheck(dgvPubliB)
     End Sub
 End Class

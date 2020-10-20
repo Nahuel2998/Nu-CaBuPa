@@ -33,7 +33,6 @@ Public Class frmPrograma
     Private Sub frmPrograma_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If programaID <> -1 Then
             bwDatos.RunWorkerAsync()
-            btnPSalir.Select()
         Else
             tcP.TabPages.RemoveAt(1)
             tcP.TabPages.RemoveAt(2)

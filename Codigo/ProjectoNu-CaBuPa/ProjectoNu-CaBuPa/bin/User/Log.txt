@@ -634,3 +634,30 @@
 20/10/2020 15:56:11 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE p.nombre like '%mmmm%' 
 20/10/2020 16:09:50 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 20/10/2020 16:10:48 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 17:48:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 17:48:59 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 17:52:10 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 17:52:21 DESKTOP-SDVEG3U ' update usuarios set nombre ='d',contrasena = AES_ENCRYPT('d',sha2('RKx5ZH3M',256)) WHERE id_usuario ='2' 
+20/10/2020 17:52:26 DESKTOP-SDVEG3U ' update usuarios set nombre ='d',contrasena = AES_ENCRYPT('d',sha2('RKx5ZH3M',256)) WHERE id_usuario ='1' 
+20/10/2020 17:52:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 17:52:38 DESKTOP-SDVEG3U ' update usuarios set nombre ='dm',contrasena = AES_ENCRYPT('d',sha2('RKx5ZH3M',256)) WHERE id_usuario ='2' 
+20/10/2020 17:52:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 19:06:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 19:07:16 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+20/10/2020 19:07:16 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+20/10/2020 19:07:19 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+20/10/2020 19:10:20 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 19:10:27 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+20/10/2020 19:10:27 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+20/10/2020 19:12:59 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 19:13:05 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+20/10/2020 19:13:05 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+20/10/2020 19:14:48 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 19:14:53 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+20/10/2020 19:14:53 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+20/10/2020 19:16:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 19:16:42 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+20/10/2020 19:17:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 19:17:35 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+20/10/2020 19:18:22 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+20/10/2020 19:20:18 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
