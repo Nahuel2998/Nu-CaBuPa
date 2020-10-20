@@ -1,4 +1,4 @@
-﻿Imports System.ComponentModel
+Imports System.ComponentModel
 Imports System.Drawing.Drawing2D
 Imports System.IO
 
@@ -26,7 +26,7 @@ Public Class frmPrincipal
     End Sub
     Public Sub ONBW()
         BWProgramas.RunWorkerAsync()
-        BWTandas.RunWorkerAsync()
+        BWTandas.RunWorkerAsync(True)
         BWEventos.RunWorkerAsync()
     End Sub
     Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -185,7 +185,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWTandas_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWTandas.DoWork
-        dt_tandas = ModConector.ATandas()
+        dt_tandas = ModConector.ATandas(e.Argument)
     End Sub
     Public Sub Tandas()
         ActualizarTablaC(dt_tandas, dgvTandas, False) 'fix
@@ -251,6 +251,9 @@ Public Class frmPrincipal
             Case "Programa"
                 dt_BPrograma = TBusca
                 ActualizarTablaC(dt_BPrograma, dgvBProgramas)
+            Case "Publicidad"
+                dt_BPubli = TBusca
+                ActualizarTablaC(dt_BPubli, dgvPubliB)
         End Select
         TBusca = Nothing
         TBuscada = ""
@@ -438,7 +441,7 @@ Public Class frmPrincipal
             condicion = String.Format("Nombre_Programa like '%{0}%'", txtNombreBP.Text)
         End If
         If Not String.IsNullOrWhiteSpace(txtDescripcionBP.Text) Then
-            condicion += String.Format("Descripcion like '%{0}%'", txtDescripcionBP.Text)
+            condicion += String.Format(" and Descripcion like '%{0}%'", txtDescripcionBP.Text)
         End If
         If Not BWBuscador.IsBusy Then
             BWBuscador.RunWorkerAsync(PSQL("ID_Programa, Nombre_Programa as Nombre, Descripcion", "programa", condicion))
@@ -489,5 +492,35 @@ Public Class frmPrincipal
 
     Private Sub btnagendarEvento_Click(sender As Object, e As EventArgs) Handles btnagendarEvento.Click
 
+    End Sub
+
+    Private Sub btnLimpiarPubliB_Click(sender As Object, e As EventArgs) Handles btnLimpiarPubliB.Click
+        txtNombre.Clear()
+        txtEmpresa.Clear()
+        ctpPubli.Value = Now.Date
+        cbPubli.Checked = False
+        ActualizarTablaC(Nothing, dgvClientes, False) 'fix
+    End Sub
+
+    Private Sub btnBuscarPubliB_Click(sender As Object, e As EventArgs) Handles btnBuscarPubliB.Click
+        TBuscada = "Publicidad"
+        Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
+        If (Not String.IsNullOrWhiteSpace(txtNombre.Text)) Then
+            condicion = "p.nombre like '%" + txtNombre.Text + "%'"
+        End If
+        If (cbPubli.Checked) Then
+            condicion += String.Format(" and p.id_publicidad in (select id_publicidad from aparecepubli where fecha_inicio <= '{0}' and fecha_finalizacion >= '{0}')", Format(ctpPubli.Value, "yyyy-MM-dd").ToString)
+        End If
+        If (Not String.IsNullOrWhiteSpace(txtEmpresa.Text)) Then
+            condicion += " and e.nombre like '%" + txtEmpresa.Text + "%'"
+        End If
+        If Not (BWBuscador.IsBusy) Then
+            BWBuscador.RunWorkerAsync(PSQL("p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa", "publicidad p inner join empresa e on p.id_empresa = e.id_empresa", condicion))
+        End If
+        ModLog.Guardar(PSQL("p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa", "publicidad p inner join empresa e on p.id_empresa = e.id_empresa", condicion))
+    End Sub
+
+    Private Sub cbTTodas_CheckedChanged(sender As Object, e As EventArgs) Handles cbTTodas.CheckedChanged
+        BWTandas.RunWorkerAsync(Not cbTTodas.Checked)
     End Sub
 End Class
