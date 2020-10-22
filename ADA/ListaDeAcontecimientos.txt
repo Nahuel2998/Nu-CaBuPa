@@ -46,3 +46,16 @@ e-Asociarlo a un capitulo de una serie
 Tanda
 a-Establecer tanda
 b-Asignar publicidad
+
+Publicidad
+a-Ver Datos
+b-Añadir publicidad
+c-Borrar publicidad
+d- Modificar datos
+e- Establecer fecha inicio y fin
+
+Empresa
+a- Ver datos
+b- Añadir empresa
+c- Modificar datos
+d- Establecer publicidad
