@@ -1,3 +1,12 @@
+Programa
+a-Ver Datos
+b-Añadir programa
+c-Borrar Programa
+d-Modificar Datos
+e-Establecer Fecha de fin
+f-Establecer funcionarios
+g-Añadir publicidad
+
 Cuotas
 a-Ver cuota
 b-Agregar cuota
@@ -8,19 +17,11 @@ a-Ver Agenda
 b-Agendar Programa
 c-Desagendar Programa
 
-Programa
-a-Ver Datos
-b-Añadir programa
-c-Borrar Programa
-d-Modificar Datos
-e-Establecer Fecha de fin
-f-Establecer funcionarios
-
 Función
 a-Crear función
 b-Borrar función
 c-Editar función
-[20:21]
+
 Funcionario
 a-Ver datos
 b-Añadir funcionario
@@ -29,14 +30,11 @@ d-Borrar funcionario
 e-Establecer funciones
 
 Usuarios
-a-Ingresar al sistema
-b-Configurar conexion
-c-Ver usuarios
-d-Editar usuarios
-e-Borrar usuarios
-f-Ver permisos
-g-Establecer permisos
-22 de octubre de 2020
+a-Ver usuarios
+b-Editar usuarios
+c-Borrar usuarios
+d-Ver permisos
+e-Establecer permisos
 
 Eventos:
 a-Ver información
@@ -44,3 +42,7 @@ b-Agendar
 c-Desagendar
 d-Establecer publicidades
 e-Asociarlo a un capitulo de una serie
+
+Tanda
+a-Establecer tanda
+b-Asignar publicidad
