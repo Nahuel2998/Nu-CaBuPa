@@ -25,7 +25,9 @@ CREATE TABLE `evento` (
   `ID_Evento` int(6) unsigned NOT NULL AUTO_INCREMENT,
   `nombre` varchar(32) NOT NULL,
   `descripcion` varchar(128) NOT NULL,
-  PRIMARY KEY (`ID_Evento`)
+  `ID_Video` int(6) unsigned,
+  PRIMARY KEY (`ID_Evento`),
+  Foreign KEY (ID_Video)references Video(`ID_Video`)
 );
 CREATE TABLE `empresa` (
   `ID_Empresa` int(6) unsigned NOT NULL AUTO_INCREMENT,
@@ -86,21 +88,6 @@ CREATE TABLE `aparecepubli` (
 Foreign KEY (Hora_Inicio) references Tanda(Hora_Inicio),
 Foreign key (ID_Publicidad) references Publicidad(ID_Publicidad)
 );
-CREATE TABLE `eventoesdep` (
-  `ID_Programa` int(6) unsigned NOT NULL,
-  `ID_Evento` int(6) unsigned NOT NULL,
-  PRIMARY KEY (`ID_Programa`,`ID_Evento`),
-  Foreign KEY (ID_Evento) references Evento(`ID_Evento`),
-Foreign KEY (ID_Programa) references Programa(`ID_Programa`)
-);
-CREATE TABLE `eventotratadev` (
-  `ID_Evento` int(6) unsigned NOT NULL,
-  `ID_Video` int(6) unsigned NOT NULL,
-  PRIMARY KEY (`ID_Evento`,`ID_Video`),
-Foreign KEY (ID_Video)references Video(`ID_Video`),
-Foreign KEY (ID_Evento) references Evento(ID_Evento)
-);
-
 
 CREATE TABLE `eventomuestrapubli` (
   `ID_Evento` int(6) unsigned NOT NULL,
@@ -173,6 +160,8 @@ CREATE TABLE `ustieneacceso` (
   PRIMARY KEY (`id_usuario`,`id_acceso`),
   Foreign KEY (id_acceso) references acceso(`id_acceso`)
 );
+
+
 
 
 INSERT INTO `acceso` VALUES (1,'Inicio','ac'),(2,'Eventos','ac'),(4,'ninguna','xr'),(5,'nnnn','xr'),(6,'Hola','S'),(7,'Hola','S'),(8,'Hola','S'),(9,'Hola','S'),(10,'Hola','S'),(11,'Hola','S'),(3,'Serie','ac');

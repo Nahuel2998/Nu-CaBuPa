@@ -1,4 +1,4 @@
-Programa: { ID_Programa , Fecha_Finalizacion , Nombre_Programa, Descripción}
+Programa: { ID_Programa , Fecha_Finalizacion, Nombre_Programa, Descripción}
 
 FechaPrograma: { Fecha ,  Hora_Inicio , Hora_Fin, ID_Programa}
 ProgramaCuota: { ID_Programa_Cuota, ID_Programa , Fecha_Pago, Fecha_Emision, Precio}
@@ -23,16 +23,13 @@ AparecePubli:	{ ID_Publicidad ,  Hora_Inicio , Fecha_Inicio, Fecha_Finalizacion}
 
 
 
-Evento:	{ ID_Evento , Nombre, Descripcion}
+Evento:	{ ID_Evento , Nombre, Descripcion, ID_Video }
 
 
-
-EventoTrataDeV:{ID_Evento, ID_Video}
 FechaEvento:	{ ID_Evento, Fecha } 
 
 
 EventoMuestraPubli: { ID_Evento ,  ID_Publicidad }
-EventoEsDeP:	{ ID_Programa , ID_Evento }
 
 Funcionario:	{ ID_Funcionario , Telefono, Nombre, Mail}
 
@@ -45,18 +42,5 @@ FunTrabaja:	{ ID_Funcionario, ID_Funcion, ID_Programa , Fecha_Inicio, Fecha_Fina
 
 Video:		{ ID_Video , Contenido, Nombre, ID_Serie, Fecha}
 Serie:		{ ID_Serie ,Fecha_Finalizacion, Nombre}
-
----
-
-Funcion:	{*ID_Funcion*, Descripcion}
-TrabajaComo:	{*ID_Funcionario, ID_Funcion*}
-
-FunTrabaja:	{*ID_Funcionario, *ID_Funcion*, ID_Programa*, *Fecha_Inicio*, Fecha_Finalizacion}
-
-- - - -
-
-Video:		{*ID_Video*, Contenido, Nombre, ID_Serie, Fecha}
-Serie:		{*ID_Serie*, Fecha_Finalizacion, Nombre}
-
 
 

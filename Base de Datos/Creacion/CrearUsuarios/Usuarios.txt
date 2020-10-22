@@ -1,9 +1,15 @@
-CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'administrador';
-GRANT USAGE ON *.* TO 'Admin'@'localhost';
-GRANT ALL PRIVILEGES ON JVRPDATABASE.* TO 'Admin'@'localhost';
+CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'jvrp';
+GRANT USAGE ON JVRPDATABASE.* TO 'Admin'@'localhost';
+GRANT ALL PRIVILEGES ON JVRPDATABASE.*TO 'Admin'@'localhost';
 FLUSH PRIVILEGES;
 
-CREATE USER 'Invitado'@'localhost' IDENTIFIED BY 'invitado';
-GRANT USAGE ON *.* TO 'Invitado'@'localhost';
-GRANT select ON JVRPDATABASE.* TO 'Invitado'@'localhost';
+CREATE USER 'User'@'localhost' IDENTIFIED BY 'usuario';
+GRANT USAGE ON JVRPDATABASE.* TO 'User'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETEON JVRPDATABASE.*TO 'User'@'localhost';
+FLUSH PRIVILEGES;
+
+
+CREATE USER 'Muestra'@'localhost' IDENTIFIED BY 'Default';
+GRANT USAGE ON JVRPDATABASE.*TO 'Muestra'@'localhost';
+GRANT select ON JVRPDATABASE.* TO 'Muestra'@'localhost';
 FLUSH PRIVILEGES;
