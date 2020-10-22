@@ -86,7 +86,7 @@ Partial Class frmLUsuario
         Me.txtUsuario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtUsuario.Location = New System.Drawing.Point(135, 57)
+        Me.txtUsuario.Location = New System.Drawing.Point(136, 55)
         Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUsuario.MaxLength = 16
         Me.txtUsuario.Name = "txtUsuario"
