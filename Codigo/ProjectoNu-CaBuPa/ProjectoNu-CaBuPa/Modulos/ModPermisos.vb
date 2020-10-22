@@ -95,6 +95,8 @@
                         If (Permisos.Rows(i).Item(2) = tipo) Then
                             Return True
                         End If
+                    Else
+                        Return True
                     End If
                 End If
             Next

@@ -39,9 +39,9 @@ Public Class frmPrincipal
         If Not (PoseePermiso("Serie")) Then
             tcSecciones.TabPages.RemoveByKey("tbSeries")
         End If
-        If Not (PoseePermiso("Empresa")) Then
-            tcSecciones.TabPages.RemoveByKey("tbEmpresa")
-        End If
+        ' If Not (PoseePermiso("Empresa")) Then
+        'tcSecciones.TabPages.RemoveByKey("tbEmpresa")
+        'End If
     End Sub
 #End Region
 

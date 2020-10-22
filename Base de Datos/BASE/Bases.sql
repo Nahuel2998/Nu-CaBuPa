@@ -164,7 +164,7 @@ CREATE TABLE `ustieneacceso` (
 
 
 
-INSERT INTO `acceso` VALUES (1,'Inicio','ac'),(2,'Eventos','ac'),(4,'ninguna','xr'),(5,'nnnn','xr'),(6,'Hola','S'),(7,'Hola','S'),(8,'Hola','S'),(9,'Hola','S'),(10,'Hola','S'),(11,'Hola','S'),(3,'Serie','ac');
+INSERT INTO `acceso` VALUES (1,'Inicio','ac'),(2,'Eventos','ac'),(4,'Empresa','xr'),(5,'nnnn','xr'),(6,'Hola','S'),(7,'Hola','S'),(8,'Hola','S'),(9,'Hola','S'),(10,'Hola','S'),(11,'Hola','S'),(3,'Serie','ac');
 
 INSERT INTO `empresa` VALUES (1,'Mil','113','dd'),(3,'NuCaBuPA',NULL,NULL);
 
