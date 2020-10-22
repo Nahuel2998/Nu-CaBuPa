@@ -1,17 +1,31 @@
 #!/bin/bash
+Verificar(){
+    Direcciones=($(find $TD -type d))
+    Result=${#Direcciones[@]}
+    if [ $Result -gt 1 ]; then
+        ExisteDir="Si"
+    else
+        ExisteDir="No"
+    fi
+}
 Crear () {
     printf "%s\n" "Desea crear un archivo o subdirectorio?" "1)Archivo" "2)Subdirectorio" "Otro)Salir"
     read OP
     Eleccion=""
     if [ $OP = "1" ]; then
-        Eleccion="archivo"
+        Eleccion="Archivo"
     elif [ $OP = "2" ]; then
-        Eleccion="subdirectorio"
+        Eleccion="Subdirectorio"
     else
     	exit
     fi
     clear
-    RecD $TD
+    if [ $ExisteDir = "Si" ]; then
+        RecD $TD
+    else 
+        DirTemp=$TD
+        Nombre
+    fi
 }
 Nombre(){
     printf "%s\n" "Indique un nombre para el $Eleccion"
@@ -24,22 +38,25 @@ Nombre(){
     	Error "Nombre"
     fi
     clear
-    printf "%s\n" "$Eleccion creado exitosamente en $DirTemp"
+    printf "%s\n" "$Eleccion creado exitosamente en $TD"
     tree $TD
+    Verificar
     Crear
 }
 #Recorre el directorio
 RecD () {
-    printf "%s\n" "Donde desea crearlo?"
+    printf "%s\n" "Donde desea crearlo?" "(Ruta relativa o nombre. Ingrese un . para crearlo en el directorio actual)"
     tree $TD
     read nombre
-    if [ nombre = "" ]; then
+    if [ "$nombre" = "." ]; then
+        DirTemp=$TD
+        Nombre
     	exit
     fi
-    Direcciones=($(find $TD -type d -name "$nombre"))
+    Direcciones=($(find $TD -type d -name "$nombre" | sed "s/ /'/g"))
     Result=${#Direcciones[@]}
-    if [ $Result -eq 1 ] && [ "${Direcciones[0]}" != "" ]; then
-        DirTemp=${Direcciones[0]}
+    if [ $Result -eq 1 ] && [ "${Direcciones[0]}" != "''" ]; then
+        DirTemp=$(echo ${Direcciones[$i]} | sed "s/'/ /g")
         printf "%s\n" "Encontrado: $DirTemp"
         Nombre
     elif [ $Result -gt 1 ]; then
@@ -47,7 +64,7 @@ RecD () {
         Num=0
         iter=`expr $Result - 1`
         for i in `seq 0 $iter`; do
-            printf "$Num)%s\n" "${Direcciones[$i]}"
+            printf "$Num) %s\n" "$(echo ${Direcciones[$i]} | sed "s/'/ /g")"
             Num=`expr $Num + 1`
         done
         read Num
@@ -66,7 +83,7 @@ RecD () {
 Error(){
         printf "%s\n" "No se encontró" "Ingrese cualquier caracter para continuar o 0 para salir"
         read Salir
-        if [ $Salir -eq 0 ]; then
+        if [ $Salir = "0" ]; then
             exit
         else
         	$1
@@ -75,16 +92,27 @@ Error(){
 TD=""
 DirTemp=""
 OP=""
+ExisteDir=""
+while [ "$TD" = "" ]
+do
 #Se pregunta cual es la dirección en la que se creará el arbol
-printf "%s\n" "Indique la dirección en la que se creará el arbol"
+printf "%s\n" "Bienvenid@ al generador de archivos/directorios" "(Si no ve el arbol mostrado a continuación debe instalar tree)"
+tree -d "$HOME/"
+printf "%s\n" "Indique el nombre del directorio a crear para el árbol" "(Si ya existe se utilizará ese)" "Ingrese un . para salir"
 read TD
+    if [ "$TD" = "." ]; then
+        exit
+    fi
+done
 #Verificamos que no sea camino absoluto y de que exista
 TD=$(echo $TD | sed 's/^\///') 
 TD="$HOME/"$TD
 if [ -d "$TD" ] ; then
-    printf "%s\n\n" "Directorio encontrado"
+    printf "%s\n\n" "Directorio encontrado : $TD"
+    Verificar
 else
     printf "%s\n\n" "Directorio creado"
-    mkdir $TD
+    mkdir "$TD"
+    ExisteDir="No"
 fi
 Crear
