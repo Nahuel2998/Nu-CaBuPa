@@ -6,9 +6,11 @@ Public Class frmPublicidad
     Dim datos() As String
     Dim datosI() As String
     Private TBusca As DataTable
+    Private TBuscada As String = ""
     Private dt_fechas As DataTable
     Dim position() As String
-    Dim pos As UInt16 = 0
+    Dim positionTanda() As String
+    Dim pos() As UInt16 = {0, 0}
     Dim empresaID As Integer = 0
     Public Sub New(ByVal pid As Integer)
         InitializeComponent()
@@ -28,7 +30,6 @@ Public Class frmPublicidad
     End Sub
     Sub CargarCombo()
         dt_Empresa = DevolverTabla(PSQL("id_Empresa, Nombre, Telefono, Mail", "Empresa", "True"))
-        ModLog.Guardar(PSQL("id_Empresa, Nombre, Telefono, Mail", "Empresa", "True"))
         LlenarCombo(cbEmpresa, dt_Empresa, "Nombre")
         If Not IsNothing(dt_Empresa) Then
             ExtraerDatos()
@@ -36,7 +37,29 @@ Public Class frmPublicidad
             MessageBox.Show("Debe tener empresas ingresadas")
             Close()
         End If
-        cbEmpresa.SelectedIndex = pos
+        cbEmpresa.SelectedIndex = pos(0)
+    End Sub
+    Sub CargarComboTandas()
+        LlenarCombo(cbTanda, dt_tandasCon, "Horas")
+        If Not IsNothing(dt_tandasCon) Then
+            ExtraerDatosTan()
+        Else
+            MessageBox.Show("Debe tener empresas ingresadas")
+            Close()
+        End If
+        cbTanda.SelectedIndex = pos(1)
+    End Sub
+    Public Sub ExtraerDatosTan()
+        ReDim positionTanda(dt_tandasCon.Rows.Count - 1)
+        For j As Integer = 0 To dt_tandasCon.Rows.Count - 1
+            positionTanda(j) = dt_tandasCon.Rows(j).Item(0).ToString
+        Next
+        'For i As Integer = 0 To position.Length - 1
+        'If empresaID = positionTanda(i) Then
+        'pos(1) = i + 1
+        'Exit For
+        'End If
+        'Next
     End Sub
     Public Sub ExtraerDatos()
         ReDim position(dt_Empresa.Rows.Count - 1)
@@ -45,7 +68,7 @@ Public Class frmPublicidad
         Next
         For i As Integer = 0 To position.Length - 1
             If empresaID = position(i) Then
-                pos = i + 1
+                pos(0) = i + 1
                 Exit For
             End If
         Next
@@ -119,5 +142,30 @@ Public Class frmPublicidad
         Else
             Alternar()
         End If
+    End Sub
+
+    Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
+        Dim Columna As String = ""
+        Dim Condicion As String = "true"
+        Dim Tablas As String = ""
+        If Not (bwDatos.IsBusy) Then
+            bwDatos.RunWorkerAsync(tcP.SelectedIndex)
+        End If
+    End Sub
+
+    Private Sub bwDatos_DoWork(sender As Object, e As DoWorkEventArgs) Handles bwDatos.DoWork
+        Select Case e.Argument
+            Case 1
+                TBuscada = "Tanda"
+                dt_tandasCon = DevolverTabla(PSQL("Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas'", "Tanda", "True"))
+                ModLog.Guardar(PSQL("Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas'", "Tanda", "True"))
+        End Select
+    End Sub
+
+    Private Sub bwDatos_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwDatos.RunWorkerCompleted
+        Select Case TBuscada
+            Case "Tanda"
+                CargarComboTandas()
+        End Select
     End Sub
 End Class
