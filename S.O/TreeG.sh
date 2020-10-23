@@ -1,6 +1,6 @@
 #!/bin/bash
 Verificar(){
-    Direcciones=($(find $TD -type d))
+    Direcciones=($(find "$TD" -type d))
     Result=${#Direcciones[@]}
     if [ $Result -gt 1 ]; then
         ExisteDir="Si"
@@ -21,9 +21,9 @@ Crear () {
     fi
     clear
     if [ $ExisteDir = "Si" ]; then
-        RecD $TD
+        RecD "$TD"
     else 
-        DirTemp=$TD
+        DirTemp="$TD"
         Nombre
     fi
 }
@@ -39,21 +39,27 @@ Nombre(){
     fi
     clear
     printf "%s\n" "$Eleccion creado exitosamente en $TD"
-    tree $TD
+    tree "$TD"
     Verificar
     Crear
 }
 #Recorre el directorio
 RecD () {
-    printf "%s\n" "Donde desea crearlo?" "(Ruta relativa o nombre. Ingrese un . para crearlo en el directorio actual)"
-    tree $TD
+    printf "%s\n" "Donde desea crearlo?" "(Ruta relativa o nombre. Ingrese un . para crearlo en el directorio $TD)"
+    tree "$TD"
     read nombre
     if [ "$nombre" = "." ]; then
-        DirTemp=$TD
+        DirTemp="$TD"
         Nombre
     	exit
+    elif [[ "$nombre" =~ "/" ]]; then
+        Buscar "wholename"
+    else
+        Buscar "name"
     fi
-    Direcciones=($(find $TD -type d -name "$nombre" | sed "s/ /'/g"))
+}
+Buscar(){
+    Direcciones=($(find "$TD" -type d -$1 "$nombre" | sed "s/ /'/g"))
     Result=${#Direcciones[@]}
     if [ $Result -eq 1 ] && [ "${Direcciones[0]}" != "''" ]; then
         DirTemp=$(echo ${Direcciones[$i]} | sed "s/'/ /g")
@@ -96,8 +102,7 @@ ExisteDir=""
 while [ "$TD" = "" ]
 do
 #Se pregunta cual es la dirección en la que se creará el arbol
-printf "%s\n" "Bienvenid@ al generador de archivos/directorios" "(Si no ve el arbol mostrado a continuación debe instalar tree)"
-tree -d "$HOME/"
+printf "%s\n" "Bienvenid@ al generador de archivos/directorios"
 printf "%s\n" "Indique el nombre del directorio a crear para el árbol" "(Si ya existe se utilizará ese)" "Ingrese un . para salir"
 read TD
     if [ "$TD" = "." ]; then
@@ -105,8 +110,8 @@ read TD
     fi
 done
 #Verificamos que no sea camino absoluto y de que exista
-TD=$(echo $TD | sed 's/^\///') 
-TD="$HOME/"$TD
+TD=$(echo "$TD" | sed 's/^\///') 
+TD="$HOME/$TD"
 if [ -d "$TD" ] ; then
     printf "%s\n\n" "Directorio encontrado : $TD"
     Verificar
@@ -115,4 +120,5 @@ else
     mkdir "$TD"
     ExisteDir="No"
 fi
+echo "$TD" > "$HOME/Direccion.txt"
 Crear

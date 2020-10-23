@@ -1,3 +1,13 @@
+#!/bin/bash
+Verificar(){
+    Direcciones=($(find "$TD" -type d))
+    Result=${#Direcciones[@]}
+    if [ $Result -gt 1 ]; then
+        ExisteDir="Si"
+    else
+        ExisteDir="No"
+    fi
+}
 Letra(){
     printf "%s\n" "Indique el caracter a ser cambiado"
     read Letra
@@ -55,20 +65,26 @@ Renombrar(){
         fi
 }
 RecD () {
-    printf "%s\n" "En que carpeta desea cambiar los nombre?" "(Ruta relativa o nombre. Ingrese un . para usaar en el directorio actual)"
+    printf "%s\n" "En que carpeta desea cambiar los nombre?" "(Ruta relativa o nombre. Ingrese un . para usaar en el directorio $TD)"
     tree $TD
     read nombre
     if [ "$nombre" = "." ]; then
-        DirTemp=$TD
+        DirTemp="$TD"
         Letra
     	exit
+    elif [[ "$nombre" =~ "/" ]]; then
+        Buscar "wholename"
+    else
+        Buscar "name"
     fi
-    Direcciones=($(find $TD -type d -name "$nombre" | sed "s/ /'/g"))
+}
+Buscar(){
+    Direcciones=($(find "$TD" -type d -$1 "$nombre" | sed "s/ /'/g"))
     Result=${#Direcciones[@]}
     if [ $Result -eq 1 ] && [ "${Direcciones[0]}" != "''" ]; then
         DirTemp=$(echo ${Direcciones[$i]} | sed "s/'/ /g")
         printf "%s\n" "Encontrado: $DirTemp"
-        Letra
+        Nombre
     elif [ $Result -gt 1 ]; then
         printf "%s\n" "A cual directorio se refiere?"
         Num=0
@@ -82,7 +98,7 @@ RecD () {
         echo $eleccion
         if [ -d "$eleccion" ]; then
             DirTemp=$eleccion
-            Letra
+            Nombre
         else
             Error "RecD"
         fi
@@ -105,23 +121,34 @@ DirTemp=""
 OP=""
 while [ "$TD" = "" ]
 do
-#Se pregunta cual es la dirección en la que se creará el arbol
-printf "%s\n" "Bienvenid@ al renombrador de archivos" "(Si no ve el arbol mostrado a continuación debe instalar tree)"
-tree -d "$HOME/"
-printf "%s\n" "Indique el nombre del arbol creado" "(O ruta relativa)" "Ingrese un . para salir"
-read TD
-    if [ "$TD" = "." ]; then
-        exit
+    #Se pregunta cual es la dirección en la que se creará el arbol
+    printf "%s\n" "Bienvenid@ al renombrador de archivos"
+    if [ ! -f "$HOME/Direccion.txt" ]; then
+        printf "%s\n" "Indique el nombre del arbol creado" "(O ruta relativa)" "Ingrese un . para salir"
+        read TD
+        if [ "$TD" = "." ]; then
+            exit
+        elif [ "$TD" <> "" ]; then
+            #Verificamos que no sea camino absoluto y de que exista
+            TD=$(echo "$TD" | sed 's/^\///') 
+            TD="/home/$USER/$TD"
+        fi
+    else
+        TD=$(cat "Direccion.txt")
     fi
 done
-#Verificamos que no sea camino absoluto y de que exista
-TD=$(echo $TD | sed 's/^\///') 
-TD="/home/$USER/$TD"
 if [ -d "$TD" ] ; then
     printf "%s\n\n" "Directorio encontrado : $TD"
+    Verificar
 else
     Error "Inicio"
 fi
-RecD
+if [ $ExisteDir = "Si" ]; then
+    RecD
+else 
+    DirTemp="$TD"
+    Letra
+fi
 }
+ExisteDir=""
 Inicio

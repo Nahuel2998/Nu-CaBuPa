@@ -697,3 +697,4 @@
 23/10/2020 5:47:20 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 23/10/2020 5:47:33 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
 23/10/2020 5:47:36 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+23/10/2020 9:51:23 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

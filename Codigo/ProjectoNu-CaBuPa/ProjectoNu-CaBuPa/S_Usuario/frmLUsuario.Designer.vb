@@ -38,6 +38,9 @@ Partial Class frmLUsuario
         '
         'panelUsuario
         '
+        Me.panelUsuario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.panelUsuario.BackColor = System.Drawing.Color.Transparent
         Me.panelUsuario.Controls.Add(Me.btnOpciones)
         Me.panelUsuario.Controls.Add(Me.txtPass)
@@ -60,7 +63,7 @@ Partial Class frmLUsuario
         '
         Me.btnOpciones.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnOpciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnOpciones.Location = New System.Drawing.Point(21, 172)
+        Me.btnOpciones.Location = New System.Drawing.Point(8, 172)
         Me.btnOpciones.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOpciones.Name = "btnOpciones"
         Me.btnOpciones.Size = New System.Drawing.Size(136, 45)
@@ -97,7 +100,7 @@ Partial Class frmLUsuario
         '
         Me.btnEntrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEntrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(134, Byte), Integer))
-        Me.btnEntrar.Location = New System.Drawing.Point(427, 172)
+        Me.btnEntrar.Location = New System.Drawing.Point(432, 172)
         Me.btnEntrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEntrar.Name = "btnEntrar"
         Me.btnEntrar.Size = New System.Drawing.Size(122, 45)
@@ -144,7 +147,7 @@ Partial Class frmLUsuario
         Me.Panel1.Location = New System.Drawing.Point(13, 11)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(565, 250)
+        Me.Panel1.Size = New System.Drawing.Size(560, 250)
         Me.Panel1.TabIndex = 2
         '
         'UI_GradientPanel1
@@ -156,27 +159,28 @@ Partial Class frmLUsuario
         Me.UI_GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UI_GradientPanel1.Location = New System.Drawing.Point(0, 0)
         Me.UI_GradientPanel1.Name = "UI_GradientPanel1"
-        Me.UI_GradientPanel1.Size = New System.Drawing.Size(590, 274)
+        Me.UI_GradientPanel1.Size = New System.Drawing.Size(585, 274)
         Me.UI_GradientPanel1.TabIndex = 4
         Me.UI_GradientPanel1.UIBackColor = System.Drawing.Color.Empty
         Me.UI_GradientPanel1.UIBottomLeft = System.Drawing.Color.DarkBlue
-        Me.UI_GradientPanel1.UIBottomRight = System.Drawing.Color.Orange
+        Me.UI_GradientPanel1.UIBottomRight = System.Drawing.Color.Black
         Me.UI_GradientPanel1.UIForeColor = System.Drawing.Color.Empty
         Me.UI_GradientPanel1.UIPrimerColor = System.Drawing.Color.White
         Me.UI_GradientPanel1.UIStyle = UIDC.UI_GradientPanel.GradientStyle.Corners
-        Me.UI_GradientPanel1.UITopLeft = System.Drawing.Color.Lime
+        Me.UI_GradientPanel1.UITopLeft = System.Drawing.Color.Black
         Me.UI_GradientPanel1.UITopRight = System.Drawing.Color.Fuchsia
         '
         'UI_TitleBanner1
         '
-        Me.UI_TitleBanner1.Animate = UIDC.UI_TitleBanner.Anim.AnimateON
-        Me.UI_TitleBanner1.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.UI_TitleBanner1.Animate = UIDC.UI_TitleBanner.Anim.AnimateOFF
+        Me.UI_TitleBanner1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.UI_TitleBanner1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.UI_TitleBanner1.ButtonMenuActive = UIDC.UI_TitleBanner.Active.ActiveOn
         Me.UI_TitleBanner1.ButtonsVisible = UIDC.UI_TitleBanner.ButtonVisible.Close_Minimize
         Me.UI_TitleBanner1.Dock = System.Windows.Forms.DockStyle.Top
         Me.UI_TitleBanner1.FlatAppearance.BorderSize = 0
-        Me.UI_TitleBanner1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.UI_TitleBanner1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.UI_TitleBanner1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.UI_TitleBanner1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.UI_TitleBanner1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.UI_TitleBanner1.Font = New System.Drawing.Font("Roboto Medium", 10.0!)
         Me.UI_TitleBanner1.ForeColor = System.Drawing.Color.White
@@ -185,7 +189,7 @@ Partial Class frmLUsuario
         Me.UI_TitleBanner1.Name = "UI_TitleBanner1"
         Me.UI_TitleBanner1.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.UI_TitleBanner1.ParentControl = Me
-        Me.UI_TitleBanner1.Size = New System.Drawing.Size(590, 30)
+        Me.UI_TitleBanner1.Size = New System.Drawing.Size(585, 30)
         Me.UI_TitleBanner1.TabIndex = 1
         Me.UI_TitleBanner1.Text = "Inicio de sesión"
         Me.UI_TitleBanner1.TextAlign = System.Drawing.ContentAlignment.TopLeft
@@ -197,7 +201,7 @@ Partial Class frmLUsuario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(590, 274)
+        Me.ClientSize = New System.Drawing.Size(585, 274)
         Me.Controls.Add(Me.UI_GradientPanel1)
         Me.Controls.Add(Me.Panel1)
         Me.ForeColor = System.Drawing.Color.Yellow
