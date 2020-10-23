@@ -535,4 +535,9 @@ Public Class frmPrincipal
     Private Sub dgvPubliB_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPubliB.CellClick
         ClickCheck(dgvPubliB)
     End Sub
+
+    Private Sub btnIngresarPubliB_Click(sender As Object, e As EventArgs) Handles btnIngresarPubliB.Click
+        Dim formPubli As New frmPublicidad(-1)
+        formPubli.ShowDialog()
+    End Sub
 End Class

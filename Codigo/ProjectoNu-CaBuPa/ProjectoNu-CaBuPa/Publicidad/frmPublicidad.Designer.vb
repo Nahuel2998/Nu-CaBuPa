@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmPublicidad
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmPublicidad
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -128,6 +128,7 @@ Partial Class frmPublicidad
         'btnSalir
         '
         Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnSalir.ForeColor = System.Drawing.Color.Black
         Me.btnSalir.Location = New System.Drawing.Point(7, 340)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnSalir.Name = "btnSalir"
@@ -139,6 +140,7 @@ Partial Class frmPublicidad
         'btnEditar
         '
         Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnEditar.ForeColor = System.Drawing.Color.Black
         Me.btnEditar.Location = New System.Drawing.Point(317, 340)
         Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnEditar.Name = "btnEditar"
@@ -205,6 +207,7 @@ Partial Class frmPublicidad
         'btnBorrar
         '
         Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnBorrar.ForeColor = System.Drawing.Color.Black
         Me.btnBorrar.Location = New System.Drawing.Point(156, 340)
         Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnBorrar.Name = "btnBorrar"
@@ -332,9 +335,10 @@ Partial Class frmPublicidad
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(186, 16)
+        Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(171, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 18)
+        Me.Label1.Size = New System.Drawing.Size(73, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Tanda"
         '
