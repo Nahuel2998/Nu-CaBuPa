@@ -8,69 +8,80 @@ Verificar(){
         ExisteDir="No"
     fi
 }
-Letra(){
+Letra1(){
+    printf "%s\n" "Directorio: $DirTemp" 
+    tree "$TD"
     printf "%s\n" "Indique el caracter a ser cambiado"
     read Letra
     Verificacion=$(echo $Letra | egrep "^[a-Z0-9]$")
     if [ Verificacion = "" ]; then
-    	Error "Letra"
+    	Error "Letra1"
     fi
     Letra2
 }
 Letra2(){
     printf "%s\n" "Indique el caracter por el cual reemplazar"
-    read Letra2
-    Verificacion=$(echo $Letra2 | egrep "^[a-Z0-9]$")
+    read LetraN
+    Verificacion=$(echo "$LetraN" | egrep "^[a-Z0-9]$")
     if [ Verificacion = "" ]; then
     	Error "Letra2"
     fi
     Cambiar
 }
 Cambiar(){
-    Anterior=($(find "$DirTemp" -maxdepth 1 -type f | sed "s/^.*\///" | sed "s/ /'/g"))
-    Nuevo=($(find "$DirTemp" -maxdepth 1 -type f | sed "s/^.*\///" | sed "s/$Letra/$Letra2/g" | sed "s/ /'/g"))
+    Anterior=($(find "$DirTemp" -maxdepth 1 -type f | sed "s/^.*\///" | egrep "$Letra" | sed "s/ /'/g"))
+    Nuevo=($(find "$DirTemp" -maxdepth 1 -type f | sed "s/^.*\///" | egrep "$Letra" | sed "s/'$Letra'/'$LetraN'/g" | sed "s/ /'/g"))
     Canti=${#Anterior[@]}
+    if [ $Canti -eq 0 ]; then
+        clear
+        printf "%s\n" "Ningun nombre posee dicho caracter"
+        Error "Letra1"
+        exit
+    fi
     can=`expr $Canti - 1`
-        for i in `seq 0 $can`; do
-            printf "%s %s %s\n" "'$(echo ${Anterior[$i]} | sed "s/'/ /g")'" "Pasará a ser:" "'$(echo ${Nuevo[$i]} | sed "s/'/ /g")'"
-        done
+    for i in `seq 0 $can`; do
+        printf "%s %s %s\n" "'$(echo ${Anterior[$i]} | sed "s/'/ /g")'" "Pasará a ser:" "'$(echo ${Nuevo[$i]} | sed "s/'/ /g")'"
+    done
     printf "%s\n" "Para aceptar inserte 'y'" "Para no renombrar 'n'" "Para salir inserte cualquier otro"
     read Salir
         if [ "$Salir" = "y" ]; then
             Renombrar
         elif [ "$Salir" = "n" ]; then
-            Letra
+            clear
+            Letra1
         else
         	exit
         fi
 }
 Renombrar(){
-    Archivos=$(find "$DirTemp" -maxdepth 1 -type f | sed "s/ /'/g")
+    Archivos=$(find "$DirTemp" -maxdepth 1 -type f | egrep "$Letra" | sed "s/ /'/g")
     for o in $Archivos
     do
         i=$(echo "$o" | sed "s/'/ /g")
     	OldName=$i
-    	NewName="$DirTemp/$(echo "$i" | sed "s/^.*\///" | sed "s/$Letra/$Letra2/g")"
+    	NewName="$DirTemp/$(echo "$i" | sed "s/^.*\///" | sed "s/'$Letra'/'$LetraN'/g")"
     	if [ "$OldName" != "$NewName" ]; then
     		mv "$OldName" "$NewName"
     	fi
     done
+    printf "%s\n" "Resultado: "
     tree "$TD"
     printf "\n%s\n\n" "Si quiere seguir modificando inserte 'y', para salir inserte cualquier otro"
     read Salir
         if [ "$Salir" = "y" ]; then
-            Letra
+            clear
+            Letra1
         else
         	exit
         fi
 }
 RecD () {
     printf "%s\n" "En que carpeta desea cambiar los nombre?" "(Ruta relativa o nombre. Ingrese un . para usaar en el directorio $TD)"
-    tree $TD
+    tree "$TD"
     read nombre
     if [ "$nombre" = "." ]; then
         DirTemp="$TD"
-        Letra
+        Letra1
     	exit
     elif [[ "$nombre" =~ "/" ]]; then
         Buscar "wholename"
@@ -147,7 +158,7 @@ if [ $ExisteDir = "Si" ]; then
     RecD
 else 
     DirTemp="$TD"
-    Letra
+    Letra1
 fi
 }
 ExisteDir=""
