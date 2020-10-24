@@ -220,7 +220,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnbuscarv_Click(sender As Object, e As EventArgs) Handles btnbuscarv.Click
-        TBuscada = 1 '' Video
+        TBuscada = VIDEO
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtVnombre.Text)) Then
             condicion = String.Format("v.nombre like '%{0}%'", txtVnombre.Text)
@@ -236,39 +236,30 @@ Public Class frmPrincipal
         End If
     End Sub
 
-    '' TBuscada:
-    '' '' 1 = Video
-    '' '' 2 = Serie
-    '' '' 3 = Empresa
-    '' '' 4 = Programa
-    '' '' 5 = Publicidad
-    '' '' 6 = Funcionario
-    '' '' 0 = Valor por Defecto
     Private Sub BWBuscador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWBuscador.RunWorkerCompleted
         Select Case TBuscada
-            Case 1
+            Case VIDEO
                 dt_Video = TBusca
                 ActualizarTablaC(dt_Video, dgvVB)
-            Case 2
+            Case SERIE
                 dt_Serie = TBusca
                 ActualizarTablaC(dt_Serie, dgvBS)
-            Case 3
+            Case EMPRESA
                 dt_Empresa = TBusca
                 ActualizarTablaC(dt_Empresa, dgvClientes)
-            Case 4
+            Case PROGRAMAS
                 dt_BPrograma = TBusca
                 ActualizarTablaC(dt_BPrograma, dgvBProgramas)
-            Case 5
+            Case PUBLICIDAD
                 dt_BPubli = TBusca
                 ActualizarTablaC(dt_BPubli, dgvPubliB)
-            Case 6
+            Case FUNCIONARIO
                 dt_BFuncionario = TBusca
                 ActualizarTablaC(dt_BFuncionario, dgvFuncionarioBF)
         End Select
         TBusca = Nothing
         TBuscada = 0
     End Sub
-
 
     Private Sub DgvVB_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellDoubleClick
         Dim i As Integer = CargarID(dt_Video, dgvVB)
@@ -299,7 +290,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBuscarBS_Click(sender As Object, e As EventArgs) Handles btnBuscarBS.Click
-        TBuscada = 2 '' Serie
+        TBuscada = SERIE
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtBSnombre.Text)) Then
             condicion = "nombre like '%" + txtBSnombre.Text + "%'"
@@ -333,20 +324,16 @@ Public Class frmPrincipal
         btnBuscarBS.PerformClick()
     End Sub
 
-    Private Sub dgvVB_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellClick
-        ClickCheck(dgvVB)
+    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellClick, dgvBS.CellClick, dgvClientes.CellClick, dgvBProgramas.CellClick, dgvPubliB.CellClick
+        ClickCheck(sender, e.ColumnIndex)
     End Sub
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        BorrarConfirmar(dt_Video, dgvVB, "Video", btnbuscarv)
+        BorrarConfirmar(dt_Video, dgvVB, VIDEO, btnbuscarv)
     End Sub
 
     Private Sub btnBorrarS_Click(sender As Object, e As EventArgs) Handles btnBorrarS.Click
-        BorrarConfirmar(dt_Serie, dgvBS, "Serie", btnBuscarBS)
-    End Sub
-
-    Private Sub dgvBS_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBS.CellClick
-        ClickCheck(dgvBS)
+        BorrarConfirmar(dt_Serie, dgvBS, SERIE, btnBuscarBS)
     End Sub
 
     Private Sub btnIngresarV_Click(sender As Object, e As EventArgs) Handles btnIngresarV.Click
@@ -362,7 +349,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btncBuscar_Click(sender As Object, e As EventArgs) Handles btncBuscar.Click
-        TBuscada = 3 '' Empresa
+        TBuscada = EMPRESA
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtCNombre.Text)) Then
             condicion = "Nombre like '%" + txtCNombre.Text + "%'"
@@ -379,15 +366,13 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btncBorrar_Click(sender As Object, e As EventArgs) Handles btncBorrar.Click
-        BorrarConfirmar(dt_Empresa, dgvClientes, "Empresa", btncBuscar)
+        BorrarConfirmar(dt_Empresa, dgvClientes, EMPRESA, btncBuscar)
     End Sub
 
-    Private Sub dgvClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellClick
-        ClickCheck(dgvClientes)
-    End Sub
     Private Sub FormCliente_FormClosed(sender As Object, e As FormClosedEventArgs)
         btncBuscar.PerformClick()
     End Sub
+
     Private Sub dgvClientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellDoubleClick
         Dim i() As String = CargarID(dt_Empresa, dgvClientes, {0, 1, 2, 3})
         If (i.Length <> 1) Then
@@ -418,7 +403,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBuscarBP_Click(sender As Object, e As EventArgs) Handles btnBuscarBP.Click
-        TBuscada = 4 '' Programa
+        TBuscada = PROGRAMAS
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If Not String.IsNullOrWhiteSpace(txtNombreBP.Text) Then
             condicion = String.Format("Nombre_Programa like '%{0}%'", txtNombreBP.Text)
@@ -432,11 +417,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBorrarBP_Click(sender As Object, e As EventArgs) Handles btnBorrarBP.Click
-        BorrarConfirmar(dt_BPrograma, dgvBProgramas, "Programa", btnBuscarBP)
-    End Sub
-
-    Private Sub dgvBProgramas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBProgramas.CellClick
-        ClickCheck(dgvBProgramas)
+        BorrarConfirmar(dt_BPrograma, dgvBProgramas, PROGRAMAS, btnBuscarBP)
     End Sub
 
     Private Sub dgvBProgramas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBProgramas.CellDoubleClick
@@ -480,7 +461,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBuscarPubliB_Click(sender As Object, e As EventArgs) Handles btnBuscarPubliB.Click
-        TBuscada = 5 '' Publicidad
+        TBuscada = PUBLICIDAD
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtNombre.Text)) Then
             condicion = "p.nombre like '%" + txtNombre.Text + "%'"
@@ -513,10 +494,6 @@ Public Class frmPrincipal
         btnBuscarPubliB.PerformClick()
     End Sub
 
-    Private Sub dgvPubliB_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPubliB.CellClick
-        ClickCheck(dgvPubliB)
-    End Sub
-
     Private Sub btnIngresarPubliB_Click(sender As Object, e As EventArgs) Handles btnIngresarPubliB.Click
         Dim formPubli As New frmPublicidad(-1)
         AddHandler formPubli.FormClosed, AddressOf FormPubli_FormClosed
@@ -531,7 +508,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBuscarBF_Click(sender As Object, e As EventArgs) Handles btnBuscarBF.Click
-        TBuscada = 6 '' Funcionario
+        TBuscada = FUNCIONARIO
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtNombreBF.Text)) Then
             condicion = "Nombre like '%" + txtNombreBF.Text + "%'"
@@ -548,9 +525,9 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBorrarPubliB_Click(sender As Object, e As EventArgs) Handles btnBorrarPubliB.Click
-        BorrarConfirmar(dt_BPubli, dgvPubliB, "Publicidad", btnBuscarPubliB)
+        BorrarConfirmar(dt_BPubli, dgvPubliB, PUBLICIDAD, btnBuscarPubliB)
     End Sub
-    Private Sub BorrarConfirmar(ByRef dt As DataTable, ByRef dgv As DataGridView, ByVal tabla As String, ByRef btn As Button)
+    Private Sub BorrarConfirmar(ByRef dt As DataTable, ByRef dgv As DataGridView, ByVal tabla As Byte, ByRef btn As Button)
         If Not IsNothing(dt) Then
             If (dt.Rows.Count > 0) Then
                 Dim Id() As String = ObtenerCheck(dt, dgv)
@@ -564,7 +541,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBorrarBF_Click(sender As Object, e As EventArgs) Handles btnBorrarBF.Click
-        BorrarConfirmar(dt_BFuncionario, dgvFuncionarioBF, "Funcionario", btnBuscarBF)
+        BorrarConfirmar(dt_BFuncionario, dgvFuncionarioBF, FUNCIONARIO, btnBuscarBF)
     End Sub
 
     Private Sub btnIngresarBF_Click(sender As Object, e As EventArgs) Handles btnIngresarBF.Click

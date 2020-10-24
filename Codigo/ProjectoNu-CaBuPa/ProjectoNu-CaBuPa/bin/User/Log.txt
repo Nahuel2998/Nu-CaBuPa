@@ -110,3 +110,97 @@
 24/10/2020 14:25:28 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='01:00:00' and fecha_inicio >='2020-09-08' and fecha_finalizacion<='2020-11-20' 
 24/10/2020 14:25:30 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='00:00:00' and fecha_inicio >='2020-09-08' and fecha_finalizacion<='2020-11-20' 
 24/10/2020 14:25:31 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+24/10/2020 16:59:58 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:00:23 LAPTOP-J0MPD84C ' update usuarios set nombre ='d',contrasena = AES_ENCRYPT('d',sha2('RKx5ZH3M',256)) WHERE id_usuario ='2' 
+24/10/2020 17:00:30 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:00:48 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:01:16 LAPTOP-J0MPD84C ' Insert into ustieneacceso ( id_usuario, id_acceso ) values ('2','2'),('2','3'),('2','4'),('2','7'),('2','8'),('2','9') 
+24/10/2020 17:01:22 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:01:28 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+24/10/2020 17:01:36 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+24/10/2020 17:01:42 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+24/10/2020 17:02:00 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+24/10/2020 17:02:06 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+24/10/2020 17:02:08 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+24/10/2020 17:02:20 LAPTOP-J0MPD84C ' select fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = -1) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE true 
+24/10/2020 17:02:21 LAPTOP-J0MPD84C ' select  FROM  WHERE true 
+24/10/2020 17:02:21 LAPTOP-J0MPD84C ' select fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = -1) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE true 
+24/10/2020 17:02:22 LAPTOP-J0MPD84C ' select  FROM  WHERE true 
+24/10/2020 17:02:25 LAPTOP-J0MPD84C ' select fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = -1) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE true 
+24/10/2020 17:02:25 LAPTOP-J0MPD84C ' select  FROM  WHERE true 
+24/10/2020 17:02:28 LAPTOP-J0MPD84C ' select  FROM  WHERE true 
+24/10/2020 17:02:28 LAPTOP-J0MPD84C ' select fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = -1) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE true 
+24/10/2020 17:02:28 LAPTOP-J0MPD84C ' select  FROM  WHERE true 
+24/10/2020 17:02:29 LAPTOP-J0MPD84C ' select fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = -1) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE true 
+24/10/2020 17:02:29 LAPTOP-J0MPD84C ' select  FROM  WHERE true 
+24/10/2020 17:02:29 LAPTOP-J0MPD84C ' select fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = -1) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE true 
+24/10/2020 17:02:30 LAPTOP-J0MPD84C ' select  FROM  WHERE true 
+24/10/2020 17:02:30 LAPTOP-J0MPD84C ' select fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = -1) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE true 
+24/10/2020 17:02:30 LAPTOP-J0MPD84C ' select  FROM  WHERE true 
+24/10/2020 17:02:30 LAPTOP-J0MPD84C ' select fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = -1) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE true 
+24/10/2020 17:02:31 LAPTOP-J0MPD84C ' select  FROM  WHERE true 
+24/10/2020 17:02:31 LAPTOP-J0MPD84C ' select fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = -1) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE true 
+24/10/2020 17:02:31 LAPTOP-J0MPD84C ' select  FROM  WHERE true 
+24/10/2020 17:02:35 LAPTOP-J0MPD84C ' select  FROM  WHERE true 
+24/10/2020 17:02:37 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+24/10/2020 17:06:23 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:06:40 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+24/10/2020 17:08:39 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+24/10/2020 17:29:42 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:29:50 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 17:30:13 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:30:19 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 17:32:56 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:33:03 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 17:34:39 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:34:45 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+24/10/2020 17:35:24 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+24/10/2020 17:35:30 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+24/10/2020 17:39:08 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:39:58 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:40:05 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 17:41:04 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:41:09 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 17:41:20 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 17:41:23 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 17:43:19 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:43:24 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 17:43:57 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:44:03 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 17:44:42 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:44:47 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 17:45:19 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:45:23 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 17:50:32 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 17:50:43 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 17:51:00 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 17:51:05 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 17:53:14 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 17:54:25 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 17:54:29 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 17:54:34 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+24/10/2020 18:06:26 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 18:20:00 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 18:20:13 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+24/10/2020 18:37:42 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 18:37:50 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 18:37:53 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 18:40:11 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 18:40:17 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 18:40:55 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 18:41:02 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+24/10/2020 18:41:43 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 18:41:53 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 18:43:18 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 18:43:25 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 18:43:36 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 18:44:36 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 18:44:42 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 18:48:21 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 18:48:47 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 18:48:58 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+24/10/2020 18:49:02 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 18:51:50 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 18:51:58 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 18:52:25 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 18:52:30 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 

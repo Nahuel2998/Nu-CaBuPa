@@ -14,6 +14,14 @@ Module ModTablas
     Public dt_Serie As DataTable
     Public dt_Empresa As DataTable
     Public dt_BFuncionario As DataTable
+
+    Public Const VIDEO As Byte = 1
+    Public Const SERIE As Byte = 2
+    Public Const EMPRESA As Byte = 3
+    Public Const PROGRAMAS As Byte = 4
+    Public Const PUBLICIDAD As Byte = 5
+    Public Const FUNCIONARIO As Byte = 6
+    Public Const FECHAPROGRAMA As Byte = 7
     Public Function ValidarEmail(ByVal s As String) As Boolean
         Return Regex.IsMatch(s, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
     End Function
@@ -41,9 +49,11 @@ Module ModTablas
         Dim err(0) As String
         Return err
     End Function
-    Public Sub ClickCheck(ByRef Dgv As DataGridView)
+    Public Sub ClickCheck(ByRef Dgv As DataGridView, ByVal columna As Integer)
         If Dgv.Rows.Count > 0 Then
-            Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value = Not Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value
+            If columna = Dgv.Columns.Count - 1 Then
+                Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value = Not Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value
+            End If
         End If
     End Sub
     Public Function ObtenerCheck(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional ByVal Col As Integer = 0) As String()
@@ -72,8 +82,10 @@ Module ModTablas
     Public Sub ActualizarTablaC(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional C As Boolean = True)
         If Not IsNothing(Tabla) Then
             Dim Tamanos(Dgv.Columns.Count() - 1) As Single
+            Dim AutoSizeMode(Dgv.Columns.Count() - 1) As DataGridViewAutoSizeColumnMode
             For i As Integer = 0 To Dgv.Columns.Count - 1
                 Tamanos(i) = Dgv.Columns(i).FillWeight()
+                AutoSizeMode(i) = Dgv.Columns(i).AutoSizeMode
             Next
             Dim Columna As DataGridViewColumn
             Columna = Dgv.Columns(Tamanos.Length - 1)
@@ -88,6 +100,7 @@ Module ModTablas
             End If
             For i As Integer = 0 To Dgv.Columns.Count - 1
                 Dgv.Columns(i).FillWeight() = Tamanos(i)
+                Dgv.Columns(i).AutoSizeMode() = AutoSizeMode(i)
                 Dgv.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
                 Dgv.Columns(i).ReadOnly = If(Tabla.Columns.Count = Tamanos.Length, False, True)
             Next

@@ -111,8 +111,8 @@ Public Class frmEmpresa
 
     '' Checkean si hay cambios hechos
     '' Si cambio = True, no se llamaran
-    Private Sub txtNombre_ModifiedChanged(sender As Object, e As EventArgs) Handles txtNombre.ModifiedChanged
-        If txtNombre.Modified Then
+    Private Sub txt_ModifiedChanged(sender As Object, e As EventArgs) Handles txtNombre.ModifiedChanged, txtMail.ModifiedChanged, txtTelefono.ModifiedChanged
+        If txtNombre.Modified Or txtMail.Modified Or txtTelefono.Modified Then
             AlternarCambioHandlers()
         End If
     End Sub
@@ -125,13 +125,13 @@ Public Class frmEmpresa
         '' cambio = True    -> Se aniadiran los handlers, se los necesita
         '' cambio = False   -> Se ha detectado un cambio, y los handlers se removeran hasta la siguiente llamada del metodo
         If cambio Then
-            AddHandler txtNombre.ModifiedChanged, AddressOf txtNombre_ModifiedChanged
-            AddHandler txtMail.ModifiedChanged, AddressOf txtMail_ModifiedChanged
-            AddHandler txtTelefono.ModifiedChanged, AddressOf txtTelefono_ModifiedChanged
+            AddHandler txtNombre.ModifiedChanged, AddressOf txt_ModifiedChanged
+            AddHandler txtMail.ModifiedChanged, AddressOf txt_ModifiedChanged
+            AddHandler txtTelefono.ModifiedChanged, AddressOf txt_ModifiedChanged
         Else
-            RemoveHandler txtNombre.ModifiedChanged, AddressOf txtNombre_ModifiedChanged
-            RemoveHandler txtMail.ModifiedChanged, AddressOf txtMail_ModifiedChanged
-            RemoveHandler txtTelefono.ModifiedChanged, AddressOf txtTelefono_ModifiedChanged
+            RemoveHandler txtNombre.ModifiedChanged, AddressOf txt_ModifiedChanged
+            RemoveHandler txtMail.ModifiedChanged, AddressOf txt_ModifiedChanged
+            RemoveHandler txtTelefono.ModifiedChanged, AddressOf txt_ModifiedChanged
         End If
         cambio = Not cambio
     End Sub
@@ -157,21 +157,7 @@ Public Class frmEmpresa
     End Sub
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        Dim formDelete As New frmConfirmarBorrado("Empresa", {empresaID}, True)
+        Dim formDelete As New frmConfirmarBorrado(EMPRESA, {empresaID}, True)
         formDelete.ShowDialog(Me)
     End Sub
-
-    Private Sub txtMail_ModifiedChanged(sender As Object, e As EventArgs) Handles txtMail.ModifiedChanged
-        If txtMail.Modified Then
-            AlternarCambioHandlers()
-        End If
-    End Sub
-
-    Private Sub txtTelefono_ModifiedChanged(sender As Object, e As EventArgs) Handles txtTelefono.ModifiedChanged
-        If txtTelefono.Modified Then
-            AlternarCambioHandlers()
-        End If
-    End Sub
-
-
 End Class

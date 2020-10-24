@@ -1,9 +1,9 @@
 ﻿Public Class frmConfirmarBorrado
-    Dim tabla As String
+    Dim tabla As Byte
     Dim id() As String
     Dim Rid() As String
     Dim c As Boolean = False
-    Public Sub New(ByVal t As String, ByVal identificador() As String, ByVal Cerrar As Boolean, Optional ByVal Eid() As String = Nothing)
+    Public Sub New(ByVal t As Byte, ByVal identificador() As String, ByVal Cerrar As Boolean, Optional ByVal Eid() As String = Nothing)
         InitializeComponent()
         tabla = t
         id = identificador
@@ -16,22 +16,22 @@
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
         Select Case tabla
-            Case "Serie"
+            Case SERIE
                 PrepararDelete("video", "id_serie", id)
                 PrepararDelete("Serie", "id_serie", id)
-            Case "Publicidad"
+            Case PUBLICIDAD
                 PrepararDelete("publicidad", "id_publicidad", id)
                 PrepararDelete("eventomuestrapubli", "id_publicidad", id)
                 PrepararDelete("publicidadcuota", "id_publicidad", id)
                 PrepararDelete("aparecepubli", "id_publicidad", id)
                 PrepararDelete("pmustrapubli", "id_publicidad", id)
-            Case "Video"
+            Case VIDEO
                 PrepararDelete("Video", "id_video", id)
-            Case "Empresa"
+            Case EMPRESA
                 PrepararDelete("Empresa", "id_empresa", id)
-            Case "Programa"
+            Case PROGRAMAS
                 PrepararDelete("Programa", "ID_Programa", id)
-            Case "Fechaprograma"
+            Case FECHAPROGRAMA
                 BSQL("Fechaprograma", CreadorCondicion("fecha", id) + " and " + CreadorCondicion("Hora_inicio", Rid))
         End Select
         If (c) Then

@@ -186,10 +186,6 @@ Partial Class frmPrincipal
         Me.btnlimpiarv = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.dgvVB = New System.Windows.Forms.DataGridView()
-        Me.VFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.tbEmpresa = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
@@ -280,6 +276,10 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
+        Me.VFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -1547,36 +1547,6 @@ Partial Class frmPrincipal
         Me.dgvVB.RowTemplate.ReadOnly = True
         Me.dgvVB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
-        'VFecha
-        '
-        Me.VFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        resources.ApplyResources(Me.VFecha, "VFecha")
-        Me.VFecha.Name = "VFecha"
-        Me.VFecha.ReadOnly = True
-        '
-        'VNombre
-        '
-        Me.VNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        resources.ApplyResources(Me.VNombre, "VNombre")
-        Me.VNombre.Name = "VNombre"
-        Me.VNombre.ReadOnly = True
-        '
-        'VSerie
-        '
-        Me.VSerie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        resources.ApplyResources(Me.VSerie, "VSerie")
-        Me.VSerie.Name = "VSerie"
-        Me.VSerie.ReadOnly = True
-        '
-        'VEliminar
-        '
-        Me.VEliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.VEliminar.FalseValue = "False"
-        resources.ApplyResources(Me.VEliminar, "VEliminar")
-        Me.VEliminar.Name = "VEliminar"
-        Me.VEliminar.ReadOnly = True
-        Me.VEliminar.TrueValue = "True"
-        '
         'tbEmpresa
         '
         Me.tbEmpresa.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -2314,6 +2284,36 @@ Partial Class frmPrincipal
         'BWBuscador
         '
         '
+        'VFecha
+        '
+        Me.VFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        resources.ApplyResources(Me.VFecha, "VFecha")
+        Me.VFecha.Name = "VFecha"
+        Me.VFecha.ReadOnly = True
+        '
+        'VNombre
+        '
+        Me.VNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        resources.ApplyResources(Me.VNombre, "VNombre")
+        Me.VNombre.Name = "VNombre"
+        Me.VNombre.ReadOnly = True
+        '
+        'VSerie
+        '
+        Me.VSerie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        resources.ApplyResources(Me.VSerie, "VSerie")
+        Me.VSerie.Name = "VSerie"
+        Me.VSerie.ReadOnly = True
+        '
+        'VEliminar
+        '
+        Me.VEliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.VEliminar.FalseValue = "False"
+        resources.ApplyResources(Me.VEliminar, "VEliminar")
+        Me.VEliminar.Name = "VEliminar"
+        Me.VEliminar.ReadOnly = True
+        Me.VEliminar.TrueValue = "True"
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -2583,10 +2583,6 @@ Partial Class frmPrincipal
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
-    Friend WithEvents VFecha As DataGridViewTextBoxColumn
-    Friend WithEvents VNombre As DataGridViewTextBoxColumn
-    Friend WithEvents VSerie As DataGridViewTextBoxColumn
-    Friend WithEvents VEliminar As DataGridViewCheckBoxColumn
     Friend WithEvents FNombre As DataGridViewTextBoxColumn
     Friend WithEvents Telefono As DataGridViewTextBoxColumn
     Friend WithEvents FFuncion As DataGridViewTextBoxColumn
@@ -2650,4 +2646,8 @@ Partial Class frmPrincipal
     Friend WithEvents txtTelefonoBF As RichTextBox
     Friend WithEvents Panel30 As Panel
     Friend WithEvents txtMailBF As RichTextBox
+    Friend WithEvents VFecha As DataGridViewTextBoxColumn
+    Friend WithEvents VNombre As DataGridViewTextBoxColumn
+    Friend WithEvents VSerie As DataGridViewTextBoxColumn
+    Friend WithEvents VEliminar As DataGridViewCheckBoxColumn
 End Class

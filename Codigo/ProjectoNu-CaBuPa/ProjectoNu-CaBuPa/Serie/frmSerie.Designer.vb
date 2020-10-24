@@ -40,10 +40,10 @@ Partial Class frmSerie
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtTapar = New System.Windows.Forms.RichTextBox()
         Me.chbIncluir = New System.Windows.Forms.CheckBox()
-        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.RichTextBox()
+        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -295,16 +295,6 @@ Partial Class frmSerie
         Me.chbIncluir.Text = "Incluir"
         Me.chbIncluir.UseVisualStyleBackColor = True
         '
-        'dtpFecha
-        '
-        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
-        Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(501, 23)
-        Me.dtpFecha.TabIndex = 3
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -342,6 +332,16 @@ Partial Class frmSerie
         Me.txtNombre.Size = New System.Drawing.Size(572, 22)
         Me.txtNombre.TabIndex = 2
         Me.txtNombre.Text = ""
+        '
+        'dtpFecha
+        '
+        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFecha.Enabled = False
+        Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(501, 23)
+        Me.dtpFecha.TabIndex = 3
         '
         'frmSerie
         '

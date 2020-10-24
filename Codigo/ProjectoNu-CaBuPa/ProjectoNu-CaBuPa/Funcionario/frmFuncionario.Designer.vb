@@ -94,7 +94,7 @@ Partial Class frmFuncionario
         Me.txtfuncion.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtfuncion.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.txtfuncion.ForeColor = System.Drawing.Color.White
-        Me.txtfuncion.Location = New System.Drawing.Point(89, 124)
+        Me.txtfuncion.Location = New System.Drawing.Point(88, 124)
         Me.txtfuncion.Multiline = True
         Me.txtfuncion.Name = "txtfuncion"
         Me.txtfuncion.Size = New System.Drawing.Size(303, 53)
@@ -105,7 +105,7 @@ Partial Class frmFuncionario
         Me.txttelefonofun.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txttelefonofun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.txttelefonofun.ForeColor = System.Drawing.Color.White
-        Me.txttelefonofun.Location = New System.Drawing.Point(89, 57)
+        Me.txttelefonofun.Location = New System.Drawing.Point(88, 57)
         Me.txttelefonofun.Name = "txttelefonofun"
         Me.txttelefonofun.Size = New System.Drawing.Size(303, 23)
         Me.txttelefonofun.TabIndex = 6
@@ -115,7 +115,7 @@ Partial Class frmFuncionario
         Me.txtemailfun.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtemailfun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.txtemailfun.ForeColor = System.Drawing.Color.White
-        Me.txtemailfun.Location = New System.Drawing.Point(89, 93)
+        Me.txtemailfun.Location = New System.Drawing.Point(88, 93)
         Me.txtemailfun.Name = "txtemailfun"
         Me.txtemailfun.Size = New System.Drawing.Size(303, 23)
         Me.txtemailfun.TabIndex = 5
@@ -125,7 +125,7 @@ Partial Class frmFuncionario
         Me.txtnombrefun.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtnombrefun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.txtnombrefun.ForeColor = System.Drawing.Color.White
-        Me.txtnombrefun.Location = New System.Drawing.Point(89, 25)
+        Me.txtnombrefun.Location = New System.Drawing.Point(88, 25)
         Me.txtnombrefun.Name = "txtnombrefun"
         Me.txtnombrefun.Size = New System.Drawing.Size(303, 23)
         Me.txtnombrefun.TabIndex = 4
@@ -135,7 +135,7 @@ Partial Class frmFuncionario
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(13, 132)
+        Me.Label4.Location = New System.Drawing.Point(17, 127)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(57, 15)
         Me.Label4.TabIndex = 3
@@ -146,7 +146,7 @@ Partial Class frmFuncionario
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(13, 93)
+        Me.Label3.Location = New System.Drawing.Point(23, 96)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(51, 15)
         Me.Label3.TabIndex = 2
@@ -157,7 +157,7 @@ Partial Class frmFuncionario
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(8, 56)
+        Me.Label2.Location = New System.Drawing.Point(12, 60)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(62, 15)
         Me.Label2.TabIndex = 1
@@ -168,7 +168,7 @@ Partial Class frmFuncionario
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(13, 27)
+        Me.Label1.Location = New System.Drawing.Point(17, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(57, 15)
         Me.Label1.TabIndex = 0
@@ -195,9 +195,9 @@ Partial Class frmFuncionario
         Me.BuscarFunci.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BuscarFunci.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.BuscarFunci.ForeColor = System.Drawing.Color.White
-        Me.BuscarFunci.Location = New System.Drawing.Point(268, 103)
+        Me.BuscarFunci.Location = New System.Drawing.Point(225, 91)
         Me.BuscarFunci.Name = "BuscarFunci"
-        Me.BuscarFunci.Size = New System.Drawing.Size(75, 23)
+        Me.BuscarFunci.Size = New System.Drawing.Size(157, 34)
         Me.BuscarFunci.TabIndex = 7
         Me.BuscarFunci.Text = "Buscar"
         Me.BuscarFunci.UseVisualStyleBackColor = False
@@ -209,7 +209,7 @@ Partial Class frmFuncionario
         Me.TextBox1.ForeColor = System.Drawing.Color.White
         Me.TextBox1.Location = New System.Drawing.Point(225, 52)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(141, 23)
+        Me.TextBox1.Size = New System.Drawing.Size(157, 23)
         Me.TextBox1.TabIndex = 6
         '
         'Label5
@@ -217,7 +217,7 @@ Partial Class frmFuncionario
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(265, 19)
+        Me.Label5.Location = New System.Drawing.Point(222, 34)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(57, 15)
         Me.Label5.TabIndex = 5
@@ -287,7 +287,7 @@ Partial Class frmFuncionario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnBorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnBorrar.ForeColor = System.Drawing.Color.White
+        Me.btnBorrar.ForeColor = System.Drawing.Color.Black
         Me.btnBorrar.Location = New System.Drawing.Point(105, 3)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(98, 40)
@@ -302,7 +302,7 @@ Partial Class frmFuncionario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEditarFun.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnEditarFun.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnEditarFun.ForeColor = System.Drawing.Color.White
+        Me.btnEditarFun.ForeColor = System.Drawing.Color.Black
         Me.btnEditarFun.Location = New System.Drawing.Point(3, 3)
         Me.btnEditarFun.Name = "btnEditarFun"
         Me.btnEditarFun.Size = New System.Drawing.Size(96, 40)
@@ -317,7 +317,7 @@ Partial Class frmFuncionario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnCancelar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnCancelar.ForeColor = System.Drawing.Color.White
+        Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Location = New System.Drawing.Point(300, 3)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(95, 40)

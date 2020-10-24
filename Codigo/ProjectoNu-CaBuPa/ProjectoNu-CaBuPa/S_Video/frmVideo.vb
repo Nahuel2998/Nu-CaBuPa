@@ -62,7 +62,7 @@
         If videoID = -1 Then
             ActualizarDatos()
             PrepararInsert("video", datos)
-            vaciar()
+            Vaciar()
         ElseIf editando Then
             ActualizarDatos()
             If Not CompararValores(VaciarNull(datos), datosI) Then
@@ -120,9 +120,9 @@
         dtpFecha.ForeColor = Color.White
         btnSalir.Select()
     End Sub
-    Sub vaciar()
-        txtNombre.Text = ""
-        txtContenido.Text = ""
+    Sub Vaciar()
+        txtNombre.Clear()
+        txtContenido.Clear()
         cbSerie.SelectedIndex = -1
         dtpFecha.Value = Now.Date
         chbTieneFecha.Checked = False
@@ -153,7 +153,7 @@
     End Sub
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        Dim formDelete As New frmConfirmarBorrado("Video", {videoID}, True)
+        Dim formDelete As New frmConfirmarBorrado(VIDEO, {videoID}, True)
         formDelete.ShowDialog(Me)
     End Sub
 End Class

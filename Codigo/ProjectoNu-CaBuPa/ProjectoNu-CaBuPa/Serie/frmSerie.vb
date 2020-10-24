@@ -189,8 +189,7 @@ Public Class frmSerie
     End Sub
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        Dim formDelete As New frmConfirmarBorrado("Serie", {serieID}, True)
+        Dim formDelete As New frmConfirmarBorrado(SERIE, {serieID}, True)
         formDelete.ShowDialog(Me)
     End Sub
-
 End Class

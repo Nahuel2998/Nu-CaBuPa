@@ -43,23 +43,23 @@ Partial Class frmVideo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(85, 33)
+        Me.Label1.Location = New System.Drawing.Point(26, 33)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 18)
+        Me.Label1.Size = New System.Drawing.Size(57, 15)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Nombre"
+        Me.Label1.Text = "Nombre:"
         '
         'txtNombre
         '
         Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtNombre.ForeColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(166, 30)
+        Me.txtNombre.Location = New System.Drawing.Point(93, 30)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtNombre.MaxLength = 48
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(138, 27)
+        Me.txtNombre.Size = New System.Drawing.Size(219, 23)
         Me.txtNombre.TabIndex = 2
         '
         'txtContenido
@@ -78,12 +78,12 @@ Partial Class frmVideo
         'VFecha
         '
         Me.VFecha.AutoSize = True
-        Me.VFecha.Location = New System.Drawing.Point(100, 72)
+        Me.VFecha.Location = New System.Drawing.Point(41, 72)
         Me.VFecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.VFecha.Name = "VFecha"
-        Me.VFecha.Size = New System.Drawing.Size(50, 18)
+        Me.VFecha.Size = New System.Drawing.Size(44, 15)
         Me.VFecha.TabIndex = 2
-        Me.VFecha.Text = "Fecha"
+        Me.VFecha.Text = "Fecha:"
         '
         'GroupBox1
         '
@@ -126,9 +126,9 @@ Partial Class frmVideo
         'chbTieneFecha
         '
         Me.chbTieneFecha.AutoSize = True
-        Me.chbTieneFecha.Location = New System.Drawing.Point(310, 68)
+        Me.chbTieneFecha.Location = New System.Drawing.Point(318, 68)
         Me.chbTieneFecha.Name = "chbTieneFecha"
-        Me.chbTieneFecha.Size = New System.Drawing.Size(78, 22)
+        Me.chbTieneFecha.Size = New System.Drawing.Size(64, 19)
         Me.chbTieneFecha.TabIndex = 4
         Me.chbTieneFecha.Text = "Incluir"
         Me.chbTieneFecha.UseVisualStyleBackColor = True
@@ -139,9 +139,9 @@ Partial Class frmVideo
         Me.txtTapar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtTapar.Enabled = False
         Me.txtTapar.ForeColor = System.Drawing.Color.White
-        Me.txtTapar.Location = New System.Drawing.Point(166, 66)
+        Me.txtTapar.Location = New System.Drawing.Point(93, 66)
         Me.txtTapar.Name = "txtTapar"
-        Me.txtTapar.Size = New System.Drawing.Size(138, 27)
+        Me.txtTapar.Size = New System.Drawing.Size(219, 23)
         Me.txtTapar.TabIndex = 3
         Me.txtTapar.Text = "No posee fecha"
         Me.txtTapar.Visible = False
@@ -154,9 +154,9 @@ Partial Class frmVideo
         Me.cbSerie.Enabled = False
         Me.cbSerie.ForeColor = System.Drawing.Color.White
         Me.cbSerie.FormattingEnabled = True
-        Me.cbSerie.Location = New System.Drawing.Point(166, 102)
+        Me.cbSerie.Location = New System.Drawing.Point(93, 102)
         Me.cbSerie.Name = "cbSerie"
-        Me.cbSerie.Size = New System.Drawing.Size(138, 26)
+        Me.cbSerie.Size = New System.Drawing.Size(219, 23)
         Me.cbSerie.TabIndex = 5
         '
         'btnSalir
@@ -187,22 +187,21 @@ Partial Class frmVideo
         '
         Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(166, 66)
+        Me.dtpFecha.Location = New System.Drawing.Point(93, 66)
         Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(138, 27)
+        Me.dtpFecha.Size = New System.Drawing.Size(219, 23)
         Me.dtpFecha.TabIndex = 3
         '
         'VSerie
         '
         Me.VSerie.AutoSize = True
-        Me.VSerie.Location = New System.Drawing.Point(106, 105)
+        Me.VSerie.Location = New System.Drawing.Point(47, 105)
         Me.VSerie.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.VSerie.Name = "VSerie"
-        Me.VSerie.Size = New System.Drawing.Size(44, 18)
+        Me.VSerie.Size = New System.Drawing.Size(40, 15)
         Me.VSerie.TabIndex = 9
-        Me.VSerie.Text = "Serie"
+        Me.VSerie.Text = "Serie:"
         '
         'GroupBox3
         '
@@ -218,10 +217,10 @@ Partial Class frmVideo
         '
         'frmVideo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(428, 387)
+        Me.ClientSize = New System.Drawing.Size(430, 395)
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.ForeColor = System.Drawing.Color.White

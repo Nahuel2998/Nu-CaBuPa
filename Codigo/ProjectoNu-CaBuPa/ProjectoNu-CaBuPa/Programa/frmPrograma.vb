@@ -37,7 +37,8 @@ Public Class frmPrograma
             tcP.TabPages.RemoveAt(1)
             tcP.TabPages.RemoveAt(2)
             tcP.TabPages.RemoveAt(3)
-            'tcP.TabPages.RemoveAt(4) ' FIXME: This crashes the program
+            tcP.TabPages.RemoveAt(2)
+            tcP.TabPages.RemoveAt(1)
             btnPEditar.Text = "Insertar"
             btnBorrar.Visible = False
             Activar()
@@ -131,7 +132,7 @@ Public Class frmPrograma
     End Sub
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        Dim formDelete As New frmConfirmarBorrado("Programa", {programaID}, True)
+        Dim formDelete As New frmConfirmarBorrado(PROGRAMAS, {programaID}, True)
         formDelete.ShowDialog(Me)
     End Sub
 
@@ -204,14 +205,11 @@ Public Class frmPrograma
         TBuscada = ""
     End Sub
 
-
-
-
     Private Sub btnAnadir_Click(sender As Object, e As EventArgs) Handles btnAnadir.Click
         Dim datos() As String = {Format(dtpAP.Value().Date, "yyyy-MM-dd"), txtHI.Text, txtHF.Text, programaID}
         PrepararInsert("fechaprograma", datos, 0)
-        txtHI.Text = ""
-        txtHF.Text = ""
+        txtHI.Clear()
+        txtHF.Clear()
     End Sub
 
     Private Sub dtpBP_ValueChanged(sender As Object, e As EventArgs) Handles dtpBP.ValueChanged
@@ -219,7 +217,7 @@ Public Class frmPrograma
     End Sub
 
     Private Sub dgvPrograma_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellClick
-        ClickCheck(dgvPrograma)
+        ClickCheck(dgvPrograma, e.ColumnIndex)
     End Sub
 
     Private Sub btnABorrar_Click(sender As Object, e As EventArgs) Handles btnABorrar.Click
@@ -227,7 +225,7 @@ Public Class frmPrograma
             If (dt_fechas.Rows.Count > 0) Then
                 Dim RId() As String = ObtenerCheck(dt_fechas, dgvPrograma, 0)
                 If Not RId.Length = 0 Then
-                    Dim formDelete As New frmConfirmarBorrado("Fechaprograma", {Format(dtpBP.Value, "yyyy-MM-dd")}, False, RId)
+                    Dim formDelete As New frmConfirmarBorrado(FECHAPROGRAMA, {Format(dtpBP.Value, "yyyy-MM-dd")}, False, RId)
                     formDelete.ShowDialog(Me)
                     BFecha()
                 End If
