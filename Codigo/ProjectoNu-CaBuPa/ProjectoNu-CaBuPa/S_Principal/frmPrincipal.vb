@@ -338,29 +338,11 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        If Not IsNothing(dt_Video) Then
-            If dt_Video.Rows.Count > 0 Then
-                Dim Id() As String = ObtenerCheck(dt_Video, dgvVB)
-                If Not Id.Length = 0 Then
-                    Dim formDelete As New frmConfirmarBorrado("Video", Id, False)
-                    formDelete.ShowDialog(Me)
-                    btnbuscarv.PerformClick()
-                End If
-            End If
-        End If
+        BorrarConfirmar(dt_Video, dgvVB, "Video", btnbuscarv)
     End Sub
 
     Private Sub btnBorrarS_Click(sender As Object, e As EventArgs) Handles btnBorrarS.Click
-        If Not IsNothing(dt_Serie) Then
-            If dt_Serie.Rows.Count > 0 Then
-                Dim Id() As String = ObtenerCheck(dt_Serie, dgvBS)
-                If Not Id.Length = 0 Then
-                    Dim formDelete As New frmConfirmarBorrado("Serie", Id, False)
-                    formDelete.ShowDialog(Me)
-                    btnBuscarBS.PerformClick()
-                End If
-            End If
-        End If
+        BorrarConfirmar(dt_Serie, dgvBS, "Serie", btnBuscarBS)
     End Sub
 
     Private Sub dgvBS_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBS.CellClick
@@ -397,16 +379,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btncBorrar_Click(sender As Object, e As EventArgs) Handles btncBorrar.Click
-        If Not IsNothing(dt_Empresa) Then
-            If (dt_Empresa.Rows.Count > 0) Then
-                Dim Id() As String = ObtenerCheck(dt_Empresa, dgvClientes)
-                If Not Id.Length = 0 Then
-                    Dim formDelete As New frmConfirmarBorrado("Empresa", Id, False)
-                    formDelete.ShowDialog(Me)
-                    btncBuscar.PerformClick()
-                End If
-            End If
-        End If
+        BorrarConfirmar(dt_Empresa, dgvClientes, "Empresa", btncBuscar)
     End Sub
 
     Private Sub dgvClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellClick
@@ -459,16 +432,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBorrarBP_Click(sender As Object, e As EventArgs) Handles btnBorrarBP.Click
-        If Not IsNothing(dt_BPrograma) Then
-            If dt_BPrograma.Rows.Count > 0 Then
-                Dim Id() As String = ObtenerCheck(dt_BPrograma, dgvBProgramas)
-                If Not Id.Length = 0 Then
-                    Dim formDelete As New frmConfirmarBorrado("Programa", Id, False)
-                    formDelete.ShowDialog(Me)
-                    btnBuscarBP.PerformClick()
-                End If
-            End If
-        End If
+        BorrarConfirmar(dt_BPrograma, dgvBProgramas, "Programa", btnBuscarBP)
     End Sub
 
     Private Sub dgvBProgramas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBProgramas.CellClick
@@ -541,8 +505,12 @@ Public Class frmPrincipal
         Dim i As String = CargarID(dt_BPubli, dgvPubliB)
         If (i.Length <> 0) Then
             Dim formPubli As New frmPublicidad(i)
+            AddHandler formPubli.FormClosed, AddressOf FormPubli_FormClosed
             formPubli.ShowDialog()
         End If
+    End Sub
+    Private Sub FormPubli_FormClosed(sender As Object, e As FormClosedEventArgs)
+        btnBuscarPubliB.PerformClick()
     End Sub
 
     Private Sub dgvPubliB_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPubliB.CellClick
@@ -551,6 +519,7 @@ Public Class frmPrincipal
 
     Private Sub btnIngresarPubliB_Click(sender As Object, e As EventArgs) Handles btnIngresarPubliB.Click
         Dim formPubli As New frmPublicidad(-1)
+        AddHandler formPubli.FormClosed, AddressOf FormPubli_FormClosed
         formPubli.ShowDialog()
     End Sub
 
@@ -576,5 +545,29 @@ Public Class frmPrincipal
         If Not (BWBuscador.IsBusy) Then
             BWBuscador.RunWorkerAsync(PSQL("id_Funcionario, Nombre, Telefono, Mail", "funcionario", condicion))
         End If
+    End Sub
+
+    Private Sub btnBorrarPubliB_Click(sender As Object, e As EventArgs) Handles btnBorrarPubliB.Click
+        BorrarConfirmar(dt_BPubli, dgvPubliB, "Publicidad", btnBuscarPubliB)
+    End Sub
+    Private Sub BorrarConfirmar(ByRef dt As DataTable, ByRef dgv As DataGridView, ByVal tabla As String, ByRef btn As Button)
+        If Not IsNothing(dt) Then
+            If (dt.Rows.Count > 0) Then
+                Dim Id() As String = ObtenerCheck(dt, dgv)
+                If Not Id.Length = 0 Then
+                    Dim formDelete As New frmConfirmarBorrado(tabla, Id, False)
+                    formDelete.ShowDialog(Me)
+                    btn.PerformClick()
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub btnBorrarBF_Click(sender As Object, e As EventArgs) Handles btnBorrarBF.Click
+        BorrarConfirmar(dt_BFuncionario, dgvFuncionarioBF, "Funcionario", btnBuscarBF)
+    End Sub
+
+    Private Sub btnIngresarBF_Click(sender As Object, e As EventArgs) Handles btnIngresarBF.Click
+
     End Sub
 End Class

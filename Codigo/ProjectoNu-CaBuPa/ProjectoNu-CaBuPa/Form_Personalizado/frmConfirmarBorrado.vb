@@ -19,6 +19,12 @@
             Case "Serie"
                 PrepararDelete("video", "id_serie", id)
                 PrepararDelete("Serie", "id_serie", id)
+            Case "Publicidad"
+                PrepararDelete("publicidad", "id_publicidad", id)
+                PrepararDelete("eventomuestrapubli", "id_publicidad", id)
+                PrepararDelete("publicidadcuota", "id_publicidad", id)
+                PrepararDelete("aparecepubli", "id_publicidad", id)
+                PrepararDelete("pmustrapubli", "id_publicidad", id)
             Case "Video"
                 PrepararDelete("Video", "id_video", id)
             Case "Empresa"

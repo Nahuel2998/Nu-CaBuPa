@@ -23,7 +23,7 @@ Public Class frmEmpresa
         End If
     End Sub
     Private Sub CargarDatos()
-        datos = {txtNombre.Text, txtTelefono.Text, If(ValidarEmail(txtMail.Text), txtMail.Text, "")}
+        datos = {txtNombre.Text, txtTelefono.Text, If(ValidarEmail(txtMail.Text), txtMail.Text, tmpDatos(3))}
     End Sub
 
     Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnSEditar.Click
@@ -39,7 +39,6 @@ Public Class frmEmpresa
                 If Not CompararValores(VaciarNull(datos), tmpDatos) Then
                     PrepararUpdate("Empresa", datos, empresaID)
                 End If
-
                 AlternarCambioHandlers()
             End If
         Else
@@ -74,7 +73,6 @@ Public Class frmEmpresa
     Private Sub Serie_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If cambio And empresaID <> -1 Then
             CargarDatos()
-
             If Not CompararValores(VaciarNull(datos), tmpDatos) Then
                 Dim g As New frmGuardarEdicion("Empresa", datos, empresaID)
                 g.ShowDialog()
@@ -174,5 +172,6 @@ Public Class frmEmpresa
             AlternarCambioHandlers()
         End If
     End Sub
+
 
 End Class

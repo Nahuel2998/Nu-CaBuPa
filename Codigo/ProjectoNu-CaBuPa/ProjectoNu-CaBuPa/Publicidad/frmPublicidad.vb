@@ -106,6 +106,7 @@ Public Class frmPublicidad
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
         PrepararDelete("publicidad", "id_publicidad", {publicidadID})
+        Close()
     End Sub
     Private Sub Alternar()
         Activar()
@@ -145,9 +146,6 @@ Public Class frmPublicidad
     End Sub
 
     Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
-        Dim Columna As String = ""
-        Dim Condicion As String = "true"
-        Dim Tablas As String = ""
         If Not (bwDatos.IsBusy) Then
             bwDatos.RunWorkerAsync(tcP.SelectedIndex)
         End If
@@ -167,5 +165,36 @@ Public Class frmPublicidad
             Case "Tanda"
                 CargarComboTandas()
         End Select
+    End Sub
+
+    Private Sub cbTanda_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTanda.SelectedIndexChanged
+        BuscarF()
+    End Sub
+    Private Sub BuscarF()
+        CargarPubliT(dt_fechas, dgvFechas, publicidadID, If(cbTanda.SelectedIndex <= 0, "00:00:00", positionTanda(cbTanda.SelectedIndex - 1)), Format(dtpFI.Value, "yyyy-MM-dd"), Format(dtpFF.Value, "yyyy-MM-dd"))
+    End Sub
+
+    Private Sub dtpFI_ValueChanged(sender As Object, e As EventArgs) Handles dtpFI.ValueChanged
+        If (dtpFF.Value < dtpFI.Value) Then
+            dtpFF.Value = dtpFI.Value
+        End If
+        dtpFF.MinDate = dtpFI.Value
+        BuscarF()
+    End Sub
+
+    Private Sub dtpFF_ValueChanged(sender As Object, e As EventArgs) Handles dtpFF.ValueChanged
+        BuscarF()
+    End Sub
+
+    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
+        If (cbTanda.SelectedIndex > 0) Then
+            If (dgvFechas.Rows.Count > 0) Then
+                BSQL("aparecepubli", String.Format("id_publicidad='{0}' and Hora_Inicio='{1}' and fecha_inicio >= '{2}' and fecha_finalizacion <= '{3}'", publicidadID, positionTanda(cbTanda.SelectedIndex - 1), Format(dtpFI.Value, "yyyy-MM-dd"), Format(dtpFF.Value, "yyyy-MM-dd")))
+            End If
+            ISQL("aparecepubli", "id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion", String.Format("'{0}','{1}','{2}','{3}'", publicidadID, positionTanda(cbTanda.SelectedIndex - 1), Format(dtpFI.Value, "yyyy-MM-dd"), Format(dtpFF.Value, "yyyy-MM-dd")))
+            BuscarF()
+        Else
+            MessageBox.Show("Debe seleccionar una tanda para agendar la publicidad")
+        End If
     End Sub
 End Class
