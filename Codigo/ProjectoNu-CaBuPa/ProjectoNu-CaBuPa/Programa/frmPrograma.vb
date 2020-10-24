@@ -37,7 +37,7 @@ Public Class frmPrograma
             tcP.TabPages.RemoveAt(1)
             tcP.TabPages.RemoveAt(2)
             tcP.TabPages.RemoveAt(3)
-            tcP.TabPages.RemoveAt(4)
+            'tcP.TabPages.RemoveAt(4) ' FIXME: This crashes the program
             btnPEditar.Text = "Insertar"
             btnBorrar.Visible = False
             Activar()

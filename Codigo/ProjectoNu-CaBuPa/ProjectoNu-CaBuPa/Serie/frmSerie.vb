@@ -60,7 +60,7 @@ Public Class frmSerie
         End If
     End Sub
     Private Sub Vaciar()
-        txtNombre.Text = ""
+        txtNombre.Clear()
         dtpFecha.Value = Now.Date
         chbIncluir.Checked = True
     End Sub
@@ -70,19 +70,19 @@ Public Class frmSerie
             Close()
         Else
             If cambio Then
-            If tmpDatos(0) <> "" Then
-                dtpFecha.Value = CDate(tmpDatos(0))
-            Else
-                dtpFecha.Value = Now.Date
+                If tmpDatos(0) <> "" Then
+                    dtpFecha.Value = CDate(tmpDatos(0))
+                Else
+                    dtpFecha.Value = Now.Date
 
-                chbIncluir.Checked = False
+                    chbIncluir.Checked = False
+                End If
+                txtNombre.Text = tmpDatos(1)
+
+                AlternarCambioHandlers()
             End If
-            txtNombre.Text = tmpDatos(1)
 
-            AlternarCambioHandlers()
-        End If
-
-        Alternar()
+            Alternar()
         End If
     End Sub
 
@@ -108,19 +108,19 @@ Public Class frmSerie
             btnSEditar.Text = "Ingresar"
             btnBorrar.Visible = False
             btnSSalir.Text = "Salir"
-            Me.Text = "Ingresar Serie"
+            Text = "Ingresar Serie"
 
             txtTapar.Visible = False
         ElseIf editando Then
             btnSEditar.Text = "Editar"
             btnSSalir.Text = "Salir"
-            ActiveForm.Text = "Ver Serie"
+            Text = "Ver Serie"
 
             txtTapar.Visible = Not chbIncluir.Checked
         Else
             btnSSalir.Text = "Cancelar"
             btnSEditar.Text = "Guardar"
-            ActiveForm.Text = "Editar Serie"
+            Text = "Editar Serie"
 
             RemoveHandler chbIncluir.CheckedChanged, AddressOf chbIncluir_CheckedChanged
             chbIncluir.Checked = tmpDatos(0) <> ""

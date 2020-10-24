@@ -5,7 +5,7 @@ Imports System.IO
 Public Class frmPrincipal
     Private DescripcionP As String
     Private PNombre As String = "Datos del programa"
-    Private TBuscada As String = ""
+    Private TBuscada As Byte = 0
     Private TBusca As New DataTable
     Public dt_Buscada As New DataTable
 #Region "Carga y descarga"
@@ -196,7 +196,6 @@ Public Class frmPrincipal
         BWPublicidades.RunWorkerAsync()
     End Sub
 
-
     Private Sub dgvTandas_Click(sender As Object, e As EventArgs) Handles dgvTandas.Click
         If Not BWPublicidades.IsBusy Then
             BWPublicidades.RunWorkerAsync()
@@ -221,7 +220,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnbuscarv_Click(sender As Object, e As EventArgs) Handles btnbuscarv.Click
-        TBuscada = "Video"
+        TBuscada = 1 '' Video
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtVnombre.Text)) Then
             condicion = String.Format("v.nombre like '%{0}%'", txtVnombre.Text)
@@ -237,26 +236,37 @@ Public Class frmPrincipal
         End If
     End Sub
 
+    '' TBuscada:
+    '' '' 1 = Video
+    '' '' 2 = Serie
+    '' '' 3 = Empresa
+    '' '' 4 = Programa
+    '' '' 5 = Publicidad
+    '' '' 6 = Funcionario
+    '' '' 0 = Valor por Defecto
     Private Sub BWBuscador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWBuscador.RunWorkerCompleted
         Select Case TBuscada
-            Case "Video"
+            Case 1
                 dt_Video = TBusca
                 ActualizarTablaC(dt_Video, dgvVB)
-            Case "Serie"
+            Case 2
                 dt_Serie = TBusca
                 ActualizarTablaC(dt_Serie, dgvBS)
-            Case "Empresa"
+            Case 3
                 dt_Empresa = TBusca
                 ActualizarTablaC(dt_Empresa, dgvClientes)
-            Case "Programa"
+            Case 4
                 dt_BPrograma = TBusca
                 ActualizarTablaC(dt_BPrograma, dgvBProgramas)
-            Case "Publicidad"
+            Case 5
                 dt_BPubli = TBusca
                 ActualizarTablaC(dt_BPubli, dgvPubliB)
+            Case 6
+                dt_BFuncionario = TBusca
+                ActualizarTablaC(dt_BFuncionario, dgvFuncionarioBF)
         End Select
         TBusca = Nothing
-        TBuscada = ""
+        TBuscada = 0
     End Sub
 
 
@@ -289,7 +299,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBuscarBS_Click(sender As Object, e As EventArgs) Handles btnBuscarBS.Click
-        TBuscada = "Serie"
+        TBuscada = 2 '' Serie
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtBSnombre.Text)) Then
             condicion = "nombre like '%" + txtBSnombre.Text + "%'"
@@ -370,7 +380,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btncBuscar_Click(sender As Object, e As EventArgs) Handles btncBuscar.Click
-        TBuscada = "Empresa"
+        TBuscada = 3 '' Empresa
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtCNombre.Text)) Then
             condicion = "Nombre like '%" + txtCNombre.Text + "%'"
@@ -435,7 +445,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBuscarBP_Click(sender As Object, e As EventArgs) Handles btnBuscarBP.Click
-        TBuscada = "Programa"
+        TBuscada = 4 '' Programa
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If Not String.IsNullOrWhiteSpace(txtNombreBP.Text) Then
             condicion = String.Format("Nombre_Programa like '%{0}%'", txtNombreBP.Text)
@@ -469,25 +479,28 @@ Public Class frmPrincipal
         Dim i() As String = CargarID(dt_BPrograma, dgvBProgramas, {0})
         If (i.Length <> 0) Then
             Dim formPrograma As New frmPrograma(i(0))
-            'AddHandler formSerie.FormClosed, AddressOf FormSerie_FormClosed
+            AddHandler formPrograma.FormClosed, AddressOf FormPrograma_FormClosed
             formPrograma.ShowDialog()
         End If
-
-
     End Sub
 
     Private Sub dgvPrograma_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellDoubleClick
         Dim i() As String = CargarID(dt_programa, dgvPrograma, {0})
         If (i.Length <> 0) Then
             Dim formPrograma As New frmPrograma(i(0))
-            'AddHandler formSerie.FormClosed, AddressOf FormSerie_FormClosed
+            'AddHandler formPrograma.FormClosed, AddressOf FormPrograma_FormClosed 
+            'TODO: Crear otro handler para actualizar la tabla de programas agendados
             formPrograma.ShowDialog()
         End If
     End Sub
 
     Private Sub btnIngresarBP_Click(sender As Object, e As EventArgs) Handles btnIngresarBP.Click
         Dim formPrograma As New frmPrograma(-1)
+        AddHandler formPrograma.FormClosed, AddressOf FormPrograma_FormClosed
         formPrograma.ShowDialog()
+    End Sub
+    Private Sub FormPrograma_FormClosed(sender As Object, e As FormClosedEventArgs)
+        btnBuscarBP.PerformClick()
     End Sub
 
     Private Sub btnagendarEvento_Click(sender As Object, e As EventArgs) Handles btnagendarEvento.Click
@@ -503,7 +516,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBuscarPubliB_Click(sender As Object, e As EventArgs) Handles btnBuscarPubliB.Click
-        TBuscada = "Publicidad"
+        TBuscada = 5 '' Publicidad
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtNombre.Text)) Then
             condicion = "p.nombre like '%" + txtNombre.Text + "%'"
@@ -539,5 +552,29 @@ Public Class frmPrincipal
     Private Sub btnIngresarPubliB_Click(sender As Object, e As EventArgs) Handles btnIngresarPubliB.Click
         Dim formPubli As New frmPublicidad(-1)
         formPubli.ShowDialog()
+    End Sub
+
+    Private Sub btnLimpiarBF_Click(sender As Object, e As EventArgs) Handles btnLimpiarBF.Click
+        txtNombreBF.Clear()
+        txtMailBF.Clear()
+        txtTelefonoBF.Clear()
+        dgvFuncionarioBF.Rows.Clear()
+    End Sub
+
+    Private Sub btnBuscarBF_Click(sender As Object, e As EventArgs) Handles btnBuscarBF.Click
+        TBuscada = 6 '' Funcionario
+        Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
+        If (Not String.IsNullOrWhiteSpace(txtNombreBF.Text)) Then
+            condicion = "Nombre like '%" + txtNombreBF.Text + "%'"
+        End If
+        If (Not String.IsNullOrWhiteSpace(txtTelefonoBF.Text)) Then
+            condicion += " and Telefono = '" + txtTelefonoBF.Text + "'"
+        End If
+        If (Not String.IsNullOrWhiteSpace(txtMailBF.Text)) Then
+            condicion += " and Mail = '" + txtMailBF.Text + "'"
+        End If
+        If Not (BWBuscador.IsBusy) Then
+            BWBuscador.RunWorkerAsync(PSQL("id_Funcionario, Nombre, Telefono, Mail", "funcionario", condicion))
+        End If
     End Sub
 End Class

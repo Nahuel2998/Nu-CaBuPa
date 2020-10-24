@@ -13,17 +13,16 @@ Public Class frmEmpresa
         txtNombre.Text = DatosI(1)
         txtTelefono.Text = DatosI(2)
         txtMail.Text = DatosI(3)
-        ' ...Esto tambien, supongo.....
         ''ModLog.Guardar(PSQL("id_video, fecha as Fecha, nombre as Nombre", "video", String.Format("id_serie = '{0}'", DatosI(0))))
     End Sub
 
-    Private Sub frmSerie_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmEmpresa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ActualizarTabla()
         If (empresaID = -1) Then
             Alternar()
         End If
     End Sub
-    Sub CargarDatos()
+    Private Sub CargarDatos()
         datos = {txtNombre.Text, txtTelefono.Text, If(ValidarEmail(txtMail.Text), txtMail.Text, "")}
     End Sub
 
@@ -33,7 +32,7 @@ Public Class frmEmpresa
         If empresaID = -1 Then
             CargarDatos()
             PrepararInsert("Empresa", datos)
-            vaciar()
+            Vaciar()
         ElseIf editando Then
             If cambio Then
                 CargarDatos()
@@ -51,14 +50,14 @@ Public Class frmEmpresa
 
         Alternar()
     End Sub
-    Sub vaciar()
-        txtNombre.Text = ""
-        txtTelefono.Text = ""
-        txtMail.Text = ""
+    Private Sub Vaciar()
+        txtNombre.Clear()
+        txtTelefono.Clear()
+        txtMail.Clear()
     End Sub
 
     Private Sub btnSSalir_Click(sender As Object, e As EventArgs) Handles btnSSalir.Click
-        If Not editando Or empresaID <> -1 Then
+        If Not editando Or empresaID = -1 Then
             Close()
         Else
             If cambio Then
@@ -95,15 +94,15 @@ Public Class frmEmpresa
             btnSEditar.Text = "Ingresar"
             btnBorrar.Visible = False
             btnSSalir.Text = "Salir"
-            ActiveForm.Text = "Ingresar empresa"
+            Text = "Ingresar empresa"
         ElseIf editando Then
             btnSEditar.Text = "Editar"
             btnSSalir.Text = "Salir"
-            ActiveForm.Text = "Empresa"
+            Text = "Empresa"
         Else
             btnSSalir.Text = "Cancelar"
             btnSEditar.Text = "Guardar"
-            ActiveForm.Text = "Editar empresa"
+            Text = "Editar empresa"
         End If
         editando = Not editando
 
@@ -149,8 +148,9 @@ Public Class frmEmpresa
     End Sub
 
     '' Actualiza la tabla mostrando los videos asociados cuando el formulario de mostrar video se ha cerrado
-    Private Sub FormVideo_FormClosed(sender As Object, e As FormClosedEventArgs)
+    Private Sub FormPublicidad_FormClosed(sender As Object, e As FormClosedEventArgs)
         ActualizarTabla()
+        ' TODO: Darle uso.
     End Sub
 
     Private Sub ActualizarTabla()
