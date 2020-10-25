@@ -187,11 +187,25 @@ Public Class frmPublicidad
     End Sub
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
+        Dim fecha1 As String = Format(dtpFI.Value, "yyyy-MM-dd")
+        Dim fecha2 As String = Format(dtpFF.Value, "yyyy-MM-dd")
+        Dim fechaN1 As String = ""
+        Dim fechaN2 As String = ""
         If (cbTanda.SelectedIndex > 0) Then
             If (dgvFechas.Rows.Count > 0) Then
-                BSQL("aparecepubli", String.Format("id_publicidad='{0}' and Hora_Inicio='{1}' and fecha_inicio >= '{2}' and fecha_finalizacion <= '{3}'", publicidadID, positionTanda(cbTanda.SelectedIndex - 1), Format(dtpFI.Value, "yyyy-MM-dd"), Format(dtpFF.Value, "yyyy-MM-dd")))
+                For i As Integer = 0 To dgvFechas.Rows.Count - 1
+                    fechaN1 = dgvFechas.Rows(i).Cells(0).Value().ToString
+                    fechaN2 = dgvFechas.Rows(i).Cells(1).Value().ToString
+                    If (CDate(fechaN1) < CDate(fecha1)) Then
+                        fecha1 = Format(CDate(fechaN1), "yyyy-MM-dd")
+                    End If
+                    If (CDate(fechaN2) > CDate(fecha2)) Then
+                        fecha2 = Format(CDate(fechaN2), "yyyy-MM-dd")
+                    End If
+                Next
+                BSQL("aparecepubli", String.Format("id_publicidad='{0}' and Hora_Inicio='{1}' and fecha_inicio >= '{2}' and fecha_finalizacion <= '{3}'", publicidadID, positionTanda(cbTanda.SelectedIndex - 1), fecha1, fecha2))
             End If
-            ISQL("aparecepubli", "id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion", String.Format("'{0}','{1}','{2}','{3}'", publicidadID, positionTanda(cbTanda.SelectedIndex - 1), Format(dtpFI.Value, "yyyy-MM-dd"), Format(dtpFF.Value, "yyyy-MM-dd")))
+            ISQL("aparecepubli", "id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion", String.Format("'{0}','{1}','{2}','{3}'", publicidadID, positionTanda(cbTanda.SelectedIndex - 1), fecha1, fecha2))
             BuscarF()
         Else
             MessageBox.Show("Debe seleccionar una tanda para agendar la publicidad")

@@ -87,7 +87,6 @@ Partial Class frmPrincipal
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
-        Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cbTTodas = New System.Windows.Forms.CheckBox()
         Me.dgvTandas = New System.Windows.Forms.DataGridView()
@@ -186,6 +185,10 @@ Partial Class frmPrincipal
         Me.btnlimpiarv = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.dgvVB = New System.Windows.Forms.DataGridView()
+        Me.VFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.tbEmpresa = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
@@ -276,10 +279,7 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
-        Me.VFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VSerie = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -574,12 +574,6 @@ Partial Class frmPrincipal
         Me.dgvPublicidades.RowTemplate.Height = 28
         Me.dgvPublicidades.RowTemplate.ReadOnly = True
         Me.dgvPublicidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'PDescripcion
-        '
-        resources.ApplyResources(Me.PDescripcion, "PDescripcion")
-        Me.PDescripcion.Name = "PDescripcion"
-        Me.PDescripcion.ReadOnly = True
         '
         'GroupBox2
         '
@@ -1547,6 +1541,36 @@ Partial Class frmPrincipal
         Me.dgvVB.RowTemplate.ReadOnly = True
         Me.dgvVB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
+        'VFecha
+        '
+        Me.VFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        resources.ApplyResources(Me.VFecha, "VFecha")
+        Me.VFecha.Name = "VFecha"
+        Me.VFecha.ReadOnly = True
+        '
+        'VNombre
+        '
+        Me.VNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        resources.ApplyResources(Me.VNombre, "VNombre")
+        Me.VNombre.Name = "VNombre"
+        Me.VNombre.ReadOnly = True
+        '
+        'VSerie
+        '
+        Me.VSerie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        resources.ApplyResources(Me.VSerie, "VSerie")
+        Me.VSerie.Name = "VSerie"
+        Me.VSerie.ReadOnly = True
+        '
+        'VEliminar
+        '
+        Me.VEliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.VEliminar.FalseValue = "False"
+        resources.ApplyResources(Me.VEliminar, "VEliminar")
+        Me.VEliminar.Name = "VEliminar"
+        Me.VEliminar.ReadOnly = True
+        Me.VEliminar.TrueValue = "True"
+        '
         'tbEmpresa
         '
         Me.tbEmpresa.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -2284,35 +2308,11 @@ Partial Class frmPrincipal
         'BWBuscador
         '
         '
-        'VFecha
+        'PDescripcion
         '
-        Me.VFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        resources.ApplyResources(Me.VFecha, "VFecha")
-        Me.VFecha.Name = "VFecha"
-        Me.VFecha.ReadOnly = True
-        '
-        'VNombre
-        '
-        Me.VNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        resources.ApplyResources(Me.VNombre, "VNombre")
-        Me.VNombre.Name = "VNombre"
-        Me.VNombre.ReadOnly = True
-        '
-        'VSerie
-        '
-        Me.VSerie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        resources.ApplyResources(Me.VSerie, "VSerie")
-        Me.VSerie.Name = "VSerie"
-        Me.VSerie.ReadOnly = True
-        '
-        'VEliminar
-        '
-        Me.VEliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.VEliminar.FalseValue = "False"
-        resources.ApplyResources(Me.VEliminar, "VEliminar")
-        Me.VEliminar.Name = "VEliminar"
-        Me.VEliminar.ReadOnly = True
-        Me.VEliminar.TrueValue = "True"
+        resources.ApplyResources(Me.PDescripcion, "PDescripcion")
+        Me.PDescripcion.Name = "PDescripcion"
+        Me.PDescripcion.ReadOnly = True
         '
         'frmPrincipal
         '
@@ -2505,7 +2505,6 @@ Partial Class frmPrincipal
     Friend WithEvents TBNotas As RichTextBox
     Friend WithEvents btnLimpiarBS As Button
     Friend WithEvents btnBuscarBS As Button
-    Friend WithEvents PDescripcion As DataGridViewTextBoxColumn
     Friend WithEvents cbS As CheckBox
     Friend WithEvents Panel8 As Panel
     Friend WithEvents btnBorrar As Button
@@ -2650,4 +2649,5 @@ Partial Class frmPrincipal
     Friend WithEvents VNombre As DataGridViewTextBoxColumn
     Friend WithEvents VSerie As DataGridViewTextBoxColumn
     Friend WithEvents VEliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents PDescripcion As DataGridViewTextBoxColumn
 End Class

@@ -53,7 +53,7 @@
     End Sub
 
     Private Sub frmConfirmarBorrado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If (tabla = "Serie") Then
+        If (tabla = SERIE) Then
             btnBorrarSerie.Visible = True
         End If
     End Sub

@@ -204,3 +204,61 @@
 24/10/2020 18:51:58 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
 24/10/2020 18:52:25 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 24/10/2020 18:52:30 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 23:04:59 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 23:05:07 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+24/10/2020 23:05:14 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+24/10/2020 23:05:16 DESKTOP-SDVEG3U ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+24/10/2020 23:05:20 DESKTOP-SDVEG3U ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+24/10/2020 23:06:27 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 23:06:34 DESKTOP-SDVEG3U ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+24/10/2020 23:06:41 DESKTOP-SDVEG3U ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+24/10/2020 23:06:54 DESKTOP-SDVEG3U ' update Empresa set Nombre = 'dfdf',Telefono = '3434343',Mail = 'dfdfd@gmail.com' WHERE ID_Empresa = '4' 
+24/10/2020 23:06:59 DESKTOP-SDVEG3U ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+24/10/2020 23:07:04 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 23:07:19 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE v.nombre like '%dfdfdf%' 
+24/10/2020 23:07:26 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+24/10/2020 23:07:39 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+24/10/2020 23:09:36 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 23:10:27 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+24/10/2020 23:10:30 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+24/10/2020 23:10:30 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='00:00:00' and fecha_inicio >='2020-10-24' and fecha_finalizacion<='2020-10-24' 
+24/10/2020 23:10:57 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='05:00:00' and fecha_inicio >='2020-10-24' and fecha_finalizacion<='2020-10-24' 
+24/10/2020 23:11:03 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='05:00:00' and fecha_inicio >='2020-10-13' and fecha_finalizacion<='2020-10-24' 
+24/10/2020 23:11:09 DESKTOP-SDVEG3U ' Insert into aparecepubli ( id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion ) values ('2','05:00:00','2020-10-13','2020-10-24' ) 
+24/10/2020 23:11:09 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='05:00:00' and fecha_inicio >='2020-10-13' and fecha_finalizacion<='2020-10-24' 
+24/10/2020 23:11:22 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='05:00:00' and fecha_inicio >='2020-10-24' and fecha_finalizacion<='2020-10-24' 
+24/10/2020 23:11:24 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='05:00:00' and fecha_inicio >='2020-10-24' and fecha_finalizacion<='2020-10-28' 
+24/10/2020 23:11:26 DESKTOP-SDVEG3U ' Insert into aparecepubli ( id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion ) values ('2','05:00:00','2020-10-24','2020-10-28' ) 
+24/10/2020 23:11:26 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='05:00:00' and fecha_inicio >='2020-10-24' and fecha_finalizacion<='2020-10-28' 
+24/10/2020 23:11:31 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='05:00:00' and fecha_inicio >='2020-10-01' and fecha_finalizacion<='2020-10-28' 
+24/10/2020 23:11:44 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio='05:00:00' and fecha_inicio >= '2020-10-01' and fecha_finalizacion <= '2020-10-28' 
+24/10/2020 23:11:44 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio='05:00:00' and fecha_inicio >= '2020-10-01' and fecha_finalizacion <= '2020-10-28' 
+24/10/2020 23:11:44 DESKTOP-SDVEG3U ' Insert into aparecepubli ( id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion ) values ('2','05:00:00','2020-10-01','2020-10-28' ) 
+24/10/2020 23:11:44 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='05:00:00' and fecha_inicio >='2020-10-01' and fecha_finalizacion<='2020-10-28' 
+24/10/2020 23:12:54 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='05:00:00' and fecha_inicio >='2020-10-09' and fecha_finalizacion<='2020-10-28' 
+24/10/2020 23:12:56 DESKTOP-SDVEG3U ' Insert into aparecepubli ( id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion ) values ('2','05:00:00','2020-10-09','2020-10-28' ) 
+24/10/2020 23:12:56 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='05:00:00' and fecha_inicio >='2020-10-09' and fecha_finalizacion<='2020-10-28' 
+24/10/2020 23:12:58 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='05:00:00' and fecha_inicio >='2020-10-01' and fecha_finalizacion<='2020-10-28' 
+24/10/2020 23:15:56 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+24/10/2020 23:17:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+24/10/2020 23:18:02 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+25/10/2020 12:06:07 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+25/10/2020 12:17:16 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+25/10/2020 12:17:25 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+25/10/2020 12:17:29 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+25/10/2020 12:17:29 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='00:00:00' and fecha_inicio <='2020-10-25' and fecha_finalizacion>='2020-10-25' 
+25/10/2020 12:17:33 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='01:00:00' and fecha_inicio <='2020-10-25' and fecha_finalizacion>='2020-10-25' 
+25/10/2020 12:18:30 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+25/10/2020 12:18:36 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+25/10/2020 12:18:38 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+25/10/2020 12:18:38 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='00:00:00' and fecha_inicio <='2020-10-25' and fecha_finalizacion>='2020-10-25' 
+25/10/2020 12:18:42 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='01:00:00' and fecha_inicio <='2020-10-25' and fecha_finalizacion>='2020-10-25' 
+25/10/2020 12:18:44 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio='01:00:00' and fecha_inicio >= '06/10/2020 0:00:00' and fecha_finalizacion <= '07/11/2020 0:00:00' 
+25/10/2020 12:19:00 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio='01:00:00' and fecha_inicio >= '06/10/2020 0:00:00' and fecha_finalizacion <= '07/11/2020 0:00:00' 
+25/10/2020 12:19:00 DESKTOP-SDVEG3U ' Insert into aparecepubli ( id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion ) values ('2','01:00:00','06/10/2020 0:00:00','07/11/2020 0:00:00' ) 
+25/10/2020 12:19:00 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='01:00:00' and fecha_inicio <='2020-10-25' and fecha_finalizacion>='2020-10-25' 
+25/10/2020 12:19:03 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio='01:00:00' and fecha_inicio >= '06/10/2020 0:00:00' and fecha_finalizacion <= '07/11/2020 0:00:00' 
+25/10/2020 12:19:07 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio='01:00:00' and fecha_inicio >= '06/10/2020 0:00:00' and fecha_finalizacion <= '07/11/2020 0:00:00' 
+25/10/2020 12:19:07 DESKTOP-SDVEG3U ' Insert into aparecepubli ( id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion ) values ('2','01:00:00','06/10/2020 0:00:00','07/11/2020 0:00:00' ) 
+25/10/2020 12:19:12 DESKTOP-SDVEG3U ' select fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM aparecepubli WHERE id_publicidad = 2 and hora_inicio='01:00:00' and fecha_inicio <='2020-10-25' and fecha_finalizacion>='2020-10-25' 
+25/10/2020 12:19:13 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 

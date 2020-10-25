@@ -26,8 +26,8 @@ Module ModTablas
         Return Regex.IsMatch(s, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
     End Function
     Public Sub CargarPubliT(ByRef dt As DataTable, ByRef dgv As DataGridView, ByVal id As String, ByVal hora As String, ByVal fecha1 As String, ByVal fecha2 As String)
-        dt = DevolverTabla(PSQL("fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "aparecepubli", String.Format("id_publicidad = {0} and hora_inicio='{1}' and fecha_inicio >='{2}' and fecha_finalizacion<='{3}'", id, hora, fecha1, fecha2)))
-        ModLog.Guardar(PSQL("fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "aparecepubli", String.Format("id_publicidad = {0} and hora_inicio='{1}' and fecha_inicio >='{2}' and fecha_finalizacion<='{3}'", id, hora, fecha1, fecha2)))
+        dt = DevolverTabla(PSQL("fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "aparecepubli", String.Format("id_publicidad = {0} and hora_inicio='{1}' and fecha_inicio <='{3}' and fecha_finalizacion>='{2}'", id, hora, fecha1, fecha2)))
+        ModLog.Guardar(PSQL("fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "aparecepubli", String.Format("id_publicidad = {0} and hora_inicio='{1}' and fecha_inicio <='{3}' and fecha_finalizacion>='{2}'", id, hora, fecha1, fecha2)))
         ActualizarTablaC(dt, dgv, False)
     End Sub
     Public Function CargarID(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As Integer
