@@ -34,7 +34,7 @@
             Case PROGRAMAS
                 PrepararDelete("Programa", "ID_Programa", id)
             Case FECHAPROGRAMA
-                BSQL("Fechaprograma", CreadorCondicion("fecha", id) + " and " + CreadorCondicion("Hora_inicio", id2))
+                BSQL("Fechaprograma", CreadorCondicion("fecha", id, True) + " and " + CreadorCondicion("Hora_inicio", id2) + "and id_programa='" + id3(0) + "'")
             Case PUBLICIDADPROGRAMA
                 BSQL("pmuestrapubli", CreadorCondicion("id_publicidad", id) + " and " + CreadorCondicion("id_programa", id2) + " and " + CreadorCondicion("Fecha_inicio", id3, True))
         End Select

@@ -104,6 +104,7 @@ Partial Class frmPrograma
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpAP = New System.Windows.Forms.DateTimePicker()
         Me.gbBuscar = New System.Windows.Forms.GroupBox()
+        Me.cbFMes = New System.Windows.Forms.CheckBox()
         Me.dtpBP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -113,12 +114,16 @@ Partial Class frmPrograma
         Me.btnABorrar = New System.Windows.Forms.Button()
         Me.btnAnadir = New System.Windows.Forms.Button()
         Me.tbFechasAgendadas = New System.Windows.Forms.TabPage()
+        Me.cbBMA = New System.Windows.Forms.CheckBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnBorrarAgenda = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvFechaPrograma = New System.Windows.Forms.DataGridView()
+        Me.FFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.mcFecha = New System.Windows.Forms.MonthCalendar()
         Me.bwDatos = New System.ComponentModel.BackgroundWorker()
         Me.bwCargador = New System.ComponentModel.BackgroundWorker()
         Me.GBFuncionario.SuspendLayout()
@@ -148,7 +153,7 @@ Partial Class frmPrograma
         Me.TableLayoutPanel7.SuspendLayout()
         Me.tbFechasAgendadas.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvFechaPrograma, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GBFuncionario
@@ -1009,6 +1014,7 @@ Partial Class frmPrograma
         '
         'gbBuscar
         '
+        Me.gbBuscar.Controls.Add(Me.cbFMes)
         Me.gbBuscar.Controls.Add(Me.dtpBP)
         Me.gbBuscar.Controls.Add(Me.dgvPrograma)
         Me.gbBuscar.Location = New System.Drawing.Point(316, 4)
@@ -1018,6 +1024,16 @@ Partial Class frmPrograma
         Me.gbBuscar.TabStop = False
         Me.gbBuscar.Text = "Buscar"
         '
+        'cbFMes
+        '
+        Me.cbFMes.AutoSize = True
+        Me.cbFMes.Location = New System.Drawing.Point(212, 20)
+        Me.cbFMes.Name = "cbFMes"
+        Me.cbFMes.Size = New System.Drawing.Size(104, 21)
+        Me.cbFMes.TabIndex = 28876929
+        Me.cbFMes.Text = "Buscar mes"
+        Me.cbFMes.UseVisualStyleBackColor = True
+        '
         'dtpBP
         '
         Me.dtpBP.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -1026,7 +1042,7 @@ Partial Class frmPrograma
         Me.dtpBP.Location = New System.Drawing.Point(5, 20)
         Me.dtpBP.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpBP.Name = "dtpBP"
-        Me.dtpBP.Size = New System.Drawing.Size(312, 22)
+        Me.dtpBP.Size = New System.Drawing.Size(202, 22)
         Me.dtpBP.TabIndex = 28876928
         '
         'dgvPrograma
@@ -1151,8 +1167,11 @@ Partial Class frmPrograma
         'tbFechasAgendadas
         '
         Me.tbFechasAgendadas.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.tbFechasAgendadas.Controls.Add(Me.cbBMA)
+        Me.tbFechasAgendadas.Controls.Add(Me.Label4)
+        Me.tbFechasAgendadas.Controls.Add(Me.btnBorrarAgenda)
         Me.tbFechasAgendadas.Controls.Add(Me.GroupBox4)
-        Me.tbFechasAgendadas.Controls.Add(Me.MonthCalendar1)
+        Me.tbFechasAgendadas.Controls.Add(Me.mcFecha)
         Me.tbFechasAgendadas.Location = New System.Drawing.Point(4, 25)
         Me.tbFechasAgendadas.Name = "tbFechasAgendadas"
         Me.tbFechasAgendadas.Padding = New System.Windows.Forms.Padding(3)
@@ -1160,34 +1179,68 @@ Partial Class frmPrograma
         Me.tbFechasAgendadas.TabIndex = 5
         Me.tbFechasAgendadas.Text = "Fechas agendadas"
         '
+        'cbBMA
+        '
+        Me.cbBMA.AutoSize = True
+        Me.cbBMA.Location = New System.Drawing.Point(531, 15)
+        Me.cbBMA.Name = "cbBMA"
+        Me.cbBMA.Size = New System.Drawing.Size(104, 21)
+        Me.cbBMA.TabIndex = 28876930
+        Me.cbBMA.Text = "Buscar mes"
+        Me.cbBMA.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(436, 11)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(67, 25)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Fecha"
+        '
+        'btnBorrarAgenda
+        '
+        Me.btnBorrarAgenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnBorrarAgenda.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnBorrarAgenda.ForeColor = System.Drawing.Color.Black
+        Me.btnBorrarAgenda.Location = New System.Drawing.Point(415, 265)
+        Me.btnBorrarAgenda.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBorrarAgenda.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnBorrarAgenda.Name = "btnBorrarAgenda"
+        Me.btnBorrarAgenda.Size = New System.Drawing.Size(220, 40)
+        Me.btnBorrarAgenda.TabIndex = 3
+        Me.btnBorrarAgenda.Text = "Borrar Selección"
+        Me.btnBorrarAgenda.UseVisualStyleBackColor = True
+        '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.DataGridView1)
+        Me.GroupBox4.Controls.Add(Me.dgvFechaPrograma)
         Me.GroupBox4.Location = New System.Drawing.Point(7, 9)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(399, 207)
+        Me.GroupBox4.Size = New System.Drawing.Size(399, 301)
         Me.GroupBox4.TabIndex = 1
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Horarios"
         '
-        'DataGridView1
+        'dgvFechaPrograma
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToResizeColumns = False
-        Me.DataGridView1.AllowUserToResizeRows = False
+        Me.dgvFechaPrograma.AllowUserToAddRows = False
+        Me.dgvFechaPrograma.AllowUserToDeleteRows = False
+        Me.dgvFechaPrograma.AllowUserToResizeColumns = False
+        Me.dgvFechaPrograma.AllowUserToResizeRows = False
         DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         DataGridViewCellStyle17.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Black
         DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle17
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.dgvFechaPrograma.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle17
+        Me.dgvFechaPrograma.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvFechaPrograma.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvFechaPrograma.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.dgvFechaPrograma.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
         DataGridViewCellStyle18.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
@@ -1195,9 +1248,9 @@ Partial Class frmPrograma
         DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Black
         DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewCheckBoxColumn1})
+        Me.dgvFechaPrograma.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
+        Me.dgvFechaPrograma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvFechaPrograma.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FFecha, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewCheckBoxColumn1})
         DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         DataGridViewCellStyle19.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
@@ -1205,23 +1258,30 @@ Partial Class frmPrograma
         DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Black
         DataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle19
-        Me.DataGridView1.Location = New System.Drawing.Point(5, 20)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataGridView1.MultiSelect = False
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.RowHeadersWidth = 62
+        Me.dgvFechaPrograma.DefaultCellStyle = DataGridViewCellStyle19
+        Me.dgvFechaPrograma.Location = New System.Drawing.Point(5, 20)
+        Me.dgvFechaPrograma.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvFechaPrograma.MultiSelect = False
+        Me.dgvFechaPrograma.Name = "dgvFechaPrograma"
+        Me.dgvFechaPrograma.ReadOnly = True
+        Me.dgvFechaPrograma.RowHeadersVisible = False
+        Me.dgvFechaPrograma.RowHeadersWidth = 62
         DataGridViewCellStyle20.BackColor = System.Drawing.Color.Black
         DataGridViewCellStyle20.ForeColor = System.Drawing.Color.White
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle20
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.RowTemplate.ReadOnly = True
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(389, 182)
-        Me.DataGridView1.TabIndex = 28876928
+        Me.dgvFechaPrograma.RowsDefaultCellStyle = DataGridViewCellStyle20
+        Me.dgvFechaPrograma.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.dgvFechaPrograma.RowTemplate.Height = 28
+        Me.dgvFechaPrograma.RowTemplate.ReadOnly = True
+        Me.dgvFechaPrograma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvFechaPrograma.Size = New System.Drawing.Size(389, 276)
+        Me.dgvFechaPrograma.TabIndex = 28876928
+        '
+        'FFecha
+        '
+        Me.FFecha.HeaderText = "Fecha"
+        Me.FFecha.MinimumWidth = 6
+        Me.FFecha.Name = "FFecha"
+        Me.FFecha.ReadOnly = True
         '
         'DataGridViewTextBoxColumn1
         '
@@ -1239,6 +1299,7 @@ Partial Class frmPrograma
         '
         'DataGridViewCheckBoxColumn1
         '
+        Me.DataGridViewCheckBoxColumn1.FillWeight = 75.0!
         Me.DataGridViewCheckBoxColumn1.HeaderText = "Eliminar"
         Me.DataGridViewCheckBoxColumn1.MinimumWidth = 8
         Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
@@ -1246,11 +1307,11 @@ Partial Class frmPrograma
         Me.DataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewCheckBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
-        'MonthCalendar1
+        'mcFecha
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(418, 9)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 0
+        Me.mcFecha.Location = New System.Drawing.Point(415, 45)
+        Me.mcFecha.Name = "mcFecha"
+        Me.mcFecha.TabIndex = 0
         '
         'bwDatos
         '
@@ -1295,11 +1356,13 @@ Partial Class frmPrograma
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.gbBuscar.ResumeLayout(False)
+        Me.gbBuscar.PerformLayout()
         CType(Me.dgvPrograma, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel7.ResumeLayout(False)
         Me.tbFechasAgendadas.ResumeLayout(False)
+        Me.tbFechasAgendadas.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvFechaPrograma, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1363,11 +1426,8 @@ Partial Class frmPrograma
     Friend WithEvents PFEliminar As DataGridViewCheckBoxColumn
     Friend WithEvents tbFechasAgendadas As TabPage
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
+    Friend WithEvents mcFecha As MonthCalendar
+    Friend WithEvents dgvFechaPrograma As DataGridView
     Friend WithEvents Label5 As Label
     Friend WithEvents HI As Label
     Friend WithEvents Label3 As Label
@@ -1382,4 +1442,12 @@ Partial Class frmPrograma
     Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
     Friend WithEvents btnBorrarSelect As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents btnBorrarAgenda As Button
+    Friend WithEvents FFecha As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
+    Friend WithEvents cbFMes As CheckBox
+    Friend WithEvents cbBMA As CheckBox
 End Class

@@ -8,6 +8,7 @@ Public Class frmPrograma
     Private TBusca As DataTable
     Private dt_funcionario As DataTable
     Private dt_fechas As DataTable
+    Private dt_FechaPrograma As DataTable
     Private dt_publicidades As DataTable
     Private TBuscada As String
 
@@ -173,18 +174,18 @@ Public Class frmPrograma
             Case 2
                 PubliDeFecha(dt_publicidades, dgvProgramaPubli, programaID, Now.Date)
             Case 4
-                TBuscada = "fechaprograma"
-                Columna = "hora_inicio as 'Inicio', hora_fin as 'Final'"
-                Tablas = "fechaprograma"
-                Condicion = String.Format("id_programa = {0} and fecha = '{1}'", programaID, Format(Now.Date, "yyyy-MM-dd"))
+                BFecha(cbFMes.Checked)
+            Case 5
+                BFechaRango(cbBMA.Checked)
         End Select
         If Not (bwCargador.IsBusy) And TBuscada <> "" Then
             bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
         End If
     End Sub
-    Public Sub BFecha()
+    Public Sub BFecha(Optional ByVal mes As Boolean = False)
         Dim Columna As String = "hora_inicio as 'Inicio', hora_fin as 'Final'"
-        Dim Condicion As String = String.Format("id_programa = {0} and fecha = '{1}'", programaID, Format(dtpBP.Value, "yyyy-MM-dd"))
+        Dim fecha As String = If(mes, "month(fecha) = month('{1}')", "fecha = '{1}'")
+        Dim Condicion As String = String.Format("id_programa = {0} and " + fecha, programaID, Format(dtpBP.Value, "yyyy-MM-dd"))
         Dim Tablas As String = "fechaprograma"
         TBuscada = "fechaprograma"
         If Not (bwCargador.IsBusy) Then
@@ -200,9 +201,9 @@ Public Class frmPrograma
             Case "fechaprograma"
                 dt_fechas = TBusca
                 ActualizarTablaC(dt_fechas, dgvPrograma, False)
-            Case "FechaPrograma"
-                dt_Empresa = TBusca
-               ' ActualizarTablaC(dt_Empresa, dgvClientes)
+            Case "Fecha"
+                dt_FechaPrograma = TBusca
+                ActualizarTablaC(dt_FechaPrograma, dgvFechaPrograma, False)
             Case "CuotaPrograma"
                 dt_BPrograma = TBusca
                 ' ActualizarTablaC(dt_BPrograma, dgvBProgramas)
@@ -216,29 +217,27 @@ Public Class frmPrograma
         PrepararInsert("fechaprograma", datos, 0)
         txtHI.Clear()
         txtHF.Clear()
+        BFecha(cbFMes.Checked)
     End Sub
 
     Private Sub dtpBP_ValueChanged(sender As Object, e As EventArgs) Handles dtpBP.ValueChanged
-        BFecha()
+        BFecha(cbFMes.Checked)
     End Sub
 
-    Private Sub dgvPrograma_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellClick
-        ClickCheck(dgvPrograma, e.ColumnIndex)
-    End Sub
 
     Private Sub btnABorrar_Click(sender As Object, e As EventArgs) Handles btnABorrar.Click
         If Not IsNothing(dt_fechas) Then
             If (dt_fechas.Rows.Count > 0) Then
                 Dim RId() As String = ObtenerCheck(dt_fechas, dgvPrograma, 0)
                 If Not RId.Length = 0 Then
-                    Dim formDelete As New frmConfirmarBorrado(FECHAPROGRAMA, {Format(dtpBP.Value, "yyyy-MM-dd")}, False, RId)
+                    Dim formDelete As New frmConfirmarBorrado(FECHAPROGRAMA, {dtpBP.Value}, False, RId, {programaID})
                     formDelete.ShowDialog(Me)
-                    BFecha()
+                    BFecha(cbFMes.Checked)
                 End If
             End If
         End If
     End Sub
-    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProgramaPubli.CellClick
+    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProgramaPubli.CellClick, dgvPrograma.CellClick, dgvFechaPrograma.CellClick
         ClickCheck(sender, e.ColumnIndex)
     End Sub
     Private Sub dtpFPubli_ValueChanged(sender As Object, e As EventArgs) Handles dtpFPubli.ValueChanged
@@ -266,5 +265,44 @@ Public Class frmPrograma
             AddHandler formPubli.FormClosed, AddressOf FormPubli_FormClosed
             formPubli.ShowDialog()
         End If
+    End Sub
+
+    Private Sub btnBorrarAgenda_Click(sender As Object, e As EventArgs) Handles btnBorrarAgenda.Click
+        If Not IsNothing(dt_FechaPrograma) Then
+            If (dt_FechaPrograma.Rows.Count > 0) Then
+                Dim Id() As String = ObtenerCheck(dt_FechaPrograma, dgvFechaPrograma, 0)
+                Dim Id2() As String = ObtenerCheck(dt_FechaPrograma, dgvFechaPrograma, 1)
+                If Not Id.Length = 0 Then
+                    Dim formDelete As New frmConfirmarBorrado(FECHAPROGRAMA, Id, False, Id2, {programaID})
+                    formDelete.ShowDialog(Me)
+                    BFechaRango(cbBMA.Checked)
+                End If
+            End If
+        End If
+    End Sub
+    Private Sub BFechaRango(ByVal mes As Boolean)
+        Dim Columna As String = "Fecha, hora_inicio as 'Inicio', hora_fin as 'Final'"
+        Dim fechasm As String = String.Format("fecha >= '{0}' and fecha <='{1}'", Format(mcFecha.SelectionStart, "yyyy-MM-dd"), Format(mcFecha.SelectionEnd, "yyyy-MM-dd"))
+        Dim fecham As String = String.Format("month(fecha) = month('{0}')", Format(mcFecha.SelectionStart, "yyyy-MM-dd"))
+        Dim fecha As String = If(mes, fecham, fechasm)
+        Dim Condicion As String = String.Format("id_programa = {0} and " + fecha, programaID)
+        Dim Tablas As String = "fechaprograma"
+        TBuscada = "Fecha"
+        If Not (bwCargador.IsBusy) Then
+            bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
+            ModLog.Guardar(PSQL(Columna, Tablas, Condicion))
+        End If
+    End Sub
+
+    Private Sub cbFMes_CheckedChanged(sender As Object, e As EventArgs) Handles cbFMes.CheckedChanged
+        BFecha(cbFMes.Checked)
+    End Sub
+
+    Private Sub cbBMA_CheckedChanged(sender As Object, e As EventArgs) Handles cbBMA.CheckedChanged
+        BFechaRango(cbBMA.Checked)
+    End Sub
+
+    Private Sub mcFecha_DateSelected(sender As Object, e As DateRangeEventArgs) Handles mcFecha.DateSelected
+        BFechaRango(cbBMA.Checked)
     End Sub
 End Class
