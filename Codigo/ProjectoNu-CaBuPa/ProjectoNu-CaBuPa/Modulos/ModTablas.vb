@@ -27,8 +27,11 @@ Module ModTablas
     End Function
     Public Sub CargarPubliT(ByRef dt As DataTable, ByRef dgv As DataGridView, ByVal id As String, ByVal hora As String, ByVal fecha1 As String, ByVal fecha2 As String)
         dt = DevolverTabla(PSQL("fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "aparecepubli", String.Format("id_publicidad = {0} and hora_inicio='{1}' and fecha_inicio <='{3}' and fecha_finalizacion>='{2}'", id, hora, fecha1, fecha2)))
-        ModLog.Guardar(PSQL("fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "aparecepubli", String.Format("id_publicidad = {0} and hora_inicio='{1}' and fecha_inicio <='{3}' and fecha_finalizacion>='{2}'", id, hora, fecha1, fecha2)))
         ActualizarTablaC(dt, dgv, False)
+    End Sub
+    Public Sub CargarPubliP(ByRef dt As DataTable, ByRef dgvP As DataGridView, ByVal id As String, ByVal programaid As String, ByVal fecha1 As String, ByVal fecha2 As String)
+        dt = DevolverTabla(PSQL("fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "pmuestrapubli", String.Format("id_publicidad = {0} and id_programa='{1}' and fecha_inicio <='{3}' and fecha_finalizacion>='{2}'", id, programaid, fecha1, fecha2)))
+        ActualizarTablaC(dt, dgvP, False)
     End Sub
     Public Function CargarID(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As Integer
         If (Not IsNothing(Tabla)) Then
@@ -81,6 +84,7 @@ Module ModTablas
 
     Public Sub ActualizarTablaC(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional C As Boolean = True)
         If Not IsNothing(Tabla) Then
+            'MessageBox.Show("Carga")
             Dim Tamanos(Dgv.Columns.Count() - 1) As Single
             Dim AutoSizeMode(Dgv.Columns.Count() - 1) As DataGridViewAutoSizeColumnMode
             For i As Integer = 0 To Dgv.Columns.Count - 1
@@ -105,6 +109,7 @@ Module ModTablas
                 Dgv.Columns(i).ReadOnly = If(Tabla.Columns.Count = Tamanos.Length, False, True)
             Next
             Dgv.Refresh()
+            'MessageBox.Show("Refresca")
         Else
             If (Dgv.Rows.Count > 0) Then
                 Dgv.DataSource.Rows.Clear()
