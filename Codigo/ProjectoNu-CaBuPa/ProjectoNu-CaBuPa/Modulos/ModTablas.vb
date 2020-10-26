@@ -22,6 +22,7 @@ Module ModTablas
     Public Const PUBLICIDAD As Byte = 5
     Public Const FUNCIONARIO As Byte = 6
     Public Const FECHAPROGRAMA As Byte = 7
+    Public Const PUBLICIDADPROGRAMA As Byte = 8
     Public Function ValidarEmail(ByVal s As String) As Boolean
         Return Regex.IsMatch(s, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
     End Function
@@ -32,6 +33,11 @@ Module ModTablas
     Public Sub CargarPubliP(ByRef dt As DataTable, ByRef dgvP As DataGridView, ByVal id As String, ByVal programaid As String, ByVal fecha1 As String, ByVal fecha2 As String)
         dt = DevolverTabla(PSQL("fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "pmuestrapubli", String.Format("id_publicidad = {0} and id_programa='{1}' and fecha_inicio <='{3}' and fecha_finalizacion>='{2}'", id, programaid, fecha1, fecha2)))
         ActualizarTablaC(dt, dgvP, False)
+    End Sub
+    Public Sub PubliDeFecha(ByRef dt As DataTable, ByRef dgvP As DataGridView, ByVal programaid As String, ByVal fecha1 As Date)
+        dt = DevolverTabla(PSQL("p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad", String.Format("id_programa='{0}' and fecha_inicio <='{1}' and fecha_finalizacion>='{1}'", programaid, Format(fecha1, "yyyy-MM-dd"))))
+        ModLog.Guardar(PSQL("p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad", String.Format("id_programa='{0}' and fecha_inicio <='{1}' and fecha_finalizacion>='{1}'", programaid, Format(fecha1, "yyyy-MM-dd"))))
+        ActualizarTablaC(dt, dgvP)
     End Sub
     Public Function CargarID(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As Integer
         If (Not IsNothing(Tabla)) Then
@@ -179,10 +185,10 @@ Module ModTablas
         res += ")"
         BSQL(tabla, res)
     End Sub
-    Public Function CreadorCondicion(ByVal datos As String, ByVal ids() As String)
+    Public Function CreadorCondicion(ByVal datos As String, ByVal ids() As String, Optional fecha As Boolean = False)
         Dim res As String = datos + " in ("
         For Each id In ids
-            res += String.Format(If(id = "null", "{0} ,", "'{0}' ,"), id)
+            res += String.Format(If(id = "null", "{0} ,", "'{0}' ,"), If(fecha, Format(CDate(id), "yyyy-MM-dd"), id))
         Next
         res = res.Remove(res.Length - 1)
         res += ")"
@@ -241,4 +247,16 @@ Module ModTablas
         Next
         Return sN
     End Function
+    Public Sub BorrarConfirmar(ByRef form As Form, ByRef dt As DataTable, ByRef dgv As DataGridView, ByVal tabla As Byte, ByRef btn As Button)
+        If Not IsNothing(dt) Then
+            If (dt.Rows.Count > 0) Then
+                Dim Id() As String = ObtenerCheck(dt, dgv)
+                If Not Id.Length = 0 Then
+                    Dim formDelete As New frmConfirmarBorrado(tabla, Id, False)
+                    formDelete.ShowDialog(form)
+                    btn.PerformClick()
+                End If
+            End If
+        End If
+    End Sub
 End Module

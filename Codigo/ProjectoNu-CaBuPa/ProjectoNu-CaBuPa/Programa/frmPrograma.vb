@@ -8,6 +8,7 @@ Public Class frmPrograma
     Private TBusca As DataTable
     Private dt_funcionario As DataTable
     Private dt_fechas As DataTable
+    Private dt_publicidades As DataTable
     Private TBuscada As String
 
     Public Sub New(ByVal pid As Integer)
@@ -29,7 +30,9 @@ Public Class frmPrograma
         End If
         txtDescripcion.Text = datosI(1)
     End Sub
-
+    Private Sub FormPubli_FormClosed(sender As Object, e As FormClosedEventArgs)
+        PubliDeFecha(dt_publicidades, dgvProgramaPubli, programaID, dtpFPubli.Value)
+    End Sub
     Private Sub frmPrograma_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If programaID <> -1 Then
             bwDatos.RunWorkerAsync()
@@ -160,19 +163,22 @@ Public Class frmPrograma
         Dim Columna As String = ""
         Dim Condicion As String = "true"
         Dim Tablas As String = ""
+        TBuscada = ""
         Select Case tcP.SelectedIndex
             Case 1
                 TBuscada = "Funcionario"
                 Columna = "fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
                 Tablas = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
                 Tablas = String.Format(Tablas, programaID)
+            Case 2
+                PubliDeFecha(dt_publicidades, dgvProgramaPubli, programaID, Now.Date)
             Case 4
                 TBuscada = "fechaprograma"
                 Columna = "hora_inicio as 'Inicio', hora_fin as 'Final'"
                 Tablas = "fechaprograma"
                 Condicion = String.Format("id_programa = {0} and fecha = '{1}'", programaID, Format(Now.Date, "yyyy-MM-dd"))
         End Select
-        If Not (bwCargador.IsBusy) Then
+        If Not (bwCargador.IsBusy) And TBuscada <> "" Then
             bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
         End If
     End Sub
@@ -230,6 +236,35 @@ Public Class frmPrograma
                     BFecha()
                 End If
             End If
+        End If
+    End Sub
+    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProgramaPubli.CellClick
+        ClickCheck(sender, e.ColumnIndex)
+    End Sub
+    Private Sub dtpFPubli_ValueChanged(sender As Object, e As EventArgs) Handles dtpFPubli.ValueChanged
+        PubliDeFecha(dt_publicidades, dgvProgramaPubli, programaID, dtpFPubli.Value)
+    End Sub
+
+    Private Sub btnBorrarSelect_Click(sender As Object, e As EventArgs) Handles btnBorrarSelect.Click
+        If Not IsNothing(dt_publicidades) Then
+            If (dt_publicidades.Rows.Count > 0) Then
+                Dim Id() As String = ObtenerCheck(dt_publicidades, dgvProgramaPubli, 0)
+                Dim Id1() As String = ObtenerCheck(dt_publicidades, dgvProgramaPubli, 2)
+                If Not Id.Length = 0 Then
+                    Dim formDelete As New frmConfirmarBorrado(PUBLICIDADPROGRAMA, Id, False, {programaID}, Id1)
+                    formDelete.ShowDialog(Me)
+                    PubliDeFecha(dt_publicidades, dgvProgramaPubli, programaID, dtpFPubli.Value)
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub dgvProgramaPubli_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProgramaPubli.CellDoubleClick
+        Dim i As String = CargarID(dt_publicidades, dgvProgramaPubli)
+        If (i.Length <> 0) Then
+            Dim formPubli As New frmPublicidad(i)
+            AddHandler formPubli.FormClosed, AddressOf FormPubli_FormClosed
+            formPubli.ShowDialog()
         End If
     End Sub
 End Class

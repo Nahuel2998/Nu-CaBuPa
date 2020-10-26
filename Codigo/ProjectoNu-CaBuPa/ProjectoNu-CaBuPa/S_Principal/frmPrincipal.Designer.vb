@@ -87,6 +87,7 @@ Partial Class frmPrincipal
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
+        Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cbTTodas = New System.Windows.Forms.CheckBox()
         Me.dgvTandas = New System.Windows.Forms.DataGridView()
@@ -279,7 +280,6 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
-        Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -574,6 +574,12 @@ Partial Class frmPrincipal
         Me.dgvPublicidades.RowTemplate.Height = 28
         Me.dgvPublicidades.RowTemplate.ReadOnly = True
         Me.dgvPublicidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
+        'PDescripcion
+        '
+        resources.ApplyResources(Me.PDescripcion, "PDescripcion")
+        Me.PDescripcion.Name = "PDescripcion"
+        Me.PDescripcion.ReadOnly = True
         '
         'GroupBox2
         '
@@ -2307,12 +2313,6 @@ Partial Class frmPrincipal
         '
         'BWBuscador
         '
-        '
-        'PDescripcion
-        '
-        resources.ApplyResources(Me.PDescripcion, "PDescripcion")
-        Me.PDescripcion.Name = "PDescripcion"
-        Me.PDescripcion.ReadOnly = True
         '
         'frmPrincipal
         '

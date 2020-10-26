@@ -329,11 +329,11 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        BorrarConfirmar(dt_Video, dgvVB, VIDEO, btnbuscarv)
+        BorrarConfirmar(Me, dt_Video, dgvVB, VIDEO, btnbuscarv)
     End Sub
 
     Private Sub btnBorrarS_Click(sender As Object, e As EventArgs) Handles btnBorrarS.Click
-        BorrarConfirmar(dt_Serie, dgvBS, SERIE, btnBuscarBS)
+        BorrarConfirmar(Me, dt_Serie, dgvBS, SERIE, btnBuscarBS)
     End Sub
 
     Private Sub btnIngresarV_Click(sender As Object, e As EventArgs) Handles btnIngresarV.Click
@@ -366,7 +366,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btncBorrar_Click(sender As Object, e As EventArgs) Handles btncBorrar.Click
-        BorrarConfirmar(dt_Empresa, dgvClientes, EMPRESA, btncBuscar)
+        BorrarConfirmar(Me, dt_Empresa, dgvClientes, EMPRESA, btncBuscar)
     End Sub
 
     Private Sub FormCliente_FormClosed(sender As Object, e As FormClosedEventArgs)
@@ -417,7 +417,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBorrarBP_Click(sender As Object, e As EventArgs) Handles btnBorrarBP.Click
-        BorrarConfirmar(dt_BPrograma, dgvBProgramas, PROGRAMAS, btnBuscarBP)
+        BorrarConfirmar(Me, dt_BPrograma, dgvBProgramas, PROGRAMAS, btnBuscarBP)
     End Sub
 
     Private Sub dgvBProgramas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBProgramas.CellDoubleClick
@@ -525,26 +525,17 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBorrarPubliB_Click(sender As Object, e As EventArgs) Handles btnBorrarPubliB.Click
-        BorrarConfirmar(dt_BPubli, dgvPubliB, PUBLICIDAD, btnBuscarPubliB)
-    End Sub
-    Private Sub BorrarConfirmar(ByRef dt As DataTable, ByRef dgv As DataGridView, ByVal tabla As Byte, ByRef btn As Button)
-        If Not IsNothing(dt) Then
-            If (dt.Rows.Count > 0) Then
-                Dim Id() As String = ObtenerCheck(dt, dgv)
-                If Not Id.Length = 0 Then
-                    Dim formDelete As New frmConfirmarBorrado(tabla, Id, False)
-                    formDelete.ShowDialog(Me)
-                    btn.PerformClick()
-                End If
-            End If
-        End If
+        BorrarConfirmar(Me, dt_BPubli, dgvPubliB, PUBLICIDAD, btnBuscarPubliB)
     End Sub
 
+
     Private Sub btnBorrarBF_Click(sender As Object, e As EventArgs) Handles btnBorrarBF.Click
-        BorrarConfirmar(dt_BFuncionario, dgvFuncionarioBF, FUNCIONARIO, btnBuscarBF)
+        BorrarConfirmar(Me, dt_BFuncionario, dgvFuncionarioBF, FUNCIONARIO, btnBuscarBF)
     End Sub
 
     Private Sub btnIngresarBF_Click(sender As Object, e As EventArgs) Handles btnIngresarBF.Click
 
     End Sub
+
+
 End Class
