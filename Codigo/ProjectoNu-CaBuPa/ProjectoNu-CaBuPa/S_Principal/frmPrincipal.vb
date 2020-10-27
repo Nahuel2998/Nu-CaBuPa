@@ -537,5 +537,8 @@ Public Class frmPrincipal
 
     End Sub
 
-
+    Private Sub btnTanda_Click(sender As Object, e As EventArgs) Handles btnTanda.Click
+        Dim formTanda As New frmTandas()
+        formTanda.ShowDialog()
+    End Sub
 End Class

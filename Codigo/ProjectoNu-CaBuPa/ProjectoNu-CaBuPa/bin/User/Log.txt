@@ -549,3 +549,56 @@
 26/10/2020 20:10:20 DESKTOP-SDVEG3U ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-10-26' and fecha <='2020-10-26' 
 26/10/2020 20:10:20 DESKTOP-SDVEG3U ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and month(fecha) = month('2020-10-26') 
 26/10/2020 20:10:20 DESKTOP-SDVEG3U ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and month(fecha) = month('2020-10-26') 
+26/10/2020 21:32:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/10/2020 21:34:36 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/10/2020 21:34:59 DESKTOP-SDVEG3U ' DELETE FROM tandas WHERE Hora_Inicio in ('03:00' ,'05:00' ) 
+26/10/2020 21:35:03 DESKTOP-SDVEG3U ' DELETE FROM tandas WHERE Hora_Inicio in ('03:00' ,'05:00' ) 
+26/10/2020 21:35:26 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/10/2020 21:35:41 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('03:00' ) 
+26/10/2020 21:35:41 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('03:00' ) 
+26/10/2020 21:35:48 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('05:00' ) 
+26/10/2020 21:35:48 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('05:00' ) 
+26/10/2020 21:36:09 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('10:00' ) 
+26/10/2020 21:36:09 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('10:00' ) 
+26/10/2020 21:36:20 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('15:00' ) 
+26/10/2020 21:36:20 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('15:00' ) 
+26/10/2020 21:40:35 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/10/2020 21:43:36 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/10/2020 21:44:57 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/10/2020 21:45:09 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('20:00' ) 
+26/10/2020 21:45:09 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('20:00' ) 
+26/10/2020 21:45:19 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:45:19 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:45:19 DESKTOP-SDVEG3U ' Insert into tanda ( hora_inicio, hora_finalizacion ) values ('5','10' ) 
+26/10/2020 21:45:56 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/10/2020 21:46:10 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:46:10 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:46:10 DESKTOP-SDVEG3U ' Insert into tanda ( hora_inicio, hora_fin ) values ('5','10' ) 
+26/10/2020 21:46:12 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:46:12 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:46:12 DESKTOP-SDVEG3U ' Insert into tanda ( hora_inicio, hora_fin ) values ('5','10' ) 
+26/10/2020 21:46:20 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:46:20 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:46:20 DESKTOP-SDVEG3U ' Insert into tanda ( hora_inicio, hora_fin ) values ('5','10' ) 
+26/10/2020 21:46:22 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:46:22 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:46:22 DESKTOP-SDVEG3U ' Insert into tanda ( hora_inicio, hora_fin ) values ('5','10' ) 
+26/10/2020 21:46:22 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:46:22 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5' 
+26/10/2020 21:46:22 DESKTOP-SDVEG3U ' Insert into tanda ( hora_inicio, hora_fin ) values ('5','10' ) 
+26/10/2020 21:46:25 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('00:00' ) 
+26/10/2020 21:46:25 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('00:00' ) 
+26/10/2020 21:46:28 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('00:00' ) 
+26/10/2020 21:46:28 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('00:00' ) 
+26/10/2020 21:50:58 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/10/2020 21:51:18 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5:30:00' 
+26/10/2020 21:51:18 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio='5:30:00' 
+26/10/2020 21:51:18 DESKTOP-SDVEG3U ' Insert into tanda ( hora_inicio, hora_fin ) values ('5:30:00','12:0:00' ) 
+26/10/2020 21:52:00 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('00:00' ) 
+26/10/2020 21:52:00 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('00:00' ) 
+26/10/2020 21:52:02 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('00:00' ) 
+26/10/2020 21:52:02 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('00:00' ) 
+26/10/2020 21:52:53 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/10/2020 21:54:37 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/10/2020 21:55:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+26/10/2020 21:55:52 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

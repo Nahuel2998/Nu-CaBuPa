@@ -2752,7 +2752,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnbuscarv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 0</value>
+    <value>120, 0</value>
   </data>
   <data name="btnbuscarv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -2782,13 +2782,13 @@
     <value>Fill</value>
   </data>
   <data name="Panel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 275</value>
+    <value>310, 276</value>
   </data>
   <data name="Panel9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="Panel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 46</value>
+    <value>248, 46</value>
   </data>
   <data name="Panel9.TabIndex" type="System.Int32, mscorlib">
     <value>12394295</value>
@@ -2866,7 +2866,7 @@
     <value>48</value>
   </data>
   <data name="txtVnombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 27</value>
+    <value>148, 27</value>
   </data>
   <data name="txtVnombre.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2890,7 +2890,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 38</value>
+    <value>229, 38</value>
   </data>
   <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2920,7 +2920,7 @@
     <value>NoControl</value>
   </data>
   <data name="cbFecha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>205, 14</value>
+    <value>206, 14</value>
   </data>
   <data name="cbFecha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -2956,7 +2956,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="dtpfechavideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 27</value>
+    <value>123, 27</value>
   </data>
   <data name="dtpfechavideo.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3013,7 +3013,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="Panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 44</value>
+    <value>229, 44</value>
   </data>
   <data name="Panel3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3082,7 +3082,7 @@
     <value>True</value>
   </data>
   <data name="txtVcontenido.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 110</value>
+    <value>218, 111</value>
   </data>
   <data name="txtVcontenido.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3106,7 +3106,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="Panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 142</value>
+    <value>229, 143</value>
   </data>
   <data name="Panel4.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -3133,7 +3133,7 @@
     <value>3</value>
   </data>
   <data name="TableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 236</value>
+    <value>233, 237</value>
   </data>
   <data name="TableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -3163,7 +3163,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Información.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 265</value>
+    <value>244, 266</value>
   </data>
   <data name="Información.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3253,7 +3253,7 @@
     <value>Fill</value>
   </data>
   <data name="Panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 275</value>
+    <value>2, 276</value>
   </data>
   <data name="Panel8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -3331,7 +3331,7 @@
     <value>Vertical</value>
   </data>
   <data name="dgvVB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 232</value>
+    <value>287, 233</value>
   </data>
   <data name="dgvVB.TabIndex" type="System.Int32, mscorlib">
     <value>12394293</value>
@@ -3358,7 +3358,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 265</value>
+    <value>300, 266</value>
   </data>
   <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3391,7 +3391,7 @@
     <value>2</value>
   </data>
   <data name="TableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>559, 323</value>
+    <value>560, 324</value>
   </data>
   <data name="TableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3421,7 +3421,7 @@
     <value>5, 4, 5, 4</value>
   </data>
   <data name="TabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>569, 331</value>
+    <value>570, 332</value>
   </data>
   <data name="TabPage4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4318,7 +4318,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="TableLayoutPanel15.ColumnCount" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnBorrarPubliB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -4327,13 +4327,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnBorrarPubliB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>484, 2</value>
+    <value>483, 2</value>
   </data>
   <data name="btnBorrarPubliB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 2, 4, 2</value>
   </data>
   <data name="btnBorrarPubliB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 46</value>
+    <value>87, 46</value>
   </data>
   <data name="btnBorrarPubliB.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -4360,7 +4360,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnIngresarPubliB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 2</value>
+    <value>198, 2</value>
   </data>
   <data name="btnIngresarPubliB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -4408,7 +4408,7 @@
     <value>112, 10</value>
   </data>
   <data name="btnBuscarPubliB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 46</value>
+    <value>155, 46</value>
   </data>
   <data name="btnBuscarPubliB.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4432,13 +4432,13 @@
     <value>Fill</value>
   </data>
   <data name="Panel21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 2</value>
+    <value>322, 2</value>
   </data>
   <data name="Panel21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="Panel21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 46</value>
+    <value>155, 46</value>
   </data>
   <data name="Panel21.TabIndex" type="System.Int32, mscorlib">
     <value>12394296</value>
@@ -4477,7 +4477,7 @@
     <value>112, 10</value>
   </data>
   <data name="btnLimpiarPubliB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 46</value>
+    <value>112, 46</value>
   </data>
   <data name="btnLimpiarPubliB.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -4507,7 +4507,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="Panel22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 46</value>
+    <value>112, 46</value>
   </data>
   <data name="Panel22.TabIndex" type="System.Int32, mscorlib">
     <value>12394297</value>
@@ -4523,6 +4523,33 @@
   </data>
   <data name="&gt;&gt;Panel22.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="btnTanda.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnTanda.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 3</value>
+  </data>
+  <data name="btnTanda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 44</value>
+  </data>
+  <data name="btnTanda.TabIndex" type="System.Int32, mscorlib">
+    <value>12394298</value>
+  </data>
+  <data name="btnTanda.Text" xml:space="preserve">
+    <value>Tanda</value>
+  </data>
+  <data name="&gt;&gt;btnTanda.Name" xml:space="preserve">
+    <value>btnTanda</value>
+  </data>
+  <data name="&gt;&gt;btnTanda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnTanda.Parent" xml:space="preserve">
+    <value>TableLayoutPanel15</value>
+  </data>
+  <data name="&gt;&gt;btnTanda.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="TableLayoutPanel15.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 311</value>
@@ -4552,7 +4579,7 @@
     <value>0</value>
   </data>
   <data name="TableLayoutPanel15.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnBorrarPubliB" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnIngresarPubliB" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Panel21" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="Panel22" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,32325,Percent,21,70139,Percent,36,80556,Percent,16,14583" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnBorrarPubliB" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="btnIngresarPubliB" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="Panel21" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="Panel22" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnTanda" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,20,32999,Percent,13,99999,Percent,21,70562,Percent,27,81542,Percent,16,14898" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="GroupBox11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>

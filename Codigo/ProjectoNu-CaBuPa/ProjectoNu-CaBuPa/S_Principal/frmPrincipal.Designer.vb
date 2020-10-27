@@ -280,6 +280,7 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
+        Me.btnTanda = New System.Windows.Forms.Button()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -1822,10 +1823,11 @@ Partial Class frmPrincipal
         'TableLayoutPanel15
         '
         resources.ApplyResources(Me.TableLayoutPanel15, "TableLayoutPanel15")
-        Me.TableLayoutPanel15.Controls.Add(Me.btnBorrarPubliB, 3, 0)
-        Me.TableLayoutPanel15.Controls.Add(Me.btnIngresarPubliB, 1, 0)
-        Me.TableLayoutPanel15.Controls.Add(Me.Panel21, 2, 0)
+        Me.TableLayoutPanel15.Controls.Add(Me.btnBorrarPubliB, 4, 0)
+        Me.TableLayoutPanel15.Controls.Add(Me.btnIngresarPubliB, 2, 0)
+        Me.TableLayoutPanel15.Controls.Add(Me.Panel21, 3, 0)
         Me.TableLayoutPanel15.Controls.Add(Me.Panel22, 0, 0)
+        Me.TableLayoutPanel15.Controls.Add(Me.btnTanda, 1, 0)
         Me.TableLayoutPanel15.Name = "TableLayoutPanel15"
         '
         'btnBorrarPubliB
@@ -2314,6 +2316,13 @@ Partial Class frmPrincipal
         'BWBuscador
         '
         '
+        'btnTanda
+        '
+        resources.ApplyResources(Me.btnTanda, "btnTanda")
+        Me.btnTanda.ForeColor = System.Drawing.Color.Black
+        Me.btnTanda.Name = "btnTanda"
+        Me.btnTanda.UseVisualStyleBackColor = True
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -2650,4 +2659,5 @@ Partial Class frmPrincipal
     Friend WithEvents VSerie As DataGridViewTextBoxColumn
     Friend WithEvents VEliminar As DataGridViewCheckBoxColumn
     Friend WithEvents PDescripcion As DataGridViewTextBoxColumn
+    Friend WithEvents btnTanda As Button
 End Class
