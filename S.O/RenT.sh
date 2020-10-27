@@ -9,8 +9,6 @@ Verificar(){
     fi
 }
 Letra1(){
-    printf "%s\n" "Directorio: $DirTemp" 
-    tree "$TD"
     printf "%s\n" "Indique el caracter a ser cambiado"
     read Letra
     Verificacion=$(echo $Letra | egrep "^[a-Z0-9]$")
@@ -26,11 +24,12 @@ Letra2(){
     if [ Verificacion = "" ]; then
     	Error "Letra2"
     fi
+    
     Cambiar
 }
 Cambiar(){
     Anterior=($(find "$DirTemp" -maxdepth 1 -type f | sed "s/^.*\///" | egrep "$Letra" | sed "s/ /'/g"))
-    Nuevo=($(find "$DirTemp" -maxdepth 1 -type f | sed "s/^.*\///" | egrep "$Letra" | sed "s/'$Letra'/'$LetraN'/g" | sed "s/ /'/g"))
+    Nuevo=($(find "$DirTemp" -maxdepth 1 -type f | sed "s/^.*\///" | egrep "$Letra" | sed "s/$Letra/$LetraN/g" | sed "s/ /'/g"))
     Canti=${#Anterior[@]}
     if [ $Canti -eq 0 ]; then
         clear
@@ -59,7 +58,7 @@ Renombrar(){
     do
         i=$(echo "$o" | sed "s/'/ /g")
     	OldName=$i
-    	NewName="$DirTemp/$(echo "$i" | sed "s/^.*\///" | sed "s/'$Letra'/'$LetraN'/g")"
+    	NewName="$DirTemp/$(echo "$i" | sed "s/^.*\///" | sed "s/$Letra/$LetraN/g")"
     	if [ "$OldName" != "$NewName" ]; then
     		mv "$OldName" "$NewName"
     	fi
@@ -70,32 +69,35 @@ Renombrar(){
     read Salir
         if [ "$Salir" = "y" ]; then
             clear
-            Letra1
+            RecD
         else
         	exit
         fi
 }
 RecD () {
-    printf "%s\n" "En que carpeta desea cambiar los nombre?" "(Ruta relativa o nombre. Ingrese un . para usaar en el directorio $TD)"
+    printf "%s\n" "En que carpeta desea cambiar los nombres?" "(Ruta o nombre. Ingrese un . para usar en el directorio $TD)"
     tree "$TD"
     read nombre
+    DirTemp="$TD"
     if [ "$nombre" = "." ]; then
-        DirTemp="$TD"
         Letra1
     	exit
-    elif [[ "$nombre" =~ "/" ]]; then
+    elif [[ "${nombre:0:1}" = "/" ]]; then
         Buscar "wholename"
+    elif [[ "$nombre" =~ "/" ]]; then
+       nombre="$DirTemp/$nombre"
+       Buscar "wholename"
     else
         Buscar "name"
     fi
 }
 Buscar(){
-    Direcciones=($(find "$TD" -type d -$1 "$nombre" | sed "s/ /'/g"))
+    Direcciones=($(find "$DirTemp" -type d -$1 "$nombre" | sed "s/ /'/g"))
     Result=${#Direcciones[@]}
     if [ $Result -eq 1 ] && [ "${Direcciones[0]}" != "''" ]; then
         DirTemp=$(echo ${Direcciones[$i]} | sed "s/'/ /g")
         printf "%s\n" "Encontrado: $DirTemp"
-        Nombre
+        Letra1
     elif [ $Result -gt 1 ]; then
         printf "%s\n" "A cual directorio se refiere?"
         Num=0
@@ -109,7 +111,7 @@ Buscar(){
         echo $eleccion
         if [ -d "$eleccion" ]; then
             DirTemp=$eleccion
-            Nombre
+            Letra1
         else
             Error "RecD"
         fi
@@ -142,10 +144,10 @@ do
         elif [ "$TD" <> "" ]; then
             #Verificamos que no sea camino absoluto y de que exista
             TD=$(echo "$TD" | sed 's/^\///') 
-            TD="/home/$USER/$TD"
+            TD="$HOME/$TD"
         fi
     else
-        TD=$(cat "Direccion.txt")
+        TD=$(cat "$HOME/Direccion.txt")
     fi
 done
 if [ -d "$TD" ] ; then

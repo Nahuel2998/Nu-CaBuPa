@@ -45,21 +45,24 @@ Nombre(){
 }
 #Recorre el directorio
 RecD () {
-    printf "%s\n" "Donde desea crearlo?" "(Ruta relativa o nombre. Ingrese un . para crearlo en el directorio $TD)"
+    printf "%s\n" "Donde desea crearlo?" "(Ruta o nombre. Ingrese un . para crearlo en el directorio $TD)"
     tree "$TD"
     read nombre
+    DirTemp="$TD"
     if [ "$nombre" = "." ]; then
-        DirTemp="$TD"
         Nombre
     	exit
-    elif [[ "$nombre" =~ "/" ]]; then
+    elif [[ "${nombre:0:1}" = "/" ]]; then
         Buscar "wholename"
+    elif [[ "$nombre" =~ "/" ]]; then
+       nombre="$DirTemp/$nombre"
+       Buscar "wholename"
     else
         Buscar "name"
     fi
 }
 Buscar(){
-    Direcciones=($(find "$TD" -type d -$1 "$nombre" | sed "s/ /'/g"))
+    Direcciones=($(find "$DirTemp" -type d -$1 "$nombre" | sed "s/ /'/g"))
     Result=${#Direcciones[@]}
     if [ $Result -eq 1 ] && [ "${Direcciones[0]}" != "''" ]; then
         DirTemp=$(echo ${Direcciones[$i]} | sed "s/'/ /g")

@@ -306,5 +306,7 @@ Public Class frmPrograma
         BFechaRango(cbBMA.Checked)
     End Sub
 
-
+    Private Sub btnInsertarC_Click(sender As Object, e As EventArgs) Handles btnInsertarC.Click
+        ISQL("")
+    End Sub
 End Class
