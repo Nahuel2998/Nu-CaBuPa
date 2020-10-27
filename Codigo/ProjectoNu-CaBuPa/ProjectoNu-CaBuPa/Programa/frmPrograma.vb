@@ -213,10 +213,10 @@ Public Class frmPrograma
     End Sub
 
     Private Sub btnAnadir_Click(sender As Object, e As EventArgs) Handles btnAnadir.Click
-        Dim datos() As String = {Format(dtpAP.Value().Date, "yyyy-MM-dd"), txtHI.Text, txtHF.Text, programaID}
+        Dim datos() As String = {Format(dtpAP.Value().Date, "yyyy-MM-dd"), txtHI.Value, txtHF.Value, programaID}
         PrepararInsert("fechaprograma", datos, 0)
-        txtHI.Clear()
-        txtHF.Clear()
+        txtHI.Value = Now
+        txtHF.value = Now
         BFecha(cbFMes.Checked)
     End Sub
 
@@ -305,4 +305,6 @@ Public Class frmPrograma
     Private Sub mcFecha_DateSelected(sender As Object, e As DateRangeEventArgs) Handles mcFecha.DateSelected
         BFechaRango(cbBMA.Checked)
     End Sub
+
+
 End Class

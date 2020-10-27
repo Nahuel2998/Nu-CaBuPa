@@ -22,23 +22,23 @@ Partial Class frmTandas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtHI = New System.Windows.Forms.MaskedTextBox()
-        Me.txtHF = New System.Windows.Forms.MaskedTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Tandas = New System.Windows.Forms.Label()
         Me.dgvTandas = New System.Windows.Forms.DataGridView()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descrip = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnsalirt = New System.Windows.Forms.Button()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descrip = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.dtpHI = New System.Windows.Forms.DateTimePicker()
+        Me.dtpHF = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvTandas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,9 +64,9 @@ Partial Class frmTandas
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.dtpHF)
+        Me.GroupBox2.Controls.Add(Me.dtpHI)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.txtHI)
-        Me.GroupBox2.Controls.Add(Me.txtHF)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(8, 196)
@@ -87,28 +87,6 @@ Partial Class frmTandas
         Me.Label1.Size = New System.Drawing.Size(93, 18)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Hora inicio:"
-        '
-        'txtHI
-        '
-        Me.txtHI.Location = New System.Drawing.Point(25, 50)
-        Me.txtHI.Mask = "00:00"
-        Me.txtHI.Name = "txtHI"
-        Me.txtHI.Size = New System.Drawing.Size(90, 27)
-        Me.txtHI.TabIndex = 8
-        Me.txtHI.Text = "0000"
-        Me.txtHI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtHI.ValidatingType = GetType(Date)
-        '
-        'txtHF
-        '
-        Me.txtHF.Location = New System.Drawing.Point(171, 50)
-        Me.txtHF.Mask = "00:00"
-        Me.txtHF.Name = "txtHF"
-        Me.txtHF.Size = New System.Drawing.Size(90, 27)
-        Me.txtHF.TabIndex = 9
-        Me.txtHF.Text = "0000"
-        Me.txtHF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtHF.ValidatingType = GetType(Date)
         '
         'Label2
         '
@@ -139,8 +117,8 @@ Partial Class frmTandas
         Me.dgvTandas.AllowUserToDeleteRows = False
         Me.dgvTandas.AllowUserToResizeColumns = False
         Me.dgvTandas.AllowUserToResizeRows = False
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
-        Me.dgvTandas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        Me.dgvTandas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvTandas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -155,12 +133,38 @@ Partial Class frmTandas
         Me.dgvTandas.ReadOnly = True
         Me.dgvTandas.RowHeadersVisible = False
         Me.dgvTandas.RowHeadersWidth = 51
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
-        Me.dgvTandas.RowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        Me.dgvTandas.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvTandas.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvTandas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvTandas.Size = New System.Drawing.Size(278, 147)
         Me.dgvTandas.TabIndex = 7
+        '
+        'Nombre
+        '
+        Me.Nombre.HeaderText = "Hora Inicio"
+        Me.Nombre.MaxInputLength = 5
+        Me.Nombre.MinimumWidth = 6
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
+        '
+        'descrip
+        '
+        Me.descrip.HeaderText = "Hora Finalización"
+        Me.descrip.MaxInputLength = 5
+        Me.descrip.MinimumWidth = 6
+        Me.descrip.Name = "descrip"
+        Me.descrip.ReadOnly = True
+        '
+        'TEliminar
+        '
+        Me.TEliminar.FillWeight = 75.0!
+        Me.TEliminar.HeaderText = "Eliminar"
+        Me.TEliminar.MinimumWidth = 6
+        Me.TEliminar.Name = "TEliminar"
+        Me.TEliminar.ReadOnly = True
+        Me.TEliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.TEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'TableLayoutPanel1
         '
@@ -229,31 +233,25 @@ Partial Class frmTandas
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
-        'Nombre
+        'dtpHI
         '
-        Me.Nombre.HeaderText = "Hora Inicio"
-        Me.Nombre.MaxInputLength = 5
-        Me.Nombre.MinimumWidth = 6
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
+        Me.dtpHI.CustomFormat = "hh:mm"
+        Me.dtpHI.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpHI.Location = New System.Drawing.Point(22, 48)
+        Me.dtpHI.Name = "dtpHI"
+        Me.dtpHI.ShowUpDown = True
+        Me.dtpHI.Size = New System.Drawing.Size(89, 27)
+        Me.dtpHI.TabIndex = 12
         '
-        'descrip
+        'dtpHF
         '
-        Me.descrip.HeaderText = "Hora Finalización"
-        Me.descrip.MaxInputLength = 5
-        Me.descrip.MinimumWidth = 6
-        Me.descrip.Name = "descrip"
-        Me.descrip.ReadOnly = True
-        '
-        'TEliminar
-        '
-        Me.TEliminar.FillWeight = 75.0!
-        Me.TEliminar.HeaderText = "Eliminar"
-        Me.TEliminar.MinimumWidth = 6
-        Me.TEliminar.Name = "TEliminar"
-        Me.TEliminar.ReadOnly = True
-        Me.TEliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.TEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.dtpHF.CustomFormat = "hh:mm"
+        Me.dtpHF.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpHF.Location = New System.Drawing.Point(171, 48)
+        Me.dtpHF.Name = "dtpHF"
+        Me.dtpHF.ShowUpDown = True
+        Me.dtpHF.Size = New System.Drawing.Size(89, 27)
+        Me.dtpHF.TabIndex = 13
         '
         'frmTandas
         '
@@ -284,10 +282,10 @@ Partial Class frmTandas
     Friend WithEvents btnsalirt As Button
     Friend WithEvents dgvTandas As DataGridView
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents txtHI As MaskedTextBox
-    Friend WithEvents txtHF As MaskedTextBox
     Friend WithEvents Tandas As Label
     Friend WithEvents Nombre As DataGridViewTextBoxColumn
     Friend WithEvents descrip As DataGridViewTextBoxColumn
     Friend WithEvents TEliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents dtpHF As DateTimePicker
+    Friend WithEvents dtpHI As DateTimePicker
 End Class

@@ -602,3 +602,46 @@
 26/10/2020 21:54:37 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 26/10/2020 21:55:06 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 26/10/2020 21:55:52 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 6:16:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 6:16:45 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+27/10/2020 6:16:50 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+27/10/2020 6:16:56 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+27/10/2020 6:17:02 DESKTOP-SDVEG3U ' Insert into aparecepubli ( id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion ) values ('2','05:30:00','2020-10-27','2020-10-27' ) 
+27/10/2020 6:17:04 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio='05:30:00' and fecha_inicio >= '2020-10-15' and fecha_finalizacion <= '2020-10-27' 
+27/10/2020 6:17:04 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio='05:30:00' and fecha_inicio >= '2020-10-15' and fecha_finalizacion <= '2020-10-27' 
+27/10/2020 6:17:04 DESKTOP-SDVEG3U ' Insert into aparecepubli ( id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion ) values ('2','05:30:00','2020-10-15','2020-10-27' ) 
+27/10/2020 6:17:09 DESKTOP-SDVEG3U ' Insert into aparecepubli ( id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion ) values ('2','05:30:00','2020-10-28','2020-10-28' ) 
+27/10/2020 6:17:12 DESKTOP-SDVEG3U ' Insert into aparecepubli ( id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion ) values ('2','05:30:00','2020-10-29','2020-10-29' ) 
+27/10/2020 6:17:15 DESKTOP-SDVEG3U ' Insert into aparecepubli ( id_publicidad, hora_inicio, fecha_inicio, fecha_finalizacion ) values ('2','05:30:00','2020-10-30','2020-10-30' ) 
+27/10/2020 6:17:19 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+27/10/2020 6:17:40 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='5:0:00' and Hora_fin<='14:0:00' 
+27/10/2020 6:17:40 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='5:0:00' and Hora_fin<='14:0:00' 
+27/10/2020 6:17:40 DESKTOP-SDVEG3U ' Insert into tanda ( hora_inicio, hora_fin ) values ('5:0:00','14:0:00' ) 
+27/10/2020 6:17:40 DESKTOP-SDVEG3U ' update aparecepubli set hora_inicio='5:0:00 WHERE Hora_Inicio>='5:0:00' and Hora_fin<='14:0:00' 
+27/10/2020 6:21:47 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 6:22:08 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='5:0:00' and Hora_fin<='15:0:00' 
+27/10/2020 6:22:08 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='5:0:00' and Hora_fin<='15:0:00' 
+27/10/2020 6:22:08 DESKTOP-SDVEG3U ' Insert into tanda ( hora_inicio, hora_fin ) values ('5:0:00','15:0:00' ) 
+27/10/2020 6:22:08 DESKTOP-SDVEG3U ' update aparecepubli set hora_inicio='5:0:00 WHERE Hora_Inicio>='5:0:00' and Hora_fin<='15:0:00' 
+27/10/2020 6:24:16 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 6:24:38 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='05:00:00' and Hora_fin<='15:34:00' 
+27/10/2020 6:24:38 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='05:00:00' and Hora_fin<='15:34:00' 
+27/10/2020 6:24:38 DESKTOP-SDVEG3U ' Insert into tanda ( hora_inicio, hora_fin ) values ('05:00:00','15:34:00' ) 
+27/10/2020 6:24:38 DESKTOP-SDVEG3U ' update aparecepubli set hora_inicio='05:00:00 WHERE Hora_Inicio>='05:00:00' and Hora_fin<='15:34:00' 
+27/10/2020 6:26:03 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 6:26:33 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='00:00:00' and Hora_fin<='00:00:00' 
+27/10/2020 6:26:33 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='00:00:00' and Hora_fin<='00:00:00' 
+27/10/2020 6:26:33 DESKTOP-SDVEG3U ' Insert into tanda ( hora_inicio, hora_fin ) values ('00:00:00','00:00:00' ) 
+27/10/2020 6:26:33 DESKTOP-SDVEG3U ' update aparecepubli set hora_inicio='00:00:00' WHERE Hora_Inicio>='00:00:00' and Hora_fin<='00:00:00' 
+27/10/2020 6:35:08 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 6:41:48 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 6:42:03 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='06:41:55' and Hora_fin<='08:49:55' 
+27/10/2020 6:42:03 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='06:41:55' and Hora_fin<='08:49:55' 
+27/10/2020 6:42:03 DESKTOP-SDVEG3U ' Insert IGNORE into tanda ( hora_inicio, hora_fin ) values ('06:41:55','08:49:55' ) 
+27/10/2020 6:42:03 DESKTOP-SDVEG3U ' update aparecepubli set hora_inicio='06:41:55' WHERE Hora_Inicio>='06:41:55' and Hora_fin<='08:49:55' 
+27/10/2020 6:42:22 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('00:00' ) 
+27/10/2020 6:42:22 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('00:00' ) 
+27/10/2020 6:42:24 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='06:41:55' and Hora_fin<='08:49:55' 
+27/10/2020 6:42:24 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='06:41:55' and Hora_fin<='08:49:55' 
+27/10/2020 6:42:24 DESKTOP-SDVEG3U ' Insert IGNORE into tanda ( hora_inicio, hora_fin ) values ('06:41:55','08:49:55' ) 
+27/10/2020 6:42:24 DESKTOP-SDVEG3U ' update aparecepubli set hora_inicio='06:41:55' WHERE Hora_Inicio>='06:41:55' and Hora_fin<='08:49:55' 

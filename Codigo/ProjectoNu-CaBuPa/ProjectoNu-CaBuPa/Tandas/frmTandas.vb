@@ -11,10 +11,11 @@
     End Sub
     Private Sub FechasMax(Optional ingresar As Boolean = True)
         Try
-            hora1 = Convert.ToDateTime(txtHI.Text)
-            hora2 = Convert.ToDateTime(txtHF.Text)
+            hora1 = dtpHI.Value
+            hora2 = dtpHF.Value
         Catch e As Exception
             MessageBox.Show("Error del formato de fecha")
+            Exit Sub
         End Try
 
         If (dgvTandas.Rows.Count > 0) Then
@@ -28,15 +29,20 @@
                     hora2 = horaN2
                 End If
             Next
-            BSQL("tanda", String.Format("Hora_Inicio='{0}'", MysqlHM(hora1)))
+            BSQL("tanda", String.Format("Hora_Inicio>='{0}' and Hora_fin<='{1}'", MysqlHM(hora1), MysqlHM(hora2)))
         End If
         If (ingresar) Then
             ISQL("tanda", "hora_inicio, hora_fin", String.Format("'{0}','{1}'", MysqlHM(hora1), MysqlHM(hora2)))
+            USQL("aparecepubli", String.Format("hora_inicio='{0}'", MysqlHM(hora1)), String.Format("Hora_Inicio='{0}'", MysqlHM(hora1)))
         End If
         BuscarT()
     End Sub
+    Private Function ceros(ByVal h As String) As String
+        Dim hor As String = If(h.Length = 1, "0" + h, h)
+        Return hor
+    End Function
     Private Function MysqlHM(ByVal hora As DateTime) As String
-        Dim h As String = String.Format("{0}:{1}:00", Hour(hora), Minute(hora))
+        Dim h As String = String.Format("{0}:{1}:{2}", ceros(Hour(hora).ToString), ceros(Minute(hora)), ceros(Second(hora)))
         Return h
     End Function
 
@@ -63,5 +69,11 @@
 
     Private Sub dgvTandas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTandas.CellClick
         ClickCheck(sender, e.ColumnIndex)
+    End Sub
+
+    Private Sub dtpHI_ValueChanged(sender As Object, e As EventArgs) Handles dtpHI.ValueChanged
+        If (dtpHF.Value < dtpHI.Value) Then
+            dtpHF.MinDate = dtpHI.Value
+        End If
     End Sub
 End Class

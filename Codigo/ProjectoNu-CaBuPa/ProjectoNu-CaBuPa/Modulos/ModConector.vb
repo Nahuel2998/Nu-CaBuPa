@@ -172,9 +172,9 @@ Module ModConector
     Public Sub ISQL(ByVal nTabla As String, ByVal Column As String, ByVal Data As String, Optional comilla As Boolean = True)
 
         If (comilla) Then
-            ESQL("Insert into " + nTabla + " ( " + Column + " ) values (" + Data + " )")
+            ESQL("Insert IGNORE into " + nTabla + " ( " + Column + " ) values (" + Data + " )")
         Else
-            ESQL("Insert into " + nTabla + " ( " + Column + " ) values " + Data)
+            ESQL("Insert IGNORE into " + nTabla + " ( " + Column + " ) values " + Data)
         End If
 
     End Sub
