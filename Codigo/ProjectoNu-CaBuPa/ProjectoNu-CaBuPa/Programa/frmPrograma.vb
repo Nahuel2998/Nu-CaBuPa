@@ -2,7 +2,7 @@
 
 Public Class frmPrograma
     Dim programaID As Integer
-    Public editando As Boolean = False
+    Private editando As Boolean = False
     Dim datos() As String
     Dim datosI() As String
     Private TBusca As DataTable
@@ -11,6 +11,9 @@ Public Class frmPrograma
     Private dt_FechaPrograma As DataTable
     Private dt_publicidades As DataTable
     Private TBuscada As String
+    Private EditandoCuota As Boolean = False
+    Private dt_Cuotas As DataTable
+    Private CuotaId
 
     Public Sub New(ByVal pid As Integer)
         InitializeComponent()
@@ -161,16 +164,10 @@ Public Class frmPrograma
     End Sub
 
     Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
-        Dim Columna As String = ""
-        Dim Condicion As String = "true"
-        Dim Tablas As String = ""
         TBuscada = ""
         Select Case tcP.SelectedIndex
             Case 1
-                TBuscada = "Funcionario"
-                Columna = "fun.id_funcionario, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
-                Tablas = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
-                Tablas = String.Format(Tablas, programaID)
+                BuscarFuncionario()
             Case 2
                 PubliDeFecha(dt_publicidades, dgvProgramaPubli, programaID, Now.Date)
             Case 4
@@ -178,9 +175,6 @@ Public Class frmPrograma
             Case 5
                 BFechaRango(cbBMA.Checked)
         End Select
-        If Not (bwCargador.IsBusy) And TBuscada <> "" Then
-            bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
-        End If
     End Sub
     Public Sub BFecha(Optional ByVal mes As Boolean = False)
         Dim Columna As String = "hora_inicio as 'Inicio', hora_fin as 'Final'"
@@ -193,10 +187,10 @@ Public Class frmPrograma
         End If
     End Sub
     Private Sub BuscarFuncionario()
-        Dim Condicion As String = "true"
+        Dim Condicion As String = String.Format("ifnull(fecha_finalizacion,curdate()){0}curdate()", If(cbRP.Checked, "<", ">="))
         TBuscada = ""
         TBuscada = "Funcionario"
-        Dim Columna As String = "fun.id_funcionario, fun.ID_TrabajaComo , fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
+        Dim Columna As String = "fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
         Dim Tablas As String = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
         Tablas = String.Format(Tablas, programaID)
         If Not (bwCargador.IsBusy) And TBuscada <> "" Then
@@ -248,7 +242,7 @@ Public Class frmPrograma
             End If
         End If
     End Sub
-    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProgramaPubli.CellClick, dgvPrograma.CellClick, dgvFechaPrograma.CellClick
+    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProgramaPubli.CellClick, dgvPrograma.CellClick, dgvFechaPrograma.CellClick, dgvFuncionarios.CellClick, dgvVerCuota.CellClick
         ClickCheck(sender, e.ColumnIndex)
     End Sub
     Private Sub dtpFPubli_ValueChanged(sender As Object, e As EventArgs) Handles dtpFPubli.ValueChanged
@@ -325,20 +319,39 @@ Public Class frmPrograma
 
     End Sub
 
-    Private Sub btnAnadirF_Click(sender As Object, e As EventArgs) Handles btnTerminarF.Click
-
-    End Sub
 
     Private Sub btnBorrarF_Click(sender As Object, e As EventArgs) Handles btnBorrarF.Click
         If Not IsNothing(dt_funcionario) Then
             If (dt_funcionario.Rows.Count > 0) Then
-                Dim Id() As String = ObtenerCheck(dt_funcionario, dgvFuncionarios, 0)
+                Dim Id() As String = ObtenerCheck(dt_funcionario, dgvFuncionarios, 1)
+                Dim Id1() As String = ObtenerCheck(dt_funcionario, dgvFuncionarios, 4)
                 If Not Id.Length = 0 Then
-                    Dim formDelete As New frmConfirmarBorrado(FUNTRABAJA, {programaID}, False, Id)
+                    Dim formDelete As New frmConfirmarBorrado(FUNTRABAJA, {programaID}, False, Id, Id1)
                     formDelete.ShowDialog(Me)
                     BuscarFuncionario()
                 End If
             End If
         End If
+    End Sub
+
+    Private Sub cbRP_CheckedChanged(sender As Object, e As EventArgs) Handles cbRP.CheckedChanged
+        BuscarFuncionario()
+    End Sub
+
+    Private Sub btnTerminarF_Click(sender As Object, e As EventArgs) Handles btnTerminarF.Click
+        If Not IsNothing(dt_funcionario) Then
+            If (dt_funcionario.Rows.Count > 0) Then
+                Dim Id() As String = ObtenerCheck(dt_funcionario, dgvFuncionarios, 1)
+                Dim Id1() As String = ObtenerCheck(dt_funcionario, dgvFuncionarios, 4)
+                If Not Id.Length = 0 Then
+                    USQL("funtrabaja", "fecha_finalizacion=curdate()", String.Format("id_programa='{0}'", programaID) + " and " + CreadorCondicion("ID_TrabajaComo", Id) + " and " + CreadorCondicion("fecha_inicio", Id1, True))
+                    BuscarFuncionario()
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub btnBorrarC_Click(sender As Object, e As EventArgs) Handles btnBorrarC.Click
+        EditandoCuota
     End Sub
 End Class

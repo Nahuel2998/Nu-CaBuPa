@@ -32,7 +32,7 @@
             Case VIDEO
                 PrepararDelete("Video", "id_video", id)
             Case FUNTRABAJA
-                BSQL("funtrabaja", String.Format("id_programa='{0}'", id(0)) + " and " + CreadorCondicion("id_funcionario", id2) + " and " + CreadorCondicion("ID_TrabajaComo", id3) + " and " + CreadorCondicion("fecha_finalizacion", id4))
+                BSQL("funtrabaja", String.Format("id_programa='{0}'", id(0)) + " and " + CreadorCondicion("ID_TrabajaComo", id2) + " and " + CreadorCondicion("fecha_inicio", id3, True))
             Case EMPRESA
                 PrepararDelete("Empresa", "id_empresa", id)
             Case PROGRAMAS

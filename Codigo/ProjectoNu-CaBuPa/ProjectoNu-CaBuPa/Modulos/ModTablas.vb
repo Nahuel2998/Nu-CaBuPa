@@ -112,7 +112,7 @@ Module ModTablas
                     Dgv.Columns.RemoveAt(k)
                 Next
             End If
-            If ((Tabla.Columns.Count = Tamanos.Length And C) Or (Not C And Tabla.Columns.Count = Tamanos.Length - 1)) Then
+            If ((Tabla.Columns.Count - col.Length + 1 = Tamanos.Length And C) Or (Not C And Tabla.Columns.Count = Tamanos.Length - 1)) Then
                 Dgv.Columns.Add(Columna)
             End If
             For i As Integer = 0 To Dgv.Columns.Count - 1
