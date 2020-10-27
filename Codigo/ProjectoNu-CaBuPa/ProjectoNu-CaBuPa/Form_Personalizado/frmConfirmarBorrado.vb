@@ -3,13 +3,15 @@
     Dim id() As String
     Dim id2() As String
     Dim id3() As String
+    Dim id4() As String
     Dim c As Boolean = False
-    Public Sub New(ByVal t As Byte, ByVal identificador() As String, ByVal Cerrar As Boolean, Optional ByVal Eid() As String = Nothing, Optional ByVal Fid() As String = Nothing)
+    Public Sub New(ByVal t As Byte, ByVal identificador() As String, ByVal Cerrar As Boolean, Optional ByVal Eid() As String = Nothing, Optional ByVal Fid() As String = Nothing, Optional ByVal Gid() As String = Nothing)
         InitializeComponent()
         tabla = t
         id = identificador
         id2 = Eid
         id3 = Fid
+        id4 = Gid
         c = Cerrar
     End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -29,6 +31,8 @@
                 PrepararDelete("pmustrapubli", "id_publicidad", id)
             Case VIDEO
                 PrepararDelete("Video", "id_video", id)
+            Case FUNTRABAJA
+                BSQL("funtrabaja", String.Format("id_programa='{0}'", id(0)) + " and " + CreadorCondicion("id_funcionario", id2) + " and " + CreadorCondicion("ID_TrabajaComo", id3) + " and " + CreadorCondicion("fecha_finalizacion", id4))
             Case EMPRESA
                 PrepararDelete("Empresa", "id_empresa", id)
             Case PROGRAMAS

@@ -168,7 +168,7 @@ Public Class frmPrograma
         Select Case tcP.SelectedIndex
             Case 1
                 TBuscada = "Funcionario"
-                Columna = "fun.id_funcionario, fun.Nombre, Telefono, Mail as EMail, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
+                Columna = "fun.id_funcionario, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
                 Tablas = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
                 Tablas = String.Format(Tablas, programaID)
             Case 2
@@ -192,12 +192,23 @@ Public Class frmPrograma
             bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
         End If
     End Sub
+    Private Sub BuscarFuncionario()
+        Dim Condicion As String = "true"
+        TBuscada = ""
+        TBuscada = "Funcionario"
+        Dim Columna As String = "fun.id_funcionario, fun.ID_TrabajaComo , fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
+        Dim Tablas As String = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
+        Tablas = String.Format(Tablas, programaID)
+        If Not (bwCargador.IsBusy) And TBuscada <> "" Then
+            bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
+        End If
+    End Sub
 
     Private Sub bwCargador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwCargador.RunWorkerCompleted
         Select Case TBuscada
             Case "Funcionario"
                 dt_funcionario = TBusca
-                ActualizarTablaC(dt_funcionario, dgvFuncionarios)
+                ActualizarTablaC(dt_funcionario, dgvFuncionarios, True, {1, 0})
             Case "fechaprograma"
                 dt_fechas = TBusca
                 ActualizarTablaC(dt_fechas, dgvPrograma, False)
@@ -314,7 +325,20 @@ Public Class frmPrograma
 
     End Sub
 
-    Private Sub btnAnadirF_Click(sender As Object, e As EventArgs) Handles btnAnadirF.Click
+    Private Sub btnAnadirF_Click(sender As Object, e As EventArgs) Handles btnTerminarF.Click
 
+    End Sub
+
+    Private Sub btnBorrarF_Click(sender As Object, e As EventArgs) Handles btnBorrarF.Click
+        If Not IsNothing(dt_funcionario) Then
+            If (dt_funcionario.Rows.Count > 0) Then
+                Dim Id() As String = ObtenerCheck(dt_funcionario, dgvFuncionarios, 0)
+                If Not Id.Length = 0 Then
+                    Dim formDelete As New frmConfirmarBorrado(FUNTRABAJA, {programaID}, False, Id)
+                    formDelete.ShowDialog(Me)
+                    BuscarFuncionario()
+                End If
+            End If
+        End If
     End Sub
 End Class

@@ -24,6 +24,7 @@ Module ModTablas
     Public Const FECHAPROGRAMA As Byte = 7
     Public Const PUBLICIDADPROGRAMA As Byte = 8
     Public Const TANDASHORAS As Byte = 9
+    Public Const FUNTRABAJA As Byte = 10
     Public Function ValidarEmail(ByVal s As String) As Boolean
         Return Regex.IsMatch(s, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
     End Function
@@ -89,7 +90,10 @@ Module ModTablas
         Return ID
     End Function
 
-    Public Sub ActualizarTablaC(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional C As Boolean = True)
+    Public Sub ActualizarTablaC(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional C As Boolean = True, Optional ByVal col() As Byte = Nothing)
+        If (IsNothing(col)) Then
+            col = {0}
+        End If
         If Not IsNothing(Tabla) Then
             'MessageBox.Show("Carga")
             Dim Tamanos(Dgv.Columns.Count() - 1) As Single
@@ -104,7 +108,9 @@ Module ModTablas
             Dgv.Columns.Clear()
             Dgv.DataSource = Tabla
             If (Tabla.Columns.Count > 1 And C) Then
-                Dgv.Columns.RemoveAt(0)
+                For Each k As Byte In col
+                    Dgv.Columns.RemoveAt(k)
+                Next
             End If
             If ((Tabla.Columns.Count = Tamanos.Length And C) Or (Not C And Tabla.Columns.Count = Tamanos.Length - 1)) Then
                 Dgv.Columns.Add(Columna)

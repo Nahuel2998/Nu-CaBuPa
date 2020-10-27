@@ -97,6 +97,8 @@ Public Class frmPublicidad
             btnSalir.Select()
         Else
             tcP.TabPages.RemoveAt(1)
+            tcP.TabPages.RemoveAt(2)
+            tcP.TabPages.RemoveAt(3)
             btnEditar.Text = "Insertar"
             btnBorrar.Visible = False
             Activar()

@@ -224,7 +224,7 @@ Partial Class frmPublicidad
         '
         'btnBorrar
         '
-        Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnBorrar.ForeColor = System.Drawing.Color.Black
         Me.btnBorrar.Location = New System.Drawing.Point(156, 340)
         Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
