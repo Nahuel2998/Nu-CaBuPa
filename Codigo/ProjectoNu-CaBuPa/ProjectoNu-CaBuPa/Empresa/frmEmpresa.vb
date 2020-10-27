@@ -2,7 +2,7 @@
 Public Class frmEmpresa
     Dim empresaID As Integer
     Dim editando As Boolean = False ' Controla si se esta en modo de edicion o no
-    Dim tmpDatos(2) As String
+    Dim tmpDatos(3) As String
     Dim cambio As Boolean = False    ' Controla si han habido cambios desde el ultimo modo de edicion
     Dim dt_Publicidad As New DataTable
     Dim datos() As String
@@ -92,15 +92,15 @@ Public Class frmEmpresa
             btnSEditar.Text = "Ingresar"
             btnBorrar.Visible = False
             btnSSalir.Text = "Salir"
-            Text = "Ingresar empresa"
+            Text = "Ingresar Empresa"
         ElseIf editando Then
             btnSEditar.Text = "Editar"
             btnSSalir.Text = "Salir"
-            Text = "Empresa"
+            Text = "Ver Empresa"
         Else
             btnSSalir.Text = "Cancelar"
             btnSEditar.Text = "Guardar"
-            Text = "Editar empresa"
+            Text = "Editar Empresa"
         End If
         editando = Not editando
 

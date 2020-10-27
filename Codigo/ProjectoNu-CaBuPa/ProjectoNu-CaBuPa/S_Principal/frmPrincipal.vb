@@ -541,4 +541,17 @@ Public Class frmPrincipal
         Dim formTanda As New frmTandas()
         formTanda.ShowDialog()
     End Sub
+
+    Private Sub dgvFuncionarioBF_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionarioBF.CellDoubleClick
+        Dim i() As String = CargarID(dt_BFuncionario, dgvFuncionarioBF, {0, 1, 2, 3})
+        If (i.Length <> 1) Then
+            Dim formFuncrio As New frmFuncionario(i)
+            AddHandler formFuncrio.FormClosed, AddressOf FormFuncrio_FormClosed
+            formFuncrio.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub FormFuncrio_FormClosed(sender As Object, e As FormClosedEventArgs)
+        btnBuscarBF.PerformClick()
+    End Sub
 End Class
