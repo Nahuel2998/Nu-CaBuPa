@@ -76,4 +76,5 @@
             dtpHF.MinDate = dtpHI.Value
         End If
     End Sub
+
 End Class

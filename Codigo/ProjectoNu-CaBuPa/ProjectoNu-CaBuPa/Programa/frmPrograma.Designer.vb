@@ -44,13 +44,6 @@ Partial Class frmPrograma
         Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GBFuncionario = New System.Windows.Forms.GroupBox()
         Me.dgvFuncionarios = New System.Windows.Forms.DataGridView()
-        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FTelefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FMail = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FFuncion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FFechaI = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FFechaF = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GBDEscripcion = New System.Windows.Forms.GroupBox()
         Me.txtDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -64,7 +57,6 @@ Partial Class frmPrograma
         Me.chbTieneFecha = New System.Windows.Forms.CheckBox()
         Me.txtTapar = New System.Windows.Forms.RichTextBox()
         Me.chbIncluir = New System.Windows.Forms.CheckBox()
-        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.RichTextBox()
@@ -95,13 +87,11 @@ Partial Class frmPrograma
         Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnBorrarSelect = New System.Windows.Forms.Button()
-        Me.dtpFPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.tcP = New System.Windows.Forms.TabControl()
         Me.tbDatos = New System.Windows.Forms.TabPage()
         Me.tbFuncionarios = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnBorrarF = New System.Windows.Forms.Button()
-        Me.btnAnadirF = New System.Windows.Forms.Button()
         Me.tbBublicidades = New System.Windows.Forms.TabPage()
         Me.tbAlquiler = New System.Windows.Forms.TabPage()
         Me.tbFechas = New System.Windows.Forms.TabPage()
@@ -114,7 +104,6 @@ Partial Class frmPrograma
         Me.dtpAP = New System.Windows.Forms.DateTimePicker()
         Me.gbBuscar = New System.Windows.Forms.GroupBox()
         Me.cbFMes = New System.Windows.Forms.CheckBox()
-        Me.dtpBP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -135,6 +124,15 @@ Partial Class frmPrograma
         Me.mcFecha = New System.Windows.Forms.MonthCalendar()
         Me.bwDatos = New System.ComponentModel.BackgroundWorker()
         Me.bwCargador = New System.ComponentModel.BackgroundWorker()
+        Me.btnAnadirF = New System.Windows.Forms.Button()
+        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFuncion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFechaI = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFechaF = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.dtpFecha = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtpFPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtpBP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.GBFuncionario.SuspendLayout()
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBDEscripcion.SuspendLayout()
@@ -210,7 +208,7 @@ Partial Class frmPrograma
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvFuncionarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FNombre, Me.FTelefono, Me.FMail, Me.FFuncion, Me.FFechaI, Me.FFechaF, Me.FEliminar})
+        Me.dgvFuncionarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FNombre, Me.FFuncion, Me.FFechaI, Me.FFechaF, Me.FEliminar})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -219,7 +217,7 @@ Partial Class frmPrograma
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvFuncionarios.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvFuncionarios.Location = New System.Drawing.Point(8, 19)
+        Me.dgvFuncionarios.Location = New System.Drawing.Point(257, 19)
         Me.dgvFuncionarios.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvFuncionarios.MultiSelect = False
         Me.dgvFuncionarios.Name = "dgvFuncionarios"
@@ -233,57 +231,8 @@ Partial Class frmPrograma
         Me.dgvFuncionarios.RowTemplate.Height = 28
         Me.dgvFuncionarios.RowTemplate.ReadOnly = True
         Me.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvFuncionarios.Size = New System.Drawing.Size(621, 226)
+        Me.dgvFuncionarios.Size = New System.Drawing.Size(372, 226)
         Me.dgvFuncionarios.TabIndex = 1
-        '
-        'FNombre
-        '
-        Me.FNombre.HeaderText = "Nombre"
-        Me.FNombre.MinimumWidth = 8
-        Me.FNombre.Name = "FNombre"
-        Me.FNombre.ReadOnly = True
-        '
-        'FTelefono
-        '
-        Me.FTelefono.HeaderText = "Telefono"
-        Me.FTelefono.MinimumWidth = 8
-        Me.FTelefono.Name = "FTelefono"
-        Me.FTelefono.ReadOnly = True
-        '
-        'FMail
-        '
-        Me.FMail.HeaderText = "EMail"
-        Me.FMail.MinimumWidth = 6
-        Me.FMail.Name = "FMail"
-        Me.FMail.ReadOnly = True
-        '
-        'FFuncion
-        '
-        Me.FFuncion.HeaderText = "Función"
-        Me.FFuncion.MinimumWidth = 6
-        Me.FFuncion.Name = "FFuncion"
-        Me.FFuncion.ReadOnly = True
-        '
-        'FFechaI
-        '
-        Me.FFechaI.HeaderText = "Inicio de la función"
-        Me.FFechaI.MinimumWidth = 6
-        Me.FFechaI.Name = "FFechaI"
-        Me.FFechaI.ReadOnly = True
-        '
-        'FFechaF
-        '
-        Me.FFechaF.HeaderText = "Fin de la función"
-        Me.FFechaF.MinimumWidth = 6
-        Me.FFechaF.Name = "FFechaF"
-        Me.FFechaF.ReadOnly = True
-        '
-        'FEliminar
-        '
-        Me.FEliminar.HeaderText = "Eliminar"
-        Me.FEliminar.MinimumWidth = 6
-        Me.FEliminar.Name = "FEliminar"
-        Me.FEliminar.ReadOnly = True
         '
         'GBDEscripcion
         '
@@ -488,17 +437,6 @@ Partial Class frmPrograma
         Me.chbIncluir.TabIndex = 4
         Me.chbIncluir.Text = "Incluir"
         Me.chbIncluir.UseVisualStyleBackColor = True
-        '
-        'dtpFecha
-        '
-        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
-        Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(326, 27)
-        Me.dtpFecha.TabIndex = 3
         '
         'Label1
         '
@@ -921,17 +859,6 @@ Partial Class frmPrograma
         Me.btnBorrarSelect.Text = "Borrar Seleccionados"
         Me.btnBorrarSelect.UseVisualStyleBackColor = True
         '
-        'dtpFPubli
-        '
-        Me.dtpFPubli.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtpFPubli.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFPubli.Location = New System.Drawing.Point(13, 28)
-        Me.dtpFPubli.Margin = New System.Windows.Forms.Padding(2)
-        Me.dtpFPubli.Name = "dtpFPubli"
-        Me.dtpFPubli.Size = New System.Drawing.Size(616, 22)
-        Me.dtpFPubli.TabIndex = 4
-        '
         'tcP
         '
         Me.tcP.Controls.Add(Me.tbDatos)
@@ -990,27 +917,14 @@ Partial Class frmPrograma
         Me.btnBorrarF.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnBorrarF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBorrarF.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnBorrarF.Location = New System.Drawing.Point(318, 4)
+        Me.btnBorrarF.Location = New System.Drawing.Point(256, 4)
         Me.btnBorrarF.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBorrarF.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnBorrarF.Name = "btnBorrarF"
-        Me.btnBorrarF.Size = New System.Drawing.Size(313, 42)
+        Me.btnBorrarF.Size = New System.Drawing.Size(375, 42)
         Me.btnBorrarF.TabIndex = 2
         Me.btnBorrarF.Text = "Borrar"
         Me.btnBorrarF.UseVisualStyleBackColor = True
-        '
-        'btnAnadirF
-        '
-        Me.btnAnadirF.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnAnadirF.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnAnadirF.Location = New System.Drawing.Point(4, 4)
-        Me.btnAnadirF.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnAnadirF.MinimumSize = New System.Drawing.Size(120, 15)
-        Me.btnAnadirF.Name = "btnAnadirF"
-        Me.btnAnadirF.Size = New System.Drawing.Size(306, 42)
-        Me.btnAnadirF.TabIndex = 1
-        Me.btnAnadirF.Text = "Añadir"
-        Me.btnAnadirF.UseVisualStyleBackColor = True
         '
         'tbBublicidades
         '
@@ -1134,17 +1048,6 @@ Partial Class frmPrograma
         Me.cbFMes.TabIndex = 28876929
         Me.cbFMes.Text = "Buscar mes"
         Me.cbFMes.UseVisualStyleBackColor = True
-        '
-        'dtpBP
-        '
-        Me.dtpBP.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtpBP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpBP.Location = New System.Drawing.Point(5, 20)
-        Me.dtpBP.Margin = New System.Windows.Forms.Padding(2)
-        Me.dtpBP.Name = "dtpBP"
-        Me.dtpBP.Size = New System.Drawing.Size(202, 22)
-        Me.dtpBP.TabIndex = 28876928
         '
         'dgvPrograma
         '
@@ -1420,6 +1323,87 @@ Partial Class frmPrograma
         'bwCargador
         '
         '
+        'btnAnadirF
+        '
+        Me.btnAnadirF.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnAnadirF.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnAnadirF.Location = New System.Drawing.Point(4, 4)
+        Me.btnAnadirF.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAnadirF.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnAnadirF.Name = "btnAnadirF"
+        Me.btnAnadirF.Size = New System.Drawing.Size(244, 42)
+        Me.btnAnadirF.TabIndex = 1
+        Me.btnAnadirF.Text = "Añadir"
+        Me.btnAnadirF.UseVisualStyleBackColor = True
+        '
+        'FNombre
+        '
+        Me.FNombre.HeaderText = "Nombre"
+        Me.FNombre.MinimumWidth = 8
+        Me.FNombre.Name = "FNombre"
+        Me.FNombre.ReadOnly = True
+        '
+        'FFuncion
+        '
+        Me.FFuncion.HeaderText = "Función"
+        Me.FFuncion.MinimumWidth = 6
+        Me.FFuncion.Name = "FFuncion"
+        Me.FFuncion.ReadOnly = True
+        '
+        'FFechaI
+        '
+        Me.FFechaI.HeaderText = "Inicio de la función"
+        Me.FFechaI.MinimumWidth = 6
+        Me.FFechaI.Name = "FFechaI"
+        Me.FFechaI.ReadOnly = True
+        '
+        'FFechaF
+        '
+        Me.FFechaF.HeaderText = "Fin de la función"
+        Me.FFechaF.MinimumWidth = 6
+        Me.FFechaF.Name = "FFechaF"
+        Me.FFechaF.ReadOnly = True
+        '
+        'FEliminar
+        '
+        Me.FEliminar.HeaderText = "Eliminar"
+        Me.FEliminar.MinimumWidth = 6
+        Me.FEliminar.Name = "FEliminar"
+        Me.FEliminar.ReadOnly = True
+        '
+        'dtpFecha
+        '
+        Me.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFecha.Enabled = False
+        Me.dtpFecha.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.dtpFecha.Location = New System.Drawing.Point(1, 1)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(326, 27)
+        Me.dtpFecha.TabIndex = 3
+        '
+        'dtpFPubli
+        '
+        Me.dtpFPubli.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpFPubli.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFPubli.Location = New System.Drawing.Point(13, 28)
+        Me.dtpFPubli.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtpFPubli.Name = "dtpFPubli"
+        Me.dtpFPubli.Size = New System.Drawing.Size(616, 22)
+        Me.dtpFPubli.TabIndex = 4
+        '
+        'dtpBP
+        '
+        Me.dtpBP.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpBP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpBP.Location = New System.Drawing.Point(5, 20)
+        Me.dtpBP.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtpBP.Name = "dtpBP"
+        Me.dtpBP.Size = New System.Drawing.Size(202, 22)
+        Me.dtpBP.TabIndex = 28876928
+        '
         'frmPrograma
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1429,6 +1413,7 @@ Partial Class frmPrograma
         Me.Controls.Add(Me.tcP)
         Me.ForeColor = System.Drawing.Color.White
         Me.Name = "frmPrograma"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Programa"
         Me.GBFuncionario.ResumeLayout(False)
         CType(Me.dgvFuncionarios, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1500,7 +1485,6 @@ Partial Class frmPrograma
     Friend WithEvents tbFechas As TabPage
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents btnBorrarF As Button
-    Friend WithEvents btnAnadirF As Button
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents btnBorrarC As Button
     Friend WithEvents btnInsertarC As Button
@@ -1511,13 +1495,6 @@ Partial Class frmPrograma
     Friend WithEvents chbTieneFecha As CheckBox
     Friend WithEvents bwDatos As System.ComponentModel.BackgroundWorker
     Friend WithEvents bwCargador As System.ComponentModel.BackgroundWorker
-    Friend WithEvents FNombre As DataGridViewTextBoxColumn
-    Friend WithEvents FTelefono As DataGridViewTextBoxColumn
-    Friend WithEvents FMail As DataGridViewTextBoxColumn
-    Friend WithEvents FFuncion As DataGridViewTextBoxColumn
-    Friend WithEvents FFechaI As DataGridViewTextBoxColumn
-    Friend WithEvents FFechaF As DataGridViewTextBoxColumn
-    Friend WithEvents FEliminar As DataGridViewCheckBoxColumn
     Friend WithEvents gbBuscar As GroupBox
     Friend WithEvents dtpBP As ColorDateTimePicker
     Friend WithEvents GroupBox3 As GroupBox
@@ -1563,4 +1540,10 @@ Partial Class frmPrograma
     Friend WithEvents PFechaPago As DataGridViewTextBoxColumn
     Friend WithEvents ProgramaPrecio As DataGridViewTextBoxColumn
     Friend WithEvents CEliminar As DataGridViewTextBoxColumn
+    Friend WithEvents FNombre As DataGridViewTextBoxColumn
+    Friend WithEvents FFuncion As DataGridViewTextBoxColumn
+    Friend WithEvents FFechaI As DataGridViewTextBoxColumn
+    Friend WithEvents FFechaF As DataGridViewTextBoxColumn
+    Friend WithEvents FEliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents btnAnadirF As Button
 End Class

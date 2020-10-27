@@ -645,3 +645,34 @@
 27/10/2020 6:42:24 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='06:41:55' and Hora_fin<='08:49:55' 
 27/10/2020 6:42:24 DESKTOP-SDVEG3U ' Insert IGNORE into tanda ( hora_inicio, hora_fin ) values ('06:41:55','08:49:55' ) 
 27/10/2020 6:42:24 DESKTOP-SDVEG3U ' update aparecepubli set hora_inicio='06:41:55' WHERE Hora_Inicio>='06:41:55' and Hora_fin<='08:49:55' 
+27/10/2020 9:29:22 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 9:30:34 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('01:00' ,'06:41' ) 
+27/10/2020 9:30:34 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('01:00' ,'06:41' ) 
+27/10/2020 9:30:39 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('05:00' ) 
+27/10/2020 9:30:39 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio in ('05:00' ) 
+27/10/2020 9:30:43 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+27/10/2020 9:30:46 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+27/10/2020 10:37:45 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 10:37:57 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+27/10/2020 10:38:10 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+27/10/2020 10:38:13 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+27/10/2020 10:38:35 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 10:38:41 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+27/10/2020 10:38:52 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio in ('01:00:00' ,'05:00:00' ) and fecha_inicio in ('13/11/2020 0:00:00' ,'09/10/2020 0:00:00' ) and fecha_finalizacion in ('20/11/2020 0:00:00' ,'28/10/2020 0:00:00' ) 
+27/10/2020 10:38:52 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio in ('01:00:00' ,'05:00:00' ) and fecha_inicio in ('13/11/2020 0:00:00' ,'09/10/2020 0:00:00' ) and fecha_finalizacion in ('20/11/2020 0:00:00' ,'28/10/2020 0:00:00' ) 
+27/10/2020 10:39:02 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+27/10/2020 10:40:07 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 10:40:13 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+27/10/2020 10:40:24 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio in ('05:00:00' ,'05:30:00' ,'05:30:00' ,'05:30:00' ) and fecha_inicio in ('01/10/2020 0:00:00' ,'15/10/2020 0:00:00' ,'28/10/2020 0:00:00' ,'29/10/2020 0:00:00' ) and fecha_finalizacion in ('28/10/2020 0:00:00' ,'27/10/2020 0:00:00' ,'28/10/2020 0:00:00' ,'29/10/2020 0:00:00' ) 
+27/10/2020 10:40:24 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio in ('05:00:00' ,'05:30:00' ,'05:30:00' ,'05:30:00' ) and fecha_inicio in ('01/10/2020 0:00:00' ,'15/10/2020 0:00:00' ,'28/10/2020 0:00:00' ,'29/10/2020 0:00:00' ) and fecha_finalizacion in ('28/10/2020 0:00:00' ,'27/10/2020 0:00:00' ,'28/10/2020 0:00:00' ,'29/10/2020 0:00:00' ) 
+27/10/2020 10:40:30 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio in ('05:00:00' ,'05:00:00' ) and fecha_inicio in ('09/10/2020 0:00:00' ,'01/10/2020 0:00:00' ) and fecha_finalizacion in ('28/10/2020 0:00:00' ,'28/10/2020 0:00:00' ) 
+27/10/2020 10:40:30 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio in ('05:00:00' ,'05:00:00' ) and fecha_inicio in ('09/10/2020 0:00:00' ,'01/10/2020 0:00:00' ) and fecha_finalizacion in ('28/10/2020 0:00:00' ,'28/10/2020 0:00:00' ) 
+27/10/2020 10:40:35 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio in ('05:00:00' ,'05:00:00' ) and fecha_inicio in ('09/10/2020 0:00:00' ,'01/10/2020 0:00:00' ) and fecha_finalizacion in ('28/10/2020 0:00:00' ,'28/10/2020 0:00:00' ) 
+27/10/2020 10:40:35 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio in ('05:00:00' ,'05:00:00' ) and fecha_inicio in ('09/10/2020 0:00:00' ,'01/10/2020 0:00:00' ) and fecha_finalizacion in ('28/10/2020 0:00:00' ,'28/10/2020 0:00:00' ) 
+27/10/2020 10:40:40 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+27/10/2020 10:42:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 10:42:31 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+27/10/2020 10:42:37 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio in ('05:00:00' ,'05:00:00' ) and fecha_inicio in ('2020-10-09' ,'2020-10-01' ) and fecha_finalizacion in ('2020-10-28' ,'2020-10-28' ) 
+27/10/2020 10:42:37 DESKTOP-SDVEG3U ' DELETE FROM aparecepubli WHERE id_publicidad='2' and Hora_Inicio in ('05:00:00' ,'05:00:00' ) and fecha_inicio in ('2020-10-09' ,'2020-10-01' ) and fecha_finalizacion in ('2020-10-28' ,'2020-10-28' ) 
+27/10/2020 10:42:39 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+27/10/2020 10:42:45 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 

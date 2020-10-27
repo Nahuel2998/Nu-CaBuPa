@@ -26,6 +26,8 @@ Partial Class frmPublicidad
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbNotas = New System.Windows.Forms.GroupBox()
         Me.txtTema = New System.Windows.Forms.RichTextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -50,6 +52,13 @@ Partial Class frmPublicidad
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dtpFF = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dtpFI = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.btnBPubli = New System.Windows.Forms.Button()
+        Me.dgvTE = New System.Windows.Forms.DataGridView()
+        Me.Hora = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.tbProgramas = New System.Windows.Forms.TabPage()
         Me.dgvProgramaP = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -75,6 +84,8 @@ Partial Class frmPublicidad
         Me.tbDatos.SuspendLayout()
         Me.tbTandas.SuspendLayout()
         CType(Me.dgvFechas, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.dgvTE, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbProgramas.SuspendLayout()
         CType(Me.dgvProgramaP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -187,6 +198,7 @@ Partial Class frmPublicidad
         '
         Me.tcP.Controls.Add(Me.tbDatos)
         Me.tcP.Controls.Add(Me.tbTandas)
+        Me.tcP.Controls.Add(Me.TabPage1)
         Me.tcP.Controls.Add(Me.tbProgramas)
         Me.tcP.Location = New System.Drawing.Point(12, 12)
         Me.tcP.Name = "tcP"
@@ -379,6 +391,90 @@ Partial Class frmPublicidad
         Me.dtpFI.Size = New System.Drawing.Size(200, 27)
         Me.dtpFI.TabIndex = 2
         '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.TabPage1.Controls.Add(Me.btnBPubli)
+        Me.TabPage1.Controls.Add(Me.dgvTE)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Size = New System.Drawing.Size(418, 372)
+        Me.TabPage1.TabIndex = 3
+        Me.TabPage1.Text = "Tandas Eliminadas"
+        '
+        'btnBPubli
+        '
+        Me.btnBPubli.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBPubli.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnBPubli.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnBPubli.ForeColor = System.Drawing.Color.Black
+        Me.btnBPubli.Location = New System.Drawing.Point(7, 313)
+        Me.btnBPubli.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBPubli.Name = "btnBPubli"
+        Me.btnBPubli.Size = New System.Drawing.Size(404, 55)
+        Me.btnBPubli.TabIndex = 9
+        Me.btnBPubli.Text = "Borrar"
+        Me.btnBPubli.UseVisualStyleBackColor = False
+        '
+        'dgvTE
+        '
+        Me.dgvTE.AllowUserToAddRows = False
+        Me.dgvTE.AllowUserToDeleteRows = False
+        Me.dgvTE.AllowUserToResizeColumns = False
+        Me.dgvTE.AllowUserToResizeRows = False
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        Me.dgvTE.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvTE.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvTE.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvTE.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.dgvTE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTE.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Hora, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.TEliminar})
+        Me.dgvTE.Location = New System.Drawing.Point(7, 4)
+        Me.dgvTE.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvTE.MultiSelect = False
+        Me.dgvTE.Name = "dgvTE"
+        Me.dgvTE.ReadOnly = True
+        Me.dgvTE.RowHeadersVisible = False
+        Me.dgvTE.RowHeadersWidth = 51
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        Me.dgvTE.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvTE.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
+        Me.dgvTE.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvTE.Size = New System.Drawing.Size(404, 301)
+        Me.dgvTE.TabIndex = 7
+        '
+        'Hora
+        '
+        Me.Hora.HeaderText = "Hora de tanda"
+        Me.Hora.MinimumWidth = 6
+        Me.Hora.Name = "Hora"
+        Me.Hora.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Fecha Inicio"
+        Me.DataGridViewTextBoxColumn3.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Fecha Finalización"
+        Me.DataGridViewTextBoxColumn4.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'TEliminar
+        '
+        Me.TEliminar.HeaderText = "Eliminar"
+        Me.TEliminar.MinimumWidth = 6
+        Me.TEliminar.Name = "TEliminar"
+        Me.TEliminar.ReadOnly = True
+        '
         'tbProgramas
         '
         Me.tbProgramas.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
@@ -408,8 +504,8 @@ Partial Class frmPublicidad
         Me.dgvProgramaP.AllowUserToDeleteRows = False
         Me.dgvProgramaP.AllowUserToResizeColumns = False
         Me.dgvProgramaP.AllowUserToResizeRows = False
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        Me.dgvProgramaP.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
+        Me.dgvProgramaP.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvProgramaP.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -424,8 +520,8 @@ Partial Class frmPublicidad
         Me.dgvProgramaP.ReadOnly = True
         Me.dgvProgramaP.RowHeadersVisible = False
         Me.dgvProgramaP.RowHeadersWidth = 51
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        Me.dgvProgramaP.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        Me.dgvProgramaP.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvProgramaP.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvProgramaP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProgramaP.Size = New System.Drawing.Size(404, 109)
@@ -587,6 +683,7 @@ Partial Class frmPublicidad
         Me.ForeColor = System.Drawing.Color.White
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "frmPublicidad"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Publicidad"
         Me.gbNotas.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
@@ -596,6 +693,8 @@ Partial Class frmPublicidad
         Me.tbTandas.ResumeLayout(False)
         Me.tbTandas.PerformLayout()
         CType(Me.dgvFechas, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        CType(Me.dgvTE, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbProgramas.ResumeLayout(False)
         Me.tbProgramas.PerformLayout()
         CType(Me.dgvProgramaP, System.ComponentModel.ISupportInitialize).EndInit()
@@ -644,4 +743,11 @@ Partial Class frmPublicidad
     Friend WithEvents dgvProgramaP As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents dgvTE As DataGridView
+    Friend WithEvents btnBPubli As Button
+    Friend WithEvents Hora As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents TEliminar As DataGridViewCheckBoxColumn
 End Class

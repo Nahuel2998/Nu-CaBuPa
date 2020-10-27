@@ -22,10 +22,12 @@ Partial Class frmTandas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.dtpHF = New System.Windows.Forms.DateTimePicker()
+        Me.dtpHI = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Tandas = New System.Windows.Forms.Label()
@@ -37,8 +39,6 @@ Partial Class frmTandas
         Me.btnsalirt = New System.Windows.Forms.Button()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
-        Me.dtpHI = New System.Windows.Forms.DateTimePicker()
-        Me.dtpHF = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvTandas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,6 +75,26 @@ Partial Class frmTandas
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Ingreso"
+        '
+        'dtpHF
+        '
+        Me.dtpHF.CustomFormat = "hh:mm"
+        Me.dtpHF.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpHF.Location = New System.Drawing.Point(171, 48)
+        Me.dtpHF.Name = "dtpHF"
+        Me.dtpHF.ShowUpDown = True
+        Me.dtpHF.Size = New System.Drawing.Size(89, 27)
+        Me.dtpHF.TabIndex = 13
+        '
+        'dtpHI
+        '
+        Me.dtpHI.CustomFormat = "hh:mm"
+        Me.dtpHI.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpHI.Location = New System.Drawing.Point(22, 48)
+        Me.dtpHI.Name = "dtpHI"
+        Me.dtpHI.ShowUpDown = True
+        Me.dtpHI.Size = New System.Drawing.Size(89, 27)
+        Me.dtpHI.TabIndex = 12
         '
         'Label1
         '
@@ -117,8 +137,8 @@ Partial Class frmTandas
         Me.dgvTandas.AllowUserToDeleteRows = False
         Me.dgvTandas.AllowUserToResizeColumns = False
         Me.dgvTandas.AllowUserToResizeRows = False
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        Me.dgvTandas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.dgvTandas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTandas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -133,8 +153,8 @@ Partial Class frmTandas
         Me.dgvTandas.ReadOnly = True
         Me.dgvTandas.RowHeadersVisible = False
         Me.dgvTandas.RowHeadersWidth = 51
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        Me.dgvTandas.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        Me.dgvTandas.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvTandas.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvTandas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvTandas.Size = New System.Drawing.Size(278, 147)
@@ -233,26 +253,6 @@ Partial Class frmTandas
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
-        'dtpHI
-        '
-        Me.dtpHI.CustomFormat = "hh:mm"
-        Me.dtpHI.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpHI.Location = New System.Drawing.Point(22, 48)
-        Me.dtpHI.Name = "dtpHI"
-        Me.dtpHI.ShowUpDown = True
-        Me.dtpHI.Size = New System.Drawing.Size(89, 27)
-        Me.dtpHI.TabIndex = 12
-        '
-        'dtpHF
-        '
-        Me.dtpHF.CustomFormat = "hh:mm"
-        Me.dtpHF.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpHF.Location = New System.Drawing.Point(171, 48)
-        Me.dtpHF.Name = "dtpHF"
-        Me.dtpHF.ShowUpDown = True
-        Me.dtpHF.Size = New System.Drawing.Size(89, 27)
-        Me.dtpHF.TabIndex = 13
-        '
         'frmTandas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -262,6 +262,7 @@ Partial Class frmTandas
         Me.Controls.Add(Me.GroupBox1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmTandas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Tanda"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

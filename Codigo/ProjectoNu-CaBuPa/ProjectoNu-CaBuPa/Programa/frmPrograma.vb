@@ -307,6 +307,14 @@ Public Class frmPrograma
     End Sub
 
     Private Sub btnInsertarC_Click(sender As Object, e As EventArgs) Handles btnInsertarC.Click
-        ISQL("")
+
+    End Sub
+
+    Private Sub GBFuncionario_Enter(sender As Object, e As EventArgs) Handles GBFuncionario.Enter
+
+    End Sub
+
+    Private Sub btnAnadirF_Click(sender As Object, e As EventArgs) Handles btnAnadirF.Click
+
     End Sub
 End Class

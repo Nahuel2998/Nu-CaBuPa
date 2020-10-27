@@ -9,6 +9,7 @@ Public Class frmPublicidad
     Private dt_FProgramas As DataTable
     Private TBuscada As String = ""
     Private dt_fechas As DataTable
+    Private dt_fechasA As DataTable
     Dim position() As String
     Dim positionTanda() As String
     Dim positionPrograma() As String
@@ -161,9 +162,9 @@ Public Class frmPublicidad
     End Sub
 
     Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
-        If (tcP.SelectedIndex() = 1) Then
+        If (tcP.SelectedIndex() = 1 Or tcP.SelectedIndex() = 2) Then
             If Not (bwDatos.IsBusy) Then
-                bwDatos.RunWorkerAsync(1)
+                bwDatos.RunWorkerAsync(tcP.SelectedIndex())
             End If
         End If
     End Sub
@@ -175,21 +176,21 @@ Public Class frmPublicidad
                 dt_tandasCon = DevolverTabla(PSQL("Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas'", "Tanda", "True"))
                 ModLog.Guardar(PSQL("Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas'", "Tanda", "True"))
             Case 2
-                TBuscada = "Programa"
-                Dim condicion = "false"
-                If Not String.IsNullOrWhiteSpace(txtNombreP.Text) Then
-                    condicion = String.Format("Nombre_Programa like '%{0}%'", txtNombreP.Text)
-                End If
-                dt_ProgramasP = DevolverTabla(PSQL("id_programa, Nombre_Programa", "programa", condicion))
+                TBuscada = "Fecha"
+                Dim condicion = "true"
+                dt_fechasA = DevolverTabla(PSQL("distinct a.hora_inicio as 'Hora de tanda', fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalización'", "aparecepubli a left join tanda t on t.hora_inicio = null", condicion))
         End Select
+    End Sub
+    Private Sub ATAntigua()
+        ActualizarTablaC(dt_fechasA, dgvTE, False)
     End Sub
 
     Private Sub bwDatos_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwDatos.RunWorkerCompleted
         Select Case TBuscada
             Case "Tanda"
                 CargarComboTandas()
-            Case "Programa"
-                CargarComboPrograma()
+            Case "Fecha"
+                ATAntigua()
         End Select
     End Sub
 
@@ -302,5 +303,24 @@ Public Class frmPublicidad
 
     Private Sub btnBorrarP_Click(sender As Object, e As EventArgs) Handles btnBorrarP.Click
         FechasMaxP(False)
+    End Sub
+
+    Private Sub btnBPubli_Click(sender As Object, e As EventArgs) Handles btnBPubli.Click
+        If Not IsNothing(dt_fechasA) Then
+            If (dt_fechasA.Rows.Count > 0) Then
+                Dim Id() As String = ObtenerCheck(dt_fechasA, dgvTE, 0)
+                Dim Id2() As String = ObtenerCheck(dt_fechasA, dgvTE, 1)
+                Dim Id3() As String = ObtenerCheck(dt_fechasA, dgvTE, 2)
+                If Not Id.Length = 0 Then
+                    BSQL("aparecepubli", String.Format("id_publicidad='{0}'", publicidadID) + " and " + CreadorCondicion("Hora_Inicio", Id) + " and " + CreadorCondicion("fecha_inicio", Id2, True) + " and " + CreadorCondicion("fecha_finalizacion", Id3, True))
+                    If Not (bwDatos.IsBusy) Then
+                        bwDatos.RunWorkerAsync(2)
+                    End If
+                End If
+            End If
+        End If
+    End Sub
+    Private Sub dgvTE_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTE.CellClick
+        ClickCheck(sender, e.ColumnIndex)
     End Sub
 End Class
