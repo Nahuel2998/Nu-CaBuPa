@@ -25,6 +25,7 @@ Module ModTablas
     Public Const PUBLICIDADPROGRAMA As Byte = 8
     Public Const TANDASHORAS As Byte = 9
     Public Const FUNTRABAJA As Byte = 10
+    Public Const CUOTA As Byte = 11
     Public Function ValidarEmail(ByVal s As String) As Boolean
         Return Regex.IsMatch(s, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
     End Function

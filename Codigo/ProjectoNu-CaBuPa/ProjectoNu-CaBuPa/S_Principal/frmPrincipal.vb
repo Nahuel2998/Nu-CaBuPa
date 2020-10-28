@@ -554,4 +554,8 @@ Public Class frmPrincipal
     Private Sub FormFuncrio_FormClosed(sender As Object, e As FormClosedEventArgs)
         btnBuscarBF.PerformClick()
     End Sub
+
+    Private Sub dgvBProgramas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBProgramas.CellContentClick
+
+    End Sub
 End Class

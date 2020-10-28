@@ -11,9 +11,8 @@ Public Class frmPrograma
     Private dt_FechaPrograma As DataTable
     Private dt_publicidades As DataTable
     Private TBuscada As String
-    Private EditandoCuota As Boolean = False
     Private dt_Cuotas As DataTable
-    Private CuotaId
+    Private CuotaId As Integer = -1
 
     Public Sub New(ByVal pid As Integer)
         InitializeComponent()
@@ -170,6 +169,8 @@ Public Class frmPrograma
                 BuscarFuncionario()
             Case 2
                 PubliDeFecha(dt_publicidades, dgvProgramaPubli, programaID, Now.Date)
+            Case 3
+                BuscarCuota()
             Case 4
                 BFecha(cbFMes.Checked)
             Case 5
@@ -188,10 +189,19 @@ Public Class frmPrograma
     End Sub
     Private Sub BuscarFuncionario()
         Dim Condicion As String = String.Format("ifnull(fecha_finalizacion,curdate()){0}curdate()", If(cbRP.Checked, "<", ">="))
-        TBuscada = ""
         TBuscada = "Funcionario"
         Dim Columna As String = "fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
         Dim Tablas As String = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
+        Tablas = String.Format(Tablas, programaID)
+        If Not (bwCargador.IsBusy) And TBuscada <> "" Then
+            bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
+        End If
+    End Sub
+    Private Sub BuscarCuota()
+        Dim Condicion As String = String.Format("id_programa='{0}' and Fecha_Pago is{1}null and year(fecha_emision)={2}", programaID, If(cbPagados.Checked, " not ", ""), Year(dtpYearCuota.Value))
+        TBuscada = "CuotaPrograma"
+        Dim Columna As String = "id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor'"
+        Dim Tablas As String = "programacuota"
         Tablas = String.Format(Tablas, programaID)
         If Not (bwCargador.IsBusy) And TBuscada <> "" Then
             bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
@@ -210,8 +220,8 @@ Public Class frmPrograma
                 dt_FechaPrograma = TBusca
                 ActualizarTablaC(dt_FechaPrograma, dgvFechaPrograma, False)
             Case "CuotaPrograma"
-                dt_BPrograma = TBusca
-                ' ActualizarTablaC(dt_BPrograma, dgvBProgramas)
+                dt_Cuotas = TBusca
+                ActualizarTablaC(dt_Cuotas, dgvVerCuota, True)
         End Select
         TBusca = Nothing
         TBuscada = ""
@@ -311,13 +321,7 @@ Public Class frmPrograma
         BFechaRango(cbBMA.Checked)
     End Sub
 
-    Private Sub btnInsertarC_Click(sender As Object, e As EventArgs) Handles btnInsertarC.Click
 
-    End Sub
-
-    Private Sub GBFuncionario_Enter(sender As Object, e As EventArgs) Handles GBFuncionario.Enter
-
-    End Sub
 
 
     Private Sub btnBorrarF_Click(sender As Object, e As EventArgs) Handles btnBorrarF.Click
@@ -351,7 +355,74 @@ Public Class frmPrograma
         End If
     End Sub
 
+
+    Private Sub cbPagados_CheckedChanged(sender As Object, e As EventArgs) Handles cbPagados.CheckedChanged
+        BuscarCuota()
+    End Sub
+
+    Private Sub VaciarCuota()
+        dtpFE.Value = Now
+        dtpFP.Value = Now
+        cbP.Checked = False
+        nudValor.Value = 0
+    End Sub
+    Private Sub CambiarICuota()
+        If (CuotaId = -1) Then
+            btnBorrarC.Text = "Borrar"
+            btnInsertarC.Text = "Añadir"
+            gbAlquiler.Text = "Ingreso"
+            VaciarCuota()
+        Else
+            btnBorrarC.Text = "Cancelar"
+            btnInsertarC.Text = "Actualizar"
+            gbAlquiler.Text = "Edición"
+        End If
+    End Sub
+
+    Private Sub btnInsertarC_Click(sender As Object, e As EventArgs) Handles btnInsertarC.Click
+        If (CuotaId = -1) Then
+            ISQL("programacuota", "id_programa,fecha_emision, fecha_pago,precio", String.Format("'{0}','{1}',{2},'{3}'", programaID, Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value))
+            VaciarCuota()
+            BuscarCuota()
+        Else
+            USQL("programacuota", String.Format("fecha_emision='{0}', fecha_pago={1},precio='{2}'", Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value), String.Format("id_programa_cuota='{0}'", CuotaId))
+            CuotaId = -1
+            CambiarICuota()
+            BuscarCuota()
+        End If
+    End Sub
+
     Private Sub btnBorrarC_Click(sender As Object, e As EventArgs) Handles btnBorrarC.Click
-        EditandoCuota
+        If (CuotaId = -1) Then
+            If Not IsNothing(dt_Cuotas) Then
+                If (dt_Cuotas.Rows.Count > 0) Then
+                    Dim RId() As String = ObtenerCheck(dt_Cuotas, dgvVerCuota, 0)
+                    If Not RId.Length = 0 Then
+                        Dim formDelete As New frmConfirmarBorrado(CUOTA, {programaID}, False, RId)
+                        formDelete.ShowDialog(Me)
+                        BuscarCuota()
+                    End If
+                End If
+            End If
+        Else
+            CuotaId = -1
+            CambiarICuota()
+        End If
+    End Sub
+
+    Private Sub dgvVerCuota_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVerCuota.CellDoubleClick
+        Dim i() As String = CargarID(dt_Cuotas, dgvVerCuota, {0, 1, 2, 3})
+        If (i.Length <> 0) Then
+            CuotaId = i(0)
+            dtpFE.Value = i(1)
+            dtpFP.Value = If(i(2) = "", Now, i(2))
+            cbP.Checked = If(i(2) = "", False, True)
+            nudValor.Value = i(3)
+        End If
+        CambiarICuota()
+    End Sub
+
+    Private Sub dtpYearCuota_ValueChanged(sender As Object, e As EventArgs) Handles dtpYearCuota.ValueChanged
+        BuscarCuota()
     End Sub
 End Class

@@ -137,7 +137,7 @@ Foreign KEY (ID_Programa) references Programa(`ID_Programa`),
   Foreign KEY (ID_Publicidad) references Publicidad(`ID_Publicidad`)
 );
 CREATE TABLE `programacuota` (
-  `ID_Programa_Cuota` int(6) unsigned NOT NULL,
+  `ID_Programa_Cuota` int(6) unsigned NOT NULL auto_increment,
   `ID_Programa` int(6) unsigned NOT NULL,
 `Fecha_Pago` date DEFAULT NULL,
 `Precio` decimal(5,2) unsigned NOT NULL,

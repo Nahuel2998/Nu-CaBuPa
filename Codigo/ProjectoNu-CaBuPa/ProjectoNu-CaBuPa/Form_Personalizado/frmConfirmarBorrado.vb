@@ -45,6 +45,8 @@
                 BSQL("pmuestrapubli", CreadorCondicion("id_publicidad", id) + " and " + CreadorCondicion("id_programa", id2) + " and " + CreadorCondicion("Fecha_inicio", id3, True))
             Case TANDASHORAS
                 BSQL("tanda", CreadorCondicion("Hora_Inicio", id))
+            Case CUOTA
+                BSQL("programacuota", CreadorCondicion("id_programa_cuota", id))
         End Select
         If (c) Then
             Owner.Close()

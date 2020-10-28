@@ -69,14 +69,14 @@ Partial Class frmPrograma
         Me.txtNombre = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.gbAlquiler = New System.Windows.Forms.GroupBox()
-        Me.nudPrecio = New System.Windows.Forms.NumericUpDown()
+        Me.nudValor = New System.Windows.Forms.NumericUpDown()
         Me.cbP = New System.Windows.Forms.CheckBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dtpFP = New System.Windows.Forms.DateTimePicker()
         Me.dtpFE = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpYearCuota = New System.Windows.Forms.DateTimePicker()
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnBorrarC = New System.Windows.Forms.Button()
         Me.btnInsertarC = New System.Windows.Forms.Button()
@@ -84,8 +84,8 @@ Partial Class frmPrograma
         Me.dgvVerCuota = New System.Windows.Forms.DataGridView()
         Me.PFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PFechaPago = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProgramaPrecio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CEliminar = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProgramaValor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GBPubli = New System.Windows.Forms.GroupBox()
         Me.dgvProgramaPubli = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -144,7 +144,7 @@ Partial Class frmPrograma
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.gbAlquiler.SuspendLayout()
-        CType(Me.nudPrecio, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudValor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel6.SuspendLayout()
         CType(Me.dgvVerCuota, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBPubli.SuspendLayout()
@@ -544,7 +544,7 @@ Partial Class frmPrograma
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.GroupBox1.Controls.Add(Me.gbAlquiler)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.dtpYearCuota)
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel6)
         Me.GroupBox1.Controls.Add(Me.cbPagados)
         Me.GroupBox1.Controls.Add(Me.dgvVerCuota)
@@ -561,7 +561,7 @@ Partial Class frmPrograma
         '
         'gbAlquiler
         '
-        Me.gbAlquiler.Controls.Add(Me.nudPrecio)
+        Me.gbAlquiler.Controls.Add(Me.nudValor)
         Me.gbAlquiler.Controls.Add(Me.cbP)
         Me.gbAlquiler.Controls.Add(Me.Label8)
         Me.gbAlquiler.Controls.Add(Me.Label7)
@@ -575,17 +575,18 @@ Partial Class frmPrograma
         Me.gbAlquiler.TabStop = False
         Me.gbAlquiler.Text = "Ingreso"
         '
-        'nudPrecio
+        'nudValor
         '
-        Me.nudPrecio.Location = New System.Drawing.Point(37, 176)
-        Me.nudPrecio.Name = "nudPrecio"
-        Me.nudPrecio.Size = New System.Drawing.Size(120, 27)
-        Me.nudPrecio.TabIndex = 28876934
+        Me.nudValor.DecimalPlaces = 2
+        Me.nudValor.Location = New System.Drawing.Point(9, 176)
+        Me.nudValor.Name = "nudValor"
+        Me.nudValor.Size = New System.Drawing.Size(128, 27)
+        Me.nudValor.TabIndex = 28876934
         '
         'cbP
         '
         Me.cbP.AutoSize = True
-        Me.cbP.Location = New System.Drawing.Point(160, 116)
+        Me.cbP.Location = New System.Drawing.Point(146, 116)
         Me.cbP.Name = "cbP"
         Me.cbP.Size = New System.Drawing.Size(82, 22)
         Me.cbP.TabIndex = 28876933
@@ -595,16 +596,16 @@ Partial Class frmPrograma
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(34, 152)
+        Me.Label8.Location = New System.Drawing.Point(6, 152)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(50, 18)
+        Me.Label8.Size = New System.Drawing.Size(48, 18)
         Me.Label8.TabIndex = 28876932
-        Me.Label8.Text = "Cuota"
+        Me.Label8.Text = "Valor"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(34, 90)
+        Me.Label7.Location = New System.Drawing.Point(6, 90)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(110, 18)
         Me.Label7.TabIndex = 28876931
@@ -613,7 +614,7 @@ Partial Class frmPrograma
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(34, 29)
+        Me.Label6.Location = New System.Drawing.Point(6, 29)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(131, 18)
         Me.Label6.TabIndex = 28876930
@@ -623,31 +624,31 @@ Partial Class frmPrograma
         '
         Me.dtpFP.CustomFormat = "yyyy-M-dd"
         Me.dtpFP.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFP.Location = New System.Drawing.Point(37, 116)
+        Me.dtpFP.Location = New System.Drawing.Point(9, 116)
         Me.dtpFP.Name = "dtpFP"
         Me.dtpFP.ShowUpDown = True
-        Me.dtpFP.Size = New System.Drawing.Size(117, 27)
+        Me.dtpFP.Size = New System.Drawing.Size(128, 27)
         Me.dtpFP.TabIndex = 28876929
         '
         'dtpFE
         '
         Me.dtpFE.CustomFormat = "yyyy-M-dd"
         Me.dtpFE.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFE.Location = New System.Drawing.Point(37, 50)
+        Me.dtpFE.Location = New System.Drawing.Point(9, 50)
         Me.dtpFE.Name = "dtpFE"
         Me.dtpFE.ShowUpDown = True
-        Me.dtpFE.Size = New System.Drawing.Size(117, 27)
+        Me.dtpFE.Size = New System.Drawing.Size(128, 27)
         Me.dtpFE.TabIndex = 28876928
         '
-        'DateTimePicker1
+        'dtpYearCuota
         '
-        Me.DateTimePicker1.CustomFormat = "yyyy"
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(538, 22)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.ShowUpDown = True
-        Me.DateTimePicker1.Size = New System.Drawing.Size(89, 27)
-        Me.DateTimePicker1.TabIndex = 28876927
+        Me.dtpYearCuota.CustomFormat = "yyyy"
+        Me.dtpYearCuota.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpYearCuota.Location = New System.Drawing.Point(538, 22)
+        Me.dtpYearCuota.Name = "dtpYearCuota"
+        Me.dtpYearCuota.ShowUpDown = True
+        Me.dtpYearCuota.Size = New System.Drawing.Size(89, 27)
+        Me.dtpYearCuota.TabIndex = 28876927
         '
         'TableLayoutPanel6
         '
@@ -729,7 +730,7 @@ Partial Class frmPrograma
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvVerCuota.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvVerCuota.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvVerCuota.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PFecha, Me.PFechaPago, Me.ProgramaPrecio, Me.CEliminar})
+        Me.dgvVerCuota.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PFecha, Me.PFechaPago, Me.ProgramaValor, Me.CEliminar})
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         DataGridViewCellStyle7.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
@@ -769,13 +770,13 @@ Partial Class frmPrograma
         Me.PFechaPago.Name = "PFechaPago"
         Me.PFechaPago.ReadOnly = True
         '
-        'ProgramaPrecio
+        'ProgramaValor
         '
-        Me.ProgramaPrecio.FillWeight = 60.0!
-        Me.ProgramaPrecio.HeaderText = "Precio"
-        Me.ProgramaPrecio.MinimumWidth = 6
-        Me.ProgramaPrecio.Name = "ProgramaPrecio"
-        Me.ProgramaPrecio.ReadOnly = True
+        Me.ProgramaValor.FillWeight = 60.0!
+        Me.ProgramaValor.HeaderText = "Valor"
+        Me.ProgramaValor.MinimumWidth = 6
+        Me.ProgramaValor.Name = "ProgramaValor"
+        Me.ProgramaValor.ReadOnly = True
         '
         'CEliminar
         '
@@ -784,6 +785,8 @@ Partial Class frmPrograma
         Me.CEliminar.MinimumWidth = 6
         Me.CEliminar.Name = "CEliminar"
         Me.CEliminar.ReadOnly = True
+        Me.CEliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'GBPubli
         '
@@ -1444,7 +1447,7 @@ Partial Class frmPrograma
         Me.GroupBox1.PerformLayout()
         Me.gbAlquiler.ResumeLayout(False)
         Me.gbAlquiler.PerformLayout()
-        CType(Me.nudPrecio, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudValor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel6.ResumeLayout(False)
         CType(Me.dgvVerCuota, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBPubli.ResumeLayout(False)
@@ -1543,18 +1546,14 @@ Partial Class frmPrograma
     Friend WithEvents txtHF As DateTimePicker
     Friend WithEvents txtHI As DateTimePicker
     Friend WithEvents gbAlquiler As GroupBox
-    Friend WithEvents nudPrecio As NumericUpDown
+    Friend WithEvents nudValor As NumericUpDown
     Friend WithEvents cbP As CheckBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents dtpFP As DateTimePicker
     Friend WithEvents dtpFE As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents PFecha As DataGridViewTextBoxColumn
-    Friend WithEvents PFechaPago As DataGridViewTextBoxColumn
-    Friend WithEvents ProgramaPrecio As DataGridViewTextBoxColumn
-    Friend WithEvents CEliminar As DataGridViewTextBoxColumn
+    Friend WithEvents dtpYearCuota As DateTimePicker
     Friend WithEvents btnTerminarF As Button
     Friend WithEvents FNombre As DataGridViewTextBoxColumn
     Friend WithEvents FFuncion As DataGridViewTextBoxColumn
@@ -1562,4 +1561,8 @@ Partial Class frmPrograma
     Friend WithEvents FFechaF As DataGridViewTextBoxColumn
     Friend WithEvents FSelección As DataGridViewCheckBoxColumn
     Friend WithEvents cbRP As CheckBox
+    Friend WithEvents PFecha As DataGridViewTextBoxColumn
+    Friend WithEvents PFechaPago As DataGridViewTextBoxColumn
+    Friend WithEvents ProgramaValor As DataGridViewTextBoxColumn
+    Friend WithEvents CEliminar As DataGridViewCheckBoxColumn
 End Class
