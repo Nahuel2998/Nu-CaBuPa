@@ -153,12 +153,6 @@
     <Compile Include="Publicidad\frmPublicidad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Serie\frmAsignarVideos.Designer.vb">
-      <DependentUpon>frmAsignarVideos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Serie\frmAsignarVideos.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Serie\frmSerie.designer.vb">
       <DependentUpon>frmSerie.vb</DependentUpon>
     </Compile>
@@ -169,18 +163,6 @@
       <DependentUpon>frmAcceso.vb</DependentUpon>
     </Compile>
     <Compile Include="S_Usuario\frmAcceso.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="S_Video\Multimedia - Copia.Designer.vb">
-      <DependentUpon>Multimedia - Copia.vb</DependentUpon>
-    </Compile>
-    <Compile Include="S_Video\Multimedia - Copia.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="S_Video\Multimedia.Designer.vb">
-      <DependentUpon>Multimedia.vb</DependentUpon>
-    </Compile>
-    <Compile Include="S_Video\Multimedia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="S_Usuario\frmConfiguracion.Designer.vb">
@@ -262,9 +244,6 @@
     <EmbeddedResource Include="Publicidad\frmPublicidad.resx">
       <DependentUpon>frmPublicidad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Serie\frmAsignarVideos.resx">
-      <DependentUpon>frmAsignarVideos.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Serie\frmSerie.resx">
       <DependentUpon>frmSerie.vb</DependentUpon>
     </EmbeddedResource>
@@ -273,12 +252,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="S_Usuario\frmAcceso.resx">
       <DependentUpon>frmAcceso.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="S_Video\Multimedia - Copia.resx">
-      <DependentUpon>Multimedia - Copia.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="S_Video\Multimedia.resx">
-      <DependentUpon>Multimedia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="S_Usuario\frmConfiguracion.resx">
       <DependentUpon>frmConfiguracion.vb</DependentUpon>

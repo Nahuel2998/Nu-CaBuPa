@@ -56,7 +56,7 @@ Partial Class frmPublicidad
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dtpFF = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dtpFI = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.tbTandasE = New System.Windows.Forms.TabPage()
         Me.btnBPubli = New System.Windows.Forms.Button()
         Me.dgvTE = New System.Windows.Forms.DataGridView()
         Me.Hora = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -80,26 +80,26 @@ Partial Class frmPublicidad
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dtpFFP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dtpFIP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.bwDatos = New System.ComponentModel.BackgroundWorker()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.gbAlquiler = New System.Windows.Forms.GroupBox()
-        Me.nudValor = New System.Windows.Forms.NumericUpDown()
-        Me.cbP = New System.Windows.Forms.CheckBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.dtpFP = New System.Windows.Forms.DateTimePicker()
-        Me.dtpFE = New System.Windows.Forms.DateTimePicker()
-        Me.dtpYearCuota = New System.Windows.Forms.DateTimePicker()
-        Me.btnBorrarC = New System.Windows.Forms.Button()
-        Me.btnInsertarC = New System.Windows.Forms.Button()
-        Me.cbPagados = New System.Windows.Forms.CheckBox()
+        Me.tbCuotas = New System.Windows.Forms.TabPage()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.dgvVerCuota = New System.Windows.Forms.DataGridView()
         Me.PFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PFechaPago = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProgramaValor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.cbPagados = New System.Windows.Forms.CheckBox()
+        Me.dtpYearCuota = New System.Windows.Forms.DateTimePicker()
+        Me.btnBorrarC = New System.Windows.Forms.Button()
+        Me.btnInsertarC = New System.Windows.Forms.Button()
+        Me.gbAlquiler = New System.Windows.Forms.GroupBox()
+        Me.nudValor = New System.Windows.Forms.NumericUpDown()
+        Me.cbP = New System.Windows.Forms.CheckBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.dtpFE = New System.Windows.Forms.DateTimePicker()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.dtpFP = New System.Windows.Forms.DateTimePicker()
+        Me.bwDatos = New System.ComponentModel.BackgroundWorker()
         Me.gbNotas.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -107,15 +107,15 @@ Partial Class frmPublicidad
         Me.tbDatos.SuspendLayout()
         Me.tbTandas.SuspendLayout()
         CType(Me.dgvFechas, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage1.SuspendLayout()
+        Me.tbTandasE.SuspendLayout()
         CType(Me.dgvTE, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbProgramas.SuspendLayout()
         CType(Me.dgvProgramaP, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
+        Me.tbCuotas.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.dgvVerCuota, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbAlquiler.SuspendLayout()
         CType(Me.nudValor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvVerCuota, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbNotas
@@ -226,9 +226,9 @@ Partial Class frmPublicidad
         '
         Me.tcP.Controls.Add(Me.tbDatos)
         Me.tcP.Controls.Add(Me.tbTandas)
-        Me.tcP.Controls.Add(Me.TabPage1)
+        Me.tcP.Controls.Add(Me.tbTandasE)
         Me.tcP.Controls.Add(Me.tbProgramas)
-        Me.tcP.Controls.Add(Me.TabPage2)
+        Me.tcP.Controls.Add(Me.tbCuotas)
         Me.tcP.Location = New System.Drawing.Point(12, 12)
         Me.tcP.Name = "tcP"
         Me.tcP.SelectedIndex = 0
@@ -421,16 +421,16 @@ Partial Class frmPublicidad
         Me.dtpFI.Size = New System.Drawing.Size(200, 27)
         Me.dtpFI.TabIndex = 2
         '
-        'TabPage1
+        'tbTandasE
         '
-        Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.TabPage1.Controls.Add(Me.btnBPubli)
-        Me.TabPage1.Controls.Add(Me.dgvTE)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 27)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(573, 369)
-        Me.TabPage1.TabIndex = 3
-        Me.TabPage1.Text = "Tandas Eliminadas"
+        Me.tbTandasE.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.tbTandasE.Controls.Add(Me.btnBPubli)
+        Me.tbTandasE.Controls.Add(Me.dgvTE)
+        Me.tbTandasE.Location = New System.Drawing.Point(4, 27)
+        Me.tbTandasE.Name = "tbTandasE"
+        Me.tbTandasE.Size = New System.Drawing.Size(573, 369)
+        Me.tbTandasE.TabIndex = 3
+        Me.tbTandasE.Text = "Tandas Eliminadas"
         '
         'btnBPubli
         '
@@ -699,148 +699,31 @@ Partial Class frmPublicidad
         Me.dtpFIP.Size = New System.Drawing.Size(200, 27)
         Me.dtpFIP.TabIndex = 12
         '
-        'bwDatos
+        'tbCuotas
         '
+        Me.tbCuotas.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.tbCuotas.Controls.Add(Me.GroupBox3)
+        Me.tbCuotas.Controls.Add(Me.btnBorrarC)
+        Me.tbCuotas.Controls.Add(Me.btnInsertarC)
+        Me.tbCuotas.Controls.Add(Me.gbAlquiler)
+        Me.tbCuotas.Location = New System.Drawing.Point(4, 27)
+        Me.tbCuotas.Name = "tbCuotas"
+        Me.tbCuotas.Padding = New System.Windows.Forms.Padding(3)
+        Me.tbCuotas.Size = New System.Drawing.Size(573, 369)
+        Me.tbCuotas.TabIndex = 4
+        Me.tbCuotas.Text = "Cuotas"
         '
-        'TabPage2
+        'GroupBox3
         '
-        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.TabPage2.Controls.Add(Me.GroupBox3)
-        Me.TabPage2.Controls.Add(Me.btnBorrarC)
-        Me.TabPage2.Controls.Add(Me.btnInsertarC)
-        Me.TabPage2.Controls.Add(Me.gbAlquiler)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 27)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(573, 369)
-        Me.TabPage2.TabIndex = 4
-        Me.TabPage2.Text = "Cuota"
-        '
-        'gbAlquiler
-        '
-        Me.gbAlquiler.Controls.Add(Me.nudValor)
-        Me.gbAlquiler.Controls.Add(Me.cbP)
-        Me.gbAlquiler.Controls.Add(Me.Label11)
-        Me.gbAlquiler.Controls.Add(Me.Label13)
-        Me.gbAlquiler.Controls.Add(Me.dtpFE)
-        Me.gbAlquiler.Controls.Add(Me.Label12)
-        Me.gbAlquiler.Controls.Add(Me.dtpFP)
-        Me.gbAlquiler.Location = New System.Drawing.Point(7, 216)
-        Me.gbAlquiler.Name = "gbAlquiler"
-        Me.gbAlquiler.Size = New System.Drawing.Size(429, 147)
-        Me.gbAlquiler.TabIndex = 28876933
-        Me.gbAlquiler.TabStop = False
-        Me.gbAlquiler.Text = "Ingreso"
-        '
-        'nudValor
-        '
-        Me.nudValor.DecimalPlaces = 2
-        Me.nudValor.Location = New System.Drawing.Point(307, 47)
-        Me.nudValor.Name = "nudValor"
-        Me.nudValor.Size = New System.Drawing.Size(111, 27)
-        Me.nudValor.TabIndex = 28876934
-        '
-        'cbP
-        '
-        Me.cbP.AutoSize = True
-        Me.cbP.Location = New System.Drawing.Point(319, 108)
-        Me.cbP.Name = "cbP"
-        Me.cbP.Size = New System.Drawing.Size(82, 22)
-        Me.cbP.TabIndex = 28876933
-        Me.cbP.Text = "Pagado"
-        Me.cbP.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(304, 23)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(48, 18)
-        Me.Label11.TabIndex = 28876932
-        Me.Label11.Text = "Valor"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(48, 84)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(110, 18)
-        Me.Label12.TabIndex = 28876931
-        Me.Label12.Text = "Fecha de pago"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(47, 23)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(131, 18)
-        Me.Label13.TabIndex = 28876930
-        Me.Label13.Text = "Fecha de emisión"
-        '
-        'dtpFP
-        '
-        Me.dtpFP.CustomFormat = "yyyy-M-dd"
-        Me.dtpFP.Location = New System.Drawing.Point(8, 108)
-        Me.dtpFP.Name = "dtpFP"
-        Me.dtpFP.Size = New System.Drawing.Size(294, 27)
-        Me.dtpFP.TabIndex = 28876929
-        '
-        'dtpFE
-        '
-        Me.dtpFE.CustomFormat = "yyyy-M-dd"
-        Me.dtpFE.Location = New System.Drawing.Point(7, 47)
-        Me.dtpFE.Name = "dtpFE"
-        Me.dtpFE.Size = New System.Drawing.Size(294, 27)
-        Me.dtpFE.TabIndex = 28876928
-        '
-        'dtpYearCuota
-        '
-        Me.dtpYearCuota.CustomFormat = "yyyy"
-        Me.dtpYearCuota.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpYearCuota.Location = New System.Drawing.Point(466, 21)
-        Me.dtpYearCuota.Name = "dtpYearCuota"
-        Me.dtpYearCuota.ShowUpDown = True
-        Me.dtpYearCuota.Size = New System.Drawing.Size(89, 27)
-        Me.dtpYearCuota.TabIndex = 28876932
-        '
-        'btnBorrarC
-        '
-        Me.btnBorrarC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnBorrarC.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnBorrarC.ForeColor = System.Drawing.Color.Black
-        Me.btnBorrarC.Location = New System.Drawing.Point(443, 239)
-        Me.btnBorrarC.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnBorrarC.MinimumSize = New System.Drawing.Size(120, 15)
-        Me.btnBorrarC.Name = "btnBorrarC"
-        Me.btnBorrarC.Size = New System.Drawing.Size(120, 42)
-        Me.btnBorrarC.TabIndex = 2
-        Me.btnBorrarC.Text = "Borrar"
-        Me.btnBorrarC.UseVisualStyleBackColor = True
-        '
-        'btnInsertarC
-        '
-        Me.btnInsertarC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnInsertarC.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnInsertarC.ForeColor = System.Drawing.Color.Black
-        Me.btnInsertarC.Location = New System.Drawing.Point(443, 309)
-        Me.btnInsertarC.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnInsertarC.MinimumSize = New System.Drawing.Size(120, 15)
-        Me.btnInsertarC.Name = "btnInsertarC"
-        Me.btnInsertarC.Size = New System.Drawing.Size(120, 42)
-        Me.btnInsertarC.TabIndex = 1
-        Me.btnInsertarC.Text = "Añadir"
-        Me.btnInsertarC.UseVisualStyleBackColor = True
-        '
-        'cbPagados
-        '
-        Me.cbPagados.AutoSize = True
-        Me.cbPagados.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cbPagados.Location = New System.Drawing.Point(11, 26)
-        Me.cbPagados.Name = "cbPagados"
-        Me.cbPagados.Size = New System.Drawing.Size(89, 22)
-        Me.cbPagados.TabIndex = 28876930
-        Me.cbPagados.Text = "Pagados"
-        Me.cbPagados.UseVisualStyleBackColor = True
+        Me.GroupBox3.Controls.Add(Me.dgvVerCuota)
+        Me.GroupBox3.Controls.Add(Me.cbPagados)
+        Me.GroupBox3.Controls.Add(Me.dtpYearCuota)
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(561, 204)
+        Me.GroupBox3.TabIndex = 28876934
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Busqueda"
         '
         'dgvVerCuota
         '
@@ -924,17 +807,134 @@ Partial Class frmPublicidad
         Me.CEliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.CEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
-        'GroupBox3
+        'cbPagados
         '
-        Me.GroupBox3.Controls.Add(Me.dgvVerCuota)
-        Me.GroupBox3.Controls.Add(Me.cbPagados)
-        Me.GroupBox3.Controls.Add(Me.dtpYearCuota)
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 6)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(561, 204)
-        Me.GroupBox3.TabIndex = 28876934
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Busqueda"
+        Me.cbPagados.AutoSize = True
+        Me.cbPagados.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cbPagados.Location = New System.Drawing.Point(11, 26)
+        Me.cbPagados.Name = "cbPagados"
+        Me.cbPagados.Size = New System.Drawing.Size(89, 22)
+        Me.cbPagados.TabIndex = 28876930
+        Me.cbPagados.Text = "Pagados"
+        Me.cbPagados.UseVisualStyleBackColor = True
+        '
+        'dtpYearCuota
+        '
+        Me.dtpYearCuota.CustomFormat = "yyyy"
+        Me.dtpYearCuota.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpYearCuota.Location = New System.Drawing.Point(466, 21)
+        Me.dtpYearCuota.Name = "dtpYearCuota"
+        Me.dtpYearCuota.ShowUpDown = True
+        Me.dtpYearCuota.Size = New System.Drawing.Size(89, 27)
+        Me.dtpYearCuota.TabIndex = 28876932
+        '
+        'btnBorrarC
+        '
+        Me.btnBorrarC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnBorrarC.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnBorrarC.ForeColor = System.Drawing.Color.Black
+        Me.btnBorrarC.Location = New System.Drawing.Point(443, 239)
+        Me.btnBorrarC.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBorrarC.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnBorrarC.Name = "btnBorrarC"
+        Me.btnBorrarC.Size = New System.Drawing.Size(120, 42)
+        Me.btnBorrarC.TabIndex = 2
+        Me.btnBorrarC.Text = "Borrar"
+        Me.btnBorrarC.UseVisualStyleBackColor = True
+        '
+        'btnInsertarC
+        '
+        Me.btnInsertarC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnInsertarC.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnInsertarC.ForeColor = System.Drawing.Color.Black
+        Me.btnInsertarC.Location = New System.Drawing.Point(443, 309)
+        Me.btnInsertarC.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnInsertarC.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnInsertarC.Name = "btnInsertarC"
+        Me.btnInsertarC.Size = New System.Drawing.Size(120, 42)
+        Me.btnInsertarC.TabIndex = 1
+        Me.btnInsertarC.Text = "Añadir"
+        Me.btnInsertarC.UseVisualStyleBackColor = True
+        '
+        'gbAlquiler
+        '
+        Me.gbAlquiler.Controls.Add(Me.nudValor)
+        Me.gbAlquiler.Controls.Add(Me.cbP)
+        Me.gbAlquiler.Controls.Add(Me.Label11)
+        Me.gbAlquiler.Controls.Add(Me.Label13)
+        Me.gbAlquiler.Controls.Add(Me.dtpFE)
+        Me.gbAlquiler.Controls.Add(Me.Label12)
+        Me.gbAlquiler.Controls.Add(Me.dtpFP)
+        Me.gbAlquiler.Location = New System.Drawing.Point(7, 216)
+        Me.gbAlquiler.Name = "gbAlquiler"
+        Me.gbAlquiler.Size = New System.Drawing.Size(429, 147)
+        Me.gbAlquiler.TabIndex = 28876933
+        Me.gbAlquiler.TabStop = False
+        Me.gbAlquiler.Text = "Ingreso"
+        '
+        'nudValor
+        '
+        Me.nudValor.DecimalPlaces = 2
+        Me.nudValor.Location = New System.Drawing.Point(307, 47)
+        Me.nudValor.Name = "nudValor"
+        Me.nudValor.Size = New System.Drawing.Size(111, 27)
+        Me.nudValor.TabIndex = 28876934
+        '
+        'cbP
+        '
+        Me.cbP.AutoSize = True
+        Me.cbP.Location = New System.Drawing.Point(319, 108)
+        Me.cbP.Name = "cbP"
+        Me.cbP.Size = New System.Drawing.Size(82, 22)
+        Me.cbP.TabIndex = 28876933
+        Me.cbP.Text = "Pagado"
+        Me.cbP.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(304, 23)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(48, 18)
+        Me.Label11.TabIndex = 28876932
+        Me.Label11.Text = "Valor"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(47, 23)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(131, 18)
+        Me.Label13.TabIndex = 28876930
+        Me.Label13.Text = "Fecha de emisión"
+        '
+        'dtpFE
+        '
+        Me.dtpFE.CustomFormat = "yyyy-M-dd"
+        Me.dtpFE.Location = New System.Drawing.Point(7, 47)
+        Me.dtpFE.Name = "dtpFE"
+        Me.dtpFE.Size = New System.Drawing.Size(294, 27)
+        Me.dtpFE.TabIndex = 28876928
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(48, 84)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(110, 18)
+        Me.Label12.TabIndex = 28876931
+        Me.Label12.Text = "Fecha de pago"
+        '
+        'dtpFP
+        '
+        Me.dtpFP.CustomFormat = "yyyy-M-dd"
+        Me.dtpFP.Location = New System.Drawing.Point(8, 108)
+        Me.dtpFP.Name = "dtpFP"
+        Me.dtpFP.Size = New System.Drawing.Size(294, 27)
+        Me.dtpFP.TabIndex = 28876929
+        '
+        'bwDatos
+        '
         '
         'frmPublicidad
         '
@@ -957,18 +957,18 @@ Partial Class frmPublicidad
         Me.tbTandas.ResumeLayout(False)
         Me.tbTandas.PerformLayout()
         CType(Me.dgvFechas, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage1.ResumeLayout(False)
+        Me.tbTandasE.ResumeLayout(False)
         CType(Me.dgvTE, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbProgramas.ResumeLayout(False)
         Me.tbProgramas.PerformLayout()
         CType(Me.dgvProgramaP, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage2.ResumeLayout(False)
+        Me.tbCuotas.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.dgvVerCuota, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbAlquiler.ResumeLayout(False)
         Me.gbAlquiler.PerformLayout()
         CType(Me.nudValor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvVerCuota, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1014,14 +1014,14 @@ Partial Class frmPublicidad
     Friend WithEvents dgvProgramaP As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents tbTandasE As TabPage
     Friend WithEvents dgvTE As DataGridView
     Friend WithEvents btnBPubli As Button
     Friend WithEvents Hora As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents TEliminar As DataGridViewCheckBoxColumn
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents tbCuotas As TabPage
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents dgvVerCuota As DataGridView
     Friend WithEvents PFecha As DataGridViewTextBoxColumn

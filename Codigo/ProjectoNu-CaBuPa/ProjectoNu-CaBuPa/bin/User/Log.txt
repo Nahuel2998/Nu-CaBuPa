@@ -1181,3 +1181,33 @@
 28/10/2020 0:33:13 LAPTOP-J0MPD84C ' Insert IGNORE into Serie ( fecha_finalizacion,nombre ) values ('2020-10-28','test' ) 
 28/10/2020 0:33:14 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
 28/10/2020 0:36:41 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 10:14:30 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 10:14:35 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+28/10/2020 10:14:37 DESKTOP-SDVEG3U ' select id_publicidadcuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM publicidadcuota WHERE id_publicidad='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+28/10/2020 10:14:39 DESKTOP-SDVEG3U ' Insert IGNORE into publicidadcuota ( id_publicidad,fecha_emision, fecha_pago,precio ) values ('2','2020-10-28',null,'0' ) 
+28/10/2020 10:14:39 DESKTOP-SDVEG3U ' select id_publicidadcuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM publicidadcuota WHERE id_publicidad='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+28/10/2020 10:14:44 DESKTOP-SDVEG3U ' DELETE FROM publicidadcuota WHERE id_publicidadcuota in ('5' ) 
+28/10/2020 10:14:44 DESKTOP-SDVEG3U ' DELETE FROM publicidadcuota WHERE id_publicidadcuota in ('5' ) 
+28/10/2020 10:14:44 DESKTOP-SDVEG3U ' select id_publicidadcuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM publicidadcuota WHERE id_publicidad='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+28/10/2020 10:14:45 DESKTOP-SDVEG3U ' Insert IGNORE into publicidadcuota ( id_publicidad,fecha_emision, fecha_pago,precio ) values ('2','2020-10-28',null,'0' ) 
+28/10/2020 10:14:45 DESKTOP-SDVEG3U ' select id_publicidadcuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM publicidadcuota WHERE id_publicidad='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+28/10/2020 10:14:52 DESKTOP-SDVEG3U ' update publicidadcuota set fecha_emision='2020-10-28', fecha_pago='2020-10-15',precio='0' WHERE id_publicidad_cuota='6' 
+28/10/2020 10:14:56 DESKTOP-SDVEG3U ' select id_publicidadcuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM publicidadcuota WHERE id_publicidad='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+28/10/2020 10:14:57 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+28/10/2020 10:15:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 10:15:52 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 10:16:02 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 10:19:41 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 10:20:15 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+28/10/2020 10:20:17 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+28/10/2020 10:20:17 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-10-28' and fecha_finalizacion>='2020-10-28' 
+28/10/2020 10:20:18 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-28' 
+28/10/2020 10:20:31 DESKTOP-SDVEG3U ' Insert IGNORE into fechaprograma ( Fecha,Hora_Inicio,Hora_Fin,ID_Programa ) values ('2020-10-28','28/10/2020 10:20:18','28/10/2020 12:20:18','2' ) 
+28/10/2020 10:20:31 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-28' 
+28/10/2020 10:20:58 DESKTOP-SDVEG3U ' DELETE FROM Fechaprograma WHERE fecha in ('2020-10-28' ) and Hora_inicio in ('00:00:00' )and id_programa='2' 
+28/10/2020 10:20:58 DESKTOP-SDVEG3U ' DELETE FROM Fechaprograma WHERE fecha in ('2020-10-28' ) and Hora_inicio in ('00:00:00' )and id_programa='2' 
+28/10/2020 10:20:58 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-28' 
+28/10/2020 10:21:03 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and month(fecha) = month('2020-10-28') 
+28/10/2020 10:21:04 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-28' 
+28/10/2020 10:21:05 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+28/10/2020 10:25:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

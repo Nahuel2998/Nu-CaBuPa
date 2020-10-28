@@ -137,12 +137,15 @@ Public Class frmEmpresa
     End Sub
 
     Private Sub dgvVSM_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVSM.CellDoubleClick
-        'Dim i As Integer = CargarID(dt_Video, dgvVSM)
-        'If (i <> -1) Then
-        'Dim formVideo As New frmVideo(i)
-        'AddHandler formVideo.FormClosed, AddressOf FormVideo_FormClosed
-        'formVideo.ShowDialog()
-        'End If
+        Dim i As Integer = CargarID(dt_Video, dgvVSM)
+        If (i <> -1) Then
+            Dim formPubli As New frmVideo(i)
+            AddHandler formPubli.FormClosed, AddressOf formPubli_FormClosed
+            formPubli.ShowDialog()
+        End If
+    End Sub
+    Private Sub formPubli_FormClosed(sender As Object, e As FormClosedEventArgs)
+        ActualizarTabla()
     End Sub
 
     '' Actualiza la tabla mostrando los videos asociados cuando el formulario de mostrar video se ha cerrado
@@ -152,7 +155,7 @@ Public Class frmEmpresa
     End Sub
 
     Private Sub ActualizarTabla()
-        dt_Publicidad = DevolverTabla(PSQL("ID_Publicidad, Tema", "publicidad", String.Format("ID_Empresa = '{0}'", empresaID)))
+        dt_Publicidad = DevolverTabla(PSQL("ID_Publicidad, Nombre, Tema", "publicidad", String.Format("ID_Empresa = '{0}'", empresaID)))
         ActualizarTablaC(dt_Publicidad, dgvVSM)
     End Sub
 
@@ -160,4 +163,5 @@ Public Class frmEmpresa
         Dim formDelete As New frmConfirmarBorrado(EMPRESA, {empresaID}, True)
         formDelete.ShowDialog(Me)
     End Sub
+
 End Class

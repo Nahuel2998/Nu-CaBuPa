@@ -7,7 +7,6 @@ Public Class frmGuardarEdicion
 
     Public Sub New(ByVal t As String, ByVal d() As String, ByVal identificador As String)
         InitializeComponent()
-
         tabla = t
         datos = d
         id = identificador

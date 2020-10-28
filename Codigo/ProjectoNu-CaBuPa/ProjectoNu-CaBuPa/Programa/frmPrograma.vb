@@ -10,7 +10,7 @@ Public Class frmPrograma
     Private dt_fechas As DataTable
     Private dt_FechaPrograma As DataTable
     Private dt_publicidades As DataTable
-    Private TBuscada As String
+    Private TBuscada As Byte
     Private dt_Cuotas As DataTable
     Private CuotaId As Integer = -1
 
@@ -40,11 +40,11 @@ Public Class frmPrograma
         If programaID <> -1 Then
             bwDatos.RunWorkerAsync()
         Else
-            tcP.TabPages.RemoveAt(1)
-            tcP.TabPages.RemoveAt(2)
-            tcP.TabPages.RemoveAt(3)
-            tcP.TabPages.RemoveAt(2)
-            tcP.TabPages.RemoveAt(1)
+            tcP.TabPages.RemoveByKey("tbFuncionarios")
+            tcP.TabPages.RemoveByKey("tbPublicidades")
+            tcP.TabPages.RemoveByKey("tbAlquiler")
+            tcP.TabPages.RemoveByKey("tbFechas")
+            tcP.TabPages.RemoveByKey("tbFechasAgendadas")
             btnPEditar.Text = "Insertar"
             btnBorrar.Visible = False
             Activar()
@@ -163,7 +163,7 @@ Public Class frmPrograma
     End Sub
 
     Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
-        TBuscada = ""
+        TBuscada = 0
         Select Case tcP.SelectedIndex
             Case 1
                 BuscarFuncionario()
@@ -182,14 +182,14 @@ Public Class frmPrograma
         Dim fecha As String = If(mes, "month(fecha) = month('{1}')", "fecha = '{1}'")
         Dim Condicion As String = String.Format("id_programa = {0} and " + fecha, programaID, Format(dtpBP.Value, "yyyy-MM-dd"))
         Dim Tablas As String = "fechaprograma"
-        TBuscada = "fechaprograma"
+        TBuscada = FECHAPROGRAMA
         If Not (bwCargador.IsBusy) Then
             bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
         End If
     End Sub
     Private Sub BuscarFuncionario()
         Dim Condicion As String = String.Format("ifnull(fecha_finalizacion,curdate()){0}curdate()", If(cbRP.Checked, "<", ">="))
-        TBuscada = "Funcionario"
+        TBuscada = FUNCIONARIO
         Dim Columna As String = "fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
         Dim Tablas As String = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
         Tablas = String.Format(Tablas, programaID)
@@ -199,7 +199,7 @@ Public Class frmPrograma
     End Sub
     Private Sub BuscarCuota()
         Dim Condicion As String = String.Format("id_programa='{0}' and Fecha_Pago is{1}null and year(fecha_emision)={2}", programaID, If(cbPagados.Checked, " not ", " "), Year(dtpYearCuota.Value))
-        TBuscada = "CuotaPrograma"
+        TBuscada = CUOTA
         Dim Columna As String = "id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor'"
         Dim Tablas As String = "programacuota"
         If Not (bwCargador.IsBusy) Then
@@ -209,13 +209,13 @@ Public Class frmPrograma
 
     Private Sub bwCargador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwCargador.RunWorkerCompleted
         Select Case TBuscada
-            Case "Funcionario"
+            Case FUNCIONARIO
                 dt_funcionario = TBusca
                 ActualizarTablaC(dt_funcionario, dgvFuncionarios, True, {1, 0})
-            Case "fechaprograma"
+            Case FECHAPROGRAMA
                 dt_fechas = TBusca
                 ActualizarTablaC(dt_fechas, dgvPrograma, False)
-            Case "Fecha"
+            Case PROGRAMAS
                 dt_FechaPrograma = TBusca
                 ActualizarTablaC(dt_FechaPrograma, dgvFechaPrograma, False)
             Case "CuotaPrograma"
@@ -223,16 +223,18 @@ Public Class frmPrograma
                 ActualizarTablaC(dt_Cuotas, dgvVerCuota, True)
         End Select
         TBusca = Nothing
-        TBuscada = ""
+        TBuscada = 0
     End Sub
 
     Private Sub btnAnadir_Click(sender As Object, e As EventArgs) Handles btnAnadir.Click
-        Dim datos() As String = {Format(dtpAP.Value().Date, "yyyy-MM-dd"), txtHI.Value, txtHF.Value, programaID}
+        Dim datos() As String = {Format(dtpAP.Value().Date, "yyyy-MM-dd"), MysqlHM(txtHI.Value), MysqlHM(txtHF.Value), programaID}
+
         PrepararInsert("fechaprograma", datos, 0)
         txtHI.Value = Now
         txtHF.value = Now
         BFecha(cbFMes.Checked)
     End Sub
+
 
     Private Sub dtpBP_ValueChanged(sender As Object, e As EventArgs) Handles dtpBP.ValueChanged
         BFecha(cbFMes.Checked)
@@ -301,7 +303,7 @@ Public Class frmPrograma
         Dim fecha As String = If(mes, fecham, fechasm)
         Dim Condicion As String = String.Format("id_programa = {0} and " + fecha, programaID)
         Dim Tablas As String = "fechaprograma"
-        TBuscada = "Fecha"
+        TBuscada = PROGRAMAS
         If Not (bwCargador.IsBusy) Then
             bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
             ModLog.Guardar(PSQL(Columna, Tablas, Condicion))
@@ -437,5 +439,17 @@ Public Class frmPrograma
         txtHF.MinDate = txtHI.Value
     End Sub
 
+
+    Private Sub dgvFuncionarios_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionarios.CellDoubleClick
+        Dim i() As String = CargarID(dt_funcionario, dgvFuncionarios, {0, 1, 2})
+        If (i.Length <> 1) Then
+            Dim formFunc As New frmFuncion(i)
+            AddHandler formFunc.FormClosed, AddressOf FormFunc_FormClosed
+            formFunc.ShowDialog()
+        End If
+    End Sub
+    Private Sub FormFunc_FormClosed(sender As Object, e As FormClosedEventArgs)
+        BuscarFuncionario()
+    End Sub
 
 End Class

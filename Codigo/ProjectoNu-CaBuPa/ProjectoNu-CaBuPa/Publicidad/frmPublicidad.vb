@@ -7,7 +7,7 @@ Public Class frmPublicidad
     Dim datosI() As String
     Private dt_ProgramasP As DataTable
     Private dt_FProgramas As DataTable
-    Private TBuscada As String = ""
+    Private TBuscada As Byte = 0
     Private dt_fechas As DataTable
     Private dt_fechasA As DataTable
     Dim position() As String
@@ -98,9 +98,10 @@ Public Class frmPublicidad
             Buscar()
             btnSalir.Select()
         Else
-            tcP.TabPages.RemoveAt(1)
-            tcP.TabPages.RemoveAt(2)
-            tcP.TabPages.RemoveAt(3)
+            tcP.TabPages.RemoveByKey("tbTandas")
+            tcP.TabPages.RemoveByKey("tbTandasE")
+            tcP.TabPages.RemoveByKey("tbProgramas")
+            tcP.TabPages.RemoveByKey("tbCuotas")
             btnEditar.Text = "Insertar"
             btnBorrar.Visible = False
             Activar()
@@ -176,16 +177,16 @@ Public Class frmPublicidad
     Private Sub bwDatos_DoWork(sender As Object, e As DoWorkEventArgs) Handles bwDatos.DoWork
         Select Case e.Argument
             Case 1
-                TBuscada = "Tanda"
+                TBuscada = TANDASHORAS
                 dt_tandasCon = DevolverTabla(PSQL("Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas'", "Tanda", "True"))
                 ModLog.Guardar(PSQL("Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas'", "Tanda", "True"))
             Case 2
-                TBuscada = "Fecha"
+                TBuscada = PUBLICIDAD
                 Dim condicion = "true"
                 dt_fechasA = DevolverTabla(PSQL("distinct a.hora_inicio as 'Hora de tanda', fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalización'", "aparecepubli a left join tanda t on t.hora_inicio = null", condicion))
             Case 4
                 Dim Condicion As String = String.Format("id_publicidad='{0}' and Fecha_Pago is{1}null and year(fecha_emision)={2}", publicidadID, If(cbPagados.Checked, " not ", " "), Year(dtpYearCuota.Value))
-                TBuscada = "CuotaPublicidad"
+                TBuscada = CUOTAPUBLICIDAD
                 Dim Columna As String = "id_publicidadcuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor'"
                 Dim Tablas As String = "publicidadcuota"
                 dt_Cuotas = DevolverTabla(PSQL(Columna, Tablas, Condicion))
@@ -198,11 +199,11 @@ Public Class frmPublicidad
 
     Private Sub bwDatos_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwDatos.RunWorkerCompleted
         Select Case TBuscada
-            Case "Tanda"
+            Case TANDASHORAS
                 CargarComboTandas()
-            Case "Fecha"
+            Case PUBLICIDAD
                 ATAntigua()
-            Case "CuotaPublicidad"
+            Case CUOTAPUBLICIDAD
                 ActualizarTablaC(dt_Cuotas, dgvVerCuota, True)
         End Select
     End Sub
@@ -389,7 +390,7 @@ Public Class frmPublicidad
             VaciarCuota()
             BuscarCuota()
         Else
-            USQL("publicidadcuota", String.Format("fecha_emision='{0}', fecha_pago={1},precio='{2}'", Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value), String.Format("id_publicidad_cuota='{0}'", CuotaId))
+            USQL("publicidadcuota", String.Format("fecha_emision='{0}', fecha_pago={1},precio='{2}'", Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value), String.Format("id_publicidadcuota='{0}'", CuotaId))
             CuotaId = -1
             CambiarICuota()
             BuscarCuota()
@@ -407,4 +408,5 @@ Public Class frmPublicidad
         End If
         CambiarICuota()
     End Sub
+
 End Class

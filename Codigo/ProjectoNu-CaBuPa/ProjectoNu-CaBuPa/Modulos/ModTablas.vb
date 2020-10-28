@@ -51,6 +51,14 @@ Module ModTablas
         End If
         Return -1
     End Function
+    Public Function ceros(ByVal h As String) As String
+        Dim hor As String = If(h.Length = 1, "0" + h, h)
+        Return hor
+    End Function
+    Public Function MysqlHM(ByVal hora As DateTime) As String
+        Dim h As String = String.Format("{0}:{1}:{2}", ceros(Hour(hora).ToString), ceros(Minute(hora)), ceros(Second(hora)))
+        Return h
+    End Function
     Public Function CargarID(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, ByVal NumCol() As Byte) As String()
         If (Not IsNothing(Tabla)) Then
             Dim res(NumCol.Length - 1) As String

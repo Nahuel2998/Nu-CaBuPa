@@ -604,4 +604,5 @@ Public Class frmPrincipal
     Private Sub FormFunc_FormClosed(sender As Object, e As FormClosedEventArgs)
         btnBuscarBFF.PerformClick()
     End Sub
+
 End Class

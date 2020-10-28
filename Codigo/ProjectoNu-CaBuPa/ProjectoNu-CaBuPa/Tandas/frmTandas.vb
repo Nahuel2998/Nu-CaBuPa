@@ -10,13 +10,8 @@
         ActualizarTablaC(dt_MTandas, dgvTandas, False)
     End Sub
     Private Sub FechasMax(Optional ingresar As Boolean = True)
-        Try
-            hora1 = dtpHI.Value
-            hora2 = dtpHF.Value
-        Catch e As Exception
-            MessageBox.Show("Error del formato de fecha")
-            Exit Sub
-        End Try
+        hora1 = dtpHI.Value
+        hora2 = dtpHF.Value
 
         If (dgvTandas.Rows.Count > 0) Then
             For i As Integer = 0 To dgvTandas.Rows.Count - 1
@@ -37,14 +32,7 @@
         End If
         BuscarT()
     End Sub
-    Private Function ceros(ByVal h As String) As String
-        Dim hor As String = If(h.Length = 1, "0" + h, h)
-        Return hor
-    End Function
-    Private Function MysqlHM(ByVal hora As DateTime) As String
-        Dim h As String = String.Format("{0}:{1}:{2}", ceros(Hour(hora).ToString), ceros(Minute(hora)), ceros(Second(hora)))
-        Return h
-    End Function
+
 
     Private Sub frmTandas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BuscarT()
