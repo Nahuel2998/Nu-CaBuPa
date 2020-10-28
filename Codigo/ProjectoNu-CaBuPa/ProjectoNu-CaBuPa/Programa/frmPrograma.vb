@@ -425,4 +425,18 @@ Public Class frmPrograma
     Private Sub dtpYearCuota_ValueChanged(sender As Object, e As EventArgs) Handles dtpYearCuota.ValueChanged
         BuscarCuota()
     End Sub
+
+    Private Sub dtpFE_ValueChanged(sender As Object, e As EventArgs) Handles dtpFE.ValueChanged
+        If (dtpFE.Value > dtpFP.Value) Then
+            dtpFP.Value = dtpFE.Value
+        End If
+        dtpFP.MinDate = dtpFE.Value
+    End Sub
+
+    Private Sub txtHI_ValueChanged(sender As Object, e As EventArgs) Handles txtHI.ValueChanged
+        If (txtHI.Value > txtHF.Value) Then
+            txtHF.Value = txtHI.Value
+        End If
+        txtHF.MinDate = txtHI.Value
+    End Sub
 End Class

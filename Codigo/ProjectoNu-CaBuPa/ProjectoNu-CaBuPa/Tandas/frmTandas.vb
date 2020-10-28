@@ -73,8 +73,8 @@
 
     Private Sub dtpHI_ValueChanged(sender As Object, e As EventArgs) Handles dtpHI.ValueChanged
         If (dtpHF.Value < dtpHI.Value) Then
-            dtpHF.MinDate = dtpHI.Value
+            dtpHF.Value = dtpHI.Value
         End If
+        dtpHF.MinDate = dtpHI.Value
     End Sub
-
 End Class
