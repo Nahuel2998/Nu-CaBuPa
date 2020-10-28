@@ -259,6 +259,9 @@ Public Class frmPrincipal
             Case FUNCION
                 dt_BFuncion = TBusca
                 ActualizarTablaC(dt_BFuncion, dgvFuncionesBFF)
+            Case EVENTO
+                dt_BEvento = TBusca
+                ActualizarTablaC(dt_BEvento, dgvBEvento)
         End Select
         TBusca = Nothing
         TBuscada = 0
@@ -328,7 +331,7 @@ Public Class frmPrincipal
     End Sub
 
     '' Nahuel del futuro aqui, vengo a decir gracias al Nahuel del pasado por hacer esto
-    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellClick, dgvBS.CellClick, dgvClientes.CellClick, dgvBProgramas.CellClick, dgvPubliB.CellClick, dgvFuncionarioBF.CellClick, dgvFuncionesBFF.CellClick
+    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellClick, dgvBS.CellClick, dgvClientes.CellClick, dgvBProgramas.CellClick, dgvPubliB.CellClick, dgvFuncionarioBF.CellClick, dgvFuncionesBFF.CellClick, dgvBEvento.CellClick
         ClickCheck(sender, e.ColumnIndex)
     End Sub
 
@@ -513,7 +516,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBuscarBF_Click(sender As Object, e As EventArgs) Handles btnBuscarBF.Click
-        TBuscada = FUNCIONARIO
+        TBuscada = ModTablas.FUNCIONARIO
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtNombreBF.Text)) Then
             condicion = "Nombre like '%" + txtNombreBF.Text + "%'"
@@ -535,7 +538,7 @@ Public Class frmPrincipal
 
 
     Private Sub btnBorrarBF_Click(sender As Object, e As EventArgs) Handles btnBorrarBF.Click
-        BorrarConfirmar(Me, dt_BFuncionario, dgvFuncionarioBF, FUNCIONARIO, btnBuscarBF)
+        BorrarConfirmar(Me, dt_BFuncionario, dgvFuncionarioBF, ModTablas.FUNCIONARIO, btnBuscarBF)
     End Sub
 
     Private Sub btnIngresarBF_Click(sender As Object, e As EventArgs) Handles btnIngresarBF.Click
@@ -605,4 +608,21 @@ Public Class frmPrincipal
         btnBuscarBFF.PerformClick()
     End Sub
 
+    Private Sub btnBuscarE_Click(sender As Object, e As EventArgs) Handles btnBuscarE.Click
+        TBuscada = EVENTO
+        Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
+        If Not String.IsNullOrWhiteSpace(txtNombreBP.Text) Then
+            condicion = String.Format("nombre like '%{0}%'", txtNombreBP.Text)
+        End If
+        If Not String.IsNullOrWhiteSpace(txtDescripcionBP.Text) Then
+            condicion += String.Format(" and descripcion like '%{0}%'", txtDescripcionBP.Text)
+        End If
+        If Not BWBuscador.IsBusy Then
+            BWBuscador.RunWorkerAsync(PSQL("ID_Evento, nombre as Nombre, descripcion as Descripcion", "evento", condicion))
+        End If
+    End Sub
+
+    Private Sub btnBEvento_Click(sender As Object, e As EventArgs) Handles btnBEvento.Click
+        BorrarConfirmar(Me, dt_BEvento, dgvBEvento, EVENTO, btnBEvento)
+    End Sub
 End Class

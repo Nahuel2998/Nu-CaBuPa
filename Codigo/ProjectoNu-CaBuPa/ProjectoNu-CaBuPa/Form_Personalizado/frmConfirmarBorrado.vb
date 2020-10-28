@@ -51,6 +51,8 @@
                 PrepararDelete("Funcion", "ID_Funcion", id)
             Case CUOTAPUBLICIDAD
                 BSQL("publicidadcuota", CreadorCondicion("id_publicidadcuota", id))
+            Case EVENTO
+                BSQL("evento", CreadorCondicion("id_evento", id))
         End Select
         If (c) Then
             Owner.Close()

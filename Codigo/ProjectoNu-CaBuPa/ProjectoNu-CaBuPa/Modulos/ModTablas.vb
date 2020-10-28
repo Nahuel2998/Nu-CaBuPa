@@ -15,6 +15,7 @@ Module ModTablas
     Public dt_Empresa As DataTable
     Public dt_BFuncionario As DataTable
     Public dt_BFuncion As DataTable
+    Public dt_BEvento As DataTable
 
     Public Const VIDEO As Byte = 1
     Public Const SERIE As Byte = 2
@@ -29,6 +30,7 @@ Module ModTablas
     Public Const CUOTA As Byte = 11
     Public Const FUNCION As Byte = 12
     Public Const CUOTAPUBLICIDAD As Byte = 13
+    Public Const EVENTO As Byte = 14
     Public Function ValidarEmail(ByVal s As String) As Boolean
         Return Regex.IsMatch(s, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
     End Function
@@ -105,6 +107,9 @@ Module ModTablas
     Public Sub ActualizarTablaC(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional C As Boolean = True, Optional ByVal col() As Byte = Nothing)
         If (IsNothing(col)) Then
             col = {0}
+        Else
+            Array.Sort(col)
+            Array.Reverse(col)
         End If
         If Not IsNothing(Tabla) Then
             'MessageBox.Show("Carga")
