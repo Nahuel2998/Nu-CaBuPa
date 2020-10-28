@@ -1078,3 +1078,106 @@
 27/10/2020 22:05:56 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-10-27' and fecha_finalizacion>='2020-10-27' 
 27/10/2020 22:05:56 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
 27/10/2020 22:06:01 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+27/10/2020 22:51:55 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 22:59:42 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 22:59:51 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 23:02:33 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 23:06:26 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 23:06:50 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 23:07:42 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 23:07:57 LAPTOP-J0MPD84C ' Insert IGNORE into Empresa ( Nombre,Telefono,Mail ) values ('adsf','esrseseg','asfs@asdf.com' ) 
+27/10/2020 23:07:59 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+27/10/2020 23:43:48 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 23:44:08 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:44:14 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and Descripcion like '%F%' 
+27/10/2020 23:44:16 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:44:20 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE Nombre like '%Fun%' 
+27/10/2020 23:44:23 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE Nombre like '%Per%' 
+27/10/2020 23:44:38 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE Nombre like '%Per%' 
+27/10/2020 23:49:06 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 23:49:13 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 23:52:02 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 23:52:22 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 23:52:26 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:52:29 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:52:46 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:52:49 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:53:01 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:53:03 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:53:15 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:53:34 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:53:37 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:53:37 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:53:37 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:53:37 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:53:37 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:53:38 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:55:32 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 23:55:41 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 23:55:41 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 23:55:59 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 23:55:59 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 23:56:12 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 23:56:14 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 23:56:18 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 23:57:41 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 23:57:47 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+27/10/2020 23:57:49 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:57:54 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:57:55 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:57:58 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:59:01 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+27/10/2020 23:59:07 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:59:11 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:59:13 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:59:19 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:59:34 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:59:45 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+27/10/2020 23:59:55 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 0:00:01 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:00:06 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:00:09 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+28/10/2020 0:00:13 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+28/10/2020 0:00:23 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+28/10/2020 0:00:26 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+28/10/2020 0:00:29 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+28/10/2020 0:00:37 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+28/10/2020 0:03:32 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 0:03:49 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 0:03:56 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+28/10/2020 0:04:19 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+28/10/2020 0:06:14 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 0:06:19 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:06:33 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:06:45 LAPTOP-J0MPD84C ' update Funcionario set Telefono = 'Mathew',nombre = '099808098',Mail = 'email@ast.com' WHERE ID_Funcionario = '5' 
+28/10/2020 0:06:50 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:06:51 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:07:05 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:07:23 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:07:24 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:07:32 LAPTOP-J0MPD84C ' update Funcionario set Telefono = '099808098',nombre = 'Math',Mail = 'email@ast.com' WHERE ID_Funcionario = '5' 
+28/10/2020 0:07:36 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:07:44 LAPTOP-J0MPD84C ' update Funcionario set Telefono = 'Math',nombre = '09980809',Mail = 'email@ast.com' WHERE ID_Funcionario = '5' 
+28/10/2020 0:07:45 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:07:48 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:11:04 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 0:11:10 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:11:27 LAPTOP-J0MPD84C ' update Funcionario set Telefono = '099808098',nombre = 'Mathew',Mail = 'email@ast.com' WHERE ID_Funcionario = '5' 
+28/10/2020 0:11:27 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:11:45 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:12:01 LAPTOP-J0MPD84C ' Insert IGNORE into Funcionario ( Telefono,nombre,Mail ) values ('234234','A','Idk@yes.net' ) 
+28/10/2020 0:12:05 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:12:15 LAPTOP-J0MPD84C ' DELETE FROM Funcionario WHERE ID_Funcionario in ('6' ) 
+28/10/2020 0:12:15 LAPTOP-J0MPD84C ' DELETE FROM Funcionario WHERE ID_Funcionario in ('6' ) 
+28/10/2020 0:12:15 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:12:24 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:12:28 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+28/10/2020 0:12:33 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail FROM empresa WHERE true 
+28/10/2020 0:12:37 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+28/10/2020 0:31:13 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 0:32:04 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+28/10/2020 0:32:51 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+28/10/2020 0:33:03 LAPTOP-J0MPD84C ' Insert IGNORE into Empresa ( Nombre,Telefono,Mail ) values ('a','324234','adf@yes.org' ) 
+28/10/2020 0:33:13 LAPTOP-J0MPD84C ' Insert IGNORE into Serie ( fecha_finalizacion,nombre ) values ('2020-10-28','test' ) 
+28/10/2020 0:33:14 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+28/10/2020 0:36:41 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

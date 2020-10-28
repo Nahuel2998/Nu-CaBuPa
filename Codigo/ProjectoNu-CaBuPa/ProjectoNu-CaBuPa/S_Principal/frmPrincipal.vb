@@ -256,6 +256,9 @@ Public Class frmPrincipal
             Case FUNCIONARIO
                 dt_BFuncionario = TBusca
                 ActualizarTablaC(dt_BFuncionario, dgvFuncionarioBF)
+            Case FUNCION
+                dt_BFuncion = TBusca
+                ActualizarTablaC(dt_BFuncion, dgvFuncionesBFF)
         End Select
         TBusca = Nothing
         TBuscada = 0
@@ -324,7 +327,8 @@ Public Class frmPrincipal
         btnBuscarBS.PerformClick()
     End Sub
 
-    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellClick, dgvBS.CellClick, dgvClientes.CellClick, dgvBProgramas.CellClick, dgvPubliB.CellClick
+    '' Nahuel del futuro aqui, vengo a decir gracias al Nahuel del pasado por hacer esto
+    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellClick, dgvBS.CellClick, dgvClientes.CellClick, dgvBProgramas.CellClick, dgvPubliB.CellClick, dgvFuncionarioBF.CellClick, dgvFuncionesBFF.CellClick
         ClickCheck(sender, e.ColumnIndex)
     End Sub
 
@@ -386,6 +390,7 @@ Public Class frmPrincipal
 
     Private Sub btncIngresar_Click(sender As Object, e As EventArgs) Handles btncIngresar.Click
         Dim formCliente As New frmEmpresa({-1, "", "", ""})
+        AddHandler formCliente.FormClosed, AddressOf FormCliente_FormClosed
         formCliente.ShowDialog()
     End Sub
 
@@ -504,7 +509,7 @@ Public Class frmPrincipal
         txtNombreBF.Clear()
         txtMailBF.Clear()
         txtTelefonoBF.Clear()
-        dgvFuncionarioBF.Rows.Clear()
+        ActualizarTablaC(Nothing, dgvFuncionarioBF, False) 'fix
     End Sub
 
     Private Sub btnBuscarBF_Click(sender As Object, e As EventArgs) Handles btnBuscarBF.Click
@@ -534,7 +539,9 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnIngresarBF_Click(sender As Object, e As EventArgs) Handles btnIngresarBF.Click
-
+        Dim formFuncionario As New frmFuncionario({-1, "", "", ""})
+        AddHandler formFuncionario.FormClosed, AddressOf FormFuncrio_FormClosed
+        formFuncionario.ShowDialog()
     End Sub
 
     Private Sub btnTanda_Click(sender As Object, e As EventArgs) Handles btnTanda.Click
@@ -555,7 +562,46 @@ Public Class frmPrincipal
         btnBuscarBF.PerformClick()
     End Sub
 
-    Private Sub dgvBProgramas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBProgramas.CellContentClick
+    Private Sub btnBuscarBFF_Click(sender As Object, e As EventArgs) Handles btnBuscarBFF.Click
+        TBuscada = FUNCION
+        Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
+        If (Not String.IsNullOrWhiteSpace(txtNombreBFF.Text)) Then
+            condicion = String.Format("Nombre like '%{0}%'", txtNombreBFF.Text)
+        End If
+        If (Not String.IsNullOrWhiteSpace(txtDescripcionBFF.Text)) Then
+            condicion += String.Format(" and Descripcion like '%{0}%'", txtDescripcionBFF.Text)
+        End If
+        If Not (BWBuscador.IsBusy) Then
+            BWBuscador.RunWorkerAsync(PSQL("ID_Funcion, Nombre, Descripcion", "Funcion", condicion))
+        End If
+    End Sub
 
+    Private Sub btnBorrarBFF_Click(sender As Object, e As EventArgs) Handles btnBorrarBFF.Click
+        BorrarConfirmar(Me, dt_BFuncion, dgvFuncionesBFF, FUNCION, btnBuscarBFF)
+    End Sub
+
+    Private Sub btnIngresarBFF_Click(sender As Object, e As EventArgs) Handles btnIngresarBFF.Click
+        Dim formFuncion As New frmFuncion({-1, "", "", ""})
+        AddHandler formFuncion.FormClosed, AddressOf FormFunc_FormClosed
+        formFuncion.ShowDialog()
+    End Sub
+
+    Private Sub btnLimpiarBFF_Click(sender As Object, e As EventArgs) Handles btnLimpiarBFF.Click
+        txtNombreBFF.Clear()
+        txtDescripcionBFF.Clear()
+        ActualizarTablaC(Nothing, dgvFuncionesBFF, False) 'fix
+    End Sub
+
+    Private Sub dgvFuncionesBFF_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionesBFF.CellDoubleClick
+        Dim i() As String = CargarID(dt_BFuncion, dgvFuncionesBFF, {0, 1, 2})
+        If (i.Length <> 1) Then
+            Dim formFunc As New frmFuncion(i)
+            AddHandler formFunc.FormClosed, AddressOf FormFunc_FormClosed
+            formFunc.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub FormFunc_FormClosed(sender As Object, e As FormClosedEventArgs)
+        btnBuscarBFF.PerformClick()
     End Sub
 End Class

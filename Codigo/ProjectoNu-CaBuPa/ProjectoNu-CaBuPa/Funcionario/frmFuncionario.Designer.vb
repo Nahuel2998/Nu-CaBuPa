@@ -22,7 +22,11 @@ Partial Class frmFuncionario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.tcF = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -34,40 +38,32 @@ Partial Class frmFuncionario
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvFunciones = New System.Windows.Forms.DataGridView()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descrip = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TabControl1.SuspendLayout()
+        Me.tcF.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvFunciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'tcF
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(407, 392)
-        Me.TabControl1.TabIndex = 0
+        Me.tcF.Controls.Add(Me.TabPage1)
+        Me.tcF.Controls.Add(Me.TabPage2)
+        Me.tcF.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tcF.Location = New System.Drawing.Point(0, 0)
+        Me.tcF.Name = "tcF"
+        Me.tcF.SelectedIndex = 0
+        Me.tcF.Size = New System.Drawing.Size(407, 392)
+        Me.tcF.TabIndex = 0
         '
         'TabPage1
         '
@@ -108,6 +104,7 @@ Partial Class frmFuncionario
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(387, 120)
@@ -187,6 +184,7 @@ Partial Class frmFuncionario
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.Controls.Add(Me.dgvFunciones)
+        Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(3, 129)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(387, 176)
@@ -200,36 +198,67 @@ Partial Class frmFuncionario
         Me.dgvFunciones.AllowUserToDeleteRows = False
         Me.dgvFunciones.AllowUserToResizeColumns = False
         Me.dgvFunciones.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvFunciones.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvFunciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvFunciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvFunciones.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.dgvFunciones.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvFunciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvFunciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvFunciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nombre, Me.descrip})
-        Me.dgvFunciones.Location = New System.Drawing.Point(6, 19)
+        Me.dgvFunciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.fDescripcion})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvFunciones.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvFunciones.Location = New System.Drawing.Point(6, 18)
+        Me.dgvFunciones.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvFunciones.MultiSelect = False
         Me.dgvFunciones.Name = "dgvFunciones"
         Me.dgvFunciones.ReadOnly = True
         Me.dgvFunciones.RowHeadersVisible = False
-        Me.dgvFunciones.RowHeadersWidth = 51
+        Me.dgvFunciones.RowHeadersWidth = 62
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        Me.dgvFunciones.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvFunciones.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.dgvFunciones.RowTemplate.Height = 28
+        Me.dgvFunciones.RowTemplate.ReadOnly = True
         Me.dgvFunciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvFunciones.Size = New System.Drawing.Size(375, 151)
-        Me.dgvFunciones.TabIndex = 0
+        Me.dgvFunciones.TabIndex = 2342326
         '
-        'Nombre
+        'DataGridViewTextBoxColumn7
         '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.MinimumWidth = 6
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.FillWeight = 50.0!
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn7.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
         '
-        'descrip
+        'fDescripcion
         '
-        Me.descrip.HeaderText = "Descripción"
-        Me.descrip.MinimumWidth = 6
-        Me.descrip.Name = "descrip"
-        Me.descrip.ReadOnly = True
+        Me.fDescripcion.HeaderText = "Descripcion"
+        Me.fDescripcion.MinimumWidth = 6
+        Me.fDescripcion.Name = "fDescripcion"
+        Me.fDescripcion.ReadOnly = True
         '
         'TableLayoutPanel2
         '
@@ -238,8 +267,8 @@ Partial Class frmFuncionario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TableLayoutPanel2.ColumnCount = 4
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.62814!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.13065!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.86432!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.68217!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.15504!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.btnBorrar, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btnEditar, 0, 0)
@@ -261,7 +290,7 @@ Partial Class frmFuncionario
         Me.btnBorrar.ForeColor = System.Drawing.Color.Black
         Me.btnBorrar.Location = New System.Drawing.Point(102, 3)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(95, 40)
+        Me.btnBorrar.Size = New System.Drawing.Size(105, 40)
         Me.btnBorrar.TabIndex = 10
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
@@ -299,10 +328,6 @@ Partial Class frmFuncionario
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.TabPage2.Controls.Add(Me.Button1)
-        Me.TabPage2.Controls.Add(Me.TextBox2)
-        Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -310,87 +335,17 @@ Partial Class frmFuncionario
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Asignar Funcion"
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(224, 190)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(157, 34)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Buscar"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.TextBox2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.TextBox2.ForeColor = System.Drawing.Color.White
-        Me.TextBox2.Location = New System.Drawing.Point(224, 151)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(157, 23)
-        Me.TextBox2.TabIndex = 10
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(221, 133)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(57, 15)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Nombre:"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToResizeColumns = False
-        Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.DataGridView1.Location = New System.Drawing.Point(17, 113)
-        Me.DataGridView1.MultiSelect = False
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(187, 140)
-        Me.DataGridView1.TabIndex = 8
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Nombre"
-        Me.DataGridViewTextBoxColumn1.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Descripción"
-        Me.DataGridViewTextBoxColumn2.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
         'frmFuncionario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(407, 392)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.tcF)
         Me.Name = "frmFuncionario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Funcionario"
-        Me.TabControl1.ResumeLayout(False)
+        Me.tcF.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
@@ -398,14 +353,11 @@ Partial Class frmFuncionario
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.dgvFunciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents tcF As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
@@ -417,17 +369,11 @@ Partial Class frmFuncionario
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents dgvFunciones As DataGridView
-    Friend WithEvents Nombre As DataGridViewTextBoxColumn
-    Friend WithEvents descrip As DataGridViewTextBoxColumn
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents btnBorrar As Button
     Friend WithEvents btnEditar As Button
     Friend WithEvents btnSalir As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents dgvFunciones As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents fDescripcion As DataGridViewTextBoxColumn
 End Class

@@ -24,14 +24,14 @@ Partial Class frmFuncion
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtDesc = New System.Windows.Forms.RichTextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.BtnbuscarFunci = New System.Windows.Forms.Button()
-        Me.btneditarfunci = New System.Windows.Forms.Button()
-        Me.btningresarfunc = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnBorrar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -51,7 +51,7 @@ Partial Class frmFuncion
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.35135!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.64865!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(260, 228)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(372, 201)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'GroupBox1
@@ -59,50 +59,51 @@ Partial Class frmFuncion
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.txtDesc)
+        Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(254, 156)
+        Me.GroupBox1.Size = New System.Drawing.Size(366, 137)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'TextBox2
+        'txtDesc
         '
-        Me.TextBox2.Location = New System.Drawing.Point(120, 30)
-        Me.TextBox2.MaxLength = 128
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(126, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.txtDesc.Location = New System.Drawing.Point(94, 52)
+        Me.txtDesc.Name = "txtDesc"
+        Me.txtDesc.ReadOnly = True
+        Me.txtDesc.Size = New System.Drawing.Size(263, 75)
+        Me.txtDesc.TabIndex = 4
+        Me.txtDesc.Text = ""
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Location = New System.Drawing.Point(94, 19)
+        Me.txtNombre.MaxLength = 128
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.ReadOnly = True
+        Me.txtNombre.Size = New System.Drawing.Size(264, 20)
+        Me.txtNombre.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(23, 35)
+        Me.Label2.Location = New System.Drawing.Point(31, 21)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 15)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombre:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(120, 67)
-        Me.TextBox1.MaxLength = 128
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(126, 64)
-        Me.TextBox1.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(2, 67)
+        Me.Label1.Location = New System.Drawing.Point(10, 54)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(78, 15)
         Me.Label1.TabIndex = 0
@@ -117,68 +118,73 @@ Partial Class frmFuncion
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.37795!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.BtnbuscarFunci, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.btneditarfunci, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.btningresarfunc, 2, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 165)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnSalir, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnBorrar, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnEditar, 0, 0)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 146)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(254, 60)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(366, 52)
         Me.TableLayoutPanel2.TabIndex = 1
         '
-        'BtnbuscarFunci
+        'btnSalir
         '
-        Me.BtnbuscarFunci.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.btnSalir.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnbuscarFunci.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BtnbuscarFunci.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.BtnbuscarFunci.ForeColor = System.Drawing.Color.White
-        Me.BtnbuscarFunci.Location = New System.Drawing.Point(3, 3)
-        Me.BtnbuscarFunci.Name = "BtnbuscarFunci"
-        Me.BtnbuscarFunci.Size = New System.Drawing.Size(77, 54)
-        Me.BtnbuscarFunci.TabIndex = 0
-        Me.BtnbuscarFunci.Text = "Borrar"
-        Me.BtnbuscarFunci.UseVisualStyleBackColor = False
+        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnSalir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnSalir.ForeColor = System.Drawing.Color.Black
+        Me.btnSalir.Location = New System.Drawing.Point(248, 3)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(115, 46)
+        Me.btnSalir.TabIndex = 2
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = False
         '
-        'btneditarfunci
+        'btnBorrar
         '
-        Me.btneditarfunci.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.btnBorrar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btneditarfunci.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btneditarfunci.ForeColor = System.Drawing.Color.White
-        Me.btneditarfunci.Location = New System.Drawing.Point(86, 3)
-        Me.btneditarfunci.Name = "btneditarfunci"
-        Me.btneditarfunci.Size = New System.Drawing.Size(81, 54)
-        Me.btneditarfunci.TabIndex = 1
-        Me.btneditarfunci.Text = "Editar Nombre"
-        Me.btneditarfunci.UseVisualStyleBackColor = True
+        Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnBorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnBorrar.ForeColor = System.Drawing.Color.Black
+        Me.btnBorrar.Location = New System.Drawing.Point(122, 3)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(120, 46)
+        Me.btnBorrar.TabIndex = 0
+        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.UseVisualStyleBackColor = False
         '
-        'btningresarfunc
+        'btnEditar
         '
-        Me.btningresarfunc.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.btnEditar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btningresarfunc.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btningresarfunc.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btningresarfunc.ForeColor = System.Drawing.Color.White
-        Me.btningresarfunc.Location = New System.Drawing.Point(173, 3)
-        Me.btningresarfunc.Name = "btningresarfunc"
-        Me.btningresarfunc.Size = New System.Drawing.Size(78, 54)
-        Me.btningresarfunc.TabIndex = 2
-        Me.btningresarfunc.Text = "Ingresar"
-        Me.btningresarfunc.UseVisualStyleBackColor = False
+        Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnEditar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnEditar.ForeColor = System.Drawing.Color.Black
+        Me.btnEditar.Location = New System.Drawing.Point(3, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(113, 46)
+        Me.btnEditar.TabIndex = 1
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = False
         '
         'frmFuncion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(262, 232)
+        Me.ClientSize = New System.Drawing.Size(374, 205)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(390, 244)
+        Me.MinimumSize = New System.Drawing.Size(390, 244)
         Me.Name = "frmFuncion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Ver Función"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
@@ -191,11 +197,11 @@ Partial Class frmFuncion
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents BtnbuscarFunci As Button
-    Friend WithEvents btneditarfunci As Button
-    Friend WithEvents btningresarfunc As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents btnBorrar As Button
+    Friend WithEvents btnEditar As Button
+    Friend WithEvents btnSalir As Button
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents txtDesc As RichTextBox
 End Class

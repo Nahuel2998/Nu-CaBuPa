@@ -3,7 +3,7 @@
     Dim editando As Boolean = False ' Controla si se esta en modo de edicion o no
     Dim tmpDatos(3) As String
     Dim cambio As Boolean = False   ' Controla si han habido cambios desde el ultimo modo de edicion
-    'Dim dt_Funcion As New DataTable
+    Dim dt_Funciones As New DataTable
     Dim datos() As String
     Public Sub New(ByVal DatosI() As String)
         InitializeComponent()
@@ -15,14 +15,16 @@
     End Sub
 
     Private Sub frmFuncionario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'ActualizarTabla()
+        ActualizarTabla()
         If (ID = -1) Then
+            tcF.TabPages.RemoveAt(1)
             Alternar()
         End If
         btnSalir.Select()
     End Sub
+
     Private Sub CargarDatos()
-        datos = {txtNombre.Text, txtTelefono.Text, If(ValidarEmail(txtMail.Text), txtMail.Text, tmpDatos(3))}
+        datos = {txtTelefono.Text, txtNombre.Text, If(ValidarEmail(txtMail.Text), txtMail.Text, tmpDatos(3))}
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
@@ -41,9 +43,7 @@
                 AlternarCambioHandlers()
             End If
         Else
-            tmpDatos(0) = txtNombre.Text
-            tmpDatos(1) = txtTelefono.Text
-            tmpDatos(2) = txtMail.Text
+            tmpDatos = {txtTelefono.Text, txtNombre.Text, txtMail.Text}
         End If
 
         Alternar()
@@ -59,8 +59,8 @@
             Close()
         Else
             If cambio Then
-                txtNombre.Text = tmpDatos(0)
-                txtTelefono.Text = tmpDatos(1)
+                txtNombre.Text = tmpDatos(1)
+                txtTelefono.Text = tmpDatos(0)
                 txtMail.Text = tmpDatos(2)
                 AlternarCambioHandlers()
             End If
@@ -69,7 +69,7 @@
         End If
     End Sub
 
-    Private Sub Funcionario_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub FrmFuncionario_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If cambio And ID <> -1 Then
             CargarDatos()
             If Not CompararValores(VaciarNull(datos), tmpDatos) Then
@@ -110,7 +110,7 @@
 
     '' Checkean si hay cambios hechos
     '' Si cambio = True, no se llamaran
-    Private Sub txt_ModifiedChanged(sender As Object, e As EventArgs)
+    Private Sub txt_ModifiedChanged(sender As Object, e As EventArgs) Handles txtNombre.ModifiedChanged, txtMail.ModifiedChanged, txtTelefono.ModifiedChanged
         If txtNombre.Modified Or txtMail.Modified Or txtTelefono.Modified Then
             AlternarCambioHandlers()
         End If
@@ -150,11 +150,11 @@
     '    ' TODO: Darle uso.
     'End Sub
 
-    '' Actualizar tabla de Funcionarios
-    'Private Sub ActualizarTabla()
-    '    dt_Publicidad = DevolverTabla(PSQL("ID_Publicidad, Tema", "publicidad", String.Format("ID_Empresa = '{0}'", empresaID)))
-    '    ActualizarTablaC(dt_Publicidad, dgvVSM)
-    'End Sub
+    '' Actualizar tabla de Funciones
+    Private Sub ActualizarTabla()
+        dt_Funciones = DevolverTabla(PSQL("f.ID_Funcion, f.Nombre, f.Descripcion", "Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion", String.Format("t.ID_Funcionario = '{0}'", ID)))
+        ActualizarTablaC(dt_Funciones, dgvFunciones)
+    End Sub
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
         Dim formDelete As New frmConfirmarBorrado(FUNCIONARIO, {ID}, True)

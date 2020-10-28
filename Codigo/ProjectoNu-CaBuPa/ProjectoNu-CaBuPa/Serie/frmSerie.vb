@@ -53,8 +53,7 @@ Public Class frmSerie
 
             Alternar()
         Else
-            tmpDatos(0) = If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "")
-            tmpDatos(1) = txtNombre.Text
+            tmpDatos = {If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), ""), txtNombre.Text}
 
             Alternar()
         End If

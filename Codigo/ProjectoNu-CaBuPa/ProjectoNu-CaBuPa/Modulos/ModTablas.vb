@@ -14,6 +14,7 @@ Module ModTablas
     Public dt_Serie As DataTable
     Public dt_Empresa As DataTable
     Public dt_BFuncionario As DataTable
+    Public dt_BFuncion As DataTable
 
     Public Const VIDEO As Byte = 1
     Public Const SERIE As Byte = 2
@@ -26,6 +27,7 @@ Module ModTablas
     Public Const TANDASHORAS As Byte = 9
     Public Const FUNTRABAJA As Byte = 10
     Public Const CUOTA As Byte = 11
+    Public Const FUNCION As Byte = 12
     Public Function ValidarEmail(ByVal s As String) As Boolean
         Return Regex.IsMatch(s, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
     End Function

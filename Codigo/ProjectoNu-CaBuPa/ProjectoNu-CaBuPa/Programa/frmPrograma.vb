@@ -231,7 +231,7 @@ Public Class frmPrograma
         Dim datos() As String = {Format(dtpAP.Value().Date, "yyyy-MM-dd"), txtHI.Value, txtHF.Value, programaID}
         PrepararInsert("fechaprograma", datos, 0)
         txtHI.Value = Now
-        txtHF.value = Now
+        txtHF.Value = Now
         BFecha(cbFMes.Checked)
     End Sub
 
