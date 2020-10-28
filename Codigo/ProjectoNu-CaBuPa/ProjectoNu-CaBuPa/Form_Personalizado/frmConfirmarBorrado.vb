@@ -39,8 +39,6 @@
                 PrepararDelete("Programa", "ID_Programa", id)
             Case FUNCIONARIO
                 PrepararDelete("Funcionario", "ID_Funcionario", id)
-            Case FUNCION
-                PrepararDelete("Funcion", "ID_Funcion", id)
             Case FECHAPROGRAMA
                 BSQL("Fechaprograma", CreadorCondicion("fecha", id, True) + " and " + CreadorCondicion("Hora_inicio", id2) + "and id_programa='" + id3(0) + "'")
             Case PUBLICIDADPROGRAMA
@@ -49,6 +47,10 @@
                 BSQL("tanda", CreadorCondicion("Hora_Inicio", id))
             Case CUOTA
                 BSQL("programacuota", CreadorCondicion("id_programa_cuota", id))
+            Case FUNCION
+                PrepararDelete("Funcion", "ID_Funcion", id)
+            Case CUOTAPUBLICIDAD
+                BSQL("publicidadcuota", CreadorCondicion("id_publicidadcuota", id))
         End Select
         If (c) Then
             Owner.Close()

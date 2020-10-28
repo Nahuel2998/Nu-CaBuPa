@@ -148,7 +148,7 @@ Foreign KEY (ID_Programa) references Programa(`ID_Programa`)
 CREATE TABLE `publicidadcuota` (
   `ID_PublicidadCuota` int(6) unsigned NOT NULL AUTO_INCREMENT,
 `Fecha_Pago` date DEFAULT NULL,
-`Precio` int(6) unsigned NOT NULL,
+`Precio` decimal(5,2) unsigned NOT NULL,
   `ID_Publicidad` int(6) unsigned NOT NULL,
   `Fecha_Emision` date NOT NULL,
   PRIMARY KEY (`ID_PublicidadCuota`),

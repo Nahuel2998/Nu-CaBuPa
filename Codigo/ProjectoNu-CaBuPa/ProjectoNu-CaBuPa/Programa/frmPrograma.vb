@@ -198,12 +198,11 @@ Public Class frmPrograma
         End If
     End Sub
     Private Sub BuscarCuota()
-        Dim Condicion As String = String.Format("id_programa='{0}' and Fecha_Pago is{1}null and year(fecha_emision)={2}", programaID, If(cbPagados.Checked, " not ", ""), Year(dtpYearCuota.Value))
+        Dim Condicion As String = String.Format("id_programa='{0}' and Fecha_Pago is{1}null and year(fecha_emision)={2}", programaID, If(cbPagados.Checked, " not ", " "), Year(dtpYearCuota.Value))
         TBuscada = "CuotaPrograma"
         Dim Columna As String = "id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor'"
         Dim Tablas As String = "programacuota"
-        Tablas = String.Format(Tablas, programaID)
-        If Not (bwCargador.IsBusy) And TBuscada <> "" Then
+        If Not (bwCargador.IsBusy) Then
             bwCargador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
         End If
     End Sub
@@ -231,7 +230,7 @@ Public Class frmPrograma
         Dim datos() As String = {Format(dtpAP.Value().Date, "yyyy-MM-dd"), txtHI.Value, txtHF.Value, programaID}
         PrepararInsert("fechaprograma", datos, 0)
         txtHI.Value = Now
-        txtHF.Value = Now
+        txtHF.value = Now
         BFecha(cbFMes.Checked)
     End Sub
 
@@ -321,9 +320,6 @@ Public Class frmPrograma
         BFechaRango(cbBMA.Checked)
     End Sub
 
-
-
-
     Private Sub btnBorrarF_Click(sender As Object, e As EventArgs) Handles btnBorrarF.Click
         If Not IsNothing(dt_funcionario) Then
             If (dt_funcionario.Rows.Count > 0) Then
@@ -348,11 +344,12 @@ Public Class frmPrograma
                 Dim Id() As String = ObtenerCheck(dt_funcionario, dgvFuncionarios, 1)
                 Dim Id1() As String = ObtenerCheck(dt_funcionario, dgvFuncionarios, 4)
                 If Not Id.Length = 0 Then
-                    USQL("funtrabaja", "fecha_finalizacion=curdate()", String.Format("id_programa='{0}'", programaID) + " and " + CreadorCondicion("ID_TrabajaComo", Id) + " and " + CreadorCondicion("fecha_inicio", Id1, True))
+                    USQL("funtrabaja", String.Format("fecha_finalizacion='{0}'", Format(dtpTF.Value, "yyyy-MM-dd")), String.Format("id_programa='{0}'", programaID) + " and " + CreadorCondicion("ID_TrabajaComo", Id) + " and " + CreadorCondicion("fecha_inicio", Id1, True) + String.Format(" and fecha_inicio<='{0}'", Format(dtpTF.Value, "yyyy-MM-dd")))
                     BuscarFuncionario()
                 End If
             End If
         End If
+        dtpTF.Value = Now
     End Sub
 
 
@@ -398,7 +395,7 @@ Public Class frmPrograma
                 If (dt_Cuotas.Rows.Count > 0) Then
                     Dim RId() As String = ObtenerCheck(dt_Cuotas, dgvVerCuota, 0)
                     If Not RId.Length = 0 Then
-                        Dim formDelete As New frmConfirmarBorrado(CUOTA, {programaID}, False, RId)
+                        Dim formDelete As New frmConfirmarBorrado(CUOTA, RId, False)
                         formDelete.ShowDialog(Me)
                         BuscarCuota()
                     End If
@@ -439,4 +436,6 @@ Public Class frmPrograma
         End If
         txtHF.MinDate = txtHI.Value
     End Sub
+
+
 End Class

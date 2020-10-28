@@ -19,6 +19,8 @@ Public Class frmPublicidad
     Dim fecha2 As String
     Dim fechaP1 As String
     Dim fechaP2 As String
+    Private dt_Cuotas As DataTable
+    Private CuotaId As Integer = -1
     Public Sub New(ByVal pid As Integer)
         InitializeComponent()
         publicidadID = pid
@@ -164,7 +166,7 @@ Public Class frmPublicidad
     End Sub
 
     Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
-        If (tcP.SelectedIndex() = 1 Or tcP.SelectedIndex() = 2) Then
+        If (tcP.SelectedIndex() = 1 Or tcP.SelectedIndex() = 2 Or tcP.SelectedIndex() = 4) Then
             If Not (bwDatos.IsBusy) Then
                 bwDatos.RunWorkerAsync(tcP.SelectedIndex())
             End If
@@ -181,6 +183,13 @@ Public Class frmPublicidad
                 TBuscada = "Fecha"
                 Dim condicion = "true"
                 dt_fechasA = DevolverTabla(PSQL("distinct a.hora_inicio as 'Hora de tanda', fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalización'", "aparecepubli a left join tanda t on t.hora_inicio = null", condicion))
+            Case 4
+                Dim Condicion As String = String.Format("id_publicidad='{0}' and Fecha_Pago is{1}null and year(fecha_emision)={2}", publicidadID, If(cbPagados.Checked, " not ", " "), Year(dtpYearCuota.Value))
+                TBuscada = "CuotaPublicidad"
+                Dim Columna As String = "id_publicidadcuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor'"
+                Dim Tablas As String = "publicidadcuota"
+                dt_Cuotas = DevolverTabla(PSQL(Columna, Tablas, Condicion))
+                ModLog.Guardar(PSQL(Columna, Tablas, Condicion))
         End Select
     End Sub
     Private Sub ATAntigua()
@@ -193,6 +202,8 @@ Public Class frmPublicidad
                 CargarComboTandas()
             Case "Fecha"
                 ATAntigua()
+            Case "CuotaPublicidad"
+                ActualizarTablaC(dt_Cuotas, dgvVerCuota, True)
         End Select
     End Sub
 
@@ -322,7 +333,78 @@ Public Class frmPublicidad
             End If
         End If
     End Sub
-    Private Sub dgvTE_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTE.CellClick
+    Private Sub dgvTE_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTE.CellClick, dgvVerCuota.CellClick
         ClickCheck(sender, e.ColumnIndex)
+    End Sub
+    Private Sub BuscarCuota()
+        If Not (bwDatos.IsBusy) Then
+            bwDatos.RunWorkerAsync(4)
+        End If
+    End Sub
+    Private Sub dtpYearCuota_ValueChanged(sender As Object, e As EventArgs) Handles dtpYearCuota.ValueChanged
+        BuscarCuota()
+    End Sub
+
+    Private Sub cbPagados_CheckedChanged(sender As Object, e As EventArgs) Handles cbPagados.CheckedChanged
+        BuscarCuota()
+    End Sub
+    Private Sub CambiarICuota()
+        If (CuotaId = -1) Then
+            btnBorrarC.Text = "Borrar"
+            btnInsertarC.Text = "Añadir"
+            gbAlquiler.Text = "Ingreso"
+            VaciarCuota()
+        Else
+            btnBorrarC.Text = "Cancelar"
+            btnInsertarC.Text = "Actualizar"
+            gbAlquiler.Text = "Edición"
+        End If
+    End Sub
+    Private Sub btnBorrarC_Click(sender As Object, e As EventArgs) Handles btnBorrarC.Click
+        If (CuotaId = -1) Then
+            If Not IsNothing(dt_Cuotas) Then
+                If (dt_Cuotas.Rows.Count > 0) Then
+                    Dim RId() As String = ObtenerCheck(dt_Cuotas, dgvVerCuota, 0)
+                    If Not RId.Length = 0 Then
+                        Dim formDelete As New frmConfirmarBorrado(CUOTAPUBLICIDAD, RId, False)
+                        formDelete.ShowDialog(Me)
+                        BuscarCuota()
+                    End If
+                End If
+            End If
+        Else
+            CuotaId = -1
+            CambiarICuota()
+        End If
+    End Sub
+    Private Sub VaciarCuota()
+        dtpFE.Value = Now
+        dtpFP.Value = Now
+        cbP.Checked = False
+        nudValor.Value = 0
+    End Sub
+    Private Sub btnInsertarC_Click(sender As Object, e As EventArgs) Handles btnInsertarC.Click
+        If (CuotaId = -1) Then
+            ISQL("publicidadcuota", "id_publicidad,fecha_emision, fecha_pago,precio", String.Format("'{0}','{1}',{2},'{3}'", publicidadID, Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value))
+            VaciarCuota()
+            BuscarCuota()
+        Else
+            USQL("publicidadcuota", String.Format("fecha_emision='{0}', fecha_pago={1},precio='{2}'", Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value), String.Format("id_publicidad_cuota='{0}'", CuotaId))
+            CuotaId = -1
+            CambiarICuota()
+            BuscarCuota()
+        End If
+    End Sub
+
+    Private Sub dgvVerCuota_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVerCuota.CellDoubleClick
+        Dim i() As String = CargarID(dt_Cuotas, dgvVerCuota, {0, 1, 2, 3})
+        If (i.Length <> 0) Then
+            CuotaId = i(0)
+            dtpFE.Value = i(1)
+            dtpFP.Value = If(i(2) = "", Now, i(2))
+            cbP.Checked = i(2) IsNot ""
+            nudValor.Value = i(3)
+        End If
+        CambiarICuota()
     End Sub
 End Class
