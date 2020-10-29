@@ -1211,3 +1211,40 @@
 28/10/2020 10:21:04 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-28' 
 28/10/2020 10:21:05 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
 28/10/2020 10:25:43 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 19:53:08 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 19:53:16 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+28/10/2020 19:53:25 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+28/10/2020 19:58:13 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 19:59:50 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+28/10/2020 20:00:02 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+28/10/2020 21:26:41 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 21:37:00 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 21:37:52 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 21:38:29 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+28/10/2020 21:38:31 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+28/10/2020 21:39:21 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 21:40:11 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 21:40:21 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+28/10/2020 21:40:27 DESKTOP-SDVEG3U ' Insert IGNORE into evento ( nombre,descripcion,ID_Video ) values ('MAnu','kkdkd',null ) 
+28/10/2020 21:40:30 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+28/10/2020 22:00:04 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 22:00:16 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+28/10/2020 22:00:22 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-22' ) 
+28/10/2020 22:00:25 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-10-22' ,'2020-11-12' ) 
+28/10/2020 22:00:25 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-10-22' ,'2020-11-12' ) 
+28/10/2020 22:00:27 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-23' ) 
+28/10/2020 22:00:29 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-17' ) 
+28/10/2020 22:00:30 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-17' ) 
+28/10/2020 22:00:31 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-25' ) 
+28/10/2020 22:00:34 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-24' ) 
+28/10/2020 22:08:12 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+28/10/2020 22:08:20 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+28/10/2020 22:08:26 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-10-17' ,'2020-10-23' ,'2020-10-24' ,'2020-10-25' ,'2020-12-12' ) 
+28/10/2020 22:08:26 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-10-17' ,'2020-10-23' ,'2020-10-24' ,'2020-10-25' ,'2020-12-12' ) 
+28/10/2020 22:08:29 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-14' ) 
+28/10/2020 22:08:29 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-15' ) 
+28/10/2020 22:08:29 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-16' ) 
+28/10/2020 22:08:29 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-17' ) 
+28/10/2020 22:08:29 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-18' ) 
+28/10/2020 22:08:29 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-19' ) 
+28/10/2020 22:08:29 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-20' ) 

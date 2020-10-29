@@ -1,6 +1,6 @@
 ﻿Public Class frmVideo
     Dim videoID As Integer
-    Public editando As Boolean = False
+    Private editando As Boolean = False
     Dim datos() As String
     Dim datosI() As String
     Dim dtV As DataTable
@@ -156,4 +156,5 @@
         Dim formDelete As New frmConfirmarBorrado(VIDEO, {videoID}, True)
         formDelete.ShowDialog(Me)
     End Sub
+
 End Class

@@ -92,7 +92,9 @@ Foreign key (ID_Publicidad) references Publicidad(ID_Publicidad)
 CREATE TABLE `eventomuestrapubli` (
   `ID_Evento` int(6) unsigned NOT NULL,
   `ID_Publicidad` int(6) unsigned NOT NULL,
-  PRIMARY KEY (`ID_Evento`,`ID_Publicidad`),
+  `Fecha_Inicio` date NOT NULL,
+  `Fecha_Finalizacion` date DEFAULT NULL,
+  PRIMARY KEY (`ID_Evento`,`ID_Publicidad`,`Fecha_Inicio`),
   Foreign KEY (ID_Publicidad) references Publicidad(`ID_Publicidad`),
 Foreign KEY (ID_Evento) references Evento(ID_Evento)
 );

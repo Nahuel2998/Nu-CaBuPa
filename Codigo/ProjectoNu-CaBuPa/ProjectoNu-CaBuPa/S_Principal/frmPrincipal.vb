@@ -455,9 +455,17 @@ Public Class frmPrincipal
     Private Sub FormPrograma_FormClosed(sender As Object, e As FormClosedEventArgs)
         btnBuscarBP.PerformClick()
     End Sub
+    Private Sub FormEvento_FormClosed(sender As Object, e As FormClosedEventArgs)
+        btnBEvento.PerformClick()
+        If Not (BWEventos.IsBusy) Then
+            BWEventos.RunWorkerAsync()
+        End If
+    End Sub
 
     Private Sub btnagendarEvento_Click(sender As Object, e As EventArgs) Handles btnagendarEvento.Click
-
+        Dim formEvento As New frmEvento(-1)
+        AddHandler formEvento.FormClosed, AddressOf FormEvento_FormClosed
+        formEvento.ShowDialog()
     End Sub
 
     Private Sub btnLimpiarPubliB_Click(sender As Object, e As EventArgs) Handles btnLimpiarPubliB.Click
@@ -624,5 +632,26 @@ Public Class frmPrincipal
 
     Private Sub btnBEvento_Click(sender As Object, e As EventArgs) Handles btnBEvento.Click
         BorrarConfirmar(Me, dt_BEvento, dgvBEvento, EVENTO, btnBEvento)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim formEvento As New frmEvento(-1)
+        AddHandler formEvento.FormClosed, AddressOf FormEvento_FormClosed
+        formEvento.ShowDialog()
+    End Sub
+
+    Private Sub dgvBEvento_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBEvento.CellDoubleClick
+        Dim i As Integer = CargarID(dt_BEvento, dgvBEvento)
+        If (i <> -1) Then
+            Dim formEvento As New frmEvento(i)
+            AddHandler formEvento.FormClosed, AddressOf FormEvento_FormClosed
+            formEvento.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnLimpiarEvento.Click
+        txtNombreE.Clear()
+        txtDescripcionE.Clear()
+        ActualizarTablaC(Nothing, dgvBEvento, False) 'fix
     End Sub
 End Class

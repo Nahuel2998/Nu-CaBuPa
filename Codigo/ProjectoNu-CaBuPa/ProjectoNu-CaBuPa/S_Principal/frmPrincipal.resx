@@ -3331,7 +3331,7 @@
     <value>Vertical</value>
   </data>
   <data name="dgvVB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 233</value>
+    <value>288, 233</value>
   </data>
   <data name="dgvVB.TabIndex" type="System.Int32, mscorlib">
     <value>12394293</value>
@@ -6885,46 +6885,46 @@
   <data name="&gt;&gt;Panel35.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Button4.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+  <data name="btnLimpiarEvento.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
-  <data name="Button4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="btnLimpiarEvento.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="Button4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnLimpiarEvento.Font" type="System.Drawing.Font, System.Drawing">
     <value>Mongolian Baiti, 10.2pt</value>
   </data>
-  <data name="Button4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnLimpiarEvento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Button4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnLimpiarEvento.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="Button4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnLimpiarEvento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>12, 12, 12, 12</value>
   </data>
-  <data name="Button4.MinimumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="btnLimpiarEvento.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>112, 10</value>
   </data>
-  <data name="Button4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnLimpiarEvento.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 46</value>
   </data>
-  <data name="Button4.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnLimpiarEvento.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="Button4.Text" xml:space="preserve">
+  <data name="btnLimpiarEvento.Text" xml:space="preserve">
     <value>Limpiar Busqueda</value>
   </data>
-  <data name="&gt;&gt;Button4.Name" xml:space="preserve">
-    <value>Button4</value>
+  <data name="&gt;&gt;btnLimpiarEvento.Name" xml:space="preserve">
+    <value>btnLimpiarEvento</value>
   </data>
-  <data name="&gt;&gt;Button4.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnLimpiarEvento.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Button4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnLimpiarEvento.Parent" xml:space="preserve">
     <value>Panel36</value>
   </data>
-  <data name="&gt;&gt;Button4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnLimpiarEvento.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="Panel36.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">

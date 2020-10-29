@@ -42,6 +42,10 @@ Module ModTablas
         dt = DevolverTabla(PSQL("fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "pmuestrapubli", String.Format("id_publicidad = {0} and id_programa='{1}' and fecha_inicio <='{3}' and fecha_finalizacion>='{2}'", id, programaid, fecha1, fecha2)))
         ActualizarTablaC(dt, dgvP, False)
     End Sub
+    Public Sub CargarPubliE(ByRef dt As DataTable, ByRef dgvP As DataGridView, ByVal id As String, ByVal eventoid As String, ByVal fecha1 As String, ByVal fecha2 As String)
+        dt = DevolverTabla(PSQL("fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "eventomuestrapubli", String.Format("id_publicidad = {0} and id_evento='{1}' and fecha_inicio <='{3}' and fecha_finalizacion>='{2}'", id, eventoid, fecha1, fecha2)))
+        ActualizarTablaC(dt, dgvP, False)
+    End Sub
     Public Sub PubliDeFecha(ByRef dt As DataTable, ByRef dgvP As DataGridView, ByVal programaid As String, ByVal fecha1 As Date)
         dt = DevolverTabla(PSQL("p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad", String.Format("id_programa='{0}' and fecha_inicio <='{1}' and fecha_finalizacion>='{1}'", programaid, Format(fecha1, "yyyy-MM-dd"))))
         ModLog.Guardar(PSQL("p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad", String.Format("id_programa='{0}' and fecha_inicio <='{1}' and fecha_finalizacion>='{1}'", programaid, Format(fecha1, "yyyy-MM-dd"))))

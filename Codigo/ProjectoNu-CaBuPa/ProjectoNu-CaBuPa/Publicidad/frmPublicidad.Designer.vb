@@ -22,16 +22,18 @@ Partial Class frmPublicidad
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbNotas = New System.Windows.Forms.GroupBox()
         Me.txtTema = New System.Windows.Forms.RichTextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -80,6 +82,23 @@ Partial Class frmPublicidad
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dtpFFP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dtpFIP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.tbEventos = New System.Windows.Forms.TabPage()
+        Me.dgvAEvento = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.cbEvento = New System.Windows.Forms.ComboBox()
+        Me.btnBEvento = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.txtNEvento = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.btnBPEvento = New System.Windows.Forms.Button()
+        Me.btnIEvento = New System.Windows.Forms.Button()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.dtpFFE = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtpFIE = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.tbCuotas = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.dgvVerCuota = New System.Windows.Forms.DataGridView()
@@ -111,6 +130,8 @@ Partial Class frmPublicidad
         CType(Me.dgvTE, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbProgramas.SuspendLayout()
         CType(Me.dgvProgramaP, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tbEventos.SuspendLayout()
+        CType(Me.dgvAEvento, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbCuotas.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvVerCuota, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -228,6 +249,7 @@ Partial Class frmPublicidad
         Me.tcP.Controls.Add(Me.tbTandas)
         Me.tcP.Controls.Add(Me.tbTandasE)
         Me.tcP.Controls.Add(Me.tbProgramas)
+        Me.tcP.Controls.Add(Me.tbEventos)
         Me.tcP.Controls.Add(Me.tbCuotas)
         Me.tcP.Location = New System.Drawing.Point(12, 12)
         Me.tcP.Name = "tcP"
@@ -331,8 +353,8 @@ Partial Class frmPublicidad
         Me.dgvFechas.AllowUserToDeleteRows = False
         Me.dgvFechas.AllowUserToResizeColumns = False
         Me.dgvFechas.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        Me.dgvFechas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black
+        Me.dgvFechas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle27
         Me.dgvFechas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -347,8 +369,8 @@ Partial Class frmPublicidad
         Me.dgvFechas.ReadOnly = True
         Me.dgvFechas.RowHeadersVisible = False
         Me.dgvFechas.RowHeadersWidth = 51
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        Me.dgvFechas.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black
+        Me.dgvFechas.RowsDefaultCellStyle = DataGridViewCellStyle28
         Me.dgvFechas.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvFechas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvFechas.Size = New System.Drawing.Size(559, 124)
@@ -454,8 +476,8 @@ Partial Class frmPublicidad
         Me.dgvTE.AllowUserToDeleteRows = False
         Me.dgvTE.AllowUserToResizeColumns = False
         Me.dgvTE.AllowUserToResizeRows = False
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        Me.dgvTE.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black
+        Me.dgvTE.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle29
         Me.dgvTE.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -470,8 +492,8 @@ Partial Class frmPublicidad
         Me.dgvTE.ReadOnly = True
         Me.dgvTE.RowHeadersVisible = False
         Me.dgvTE.RowHeadersWidth = 51
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        Me.dgvTE.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black
+        Me.dgvTE.RowsDefaultCellStyle = DataGridViewCellStyle30
         Me.dgvTE.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvTE.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvTE.Size = New System.Drawing.Size(559, 298)
@@ -534,8 +556,8 @@ Partial Class frmPublicidad
         Me.dgvProgramaP.AllowUserToDeleteRows = False
         Me.dgvProgramaP.AllowUserToResizeColumns = False
         Me.dgvProgramaP.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
-        Me.dgvProgramaP.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black
+        Me.dgvProgramaP.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle31
         Me.dgvProgramaP.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -550,8 +572,8 @@ Partial Class frmPublicidad
         Me.dgvProgramaP.ReadOnly = True
         Me.dgvProgramaP.RowHeadersVisible = False
         Me.dgvProgramaP.RowHeadersWidth = 51
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
-        Me.dgvProgramaP.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle32.ForeColor = System.Drawing.Color.Black
+        Me.dgvProgramaP.RowsDefaultCellStyle = DataGridViewCellStyle32
         Me.dgvProgramaP.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvProgramaP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProgramaP.Size = New System.Drawing.Size(559, 106)
@@ -591,6 +613,7 @@ Partial Class frmPublicidad
         '
         'btnPrograma
         '
+        Me.btnPrograma.ForeColor = System.Drawing.Color.Black
         Me.btnPrograma.Location = New System.Drawing.Point(411, 47)
         Me.btnPrograma.Name = "btnPrograma"
         Me.btnPrograma.Size = New System.Drawing.Size(87, 27)
@@ -634,7 +657,7 @@ Partial Class frmPublicidad
         Me.btnBorrarP.Location = New System.Drawing.Point(6, 314)
         Me.btnBorrarP.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBorrarP.Name = "btnBorrarP"
-        Me.btnBorrarP.Size = New System.Drawing.Size(286, 45)
+        Me.btnBorrarP.Size = New System.Drawing.Size(221, 45)
         Me.btnBorrarP.TabIndex = 18
         Me.btnBorrarP.Text = "Borrar"
         Me.btnBorrarP.UseVisualStyleBackColor = False
@@ -647,10 +670,10 @@ Partial Class frmPublicidad
         Me.btnIngresarP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnIngresarP.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnIngresarP.ForeColor = System.Drawing.Color.Black
-        Me.btnIngresarP.Location = New System.Drawing.Point(283, 314)
+        Me.btnIngresarP.Location = New System.Drawing.Point(316, 314)
         Me.btnIngresarP.Margin = New System.Windows.Forms.Padding(4)
         Me.btnIngresarP.Name = "btnIngresarP"
-        Me.btnIngresarP.Size = New System.Drawing.Size(283, 45)
+        Me.btnIngresarP.Size = New System.Drawing.Size(250, 45)
         Me.btnIngresarP.TabIndex = 17
         Me.btnIngresarP.Text = "Ingresar"
         Me.btnIngresarP.UseVisualStyleBackColor = False
@@ -699,6 +722,201 @@ Partial Class frmPublicidad
         Me.dtpFIP.Size = New System.Drawing.Size(200, 27)
         Me.dtpFIP.TabIndex = 12
         '
+        'tbEventos
+        '
+        Me.tbEventos.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.tbEventos.Controls.Add(Me.dgvAEvento)
+        Me.tbEventos.Controls.Add(Me.Label14)
+        Me.tbEventos.Controls.Add(Me.cbEvento)
+        Me.tbEventos.Controls.Add(Me.btnBEvento)
+        Me.tbEventos.Controls.Add(Me.Label15)
+        Me.tbEventos.Controls.Add(Me.txtNEvento)
+        Me.tbEventos.Controls.Add(Me.Label16)
+        Me.tbEventos.Controls.Add(Me.btnBPEvento)
+        Me.tbEventos.Controls.Add(Me.btnIEvento)
+        Me.tbEventos.Controls.Add(Me.Label17)
+        Me.tbEventos.Controls.Add(Me.Label18)
+        Me.tbEventos.Controls.Add(Me.Label19)
+        Me.tbEventos.Controls.Add(Me.dtpFFE)
+        Me.tbEventos.Controls.Add(Me.dtpFIE)
+        Me.tbEventos.Location = New System.Drawing.Point(4, 27)
+        Me.tbEventos.Name = "tbEventos"
+        Me.tbEventos.Size = New System.Drawing.Size(573, 369)
+        Me.tbEventos.TabIndex = 5
+        Me.tbEventos.Text = "Eventos"
+        '
+        'dgvAEvento
+        '
+        Me.dgvAEvento.AllowUserToAddRows = False
+        Me.dgvAEvento.AllowUserToDeleteRows = False
+        Me.dgvAEvento.AllowUserToResizeColumns = False
+        Me.dgvAEvento.AllowUserToResizeRows = False
+        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black
+        Me.dgvAEvento.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle25
+        Me.dgvAEvento.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvAEvento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvAEvento.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.dgvAEvento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvAEvento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.dgvAEvento.Location = New System.Drawing.Point(6, 196)
+        Me.dgvAEvento.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvAEvento.MultiSelect = False
+        Me.dgvAEvento.Name = "dgvAEvento"
+        Me.dgvAEvento.ReadOnly = True
+        Me.dgvAEvento.RowHeadersVisible = False
+        Me.dgvAEvento.RowHeadersWidth = 51
+        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black
+        Me.dgvAEvento.RowsDefaultCellStyle = DataGridViewCellStyle26
+        Me.dgvAEvento.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
+        Me.dgvAEvento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvAEvento.Size = New System.Drawing.Size(559, 106)
+        Me.dgvAEvento.TabIndex = 39
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Fecha Inicio"
+        Me.DataGridViewTextBoxColumn5.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Fecha Finalización"
+        Me.DataGridViewTextBoxColumn6.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(91, 84)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(58, 18)
+        Me.Label14.TabIndex = 38
+        Me.Label14.Text = "Evento"
+        '
+        'cbEvento
+        '
+        Me.cbEvento.BackColor = System.Drawing.SystemColors.Window
+        Me.cbEvento.FormattingEnabled = True
+        Me.cbEvento.Location = New System.Drawing.Point(162, 81)
+        Me.cbEvento.Name = "cbEvento"
+        Me.cbEvento.Size = New System.Drawing.Size(243, 26)
+        Me.cbEvento.TabIndex = 37
+        '
+        'btnBEvento
+        '
+        Me.btnBEvento.ForeColor = System.Drawing.Color.Black
+        Me.btnBEvento.Location = New System.Drawing.Point(411, 46)
+        Me.btnBEvento.Name = "btnBEvento"
+        Me.btnBEvento.Size = New System.Drawing.Size(87, 27)
+        Me.btnBEvento.TabIndex = 36
+        Me.btnBEvento.Text = "Buscar"
+        Me.btnBEvento.UseVisualStyleBackColor = True
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(91, 50)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(65, 18)
+        Me.Label15.TabIndex = 35
+        Me.Label15.Text = "Nombre"
+        '
+        'txtNEvento
+        '
+        Me.txtNEvento.Location = New System.Drawing.Point(162, 45)
+        Me.txtNEvento.Name = "txtNEvento"
+        Me.txtNEvento.Size = New System.Drawing.Size(243, 27)
+        Me.txtNEvento.TabIndex = 34
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(254, 174)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(63, 18)
+        Me.Label16.TabIndex = 33
+        Me.Label16.Text = "Agenda"
+        '
+        'btnBPEvento
+        '
+        Me.btnBPEvento.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBPEvento.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnBPEvento.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnBPEvento.ForeColor = System.Drawing.Color.Black
+        Me.btnBPEvento.Location = New System.Drawing.Point(6, 313)
+        Me.btnBPEvento.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBPEvento.Name = "btnBPEvento"
+        Me.btnBPEvento.Size = New System.Drawing.Size(221, 45)
+        Me.btnBPEvento.TabIndex = 32
+        Me.btnBPEvento.Text = "Borrar"
+        Me.btnBPEvento.UseVisualStyleBackColor = False
+        '
+        'btnIEvento
+        '
+        Me.btnIEvento.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnIEvento.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnIEvento.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnIEvento.ForeColor = System.Drawing.Color.Black
+        Me.btnIEvento.Location = New System.Drawing.Point(316, 313)
+        Me.btnIEvento.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnIEvento.Name = "btnIEvento"
+        Me.btnIEvento.Size = New System.Drawing.Size(250, 45)
+        Me.btnIEvento.TabIndex = 31
+        Me.btnIEvento.Text = "Ingresar"
+        Me.btnIEvento.UseVisualStyleBackColor = False
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(366, 123)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(87, 18)
+        Me.Label17.TabIndex = 30
+        Me.Label17.Text = "Fecha final"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(71, 123)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(99, 18)
+        Me.Label18.TabIndex = 29
+        Me.Label18.Text = "Fecha inicial"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(227, 10)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(81, 25)
+        Me.Label19.TabIndex = 26
+        Me.Label19.Text = "Evento"
+        '
+        'dtpFFE
+        '
+        Me.dtpFFE.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFFE.Location = New System.Drawing.Point(316, 144)
+        Me.dtpFFE.Name = "dtpFFE"
+        Me.dtpFFE.Size = New System.Drawing.Size(200, 27)
+        Me.dtpFFE.TabIndex = 28
+        '
+        'dtpFIE
+        '
+        Me.dtpFIE.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFIE.Location = New System.Drawing.Point(27, 144)
+        Me.dtpFIE.Name = "dtpFIE"
+        Me.dtpFIE.Size = New System.Drawing.Size(200, 27)
+        Me.dtpFIE.TabIndex = 27
+        '
         'tbCuotas
         '
         Me.tbCuotas.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
@@ -731,33 +949,33 @@ Partial Class frmPublicidad
         Me.dgvVerCuota.AllowUserToDeleteRows = False
         Me.dgvVerCuota.AllowUserToResizeColumns = False
         Me.dgvVerCuota.AllowUserToResizeRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvVerCuota.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle33.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle33.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvVerCuota.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle33
         Me.dgvVerCuota.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvVerCuota.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvVerCuota.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvVerCuota.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle34.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle34.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvVerCuota.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle34
         Me.dgvVerCuota.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVerCuota.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PFecha, Me.PFechaPago, Me.ProgramaValor, Me.CEliminar})
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvVerCuota.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle35.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle35.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvVerCuota.DefaultCellStyle = DataGridViewCellStyle35
         Me.dgvVerCuota.Location = New System.Drawing.Point(11, 53)
         Me.dgvVerCuota.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvVerCuota.MultiSelect = False
@@ -765,9 +983,9 @@ Partial Class frmPublicidad
         Me.dgvVerCuota.ReadOnly = True
         Me.dgvVerCuota.RowHeadersVisible = False
         Me.dgvVerCuota.RowHeadersWidth = 62
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
-        Me.dgvVerCuota.RowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle36.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle36.ForeColor = System.Drawing.Color.White
+        Me.dgvVerCuota.RowsDefaultCellStyle = DataGridViewCellStyle36
         Me.dgvVerCuota.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvVerCuota.RowTemplate.Height = 28
         Me.dgvVerCuota.RowTemplate.ReadOnly = True
@@ -946,6 +1164,8 @@ Partial Class frmPublicidad
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.ForeColor = System.Drawing.Color.White
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.MaximumSize = New System.Drawing.Size(623, 471)
+        Me.MinimumSize = New System.Drawing.Size(623, 471)
         Me.Name = "frmPublicidad"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Publicidad"
@@ -962,6 +1182,9 @@ Partial Class frmPublicidad
         Me.tbProgramas.ResumeLayout(False)
         Me.tbProgramas.PerformLayout()
         CType(Me.dgvProgramaP, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tbEventos.ResumeLayout(False)
+        Me.tbEventos.PerformLayout()
+        CType(Me.dgvAEvento, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbCuotas.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
@@ -1040,4 +1263,21 @@ Partial Class frmPublicidad
     Friend WithEvents dtpFE As DateTimePicker
     Friend WithEvents Label12 As Label
     Friend WithEvents dtpFP As DateTimePicker
+    Friend WithEvents tbEventos As TabPage
+    Friend WithEvents dgvAEvento As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents Label14 As Label
+    Friend WithEvents cbEvento As ComboBox
+    Friend WithEvents btnBEvento As Button
+    Friend WithEvents Label15 As Label
+    Friend WithEvents txtNEvento As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents btnBPEvento As Button
+    Friend WithEvents btnIEvento As Button
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents dtpFFE As ColorDateTimePicker
+    Friend WithEvents dtpFIE As ColorDateTimePicker
 End Class

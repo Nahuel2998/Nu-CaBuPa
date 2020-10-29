@@ -218,7 +218,7 @@ Public Class frmPrograma
             Case PROGRAMAS
                 dt_FechaPrograma = TBusca
                 ActualizarTablaC(dt_FechaPrograma, dgvFechaPrograma, False)
-            Case "CuotaPrograma"
+            Case CUOTA
                 dt_Cuotas = TBusca
                 ActualizarTablaC(dt_Cuotas, dgvVerCuota, True)
         End Select

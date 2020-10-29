@@ -53,6 +53,7 @@
                 BSQL("publicidadcuota", CreadorCondicion("id_publicidadcuota", id))
             Case EVENTO
                 BSQL("evento", CreadorCondicion("id_evento", id))
+                BSQL("eventomuestrapubli", CreadorCondicion("id_evento", id))
         End Select
         If (c) Then
             Owner.Close()

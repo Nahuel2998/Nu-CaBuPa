@@ -2,23 +2,28 @@
 
 Public Class frmPublicidad
     Dim publicidadID As Integer
-    Public editando As Boolean = False
+    private editando As Boolean = False
     Dim datos() As String
     Dim datosI() As String
     Private dt_ProgramasP As DataTable
     Private dt_FProgramas As DataTable
+    Private dt_EventosP As DataTable
+    Private dt_FEventos As DataTable
     Private TBuscada As Byte = 0
     Private dt_fechas As DataTable
     Private dt_fechasA As DataTable
     Dim position() As String
     Dim positionTanda() As String
     Dim positionPrograma() As String
-    Dim pos() As UInt16 = {0, 0, 0}
+    Dim positionEvento() As String
+    Dim pos() As UInt16 = {0, 0, 0, 0}
     Dim empresaID As Integer = 0
     Dim fecha1 As String
     Dim fecha2 As String
     Dim fechaP1 As String
     Dim fechaP2 As String
+    Dim fechaE1 As String
+    Dim fechaE2 As String
     Private dt_Cuotas As DataTable
     Private CuotaId As Integer = -1
     Public Sub New(ByVal pid As Integer)
@@ -167,7 +172,7 @@ Public Class frmPublicidad
     End Sub
 
     Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
-        If (tcP.SelectedIndex() = 1 Or tcP.SelectedIndex() = 2 Or tcP.SelectedIndex() = 4) Then
+        If (tcP.SelectedIndex() = 1 Or tcP.SelectedIndex() = 2 Or tcP.SelectedIndex() = 5) Then
             If Not (bwDatos.IsBusy) Then
                 bwDatos.RunWorkerAsync(tcP.SelectedIndex())
             End If
@@ -184,7 +189,21 @@ Public Class frmPublicidad
                 TBuscada = PUBLICIDAD
                 Dim condicion = "true"
                 dt_fechasA = DevolverTabla(PSQL("distinct a.hora_inicio as 'Hora de tanda', fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalización'", "aparecepubli a left join tanda t on t.hora_inicio = null", condicion))
+            Case 3
+                TBuscada = PROGRAMAS
+                Dim condicion = "false"
+                If Not String.IsNullOrWhiteSpace(txtNombreP.Text) Then
+                    condicion = String.Format("Nombre_Programa like '%{0}%'", txtNombreP.Text)
+                End If
+                dt_ProgramasP = DevolverTabla(PSQL("id_programa, Nombre_Programa", "programa", condicion))
             Case 4
+                TBuscada = EVENTO
+                Dim condicion = "false"
+                If Not String.IsNullOrWhiteSpace(txtNombreP.Text) Then
+                    condicion = String.Format("nombre like '%{0}%'", txtNEvento.Text)
+                End If
+                dt_ProgramasP = DevolverTabla(PSQL("id_evento, nombre", "evento", condicion))
+            Case 5
                 Dim Condicion As String = String.Format("id_publicidad='{0}' and Fecha_Pago is{1}null and year(fecha_emision)={2}", publicidadID, If(cbPagados.Checked, " not ", " "), Year(dtpYearCuota.Value))
                 TBuscada = CUOTAPUBLICIDAD
                 Dim Columna As String = "id_publicidadcuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor'"
@@ -201,6 +220,8 @@ Public Class frmPublicidad
         Select Case TBuscada
             Case TANDASHORAS
                 CargarComboTandas()
+            Case PROGRAMAS
+                CargarComboPrograma()
             Case PUBLICIDAD
                 ATAntigua()
             Case CUOTAPUBLICIDAD
@@ -216,6 +237,9 @@ Public Class frmPublicidad
     End Sub
     Private Sub BuscarFP()
         CargarPubliP(dt_FProgramas, dgvProgramaP, publicidadID, If(cbPrograma.SelectedIndex <= 0, "0", positionPrograma(cbPrograma.SelectedIndex - 1)), Format(dtpFIP.Value, "yyyy-MM-dd"), Format(dtpFFP.Value, "yyyy-MM-dd"))
+    End Sub
+    Private Sub BuscarFE()
+        CargarPubliE(dt_FEventos, dgvAEvento, publicidadID, If(cbEvento.SelectedIndex <= 0, "0", positionEvento(cbEvento.SelectedIndex - 1)), Format(dtpFIE.Value, "yyyy-MM-dd"), Format(dtpFFE.Value, "yyyy-MM-dd"))
     End Sub
 
     Private Sub dtpFI_ValueChanged(sender As Object, e As EventArgs) Handles dtpFI.ValueChanged
@@ -258,6 +282,31 @@ Public Class frmPublicidad
             MessageBox.Show("Debe seleccionar un programa para agendar la publicidad")
         End If
     End Sub
+    Private Sub FechasMaxE(Optional ingresar As Boolean = True)
+        fechaE1 = Format(dtpFIE.Value, "yyyy-MM-dd")
+        fechaE2 = Format(dtpFFE.Value, "yyyy-MM-dd")
+        If (cbEvento.SelectedIndex > 0) Then
+            If (dgvAEvento.Rows.Count > 0) Then
+                For i As Integer = 0 To dgvAEvento.Rows.Count - 1
+                    Dim fechaN1 As String = dgvAEvento.Rows(i).Cells(0).Value().ToString
+                    Dim fechaN2 As String = dgvAEvento.Rows(i).Cells(1).Value().ToString
+                    If (CDate(fechaN1) < CDate(fechaE1)) Then
+                        fechaE1 = Format(CDate(fechaN1), "yyyy-MM-dd")
+                    End If
+                    If (CDate(fechaN2) > CDate(fechaE2)) Then
+                        fechaE2 = Format(CDate(fechaN2), "yyyy-MM-dd")
+                    End If
+                Next
+                BSQL("eventomuestrapubli", String.Format("id_publicidad='{0}' and id_evento='{1}' and fecha_inicio >= '{2}' and fecha_finalizacion <= '{3}'", publicidadID, positionEvento(cbEvento.SelectedIndex - 1), fechaE1, fechaE2))
+            End If
+            If (ingresar) Then
+                ISQL("eventomuestrapubli", "id_publicidad, id_evento, fecha_inicio, fecha_finalizacion", String.Format("'{0}','{1}','{2}','{3}'", publicidadID, positionEvento(cbEvento.SelectedIndex - 1), fechaE1, fechaE2))
+            End If
+            BuscarFE()
+        Else
+            MessageBox.Show("Debe seleccionar un evento para agendar la publicidad")
+        End If
+    End Sub
     Private Sub FechasMax(Optional ingresar As Boolean = True)
         fecha1 = Format(dtpFI.Value, "yyyy-MM-dd")
         fecha2 = Format(dtpFF.Value, "yyyy-MM-dd")
@@ -291,7 +340,7 @@ Public Class frmPublicidad
 
     Private Sub btnPrograma_Click(sender As Object, e As EventArgs) Handles btnPrograma.Click
         If Not bwDatos.IsBusy Then
-            bwDatos.RunWorkerAsync(2) 'PSQL("ID_Programa, Nombre_Programa as Nombre, Descripcion", "programa", condicion))
+            bwDatos.RunWorkerAsync(3) 'PSQL("ID_Programa, Nombre_Programa as Nombre, Descripcion", "programa", condicion))
         End If
     End Sub
 
@@ -339,7 +388,7 @@ Public Class frmPublicidad
     End Sub
     Private Sub BuscarCuota()
         If Not (bwDatos.IsBusy) Then
-            bwDatos.RunWorkerAsync(4)
+            bwDatos.RunWorkerAsync(5)
         End If
     End Sub
     Private Sub dtpYearCuota_ValueChanged(sender As Object, e As EventArgs) Handles dtpYearCuota.ValueChanged
@@ -409,4 +458,33 @@ Public Class frmPublicidad
         CambiarICuota()
     End Sub
 
+    Private Sub btnBEvento_Click(sender As Object, e As EventArgs) Handles btnBEvento.Click
+        If Not bwDatos.IsBusy Then
+            bwDatos.RunWorkerAsync(4) 'PSQL("ID_Programa, Nombre_Programa as Nombre, Descripcion", "programa", condicion))
+        End If
+    End Sub
+
+    Private Sub cbEvento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEvento.SelectedIndexChanged
+        BuscarFE()
+    End Sub
+
+    Private Sub dtpFFE_ValueChanged(sender As Object, e As EventArgs) Handles dtpFFE.ValueChanged
+        BuscarFE()
+    End Sub
+
+    Private Sub dtpFIE_ValueChanged(sender As Object, e As EventArgs) Handles dtpFIE.ValueChanged
+        If (dtpFFE.Value < dtpFIE.Value) Then
+            dtpFFE.Value = dtpFIE.Value
+        End If
+        dtpFFE.MinDate = dtpFIE.Value
+        BuscarFE()
+    End Sub
+
+    Private Sub btnBPEvento_Click(sender As Object, e As EventArgs) Handles btnBPEvento.Click
+        FechasMaxE(False)
+    End Sub
+
+    Private Sub btnIEvento_Click(sender As Object, e As EventArgs) Handles btnIEvento.Click
+        FechasMaxP()
+    End Sub
 End Class

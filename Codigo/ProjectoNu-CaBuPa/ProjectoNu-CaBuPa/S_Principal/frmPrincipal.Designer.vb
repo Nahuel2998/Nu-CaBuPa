@@ -309,7 +309,7 @@ Partial Class frmPrincipal
         Me.Panel35 = New System.Windows.Forms.Panel()
         Me.btnBuscarE = New System.Windows.Forms.Button()
         Me.Panel36 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnLimpiarEvento = New System.Windows.Forms.Button()
         Me.GroupBox17 = New System.Windows.Forms.GroupBox()
         Me.dgvBEvento = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -2607,17 +2607,17 @@ Partial Class frmPrincipal
         '
         'Panel36
         '
-        Me.Panel36.Controls.Add(Me.Button4)
+        Me.Panel36.Controls.Add(Me.btnLimpiarEvento)
         resources.ApplyResources(Me.Panel36, "Panel36")
         Me.Panel36.Name = "Panel36"
         '
-        'Button4
+        'btnLimpiarEvento
         '
-        resources.ApplyResources(Me.Button4, "Button4")
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Name = "Button4"
-        Me.Button4.UseVisualStyleBackColor = False
+        resources.ApplyResources(Me.btnLimpiarEvento, "btnLimpiarEvento")
+        Me.btnLimpiarEvento.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnLimpiarEvento.ForeColor = System.Drawing.Color.Black
+        Me.btnLimpiarEvento.Name = "btnLimpiarEvento"
+        Me.btnLimpiarEvento.UseVisualStyleBackColor = False
         '
         'GroupBox17
         '
@@ -3178,7 +3178,7 @@ Partial Class frmPrincipal
     Friend WithEvents Panel35 As Panel
     Friend WithEvents btnBuscarE As Button
     Friend WithEvents Panel36 As Panel
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnLimpiarEvento As Button
     Friend WithEvents GroupBox17 As GroupBox
     Friend WithEvents dgvBEvento As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
