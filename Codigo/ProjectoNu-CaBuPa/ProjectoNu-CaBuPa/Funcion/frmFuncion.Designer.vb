@@ -71,6 +71,7 @@ Partial Class frmFuncion
         '
         'txtDesc
         '
+        Me.txtDesc.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtDesc.Location = New System.Drawing.Point(94, 52)
         Me.txtDesc.Name = "txtDesc"
         Me.txtDesc.ReadOnly = True
@@ -80,6 +81,7 @@ Partial Class frmFuncion
         '
         'txtNombre
         '
+        Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtNombre.Location = New System.Drawing.Point(94, 19)
         Me.txtNombre.MaxLength = 128
         Me.txtNombre.Name = "txtNombre"

@@ -1,10 +1,15 @@
-﻿Public Class frmFuncionario
+﻿Imports System.ComponentModel
+
+Public Class frmFuncionario
     Dim ID As Integer
     Dim editando As Boolean = False ' Controla si se esta en modo de edicion o no
     Dim tmpDatos(3) As String
     Dim cambio As Boolean = False   ' Controla si han habido cambios desde el ultimo modo de edicion
     Dim dt_Funciones As New DataTable
     Dim datos() As String
+    Dim TBuscada As Byte
+    Dim TBusca As DataTable
+    Dim dt_BFuncionesAs As DataTable
     Public Sub New(ByVal DatosI() As String)
         InitializeComponent()
         'Los siguientes datos se obtienen de la tabla en el elemento padre
@@ -135,20 +140,19 @@
         cambio = Not cambio
     End Sub
 
-    'Private Sub dgvVSM_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVSM.CellDoubleClick
-    '    'Dim i As Integer = CargarID(dt_Video, dgvVSM)
-    '    'If (i <> -1) Then
-    '    'Dim formVideo As New frmVideo(i)
-    '    'AddHandler formVideo.FormClosed, AddressOf FormVideo_FormClosed
-    '    'formVideo.ShowDialog()
-    '    'End If
-    'End Sub
+    Private Sub dgvFunciones_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFunciones.CellDoubleClick
+        Dim i() As String = CargarID(dt_Funciones, dgvFunciones, {0, 1, 2})
+        If (i.Length <> 1) Then
+            Dim formFuncion As New frmFuncion(i)
+            AddHandler formFuncion.FormClosed, AddressOf FormFuncion_FormClosed
+            formFuncion.ShowDialog()
+        End If
+    End Sub
 
     '' Actualiza la tabla mostrando las funciones asociadas cuando el formulario de mostrar funciones se ha cerrado
-    'Private Sub FormFuncion_FormClosed(sender As Object, e As FormClosedEventArgs)
-    '    ActualizarTabla()
-    '    ' TODO: Darle uso.
-    'End Sub
+    Private Sub FormFuncion_FormClosed(sender As Object, e As FormClosedEventArgs)
+        ActualizarTabla()
+    End Sub
 
     '' Actualizar tabla de Funciones
     Private Sub ActualizarTabla()
@@ -159,5 +163,39 @@
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
         Dim formDelete As New frmConfirmarBorrado(FUNCIONARIO, {ID}, True)
         formDelete.ShowDialog(Me)
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        TBuscada = FUNCION
+        Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
+        If (Not String.IsNullOrWhiteSpace(txtNombreBFF.Text)) Then
+            condicion = String.Format("Nombre like '%{0}%'", txtNombreBFF.Text)
+        End If
+        If (Not String.IsNullOrWhiteSpace(txtDescripcionBFF.Text)) Then
+            condicion += String.Format(" and Descripcion like '%{0}%'", txtDescripcionBFF.Text)
+        End If
+        condicion += String.Format(" and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = {0})", ID)
+        If Not (BWBuscador.IsBusy) Then
+            BWBuscador.RunWorkerAsync(PSQL("ID_Funcion, Nombre, Descripcion", "Funcion", condicion))
+        End If
+    End Sub
+
+    Private Sub BWBuscador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWBuscador.RunWorkerCompleted
+        Select Case TBuscada
+            Case FUNCION
+                dt_BFuncionesAs = TBusca
+                ActualizarTablaC(dt_BFuncionesAs, dgvFuncionesBFF)
+        End Select
+        TBusca = Nothing
+        TBuscada = 0
+    End Sub
+
+    Private Sub BWBuscador_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWBuscador.DoWork
+        TBusca = DevolverTabla(e.Argument)
+        ModLog.Guardar("Funcionario: " & e.Argument)
+    End Sub
+
+    Private Sub tcF_Selecting(sender As Object, e As TabControlCancelEventArgs) Handles tcF.Selecting
+        'TODO: This
     End Sub
 End Class

@@ -1248,3 +1248,206 @@
 28/10/2020 22:08:29 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-18' ) 
 28/10/2020 22:08:29 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-19' ) 
 28/10/2020 22:08:29 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-10-20' ) 
+30/10/2020 17:49:27 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 17:49:53 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 17:51:08 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 17:51:40 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 17:51:45 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 17:51:53 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+30/10/2020 17:52:07 LAPTOP-J0MPD84C ' update Programa set Nombre_Programa = 'lol',Descripcion = 'The best',Fecha_Finalizacion = '2020-10-30' WHERE ID_Programa = '1' 
+30/10/2020 17:52:16 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+30/10/2020 17:53:50 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 17:53:56 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+30/10/2020 17:53:58 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+30/10/2020 17:54:14 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())<curdate() 
+30/10/2020 17:54:15 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+30/10/2020 17:54:16 LAPTOP-J0MPD84C ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-10-30' and fecha_finalizacion>='2020-10-30' 
+30/10/2020 17:54:18 LAPTOP-J0MPD84C ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+30/10/2020 17:54:22 LAPTOP-J0MPD84C ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-30' 
+30/10/2020 17:54:28 LAPTOP-J0MPD84C ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-10-30' and fecha <='2020-10-30' 
+30/10/2020 17:54:28 LAPTOP-J0MPD84C ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-10-30' and fecha <='2020-10-30' 
+30/10/2020 17:54:30 LAPTOP-J0MPD84C ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-30' 
+30/10/2020 17:54:31 LAPTOP-J0MPD84C ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+30/10/2020 17:54:32 LAPTOP-J0MPD84C ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-10-30' and fecha_finalizacion>='2020-10-30' 
+30/10/2020 17:54:33 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+30/10/2020 17:54:34 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+30/10/2020 17:54:35 LAPTOP-J0MPD84C ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+30/10/2020 17:54:35 LAPTOP-J0MPD84C ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-10-30' and fecha <='2020-10-30' 
+30/10/2020 17:54:35 LAPTOP-J0MPD84C ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-10-30' and fecha <='2020-10-30' 
+30/10/2020 17:54:41 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función' FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+30/10/2020 17:54:42 LAPTOP-J0MPD84C ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-10-30' and fecha_finalizacion>='2020-10-30' 
+30/10/2020 17:54:43 LAPTOP-J0MPD84C ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+30/10/2020 17:54:43 LAPTOP-J0MPD84C ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-10-30' 
+30/10/2020 17:54:43 LAPTOP-J0MPD84C ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-10-30' and fecha <='2020-10-30' 
+30/10/2020 17:54:43 LAPTOP-J0MPD84C ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-10-30' and fecha <='2020-10-30' 
+30/10/2020 17:54:44 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+30/10/2020 17:54:47 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 17:54:55 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 17:55:05 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+30/10/2020 17:55:07 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 17:55:22 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 17:55:25 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+30/10/2020 17:55:33 LAPTOP-J0MPD84C ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+30/10/2020 17:55:39 LAPTOP-J0MPD84C ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+30/10/2020 17:55:40 LAPTOP-J0MPD84C ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+30/10/2020 17:55:41 LAPTOP-J0MPD84C ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+30/10/2020 17:55:42 LAPTOP-J0MPD84C ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+30/10/2020 17:55:43 LAPTOP-J0MPD84C ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+30/10/2020 17:55:44 LAPTOP-J0MPD84C ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+30/10/2020 17:55:48 LAPTOP-J0MPD84C ' select id_publicidadcuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM publicidadcuota WHERE id_publicidad='4' and Fecha_Pago is null and year(fecha_emision)=2020 
+30/10/2020 17:56:09 LAPTOP-J0MPD84C ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+30/10/2020 17:56:12 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+30/10/2020 17:56:24 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+30/10/2020 17:57:05 LAPTOP-J0MPD84C ' Insert IGNORE into pmuestrapubli ( id_publicidad, id_programa, fecha_inicio, fecha_finalizacion ) values ('4','2','2020-10-22','2020-10-30' ) 
+30/10/2020 17:57:10 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:10 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:10 LAPTOP-J0MPD84C ' Insert IGNORE into pmuestrapubli ( id_publicidad, id_programa, fecha_inicio, fecha_finalizacion ) values ('4','2','2020-10-22','2020-10-30' ) 
+30/10/2020 17:57:12 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:12 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:12 LAPTOP-J0MPD84C ' Insert IGNORE into pmuestrapubli ( id_publicidad, id_programa, fecha_inicio, fecha_finalizacion ) values ('4','2','2020-10-22','2020-10-30' ) 
+30/10/2020 17:57:12 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:12 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:12 LAPTOP-J0MPD84C ' Insert IGNORE into pmuestrapubli ( id_publicidad, id_programa, fecha_inicio, fecha_finalizacion ) values ('4','2','2020-10-22','2020-10-30' ) 
+30/10/2020 17:57:12 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:12 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:12 LAPTOP-J0MPD84C ' Insert IGNORE into pmuestrapubli ( id_publicidad, id_programa, fecha_inicio, fecha_finalizacion ) values ('4','2','2020-10-22','2020-10-30' ) 
+30/10/2020 17:57:13 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:13 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:13 LAPTOP-J0MPD84C ' Insert IGNORE into pmuestrapubli ( id_publicidad, id_programa, fecha_inicio, fecha_finalizacion ) values ('4','2','2020-10-22','2020-10-30' ) 
+30/10/2020 17:57:16 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:16 LAPTOP-J0MPD84C ' DELETE FROM pmuestrapubli WHERE id_publicidad='4' and id_programa='2' and fecha_inicio >= '2020-10-22' and fecha_finalizacion <= '2020-10-30' 
+30/10/2020 17:57:16 LAPTOP-J0MPD84C ' Insert IGNORE into pmuestrapubli ( id_publicidad, id_programa, fecha_inicio, fecha_finalizacion ) values ('4','2','2020-10-22','2020-10-30' ) 
+30/10/2020 17:57:17 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+30/10/2020 17:57:20 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+30/10/2020 17:57:27 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+30/10/2020 17:57:30 LAPTOP-J0MPD84C ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+30/10/2020 17:57:37 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 18:43:06 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 18:43:47 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 18:43:59 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 18:51:41 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 18:51:49 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 18:52:28 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:15:49 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 19:15:54 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:16:15 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:16:53 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:34:01 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 19:34:07 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:34:11 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:34:32 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:35:06 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 19:35:12 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:35:25 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:36:21 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:40:59 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 19:41:06 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:41:21 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:41:24 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:41:28 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:46:58 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 19:47:03 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:47:13 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:47:14 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:49:31 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 19:49:35 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:49:38 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:39 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:40 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:41 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:41 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:41 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:41 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:41 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:43 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:43 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:43 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:43 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:43 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:43 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:43 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:46 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:46 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:53 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:54 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 5) 
+30/10/2020 19:49:56 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 19:50:24 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:25 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:26 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:26 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:26 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:26 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:26 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:26 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:27 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:27 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:27 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:27 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:27 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:50:28 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:51:35 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:51:36 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 19:51:37 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 20:23:20 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 20:23:24 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 20:23:34 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 20:23:52 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 20:23:57 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 20:24:04 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 20:24:20 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 20:24:31 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 20:24:56 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 20:25:26 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 20:25:32 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 20:25:35 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 20:25:36 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 20:25:36 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 20:25:36 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 20:25:36 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 20:25:38 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE Nombre like '%a%' and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 20:25:40 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE Nombre like '%e%' and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 20:28:22 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 20:28:27 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 20:28:49 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 21:00:44 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 21:00:51 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 21:02:08 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 21:07:54 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 21:08:34 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 21:08:38 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 21:09:28 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 21:09:42 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 21:10:39 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 21:10:44 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 21:10:53 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 21:11:16 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 21:11:20 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 21:11:23 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+30/10/2020 21:11:44 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+30/10/2020 21:17:09 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+30/10/2020 21:18:18 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
