@@ -10,6 +10,9 @@ Public Class frmFuncionario
     Dim TBuscada As Byte
     Dim TBusca As DataTable
     Dim dt_BFuncionesAs As DataTable
+    Private dt_ProgramasP As DataTable
+    Dim positionPrograma() As String
+    Dim pos() As UInt16 = {0}
     Public Sub New(ByVal DatosI() As String)
         InitializeComponent()
         'Los siguientes datos se obtienen de la tabla en el elemento padre
@@ -174,13 +177,21 @@ Public Class frmFuncionario
             Case FUNCION
                 dt_BFuncionesAs = TBusca
                 ActualizarTablaC(dt_BFuncionesAs, dgvFuncionesBFF)
-
                 TBuscada = FUNCIONARIO
-                BWBuscador.RunWorkerAsync(PSQL("f.ID_Funcion, f.Nombre, f.Descripcion", "Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion", String.Format("t.ID_Funcionario = '{0}'", ID)))
+                BWBuscador.RunWorkerAsync(PSQL("f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion", "Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion", String.Format("t.ID_Funcionario = '{0}'", ID)))
             Case FUNCIONARIO
                 dt_Funciones = TBusca
-                ActualizarTablaC(dt_Funciones, dgvFuncionesAs)
-
+                ActualizarTablaC(dt_Funciones, dgvFuncionesAs, True, {0, 1})
+                TBusca = Nothing
+                TBuscada = 0
+            Case PROGRAMAS
+                dt_ProgramasP = TBusca
+                CargarComboPrograma()
+                TBusca = Nothing
+                TBuscada = 0
+            Case FUNTRABAJA
+                dt_Funciones = TBusca
+                ActualizarTablaC(dt_Funciones, dgvFunP, True, {0, 1})
                 TBusca = Nothing
                 TBuscada = 0
         End Select
@@ -194,8 +205,16 @@ Public Class frmFuncionario
     Private Sub tcF_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcF.SelectedIndexChanged
         If tcF.SelectedIndex = 0 Then
             ActualizarTabla()
-        Else
+        ElseIf tcF.SelectedIndex = 1 Then
             Buscar()
+        Else
+            BuscarFun()
+        End If
+    End Sub
+    Private Sub BuscarFun()
+        TBuscada = FUNTRABAJA
+        If Not (BWBuscador.IsBusy) Then
+            BWBuscador.RunWorkerAsync(PSQL("f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion", "Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion", String.Format("t.ID_Funcionario = '{0}'", ID)))
         End If
     End Sub
 
@@ -227,7 +246,7 @@ Public Class frmFuncionario
         End If
     End Sub
 
-    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionesBFF.CellClick, dgvFuncionesAs.CellClick
+    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionesBFF.CellClick, dgvFuncionesAs.CellClick, dgvFunP.CellClick
         ClickCheck(sender, e.ColumnIndex)
     End Sub
 
@@ -236,6 +255,52 @@ Public Class frmFuncionario
         If Checked.Length > 0 Then
             BSQL("TrabajaComo", String.Format("ID_Funcionario = '{0}' and ", ID) + CreadorCondicion("ID_Funcion", Checked))
             Buscar()
+        End If
+    End Sub
+
+    Private Sub btnPrograma_Click(sender As Object, e As EventArgs) Handles btnPrograma.Click
+        BuscarPrograma()
+    End Sub
+    Private Sub BuscarPrograma()
+        TBuscada = PROGRAMAS
+        Dim condicion = "false"
+        If Not String.IsNullOrWhiteSpace(txtNombreP.Text) Then
+            condicion = String.Format("Nombre_Programa like '%{0}%'", txtNombreP.Text)
+        End If
+        If Not (BWBuscador.IsBusy) Then
+            BWBuscador.RunWorkerAsync(PSQL("id_programa, Nombre_Programa", "programa", condicion))
+        End If
+    End Sub
+
+    Private Sub dtpFIP_ValueChanged(sender As Object, e As EventArgs) Handles dtpFIP.ValueChanged
+        If (dtpFFP.Value < dtpFIP.Value) Then
+            dtpFFP.Value = dtpFIP.Value
+        End If
+        dtpFFP.MinDate = dtpFIP.Value
+    End Sub
+    Sub CargarComboPrograma()
+        LlenarCombo(cbPrograma, dt_ProgramasP, "Nombre_Programa")
+        If Not IsNothing(dt_ProgramasP) Then
+            ExtraerDatosProg()
+        Else
+            MessageBox.Show("No se encontró el programa")
+        End If
+        cbPrograma.SelectedIndex = pos(0)
+    End Sub
+    Public Sub ExtraerDatosProg()
+        ReDim positionPrograma(dt_ProgramasP.Rows.Count - 1)
+        For j As Integer = 0 To dt_ProgramasP.Rows.Count - 1
+            positionPrograma(j) = dt_ProgramasP.Rows(j).Item(0).ToString
+        Next
+    End Sub
+
+    Private Sub btnAsignarProg_Click(sender As Object, e As EventArgs) Handles btnAsignarProg.Click
+        If (cbPrograma.SelectedIndex > 0) Then
+            If ObtenerCheck(dt_Funciones, dgvFunP).Length > 0 Then
+
+            End If
+        Else
+            MessageBox.Show("Debe seleccionar un programa para asignar")
         End If
     End Sub
 End Class

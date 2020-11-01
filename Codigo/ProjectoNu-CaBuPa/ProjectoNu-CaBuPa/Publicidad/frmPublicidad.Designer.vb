@@ -22,18 +22,18 @@ Partial Class frmPublicidad
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbNotas = New System.Windows.Forms.GroupBox()
         Me.txtTema = New System.Windows.Forms.RichTextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -339,10 +339,10 @@ Partial Class frmPublicidad
         Me.btnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnIngresar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnIngresar.ForeColor = System.Drawing.Color.Black
-        Me.btnIngresar.Location = New System.Drawing.Point(283, 317)
+        Me.btnIngresar.Location = New System.Drawing.Point(300, 317)
         Me.btnIngresar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(283, 45)
+        Me.btnIngresar.Size = New System.Drawing.Size(266, 45)
         Me.btnIngresar.TabIndex = 7
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
@@ -353,8 +353,8 @@ Partial Class frmPublicidad
         Me.dgvFechas.AllowUserToDeleteRows = False
         Me.dgvFechas.AllowUserToResizeColumns = False
         Me.dgvFechas.AllowUserToResizeRows = False
-        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black
-        Me.dgvFechas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.dgvFechas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvFechas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -369,8 +369,8 @@ Partial Class frmPublicidad
         Me.dgvFechas.ReadOnly = True
         Me.dgvFechas.RowHeadersVisible = False
         Me.dgvFechas.RowHeadersWidth = 51
-        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black
-        Me.dgvFechas.RowsDefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        Me.dgvFechas.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvFechas.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvFechas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvFechas.Size = New System.Drawing.Size(559, 124)
@@ -476,8 +476,8 @@ Partial Class frmPublicidad
         Me.dgvTE.AllowUserToDeleteRows = False
         Me.dgvTE.AllowUserToResizeColumns = False
         Me.dgvTE.AllowUserToResizeRows = False
-        DataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black
-        Me.dgvTE.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        Me.dgvTE.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvTE.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -492,8 +492,8 @@ Partial Class frmPublicidad
         Me.dgvTE.ReadOnly = True
         Me.dgvTE.RowHeadersVisible = False
         Me.dgvTE.RowHeadersWidth = 51
-        DataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black
-        Me.dgvTE.RowsDefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        Me.dgvTE.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvTE.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvTE.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvTE.Size = New System.Drawing.Size(559, 298)
@@ -556,8 +556,8 @@ Partial Class frmPublicidad
         Me.dgvProgramaP.AllowUserToDeleteRows = False
         Me.dgvProgramaP.AllowUserToResizeColumns = False
         Me.dgvProgramaP.AllowUserToResizeRows = False
-        DataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black
-        Me.dgvProgramaP.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
+        Me.dgvProgramaP.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvProgramaP.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -572,8 +572,8 @@ Partial Class frmPublicidad
         Me.dgvProgramaP.ReadOnly = True
         Me.dgvProgramaP.RowHeadersVisible = False
         Me.dgvProgramaP.RowHeadersWidth = 51
-        DataGridViewCellStyle32.ForeColor = System.Drawing.Color.Black
-        Me.dgvProgramaP.RowsDefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        Me.dgvProgramaP.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvProgramaP.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvProgramaP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProgramaP.Size = New System.Drawing.Size(559, 106)
@@ -751,8 +751,8 @@ Partial Class frmPublicidad
         Me.dgvAEvento.AllowUserToDeleteRows = False
         Me.dgvAEvento.AllowUserToResizeColumns = False
         Me.dgvAEvento.AllowUserToResizeRows = False
-        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black
-        Me.dgvAEvento.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        Me.dgvAEvento.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvAEvento.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -767,8 +767,8 @@ Partial Class frmPublicidad
         Me.dgvAEvento.ReadOnly = True
         Me.dgvAEvento.RowHeadersVisible = False
         Me.dgvAEvento.RowHeadersWidth = 51
-        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black
-        Me.dgvAEvento.RowsDefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        Me.dgvAEvento.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvAEvento.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvAEvento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvAEvento.Size = New System.Drawing.Size(559, 106)
@@ -949,33 +949,33 @@ Partial Class frmPublicidad
         Me.dgvVerCuota.AllowUserToDeleteRows = False
         Me.dgvVerCuota.AllowUserToResizeColumns = False
         Me.dgvVerCuota.AllowUserToResizeRows = False
-        DataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle33.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle33.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvVerCuota.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvVerCuota.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
         Me.dgvVerCuota.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvVerCuota.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvVerCuota.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
-        DataGridViewCellStyle34.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle34.ForeColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvVerCuota.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvVerCuota.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.dgvVerCuota.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVerCuota.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PFecha, Me.PFechaPago, Me.ProgramaValor, Me.CEliminar})
-        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        DataGridViewCellStyle35.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        DataGridViewCellStyle35.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvVerCuota.DefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvVerCuota.DefaultCellStyle = DataGridViewCellStyle11
         Me.dgvVerCuota.Location = New System.Drawing.Point(11, 53)
         Me.dgvVerCuota.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvVerCuota.MultiSelect = False
@@ -983,9 +983,9 @@ Partial Class frmPublicidad
         Me.dgvVerCuota.ReadOnly = True
         Me.dgvVerCuota.RowHeadersVisible = False
         Me.dgvVerCuota.RowHeadersWidth = 62
-        DataGridViewCellStyle36.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle36.ForeColor = System.Drawing.Color.White
-        Me.dgvVerCuota.RowsDefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+        Me.dgvVerCuota.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.dgvVerCuota.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.dgvVerCuota.RowTemplate.Height = 28
         Me.dgvVerCuota.RowTemplate.ReadOnly = True

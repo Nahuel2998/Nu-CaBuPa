@@ -7,7 +7,6 @@ Public Class frmPublicidad
     Dim datosI() As String
     Private dt_ProgramasP As DataTable
     Private dt_FProgramas As DataTable
-    Private dt_EventosP As DataTable
     Private dt_FEventos As DataTable
     Private TBuscada As Byte = 0
     Private dt_fechas As DataTable
