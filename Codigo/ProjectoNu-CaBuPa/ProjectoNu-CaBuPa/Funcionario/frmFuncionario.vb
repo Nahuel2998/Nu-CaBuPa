@@ -166,6 +166,40 @@ Public Class frmFuncionario
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Buscar()
+    End Sub
+
+    Private Sub BWBuscador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWBuscador.RunWorkerCompleted
+        Select Case TBuscada
+            Case FUNCION
+                dt_BFuncionesAs = TBusca
+                ActualizarTablaC(dt_BFuncionesAs, dgvFuncionesBFF)
+
+                TBuscada = FUNCIONARIO
+                BWBuscador.RunWorkerAsync(PSQL("f.ID_Funcion, f.Nombre, f.Descripcion", "Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion", String.Format("t.ID_Funcionario = '{0}'", ID)))
+            Case FUNCIONARIO
+                dt_Funciones = TBusca
+                ActualizarTablaC(dt_Funciones, dgvFuncionesAs)
+
+                TBusca = Nothing
+                TBuscada = 0
+        End Select
+    End Sub
+
+    Private Sub BWBuscador_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWBuscador.DoWork
+        TBusca = DevolverTabla(e.Argument)
+        ModLog.Guardar("Funcionario: " & e.Argument)
+    End Sub
+
+    Private Sub tcF_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcF.SelectedIndexChanged
+        If tcF.SelectedIndex = 0 Then
+            ActualizarTabla()
+        Else
+            Buscar()
+        End If
+    End Sub
+
+    Private Sub Buscar()
         TBuscada = FUNCION
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
         If (Not String.IsNullOrWhiteSpace(txtNombreBFF.Text)) Then
@@ -180,22 +214,28 @@ Public Class frmFuncionario
         End If
     End Sub
 
-    Private Sub BWBuscador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWBuscador.RunWorkerCompleted
-        Select Case TBuscada
-            Case FUNCION
-                dt_BFuncionesAs = TBusca
-                ActualizarTablaC(dt_BFuncionesAs, dgvFuncionesBFF)
-        End Select
-        TBusca = Nothing
-        TBuscada = 0
+    Private Sub btnAsignar_Click(sender As Object, e As EventArgs) Handles btnAsignar.Click
+        If ObtenerCheck(dt_BFuncionesAs, dgvFuncionesBFF).Length > 0 Then
+            MISQL("TrabajaComo",
+              "ID_Funcion, ID_Funcionario",
+              ObtenerCheck(dt_BFuncionesAs,
+                           dgvFuncionesBFF,
+                           0,
+                           String.Format(",'{0}'", ID.ToString),
+                           True))
+            Buscar()
+        End If
     End Sub
 
-    Private Sub BWBuscador_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWBuscador.DoWork
-        TBusca = DevolverTabla(e.Argument)
-        ModLog.Guardar("Funcionario: " & e.Argument)
+    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionesBFF.CellClick, dgvFuncionesAs.CellClick
+        ClickCheck(sender, e.ColumnIndex)
     End Sub
 
-    Private Sub tcF_Selecting(sender As Object, e As TabControlCancelEventArgs) Handles tcF.Selecting
-        'TODO: This
+    Private Sub btnDesasignar_Click(sender As Object, e As EventArgs) Handles btnDesasignar.Click
+        Dim Checked() As String = ObtenerCheck(dt_Funciones, dgvFuncionesAs)
+        If Checked.Length > 0 Then
+            BSQL("TrabajaComo", String.Format("ID_Funcionario = '{0}' and ", ID) + CreadorCondicion("ID_Funcion", Checked))
+            Buscar()
+        End If
     End Sub
 End Class

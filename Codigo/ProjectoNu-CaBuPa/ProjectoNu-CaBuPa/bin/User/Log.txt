@@ -1451,3 +1451,468 @@
 30/10/2020 21:11:44 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
 30/10/2020 21:17:09 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
 30/10/2020 21:18:18 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 20:48:11 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 20:48:19 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 20:48:27 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 20:49:10 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 20:49:17 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 20:49:20 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 20:49:40 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 20:54:14 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 20:54:18 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 20:54:20 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 20:54:20 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:02:27 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:02:32 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:02:37 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:02:45 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:03:15 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:03:19 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:03:27 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:04:05 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:04:09 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:04:25 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:09:30 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:09:34 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:09:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:09:47 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:09:59 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:10:12 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:10:28 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:10:44 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:10:46 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:10:50 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:10:51 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:11:07 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:11:11 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:11:12 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:11:15 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:11:21 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:12:07 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:12:12 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:12:48 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:12:54 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:12:56 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:12:59 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:13:06 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:13:11 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:13:15 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:13:55 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:20:43 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:21:41 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:21:50 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:22:27 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:22:34 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:22:35 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:22:36 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:27:40 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:27:45 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:28:16 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:32:09 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:32:28 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:32:29 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:32:30 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:39:54 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:39:59 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:40:03 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:40:15 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:40:22 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:40:24 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:40:25 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:40:26 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:40:30 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:41:07 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:41:19 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:41:21 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:41:23 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:41:23 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:41:24 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:41:24 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:41:25 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:41:28 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:44:22 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:46:06 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:46:18 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:46:29 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:48:19 LAPTOP-J0MPD84C ' DELETE FROM usuarios WHERE id_usuario ='1' 
+31/10/2020 21:48:19 LAPTOP-J0MPD84C ' DELETE FROM usuarios WHERE id_usuario ='1' 
+31/10/2020 21:48:53 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 21:54:51 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:54:53 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 21:54:55 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:54:57 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:54:59 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 21:55:00 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 22:57:47 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 22:57:54 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 22:58:19 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 22:59:05 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 22:59:10 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 22:59:12 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:00:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:00:49 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('3','4' ) 
+31/10/2020 23:00:49 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:00:59 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:22 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:01:27 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:01:29 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:39 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:41 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:43 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:43 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:46 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:46 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:47 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:47 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:48 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:48 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:48 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:01:53 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4'ID_Funcion in ('3' ) 
+31/10/2020 23:02:47 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4'ID_Funcion in ('3' ) 
+31/10/2020 23:02:47 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:04:39 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:04:44 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:04:46 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:04:49 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ) 
+31/10/2020 23:04:49 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ) 
+31/10/2020 23:04:49 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:05:05 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('1' ,'3' ) 
+31/10/2020 23:05:05 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('1' ,'3' ) 
+31/10/2020 23:05:05 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:05:13 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('3','4'),('4','4' ) 
+31/10/2020 23:05:13 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:06:54 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:07:02 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:07:06 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:09:33 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:09:38 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:09:40 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:10:55 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:11:00 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:11:01 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:03 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:11 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ) 
+31/10/2020 23:11:11 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ) 
+31/10/2020 23:11:11 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:13 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ) 
+31/10/2020 23:11:17 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ) 
+31/10/2020 23:11:17 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:24 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:25 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:27 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('2','4' ) 
+31/10/2020 23:11:27 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:30 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ) 
+31/10/2020 23:11:30 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ) 
+31/10/2020 23:11:30 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:33 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ) 
+31/10/2020 23:11:33 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ) 
+31/10/2020 23:11:33 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:37 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('3','4'),('4','4' ) 
+31/10/2020 23:11:37 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:40 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'3' ) 
+31/10/2020 23:11:40 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'3' ) 
+31/10/2020 23:11:40 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:43 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('2','4'),('3','4'),('4','4' ) 
+31/10/2020 23:11:43 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:46 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:48 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ) 
+31/10/2020 23:11:48 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ) 
+31/10/2020 23:11:48 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:11:55 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:01 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ) 
+31/10/2020 23:12:01 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ) 
+31/10/2020 23:12:01 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:03 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('2','4'),('3','4' ) 
+31/10/2020 23:12:03 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:06 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ,'4' ) 
+31/10/2020 23:12:06 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ,'4' ) 
+31/10/2020 23:12:06 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:09 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('3','4'),('4','4' ) 
+31/10/2020 23:12:09 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:10 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'3' ) 
+31/10/2020 23:12:10 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'3' ) 
+31/10/2020 23:12:10 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:13 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:16 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('1','4'),('3','4'),('4','4' ) 
+31/10/2020 23:12:16 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:18 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ,'3' ,'1' ,'4' ) 
+31/10/2020 23:12:18 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ,'3' ,'1' ,'4' ) 
+31/10/2020 23:12:18 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:25 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:28 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('2','4'),('3','4' ) 
+31/10/2020 23:12:28 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:31 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:32 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:32 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:34 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('4','4' ) 
+31/10/2020 23:12:34 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:38 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:12:57 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ,'2' ) 
+31/10/2020 23:12:57 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ,'2' ) 
+31/10/2020 23:12:57 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:13:08 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('2','4' ) 
+31/10/2020 23:13:08 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:13:11 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'2' ) 
+31/10/2020 23:13:11 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'2' ) 
+31/10/2020 23:13:11 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:13:18 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:13:20 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('3','4'),('4','4' ) 
+31/10/2020 23:13:20 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:13:22 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('2','4' ) 
+31/10/2020 23:13:22 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:13:23 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:26:37 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:26:43 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:26:46 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:26:46 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:26:49 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:26:49 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:26:50 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:26:50 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:26:50 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:26:51 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:26:51 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:26:51 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:26:51 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:26:51 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:26:53 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:26:53 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:26:59 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ) 
+31/10/2020 23:26:59 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ) 
+31/10/2020 23:26:59 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:26:59 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:04 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('1','4'),('4','4' ) 
+31/10/2020 23:27:04 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:04 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:07 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'1' ,'2' ) 
+31/10/2020 23:27:07 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'1' ,'2' ) 
+31/10/2020 23:27:07 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:07 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:10 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('4','4' ) 
+31/10/2020 23:27:10 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:10 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:15 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'3' ) 
+31/10/2020 23:27:15 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'3' ) 
+31/10/2020 23:27:15 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:15 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:19 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('1','4'),('2','4'),('3','4'),('4','4' ) 
+31/10/2020 23:27:19 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:19 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:22 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'3' ,'1' ) 
+31/10/2020 23:27:22 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'3' ,'1' ) 
+31/10/2020 23:27:22 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:22 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:25 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ) 
+31/10/2020 23:27:25 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ) 
+31/10/2020 23:27:25 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:25 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:28 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('1','4'),('3','4'),('4','4' ) 
+31/10/2020 23:27:28 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:28 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:30 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'1' ) 
+31/10/2020 23:27:30 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'1' ) 
+31/10/2020 23:27:30 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:30 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:32 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:32 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:33 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('2','4'),('4','4' ) 
+31/10/2020 23:27:33 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:33 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:35 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:35 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:49 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ) 
+31/10/2020 23:27:49 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ) 
+31/10/2020 23:27:49 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:49 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:53 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:53 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:54 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:54 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:27:55 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:27:55 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:32:03 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:32:15 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:33:15 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:33:19 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:33:21 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:33:21 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:33:29 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ) 
+31/10/2020 23:33:44 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ) 
+31/10/2020 23:33:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:33:44 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:35:13 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:35:19 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:35:21 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:35:21 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:23 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:36:37 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:36:39 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:39 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:41 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:41 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:42 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:42 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:43 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:43 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:44 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('2','4' ) 
+31/10/2020 23:36:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:44 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:46 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ) 
+31/10/2020 23:36:46 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ) 
+31/10/2020 23:36:46 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:46 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:49 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('1','4'),('4','4' ) 
+31/10/2020 23:36:49 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:49 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:54 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ,'3' ) 
+31/10/2020 23:36:54 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ,'3' ) 
+31/10/2020 23:36:54 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:54 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:57 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:57 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:57 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:57 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:58 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:58 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:59 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:59 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:36:59 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:36:59 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:00 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:00 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:00 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:00 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:01 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:01 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:01 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:01 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:01 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:01 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:01 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:01 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:02 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:03 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:03 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:03 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:03 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:03 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:03 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:03 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:03 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:03 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:03 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:05 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:05 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:37:07 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ) 
+31/10/2020 23:37:21 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ) 
+31/10/2020 23:37:21 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:37:21 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:43:52 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:43:58 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:44:00 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:44:00 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:44:03 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('2','4' ) 
+31/10/2020 23:44:03 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:44:03 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:44:05 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'1' ) 
+31/10/2020 23:44:05 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ,'1' ) 
+31/10/2020 23:44:05 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:44:05 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:44:17 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ) 
+31/10/2020 23:44:17 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('2' ) 
+31/10/2020 23:44:17 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:44:17 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:44:41 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE Nombre like '%d%' and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:44:41 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:44:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:44:45 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:44:49 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('1','4' ) 
+31/10/2020 23:44:49 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:44:49 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:12 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:12 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:21 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:22 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:25 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('3','4' ) 
+31/10/2020 23:45:25 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:25 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:28 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ) 
+31/10/2020 23:45:28 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('3' ) 
+31/10/2020 23:45:28 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:28 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:31 LAPTOP-J0MPD84C ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('3','4'),('4','4' ) 
+31/10/2020 23:45:31 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:31 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:34 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ) 
+31/10/2020 23:45:34 LAPTOP-J0MPD84C ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '4' and ID_Funcion in ('4' ) 
+31/10/2020 23:45:34 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:34 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:38 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:38 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:40 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:40 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:44 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:44 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:45 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:45 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:46 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:46 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:47 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:47 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:48 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:48 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:57 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:57 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:45:58 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+31/10/2020 23:45:58 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+31/10/2020 23:46:04 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:50:56 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:51:01 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+31/10/2020 23:51:04 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:51:45 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:51:50 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+31/10/2020 23:51:53 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+31/10/2020 23:51:56 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:52:56 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:53:17 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:53:53 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+31/10/2020 23:53:59 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+31/10/2020 23:54:02 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:54:16 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 1) 
+31/10/2020 23:54:16 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '1' 
+31/10/2020 23:54:24 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:54:39 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:54:44 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:54:48 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:54:57 LAPTOP-J0MPD84C ' update funtrabaja set fecha_finalizacion='2020-10-31' WHERE id_programa='2' and ID_TrabajaComo in ('5' ) and fecha_inicio in ('2020-10-07' ) and fecha_inicio<='2020-10-31' 
+31/10/2020 23:54:57 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:55:04 LAPTOP-J0MPD84C ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-10-31' and fecha_finalizacion>='2020-10-31' 
+31/10/2020 23:55:05 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:56:59 LAPTOP-J0MPD84C ' update funtrabaja set fecha_finalizacion='2020-10-30' WHERE id_programa='2' and ID_TrabajaComo in ('5' ) and fecha_inicio in ('2020-10-07' ) and fecha_inicio<='2020-10-30' 
+31/10/2020 23:56:59 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:57:02 LAPTOP-J0MPD84C ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-10-31' and fecha_finalizacion>='2020-10-31' 
+31/10/2020 23:57:03 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:57:06 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())<curdate() 
+31/10/2020 23:57:23 LAPTOP-J0MPD84C ' update funtrabaja set fecha_finalizacion='2020-12-04' WHERE id_programa='2' and ID_TrabajaComo in ('5' ) and fecha_inicio in ('2020-10-07' ) and fecha_inicio<='2020-12-04' 
+31/10/2020 23:57:23 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())<curdate() 
+31/10/2020 23:57:26 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+31/10/2020 23:58:20 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 

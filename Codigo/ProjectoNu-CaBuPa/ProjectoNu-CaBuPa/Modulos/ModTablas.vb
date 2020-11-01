@@ -86,13 +86,13 @@ Module ModTablas
             End If
         End If
     End Sub
-    Public Function ObtenerCheck(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional ByVal Col As Integer = 0) As String()
+    Public Function ObtenerCheck(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional ByVal Col As Integer = 0, Optional ByVal text As String = "", Optional comilla As Boolean = False) As String()
         Dim UltiCol As Integer = Dgv.Columns.Count - 1
         Dim Ids(Dgv.Rows.Count - 1) As String
         Dim Valores As Integer = 0
         For i As Integer = 0 To Dgv.Rows.Count - 1
             If (Dgv.Rows(i).Cells(UltiCol).Value = True) Then
-                Ids(i) = Tabla.Rows(i).Item(Col).ToString
+                Ids(i) = String.Format(If(comilla, "'{0}'", "{0}"), Tabla.Rows(i).Item(Col).ToString) + text
                 Valores += 1
             Else
                 Ids(i) = ""
@@ -129,7 +129,7 @@ Module ModTablas
             Columna.ReadOnly = False
             Dgv.Columns.Clear()
             Dgv.DataSource = Tabla
-            If (Tabla.Columns.Count > 1 And C) Then
+            If (Tabla.Columns.Count > 1 And C And Dgv.Columns.Count > col.Length) Then
                 For Each k As Byte In col
                     Dgv.Columns.RemoveAt(k)
                 Next
@@ -276,6 +276,7 @@ Module ModTablas
         Next
         Return sN
     End Function
+
     Public Sub BorrarConfirmar(ByRef form As Form, ByRef dt As DataTable, ByRef dgv As DataGridView, ByVal tabla As Byte, ByRef btn As Button)
         If Not IsNothing(dt) Then
             If (dt.Rows.Count > 0) Then

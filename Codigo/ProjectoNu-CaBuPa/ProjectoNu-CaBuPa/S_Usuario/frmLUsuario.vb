@@ -1,5 +1,4 @@
 ﻿Public Class frmLUsuario
-
     Private Sub btnOpciones_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOpciones.Click
         If BUsuario(txtUsuario.Text, txtPass.Text) Or ModConector.GDebug Then
             ModInicializador.Configuracion()

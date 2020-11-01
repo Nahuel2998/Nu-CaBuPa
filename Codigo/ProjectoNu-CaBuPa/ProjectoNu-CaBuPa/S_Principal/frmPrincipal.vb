@@ -17,8 +17,9 @@ Public Class frmPrincipal
         GuardarNotas()
     End Sub
     Public Sub EPropiedades()
-        Me.Width = Screen.PrimaryScreen.WorkingArea.Width * 0.85
-        Me.Height = Screen.PrimaryScreen.WorkingArea.Height * 0.8
+        Width = Screen.PrimaryScreen.WorkingArea.Width * 0.85
+        Height = Screen.PrimaryScreen.WorkingArea.Height * 0.8
+        CenterToScreen()
         dtp.BackColor = Color.FromArgb(64, 64, 64)
         dtp.ForeColor = Color.White
         dtpTanda.BackColor = Color.FromArgb(64, 64, 64)

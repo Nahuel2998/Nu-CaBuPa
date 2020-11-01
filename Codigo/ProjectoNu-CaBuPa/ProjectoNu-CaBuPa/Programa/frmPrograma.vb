@@ -82,7 +82,7 @@ Public Class frmPrograma
             End If
         End If
     End Sub
-    Sub vaciar()
+    Sub Vaciar()
         txtNombre.Text = ""
         txtDescripcion.Text = ""
         dtpFecha.Value = Now.Date
@@ -190,7 +190,7 @@ Public Class frmPrograma
     Private Sub BuscarFuncionario()
         Dim Condicion As String = String.Format("ifnull(fecha_finalizacion,curdate()){0}curdate()", If(cbRP.Checked, "<", ">="))
         TBuscada = FUNCIONARIO
-        Dim Columna As String = "fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función'"
+        Dim Columna As String = "fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail"
         Dim Tablas As String = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
         Tablas = String.Format(Tablas, programaID)
         If Not (bwCargador.IsBusy) And TBuscada <> 0 Then
@@ -211,7 +211,7 @@ Public Class frmPrograma
         Select Case TBuscada
             Case FUNCIONARIO
                 dt_funcionario = TBusca
-                ActualizarTablaC(dt_funcionario, dgvFuncionarios, True, {1, 0})
+                ActualizarTablaC(dt_funcionario, dgvFuncionarios, True, {1, 0, 6, 7})
             Case FECHAPROGRAMA
                 dt_fechas = TBusca
                 ActualizarTablaC(dt_fechas, dgvPrograma, False)
@@ -441,9 +441,9 @@ Public Class frmPrograma
 
 
     Private Sub dgvFuncionarios_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionarios.CellDoubleClick
-        Dim i() As String = CargarID(dt_funcionario, dgvFuncionarios, {0, 1, 2})
+        Dim i() As String = CargarID(dt_funcionario, dgvFuncionarios, {0, 2, 6, 7})
         If (i.Length <> 1) Then
-            Dim formFunc As New frmFuncion(i)
+            Dim formFunc As New frmFuncionario(i)
             AddHandler formFunc.FormClosed, AddressOf FormFunc_FormClosed
             formFunc.ShowDialog()
         End If

@@ -1,9 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Data
 Imports MySql.Data
+Imports System.Drawing.Text
 
 Module ModConector
-    Private Debug As Boolean = True
+    Private Debug As Boolean = False
     Private conn As New MySqlConnection
     Private connStr As String
     Private Address, User, Database, Port, Pass As String
@@ -169,14 +170,23 @@ Module ModConector
         ESQL("DELETE FROM " + nTabla + " WHERE " + Condition)
         ModLog.Guardar("DELETE FROM " + nTabla + " WHERE " + Condition)
     End Sub
-    Public Sub ISQL(ByVal nTabla As String, ByVal Column As String, ByVal Data As String, Optional comilla As Boolean = True)
+    Public Sub ISQL(ByVal nTabla As String, ByVal Column As String, ByVal Data As String, Optional parentesis As Boolean = True)
 
-        If (comilla) Then
+        If (parentesis) Then
             ESQL("Insert IGNORE into " + nTabla + " ( " + Column + " ) values (" + Data + " )")
         Else
             ESQL("Insert IGNORE into " + nTabla + " ( " + Column + " ) values " + Data)
         End If
 
+    End Sub
+    Public Sub MISQL(ByVal nTabla As String, ByVal Column As String, ByVal datos() As String, Optional comilla As Boolean = True)
+        Dim r As String = ""
+        For Each d In datos
+            r += String.Format("{0}),(", d)
+        Next
+        If Not r.Length < 3 Then
+            ISQL(nTabla, Column, r.Remove(r.Length - 3), comilla)
+        End If
     End Sub
     Public Function SSQL(ByVal nColumn As String, ByVal nTabla As String, ByVal Condition As String) As DataTable
         If ds.Tables.Contains(nTabla) Then
