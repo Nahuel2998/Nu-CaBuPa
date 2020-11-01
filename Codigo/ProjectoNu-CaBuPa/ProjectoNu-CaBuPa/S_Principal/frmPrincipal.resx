@@ -6750,37 +6750,37 @@
   <data name="TableLayoutPanel24.ColumnCount" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="Button1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="btnIngresarE.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnIngresarE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnIngresarE.Location" type="System.Drawing.Point, System.Drawing">
     <value>146, 2</value>
   </data>
-  <data name="Button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnIngresarE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnIngresarE.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 46</value>
   </data>
-  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnIngresarE.TabIndex" type="System.Int32, mscorlib">
     <value>12394295</value>
   </data>
-  <data name="Button1.Text" xml:space="preserve">
+  <data name="btnIngresarE.Text" xml:space="preserve">
     <value>Ingresar</value>
   </data>
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
+  <data name="&gt;&gt;btnIngresarE.Name" xml:space="preserve">
+    <value>btnIngresarE</value>
   </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnIngresarE.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnIngresarE.Parent" xml:space="preserve">
     <value>TableLayoutPanel24</value>
   </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnIngresarE.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="btnBEvento.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -6985,7 +6985,7 @@
     <value>0</value>
   </data>
   <data name="TableLayoutPanel24.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="Button1" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnBEvento" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="Panel35" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="Panel36" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,32325,Percent,21,70139,Percent,36,80556,Percent,16,14583" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnIngresarE" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnBEvento" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="Panel35" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="Panel36" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,32325,Percent,21,70139,Percent,36,80556,Percent,16,14583" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="GroupBox17.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>

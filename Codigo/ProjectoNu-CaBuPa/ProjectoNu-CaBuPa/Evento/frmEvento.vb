@@ -15,7 +15,7 @@ Public Class frmEvento
         eventoID = id
     End Sub
     Public Sub Buscar()
-        Dim columnas() As String = {"Nombre", "Descripcion", "id_video", "DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha"}
+        Dim columnas() As String = {"Nombre", "Descripcion", "id_video"}
         datosI = BuscarDatos("evento", columnas, "id_evento", eventoID)
         Rellenar()
     End Sub
@@ -48,7 +48,7 @@ Public Class frmEvento
     End Sub
     Sub CargarCombo()
         dtE = DevolverTabla(PSQL("id_video, Nombre", "video", "True"))
-        LlenarCombo(cbVideo, dt_Video, "Nombre")
+        LlenarCombo(cbVideo, dtE, "Nombre")
         If Not IsNothing(dtE) Then
             ExtraerDatos()
         End If

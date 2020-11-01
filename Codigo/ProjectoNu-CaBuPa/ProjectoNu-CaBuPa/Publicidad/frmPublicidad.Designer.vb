@@ -119,6 +119,8 @@ Partial Class frmPublicidad
         Me.Label12 = New System.Windows.Forms.Label()
         Me.dtpFP = New System.Windows.Forms.DateTimePicker()
         Me.bwDatos = New System.ComponentModel.BackgroundWorker()
+        Me.btnMP = New System.Windows.Forms.Button()
+        Me.btnMostrarE = New System.Windows.Forms.Button()
         Me.gbNotas.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -430,17 +432,17 @@ Partial Class frmPublicidad
         'dtpFF
         '
         Me.dtpFF.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFF.Location = New System.Drawing.Point(324, 113)
+        Me.dtpFF.Location = New System.Drawing.Point(300, 113)
         Me.dtpFF.Name = "dtpFF"
-        Me.dtpFF.Size = New System.Drawing.Size(200, 27)
+        Me.dtpFF.Size = New System.Drawing.Size(267, 27)
         Me.dtpFF.TabIndex = 3
         '
         'dtpFI
         '
         Me.dtpFI.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFI.Location = New System.Drawing.Point(33, 113)
+        Me.dtpFI.Location = New System.Drawing.Point(7, 113)
         Me.dtpFI.Name = "dtpFI"
-        Me.dtpFI.Size = New System.Drawing.Size(200, 27)
+        Me.dtpFI.Size = New System.Drawing.Size(268, 27)
         Me.dtpFI.TabIndex = 2
         '
         'tbTandasE
@@ -530,6 +532,7 @@ Partial Class frmPublicidad
         'tbProgramas
         '
         Me.tbProgramas.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.tbProgramas.Controls.Add(Me.btnMP)
         Me.tbProgramas.Controls.Add(Me.dgvProgramaP)
         Me.tbProgramas.Controls.Add(Me.Label10)
         Me.tbProgramas.Controls.Add(Me.cbPrograma)
@@ -613,13 +616,14 @@ Partial Class frmPublicidad
         '
         'btnPrograma
         '
+        Me.btnPrograma.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnPrograma.ForeColor = System.Drawing.Color.Black
         Me.btnPrograma.Location = New System.Drawing.Point(411, 47)
         Me.btnPrograma.Name = "btnPrograma"
-        Me.btnPrograma.Size = New System.Drawing.Size(87, 27)
+        Me.btnPrograma.Size = New System.Drawing.Size(102, 27)
         Me.btnPrograma.TabIndex = 22
         Me.btnPrograma.Text = "Buscar"
-        Me.btnPrograma.UseVisualStyleBackColor = True
+        Me.btnPrograma.UseVisualStyleBackColor = False
         '
         'Label9
         '
@@ -709,22 +713,23 @@ Partial Class frmPublicidad
         'dtpFFP
         '
         Me.dtpFFP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFFP.Location = New System.Drawing.Point(316, 145)
+        Me.dtpFFP.Location = New System.Drawing.Point(305, 145)
         Me.dtpFFP.Name = "dtpFFP"
-        Me.dtpFFP.Size = New System.Drawing.Size(200, 27)
+        Me.dtpFFP.Size = New System.Drawing.Size(261, 27)
         Me.dtpFFP.TabIndex = 13
         '
         'dtpFIP
         '
         Me.dtpFIP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFIP.Location = New System.Drawing.Point(27, 145)
+        Me.dtpFIP.Location = New System.Drawing.Point(16, 145)
         Me.dtpFIP.Name = "dtpFIP"
-        Me.dtpFIP.Size = New System.Drawing.Size(200, 27)
+        Me.dtpFIP.Size = New System.Drawing.Size(269, 27)
         Me.dtpFIP.TabIndex = 12
         '
         'tbEventos
         '
         Me.tbEventos.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.tbEventos.Controls.Add(Me.btnMostrarE)
         Me.tbEventos.Controls.Add(Me.dgvAEvento)
         Me.tbEventos.Controls.Add(Me.Label14)
         Me.tbEventos.Controls.Add(Me.cbEvento)
@@ -808,13 +813,14 @@ Partial Class frmPublicidad
         '
         'btnBEvento
         '
+        Me.btnBEvento.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnBEvento.ForeColor = System.Drawing.Color.Black
         Me.btnBEvento.Location = New System.Drawing.Point(411, 46)
         Me.btnBEvento.Name = "btnBEvento"
         Me.btnBEvento.Size = New System.Drawing.Size(87, 27)
         Me.btnBEvento.TabIndex = 36
         Me.btnBEvento.Text = "Buscar"
-        Me.btnBEvento.UseVisualStyleBackColor = True
+        Me.btnBEvento.UseVisualStyleBackColor = False
         '
         'Label15
         '
@@ -904,17 +910,17 @@ Partial Class frmPublicidad
         'dtpFFE
         '
         Me.dtpFFE.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFFE.Location = New System.Drawing.Point(316, 144)
+        Me.dtpFFE.Location = New System.Drawing.Point(298, 144)
         Me.dtpFFE.Name = "dtpFFE"
-        Me.dtpFFE.Size = New System.Drawing.Size(200, 27)
+        Me.dtpFFE.Size = New System.Drawing.Size(267, 27)
         Me.dtpFFE.TabIndex = 28
         '
         'dtpFIE
         '
         Me.dtpFIE.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFIE.Location = New System.Drawing.Point(27, 144)
+        Me.dtpFIE.Location = New System.Drawing.Point(6, 144)
         Me.dtpFIE.Name = "dtpFIE"
-        Me.dtpFIE.Size = New System.Drawing.Size(200, 27)
+        Me.dtpFIE.Size = New System.Drawing.Size(266, 27)
         Me.dtpFIE.TabIndex = 27
         '
         'tbCuotas
@@ -1154,6 +1160,30 @@ Partial Class frmPublicidad
         'bwDatos
         '
         '
+        'btnMP
+        '
+        Me.btnMP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnMP.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMP.ForeColor = System.Drawing.Color.Black
+        Me.btnMP.Location = New System.Drawing.Point(412, 82)
+        Me.btnMP.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnMP.Name = "btnMP"
+        Me.btnMP.Size = New System.Drawing.Size(101, 26)
+        Me.btnMP.TabIndex = 2342332
+        Me.btnMP.Text = "Mostrar"
+        Me.btnMP.UseVisualStyleBackColor = False
+        '
+        'btnMostrarE
+        '
+        Me.btnMostrarE.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnMostrarE.ForeColor = System.Drawing.Color.Black
+        Me.btnMostrarE.Location = New System.Drawing.Point(411, 81)
+        Me.btnMostrarE.Name = "btnMostrarE"
+        Me.btnMostrarE.Size = New System.Drawing.Size(87, 27)
+        Me.btnMostrarE.TabIndex = 40
+        Me.btnMostrarE.Text = "Mostrar"
+        Me.btnMostrarE.UseVisualStyleBackColor = False
+        '
         'frmPublicidad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
@@ -1280,4 +1310,6 @@ Partial Class frmPublicidad
     Friend WithEvents Label19 As Label
     Friend WithEvents dtpFFE As ColorDateTimePicker
     Friend WithEvents dtpFIE As ColorDateTimePicker
+    Friend WithEvents btnMP As Button
+    Friend WithEvents btnMostrarE As Button
 End Class

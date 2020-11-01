@@ -304,7 +304,7 @@ Partial Class frmPrincipal
         Me.tbEvento = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel23 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel24 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnIngresarE = New System.Windows.Forms.Button()
         Me.btnBEvento = New System.Windows.Forms.Button()
         Me.Panel35 = New System.Windows.Forms.Panel()
         Me.btnBuscarE = New System.Windows.Forms.Button()
@@ -2569,19 +2569,19 @@ Partial Class frmPrincipal
         'TableLayoutPanel24
         '
         resources.ApplyResources(Me.TableLayoutPanel24, "TableLayoutPanel24")
-        Me.TableLayoutPanel24.Controls.Add(Me.Button1, 1, 0)
+        Me.TableLayoutPanel24.Controls.Add(Me.btnIngresarE, 1, 0)
         Me.TableLayoutPanel24.Controls.Add(Me.btnBEvento, 3, 0)
         Me.TableLayoutPanel24.Controls.Add(Me.Panel35, 2, 0)
         Me.TableLayoutPanel24.Controls.Add(Me.Panel36, 0, 0)
         Me.TableLayoutPanel24.Name = "TableLayoutPanel24"
         '
-        'Button1
+        'btnIngresarE
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnIngresarE.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        resources.ApplyResources(Me.btnIngresarE, "btnIngresarE")
+        Me.btnIngresarE.ForeColor = System.Drawing.Color.Black
+        Me.btnIngresarE.Name = "btnIngresarE"
+        Me.btnIngresarE.UseVisualStyleBackColor = False
         '
         'btnBEvento
         '
@@ -3173,7 +3173,7 @@ Partial Class frmPrincipal
     Friend WithEvents tbEvento As TabPage
     Friend WithEvents TableLayoutPanel23 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel24 As TableLayoutPanel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnIngresarE As Button
     Friend WithEvents btnBEvento As Button
     Friend WithEvents Panel35 As Panel
     Friend WithEvents btnBuscarE As Button

@@ -83,7 +83,7 @@ CREATE TABLE `aparecepubli` (
   `ID_Publicidad` int(6) unsigned NOT NULL,
 `Hora_Inicio` time NOT NULL,
   `Fecha_Inicio` date NOT NULL,
-  `Fecha_Finalizacion` date DEFAULT NULL,
+  `Fecha_Finalizacion` date not NULL,
   PRIMARY KEY (`ID_Publicidad`,`Hora_Inicio`,`Fecha_Inicio`),
 Foreign KEY (Hora_Inicio) references Tanda(Hora_Inicio),
 Foreign key (ID_Publicidad) references Publicidad(ID_Publicidad)
@@ -93,7 +93,7 @@ CREATE TABLE `eventomuestrapubli` (
   `ID_Evento` int(6) unsigned NOT NULL,
   `ID_Publicidad` int(6) unsigned NOT NULL,
   `Fecha_Inicio` date NOT NULL,
-  `Fecha_Finalizacion` date DEFAULT NULL,
+  `Fecha_Finalizacion` date not NULL,
   PRIMARY KEY (`ID_Evento`,`ID_Publicidad`,`Fecha_Inicio`),
   Foreign KEY (ID_Publicidad) references Publicidad(`ID_Publicidad`),
 Foreign KEY (ID_Evento) references Evento(ID_Evento)
@@ -133,7 +133,7 @@ CREATE TABLE `pmuestrapubli` (
   `ID_Publicidad` int(6) unsigned NOT NULL,
   `ID_Programa` int(6) unsigned NOT NULL,
 `Fecha_Inicio` date NOT NULL,
-  `Fecha_Finalizacion` date DEFAULT NULL,
+  `Fecha_Finalizacion` date not NULL,
   PRIMARY KEY (`Fecha_Inicio`,`ID_Programa`,`ID_Publicidad`),
 Foreign KEY (ID_Programa) references Programa(`ID_Programa`),
   Foreign KEY (ID_Publicidad) references Publicidad(`ID_Publicidad`)

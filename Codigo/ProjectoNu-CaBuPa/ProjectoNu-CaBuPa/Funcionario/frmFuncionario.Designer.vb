@@ -84,6 +84,11 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnAsignarProg = New System.Windows.Forms.Button()
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.dtpFIP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cbFF = New System.Windows.Forms.CheckBox()
+        Me.dtpFFP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
@@ -93,16 +98,13 @@ Partial Class frmFuncionario
         Me.cbPrograma = New System.Windows.Forms.ComboBox()
         Me.txtNombreP = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.btnMP = New System.Windows.Forms.Button()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.dgvFunP = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
-        Me.dtpFFP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.dtpFIP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.cbFF = New System.Windows.Forms.CheckBox()
         Me.tcF.SuspendLayout()
         Me.tbDatos.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -124,11 +126,12 @@ Partial Class frmFuncionario
         Me.GroupBox7.SuspendLayout()
         Me.TableLayoutPanel10.SuspendLayout()
         Me.TableLayoutPanel9.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.TableLayoutPanel8.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         CType(Me.dgvFunP, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcF
@@ -594,7 +597,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel6.ColumnCount = 3
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.0!))
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.0!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117.0!))
         Me.TableLayoutPanel6.Controls.Add(Me.txtDescripcionBFF, 1, 1)
         Me.TableLayoutPanel6.Controls.Add(Me.btnBuscar, 2, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.Label4, 0, 0)
@@ -615,10 +618,10 @@ Partial Class frmFuncionario
         Me.txtDescripcionBFF.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtDescripcionBFF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtDescripcionBFF.ForeColor = System.Drawing.Color.White
-        Me.txtDescripcionBFF.Location = New System.Drawing.Point(104, 37)
+        Me.txtDescripcionBFF.Location = New System.Drawing.Point(103, 37)
         Me.txtDescripcionBFF.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescripcionBFF.Name = "txtDescripcionBFF"
-        Me.txtDescripcionBFF.Size = New System.Drawing.Size(447, 22)
+        Me.txtDescripcionBFF.Size = New System.Drawing.Size(443, 22)
         Me.txtDescripcionBFF.TabIndex = 4
         '
         'btnBuscar
@@ -627,11 +630,11 @@ Partial Class frmFuncionario
         Me.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBuscar.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.Black
-        Me.btnBuscar.Location = New System.Drawing.Point(559, 4)
+        Me.btnBuscar.Location = New System.Drawing.Point(554, 4)
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.TableLayoutPanel6.SetRowSpan(Me.btnBuscar, 2)
-        Me.btnBuscar.Size = New System.Drawing.Size(105, 58)
+        Me.btnBuscar.Size = New System.Drawing.Size(110, 58)
         Me.btnBuscar.TabIndex = 0
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -644,7 +647,7 @@ Partial Class frmFuncionario
         Me.Label4.Location = New System.Drawing.Point(4, 0)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 33)
+        Me.Label4.Size = New System.Drawing.Size(91, 33)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Nombre:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -657,7 +660,7 @@ Partial Class frmFuncionario
         Me.Label5.Location = New System.Drawing.Point(4, 33)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(92, 33)
+        Me.Label5.Size = New System.Drawing.Size(91, 33)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Descripcion:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -667,10 +670,10 @@ Partial Class frmFuncionario
         Me.txtNombreBFF.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtNombreBFF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtNombreBFF.ForeColor = System.Drawing.Color.White
-        Me.txtNombreBFF.Location = New System.Drawing.Point(104, 4)
+        Me.txtNombreBFF.Location = New System.Drawing.Point(103, 4)
         Me.txtNombreBFF.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombreBFF.Name = "txtNombreBFF"
-        Me.txtNombreBFF.Size = New System.Drawing.Size(447, 22)
+        Me.txtNombreBFF.Size = New System.Drawing.Size(443, 22)
         Me.txtNombreBFF.TabIndex = 3
         '
         'GroupBox4
@@ -869,10 +872,10 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel9.ColumnCount = 2
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel9.Controls.Add(Me.Panel2, 0, 1)
         Me.TableLayoutPanel9.Controls.Add(Me.Panel1, 1, 1)
         Me.TableLayoutPanel9.Controls.Add(Me.Label7, 0, 0)
         Me.TableLayoutPanel9.Controls.Add(Me.Label6, 1, 0)
-        Me.TableLayoutPanel9.Controls.Add(Me.dtpFIP, 0, 1)
         Me.TableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel9.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
@@ -882,6 +885,61 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel9.Size = New System.Drawing.Size(676, 99)
         Me.TableLayoutPanel9.TabIndex = 30
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.dtpFIP)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(3, 52)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(332, 44)
+        Me.Panel2.TabIndex = 2342329
+        '
+        'dtpFIP
+        '
+        Me.dtpFIP.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpFIP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFIP.Location = New System.Drawing.Point(4, 7)
+        Me.dtpFIP.Name = "dtpFIP"
+        Me.dtpFIP.Size = New System.Drawing.Size(325, 27)
+        Me.dtpFIP.TabIndex = 26
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.cbFF)
+        Me.Panel1.Controls.Add(Me.dtpFFP)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(341, 52)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(332, 44)
+        Me.Panel1.TabIndex = 2342329
+        '
+        'cbFF
+        '
+        Me.cbFF.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbFF.AutoSize = True
+        Me.cbFF.Location = New System.Drawing.Point(14, 15)
+        Me.cbFF.Name = "cbFF"
+        Me.cbFF.Size = New System.Drawing.Size(18, 17)
+        Me.cbFF.TabIndex = 28
+        Me.cbFF.UseVisualStyleBackColor = True
+        '
+        'dtpFFP
+        '
+        Me.dtpFFP.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpFFP.Checked = False
+        Me.dtpFFP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFFP.Location = New System.Drawing.Point(38, 7)
+        Me.dtpFFP.Name = "dtpFFP"
+        Me.dtpFFP.ShowCheckBox = True
+        Me.dtpFFP.Size = New System.Drawing.Size(291, 27)
+        Me.dtpFFP.TabIndex = 27
         '
         'Label7
         '
@@ -928,6 +986,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel8.Controls.Add(Me.cbPrograma, 1, 1)
         Me.TableLayoutPanel8.Controls.Add(Me.txtNombreP, 1, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.Label10, 0, 1)
+        Me.TableLayoutPanel8.Controls.Add(Me.btnMP, 2, 1)
         Me.TableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel8.Location = New System.Drawing.Point(3, 24)
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
@@ -989,6 +1048,20 @@ Partial Class frmFuncionario
         Me.Label10.TabIndex = 34
         Me.Label10.Text = "Programa"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnMP
+        '
+        Me.btnMP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnMP.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnMP.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMP.ForeColor = System.Drawing.Color.Black
+        Me.btnMP.Location = New System.Drawing.Point(539, 46)
+        Me.btnMP.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnMP.Name = "btnMP"
+        Me.btnMP.Size = New System.Drawing.Size(139, 35)
+        Me.btnMP.TabIndex = 2342331
+        Me.btnMP.Text = "Mostrar"
+        Me.btnMP.UseVisualStyleBackColor = False
         '
         'GroupBox6
         '
@@ -1080,43 +1153,6 @@ Partial Class frmFuncionario
         'BWBuscador
         '
         '
-        'dtpFFP
-        '
-        Me.dtpFFP.Checked = False
-        Me.dtpFFP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFFP.Location = New System.Drawing.Point(48, 7)
-        Me.dtpFFP.Name = "dtpFFP"
-        Me.dtpFFP.ShowCheckBox = True
-        Me.dtpFFP.Size = New System.Drawing.Size(276, 27)
-        Me.dtpFFP.TabIndex = 27
-        '
-        'dtpFIP
-        '
-        Me.dtpFIP.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dtpFIP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFIP.Location = New System.Drawing.Point(3, 52)
-        Me.dtpFIP.Name = "dtpFIP"
-        Me.dtpFIP.Size = New System.Drawing.Size(332, 27)
-        Me.dtpFIP.TabIndex = 26
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.cbFF)
-        Me.Panel1.Controls.Add(Me.dtpFFP)
-        Me.Panel1.Location = New System.Drawing.Point(341, 52)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(327, 44)
-        Me.Panel1.TabIndex = 2342329
-        '
-        'cbFF
-        '
-        Me.cbFF.AutoSize = True
-        Me.cbFF.Location = New System.Drawing.Point(14, 15)
-        Me.cbFF.Name = "cbFF"
-        Me.cbFF.Size = New System.Drawing.Size(18, 17)
-        Me.cbFF.TabIndex = 28
-        Me.cbFF.UseVisualStyleBackColor = True
-        '
         'frmFuncionario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1153,13 +1189,14 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel10.ResumeLayout(False)
         Me.TableLayoutPanel9.ResumeLayout(False)
         Me.TableLayoutPanel9.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.TableLayoutPanel8.ResumeLayout(False)
         Me.TableLayoutPanel8.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         CType(Me.dgvFunP, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1229,4 +1266,6 @@ Partial Class frmFuncionario
     Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents cbFF As CheckBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents btnMP As Button
 End Class

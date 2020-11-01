@@ -2027,3 +2027,220 @@
 01/11/2020 11:53:52 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
 01/11/2020 11:53:52 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
 01/11/2020 11:54:10 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+01/11/2020 13:57:32 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+01/11/2020 13:57:47 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+01/11/2020 13:57:49 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+01/11/2020 13:57:51 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-11-01' and fecha_finalizacion>='2020-11-01' 
+01/11/2020 13:57:51 DESKTOP-SDVEG3U ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+01/11/2020 13:57:53 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-11-01' and fecha_finalizacion>='2020-11-01' 
+01/11/2020 13:57:55 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+01/11/2020 13:58:04 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+01/11/2020 13:58:11 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+01/11/2020 13:58:14 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+01/11/2020 13:58:35 DESKTOP-SDVEG3U ' Insert IGNORE into pmuestrapubli ( id_publicidad, id_programa, fecha_inicio, fecha_finalizacion ) values ('2','1','2020-11-01','2020-11-01' ) 
+01/11/2020 13:58:40 DESKTOP-SDVEG3U ' DELETE FROM pmuestrapubli WHERE id_publicidad='2' and id_programa='1' and fecha_inicio >= '2020-11-01' and fecha_finalizacion <= '2020-11-28' 
+01/11/2020 13:58:40 DESKTOP-SDVEG3U ' DELETE FROM pmuestrapubli WHERE id_publicidad='2' and id_programa='1' and fecha_inicio >= '2020-11-01' and fecha_finalizacion <= '2020-11-28' 
+01/11/2020 13:58:40 DESKTOP-SDVEG3U ' Insert IGNORE into pmuestrapubli ( id_publicidad, id_programa, fecha_inicio, fecha_finalizacion ) values ('2','1','2020-11-01','2020-11-28' ) 
+01/11/2020 13:58:50 DESKTOP-SDVEG3U ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+01/11/2020 13:58:52 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 13:59:16 DESKTOP-SDVEG3U ' update evento set nombre = 'ddsds',descripcion = 'dsdsd',ID_Video = null WHERE ID_Evento = '1' 
+01/11/2020 13:59:25 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 13:59:27 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 13:59:43 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-10-14' ,'2020-10-15' ,'2020-10-16' ,'2020-10-17' ,'2020-10-18' ) 
+01/11/2020 13:59:43 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-10-14' ,'2020-10-15' ,'2020-10-16' ,'2020-10-17' ,'2020-10-18' ) 
+01/11/2020 13:59:45 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-10-19' ,'2020-10-20' ) 
+01/11/2020 13:59:45 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-10-19' ,'2020-10-20' ) 
+01/11/2020 13:59:48 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-11-10' ) 
+01/11/2020 13:59:48 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-11-11' ) 
+01/11/2020 13:59:48 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-11-12' ) 
+01/11/2020 13:59:48 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-11-13' ) 
+01/11/2020 13:59:48 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-11-14' ) 
+01/11/2020 13:59:48 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-11-15' ) 
+01/11/2020 13:59:48 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-11-16' ) 
+01/11/2020 14:00:03 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-11-10' ) 
+01/11/2020 14:00:03 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-11-10' ) 
+01/11/2020 14:00:13 DESKTOP-SDVEG3U ' DELETE FROM evento WHERE id_evento in ('1' ) 
+01/11/2020 14:00:13 DESKTOP-SDVEG3U ' DELETE FROM evento WHERE id_evento in ('1' ) 
+01/11/2020 14:00:13 DESKTOP-SDVEG3U ' DELETE FROM eventomuestrapubli WHERE id_evento in ('1' ) 
+01/11/2020 14:00:13 DESKTOP-SDVEG3U ' DELETE FROM eventomuestrapubli WHERE id_evento in ('1' ) 
+01/11/2020 14:00:15 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 14:06:11 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+01/11/2020 14:06:23 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 14:06:24 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 14:06:25 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 14:06:26 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 14:06:26 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 14:06:32 DESKTOP-SDVEG3U ' Insert IGNORE into evento ( nombre,descripcion,ID_Video ) values ('dd','ddd',null ) 
+01/11/2020 14:06:38 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 14:06:40 DESKTOP-SDVEG3U ' select Nombre, Descripcion, id_video, DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha FROM evento WHERE id_evento = '2' 
+01/11/2020 14:07:18 DESKTOP-SDVEG3U ' select Nombre, Descripcion, id_video, DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha FROM evento WHERE id_evento = '2' 
+01/11/2020 14:07:20 DESKTOP-SDVEG3U ' select Nombre, Descripcion, id_video, DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha FROM evento WHERE id_evento = '2' 
+01/11/2020 14:07:23 DESKTOP-SDVEG3U ' select Nombre, Descripcion, id_video, DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha FROM evento WHERE id_evento = '2' 
+01/11/2020 14:07:32 DESKTOP-SDVEG3U ' DELETE FROM evento WHERE id_evento in ('2' ) 
+01/11/2020 14:07:32 DESKTOP-SDVEG3U ' DELETE FROM evento WHERE id_evento in ('2' ) 
+01/11/2020 14:07:32 DESKTOP-SDVEG3U ' DELETE FROM eventomuestrapubli WHERE id_evento in ('2' ) 
+01/11/2020 14:07:32 DESKTOP-SDVEG3U ' DELETE FROM eventomuestrapubli WHERE id_evento in ('2' ) 
+01/11/2020 14:07:33 DESKTOP-SDVEG3U ' DELETE FROM evento WHERE id_evento in ('2' ) 
+01/11/2020 14:07:33 DESKTOP-SDVEG3U ' DELETE FROM evento WHERE id_evento in ('2' ) 
+01/11/2020 14:07:33 DESKTOP-SDVEG3U ' DELETE FROM eventomuestrapubli WHERE id_evento in ('2' ) 
+01/11/2020 14:07:33 DESKTOP-SDVEG3U ' DELETE FROM eventomuestrapubli WHERE id_evento in ('2' ) 
+01/11/2020 14:07:34 DESKTOP-SDVEG3U ' DELETE FROM evento WHERE id_evento in ('2' ) 
+01/11/2020 14:07:34 DESKTOP-SDVEG3U ' DELETE FROM evento WHERE id_evento in ('2' ) 
+01/11/2020 14:07:34 DESKTOP-SDVEG3U ' DELETE FROM eventomuestrapubli WHERE id_evento in ('2' ) 
+01/11/2020 14:07:34 DESKTOP-SDVEG3U ' DELETE FROM eventomuestrapubli WHERE id_evento in ('2' ) 
+01/11/2020 14:07:34 DESKTOP-SDVEG3U ' DELETE FROM evento WHERE id_evento in ('2' ) 
+01/11/2020 14:07:34 DESKTOP-SDVEG3U ' DELETE FROM evento WHERE id_evento in ('2' ) 
+01/11/2020 14:07:34 DESKTOP-SDVEG3U ' DELETE FROM eventomuestrapubli WHERE id_evento in ('2' ) 
+01/11/2020 14:07:34 DESKTOP-SDVEG3U ' DELETE FROM eventomuestrapubli WHERE id_evento in ('2' ) 
+01/11/2020 14:12:20 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+01/11/2020 14:12:28 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+01/11/2020 14:12:31 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 14:12:31 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 14:12:35 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+01/11/2020 14:12:39 DESKTOP-SDVEG3U ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+01/11/2020 14:12:42 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+01/11/2020 14:12:54 DESKTOP-SDVEG3U ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+01/11/2020 14:12:56 DESKTOP-SDVEG3U ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha FROM video WHERE id_video = '4' 
+01/11/2020 14:13:02 DESKTOP-SDVEG3U ' update video set contenido = 'adios',nombre = 'hola',ID_Serie = '10',fecha = null WHERE ID_Video = '4' 
+01/11/2020 14:13:03 DESKTOP-SDVEG3U ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+01/11/2020 14:13:06 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 14:13:06 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 14:13:10 DESKTOP-SDVEG3U ' Insert IGNORE into evento ( nombre,descripcion,ID_Video ) values ('dfdf','dfd',null ) 
+01/11/2020 14:13:13 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 14:13:14 DESKTOP-SDVEG3U ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '3' 
+01/11/2020 14:13:20 DESKTOP-SDVEG3U ' update evento set nombre = 'dfdf',descripcion = 'dfd',ID_Video = '4' WHERE ID_Evento = '3' 
+01/11/2020 14:13:30 DESKTOP-SDVEG3U ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '3' 
+01/11/2020 14:13:35 DESKTOP-SDVEG3U ' update evento set nombre = 'dfdffffffffffffffff',descripcion = 'dfd',ID_Video = '4' WHERE ID_Evento = '3' 
+01/11/2020 14:13:38 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 14:13:56 DESKTOP-SDVEG3U ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '3' 
+01/11/2020 14:14:02 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('3','2020-11-10' ) 
+01/11/2020 14:14:02 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('3','2020-11-11' ) 
+01/11/2020 14:14:02 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('3','2020-11-12' ) 
+01/11/2020 14:14:02 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('3','2020-11-13' ) 
+01/11/2020 14:14:02 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('3','2020-11-14' ) 
+01/11/2020 14:14:02 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('3','2020-11-15' ) 
+01/11/2020 14:14:02 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('3','2020-11-16' ) 
+01/11/2020 14:14:14 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+01/11/2020 14:14:22 DESKTOP-SDVEG3U ' Funcionario: select id_programa, Nombre_Programa FROM programa WHERE Nombre_Programa like '%lol%' 
+01/11/2020 14:14:40 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+01/11/2020 14:14:44 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+01/11/2020 14:14:45 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '3' 
+01/11/2020 14:14:46 DESKTOP-SDVEG3U ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 3 and fecha >= '2020-11-01' and fecha <='2020-11-01' 
+01/11/2020 14:14:46 DESKTOP-SDVEG3U ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 3 and fecha >= '2020-11-01' and fecha <='2020-11-01' 
+01/11/2020 14:14:46 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 3 and fecha = '2020-11-01' 
+01/11/2020 14:14:47 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='3' and fecha_inicio <='2020-11-01' and fecha_finalizacion>='2020-11-01' 
+01/11/2020 14:14:48 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 3) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+01/11/2020 14:14:49 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+01/11/2020 15:43:44 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+01/11/2020 15:43:53 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+01/11/2020 15:43:55 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+01/11/2020 15:43:59 DESKTOP-SDVEG3U ' Funcionario: select id_programa, Nombre_Programa FROM programa WHERE Nombre_Programa like '%a%' 
+01/11/2020 15:44:03 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+01/11/2020 15:44:04 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+01/11/2020 15:44:04 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-11-01' and fecha_finalizacion>='2020-11-01' 
+01/11/2020 15:44:05 DESKTOP-SDVEG3U ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+01/11/2020 15:44:05 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-11-01' 
+01/11/2020 15:44:06 DESKTOP-SDVEG3U ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-11-01' and fecha <='2020-11-01' 
+01/11/2020 15:44:06 DESKTOP-SDVEG3U ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-11-01' and fecha <='2020-11-01' 
+01/11/2020 15:44:06 DESKTOP-SDVEG3U ' Funcionario: select id_programa, Nombre_Programa FROM programa WHERE Nombre_Programa like '%a%' 
+01/11/2020 15:44:18 DESKTOP-SDVEG3U ' Insert IGNORE into funtrabaja ( id_trabajacomo, id_programa, fecha_inicio, fecha_finalizacion ) values ('4','2','2020-11-05',null),('6','2','2020-11-05',null ) 
+01/11/2020 15:44:30 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 2) 
+01/11/2020 15:44:30 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+01/11/2020 15:44:30 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+01/11/2020 15:44:41 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+01/11/2020 15:44:42 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+01/11/2020 15:44:49 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())<curdate() 
+01/11/2020 15:44:50 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+01/11/2020 15:44:51 DESKTOP-SDVEG3U ' Funcionario: select id_programa, Nombre_Programa FROM programa WHERE Nombre_Programa like '%a%' 
+01/11/2020 15:44:59 DESKTOP-SDVEG3U ' Insert IGNORE into funtrabaja ( id_trabajacomo, id_programa, fecha_inicio, fecha_finalizacion ) values ('4','2','2020-11-05','2020-11-05'),('6','2','2020-11-05','2020-11-05' ) 
+01/11/2020 15:45:03 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+01/11/2020 15:45:04 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+01/11/2020 15:45:06 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())<curdate() 
+01/11/2020 15:45:09 DESKTOP-SDVEG3U ' Funcionario: select id_programa, Nombre_Programa FROM programa WHERE Nombre_Programa like '%a%' 
+01/11/2020 15:45:16 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+01/11/2020 15:45:17 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-11-01' and fecha_finalizacion>='2020-11-01' 
+01/11/2020 15:45:17 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+01/11/2020 15:45:36 DESKTOP-SDVEG3U ' Funcionario: select id_programa, Nombre_Programa FROM programa WHERE Nombre_Programa like '%a%' 
+01/11/2020 15:45:49 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+01/11/2020 15:45:54 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 15:45:55 DESKTOP-SDVEG3U ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '3' 
+01/11/2020 15:46:33 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+01/11/2020 15:46:40 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 15:46:41 DESKTOP-SDVEG3U ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '3' 
+01/11/2020 15:47:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+01/11/2020 15:47:35 DESKTOP-SDVEG3U ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '3' 
+01/11/2020 15:47:41 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='3' and fecha in ('2020-11-10' ,'2020-11-11' ,'2020-11-12' ,'2020-11-13' ,'2020-11-14' ) 
+01/11/2020 15:47:41 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='3' and fecha in ('2020-11-10' ,'2020-11-11' ,'2020-11-12' ,'2020-11-13' ,'2020-11-14' ) 
+01/11/2020 15:47:42 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='3' and fecha in ('2020-11-15' ,'2020-11-16' ) 
+01/11/2020 15:47:42 DESKTOP-SDVEG3U ' DELETE FROM fechaevento WHERE id_evento='3' and fecha in ('2020-11-15' ,'2020-11-16' ) 
+01/11/2020 15:47:46 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+01/11/2020 15:47:49 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+01/11/2020 15:47:51 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:47:51 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:47:54 DESKTOP-SDVEG3U ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('3','3'),('4','3' ) 
+01/11/2020 15:47:54 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:47:54 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:47:55 DESKTOP-SDVEG3U ' Insert IGNORE into TrabajaComo ( ID_Funcion, ID_Funcionario ) values ('1','3' ) 
+01/11/2020 15:47:55 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:47:55 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:47:58 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:48:04 DESKTOP-SDVEG3U ' Funcionario: select id_programa, Nombre_Programa FROM programa WHERE Nombre_Programa like '%a%' 
+01/11/2020 15:48:07 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+01/11/2020 15:48:08 DESKTOP-SDVEG3U ' Funcionario: select id_programa, Nombre_Programa FROM programa WHERE Nombre_Programa like '%a%' 
+01/11/2020 15:48:21 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:48:21 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:48:26 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:48:40 DESKTOP-SDVEG3U ' Insert IGNORE into funtrabaja ( id_trabajacomo, id_programa, fecha_inicio, fecha_finalizacion ) values ('8','2','2020-10-14','2020-10-30'),('9','2','2020-10-14','2020-10-30' ) 
+01/11/2020 15:48:43 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+01/11/2020 15:48:44 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+01/11/2020 15:48:44 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())<curdate() 
+01/11/2020 15:48:57 DESKTOP-SDVEG3U ' DELETE FROM funtrabaja WHERE id_programa='2' and ID_TrabajaComo in ('4' ,'8' ,'9' ) and fecha_inicio in ('2020-10-07' ,'2020-10-14' ,'2020-10-14' ) 
+01/11/2020 15:48:57 DESKTOP-SDVEG3U ' DELETE FROM funtrabaja WHERE id_programa='2' and ID_TrabajaComo in ('4' ,'8' ,'9' ) and fecha_inicio in ('2020-10-07' ,'2020-10-14' ,'2020-10-14' ) 
+01/11/2020 15:48:57 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())<curdate() 
+01/11/2020 15:48:58 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+01/11/2020 15:49:01 DESKTOP-SDVEG3U ' DELETE FROM funtrabaja WHERE id_programa='2' and ID_TrabajaComo in ('2' ,'4' ,'5' ,'6' ) and fecha_inicio in ('2020-10-07' ,'2020-11-05' ,'2020-10-07' ,'2020-11-05' ) 
+01/11/2020 15:49:01 DESKTOP-SDVEG3U ' DELETE FROM funtrabaja WHERE id_programa='2' and ID_TrabajaComo in ('2' ,'4' ,'5' ,'6' ) and fecha_inicio in ('2020-10-07' ,'2020-11-05' ,'2020-10-07' ,'2020-11-05' ) 
+01/11/2020 15:49:01 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+01/11/2020 15:49:02 DESKTOP-SDVEG3U ' Funcionario: select id_programa, Nombre_Programa FROM programa WHERE Nombre_Programa like '%a%' 
+01/11/2020 15:49:11 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+01/11/2020 15:55:52 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+01/11/2020 15:56:06 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+01/11/2020 15:56:08 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:56:08 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:56:12 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:56:12 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:56:15 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:56:15 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:57:19 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:57:19 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:57:22 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:57:22 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:57:42 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:57:42 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:57:48 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:57:48 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:57:50 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:57:50 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:57:57 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:57:57 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:57:59 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:57:59 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:58:04 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:58:04 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:58:07 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:58:07 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:58:09 DESKTOP-SDVEG3U ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '3' and ID_Funcion in ('3' ) 
+01/11/2020 15:58:09 DESKTOP-SDVEG3U ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '3' and ID_Funcion in ('3' ) 
+01/11/2020 15:58:09 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:58:09 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:58:13 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:58:13 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:58:15 DESKTOP-SDVEG3U ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '3' and ID_Funcion in ('4' ) 
+01/11/2020 15:58:15 DESKTOP-SDVEG3U ' DELETE FROM TrabajaComo WHERE ID_Funcionario = '3' and ID_Funcion in ('4' ) 
+01/11/2020 15:58:15 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:58:15 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:58:16 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:58:16 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:58:18 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
+01/11/2020 15:58:18 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
+01/11/2020 15:58:19 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 

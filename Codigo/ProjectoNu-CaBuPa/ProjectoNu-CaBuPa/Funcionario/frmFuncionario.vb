@@ -297,10 +297,56 @@ Public Class frmFuncionario
     Private Sub btnAsignarProg_Click(sender As Object, e As EventArgs) Handles btnAsignarProg.Click
         If (cbPrograma.SelectedIndex > 0) Then
             If ObtenerCheck(dt_Funciones, dgvFunP).Length > 0 Then
-
+                MISQL("funtrabaja", "id_trabajacomo, id_programa, fecha_inicio, fecha_finalizacion", ObtenerCheck(
+                                                                                                        dt_Funciones,
+                                                                                                         dgvFunP,
+                                                                                                                1,
+                                                                                                        String.Format(",'{0}','{1}',", positionPrograma(cbPrograma.SelectedIndex - 1), Format(dtpFIP.Value, "yyyy-MM-dd")) + If(cbFF.Checked, String.Format("'{0}'", Format(dtpFFP.Value, "yyyy-MM-dd")), "null"), True))
+                BuscarFun()
+                dtpFFP.Value = Now
+                dtpFIP.Value = Now
+                cbFF.Checked = False
             End If
         Else
             MessageBox.Show("Debe seleccionar un programa para asignar")
+        End If
+    End Sub
+
+    Private Sub btnMP_Click(sender As Object, e As EventArgs) Handles btnMP.Click
+        If (cbPrograma.SelectedIndex > 0) Then
+            Dim formPrograma As New frmPrograma(positionPrograma(cbPrograma.SelectedIndex - 1))
+            AddHandler formPrograma.FormClosed, AddressOf FormPrograma_FormClosed
+            formPrograma.ShowDialog()
+        End If
+    End Sub
+    Private Sub FormPrograma_FormClosed()
+        BuscarPrograma()
+    End Sub
+
+    Private Sub dgvFunP_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFunP.CellDoubleClick
+        Dim i() As String = CargarID(dt_Funciones, dgvFunP, {0, 2, 3})
+        If (i.Length <> 1) Then
+            Dim formFuncion As New frmFuncion(i)
+            AddHandler formFuncion.FormClosed, AddressOf FormFuncion_FormClosed
+            formFuncion.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub dgvFuncionesBFF_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionesBFF.CellDoubleClick
+        Dim i() As String = CargarID(dt_BFuncionesAs, dgvFuncionesBFF, {0, 1, 2})
+        If (i.Length <> 1) Then
+            Dim formFuncion As New frmFuncion(i)
+            AddHandler formFuncion.FormClosed, AddressOf Buscar
+            formFuncion.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub dgvFuncionesAs_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionesAs.CellDoubleClick
+        Dim i() As String = CargarID(dt_Funciones, dgvFuncionesAs, {0, 2, 3})
+        If (i.Length <> 1) Then
+            Dim formFuncion As New frmFuncion(i)
+            AddHandler formFuncion.FormClosed, AddressOf Buscar
+            formFuncion.ShowDialog()
         End If
     End Sub
 End Class

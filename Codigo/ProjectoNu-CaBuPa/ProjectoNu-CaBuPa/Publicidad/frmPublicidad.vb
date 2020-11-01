@@ -486,4 +486,29 @@ Public Class frmPublicidad
     Private Sub btnIEvento_Click(sender As Object, e As EventArgs) Handles btnIEvento.Click
         FechasMaxP()
     End Sub
+    Private Sub btnMP_Click(sender As Object, e As EventArgs) Handles btnMP.Click
+        If (cbPrograma.SelectedIndex > 0) Then
+            Dim formPrograma As New frmPrograma(positionPrograma(cbPrograma.SelectedIndex - 1))
+            AddHandler formPrograma.FormClosed, AddressOf FormPrograma_FormClosed
+            formPrograma.ShowDialog()
+        End If
+    End Sub
+    Private Sub FormPrograma_FormClosed()
+        If Not bwDatos.IsBusy Then
+            bwDatos.RunWorkerAsync(3) 'PSQL("ID_Programa, Nombre_Programa as Nombre, Descripcion", "programa", condicion))
+        End If
+    End Sub
+
+    Private Sub btnMostrarE_Click(sender As Object, e As EventArgs) Handles btnMostrarE.Click
+        If (cbEvento.SelectedIndex > 0) Then
+            Dim formEvento As New frmEvento(positionEvento(cbEvento.SelectedIndex - 1))
+            AddHandler formEvento.FormClosed, AddressOf FormEvento_FormClosed
+            formEvento.ShowDialog()
+        End If
+    End Sub
+    Private Sub FormEvento_FormClosed()
+        If Not bwDatos.IsBusy Then
+            bwDatos.RunWorkerAsync(4) 'PSQL("ID_Programa, Nombre_Programa as Nombre, Descripcion", "programa", condicion))
+        End If
+    End Sub
 End Class

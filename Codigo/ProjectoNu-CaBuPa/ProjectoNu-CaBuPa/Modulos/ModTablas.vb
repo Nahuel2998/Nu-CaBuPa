@@ -79,6 +79,17 @@ Module ModTablas
         Dim err(0) As String
         Return err
     End Function
+    Public Function CargarTodo(ByRef Tabla As DataTable, ByVal NumCol As Byte) As String()
+        If (Not IsNothing(Tabla)) Then
+            Dim res(Tabla.Rows.Count) As String
+            For i As Byte = 0 To Tabla.Rows.Count - 1
+                res(i) = Tabla.Rows(i).Item(NumCol).ToString
+            Next
+            Return res
+        End If
+        Dim err(0) As String
+        Return err
+    End Function
     Public Sub ClickCheck(ByRef Dgv As DataGridView, ByVal columna As Integer)
         If Dgv.Rows.Count > 0 Then
             If columna = Dgv.Columns.Count - 1 Then
@@ -232,7 +243,7 @@ Module ModTablas
         Next
         res = res.Remove(res.Length - 2)
         Dim dtN As DataTable = DevolverTabla(PSQL(res, tabla, String.Format("{0} = '{1}'", campo, id)))
-        'ModLog.Guardar(PSQL(res, tabla, String.Format("{0} = '{1}'", campo, id)))
+        ModLog.Guardar(PSQL(res, tabla, String.Format("{0} = '{1}'", campo, id)))
         If (Not IsNothing(dtN)) Then
             For j As Integer = 0 To dtN.Columns.Count - 1
                 resultado(j) = dtN.Rows(0).Item(j).ToString
@@ -240,7 +251,7 @@ Module ModTablas
         End If
         Return resultado
     End Function
-    Public Sub CargarListBox(ByRef lis As CheckedListBox, ByVal dt As DataTable)
+    Public Sub DevolverIds(ByRef lis As CheckedListBox, ByVal dt As DataTable)
         For i As Integer = 0 To dt.Rows.Count - 1
             lis.Items.Add(dt.Rows(i).Item(1).ToString + dt.Rows(i).Item(1).ToString)
         Next

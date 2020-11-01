@@ -54,9 +54,9 @@ Partial Class frmPrograma
         Me.txtDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnPSalir = New System.Windows.Forms.Button()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnPEditar = New System.Windows.Forms.Button()
+        Me.btnPSalir = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -347,9 +347,9 @@ Partial Class frmPrograma
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel3.Controls.Add(Me.btnPSalir, 4, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnBorrar, 2, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnPEditar, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.btnPSalir, 4, 0)
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 238)
         Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -358,26 +358,12 @@ Partial Class frmPrograma
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(624, 61)
         Me.TableLayoutPanel3.TabIndex = 28876924
         '
-        'btnPSalir
-        '
-        Me.btnPSalir.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnPSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnPSalir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnPSalir.Location = New System.Drawing.Point(469, 4)
-        Me.btnPSalir.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnPSalir.MinimumSize = New System.Drawing.Size(120, 15)
-        Me.btnPSalir.Name = "btnPSalir"
-        Me.btnPSalir.Size = New System.Drawing.Size(151, 53)
-        Me.btnPSalir.TabIndex = 0
-        Me.btnPSalir.Text = "Salir"
-        Me.btnPSalir.UseVisualStyleBackColor = True
-        '
         'btnBorrar
         '
         Me.btnBorrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnBorrar.ForeColor = System.Drawing.Color.Black
         Me.btnBorrar.Location = New System.Drawing.Point(272, 4)
         Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBorrar.MinimumSize = New System.Drawing.Size(120, 15)
@@ -391,6 +377,7 @@ Partial Class frmPrograma
         '
         Me.btnPEditar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnPEditar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnPEditar.ForeColor = System.Drawing.Color.Black
         Me.btnPEditar.Location = New System.Drawing.Point(4, 4)
         Me.btnPEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPEditar.MinimumSize = New System.Drawing.Size(120, 15)
@@ -399,6 +386,22 @@ Partial Class frmPrograma
         Me.btnPEditar.TabIndex = 1
         Me.btnPEditar.Text = "Editar"
         Me.btnPEditar.UseVisualStyleBackColor = True
+        '
+        'btnPSalir
+        '
+        Me.btnPSalir.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnPSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnPSalir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnPSalir.ForeColor = System.Drawing.Color.Black
+        Me.btnPSalir.Location = New System.Drawing.Point(469, 4)
+        Me.btnPSalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPSalir.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnPSalir.Name = "btnPSalir"
+        Me.btnPSalir.Size = New System.Drawing.Size(151, 53)
+        Me.btnPSalir.TabIndex = 0
+        Me.btnPSalir.Text = "Salir"
+        Me.btnPSalir.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
