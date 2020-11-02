@@ -13,6 +13,10 @@
     End Sub
 
     Private Sub frmFuncion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Not PoseePermiso("Funcionario", "a") Then
+            btnBorrar.Visible = False
+            btnEditar.Visible = False
+        End If
         If (ID = -1) Then
             Alternar()
         End If

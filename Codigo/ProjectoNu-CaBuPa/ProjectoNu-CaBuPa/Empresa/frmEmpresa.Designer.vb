@@ -33,6 +33,8 @@ Partial Class frmEmpresa
         Me.btnSEditar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dgvVSM = New System.Windows.Forms.DataGridView()
+        Me.CNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PTema = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -42,8 +44,6 @@ Partial Class frmEmpresa
         Me.txtTelefono = New System.Windows.Forms.RichTextBox()
         Me.txtMail = New System.Windows.Forms.RichTextBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.CNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PTema = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -66,7 +66,7 @@ Partial Class frmEmpresa
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.TableLayoutPanel1.ForeColor = System.Drawing.Color.White
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(16, 6)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.32578!))
@@ -80,7 +80,7 @@ Partial Class frmEmpresa
         Me.TableLayoutPanel3.ColumnCount = 3
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.8818!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.1182!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 289.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.btnBorrar, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnSSalir, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnSEditar, 2, 0)
@@ -99,8 +99,8 @@ Partial Class frmEmpresa
         Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrar.ForeColor = System.Drawing.Color.Black
-        Me.btnBorrar.Location = New System.Drawing.Point(296, 4)
-        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBorrar.Location = New System.Drawing.Point(295, 4)
+        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBorrar.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(285, 70)
@@ -115,7 +115,7 @@ Partial Class frmEmpresa
         Me.btnSSalir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnSSalir.ForeColor = System.Drawing.Color.Black
         Me.btnSSalir.Location = New System.Drawing.Point(4, 4)
-        Me.btnSSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSSalir.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnSSalir.Name = "btnSSalir"
         Me.btnSSalir.Size = New System.Drawing.Size(184, 70)
@@ -131,7 +131,7 @@ Partial Class frmEmpresa
         Me.btnSEditar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnSEditar.ForeColor = System.Drawing.Color.Black
         Me.btnSEditar.Location = New System.Drawing.Point(668, 4)
-        Me.btnSEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSEditar.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnSEditar.Name = "btnSEditar"
         Me.btnSEditar.Size = New System.Drawing.Size(203, 70)
@@ -148,10 +148,10 @@ Partial Class frmEmpresa
         Me.GroupBox1.Controls.Add(Me.dgvVSM)
         Me.GroupBox1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.GroupBox1.Location = New System.Drawing.Point(4, 164)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.MinimumSize = New System.Drawing.Size(133, 49)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(873, 185)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
@@ -210,6 +210,21 @@ Partial Class frmEmpresa
         Me.dgvVSM.Size = New System.Drawing.Size(860, 155)
         Me.dgvVSM.TabIndex = 28876923
         '
+        'CNombre
+        '
+        Me.CNombre.FillWeight = 40.28429!
+        Me.CNombre.HeaderText = "Nombre"
+        Me.CNombre.MinimumWidth = 6
+        Me.CNombre.Name = "CNombre"
+        Me.CNombre.ReadOnly = True
+        '
+        'PTema
+        '
+        Me.PTema.HeaderText = "Tema"
+        Me.PTema.MinimumWidth = 6
+        Me.PTema.Name = "PTema"
+        Me.PTema.ReadOnly = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -218,10 +233,10 @@ Partial Class frmEmpresa
         Me.GroupBox2.Controls.Add(Me.TableLayoutPanel2)
         Me.GroupBox2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.GroupBox2.Location = New System.Drawing.Point(4, 4)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.MinimumSize = New System.Drawing.Size(133, 37)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(873, 152)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
@@ -242,7 +257,7 @@ Partial Class frmEmpresa
         Me.TableLayoutPanel2.Controls.Add(Me.txtTelefono, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.txtMail, 1, 2)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(9, 28)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
@@ -296,7 +311,7 @@ Partial Class frmEmpresa
         Me.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtNombre.ForeColor = System.Drawing.Color.White
         Me.txtNombre.Location = New System.Drawing.Point(95, 4)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.MaxLength = 64
         Me.txtNombre.Multiline = False
         Me.txtNombre.Name = "txtNombre"
@@ -311,7 +326,7 @@ Partial Class frmEmpresa
         Me.txtTelefono.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtTelefono.ForeColor = System.Drawing.Color.White
         Me.txtTelefono.Location = New System.Drawing.Point(95, 41)
-        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTelefono.MaxLength = 16
         Me.txtTelefono.Multiline = False
         Me.txtTelefono.Name = "txtTelefono"
@@ -326,7 +341,7 @@ Partial Class frmEmpresa
         Me.txtMail.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtMail.ForeColor = System.Drawing.Color.White
         Me.txtMail.Location = New System.Drawing.Point(95, 78)
-        Me.txtMail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtMail.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMail.MaxLength = 64
         Me.txtMail.Multiline = False
         Me.txtMail.Name = "txtMail"
@@ -334,21 +349,6 @@ Partial Class frmEmpresa
         Me.txtMail.Size = New System.Drawing.Size(757, 30)
         Me.txtMail.TabIndex = 28876929
         Me.txtMail.Text = ""
-        '
-        'CNombre
-        '
-        Me.CNombre.FillWeight = 40.28429!
-        Me.CNombre.HeaderText = "Nombre"
-        Me.CNombre.MinimumWidth = 6
-        Me.CNombre.Name = "CNombre"
-        Me.CNombre.ReadOnly = True
-        '
-        'PTema
-        '
-        Me.PTema.HeaderText = "Tema"
-        Me.PTema.MinimumWidth = 6
-        Me.PTema.Name = "PTema"
-        Me.PTema.ReadOnly = True
         '
         'frmEmpresa
         '
@@ -359,7 +359,7 @@ Partial Class frmEmpresa
         Me.ClientSize = New System.Drawing.Size(911, 437)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(929, 484)
         Me.MinimizeBox = False

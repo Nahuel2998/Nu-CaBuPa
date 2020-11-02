@@ -39,12 +39,14 @@ Public Class frmPrograma
     Private Sub frmPrograma_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If programaID <> -1 Then
             bwDatos.RunWorkerAsync()
+            If Not PoseePermiso("Programa", "a") Then
+                btnBorrar.Visible = False
+                btnPEditar.Visible = False
+
+                ocultar()
+            End If
         Else
-            tcP.TabPages.RemoveByKey("tbFuncionarios")
-            tcP.TabPages.RemoveByKey("tbPublicidades")
-            tcP.TabPages.RemoveByKey("tbAlquiler")
-            tcP.TabPages.RemoveByKey("tbFechas")
-            tcP.TabPages.RemoveByKey("tbFechasAgendadas")
+            ocultar()
             btnPEditar.Text = "Insertar"
             btnBorrar.Visible = False
             Activar()
@@ -52,6 +54,13 @@ Public Class frmPrograma
         dtpFecha.BackColor = Color.FromArgb(64, 64, 64)
         dtpFecha.ForeColor = Color.White
         btnPSalir.Select()
+    End Sub
+    Private Sub ocultar()
+        tcP.TabPages.RemoveByKey("tbFuncionarios")
+        tcP.TabPages.RemoveByKey("tbPublicidades")
+        tcP.TabPages.RemoveByKey("tbAlquiler")
+        tcP.TabPages.RemoveByKey("tbFechas")
+        tcP.TabPages.RemoveByKey("tbFechasAgendadas")
     End Sub
 
     Private Sub bwDatos_DoWork(sender As Object, e As DoWorkEventArgs) Handles bwDatos.DoWork

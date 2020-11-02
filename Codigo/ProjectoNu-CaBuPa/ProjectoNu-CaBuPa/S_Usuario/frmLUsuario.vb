@@ -1,9 +1,7 @@
 ﻿Public Class frmLUsuario
     Private Sub btnOpciones_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOpciones.Click
-        If PoseePermiso("Configuracion") Then
-            If BUsuario(txtUsuario.Text, txtPass.Text) Or ModConector.GDebug Then
-                ModInicializador.Configuracion()
-            End If
+        If (BUsuario(txtUsuario.Text, txtPass.Text) And PoseePermiso("Configuracion")) Or ModConector.GDebug Then
+            ModInicializador.Configuracion()
         End If
     End Sub
 

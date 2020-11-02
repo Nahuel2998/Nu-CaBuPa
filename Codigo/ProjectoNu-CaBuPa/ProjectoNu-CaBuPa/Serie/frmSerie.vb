@@ -32,6 +32,10 @@ Public Class frmSerie
         If (serieID = -1) Then
             Alternar()
         End If
+        If Not PoseePermiso("Serie", "a") Then
+            btnBorrar.Visible = False
+            btnSEditar.Visible = False
+        End If
     End Sub
 
     Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnSEditar.Click

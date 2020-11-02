@@ -107,6 +107,10 @@
     End Sub
 
     Private Sub frmVideo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Not PoseePermiso("Video", "a") Then
+            btnBorrar.Visible = False
+            btnEditar.Visible = False
+        End If
         If videoID <> -1 Then
             Buscar()
             btnSalir.Select()

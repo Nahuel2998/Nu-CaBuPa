@@ -1,18 +1,20 @@
-INSERT INTO `acceso` VALUES 
+REPLACE `acceso` VALUES 
 (1,'Inicio','a'),
 (2,'Configuracion','a'),
 (3,'Programa','a'),
 (4,'Serie','a'),
 (5,'Video','a'),
-(6,'Empresas','a'),
+(6,'Empresa','a'),
 (7,'Publicidad','a'),
-(8,'Eventos','a'),
-(9,'Configuracion','v'),
-(10,'Programa','v'),
-(11,'Serie','v'),
-(12,'Video','v'),
+(8,'Evento','a'),
+(9,'Tanda','a'),
+(10,'Tanda','v'),
+(11,'Configuracion','v'),
+(12,'Programa','v'),
 (13,'Serie','v'),
-(14,'Empresas','v'),
-(15,'Publicidad','v'),
-(16,'Eventos','v')
+(14,'Video','v'),
+(15,'Serie','v'),
+(16,'Empresas','v'),
+(17,'Publicidad','v'),
+(18,'Eventos','v');
 

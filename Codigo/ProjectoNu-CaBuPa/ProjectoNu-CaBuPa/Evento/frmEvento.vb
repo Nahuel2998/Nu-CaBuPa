@@ -21,6 +21,11 @@ Public Class frmEvento
     End Sub
 
     Private Sub frmEvento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Not PoseePermiso("Evento", "a") Then
+            btnBorrar.Visible = False
+            btnEditar.Visible = False
+            tbFechas.Hide()
+        End If
         If eventoID <> -1 Then
             Buscar()
             btnSalir.Select()

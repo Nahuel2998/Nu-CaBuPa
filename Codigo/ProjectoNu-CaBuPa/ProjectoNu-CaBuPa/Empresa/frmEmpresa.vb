@@ -21,6 +21,10 @@ Public Class frmEmpresa
         If (empresaID = -1) Then
             Alternar()
         End If
+        If Not PoseePermiso("Empresa", "a") Then
+            btnBorrar.Visible = False
+            btnSEditar.Visible = False
+        End If
     End Sub
     Private Sub CargarDatos()
         datos = {txtNombre.Text, txtTelefono.Text, If(ValidarEmail(txtMail.Text), txtMail.Text, tmpDatos(3))}
@@ -138,7 +142,7 @@ Public Class frmEmpresa
 
     Private Sub dgvVSM_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVSM.CellDoubleClick
         Dim i As Integer = CargarID(dt_Video, dgvVSM)
-        If (i <> -1) Then
+        If (i <> -1) And PoseePermiso("Publicidades") Then
             Dim formPubli As New frmVideo(i)
             AddHandler formPubli.FormClosed, AddressOf formPubli_FormClosed
             formPubli.ShowDialog()

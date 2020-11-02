@@ -47,7 +47,7 @@ Public Class frmPrincipal
         If Not (PoseePermiso("Video")) Then
             TabControl1.TabPages.RemoveByKey("tbVideo")
         End If
-        If Not (PoseePermiso("Empresas")) Then
+        If Not (PoseePermiso("Empresa")) Then
             tcSecciones.TabPages.RemoveByKey("tbEmpresa")
         End If
         If Not (PoseePermiso("Publicidad")) Then

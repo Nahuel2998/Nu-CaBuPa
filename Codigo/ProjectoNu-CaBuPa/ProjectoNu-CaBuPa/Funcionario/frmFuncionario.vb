@@ -23,6 +23,12 @@ Public Class frmFuncionario
     End Sub
 
     Private Sub frmFuncionario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Not PoseePermiso("Funcionario", "a") Then
+            btnBorrar.Visible = False
+            btnEditar.Visible = False
+            tbAF.Hide()
+            TBAP.Hide()
+        End If
         ActualizarTabla()
         If (ID = -1) Then
             tcF.TabPages.RemoveAt(1)

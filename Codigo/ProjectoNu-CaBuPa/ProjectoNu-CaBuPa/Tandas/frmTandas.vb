@@ -36,6 +36,10 @@
 
     Private Sub frmTandas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BuscarT()
+        If Not PoseePermiso("Tanda", "a") Then
+            btnBorrar.Visible = False
+            btnIngresar.Visible = False
+        End If
     End Sub
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click

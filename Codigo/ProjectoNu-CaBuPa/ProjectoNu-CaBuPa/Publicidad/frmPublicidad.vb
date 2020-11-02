@@ -101,10 +101,15 @@ Public Class frmPublicidad
         If publicidadID <> -1 Then
             Buscar()
             btnSalir.Select()
+            If Not PoseePermiso("Publicidad", "a") Then
+                btnBorrar.Visible = False
+                btnEditar.Visible = False
+                btnBorrarC.Visible = False
+                btnInsertarC.Visible = False
+                ocultar()
+            End If
         Else
-            tcP.TabPages.RemoveByKey("tbTandas")
-            tcP.TabPages.RemoveByKey("tbTandasE")
-            tcP.TabPages.RemoveByKey("tbProgramas")
+            ocultar()
             tcP.TabPages.RemoveByKey("tbCuotas")
             btnEditar.Text = "Insertar"
             btnBorrar.Visible = False
@@ -112,6 +117,11 @@ Public Class frmPublicidad
             CargarCombo()
         End If
         btnSalir.Select()
+    End Sub
+    Private Sub ocultar()
+        tcP.TabPages.RemoveByKey("tbTandas")
+        tcP.TabPages.RemoveByKey("tbTandasE")
+        tcP.TabPages.RemoveByKey("tbProgramas")
     End Sub
     Sub Activar()
         txtNombre.ReadOnly = editando
