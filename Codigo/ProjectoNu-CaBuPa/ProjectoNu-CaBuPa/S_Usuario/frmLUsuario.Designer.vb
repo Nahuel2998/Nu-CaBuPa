@@ -53,7 +53,7 @@ Partial Class frmLUsuario
         Me.panelUsuario.Location = New System.Drawing.Point(10, 35)
         Me.panelUsuario.MinimumSize = New System.Drawing.Size(148, 115)
         Me.panelUsuario.Name = "panelUsuario"
-        Me.panelUsuario.Size = New System.Drawing.Size(375, 165)
+        Me.panelUsuario.Size = New System.Drawing.Size(411, 165)
         Me.panelUsuario.TabIndex = 0
         Me.panelUsuario.TabStop = False
         Me.panelUsuario.Text = "Datos"
@@ -67,7 +67,7 @@ Partial Class frmLUsuario
         Me.btnOpciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOpciones.Location = New System.Drawing.Point(9, 114)
         Me.btnOpciones.Name = "btnOpciones"
-        Me.btnOpciones.Size = New System.Drawing.Size(122, 42)
+        Me.btnOpciones.Size = New System.Drawing.Size(158, 42)
         Me.btnOpciones.TabIndex = 3
         Me.btnOpciones.Text = "Configuración"
         Me.btnOpciones.UseVisualStyleBackColor = False
@@ -79,10 +79,10 @@ Partial Class frmLUsuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtPass.BackColor = System.Drawing.Color.White
         Me.txtPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(107, 70)
+        Me.txtPass.Location = New System.Drawing.Point(132, 70)
         Me.txtPass.MaxLength = 256
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(260, 22)
+        Me.txtPass.Size = New System.Drawing.Size(271, 26)
         Me.txtPass.TabIndex = 1
         Me.txtPass.UseSystemPasswordChar = True
         '
@@ -93,10 +93,10 @@ Partial Class frmLUsuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtUsuario.BackColor = System.Drawing.Color.White
         Me.txtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsuario.Location = New System.Drawing.Point(107, 30)
+        Me.txtUsuario.Location = New System.Drawing.Point(132, 30)
         Me.txtUsuario.MaxLength = 16
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(260, 22)
+        Me.txtUsuario.Size = New System.Drawing.Size(271, 26)
         Me.txtUsuario.TabIndex = 0
         '
         'btnEntrar
@@ -108,7 +108,7 @@ Partial Class frmLUsuario
         Me.btnEntrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEntrar.Location = New System.Drawing.Point(288, 114)
         Me.btnEntrar.Name = "btnEntrar"
-        Me.btnEntrar.Size = New System.Drawing.Size(79, 42)
+        Me.btnEntrar.Size = New System.Drawing.Size(115, 42)
         Me.btnEntrar.TabIndex = 2
         Me.btnEntrar.Text = "Entrar"
         Me.btnEntrar.UseVisualStyleBackColor = False
@@ -123,7 +123,7 @@ Partial Class frmLUsuario
         Me.lblPass.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblPass.Location = New System.Drawing.Point(12, 73)
         Me.lblPass.Name = "lblPass"
-        Me.lblPass.Size = New System.Drawing.Size(89, 16)
+        Me.lblPass.Size = New System.Drawing.Size(114, 20)
         Me.lblPass.TabIndex = 1
         Me.lblPass.Text = "Contraseña:"
         '
@@ -137,7 +137,7 @@ Partial Class frmLUsuario
         Me.lblUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblUsuario.Location = New System.Drawing.Point(12, 33)
         Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(62, 16)
+        Me.lblUsuario.Size = New System.Drawing.Size(81, 20)
         Me.lblUsuario.TabIndex = 0
         Me.lblUsuario.Text = "Usuario:"
         '
@@ -149,7 +149,7 @@ Partial Class frmLUsuario
         Me.Panel1.AutoSize = True
         Me.Panel1.Location = New System.Drawing.Point(10, 9)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(375, 191)
+        Me.Panel1.Size = New System.Drawing.Size(411, 191)
         Me.Panel1.TabIndex = 2
         '
         'UI_GradientPanel1
@@ -162,7 +162,7 @@ Partial Class frmLUsuario
         Me.UI_GradientPanel1.Location = New System.Drawing.Point(0, 0)
         Me.UI_GradientPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.UI_GradientPanel1.Name = "UI_GradientPanel1"
-        Me.UI_GradientPanel1.Size = New System.Drawing.Size(393, 211)
+        Me.UI_GradientPanel1.Size = New System.Drawing.Size(429, 211)
         Me.UI_GradientPanel1.TabIndex = 4
         Me.UI_GradientPanel1.UIBackColor = System.Drawing.Color.Empty
         Me.UI_GradientPanel1.UIBottomLeft = System.Drawing.Color.DarkBlue
@@ -193,7 +193,7 @@ Partial Class frmLUsuario
         Me.UI_TitleBanner1.Name = "UI_TitleBanner1"
         Me.UI_TitleBanner1.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.UI_TitleBanner1.ParentControl = Me
-        Me.UI_TitleBanner1.Size = New System.Drawing.Size(393, 30)
+        Me.UI_TitleBanner1.Size = New System.Drawing.Size(429, 30)
         Me.UI_TitleBanner1.TabIndex = 1
         Me.UI_TitleBanner1.Text = "Inicio de sesión"
         Me.UI_TitleBanner1.TextAlign = System.Drawing.ContentAlignment.TopLeft
@@ -202,16 +202,18 @@ Partial Class frmLUsuario
         '
         'frmLUsuario
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(393, 211)
+        Me.ClientSize = New System.Drawing.Size(429, 211)
         Me.Controls.Add(Me.UI_GradientPanel1)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Yellow
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(429, 211)
+        Me.MinimumSize = New System.Drawing.Size(429, 211)
         Me.Name = "frmLUsuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio de sesión"

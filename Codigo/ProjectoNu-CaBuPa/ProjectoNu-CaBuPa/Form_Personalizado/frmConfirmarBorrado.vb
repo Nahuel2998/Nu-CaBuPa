@@ -49,6 +49,8 @@
                 BSQL("Fechaprograma", CreadorCondicion("fecha", id, True) + " and " + CreadorCondicion("Hora_inicio", id2) + "and id_programa='" + id3(0) + "'")
             Case PUBLICIDADPROGRAMA
                 BSQL("pmuestrapubli", CreadorCondicion("id_publicidad", id) + " and " + CreadorCondicion("id_programa", id2) + " and " + CreadorCondicion("Fecha_inicio", id3, True))
+            Case PUBLICIDADEVENTO
+                BSQL("eventomuestrapubli", CreadorCondicion("id_publicidad", id) + " and " + CreadorCondicion("id_evento", id2) + " and " + CreadorCondicion("Fecha_inicio", id3, True))
             Case TANDASHORAS
                 BSQL("tanda", CreadorCondicion("Hora_Inicio", id))
             Case CUOTA

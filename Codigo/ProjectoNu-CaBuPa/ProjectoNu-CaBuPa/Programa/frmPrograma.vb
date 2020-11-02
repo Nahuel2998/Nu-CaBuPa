@@ -461,4 +461,7 @@ Public Class frmPrograma
         BuscarFuncionario()
     End Sub
 
+    Private Sub dgvProgramaPubli_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProgramaPubli.CellContentClick
+
+    End Sub
 End Class

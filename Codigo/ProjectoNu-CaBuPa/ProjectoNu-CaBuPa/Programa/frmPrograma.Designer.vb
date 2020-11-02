@@ -1454,6 +1454,8 @@ Partial Class frmPrograma
         Me.ClientSize = New System.Drawing.Size(682, 367)
         Me.Controls.Add(Me.tcP)
         Me.ForeColor = System.Drawing.Color.White
+        Me.MaximumSize = New System.Drawing.Size(700, 414)
+        Me.MinimumSize = New System.Drawing.Size(700, 414)
         Me.Name = "frmPrograma"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Programa"

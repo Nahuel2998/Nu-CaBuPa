@@ -143,7 +143,7 @@ Public Class frmEmpresa
     Private Sub dgvVSM_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVSM.CellDoubleClick
         Dim i As Integer = CargarID(dt_Video, dgvVSM)
         If (i <> -1) And PoseePermiso("Publicidades") Then
-            Dim formPubli As New frmVideo(i)
+            Dim formPubli As New frmPublicidad(i)
             AddHandler formPubli.FormClosed, AddressOf formPubli_FormClosed
             formPubli.ShowDialog()
         End If

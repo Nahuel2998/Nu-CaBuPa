@@ -29,9 +29,13 @@ Public Class frmFuncionario
             tbAF.Hide()
             TBAP.Hide()
         End If
+        If Not PoseePermiso("Programa", "a") Then
+            TBAP.Hide()
+        End If
         ActualizarTabla()
         If (ID = -1) Then
-            tcF.TabPages.RemoveAt(1)
+            tbAF.Hide()
+            TBAP.Hide()
             Alternar()
         End If
         btnSalir.Select()

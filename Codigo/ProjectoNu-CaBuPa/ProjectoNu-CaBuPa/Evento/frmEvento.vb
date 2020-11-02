@@ -10,6 +10,7 @@ Public Class frmEvento
     Private position() As String
     Private pos As UInt16 = 0
     Private videoID As String = ""
+    Private dt_publicidades As DataTable
     Public Sub New(ByVal id As Integer)
         InitializeComponent()
         eventoID = id
@@ -25,12 +26,17 @@ Public Class frmEvento
             btnBorrar.Visible = False
             btnEditar.Visible = False
             tbFechas.Hide()
+            tbPublicidad.Hide()
+        End If
+        If Not PoseePermiso("Publicidad", "a") Then
+            tbPublicidad.Hide()
         End If
         If eventoID <> -1 Then
             Buscar()
             btnSalir.Select()
         Else
-            tcP.TabPages.RemoveByKey("tbFechas")
+            tbFechas.Hide()
+            tbPublicidad.Hide()
             btnEditar.Text = "Insertar"
             btnBorrar.Visible = False
             Activar()
@@ -166,13 +172,15 @@ Public Class frmEvento
 
 
 
-    Private Sub dgvPrograma_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFechas.CellClick
+    Private Sub dgvPrograma_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFechas.CellClick, dgvEventoPubli.CellClick
         ClickCheck(sender, e.ColumnIndex)
     End Sub
 
     Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
         If (tcP.SelectedIndex = 1) Then
             bwFechas.RunWorkerAsync()
+        ElseIf (tcP.SelectedIndex = 2) Then
+            PubliDeFechaE(dt_publicidades, dgvEventoPubli, eventoID, dtpFPubli.Value)
         End If
     End Sub
 
@@ -186,5 +194,23 @@ Public Class frmEvento
 
     Private Sub bwFechas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwFechas.RunWorkerCompleted
         ActualizarTablaC(dt_fechas, dgvFechas, False)
+    End Sub
+
+    Private Sub btnBorrarSelect_Click(sender As Object, e As EventArgs) Handles btnBorrarSelect.Click
+        If Not IsNothing(dt_publicidades) Then
+            If (dt_publicidades.Rows.Count > 0) Then
+                Dim Id() As String = ObtenerCheck(dt_publicidades, dgvEventoPubli, 0)
+                Dim Id1() As String = ObtenerCheck(dt_publicidades, dgvEventoPubli, 2)
+                If Not Id.Length = 0 Then
+                    Dim formDelete As New frmConfirmarBorrado(PUBLICIDADEVENTO, Id, False, {eventoID}, Id1)
+                    formDelete.ShowDialog(Me)
+                    PubliDeFechaE(dt_publicidades, dgvEventoPubli, eventoID, dtpFPubli.Value)
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub dtpFPubli_ValueChanged(sender As Object, e As EventArgs) Handles dtpFPubli.ValueChanged
+        PubliDeFechaE(dt_publicidades, dgvEventoPubli, eventoID, dtpFPubli.Value)
     End Sub
 End Class

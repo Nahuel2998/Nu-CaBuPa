@@ -32,6 +32,7 @@ Module ModTablas
     Public Const CUOTAPUBLICIDAD As Byte = 13
     Public Const EVENTO As Byte = 14
     Public Const TRABAJACOMO As Byte = 15
+    Public Const PUBLICIDADEVENTO As Byte = 16
     Public Function ValidarEmail(ByVal s As String) As Boolean
         Return Regex.IsMatch(s, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
     End Function
@@ -50,6 +51,10 @@ Module ModTablas
     Public Sub PubliDeFecha(ByRef dt As DataTable, ByRef dgvP As DataGridView, ByVal programaid As String, ByVal fecha1 As Date)
         dt = DevolverTabla(PSQL("p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad", String.Format("id_programa='{0}' and fecha_inicio <='{1}' and fecha_finalizacion>='{1}'", programaid, Format(fecha1, "yyyy-MM-dd"))))
         ModLog.Guardar(PSQL("p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad", String.Format("id_programa='{0}' and fecha_inicio <='{1}' and fecha_finalizacion>='{1}'", programaid, Format(fecha1, "yyyy-MM-dd"))))
+        ActualizarTablaC(dt, dgvP)
+    End Sub
+    Public Sub PubliDeFechaE(ByRef dt As DataTable, ByRef dgvP As DataGridView, ByVal id As String, ByVal fecha1 As Date)
+        dt = DevolverTabla(PSQL("p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion'", "eventomuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad", String.Format("id_evento='{0}' and year(fecha_inicio) <= year('{1}') and year(fecha_finalizacion) >= year('{1}')", id, Format(fecha1, "yyyy-MM-dd"))))
         ActualizarTablaC(dt, dgvP)
     End Sub
     Public Function CargarID(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As Integer

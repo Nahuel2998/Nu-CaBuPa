@@ -71,10 +71,25 @@ Public Class frmPublicidad
         End If
         cbPrograma.SelectedIndex = pos(2)
     End Sub
+    Sub CargarComboEvento()
+        LlenarCombo(cbEvento, dt_FEventos, "Nombre")
+        If Not IsNothing(dt_FEventos) Then
+            ExtraerDatosEven()
+        Else
+            MessageBox.Show("No se encontró el evento")
+        End If
+        cbEvento.SelectedIndex = pos(3)
+    End Sub
     Public Sub ExtraerDatosProg()
         ReDim positionPrograma(dt_ProgramasP.Rows.Count - 1)
         For j As Integer = 0 To dt_ProgramasP.Rows.Count - 1
             positionPrograma(j) = dt_ProgramasP.Rows(j).Item(0).ToString
+        Next
+    End Sub
+    Public Sub ExtraerDatosEven()
+        ReDim positionEvento(dt_FEventos.Rows.Count - 1)
+        For j As Integer = 0 To dt_FEventos.Rows.Count - 1
+            positionEvento(j) = dt_FEventos.Rows(j).Item(0).ToString
         Next
     End Sub
     Public Sub ExtraerDatosTan()
@@ -107,6 +122,10 @@ Public Class frmPublicidad
                 btnBorrarC.Visible = False
                 btnInsertarC.Visible = False
                 ocultar()
+            ElseIf Not PoseePermiso("Evento", "a") Then
+                tbEventos.Hide()
+            ElseIf Not PoseePermiso("Programa", "a") Then
+                tbProgramas.Hide()
             End If
         Else
             ocultar()
@@ -122,6 +141,7 @@ Public Class frmPublicidad
         tcP.TabPages.RemoveByKey("tbTandas")
         tcP.TabPages.RemoveByKey("tbTandasE")
         tcP.TabPages.RemoveByKey("tbProgramas")
+        tcP.TabPages.RemoveByKey("tbEventos")
     End Sub
     Sub Activar()
         txtNombre.ReadOnly = editando
@@ -208,10 +228,11 @@ Public Class frmPublicidad
             Case 4
                 TBuscada = EVENTO
                 Dim condicion = "false"
-                If Not String.IsNullOrWhiteSpace(txtNombreP.Text) Then
+                If Not String.IsNullOrWhiteSpace(txtNEvento.Text) Then
                     condicion = String.Format("nombre like '%{0}%'", txtNEvento.Text)
                 End If
-                dt_ProgramasP = DevolverTabla(PSQL("id_evento, nombre", "evento", condicion))
+                dt_FEventos = DevolverTabla(PSQL("id_evento, nombre", "evento", condicion))
+                ModLog.Guardar(PSQL("id_evento, nombre", "evento", condicion))
             Case 5
                 Dim Condicion As String = String.Format("id_publicidad='{0}' and Fecha_Pago is{1}null and year(fecha_emision)={2}", publicidadID, If(cbPagados.Checked, " not ", " "), Year(dtpYearCuota.Value))
                 TBuscada = CUOTAPUBLICIDAD
@@ -233,6 +254,8 @@ Public Class frmPublicidad
                 CargarComboPrograma()
             Case PUBLICIDAD
                 ATAntigua()
+            Case EVENTO
+                CargarComboEvento()
             Case CUOTAPUBLICIDAD
                 ActualizarTablaC(dt_Cuotas, dgvVerCuota, True)
         End Select
@@ -494,7 +517,7 @@ Public Class frmPublicidad
     End Sub
 
     Private Sub btnIEvento_Click(sender As Object, e As EventArgs) Handles btnIEvento.Click
-        FechasMaxP()
+        FechasMaxE()
     End Sub
     Private Sub btnMP_Click(sender As Object, e As EventArgs) Handles btnMP.Click
         If (cbPrograma.SelectedIndex > 0) Then

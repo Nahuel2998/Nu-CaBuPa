@@ -35,12 +35,20 @@ Public Class frmSerie
         dtpFecha.ForeColor = Color.White
         ActualizarTabla()
         If (serieID = -1) Then
+            ocultar()
             Alternar()
         End If
         If Not PoseePermiso("Serie", "a") Then
             btnBorrar.Visible = False
             btnSEditar.Visible = False
+            ocultar()
         End If
+        If Not PoseePermiso("Video", "a") Then
+            ocultar()
+        End If
+    End Sub
+    Private Sub ocultar()
+        tbAV.Hide()
     End Sub
 
     Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnSEditar.Click

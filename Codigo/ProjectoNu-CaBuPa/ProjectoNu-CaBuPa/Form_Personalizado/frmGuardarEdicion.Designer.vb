@@ -100,6 +100,8 @@ Partial Class frmGuardarEdicion
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(324, 147)
+        Me.MinimumSize = New System.Drawing.Size(324, 147)
         Me.Name = "frmGuardarEdicion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "GuardarCambios"

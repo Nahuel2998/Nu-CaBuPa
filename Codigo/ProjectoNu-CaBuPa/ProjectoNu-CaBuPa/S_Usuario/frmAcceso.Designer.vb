@@ -32,6 +32,7 @@ Partial Class frmAcceso
         'cblP
         '
         Me.cblP.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.cblP.CheckOnClick = True
         Me.cblP.FormattingEnabled = True
         Me.cblP.Location = New System.Drawing.Point(12, 46)
         Me.cblP.Name = "cblP"
@@ -132,7 +133,10 @@ Partial Class frmAcceso
         Me.Controls.Add(Me.cblP)
         Me.ForeColor = System.Drawing.Color.White
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximumSize = New System.Drawing.Size(397, 349)
+        Me.MinimumSize = New System.Drawing.Size(397, 349)
         Me.Name = "frmAcceso"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Permisos"
         Me.ResumeLayout(False)
         Me.PerformLayout()

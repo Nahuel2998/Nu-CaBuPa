@@ -261,6 +261,8 @@ Partial Class frmTandas
         Me.ClientSize = New System.Drawing.Size(320, 355)
         Me.Controls.Add(Me.GroupBox1)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximumSize = New System.Drawing.Size(338, 402)
+        Me.MinimumSize = New System.Drawing.Size(338, 402)
         Me.Name = "frmTandas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Tanda"
