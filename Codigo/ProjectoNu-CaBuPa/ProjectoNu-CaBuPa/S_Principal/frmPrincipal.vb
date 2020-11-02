@@ -143,7 +143,7 @@ Public Class frmPrincipal
             Dim idRow As Integer = dgvPrograma.SelectedRows(0).Index
             If (idRow >= 0) And Not IsNothing(dt_programa) Then
                 Dim id As Integer = CInt(dt_programa.Rows(idRow)(0).ToString)
-                dt_dprograma = ModConector.AFPrograma(id)
+                dt_dprograma = ModConector.AFPrograma(dtp.Value.Date, id)
                 DescripcionP = ModConector.ADPrograma(id)
                 dt_Ppubli = ModConector.APPublicidad(dtp.Value.Date, id)
                 PNombre = "Datos del programa : " + dt_programa.Rows(idRow)(3).ToString
@@ -160,8 +160,6 @@ Public Class frmPrincipal
         ActualizarTablaC(dt_Ppubli, dgvPPublicidades) 'fix
         GBFuncionarios.Text = PNombre
         TBDescripcion.Text = DescripcionP
-        dgvFuncionarios.ClearSelection()
-        dgvPPublicidades.ClearSelection()
         dgvPrograma.ClearSelection()
     End Sub
 
@@ -356,10 +354,8 @@ Public Class frmPrincipal
         ClickCheck(sender, e.ColumnIndex)
     End Sub
     Private Sub dgvHeaderClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvVB.ColumnHeaderMouseClick, dgvBS.ColumnHeaderMouseClick, dgvClientes.ColumnHeaderMouseClick, dgvBProgramas.ColumnHeaderMouseClick, dgvPubliB.ColumnHeaderMouseClick, dgvFuncionarioBF.ColumnHeaderMouseClick, dgvFuncionesBFF.ColumnHeaderMouseClick, dgvBEvento.ColumnHeaderMouseClick
-        sender.ClearSelection()
-        If Not (sender.Columns.Count - 1 <> e.ColumnIndex) Then
-            CheckAll(sender, e.ColumnIndex)
-        End If
+
+        CheckAll(sender, e.ColumnIndex)
     End Sub
 
 
@@ -396,7 +392,7 @@ Public Class frmPrincipal
             condicion += " and Mail = '" + txtCMail.Text + "'"
         End If
         If Not (BWBuscador.IsBusy) Then
-            BWBuscador.RunWorkerAsync(PSQL("id_Empresa, Nombre, Telefono, Mail", "empresa", condicion))
+            BWBuscador.RunWorkerAsync(PSQL("id_Empresa, Nombre, Telefono, Mail as 'E-Mail'", "empresa", condicion))
         End If
     End Sub
 
@@ -488,6 +484,9 @@ Public Class frmPrincipal
     End Sub
     Private Sub FormPrograma_FormClosed(sender As Object, e As FormClosedEventArgs)
         btnBuscarBP.PerformClick()
+        If Not (BWProgramas.IsBusy) Then
+            BWProgramas.RunWorkerAsync()
+        End If
     End Sub
     Private Sub FormEvento_FormClosed(sender As Object, e As FormClosedEventArgs)
         btnBuscarE.PerformClick()
@@ -768,4 +767,19 @@ Public Class frmPrincipal
         End If
     End Sub
 
+    Private Sub tcSecciones_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcSecciones.SelectedIndexChanged
+        Select Case tcSecciones.SelectedIndex
+            Case 0
+                If Not BWProgramas.IsBusy Then
+                    BWProgramas.RunWorkerAsync()
+                End If
+        End Select
+    End Sub
+
+
+    Private Sub dgvPrograma_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellClick
+        If Not BWDPRogramas.IsBusy Then
+            BWDPRogramas.RunWorkerAsync()
+        End If
+    End Sub
 End Class

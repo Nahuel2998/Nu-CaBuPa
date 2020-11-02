@@ -886,7 +886,7 @@
     <value>True</value>
   </metadata>
   <data name="DataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>Descripcion</value>
+    <value>Nombre</value>
   </data>
   <data name="DataGridViewTextBoxColumn3.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1058,6 +1058,9 @@
   </data>
   <data name="TBDescripcion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
+  </data>
+  <data name="TBDescripcion.MaxLength" type="System.Int32, mscorlib">
+    <value>128</value>
   </data>
   <data name="TBDescripcion.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 45</value>
@@ -1683,6 +1686,9 @@
   <data name="txtNombreBP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
+  <data name="txtNombreBP.MaxLength" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
   <data name="txtNombreBP.Multiline" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1742,6 +1748,9 @@
   </data>
   <data name="txtDescripcionBP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtDescripcionBP.MaxLength" type="System.Int32, mscorlib">
+    <value>128</value>
   </data>
   <data name="txtDescripcionBP.Size" type="System.Drawing.Size, System.Drawing">
     <value>426, 47</value>
@@ -4927,7 +4936,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="txtNombre.MaxLength" type="System.Int32, mscorlib">
-    <value>64</value>
+    <value>32</value>
   </data>
   <data name="txtNombre.Multiline" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5449,7 +5458,7 @@
     <value>True</value>
   </metadata>
   <data name="DataGridViewTextBoxColumn13.HeaderText" xml:space="preserve">
-    <value>Mail</value>
+    <value>E-Mail</value>
   </data>
   <data name="DataGridViewTextBoxColumn13.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
@@ -5677,7 +5686,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="txtNombreBF.MaxLength" type="System.Int32, mscorlib">
-    <value>64</value>
+    <value>48</value>
   </data>
   <data name="txtNombreBF.Multiline" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -6439,7 +6448,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="txtNombreBFF.MaxLength" type="System.Int32, mscorlib">
-    <value>64</value>
+    <value>16</value>
   </data>
   <data name="txtNombreBFF.Multiline" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -6502,7 +6511,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="txtDescripcionBFF.MaxLength" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>128</value>
   </data>
   <data name="txtDescripcionBFF.Multiline" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -7191,6 +7200,9 @@
   <data name="txtNombreE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
+  <data name="txtNombreE.MaxLength" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
   <data name="txtNombreE.Multiline" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -7250,6 +7262,9 @@
   </data>
   <data name="txtDescripcionE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtDescripcionE.MaxLength" type="System.Int32, mscorlib">
+    <value>128</value>
   </data>
   <data name="txtDescripcionE.Size" type="System.Drawing.Size, System.Drawing">
     <value>442, 47</value>
@@ -10252,6 +10267,30 @@
   <data name="&gt;&gt;DataGridViewCheckBoxColumn3.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn11.Name" xml:space="preserve">
+    <value>DataGridViewTextBoxColumn11</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn12.Name" xml:space="preserve">
+    <value>DataGridViewTextBoxColumn12</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn13.Name" xml:space="preserve">
+    <value>DataGridViewTextBoxColumn13</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewTextBoxColumn13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewCheckBoxColumn4.Name" xml:space="preserve">
+    <value>DataGridViewCheckBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewCheckBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;DataGridViewTextBoxColumn14.Name" xml:space="preserve">
     <value>DataGridViewTextBoxColumn14</value>
   </data>
@@ -10335,30 +10374,6 @@
   </data>
   <data name="&gt;&gt;RecTan.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn11.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn11</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn12.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn12</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn13.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn13</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewCheckBoxColumn4.Name" xml:space="preserve">
-    <value>DataGridViewCheckBoxColumn4</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewCheckBoxColumn4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmPrincipal</value>

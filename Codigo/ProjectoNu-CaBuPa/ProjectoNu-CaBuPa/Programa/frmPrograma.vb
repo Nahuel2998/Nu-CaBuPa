@@ -465,4 +465,17 @@ Public Class frmPrograma
     Private Sub FormFunc_FormClosed(sender As Object, e As FormClosedEventArgs)
         BuscarFuncionario()
     End Sub
+
+    Private Sub btnCF_Click(sender As Object, e As EventArgs) Handles btnCF.Click
+        If Not IsNothing(dt_funcionario) Then
+            If (dt_funcionario.Rows.Count > 0) Then
+                Dim Id() As String = ObtenerCheck(dt_funcionario, dgvFuncionarios, 1)
+                Dim Id1() As String = ObtenerCheck(dt_funcionario, dgvFuncionarios, 4)
+                If Not Id.Length = 0 Then
+                    USQL("funtrabaja", "fecha_finalizacion=null", String.Format("id_programa='{0}'", programaID) + " and " + CreadorCondicion("ID_TrabajaComo", Id) + " and " + CreadorCondicion("fecha_inicio", Id1, True) + String.Format(" and fecha_inicio<='{0}'", Format(dtpTF.Value, "yyyy-MM-dd")))
+                    BuscarFuncionario()
+                End If
+            End If
+        End If
+    End Sub
 End Class

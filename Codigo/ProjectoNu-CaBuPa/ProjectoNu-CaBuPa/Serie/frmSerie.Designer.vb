@@ -704,7 +704,7 @@ Partial Class frmSerie
         Me.TableLayoutPanel4.SetColumnSpan(Me.TableLayoutPanel6, 2)
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.60207!))
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.39793!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129.0!))
         Me.TableLayoutPanel6.Controls.Add(Me.btnBuscar, 2, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.Label4, 0, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.Label5, 0, 1)
@@ -726,11 +726,11 @@ Partial Class frmSerie
         Me.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBuscar.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.Black
-        Me.btnBuscar.Location = New System.Drawing.Point(762, 4)
+        Me.btnBuscar.Location = New System.Drawing.Point(761, 4)
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.TableLayoutPanel6.SetRowSpan(Me.btnBuscar, 2)
-        Me.btnBuscar.Size = New System.Drawing.Size(121, 64)
+        Me.btnBuscar.Size = New System.Drawing.Size(122, 64)
         Me.btnBuscar.TabIndex = 0
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -770,8 +770,9 @@ Partial Class frmSerie
         Me.txtNombreBV.ForeColor = System.Drawing.Color.White
         Me.txtNombreBV.Location = New System.Drawing.Point(107, 4)
         Me.txtNombreBV.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombreBV.MaxLength = 48
         Me.txtNombreBV.Name = "txtNombreBV"
-        Me.txtNombreBV.Size = New System.Drawing.Size(647, 22)
+        Me.txtNombreBV.Size = New System.Drawing.Size(646, 22)
         Me.txtNombreBV.TabIndex = 3
         '
         'TableLayoutPanel8
@@ -788,14 +789,14 @@ Partial Class frmSerie
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 1
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(647, 33)
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(646, 33)
         Me.TableLayoutPanel8.TabIndex = 4
         '
         'chkFecha
         '
         Me.chkFecha.AutoSize = True
         Me.chkFecha.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.chkFecha.Location = New System.Drawing.Point(624, 4)
+        Me.chkFecha.Location = New System.Drawing.Point(623, 4)
         Me.chkFecha.Margin = New System.Windows.Forms.Padding(4)
         Me.chkFecha.Name = "chkFecha"
         Me.chkFecha.Size = New System.Drawing.Size(19, 25)
@@ -810,7 +811,7 @@ Partial Class frmSerie
         Me.dtpFechaBV.Location = New System.Drawing.Point(4, 4)
         Me.dtpFechaBV.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpFechaBV.Name = "dtpFechaBV"
-        Me.dtpFechaBV.Size = New System.Drawing.Size(612, 22)
+        Me.dtpFechaBV.Size = New System.Drawing.Size(611, 22)
         Me.dtpFechaBV.TabIndex = 0
         '
         'BWBuscador

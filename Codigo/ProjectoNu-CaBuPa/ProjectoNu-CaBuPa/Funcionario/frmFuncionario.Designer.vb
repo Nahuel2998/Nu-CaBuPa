@@ -141,7 +141,7 @@ Partial Class frmFuncionario
         Me.tcF.Controls.Add(Me.TBAP)
         Me.tcF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tcF.Location = New System.Drawing.Point(0, 0)
-        Me.tcF.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tcF.Margin = New System.Windows.Forms.Padding(4)
         Me.tcF.Name = "tcF"
         Me.tcF.SelectedIndex = 0
         Me.tcF.Size = New System.Drawing.Size(708, 656)
@@ -152,9 +152,9 @@ Partial Class frmFuncionario
         Me.tbDatos.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.tbDatos.Controls.Add(Me.TableLayoutPanel1)
         Me.tbDatos.Location = New System.Drawing.Point(4, 25)
-        Me.tbDatos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbDatos.Margin = New System.Windows.Forms.Padding(4)
         Me.tbDatos.Name = "tbDatos"
-        Me.tbDatos.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbDatos.Padding = New System.Windows.Forms.Padding(4)
         Me.tbDatos.Size = New System.Drawing.Size(700, 627)
         Me.tbDatos.TabIndex = 0
         Me.tbDatos.Text = "Datos"
@@ -168,7 +168,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(4, 4)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
@@ -190,9 +190,9 @@ Partial Class frmFuncionario
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(4, 4)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(684, 149)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
@@ -207,7 +207,8 @@ Partial Class frmFuncionario
         Me.txtTelefono.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.txtTelefono.ForeColor = System.Drawing.Color.White
         Me.txtTelefono.Location = New System.Drawing.Point(99, 63)
-        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTelefono.MaxLength = 16
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.ReadOnly = True
         Me.txtTelefono.Size = New System.Drawing.Size(576, 27)
@@ -222,7 +223,8 @@ Partial Class frmFuncionario
         Me.txtMail.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.txtMail.ForeColor = System.Drawing.Color.White
         Me.txtMail.Location = New System.Drawing.Point(99, 107)
-        Me.txtMail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtMail.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMail.MaxLength = 64
         Me.txtMail.Name = "txtMail"
         Me.txtMail.ReadOnly = True
         Me.txtMail.Size = New System.Drawing.Size(576, 27)
@@ -237,7 +239,8 @@ Partial Class frmFuncionario
         Me.txtNombre.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.txtNombre.ForeColor = System.Drawing.Color.White
         Me.txtNombre.Location = New System.Drawing.Point(99, 23)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombre.MaxLength = 48
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
         Me.txtNombre.Size = New System.Drawing.Size(576, 27)
@@ -296,9 +299,9 @@ Partial Class frmFuncionario
         Me.GroupBox2.Controls.Add(Me.dgvFunciones)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(4, 161)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(684, 391)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
@@ -386,7 +389,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel2.Controls.Add(Me.btnEditar, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btnSalir, 3, 0)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(4, 560)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -402,7 +405,7 @@ Partial Class frmFuncionario
         Me.btnBorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrar.ForeColor = System.Drawing.Color.Black
         Me.btnBorrar.Location = New System.Drawing.Point(180, 4)
-        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(189, 47)
         Me.btnBorrar.TabIndex = 10
@@ -418,7 +421,7 @@ Partial Class frmFuncionario
         Me.btnEditar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnEditar.ForeColor = System.Drawing.Color.Black
         Me.btnEditar.Location = New System.Drawing.Point(4, 4)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(168, 47)
         Me.btnEditar.TabIndex = 3
@@ -434,7 +437,7 @@ Partial Class frmFuncionario
         Me.btnSalir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnSalir.ForeColor = System.Drawing.Color.Black
         Me.btnSalir.Location = New System.Drawing.Point(515, 4)
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(165, 47)
         Me.btnSalir.TabIndex = 0
@@ -446,9 +449,9 @@ Partial Class frmFuncionario
         Me.tbAF.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.tbAF.Controls.Add(Me.TableLayoutPanel3)
         Me.tbAF.Location = New System.Drawing.Point(4, 25)
-        Me.tbAF.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbAF.Margin = New System.Windows.Forms.Padding(4)
         Me.tbAF.Name = "tbAF"
-        Me.tbAF.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbAF.Padding = New System.Windows.Forms.Padding(4)
         Me.tbAF.Size = New System.Drawing.Size(700, 627)
         Me.tbAF.TabIndex = 1
         Me.tbAF.Text = "Asignar Funcion"
@@ -461,7 +464,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel3.Controls.Add(Me.GroupBox4, 0, 1)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(4, 4)
-        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.0!))
@@ -475,9 +478,9 @@ Partial Class frmFuncionario
         Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Location = New System.Drawing.Point(4, 4)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(684, 332)
         Me.GroupBox3.TabIndex = 0
         Me.GroupBox3.TabStop = False
@@ -492,7 +495,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel6, 0, 0)
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel5.Location = New System.Drawing.Point(4, 19)
-        Me.TableLayoutPanel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel5.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
         Me.TableLayoutPanel5.RowCount = 3
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74.0!))
@@ -509,7 +512,7 @@ Partial Class frmFuncionario
         Me.btnAsignar.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAsignar.ForeColor = System.Drawing.Color.Black
         Me.btnAsignar.Location = New System.Drawing.Point(4, 264)
-        Me.btnAsignar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAsignar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAsignar.Name = "btnAsignar"
         Me.btnAsignar.Size = New System.Drawing.Size(668, 41)
         Me.btnAsignar.TabIndex = 2342330
@@ -597,7 +600,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel6.ColumnCount = 3
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.0!))
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.0!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121.0!))
         Me.TableLayoutPanel6.Controls.Add(Me.txtDescripcionBFF, 1, 1)
         Me.TableLayoutPanel6.Controls.Add(Me.btnBuscar, 2, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.Label4, 0, 0)
@@ -605,7 +608,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel6.Controls.Add(Me.txtNombreBFF, 1, 0)
         Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel6.Location = New System.Drawing.Point(4, 4)
-        Me.TableLayoutPanel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel6.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
         Me.TableLayoutPanel6.RowCount = 2
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -619,9 +622,9 @@ Partial Class frmFuncionario
         Me.txtDescripcionBFF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtDescripcionBFF.ForeColor = System.Drawing.Color.White
         Me.txtDescripcionBFF.Location = New System.Drawing.Point(102, 37)
-        Me.txtDescripcionBFF.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDescripcionBFF.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescripcionBFF.Name = "txtDescripcionBFF"
-        Me.txtDescripcionBFF.Size = New System.Drawing.Size(441, 22)
+        Me.txtDescripcionBFF.Size = New System.Drawing.Size(440, 22)
         Me.txtDescripcionBFF.TabIndex = 4
         '
         'btnBuscar
@@ -630,11 +633,11 @@ Partial Class frmFuncionario
         Me.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBuscar.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.Black
-        Me.btnBuscar.Location = New System.Drawing.Point(551, 4)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBuscar.Location = New System.Drawing.Point(550, 4)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.TableLayoutPanel6.SetRowSpan(Me.btnBuscar, 2)
-        Me.btnBuscar.Size = New System.Drawing.Size(113, 58)
+        Me.btnBuscar.Size = New System.Drawing.Size(114, 58)
         Me.btnBuscar.TabIndex = 0
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -671,9 +674,9 @@ Partial Class frmFuncionario
         Me.txtNombreBFF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtNombreBFF.ForeColor = System.Drawing.Color.White
         Me.txtNombreBFF.Location = New System.Drawing.Point(102, 4)
-        Me.txtNombreBFF.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombreBFF.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombreBFF.Name = "txtNombreBFF"
-        Me.txtNombreBFF.Size = New System.Drawing.Size(441, 22)
+        Me.txtNombreBFF.Size = New System.Drawing.Size(440, 22)
         Me.txtNombreBFF.TabIndex = 3
         '
         'GroupBox4
@@ -682,9 +685,9 @@ Partial Class frmFuncionario
         Me.GroupBox4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
         Me.GroupBox4.Location = New System.Drawing.Point(4, 344)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Size = New System.Drawing.Size(684, 271)
         Me.GroupBox4.TabIndex = 1
         Me.GroupBox4.TabStop = False
@@ -698,7 +701,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel4.Controls.Add(Me.btnDesasignar, 0, 1)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel4.Location = New System.Drawing.Point(4, 19)
-        Me.TableLayoutPanel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel4.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 2
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -789,7 +792,7 @@ Partial Class frmFuncionario
         Me.btnDesasignar.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDesasignar.ForeColor = System.Drawing.Color.Black
         Me.btnDesasignar.Location = New System.Drawing.Point(4, 203)
-        Me.btnDesasignar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnDesasignar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDesasignar.Name = "btnDesasignar"
         Me.btnDesasignar.Size = New System.Drawing.Size(668, 41)
         Me.btnDesasignar.TabIndex = 2342328
@@ -865,7 +868,7 @@ Partial Class frmFuncionario
         Me.btnAsignarProg.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAsignarProg.ForeColor = System.Drawing.Color.Black
         Me.btnAsignarProg.Location = New System.Drawing.Point(4, 112)
-        Me.btnAsignarProg.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAsignarProg.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAsignarProg.Name = "btnAsignarProg"
         Me.btnAsignarProg.Size = New System.Drawing.Size(674, 66)
         Me.btnAsignarProg.TabIndex = 2342331
@@ -1073,7 +1076,7 @@ Partial Class frmFuncionario
         Me.btnMP.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMP.ForeColor = System.Drawing.Color.Black
         Me.btnMP.Location = New System.Drawing.Point(540, 48)
-        Me.btnMP.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnMP.Margin = New System.Windows.Forms.Padding(4)
         Me.btnMP.Name = "btnMP"
         Me.btnMP.Size = New System.Drawing.Size(138, 37)
         Me.btnMP.TabIndex = 2342331
@@ -1180,7 +1183,7 @@ Partial Class frmFuncionario
         Me.ClientSize = New System.Drawing.Size(708, 656)
         Me.Controls.Add(Me.tcF)
         Me.ForeColor = System.Drawing.Color.White
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximumSize = New System.Drawing.Size(726, 703)
         Me.MinimumSize = New System.Drawing.Size(726, 703)
         Me.Name = "frmFuncionario"

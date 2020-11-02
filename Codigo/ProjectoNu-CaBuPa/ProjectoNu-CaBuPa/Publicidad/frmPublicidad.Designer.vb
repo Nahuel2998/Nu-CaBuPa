@@ -66,6 +66,7 @@ Partial Class frmPublicidad
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.tbProgramas = New System.Windows.Forms.TabPage()
+        Me.btnMP = New System.Windows.Forms.Button()
         Me.dgvProgramaP = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -83,6 +84,7 @@ Partial Class frmPublicidad
         Me.dtpFFP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dtpFIP = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.tbEventos = New System.Windows.Forms.TabPage()
+        Me.btnMostrarE = New System.Windows.Forms.Button()
         Me.dgvAEvento = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -119,8 +121,6 @@ Partial Class frmPublicidad
         Me.Label12 = New System.Windows.Forms.Label()
         Me.dtpFP = New System.Windows.Forms.DateTimePicker()
         Me.bwDatos = New System.ComponentModel.BackgroundWorker()
-        Me.btnMP = New System.Windows.Forms.Button()
-        Me.btnMostrarE = New System.Windows.Forms.Button()
         Me.gbNotas.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -230,15 +230,12 @@ Partial Class frmPublicidad
         '
         'txtNombre
         '
-        Me.txtNombre.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombre.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.txtNombre.ForeColor = System.Drawing.Color.White
         Me.txtNombre.Location = New System.Drawing.Point(7, 26)
-        Me.txtNombre.MaxLength = 64
+        Me.txtNombre.MaxLength = 32
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
         Me.txtNombre.Size = New System.Drawing.Size(545, 36)
@@ -553,6 +550,19 @@ Partial Class frmPublicidad
         Me.tbProgramas.TabIndex = 2
         Me.tbProgramas.Text = "Programas"
         '
+        'btnMP
+        '
+        Me.btnMP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnMP.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMP.ForeColor = System.Drawing.Color.Black
+        Me.btnMP.Location = New System.Drawing.Point(412, 82)
+        Me.btnMP.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnMP.Name = "btnMP"
+        Me.btnMP.Size = New System.Drawing.Size(101, 26)
+        Me.btnMP.TabIndex = 2342332
+        Me.btnMP.Text = "Mostrar"
+        Me.btnMP.UseVisualStyleBackColor = False
+        '
         'dgvProgramaP
         '
         Me.dgvProgramaP.AllowUserToAddRows = False
@@ -637,6 +647,7 @@ Partial Class frmPublicidad
         'txtNombreP
         '
         Me.txtNombreP.Location = New System.Drawing.Point(162, 46)
+        Me.txtNombreP.MaxLength = 48
         Me.txtNombreP.Name = "txtNombreP"
         Me.txtNombreP.Size = New System.Drawing.Size(243, 27)
         Me.txtNombreP.TabIndex = 20
@@ -750,6 +761,17 @@ Partial Class frmPublicidad
         Me.tbEventos.TabIndex = 5
         Me.tbEventos.Text = "Eventos"
         '
+        'btnMostrarE
+        '
+        Me.btnMostrarE.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnMostrarE.ForeColor = System.Drawing.Color.Black
+        Me.btnMostrarE.Location = New System.Drawing.Point(411, 81)
+        Me.btnMostrarE.Name = "btnMostrarE"
+        Me.btnMostrarE.Size = New System.Drawing.Size(87, 27)
+        Me.btnMostrarE.TabIndex = 40
+        Me.btnMostrarE.Text = "Mostrar"
+        Me.btnMostrarE.UseVisualStyleBackColor = False
+        '
         'dgvAEvento
         '
         Me.dgvAEvento.AllowUserToAddRows = False
@@ -834,6 +856,7 @@ Partial Class frmPublicidad
         'txtNEvento
         '
         Me.txtNEvento.Location = New System.Drawing.Point(162, 45)
+        Me.txtNEvento.MaxLength = 32
         Me.txtNEvento.Name = "txtNEvento"
         Me.txtNEvento.Size = New System.Drawing.Size(243, 27)
         Me.txtNEvento.TabIndex = 34
@@ -1100,6 +1123,7 @@ Partial Class frmPublicidad
         '
         Me.nudValor.DecimalPlaces = 2
         Me.nudValor.Location = New System.Drawing.Point(307, 47)
+        Me.nudValor.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.nudValor.Name = "nudValor"
         Me.nudValor.Size = New System.Drawing.Size(111, 27)
         Me.nudValor.TabIndex = 28876934
@@ -1159,30 +1183,6 @@ Partial Class frmPublicidad
         '
         'bwDatos
         '
-        '
-        'btnMP
-        '
-        Me.btnMP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnMP.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMP.ForeColor = System.Drawing.Color.Black
-        Me.btnMP.Location = New System.Drawing.Point(412, 82)
-        Me.btnMP.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnMP.Name = "btnMP"
-        Me.btnMP.Size = New System.Drawing.Size(101, 26)
-        Me.btnMP.TabIndex = 2342332
-        Me.btnMP.Text = "Mostrar"
-        Me.btnMP.UseVisualStyleBackColor = False
-        '
-        'btnMostrarE
-        '
-        Me.btnMostrarE.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnMostrarE.ForeColor = System.Drawing.Color.Black
-        Me.btnMostrarE.Location = New System.Drawing.Point(411, 81)
-        Me.btnMostrarE.Name = "btnMostrarE"
-        Me.btnMostrarE.Size = New System.Drawing.Size(87, 27)
-        Me.btnMostrarE.TabIndex = 40
-        Me.btnMostrarE.Text = "Mostrar"
-        Me.btnMostrarE.UseVisualStyleBackColor = False
         '
         'frmPublicidad
         '

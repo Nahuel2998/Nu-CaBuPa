@@ -142,6 +142,7 @@ Module ModTablas
         End If
     End Sub
     Public Sub CheckAll(ByRef Dgv As DataGridView, ByVal columna As Integer)
+        Dgv.ClearSelection()
         If Dgv.Rows.Count > 0 Then
             If columna = Dgv.Columns.Count - 1 Then
                 Dgv.Rows(0).Cells(Dgv.Columns.Count - 1).Value = Not Dgv.Rows(0).Cells(Dgv.Columns.Count - 1).Value
@@ -150,7 +151,6 @@ Module ModTablas
                 Next
             End If
         End If
-        Dgv.Refresh()
     End Sub
     Public Function ObtenerCheck(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional ByVal Col As Integer = 0, Optional ByVal text As String = "", Optional comilla As Boolean = False) As String()
         Dim UltiCol As Integer = Dgv.Columns.Count - 1

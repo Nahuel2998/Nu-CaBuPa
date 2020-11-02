@@ -224,7 +224,7 @@ Partial Class frmEvento
         Me.txtNombre.ForeColor = System.Drawing.Color.White
         Me.txtNombre.Location = New System.Drawing.Point(99, 32)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.txtNombre.MaxLength = 48
+        Me.txtNombre.MaxLength = 32
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
         Me.txtNombre.Size = New System.Drawing.Size(364, 27)
