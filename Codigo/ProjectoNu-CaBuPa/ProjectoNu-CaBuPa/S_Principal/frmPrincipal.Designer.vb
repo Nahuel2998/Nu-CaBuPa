@@ -1365,6 +1365,7 @@ Partial Class frmPrincipal
         '
         'SEliminar
         '
+        Me.SEliminar.FillWeight = 40.0!
         resources.ApplyResources(Me.SEliminar, "SEliminar")
         Me.SEliminar.Name = "SEliminar"
         Me.SEliminar.ReadOnly = True
@@ -2993,8 +2994,6 @@ Partial Class frmPrincipal
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents Panel5 As Panel
     Friend WithEvents txtBSnombre As RichTextBox
     Friend WithEvents Panel6 As Panel
@@ -3006,7 +3005,6 @@ Partial Class frmPrincipal
     Friend WithEvents cbS As CheckBox
     Friend WithEvents Panel8 As Panel
     Friend WithEvents btnBorrar As Button
-    Friend WithEvents SEliminar As DataGridViewCheckBoxColumn
     Friend WithEvents btnBorrarS As Button
     Friend WithEvents Panel9 As Panel
     Friend WithEvents btnIngresarV As Button
@@ -3192,4 +3190,7 @@ Partial Class frmPrincipal
     Friend WithEvents txtNombreE As RichTextBox
     Friend WithEvents Panel38 As Panel
     Friend WithEvents txtDescripcionE As RichTextBox
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents SEliminar As DataGridViewCheckBoxColumn
 End Class

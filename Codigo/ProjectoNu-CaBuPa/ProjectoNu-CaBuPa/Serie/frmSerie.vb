@@ -1,10 +1,15 @@
 ﻿' TODO: Indicador de editar e ingresado correctamente.
+Imports System.ComponentModel
+
 Public Class frmSerie
     Dim serieID As Integer
     Dim editando As Boolean = False     ' Controla si se esta en modo de edicion o no
     Dim tmpDatos(1) As String
     Dim cambio As Boolean = False       ' Controla si han habido cambios desde el ultimo modo de edicion
     Dim dt_Video As New DataTable
+    Dim TBuscada As Byte = 0
+    Dim dt_VideoBV As DataTable
+    Dim TBusca As DataTable
     Public Sub New(ByVal DatosI() As String)
         InitializeComponent()
         'Los siguientes datos se obtienen de la tabla en el elemento padre
@@ -141,15 +146,15 @@ Public Class frmSerie
 
     '' Checkean si hay cambios hechos
     '' Si cambio = True, no se llamaran
-    Private Sub txtNombre_ModifiedChanged(sender As Object, e As EventArgs) Handles txtNombre.ModifiedChanged
+    Private Sub txtNombre_ModifiedChanged(sender As Object, e As EventArgs)
         If txtNombre.Modified Then
             AlternarCambioHandlers()
         End If
     End Sub
-    Private Sub dtpFecha_ValueChanged(sender As Object, e As EventArgs) Handles dtpFecha.ValueChanged
+    Private Sub dtpFecha_ValueChanged(sender As Object, e As EventArgs)
         AlternarCambioHandlers()
     End Sub
-    Private Sub chbIncluir_CheckedChanged(sender As Object, e As EventArgs) Handles chbIncluir.CheckedChanged
+    Private Sub chbIncluir_CheckedChanged(sender As Object, e As EventArgs)
         AlternarCambioHandlers()
     End Sub
 
@@ -172,8 +177,17 @@ Public Class frmSerie
         cambio = Not cambio
     End Sub
 
-    Private Sub dgvVSM_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVSM.CellDoubleClick
-        Dim i As Integer = CargarID(dt_Video, dgvVSM)
+    Private Sub dgvVSM_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVSM.CellDoubleClick, dgvVideoAs.CellDoubleClick
+        Dim i As Integer = CargarID(dt_Video, sender)
+        If (i <> -1) Then
+            Dim formVideo As New frmVideo(i)
+            AddHandler formVideo.FormClosed, AddressOf FormVideo_FormClosed
+            formVideo.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub dgvVSB_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVideoBV.CellDoubleClick
+        Dim i As Integer = CargarID(dt_VideoBV, sender)
         If (i <> -1) Then
             Dim formVideo As New frmVideo(i)
             AddHandler formVideo.FormClosed, AddressOf FormVideo_FormClosed
@@ -194,5 +208,72 @@ Public Class frmSerie
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
         Dim formDelete As New frmConfirmarBorrado(SERIE, {serieID}, True)
         formDelete.ShowDialog(Me)
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Buscar()
+    End Sub
+
+    Private Sub Buscar()
+        TBuscada = VIDEO
+        Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
+        If (Not String.IsNullOrWhiteSpace(txtNombreBV.Text)) Then
+            condicion = String.Format("nombre like '%{0}%'", txtNombreBV.Text)
+        End If
+        If (chkFecha.Checked) Then
+            condicion += String.Format(" and fecha = '{0}'", Format(dtpFechaBV.Value, "yyyy-MM-dd").ToString)
+        End If
+        condicion += " and ID_Serie is null"
+        If Not (BWBuscador.IsBusy) Then
+            BWBuscador.RunWorkerAsync(PSQL("id_video, fecha as Fecha, nombre as Nombre", "video", condicion))
+        End If
+    End Sub
+
+    Private Sub BWBuscador_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWBuscador.RunWorkerCompleted
+        Select Case TBuscada
+            Case VIDEO
+                dt_VideoBV = TBusca
+                ActualizarTablaC(dt_VideoBV, dgvVideoBV)
+                TBuscada = SERIE
+                BWBuscador.RunWorkerAsync(PSQL("id_video, fecha as Fecha, nombre as Nombre", "video", String.Format("id_serie = '{0}'", serieID)))
+            Case SERIE
+                dt_Video = TBusca
+                ActualizarTablaC(dt_Video, dgvVideoAs)
+                TBusca = Nothing
+                TBuscada = 0
+        End Select
+    End Sub
+
+    Private Sub BWBuscador_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWBuscador.DoWork
+        TBusca = DevolverTabla(e.Argument)
+        ModLog.Guardar("Serie: " & e.Argument)
+    End Sub
+
+    Private Sub tcS_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcS.SelectedIndexChanged
+        If tcS.SelectedIndex = 0 Then
+            ActualizarTabla()
+        Else tcS.SelectedIndex = 1
+            Buscar()
+        End If
+    End Sub
+
+    Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVideoBV.CellClick, dgvVideoAs.CellClick
+        ClickCheck(sender, e.ColumnIndex)
+    End Sub
+
+    Private Sub btnAsignar_Click(sender As Object, e As EventArgs) Handles btnAsignar.Click
+        Dim Checked() As String = ObtenerCheck(dt_VideoBV, dgvVideoBV)
+        If Checked.Length > 0 Then
+            PrepararUpdate("Video", {"ID_Serie"}, {serieID.ToString}, "ID_Video", Checked)
+            Buscar()
+        End If
+    End Sub
+
+    Private Sub btnDesasignar_Click(sender As Object, e As EventArgs) Handles btnDesasignar.Click
+        Dim Checked() As String = ObtenerCheck(dt_Video, dgvVideoAs)
+        If Checked.Length > 0 Then
+            PrepararUpdate("Video", {"ID_Serie"}, {"null"}, "ID_Video", Checked)
+            Buscar()
+        End If
     End Sub
 End Class

@@ -101,6 +101,6 @@
                 End If
             Next
         End If
-        Return False
+        Return True 'FIXME: Cambiar a False
     End Function
 End Module

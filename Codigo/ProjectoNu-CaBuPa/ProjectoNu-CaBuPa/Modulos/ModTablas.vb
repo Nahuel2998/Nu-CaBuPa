@@ -200,11 +200,26 @@ Module ModTablas
         res = res.Remove(res.Length - 1)
         Dim condicion As String = ""
         For Each con In Condiciones
-            condicion += String.Format(If(id(i) = "null", "{0} = {1} and", "{0} = '{1}' and"), con, id(i))
+            condicion += String.Format(If(id(i) = "null", "{0} = {1} and ", "{0} = '{1}' and "), con, id(i))
             i += 1
         Next
-        condicion = condicion.Remove(condicion.Length - 4)
+        condicion = condicion.Remove(condicion.Length - 5)
         USQL(tabla, res, condicion)
+    End Sub
+    Public Sub PrepararUpdate(ByVal tabla As String, ByVal Columna() As String, ByVal datos() As String, ByVal Condicion As String, ByVal IDs() As String)
+        Dim res As String = ""
+        Dim i As Integer = 0
+        For Each dato In datos
+            res += String.Format(If(dato = "null", "{0} = {1},", "{0} = '{1}',"), Columna(i), dato)
+            i += 1
+        Next
+        res = res.Remove(res.Length - 1)
+        Dim con As String = ""
+        For Each id In IDs
+            con += String.Format(If(id = "null", "{0} = {1} or ", "{0} = '{1}' or "), Condicion, id)
+        Next
+        con = con.Remove(con.Length - 4)
+        USQL(tabla, res, con)
     End Sub
     Public Sub PrepararDelete(ByVal tabla As String, ByVal datos() As String, ByVal ids() As String)
         Dim res As String = ""
