@@ -30,6 +30,7 @@ Partial Class frmEvento
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEvento))
         Me.tcP = New System.Windows.Forms.TabControl()
         Me.tbDatos = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -563,7 +564,9 @@ Partial Class frmEvento
         Me.ClientSize = New System.Drawing.Size(517, 369)
         Me.Controls.Add(Me.tcP)
         Me.ForeColor = System.Drawing.Color.White
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(535, 416)
         Me.MinimumSize = New System.Drawing.Size(535, 416)
         Me.Name = "frmEvento"

@@ -22,6 +22,7 @@ Partial Class frmConfiguracion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConfiguracion))
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnGenerador = New System.Windows.Forms.Button()
@@ -73,7 +74,7 @@ Partial Class frmConfiguracion
         Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnGuardar.Location = New System.Drawing.Point(386, 242)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(100, 28)
         Me.btnGuardar.TabIndex = 0
@@ -98,9 +99,9 @@ Partial Class frmConfiguracion
         Me.GroupBox1.Controls.Add(Me.lblNombre)
         Me.GroupBox1.Controls.Add(Me.btnGuardar)
         Me.GroupBox1.Location = New System.Drawing.Point(8, 7)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(493, 283)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
@@ -124,7 +125,7 @@ Partial Class frmConfiguracion
         Me.DebugCrear.Enabled = False
         Me.DebugCrear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.DebugCrear.Location = New System.Drawing.Point(181, 242)
-        Me.DebugCrear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DebugCrear.Margin = New System.Windows.Forms.Padding(4)
         Me.DebugCrear.Name = "DebugCrear"
         Me.DebugCrear.Size = New System.Drawing.Size(88, 28)
         Me.DebugCrear.TabIndex = 13
@@ -137,7 +138,7 @@ Partial Class frmConfiguracion
         Me.btnRestablecer.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnRestablecer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnRestablecer.Location = New System.Drawing.Point(277, 242)
-        Me.btnRestablecer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnRestablecer.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRestablecer.Name = "btnRestablecer"
         Me.btnRestablecer.Size = New System.Drawing.Size(100, 28)
         Me.btnRestablecer.TabIndex = 12
@@ -147,7 +148,7 @@ Partial Class frmConfiguracion
         'txtBD
         '
         Me.txtBD.Location = New System.Drawing.Point(14, 199)
-        Me.txtBD.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtBD.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBD.Name = "txtBD"
         Me.txtBD.Size = New System.Drawing.Size(253, 22)
         Me.txtBD.TabIndex = 11
@@ -155,7 +156,7 @@ Partial Class frmConfiguracion
         'txtPuerto
         '
         Me.txtPuerto.Location = New System.Drawing.Point(277, 144)
-        Me.txtPuerto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPuerto.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPuerto.Name = "txtPuerto"
         Me.txtPuerto.Size = New System.Drawing.Size(208, 22)
         Me.txtPuerto.TabIndex = 10
@@ -163,7 +164,7 @@ Partial Class frmConfiguracion
         'txtIp
         '
         Me.txtIp.Location = New System.Drawing.Point(13, 146)
-        Me.txtIp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtIp.Margin = New System.Windows.Forms.Padding(4)
         Me.txtIp.Name = "txtIp"
         Me.txtIp.Size = New System.Drawing.Size(255, 22)
         Me.txtIp.TabIndex = 9
@@ -171,7 +172,7 @@ Partial Class frmConfiguracion
         'txtContraseña
         '
         Me.txtContraseña.Location = New System.Drawing.Point(12, 92)
-        Me.txtContraseña.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtContraseña.Margin = New System.Windows.Forms.Padding(4)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.Size = New System.Drawing.Size(256, 22)
         Me.txtContraseña.TabIndex = 8
@@ -179,7 +180,7 @@ Partial Class frmConfiguracion
         'txtUsuario
         '
         Me.txtUsuario.Location = New System.Drawing.Point(13, 44)
-        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(255, 22)
         Me.txtUsuario.TabIndex = 7
@@ -239,7 +240,7 @@ Partial Class frmConfiguracion
         Me.TAB.Controls.Add(Me.TBconexion)
         Me.TAB.Controls.Add(Me.TPusuarios)
         Me.TAB.Location = New System.Drawing.Point(8, 10)
-        Me.TAB.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TAB.Margin = New System.Windows.Forms.Padding(4)
         Me.TAB.Name = "TAB"
         Me.TAB.SelectedIndex = 0
         Me.TAB.Size = New System.Drawing.Size(514, 324)
@@ -249,9 +250,9 @@ Partial Class frmConfiguracion
         '
         Me.TBconexion.Controls.Add(Me.GroupBox1)
         Me.TBconexion.Location = New System.Drawing.Point(4, 25)
-        Me.TBconexion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBconexion.Margin = New System.Windows.Forms.Padding(4)
         Me.TBconexion.Name = "TBconexion"
-        Me.TBconexion.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBconexion.Padding = New System.Windows.Forms.Padding(4)
         Me.TBconexion.Size = New System.Drawing.Size(506, 295)
         Me.TBconexion.TabIndex = 0
         Me.TBconexion.Text = "Conexion"
@@ -263,9 +264,9 @@ Partial Class frmConfiguracion
         Me.TPusuarios.Controls.Add(Me.GroupBox2)
         Me.TPusuarios.Controls.Add(Me.GroupBox4)
         Me.TPusuarios.Location = New System.Drawing.Point(4, 25)
-        Me.TPusuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPusuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.TPusuarios.Name = "TPusuarios"
-        Me.TPusuarios.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPusuarios.Padding = New System.Windows.Forms.Padding(4)
         Me.TPusuarios.Size = New System.Drawing.Size(506, 295)
         Me.TPusuarios.TabIndex = 1
         Me.TPusuarios.Text = "Usuario"
@@ -281,9 +282,9 @@ Partial Class frmConfiguracion
         Me.GroupBox2.Controls.Add(Me.txtENombre)
         Me.GroupBox2.Controls.Add(Me.txtEContrasena)
         Me.GroupBox2.Location = New System.Drawing.Point(4, 6)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(491, 186)
         Me.GroupBox2.TabIndex = 12
         Me.GroupBox2.TabStop = False
@@ -306,9 +307,9 @@ Partial Class frmConfiguracion
         Me.GroupBox3.Controls.Add(Me.dgvNombreUsuario)
         Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox3.Location = New System.Drawing.Point(244, 20)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(238, 152)
         Me.GroupBox3.TabIndex = 13
         Me.GroupBox3.TabStop = False
@@ -323,7 +324,7 @@ Partial Class frmConfiguracion
         Me.dgvNombreUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvNombreUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvNombreUsuario.Location = New System.Drawing.Point(8, 23)
-        Me.dgvNombreUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvNombreUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvNombreUsuario.MultiSelect = False
         Me.dgvNombreUsuario.Name = "dgvNombreUsuario"
         Me.dgvNombreUsuario.ReadOnly = True
@@ -338,7 +339,7 @@ Partial Class frmConfiguracion
         Me.UBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.UBorrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.UBorrar.Location = New System.Drawing.Point(20, 117)
-        Me.UBorrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UBorrar.Margin = New System.Windows.Forms.Padding(4)
         Me.UBorrar.Name = "UBorrar"
         Me.UBorrar.Size = New System.Drawing.Size(100, 28)
         Me.UBorrar.TabIndex = 6
@@ -350,7 +351,7 @@ Partial Class frmConfiguracion
         Me.UAplicar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.UAplicar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.UAplicar.Location = New System.Drawing.Point(137, 117)
-        Me.UAplicar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UAplicar.Margin = New System.Windows.Forms.Padding(4)
         Me.UAplicar.Name = "UAplicar"
         Me.UAplicar.Size = New System.Drawing.Size(100, 28)
         Me.UAplicar.TabIndex = 5
@@ -380,7 +381,7 @@ Partial Class frmConfiguracion
         'txtENombre
         '
         Me.txtENombre.Location = New System.Drawing.Point(20, 43)
-        Me.txtENombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtENombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtENombre.Name = "txtENombre"
         Me.txtENombre.Size = New System.Drawing.Size(210, 22)
         Me.txtENombre.TabIndex = 0
@@ -388,7 +389,7 @@ Partial Class frmConfiguracion
         'txtEContrasena
         '
         Me.txtEContrasena.Location = New System.Drawing.Point(20, 88)
-        Me.txtEContrasena.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEContrasena.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEContrasena.Name = "txtEContrasena"
         Me.txtEContrasena.Size = New System.Drawing.Size(210, 22)
         Me.txtEContrasena.TabIndex = 1
@@ -403,9 +404,9 @@ Partial Class frmConfiguracion
         Me.GroupBox4.Controls.Add(Me.txtNombre)
         Me.GroupBox4.Controls.Add(Me.txtContrasena)
         Me.GroupBox4.Location = New System.Drawing.Point(8, 194)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Size = New System.Drawing.Size(486, 91)
         Me.GroupBox4.TabIndex = 11
         Me.GroupBox4.TabStop = False
@@ -416,7 +417,7 @@ Partial Class frmConfiguracion
         Me.LimpiarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.LimpiarUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.LimpiarUsuario.Location = New System.Drawing.Point(263, 55)
-        Me.LimpiarUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LimpiarUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.LimpiarUsuario.Name = "LimpiarUsuario"
         Me.LimpiarUsuario.Size = New System.Drawing.Size(100, 28)
         Me.LimpiarUsuario.TabIndex = 6
@@ -428,7 +429,7 @@ Partial Class frmConfiguracion
         Me.CrearUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.CrearUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.CrearUsuario.Location = New System.Drawing.Point(370, 55)
-        Me.CrearUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CrearUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.CrearUsuario.Name = "CrearUsuario"
         Me.CrearUsuario.Size = New System.Drawing.Size(100, 28)
         Me.CrearUsuario.TabIndex = 5
@@ -458,7 +459,7 @@ Partial Class frmConfiguracion
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(81, 18)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(144, 22)
         Me.txtNombre.TabIndex = 0
@@ -466,7 +467,7 @@ Partial Class frmConfiguracion
         'txtContrasena
         '
         Me.txtContrasena.Location = New System.Drawing.Point(316, 18)
-        Me.txtContrasena.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtContrasena.Margin = New System.Windows.Forms.Padding(4)
         Me.txtContrasena.Name = "txtContrasena"
         Me.txtContrasena.Size = New System.Drawing.Size(153, 22)
         Me.txtContrasena.TabIndex = 1
@@ -483,7 +484,8 @@ Partial Class frmConfiguracion
         Me.ClientSize = New System.Drawing.Size(524, 334)
         Me.Controls.Add(Me.TAB)
         Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(542, 381)
         Me.MinimumSize = New System.Drawing.Size(542, 381)

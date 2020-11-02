@@ -26,6 +26,7 @@ Partial Class frmEmpresa
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEmpresa))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnBorrar = New System.Windows.Forms.Button()
@@ -80,7 +81,7 @@ Partial Class frmEmpresa
         Me.TableLayoutPanel3.ColumnCount = 3
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.8818!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.1182!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 291.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 293.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.btnBorrar, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnSSalir, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnSEditar, 2, 0)
@@ -99,11 +100,11 @@ Partial Class frmEmpresa
         Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrar.ForeColor = System.Drawing.Color.Black
-        Me.btnBorrar.Location = New System.Drawing.Point(295, 4)
+        Me.btnBorrar.Location = New System.Drawing.Point(294, 4)
         Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBorrar.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(284, 70)
+        Me.btnBorrar.Size = New System.Drawing.Size(283, 70)
         Me.btnBorrar.TabIndex = 2
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
@@ -359,10 +360,10 @@ Partial Class frmEmpresa
         Me.ClientSize = New System.Drawing.Size(911, 437)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(929, 484)
-        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(929, 484)
         Me.Name = "frmEmpresa"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent

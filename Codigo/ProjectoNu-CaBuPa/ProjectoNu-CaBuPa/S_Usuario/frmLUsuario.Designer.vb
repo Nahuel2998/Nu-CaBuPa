@@ -22,6 +22,7 @@ Partial Class frmLUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLUsuario))
         Me.panelUsuario = New System.Windows.Forms.GroupBox()
         Me.btnOpciones = New System.Windows.Forms.Button()
         Me.txtPass = New System.Windows.Forms.TextBox()
@@ -211,6 +212,7 @@ Partial Class frmLUsuario
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Yellow
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(429, 211)
         Me.MinimumSize = New System.Drawing.Size(429, 211)

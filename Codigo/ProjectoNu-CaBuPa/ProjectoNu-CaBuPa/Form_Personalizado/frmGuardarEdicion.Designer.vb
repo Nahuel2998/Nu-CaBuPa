@@ -22,6 +22,7 @@ Partial Class frmGuardarEdicion
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGuardarEdicion))
         Me.btnNoGuardar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -98,6 +99,7 @@ Partial Class frmGuardarEdicion
         Me.Controls.Add(Me.btnNoGuardar)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(324, 147)

@@ -34,6 +34,7 @@ Partial Class frmPublicidad
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPublicidad))
         Me.gbNotas = New System.Windows.Forms.GroupBox()
         Me.txtTema = New System.Windows.Forms.RichTextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -1193,7 +1194,9 @@ Partial Class frmPublicidad
         Me.Controls.Add(Me.tcP)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.ForeColor = System.Drawing.Color.White
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(623, 471)
         Me.MinimumSize = New System.Drawing.Size(623, 471)
         Me.Name = "frmPublicidad"

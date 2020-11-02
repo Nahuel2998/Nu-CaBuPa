@@ -13,7 +13,7 @@
         If ModConector.BUsuario(txtUsuario.Text, txtPass.Text) Then
             If PoseePermiso("Inicio") Then
                 ModInicializador.Principal()
-                Me.Dispose()
+                Me.Close()
             Else
                 MessageBox.Show("No posee permisos para ingresar")
             End If
@@ -34,4 +34,5 @@
             End If
         End Try
     End Sub
+
 End Class

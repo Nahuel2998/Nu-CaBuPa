@@ -54,6 +54,9 @@
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LogoP.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\dll\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -291,7 +294,9 @@
   <ItemGroup>
     <None Include="Resources\IcnAjustes.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="LogoP.ico" />
+  </ItemGroup>
   <ItemGroup>
     <COMReference Include="ComCtl3">
       <Guid>{38911DA0-E448-11D0-84A3-00DD01104159}</Guid>

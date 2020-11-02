@@ -144,7 +144,9 @@ Partial Class frmAcceso
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.cblP)
         Me.ForeColor = System.Drawing.Color.White
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(397, 349)
         Me.MinimumSize = New System.Drawing.Size(397, 349)
         Me.Name = "frmAcceso"

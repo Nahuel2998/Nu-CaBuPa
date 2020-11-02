@@ -38,6 +38,7 @@ Partial Class frmFuncionario
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFuncionario))
         Me.tcF = New System.Windows.Forms.TabControl()
         Me.tbDatos = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -600,7 +601,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel6.ColumnCount = 3
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.0!))
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.0!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123.0!))
         Me.TableLayoutPanel6.Controls.Add(Me.txtDescripcionBFF, 1, 1)
         Me.TableLayoutPanel6.Controls.Add(Me.btnBuscar, 2, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.Label4, 0, 0)
@@ -624,7 +625,7 @@ Partial Class frmFuncionario
         Me.txtDescripcionBFF.Location = New System.Drawing.Point(102, 37)
         Me.txtDescripcionBFF.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescripcionBFF.Name = "txtDescripcionBFF"
-        Me.txtDescripcionBFF.Size = New System.Drawing.Size(440, 22)
+        Me.txtDescripcionBFF.Size = New System.Drawing.Size(438, 22)
         Me.txtDescripcionBFF.TabIndex = 4
         '
         'btnBuscar
@@ -633,11 +634,11 @@ Partial Class frmFuncionario
         Me.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBuscar.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.Black
-        Me.btnBuscar.Location = New System.Drawing.Point(550, 4)
+        Me.btnBuscar.Location = New System.Drawing.Point(548, 4)
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.TableLayoutPanel6.SetRowSpan(Me.btnBuscar, 2)
-        Me.btnBuscar.Size = New System.Drawing.Size(114, 58)
+        Me.btnBuscar.Size = New System.Drawing.Size(116, 58)
         Me.btnBuscar.TabIndex = 0
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -676,7 +677,7 @@ Partial Class frmFuncionario
         Me.txtNombreBFF.Location = New System.Drawing.Point(102, 4)
         Me.txtNombreBFF.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombreBFF.Name = "txtNombreBFF"
-        Me.txtNombreBFF.Size = New System.Drawing.Size(440, 22)
+        Me.txtNombreBFF.Size = New System.Drawing.Size(438, 22)
         Me.txtNombreBFF.TabIndex = 3
         '
         'GroupBox4
@@ -1183,7 +1184,9 @@ Partial Class frmFuncionario
         Me.ClientSize = New System.Drawing.Size(708, 656)
         Me.Controls.Add(Me.tcF)
         Me.ForeColor = System.Drawing.Color.White
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(726, 703)
         Me.MinimumSize = New System.Drawing.Size(726, 703)
         Me.Name = "frmFuncionario"

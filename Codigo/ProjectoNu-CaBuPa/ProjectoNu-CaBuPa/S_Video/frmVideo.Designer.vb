@@ -22,6 +22,7 @@ Partial Class frmVideo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVideo))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtContenido = New System.Windows.Forms.TextBox()
@@ -225,10 +226,10 @@ Partial Class frmVideo
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(446, 434)
-        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(446, 434)
         Me.Name = "frmVideo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent

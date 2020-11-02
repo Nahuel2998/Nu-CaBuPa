@@ -34,6 +34,7 @@ Partial Class frmSerie
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSerie))
         Me.tcS = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -704,7 +705,7 @@ Partial Class frmSerie
         Me.TableLayoutPanel4.SetColumnSpan(Me.TableLayoutPanel6, 2)
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.60207!))
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.39793!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132.0!))
         Me.TableLayoutPanel6.Controls.Add(Me.btnBuscar, 2, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.Label4, 0, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.Label5, 0, 1)
@@ -726,11 +727,11 @@ Partial Class frmSerie
         Me.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBuscar.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.Black
-        Me.btnBuscar.Location = New System.Drawing.Point(761, 4)
+        Me.btnBuscar.Location = New System.Drawing.Point(758, 4)
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.TableLayoutPanel6.SetRowSpan(Me.btnBuscar, 2)
-        Me.btnBuscar.Size = New System.Drawing.Size(122, 64)
+        Me.btnBuscar.Size = New System.Drawing.Size(125, 64)
         Me.btnBuscar.TabIndex = 0
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -744,7 +745,7 @@ Partial Class frmSerie
         Me.Label4.Location = New System.Drawing.Point(4, 0)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(95, 31)
+        Me.Label4.Size = New System.Drawing.Size(94, 31)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Nombre:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -758,7 +759,7 @@ Partial Class frmSerie
         Me.Label5.Location = New System.Drawing.Point(4, 31)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(95, 41)
+        Me.Label5.Size = New System.Drawing.Size(94, 41)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Fecha:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -768,11 +769,11 @@ Partial Class frmSerie
         Me.txtNombreBV.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtNombreBV.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtNombreBV.ForeColor = System.Drawing.Color.White
-        Me.txtNombreBV.Location = New System.Drawing.Point(107, 4)
+        Me.txtNombreBV.Location = New System.Drawing.Point(106, 4)
         Me.txtNombreBV.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombreBV.MaxLength = 48
         Me.txtNombreBV.Name = "txtNombreBV"
-        Me.txtNombreBV.Size = New System.Drawing.Size(646, 22)
+        Me.txtNombreBV.Size = New System.Drawing.Size(644, 22)
         Me.txtNombreBV.TabIndex = 3
         '
         'TableLayoutPanel8
@@ -784,19 +785,19 @@ Partial Class frmSerie
         Me.TableLayoutPanel8.Controls.Add(Me.chkFecha, 1, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.dtpFechaBV, 0, 0)
         Me.TableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel8.Location = New System.Drawing.Point(107, 35)
+        Me.TableLayoutPanel8.Location = New System.Drawing.Point(106, 35)
         Me.TableLayoutPanel8.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 1
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(646, 33)
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(644, 33)
         Me.TableLayoutPanel8.TabIndex = 4
         '
         'chkFecha
         '
         Me.chkFecha.AutoSize = True
         Me.chkFecha.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.chkFecha.Location = New System.Drawing.Point(623, 4)
+        Me.chkFecha.Location = New System.Drawing.Point(621, 4)
         Me.chkFecha.Margin = New System.Windows.Forms.Padding(4)
         Me.chkFecha.Name = "chkFecha"
         Me.chkFecha.Size = New System.Drawing.Size(19, 25)
@@ -811,7 +812,7 @@ Partial Class frmSerie
         Me.dtpFechaBV.Location = New System.Drawing.Point(4, 4)
         Me.dtpFechaBV.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpFechaBV.Name = "dtpFechaBV"
-        Me.dtpFechaBV.Size = New System.Drawing.Size(611, 22)
+        Me.dtpFechaBV.Size = New System.Drawing.Size(609, 22)
         Me.dtpFechaBV.TabIndex = 0
         '
         'BWBuscador
@@ -826,10 +827,10 @@ Partial Class frmSerie
         Me.ClientSize = New System.Drawing.Size(911, 436)
         Me.Controls.Add(Me.tcS)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(929, 483)
-        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(929, 483)
         Me.Name = "frmSerie"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent

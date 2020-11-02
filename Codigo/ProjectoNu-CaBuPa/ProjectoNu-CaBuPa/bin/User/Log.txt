@@ -793,3 +793,30 @@
 02/11/2020 19:31:51 DESKTOP-SDVEG3U ' llegamos3 
 02/11/2020 19:31:51 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-02' and a.fecha_finalizacion >= '2020-11-02' and a.hora_inicio = '17:09:59' 
 02/11/2020 19:31:54 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+02/11/2020 19:36:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/11/2020 19:36:34 DESKTOP-SDVEG3U ' llegamos3 
+02/11/2020 19:36:34 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-02' and a.fecha_finalizacion >= '2020-11-02' and a.hora_inicio = '17:09:59' 
+02/11/2020 19:36:41 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/11/2020 19:54:29 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/11/2020 19:54:33 DESKTOP-SDVEG3U ' llegamos3 
+02/11/2020 19:54:33 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-02' and a.fecha_finalizacion >= '2020-11-02' and a.hora_inicio = '17:09:59' 
+02/11/2020 19:54:37 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+02/11/2020 19:58:44 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/11/2020 19:58:47 DESKTOP-SDVEG3U ' llegamos3 
+02/11/2020 19:58:47 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-02' and a.fecha_finalizacion >= '2020-11-02' and a.hora_inicio = '17:09:59' 
+02/11/2020 19:58:49 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+02/11/2020 19:58:53 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+02/11/2020 19:58:56 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+02/11/2020 19:58:58 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-11-02' and fecha_finalizacion>='2020-11-02' 
+02/11/2020 19:58:59 DESKTOP-SDVEG3U ' select Nombre, Tema, id_empresa FROM publicidad WHERE id_publicidad = '2' 
+02/11/2020 19:59:06 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-11-02' and fecha_finalizacion>='2020-11-02' 
+02/11/2020 19:59:19 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/11/2020 19:59:22 DESKTOP-SDVEG3U ' llegamos3 
+02/11/2020 19:59:22 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-02' and a.fecha_finalizacion >= '2020-11-02' and a.hora_inicio = '17:09:59' 
+02/11/2020 19:59:25 DESKTOP-SDVEG3U ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+02/11/2020 19:59:32 DESKTOP-SDVEG3U ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+02/11/2020 19:59:51 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 
+02/11/2020 19:59:56 DESKTOP-SDVEG3U ' llegamos3 
+02/11/2020 19:59:56 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-02' and a.fecha_finalizacion >= '2020-11-02' and a.hora_inicio = '17:09:59' 
+02/11/2020 19:59:59 DESKTOP-SDVEG3U ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+02/11/2020 20:00:06 DESKTOP-SDVEG3U ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
