@@ -175,6 +175,9 @@ Public Class frmEvento
     Private Sub dgvPrograma_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFechas.CellClick, dgvEventoPubli.CellClick
         ClickCheck(sender, e.ColumnIndex)
     End Sub
+    Private Sub dgvHeaderClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvFechas.ColumnHeaderMouseClick, dgvEventoPubli.ColumnHeaderMouseClick
+        CheckAll(sender, e.ColumnIndex)
+    End Sub
 
     Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
         If (tcP.SelectedIndex = 1) Then

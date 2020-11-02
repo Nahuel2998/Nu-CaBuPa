@@ -22,6 +22,7 @@ Partial Class frmPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -93,7 +94,6 @@ Partial Class frmPrincipal
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
         Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -103,11 +103,10 @@ Partial Class frmPrincipal
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tcSecciones = New System.Windows.Forms.TabControl()
         Me.tbMenu = New System.Windows.Forms.TabPage()
-        Me.TabControl2 = New System.Windows.Forms.TabControl()
+        Me.tProgramas = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -171,7 +170,6 @@ Partial Class frmPrincipal
         Me.txtBSnombre = New System.Windows.Forms.RichTextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.cbS = New System.Windows.Forms.CheckBox()
-        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.tbVideo = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -243,7 +241,6 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel24 = New System.Windows.Forms.Panel()
         Me.cbPubli = New System.Windows.Forms.CheckBox()
-        Me.ctpPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -264,10 +261,6 @@ Partial Class frmPrincipal
         Me.btnLimpiarBF = New System.Windows.Forms.Button()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
         Me.dgvFuncionarioBF = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn4 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel19 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -332,6 +325,16 @@ Partial Class frmPrincipal
         Me.BWTandas = New System.ComponentModel.BackgroundWorker()
         Me.BWPublicidades = New System.ComponentModel.BackgroundWorker()
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
+        Me.RecPA = New System.Windows.Forms.Timer(Me.components)
+        Me.RecTan = New System.Windows.Forms.Timer(Me.components)
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.ctpPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn4 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -347,7 +350,7 @@ Partial Class frmPrincipal
         CType(Me.dgvTandas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcSecciones.SuspendLayout()
         Me.tbMenu.SuspendLayout()
-        Me.TabControl2.SuspendLayout()
+        Me.tProgramas.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -597,12 +600,6 @@ Partial Class frmPrincipal
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
         '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
-        '
         'dgvPublicidades
         '
         Me.dgvPublicidades.AllowUserToAddRows = False
@@ -742,17 +739,17 @@ Partial Class frmPrincipal
         'tbMenu
         '
         Me.tbMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.tbMenu.Controls.Add(Me.TabControl2)
+        Me.tbMenu.Controls.Add(Me.tProgramas)
         resources.ApplyResources(Me.tbMenu, "tbMenu")
         Me.tbMenu.Name = "tbMenu"
         '
-        'TabControl2
+        'tProgramas
         '
-        Me.TabControl2.Controls.Add(Me.TabPage2)
-        Me.TabControl2.Controls.Add(Me.TabPage3)
-        resources.ApplyResources(Me.TabControl2, "TabControl2")
-        Me.TabControl2.Name = "TabControl2"
-        Me.TabControl2.SelectedIndex = 0
+        Me.tProgramas.Controls.Add(Me.TabPage2)
+        Me.tProgramas.Controls.Add(Me.TabPage3)
+        resources.ApplyResources(Me.tProgramas, "tProgramas")
+        Me.tProgramas.Name = "tProgramas"
+        Me.tProgramas.SelectedIndex = 0
         '
         'TabPage2
         '
@@ -775,11 +772,6 @@ Partial Class frmPrincipal
         Me.GroupBox1.Controls.Add(Me.dgvPrograma)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
-        '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.Name = "dtp"
         '
         'dgvPrograma
         '
@@ -1426,11 +1418,6 @@ Partial Class frmPrincipal
         Me.cbS.Name = "cbS"
         Me.cbS.UseVisualStyleBackColor = True
         '
-        'ctpSerie
-        '
-        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
-        Me.ctpSerie.Name = "ctpSerie"
-        '
         'tbVideo
         '
         Me.tbVideo.BackColor = System.Drawing.Color.Black
@@ -2061,11 +2048,6 @@ Partial Class frmPrincipal
         Me.cbPubli.Name = "cbPubli"
         Me.cbPubli.UseVisualStyleBackColor = True
         '
-        'ctpPubli
-        '
-        resources.ApplyResources(Me.ctpPubli, "ctpPubli")
-        Me.ctpPubli.Name = "ctpPubli"
-        '
         'Label11
         '
         resources.ApplyResources(Me.Label11, "Label11")
@@ -2248,32 +2230,6 @@ Partial Class frmPrincipal
         Me.dgvFuncionarioBF.RowTemplate.Height = 28
         Me.dgvFuncionarioBF.RowTemplate.ReadOnly = True
         Me.dgvFuncionarioBF.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.FillWeight = 130.0!
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn11, "DataGridViewTextBoxColumn11")
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn12, "DataGridViewTextBoxColumn12")
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn13
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn13, "DataGridViewTextBoxColumn13")
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.ReadOnly = True
-        '
-        'DataGridViewCheckBoxColumn4
-        '
-        Me.DataGridViewCheckBoxColumn4.FillWeight = 60.0!
-        resources.ApplyResources(Me.DataGridViewCheckBoxColumn4, "DataGridViewCheckBoxColumn4")
-        Me.DataGridViewCheckBoxColumn4.Name = "DataGridViewCheckBoxColumn4"
-        Me.DataGridViewCheckBoxColumn4.ReadOnly = True
         '
         'GroupBox14
         '
@@ -2789,6 +2745,59 @@ Partial Class frmPrincipal
         'BWBuscador
         '
         '
+        'RecPA
+        '
+        '
+        'RecTan
+        '
+        '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
+        '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
+        '
+        'ctpSerie
+        '
+        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
+        Me.ctpSerie.Name = "ctpSerie"
+        '
+        'ctpPubli
+        '
+        resources.ApplyResources(Me.ctpPubli, "ctpPubli")
+        Me.ctpPubli.Name = "ctpPubli"
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.FillWeight = 130.0!
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn11, "DataGridViewTextBoxColumn11")
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn12, "DataGridViewTextBoxColumn12")
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn13, "DataGridViewTextBoxColumn13")
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        '
+        'DataGridViewCheckBoxColumn4
+        '
+        Me.DataGridViewCheckBoxColumn4.FillWeight = 60.0!
+        resources.ApplyResources(Me.DataGridViewCheckBoxColumn4, "DataGridViewCheckBoxColumn4")
+        Me.DataGridViewCheckBoxColumn4.Name = "DataGridViewCheckBoxColumn4"
+        Me.DataGridViewCheckBoxColumn4.ReadOnly = True
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -2814,7 +2823,7 @@ Partial Class frmPrincipal
         CType(Me.dgvTandas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tcSecciones.ResumeLayout(False)
         Me.tbMenu.ResumeLayout(False)
-        Me.TabControl2.ResumeLayout(False)
+        Me.tProgramas.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
@@ -3037,7 +3046,7 @@ Partial Class frmPrincipal
     Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
     Friend WithEvents Panel16 As Panel
     Friend WithEvents Panel17 As Panel
-    Friend WithEvents TabControl2 As TabControl
+    Friend WithEvents tProgramas As TabControl
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents GroupBox1 As GroupBox
@@ -3126,10 +3135,6 @@ Partial Class frmPrincipal
     Friend WithEvents btnLimpiarBF As Button
     Friend WithEvents GroupBox13 As GroupBox
     Friend WithEvents dgvFuncionarioBF As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn4 As DataGridViewCheckBoxColumn
     Friend WithEvents GroupBox14 As GroupBox
     Friend WithEvents TableLayoutPanel19 As TableLayoutPanel
     Friend WithEvents Label14 As Label
@@ -3193,4 +3198,10 @@ Partial Class frmPrincipal
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents SEliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents RecPA As Timer
+    Friend WithEvents RecTan As Timer
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn4 As DataGridViewCheckBoxColumn
 End Class

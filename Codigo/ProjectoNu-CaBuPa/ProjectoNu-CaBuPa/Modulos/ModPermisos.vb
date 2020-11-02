@@ -56,6 +56,17 @@
         PermisosT = DevolverTabla(PSQL("*", "acceso", "true order by id_acceso"))
         ReDim TieneP(PermisosT.Rows.Count - 1)
     End Sub
+    Public Sub EstablecerAll(ByRef che As CheckedListBox)
+        If (TieneP.Length > 0) Then
+            Dim sec As Boolean
+            sec = Not che.CheckedIndices().Contains(0)
+            For i As Integer = 0 To TieneP.Length - 1
+                TieneP(i) = sec
+            Next
+            EstablecerList(che)
+            CheckearPermisos()
+        End If
+    End Sub
     Public Sub CargarPermisosAll(ByVal UID As Integer)
         USid = UID
         CargarPermisoT()

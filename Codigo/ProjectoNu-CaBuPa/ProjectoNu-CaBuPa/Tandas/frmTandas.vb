@@ -10,13 +10,13 @@
         ActualizarTablaC(dt_MTandas, dgvTandas, False)
     End Sub
     Private Sub FechasMax(Optional ingresar As Boolean = True)
-        hora1 = dtpHI.Value
-        hora2 = dtpHF.Value
+        hora1 = Convert.ToDateTime(Dia(Now.Date) + " " + MysqlHM(dtpHI.Value))
+        hora2 = Convert.ToDateTime(Dia(Now.Date) + " " + MysqlHM(dtpHF.Value))
 
         If (dgvTandas.Rows.Count > 0) Then
             For i As Integer = 0 To dgvTandas.Rows.Count - 1
-                Dim horaN1 As DateTime = Convert.ToDateTime("31/10/2020 " + dgvTandas.Rows(i).Cells(0).Value().ToString)
-                Dim horaN2 As DateTime = Convert.ToDateTime("31/10/2020 " + dgvTandas.Rows(i).Cells(1).Value().ToString)
+                Dim horaN1 As DateTime = Convert.ToDateTime(Dia(Now.Date) + " " + dgvTandas.Rows(i).Cells(0).Value().ToString)
+                Dim horaN2 As DateTime = Convert.ToDateTime(Dia(Now.Date) + " " + dgvTandas.Rows(i).Cells(1).Value().ToString)
                 If (horaN1 < hora1 And horaN2 > hora1) Then
                     hora1 = horaN1
                 End If
@@ -36,6 +36,8 @@
 
     Private Sub frmTandas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BuscarT()
+        HORAIF(dtpHI)
+        HORAIF(dtpHF)
         If Not PoseePermiso("Tanda", "a") Then
             btnBorrar.Visible = False
             btnIngresar.Visible = False
@@ -61,6 +63,9 @@
 
     Private Sub dgvTandas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTandas.CellClick
         ClickCheck(sender, e.ColumnIndex)
+    End Sub
+    Private Sub dgvHeaderClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvTandas.ColumnHeaderMouseClick
+        CheckAll(sender, e.ColumnIndex)
     End Sub
 
     Private Sub dtpHI_ValueChanged(sender As Object, e As EventArgs) Handles dtpHI.ValueChanged

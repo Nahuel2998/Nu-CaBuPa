@@ -78,7 +78,7 @@ Partial Class frmTandas
         '
         'dtpHF
         '
-        Me.dtpHF.CustomFormat = "hh:mm"
+        Me.dtpHF.CustomFormat = "HH:mm"
         Me.dtpHF.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpHF.Location = New System.Drawing.Point(171, 48)
         Me.dtpHF.Name = "dtpHF"
@@ -88,7 +88,7 @@ Partial Class frmTandas
         '
         'dtpHI
         '
-        Me.dtpHI.CustomFormat = "hh:mm"
+        Me.dtpHI.CustomFormat = "HH:mm"
         Me.dtpHI.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpHI.Location = New System.Drawing.Point(22, 48)
         Me.dtpHI.Name = "dtpHI"

@@ -155,7 +155,7 @@ Public Class frmFuncionario
 
     Private Sub dgvFunciones_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFunciones.CellDoubleClick
         Dim i() As String = CargarID(dt_Funciones, dgvFunciones, {0, 1, 2})
-        If (i.Length <> 1) Then
+        If (i(0) > 0) Then
             Dim formFuncion As New frmFuncion(i)
             AddHandler formFuncion.FormClosed, AddressOf FormFuncion_FormClosed
             formFuncion.ShowDialog()
@@ -259,6 +259,9 @@ Public Class frmFuncionario
     Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionesBFF.CellClick, dgvFuncionesAs.CellClick, dgvFunP.CellClick
         ClickCheck(sender, e.ColumnIndex)
     End Sub
+    Private Sub dgvHeaderClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvFuncionesBFF.ColumnHeaderMouseClick, dgvFuncionesAs.ColumnHeaderMouseClick, dgvFunP.ColumnHeaderMouseClick
+        CheckAll(sender, e.ColumnIndex)
+    End Sub
 
     Private Sub btnDesasignar_Click(sender As Object, e As EventArgs) Handles btnDesasignar.Click
         Dim Checked() As String = ObtenerCheck(dt_Funciones, dgvFuncionesAs)
@@ -335,7 +338,7 @@ Public Class frmFuncionario
 
     Private Sub dgvFunP_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFunP.CellDoubleClick
         Dim i() As String = CargarID(dt_Funciones, dgvFunP, {0, 2, 3})
-        If (i.Length <> 1) Then
+        If (i(0) > 0) Then
             Dim formFuncion As New frmFuncion(i)
             AddHandler formFuncion.FormClosed, AddressOf FormFuncion_FormClosed
             formFuncion.ShowDialog()
@@ -344,7 +347,7 @@ Public Class frmFuncionario
 
     Private Sub dgvFuncionesBFF_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionesBFF.CellDoubleClick
         Dim i() As String = CargarID(dt_BFuncionesAs, dgvFuncionesBFF, {0, 1, 2})
-        If (i.Length <> 1) Then
+        If (i(0) > 0) Then
             Dim formFuncion As New frmFuncion(i)
             AddHandler formFuncion.FormClosed, AddressOf Buscar
             formFuncion.ShowDialog()
@@ -353,7 +356,7 @@ Public Class frmFuncionario
 
     Private Sub dgvFuncionesAs_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionesAs.CellDoubleClick
         Dim i() As String = CargarID(dt_Funciones, dgvFuncionesAs, {0, 2, 3})
-        If (i.Length <> 1) Then
+        If (i(0) > 0) Then
             Dim formFuncion As New frmFuncion(i)
             AddHandler formFuncion.FormClosed, AddressOf Buscar
             formFuncion.ShowDialog()

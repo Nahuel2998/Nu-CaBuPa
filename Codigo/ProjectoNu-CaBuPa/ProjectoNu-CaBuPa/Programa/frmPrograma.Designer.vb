@@ -1087,7 +1087,7 @@ Partial Class frmPrograma
         '
         'txtHF
         '
-        Me.txtHF.CustomFormat = "hh:mm"
+        Me.txtHF.CustomFormat = "HH:mm"
         Me.txtHF.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.txtHF.Location = New System.Drawing.Point(186, 178)
         Me.txtHF.Name = "txtHF"
@@ -1097,7 +1097,7 @@ Partial Class frmPrograma
         '
         'txtHI
         '
-        Me.txtHI.CustomFormat = "hh:mm"
+        Me.txtHI.CustomFormat = "HH:mm"
         Me.txtHI.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.txtHI.Location = New System.Drawing.Point(13, 178)
         Me.txtHI.Name = "txtHI"

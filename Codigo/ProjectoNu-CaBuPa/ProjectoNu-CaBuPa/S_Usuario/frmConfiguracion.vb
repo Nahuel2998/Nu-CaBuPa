@@ -61,7 +61,7 @@ Public Class frmConfiguracion
             btnGenerador.Enabled = True
             DebugCrear.Enabled = True
         End If
-        If PoseePermiso("Configuracion", "v") Then
+        If Not PoseePermiso("Configuracion", "a") And Not ModConector.GDebug Then
             TAB.TabPages.RemoveAt(1)
         End If
         Control.CheckForIllegalCrossThreadCalls = False

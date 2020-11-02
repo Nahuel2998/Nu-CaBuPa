@@ -27,6 +27,7 @@ Partial Class frmAcceso
         Me.btnSalir = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnActualizar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.UI_LabelMaterial1 = New UIDC.UI_LabelMaterial()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cblP
@@ -113,13 +114,23 @@ Partial Class frmAcceso
         '
         Me.UI_LabelMaterial1.AutoSize = True
         Me.UI_LabelMaterial1.BackColor = System.Drawing.Color.Transparent
-        Me.UI_LabelMaterial1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.UI_LabelMaterial1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.UI_LabelMaterial1.Location = New System.Drawing.Point(163, 9)
+        Me.UI_LabelMaterial1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UI_LabelMaterial1.ForeColor = System.Drawing.Color.White
+        Me.UI_LabelMaterial1.Location = New System.Drawing.Point(138, 14)
         Me.UI_LabelMaterial1.Name = "UI_LabelMaterial1"
-        Me.UI_LabelMaterial1.Size = New System.Drawing.Size(80, 20)
+        Me.UI_LabelMaterial1.Size = New System.Drawing.Size(93, 25)
         Me.UI_LabelMaterial1.TabIndex = 3
         Me.UI_LabelMaterial1.Text = "Permisos" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'Button1
+        '
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(13, 14)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Todos"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'frmAcceso
         '
@@ -127,6 +138,7 @@ Partial Class frmAcceso
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(379, 302)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.UI_LabelMaterial1)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.btnSalir)
@@ -147,4 +159,5 @@ Partial Class frmAcceso
     Friend WithEvents btnSalir As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnActualizar As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents UI_LabelMaterial1 As UIDC.UI_LabelMaterial
+    Friend WithEvents Button1 As Button
 End Class

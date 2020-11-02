@@ -48,7 +48,7 @@ Public Class frmSerie
         End If
     End Sub
     Private Sub ocultar()
-        tbAV.Hide()
+        tcS.TabPages.RemoveByKey("tbAV")
     End Sub
 
     Private Sub btnSEditar_Click(sender As Object, e As EventArgs) Handles btnSEditar.Click
@@ -267,6 +267,9 @@ Public Class frmSerie
 
     Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVideoBV.CellClick, dgvVideoAs.CellClick
         ClickCheck(sender, e.ColumnIndex)
+    End Sub
+    Private Sub dgvHeaderClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvVideoBV.ColumnHeaderMouseClick, dgvVideoAs.ColumnHeaderMouseClick
+        CheckAll(sender, e.ColumnIndex)
     End Sub
 
     Private Sub btnAsignar_Click(sender As Object, e As EventArgs) Handles btnAsignar.Click

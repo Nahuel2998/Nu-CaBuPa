@@ -10,6 +10,7 @@
         EstablecerList(cblP)
     End Sub
 
+
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Close()
     End Sub
@@ -18,4 +19,9 @@
         CargaActualizacionP(cblP)
         CompararPermisos(cblP)
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        EstablecerAll(cblP)
+    End Sub
+
 End Class

@@ -39,6 +39,8 @@ Public Class frmPrograma
     Private Sub frmPrograma_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If programaID <> -1 Then
             bwDatos.RunWorkerAsync()
+            HORAIF(txtHI)
+            HORAIF(txtHF)
             If Not PoseePermiso("Programa", "a") Then
                 btnBorrar.Visible = False
                 btnPEditar.Visible = False
@@ -265,6 +267,9 @@ Public Class frmPrograma
     Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProgramaPubli.CellClick, dgvPrograma.CellClick, dgvFechaPrograma.CellClick, dgvFuncionarios.CellClick, dgvVerCuota.CellClick
         ClickCheck(sender, e.ColumnIndex)
     End Sub
+    Private Sub dgvHeaderClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvProgramaPubli.ColumnHeaderMouseClick, dgvPrograma.ColumnHeaderMouseClick, dgvFechaPrograma.ColumnHeaderMouseClick, dgvFuncionarios.ColumnHeaderMouseClick, dgvVerCuota.ColumnHeaderMouseClick
+        CheckAll(sender, e.ColumnIndex)
+    End Sub
     Private Sub dtpFPubli_ValueChanged(sender As Object, e As EventArgs) Handles dtpFPubli.ValueChanged
         PubliDeFecha(dt_publicidades, dgvProgramaPubli, programaID, dtpFPubli.Value)
     End Sub
@@ -285,7 +290,7 @@ Public Class frmPrograma
 
     Private Sub dgvProgramaPubli_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProgramaPubli.CellDoubleClick
         Dim i As String = CargarID(dt_publicidades, dgvProgramaPubli)
-        If (i.Length <> 0) Then
+        If (i <> 0) Then
             Dim formPubli As New frmPublicidad(i)
             AddHandler formPubli.FormClosed, AddressOf FormPubli_FormClosed
             formPubli.ShowDialog()
@@ -420,7 +425,7 @@ Public Class frmPrograma
 
     Private Sub dgvVerCuota_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVerCuota.CellDoubleClick
         Dim i() As String = CargarID(dt_Cuotas, dgvVerCuota, {0, 1, 2, 3})
-        If (i.Length <> 0) Then
+        If (i(0) <> 0) Then
             CuotaId = i(0)
             dtpFE.Value = i(1)
             dtpFP.Value = If(i(2) = "", Now, i(2))
@@ -451,7 +456,7 @@ Public Class frmPrograma
 
     Private Sub dgvFuncionarios_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionarios.CellDoubleClick
         Dim i() As String = CargarID(dt_funcionario, dgvFuncionarios, {0, 2, 6, 7})
-        If (i.Length <> 1) Then
+        If (i(0) > 0) Then
             Dim formFunc As New frmFuncionario(i)
             AddHandler formFunc.FormClosed, AddressOf FormFunc_FormClosed
             formFunc.ShowDialog()
@@ -459,9 +464,5 @@ Public Class frmPrograma
     End Sub
     Private Sub FormFunc_FormClosed(sender As Object, e As FormClosedEventArgs)
         BuscarFuncionario()
-    End Sub
-
-    Private Sub dgvProgramaPubli_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProgramaPubli.CellContentClick
-
     End Sub
 End Class

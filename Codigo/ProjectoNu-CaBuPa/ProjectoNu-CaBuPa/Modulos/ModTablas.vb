@@ -58,7 +58,7 @@ Module ModTablas
         ActualizarTablaC(dt, dgvP)
     End Sub
     Public Function CargarID(ByRef Tabla As DataTable, ByRef Dgv As DataGridView) As Integer
-        If (Not IsNothing(Tabla)) Then
+        If (Not IsNothing(Tabla)) And Dgv.SelectedRows.Count > 0 Then
             Return Tabla.Rows(Dgv.SelectedRows(0).Index).Item(0).ToString
         End If
         Return -1
@@ -71,8 +71,47 @@ Module ModTablas
         Dim h As String = String.Format("{0}:{1}:{2}", ceros(Hour(hora).ToString), ceros(Minute(hora)), ceros(Second(hora)))
         Return h
     End Function
+    Public Function Dia(ByVal dias As Date) As String
+        Dim h As String = String.Format("{0}/{1}/{2}", ceros((dias).Day), ceros(Month(dias)), ceros(Year(dias)))
+        Return h
+    End Function
+    Public Function Mili(ByVal hora As DateTime, Optional aumento As Byte = 0) As Integer
+        Dim tiempo As Integer = 0
+        tiempo += hora.Second * 1000
+        tiempo += hora.Minute + aumento * 60000
+        tiempo += hora.Hour * 360000
+        Return tiempo
+    End Function
+    Public Sub HORAIF(ByRef dat As DateTimePicker)
+        dat.MaxDate = Now.Date.AddDays(1)
+        dat.MinDate = Now.Date
+    End Sub
+    Public Sub NumerTime(ByVal dt As DataTable, ByRef time As Timer, ByVal numcol As Byte)
+        Dim tiempo As Integer
+        If Not IsNothing(dt) Then
+            If (dt.Rows.Count > 0) Then
+                For i As Integer = 0 To dt.Rows.Count - 1
+                    tiempo = Mili(Convert.ToDateTime(Dia(Now.Date) + " " + MysqlHM(dt.Rows(i).Item(numcol).ToString)), 1) - Mili(Now)
+                    If tiempo <= 0 Then
+                        time.Stop()
+                        time.Enabled = False
+                        Continue For
+                    End If
+                    time.Enabled = True
+                    time.Interval = tiempo
+                    time.Start()
+                    Exit Sub
+                Next
+            End If
+            time.Stop()
+            time.Enabled = False
+        Else
+            time.Stop()
+            time.Enabled = False
+        End If
+    End Sub
     Public Function CargarID(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, ByVal NumCol() As Byte) As String()
-        If (Not IsNothing(Tabla)) Then
+        If (Not IsNothing(Tabla)) And Dgv.SelectedRows.Count > 0 Then
             Dim res(NumCol.Length - 1) As String
             Dim j As Byte = 0
             For Each i As Byte In NumCol
@@ -97,10 +136,21 @@ Module ModTablas
     End Function
     Public Sub ClickCheck(ByRef Dgv As DataGridView, ByVal columna As Integer)
         If Dgv.Rows.Count > 0 Then
-            If columna = Dgv.Columns.Count - 1 Then
+            If columna = Dgv.Columns.Count - 1 And Dgv.SelectedRows.Count > 0 Then
                 Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value = Not Dgv.SelectedRows(0).Cells(Dgv.Columns.Count - 1).Value
             End If
         End If
+    End Sub
+    Public Sub CheckAll(ByRef Dgv As DataGridView, ByVal columna As Integer)
+        If Dgv.Rows.Count > 0 Then
+            If columna = Dgv.Columns.Count - 1 Then
+                Dgv.Rows(0).Cells(Dgv.Columns.Count - 1).Value = Not Dgv.Rows(0).Cells(Dgv.Columns.Count - 1).Value
+                For Each row As DataGridViewRow In Dgv.Rows
+                    row.Cells(Dgv.Columns.Count - 1).Value = Dgv.Rows(0).Cells(Dgv.Columns.Count - 1).Value
+                Next
+            End If
+        End If
+        Dgv.Refresh()
     End Sub
     Public Function ObtenerCheck(ByRef Tabla As DataTable, ByRef Dgv As DataGridView, Optional ByVal Col As Integer = 0, Optional ByVal text As String = "", Optional comilla As Boolean = False) As String()
         Dim UltiCol As Integer = Dgv.Columns.Count - 1

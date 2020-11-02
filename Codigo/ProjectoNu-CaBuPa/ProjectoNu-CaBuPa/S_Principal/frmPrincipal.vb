@@ -114,6 +114,7 @@ Public Class frmPrincipal
     Private Sub BWNumberOne_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWProgramas.RunWorkerCompleted
         'ActualizarProgramas()
         ActualizarTablaC(dt_programa, dgvPrograma)
+        NumerTime(dt_programa, RecPA, 2)
         dgvProgramaColor()
         Funcionarios()
     End Sub
@@ -187,11 +188,10 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWPublicidades_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWPublicidades.DoWork
-
-        If dgvTandas.Rows.Count > 0 And dgvTandas.SelectedRows.Count > 0 And PoseePermiso("Publicidad") Then
-            Dim Hora As TimeSpan = TimeSpan.Parse(dgvTandas.SelectedRows(0).Cells(0).Value)
+        If dgvTandas.Rows.Count > 0 And dgvTandas.SelectedRows.Count > 0 Then
+            Dim Horas As String = MysqlHM(CDate(CargarID(dt_tandas, dgvTandas, {0})(0)))
             If Not IsNothing(dt_tandas) Then
-                dt_publi = ModConector.APublicidad(dtpTanda.Value.Date, Hora)
+                dt_publi = ModConector.APublicidad(dtpTanda.Value, Horas)
             End If
         Else
             dt_publi = Nothing
@@ -207,11 +207,14 @@ Public Class frmPrincipal
     End Sub
     Public Sub Tandas()
         ActualizarTablaC(dt_tandas, dgvTandas, False) 'fix
+        NumerTime(dt_tandas, RecTan, 1)
     End Sub
 
     Private Sub BWTandas_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BWTandas.RunWorkerCompleted
         Tandas()
-        BWPublicidades.RunWorkerAsync()
+        If Not BWPublicidades.IsBusy Then
+            BWPublicidades.RunWorkerAsync()
+        End If
     End Sub
 
     Private Sub dgvTandas_Click(sender As Object, e As EventArgs) Handles dgvTandas.Click
@@ -227,7 +230,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub dtpTanda_ValueChanged(sender As Object, e As EventArgs) Handles dtpTanda.ValueChanged
-        If Not BWTandas.IsBusy Then
+        If Not BWPublicidades.IsBusy Then
             BWPublicidades.RunWorkerAsync()
         End If
     End Sub
@@ -287,7 +290,7 @@ Public Class frmPrincipal
 
     Private Sub DgvVB_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellDoubleClick
         Dim i As Integer = CargarID(dt_Video, dgvVB)
-        If (i <> -1) Then
+        If (i <> -1 And i <> 0) Then
             Dim formVideo As New frmVideo(i)
             AddHandler formVideo.FormClosed, AddressOf FormVideo_FormClosed
             formVideo.ShowDialog()
@@ -329,7 +332,7 @@ Public Class frmPrincipal
 
     Private Sub dgvBS_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBS.CellDoubleClick
         Dim i() As String = CargarID(dt_Serie, dgvBS, {0, 1, 2})
-        If (i.Length <> 1) Then
+        If (i(0) > 0) Then
             Dim formSerie As New frmSerie(i)
             AddHandler formSerie.FormClosed, AddressOf FormSerie_FormClosed
             formSerie.ShowDialog()
@@ -352,6 +355,13 @@ Public Class frmPrincipal
     Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellClick, dgvBS.CellClick, dgvClientes.CellClick, dgvBProgramas.CellClick, dgvPubliB.CellClick, dgvFuncionarioBF.CellClick, dgvFuncionesBFF.CellClick, dgvBEvento.CellClick
         ClickCheck(sender, e.ColumnIndex)
     End Sub
+    Private Sub dgvHeaderClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvVB.ColumnHeaderMouseClick, dgvBS.ColumnHeaderMouseClick, dgvClientes.ColumnHeaderMouseClick, dgvBProgramas.ColumnHeaderMouseClick, dgvPubliB.ColumnHeaderMouseClick, dgvFuncionarioBF.ColumnHeaderMouseClick, dgvFuncionesBFF.ColumnHeaderMouseClick, dgvBEvento.ColumnHeaderMouseClick
+        sender.ClearSelection()
+        If Not (sender.Columns.Count - 1 <> e.ColumnIndex) Then
+            CheckAll(sender, e.ColumnIndex)
+        End If
+    End Sub
+
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
         BorrarConfirmar(Me, dt_Video, dgvVB, VIDEO, btnbuscarv)
@@ -400,7 +410,7 @@ Public Class frmPrincipal
 
     Private Sub dgvClientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellDoubleClick
         Dim i() As String = CargarID(dt_Empresa, dgvClientes, {0, 1, 2, 3})
-        If (i.Length <> 1) Then
+        If (i(0) > 0) Then
             Dim formCliente As New frmEmpresa(i)
             AddHandler formCliente.FormClosed, AddressOf FormCliente_FormClosed
             formCliente.ShowDialog()
@@ -448,7 +458,7 @@ Public Class frmPrincipal
 
     Private Sub dgvBProgramas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBProgramas.CellDoubleClick
         Dim i() As String = CargarID(dt_BPrograma, dgvBProgramas, {0})
-        If (i.Length <> 0) Then
+        If (i(0) <> 0) Then
             Dim formPrograma As New frmPrograma(i(0))
             AddHandler formPrograma.FormClosed, AddressOf FormPrograma_FormClosed
             formPrograma.ShowDialog()
@@ -457,7 +467,7 @@ Public Class frmPrincipal
 
     Private Sub dgvPrograma_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPrograma.CellDoubleClick
         Dim i() As String = CargarID(dt_programa, dgvPrograma, {0})
-        If (i.Length <> 0) Then
+        If (i(0) <> 0) Then
             Dim formPrograma As New frmPrograma(i(0))
             AddHandler formPrograma.FormClosed, AddressOf ACPrograma
             'TODO: Crear otro handler para actualizar la tabla de programas agendados
@@ -519,12 +529,14 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub cbTTodas_CheckedChanged(sender As Object, e As EventArgs) Handles cbTTodas.CheckedChanged
-        BWTandas.RunWorkerAsync(Not cbTTodas.Checked)
+        If Not BWTandas.IsBusy Then
+            BWTandas.RunWorkerAsync(Not cbTTodas.Checked)
+        End If
     End Sub
 
     Private Sub dgvPubliB_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPubliB.CellDoubleClick
         Dim i As String = CargarID(dt_BPubli, dgvPubliB)
-        If (i.Length <> 0) Then
+        If (i <> 0) Then
             Dim formPubli As New frmPublicidad(i)
             AddHandler formPubli.FormClosed, AddressOf FormPubli_FormClosed
             formPubli.ShowDialog()
@@ -532,6 +544,9 @@ Public Class frmPrincipal
     End Sub
     Private Sub FormPubli_FormClosed(sender As Object, e As FormClosedEventArgs)
         btnBuscarPubliB.PerformClick()
+        If Not BWTandas.IsBusy Then
+            BWTandas.RunWorkerAsync(Not cbTTodas.Checked)
+        End If
     End Sub
 
     Private Sub btnIngresarPubliB_Click(sender As Object, e As EventArgs) Handles btnIngresarPubliB.Click
@@ -581,12 +596,18 @@ Public Class frmPrincipal
 
     Private Sub btnTanda_Click(sender As Object, e As EventArgs) Handles btnTanda.Click
         Dim formTanda As New frmTandas()
+        AddHandler formTanda.FormClosed, AddressOf tandasClosed
         formTanda.ShowDialog()
+    End Sub
+    Private Sub tandasClosed()
+        If Not BWProgramas.IsBusy Then
+            BWTandas.RunWorkerAsync(Not cbTTodas.Checked)
+        End If
     End Sub
 
     Private Sub dgvFuncionarioBF_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionarioBF.CellDoubleClick
         Dim i() As String = CargarID(dt_BFuncionario, dgvFuncionarioBF, {0, 1, 2, 3})
-        If (i.Length <> 1) Then
+        If (i(0) > 0) Then
             Dim formFuncrio As New frmFuncionario(i)
             AddHandler formFuncrio.FormClosed, AddressOf FormFuncrio_FormClosed
             formFuncrio.ShowDialog()
@@ -629,7 +650,7 @@ Public Class frmPrincipal
 
     Private Sub dgvFuncionesBFF_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionesBFF.CellDoubleClick
         Dim i() As String = CargarID(dt_BFuncion, dgvFuncionesBFF, {0, 1, 2})
-        If (i.Length <> 1) Then
+        If (i(0) > 0) Then
             Dim formFunc As New frmFuncion(i)
             AddHandler formFunc.FormClosed, AddressOf FormFunc_FormClosed
             formFunc.ShowDialog()
@@ -666,7 +687,7 @@ Public Class frmPrincipal
 
     Private Sub dgvBEvento_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBEvento.CellDoubleClick
         Dim i As Integer = CargarID(dt_BEvento, dgvBEvento)
-        If (i <> -1) Then
+        If (i <> -1 And i <> 0) Then
             Dim formEvento As New frmEvento(i)
             AddHandler formEvento.FormClosed, AddressOf FormEvento_FormClosed
             formEvento.ShowDialog()
@@ -682,7 +703,7 @@ Public Class frmPrincipal
 
     Private Sub dgvEventos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEventos.CellDoubleClick
         Dim i As Integer = CargarID(dt_evento, dgvEventos)
-        If (i <> -1) Then
+        If (i <> -1 And i <> 0) Then
             Dim formEvento As New frmEvento(i)
             AddHandler formEvento.FormClosed, AddressOf FormEvento_FormClosed
             formEvento.ShowDialog()
@@ -692,7 +713,7 @@ Public Class frmPrincipal
 
     Private Sub dgvPublicidades_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPublicidades.CellDoubleClick
         Dim i As Integer = CargarID(dt_publi, dgvPublicidades)
-        If (i <> -1) Then
+        If (i <> -1 And i <> 0) And PoseePermiso("Publicidad") Then
             Dim formPubli As New frmPublicidad(i)
             AddHandler formPubli.FormClosed, AddressOf FormPubli_Close
             formPubli.ShowDialog()
@@ -701,7 +722,7 @@ Public Class frmPrincipal
 
     Private Sub dgvPPublicidades_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPPublicidades.CellDoubleClick
         Dim i As Integer = CargarID(dt_Ppubli, dgvPPublicidades)
-        If (i <> -1) Then
+        If (i <> -1 And i <> 0) Then
             Dim formPubli As New frmPublicidad(i)
             AddHandler formPubli.FormClosed, AddressOf FormPPubli_FormClosed
             formPubli.ShowDialog()
@@ -720,10 +741,30 @@ Public Class frmPrincipal
 
     Private Sub dgvFuncionarios_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFuncionarios.CellDoubleClick
         Dim i() As String = CargarID(dt_dprograma, dgvFuncionarios, {0, 1, 2, 3})
-        If (i.Length > 0) Then
+        If (i(0) > 0) Then
             Dim formFun As New frmFuncionario(i)
             AddHandler formFun.FormClosed, AddressOf FormPPubli_FormClosed
             formFun.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub RecTan_Tick(sender As Object, e As EventArgs) Handles RecTan.Tick
+        If Not BWTandas.IsBusy Then
+            BWTandas.RunWorkerAsync(Not cbTTodas.Checked)
+        End If
+    End Sub
+
+    Private Sub RecPA_Tick(sender As Object, e As EventArgs) Handles RecPA.Tick
+        If Not BWProgramas.IsBusy Then
+            BWProgramas.RunWorkerAsync()
+        End If
+    End Sub
+
+    Private Sub tProgramas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tProgramas.SelectedIndexChanged
+        If (tProgramas.SelectedIndex = 0) Then
+            If Not BWProgramas.IsBusy Then
+                BWProgramas.RunWorkerAsync()
+            End If
         End If
     End Sub
 

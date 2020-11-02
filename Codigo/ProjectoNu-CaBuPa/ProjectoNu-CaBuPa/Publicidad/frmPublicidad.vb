@@ -418,6 +418,9 @@ Public Class frmPublicidad
     Private Sub dgvTE_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTE.CellClick, dgvVerCuota.CellClick
         ClickCheck(sender, e.ColumnIndex)
     End Sub
+    Private Sub dgvHeaderClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvTE.ColumnHeaderMouseClick, dgvVerCuota.ColumnHeaderMouseClick
+        CheckAll(sender, e.ColumnIndex)
+    End Sub
     Private Sub BuscarCuota()
         If Not (bwDatos.IsBusy) Then
             bwDatos.RunWorkerAsync(5)
@@ -480,7 +483,7 @@ Public Class frmPublicidad
 
     Private Sub dgvVerCuota_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVerCuota.CellDoubleClick
         Dim i() As String = CargarID(dt_Cuotas, dgvVerCuota, {0, 1, 2, 3})
-        If (i.Length <> 0) Then
+        If (i(0) <> 0) Then
             CuotaId = i(0)
             dtpFE.Value = i(1)
             dtpFP.Value = If(i(2) = "", Now, i(2))
