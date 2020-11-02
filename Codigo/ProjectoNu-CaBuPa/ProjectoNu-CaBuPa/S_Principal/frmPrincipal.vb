@@ -37,12 +37,28 @@ Public Class frmPrincipal
         QuitarTab()
     End Sub
     Private Sub QuitarTab()
-        If Not (PoseePermiso("Serie")) Then
-            tcSecciones.TabPages.RemoveByKey("tbSeries")
+        If Not (PoseePermiso("Programa")) Then
+            tcSecciones.TabPages.RemoveByKey("tbMenu")
+        Else
+            If Not (PoseePermiso("Serie")) Then
+                tcSecciones.TabPages.RemoveByKey("tbSeries")
+            End If
         End If
-        ' If Not (PoseePermiso("Empresa")) Then
-        'tcSecciones.TabPages.RemoveByKey("tbEmpresa")
-        'End If
+        If Not (PoseePermiso("Video")) Then
+            TabControl1.TabPages.RemoveByKey("tbVideo")
+        End If
+        If Not (PoseePermiso("Empresas")) Then
+            tcSecciones.TabPages.RemoveByKey("tbEmpresa")
+        End If
+        If Not (PoseePermiso("Publicidad")) Then
+            tcSecciones.TabPages.RemoveByKey("tbPublicidad")
+        End If
+        If Not (PoseePermiso("Funcionario")) Then
+            tcSecciones.TabPages.RemoveByKey("tbFuncionario")
+        End If
+        If Not (PoseePermiso("Evento")) Then
+            tcSecciones.TabPages.RemoveByKey("tbEvento")
+        End If
     End Sub
 #End Region
 
@@ -161,7 +177,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWEventos_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWEventos.DoWork
-        If PoseePermiso("Eventos", "ac") Then
+        If PoseePermiso("Eventos") Then
             dt_evento = ModConector.AEventos()
         End If
     End Sub
@@ -171,7 +187,8 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub BWPublicidades_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWPublicidades.DoWork
-        If dgvTandas.Rows.Count > 0 And dgvTandas.SelectedRows.Count > 0 Then
+
+        If dgvTandas.Rows.Count > 0 And dgvTandas.SelectedRows.Count > 0 And PoseePermiso("Publicidad") Then
             Dim Hora As TimeSpan = TimeSpan.Parse(dgvTandas.SelectedRows(0).Cells(0).Value)
             If Not IsNothing(dt_tandas) Then
                 dt_publi = ModConector.APublicidad(dtpTanda.Value.Date, Hora)

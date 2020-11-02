@@ -2244,3 +2244,4 @@
 01/11/2020 15:58:18 DESKTOP-SDVEG3U ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 3) 
 01/11/2020 15:58:18 DESKTOP-SDVEG3U ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '3' 
 01/11/2020 15:58:19 DESKTOP-SDVEG3U ' select id_Funcionario, Nombre, Telefono, Mail FROM funcionario WHERE true 
+01/11/2020 17:04:39 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd=; CharSet=utf8 

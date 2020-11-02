@@ -1,0 +1,18 @@
+INSERT INTO `acceso` VALUES 
+(1,'Inicio','a'),
+(2,'Configuracion','a'),
+(3,'Programa','a'),
+(4,'Serie','a'),
+(5,'Video','a'),
+(6,'Empresas','a'),
+(7,'Publicidad','a'),
+(8,'Eventos','a'),
+(9,'Configuracion','v'),
+(10,'Programa','v'),
+(11,'Serie','v'),
+(12,'Video','v'),
+(13,'Serie','v'),
+(14,'Empresas','v'),
+(15,'Publicidad','v'),
+(16,'Eventos','v')
+

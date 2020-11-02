@@ -172,7 +172,7 @@ Partial Class frmPrincipal
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.cbS = New System.Windows.Forms.CheckBox()
         Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.tbVideo = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.btnIngresarV = New System.Windows.Forms.Button()
@@ -383,7 +383,7 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
+        Me.tbVideo.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Información.SuspendLayout()
@@ -1221,7 +1221,7 @@ Partial Class frmPrincipal
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Controls.Add(Me.tbVideo)
         resources.ApplyResources(Me.TabControl1, "TabControl1")
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -1430,12 +1430,12 @@ Partial Class frmPrincipal
         resources.ApplyResources(Me.ctpSerie, "ctpSerie")
         Me.ctpSerie.Name = "ctpSerie"
         '
-        'TabPage4
+        'tbVideo
         '
-        Me.TabPage4.BackColor = System.Drawing.Color.Black
-        Me.TabPage4.Controls.Add(Me.TableLayoutPanel3)
-        resources.ApplyResources(Me.TabPage4, "TabPage4")
-        Me.TabPage4.Name = "TabPage4"
+        Me.tbVideo.BackColor = System.Drawing.Color.Black
+        Me.tbVideo.Controls.Add(Me.TableLayoutPanel3)
+        resources.ApplyResources(Me.tbVideo, "tbVideo")
+        Me.tbVideo.Name = "tbVideo"
         '
         'TableLayoutPanel3
         '
@@ -2853,7 +2853,7 @@ Partial Class frmPrincipal
         Me.Panel5.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
+        Me.tbVideo.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
         Me.Información.ResumeLayout(False)
@@ -2962,7 +2962,7 @@ Partial Class frmPrincipal
     Friend WithEvents BWTandas As System.ComponentModel.BackgroundWorker
     Friend WithEvents BWPublicidades As System.ComponentModel.BackgroundWorker
     Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents tbVideo As TabPage
     Friend WithEvents dgvTandas As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn

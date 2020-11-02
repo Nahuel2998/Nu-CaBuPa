@@ -1,7 +1,9 @@
 ﻿Public Class frmLUsuario
     Private Sub btnOpciones_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOpciones.Click
-        If BUsuario(txtUsuario.Text, txtPass.Text) Or ModConector.GDebug Then
-            ModInicializador.Configuracion()
+        If PoseePermiso("Configuracion") Then
+            If BUsuario(txtUsuario.Text, txtPass.Text) Or ModConector.GDebug Then
+                ModInicializador.Configuracion()
+            End If
         End If
     End Sub
 
@@ -11,7 +13,7 @@
     End Sub
     Private Sub btnEntrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEntrar.Click
         If ModConector.BUsuario(txtUsuario.Text, txtPass.Text) Then
-            If PoseePermiso("Inicio", "ac") Then
+            If PoseePermiso("Inicio") Then
                 ModInicializador.Principal()
                 Me.Dispose()
             Else
