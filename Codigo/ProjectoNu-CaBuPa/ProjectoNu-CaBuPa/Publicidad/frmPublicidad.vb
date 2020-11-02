@@ -123,9 +123,10 @@ Public Class frmPublicidad
                 btnInsertarC.Visible = False
                 ocultar()
             ElseIf Not PoseePermiso("Evento", "a") Then
-                tbEventos.Hide()
+                tcP.TabPages.RemoveByKey("tbEventos")
             ElseIf Not PoseePermiso("Programa", "a") Then
-                tbProgramas.Hide()
+
+                tcP.TabPages.RemoveByKey("tbProgramas")
             End If
         Else
             ocultar()

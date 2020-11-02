@@ -25,18 +25,18 @@ Public Class frmEvento
         If Not PoseePermiso("Evento", "a") Then
             btnBorrar.Visible = False
             btnEditar.Visible = False
-            tbFechas.Hide()
-            tbPublicidad.Hide()
+            tcP.TabPages.RemoveByKey("tbFechas")
+            tcP.TabPages.RemoveByKey("tbPublicidad")
         End If
         If Not PoseePermiso("Publicidad", "a") Then
-            tbPublicidad.Hide()
+            tcP.TabPages.RemoveByKey("tbPublicidad")
         End If
         If eventoID <> -1 Then
             Buscar()
             btnSalir.Select()
         Else
-            tbFechas.Hide()
-            tbPublicidad.Hide()
+            tcP.TabPages.RemoveByKey("tbFechas")
+            tcP.TabPages.RemoveByKey("tbPublicidad")
             btnEditar.Text = "Insertar"
             btnBorrar.Visible = False
             Activar()

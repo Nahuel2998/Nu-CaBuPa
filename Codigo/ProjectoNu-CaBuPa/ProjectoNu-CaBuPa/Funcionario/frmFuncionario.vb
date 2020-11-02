@@ -26,16 +26,16 @@ Public Class frmFuncionario
         If Not PoseePermiso("Funcionario", "a") Then
             btnBorrar.Visible = False
             btnEditar.Visible = False
-            tbAF.Hide()
-            TBAP.Hide()
+            tcF.TabPages.RemoveByKey("tbAF")
+            tcF.TabPages.RemoveByKey("TBAP")
         End If
         If Not PoseePermiso("Programa", "a") Then
-            TBAP.Hide()
+            tcF.TabPages.RemoveByKey("TBAP")
         End If
         ActualizarTabla()
         If (ID = -1) Then
-            tbAF.Hide()
-            TBAP.Hide()
+            tcF.TabPages.RemoveByKey("tbAF")
+            tcF.TabPages.RemoveByKey("TBAP")
             Alternar()
         End If
         btnSalir.Select()
