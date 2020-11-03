@@ -1124,7 +1124,7 @@ Partial Class frmPublicidad
         '
         Me.nudValor.DecimalPlaces = 2
         Me.nudValor.Location = New System.Drawing.Point(307, 47)
-        Me.nudValor.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        Me.nudValor.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
         Me.nudValor.Name = "nudValor"
         Me.nudValor.Size = New System.Drawing.Size(111, 27)
         Me.nudValor.TabIndex = 28876934

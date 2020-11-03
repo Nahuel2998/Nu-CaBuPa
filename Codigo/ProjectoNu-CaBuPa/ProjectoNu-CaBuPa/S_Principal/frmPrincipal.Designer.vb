@@ -94,7 +94,6 @@ Partial Class frmPrincipal
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
         Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -108,7 +107,6 @@ Partial Class frmPrincipal
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -172,7 +170,6 @@ Partial Class frmPrincipal
         Me.txtBSnombre = New System.Windows.Forms.RichTextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.cbS = New System.Windows.Forms.CheckBox()
-        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.tbVideo = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -244,7 +241,6 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel24 = New System.Windows.Forms.Panel()
         Me.cbPubli = New System.Windows.Forms.CheckBox()
-        Me.ctpPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -335,6 +331,10 @@ Partial Class frmPrincipal
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
         Me.RecPA = New System.Windows.Forms.Timer(Me.components)
         Me.RecTan = New System.Windows.Forms.Timer(Me.components)
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.ctpPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -600,12 +600,6 @@ Partial Class frmPrincipal
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
         '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
-        '
         'dgvPublicidades
         '
         Me.dgvPublicidades.AllowUserToAddRows = False
@@ -778,11 +772,6 @@ Partial Class frmPrincipal
         Me.GroupBox1.Controls.Add(Me.dgvPrograma)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
-        '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.Name = "dtp"
         '
         'dgvPrograma
         '
@@ -1429,11 +1418,6 @@ Partial Class frmPrincipal
         Me.cbS.Name = "cbS"
         Me.cbS.UseVisualStyleBackColor = True
         '
-        'ctpSerie
-        '
-        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
-        Me.ctpSerie.Name = "ctpSerie"
-        '
         'tbVideo
         '
         Me.tbVideo.BackColor = System.Drawing.Color.Black
@@ -2063,11 +2047,6 @@ Partial Class frmPrincipal
         resources.ApplyResources(Me.cbPubli, "cbPubli")
         Me.cbPubli.Name = "cbPubli"
         Me.cbPubli.UseVisualStyleBackColor = True
-        '
-        'ctpPubli
-        '
-        resources.ApplyResources(Me.ctpPubli, "ctpPubli")
-        Me.ctpPubli.Name = "ctpPubli"
         '
         'Label11
         '
@@ -2803,6 +2782,27 @@ Partial Class frmPrincipal
         '
         'RecTan
         '
+        '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
+        '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
+        '
+        'ctpSerie
+        '
+        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
+        Me.ctpSerie.Name = "ctpSerie"
+        '
+        'ctpPubli
+        '
+        resources.ApplyResources(Me.ctpPubli, "ctpPubli")
+        Me.ctpPubli.Name = "ctpPubli"
         '
         'frmPrincipal
         '

@@ -1064,3 +1064,66 @@
 03/11/2020 13:51:07 DESKTOP-SDVEG3U ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('5','2020-11-24' ) 
 03/11/2020 13:51:08 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
 03/11/2020 13:51:14 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+03/11/2020 19:02:23 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+03/11/2020 19:02:52 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+03/11/2020 19:03:01 DESKTOP-SDVEG3U ' llegamos3 
+03/11/2020 19:03:01 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-03' and a.fecha_finalizacion >= '2020-11-03' and a.hora_inicio = '17:09:59' 
+03/11/2020 19:03:08 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)=2020group by 1 
+03/11/2020 19:03:08 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)=2020group by 1 
+03/11/2020 19:04:28 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+03/11/2020 19:04:32 DESKTOP-SDVEG3U ' llegamos3 
+03/11/2020 19:04:32 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-03' and a.fecha_finalizacion >= '2020-11-03' and a.hora_inicio = '17:09:59' 
+03/11/2020 19:04:33 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)=2020group by 1 
+03/11/2020 19:04:33 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)=2020group by 1 
+03/11/2020 19:04:39 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)=2020group by 1 
+03/11/2020 19:04:39 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)=2020group by 1 
+03/11/2020 19:04:43 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)=2020group by 1 
+03/11/2020 19:04:43 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)=2020group by 1 
+03/11/2020 19:06:56 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+03/11/2020 19:07:01 DESKTOP-SDVEG3U ' llegamos3 
+03/11/2020 19:07:01 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-03' and a.fecha_finalizacion >= '2020-11-03' and a.hora_inicio = '17:09:59' 
+03/11/2020 19:07:02 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:07:02 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM programacuota WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:07:07 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:07:07 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM programacuota WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:07:21 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+03/11/2020 19:07:22 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+03/11/2020 19:07:23 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-11-03' 
+03/11/2020 19:07:24 DESKTOP-SDVEG3U ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+03/11/2020 19:07:32 DESKTOP-SDVEG3U ' Insert IGNORE into programacuota ( id_programa,fecha_emision, fecha_pago,precio ) values ('2','2020-11-03',null,'2347' ) 
+03/11/2020 19:07:32 DESKTOP-SDVEG3U ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+03/11/2020 19:07:32 DESKTOP-SDVEG3U ' Insert IGNORE into programacuota ( id_programa,fecha_emision, fecha_pago,precio ) values ('2','2020-11-03',null,'0' ) 
+03/11/2020 19:07:32 DESKTOP-SDVEG3U ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+03/11/2020 19:07:36 DESKTOP-SDVEG3U ' Insert IGNORE into programacuota ( id_programa,fecha_emision, fecha_pago,precio ) values ('2','2020-11-03',null,'4330,003443' ) 
+03/11/2020 19:07:36 DESKTOP-SDVEG3U ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+03/11/2020 19:07:38 DESKTOP-SDVEG3U ' Insert IGNORE into programacuota ( id_programa,fecha_emision, fecha_pago,precio ) values ('2','2020-11-03',null,'3434,00' ) 
+03/11/2020 19:07:38 DESKTOP-SDVEG3U ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+03/11/2020 19:07:40 DESKTOP-SDVEG3U ' Insert IGNORE into programacuota ( id_programa,fecha_emision, fecha_pago,precio ) values ('2','2020-11-03',null,'43340,00' ) 
+03/11/2020 19:07:40 DESKTOP-SDVEG3U ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+03/11/2020 19:07:48 DESKTOP-SDVEG3U ' DELETE FROM programacuota WHERE id_programa_cuota in ('8' ,'7' ,'6' ,'5' ,'10' ) 
+03/11/2020 19:07:48 DESKTOP-SDVEG3U ' DELETE FROM programacuota WHERE id_programa_cuota in ('8' ,'7' ,'6' ,'5' ,'10' ) 
+03/11/2020 19:07:48 DESKTOP-SDVEG3U ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+03/11/2020 19:07:56 DESKTOP-SDVEG3U ' Insert IGNORE into programacuota ( id_programa,fecha_emision, fecha_pago,precio ) values ('2','2020-11-03',null,'100000' ) 
+03/11/2020 19:07:56 DESKTOP-SDVEG3U ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+03/11/2020 19:08:00 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+03/11/2020 19:08:01 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:08:03 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:08:04 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2019' group by 1 
+03/11/2020 19:08:06 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2019' group by 1 
+03/11/2020 19:08:07 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:08:07 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM programacuota WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:08:09 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:13:31 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+03/11/2020 19:13:36 DESKTOP-SDVEG3U ' llegamos3 
+03/11/2020 19:13:36 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-03' and a.fecha_finalizacion >= '2020-11-03' and a.hora_inicio = '17:09:59' 
+03/11/2020 19:13:37 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:13:37 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM programacuota WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:13:44 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2019' group by 1 
+03/11/2020 19:13:44 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM programacuota WHERE year(fecha_emision)='2019' group by 1 
+03/11/2020 19:13:45 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:13:45 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM programacuota WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:20:54 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+03/11/2020 19:21:33 DESKTOP-SDVEG3U ' llegamos3 
+03/11/2020 19:21:33 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-03' and a.fecha_finalizacion >= '2020-11-03' and a.hora_inicio = '17:09:59' 
+03/11/2020 19:21:34 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2020' group by 1 
+03/11/2020 19:21:34 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM programacuota WHERE year(fecha_emision)='2020' group by 1 

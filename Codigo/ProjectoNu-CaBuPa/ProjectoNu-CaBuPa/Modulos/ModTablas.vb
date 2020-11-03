@@ -1,4 +1,5 @@
 ﻿Imports System.Text.RegularExpressions
+Imports System.Windows.Forms.DataVisualization.Charting
 
 Module ModTablas
     Public dt_programa As DataTable
@@ -16,6 +17,8 @@ Module ModTablas
     Public dt_BFuncionario As DataTable
     Public dt_BFuncion As DataTable
     Public dt_BEvento As DataTable
+    Public dt_GraPrograma As DataTable
+    Public dt_GraPubli As DataTable
 
     Public Const VIDEO As Byte = 1
     Public Const SERIE As Byte = 2
@@ -33,6 +36,7 @@ Module ModTablas
     Public Const EVENTO As Byte = 14
     Public Const TRABAJACOMO As Byte = 15
     Public Const PUBLICIDADEVENTO As Byte = 16
+
     Public Function ValidarEmail(ByVal s As String) As Boolean
         Return Regex.IsMatch(s, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
     End Function
