@@ -2776,21 +2776,27 @@ Partial Class frmPrincipal
         '
         'BWProgramas
         '
+        Me.BWProgramas.WorkerReportsProgress = True
         '
         'BWDPRogramas
         '
+        Me.BWDPRogramas.WorkerReportsProgress = True
         '
         'BWEventos
         '
+        Me.BWEventos.WorkerReportsProgress = True
         '
         'BWTandas
         '
+        Me.BWTandas.WorkerReportsProgress = True
         '
         'BWPublicidades
         '
+        Me.BWPublicidades.WorkerReportsProgress = True
         '
         'BWBuscador
         '
+        Me.BWBuscador.WorkerReportsProgress = True
         '
         'RecPA
         '

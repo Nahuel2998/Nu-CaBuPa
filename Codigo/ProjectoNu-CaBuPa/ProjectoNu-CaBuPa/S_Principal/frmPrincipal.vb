@@ -65,6 +65,15 @@ Public Class frmPrincipal
     Private Sub BWNumberOne_DoWork(sender As Object, e As DoWorkEventArgs) Handles BWProgramas.DoWork
         dt_programa = ModConector.APrograma(dtp.Value.Date)
     End Sub
+    Private Sub Trabajando(sender As Object, e As DoWorkEventArgs) Handles BWBuscador.DoWork, BWDPRogramas.DoWork, BWEventos.DoWork, BWProgramas.DoWork, BWPublicidades.DoWork, BWTandas.DoWork
+        sender.ReportProgress(1)
+    End Sub
+    Private Sub Trabajando() Handles BWBuscador.ProgressChanged, BWDPRogramas.ProgressChanged, BWEventos.ProgressChanged, BWProgramas.ProgressChanged, BWPublicidades.ProgressChanged, BWTandas.ProgressChanged
+        lblStatus.Text = "Trabajando"
+    End Sub
+    Private Sub Descansando() Handles BWBuscador.RunWorkerCompleted, BWDPRogramas.RunWorkerCompleted, BWEventos.RunWorkerCompleted, BWProgramas.RunWorkerCompleted, BWPublicidades.RunWorkerCompleted, BWTandas.RunWorkerCompleted
+        lblStatus.Text = "Listo"
+    End Sub
 
     Private Sub ActualizarEvento()
         ActualizarTablaC(dt_evento, dgvEventos)

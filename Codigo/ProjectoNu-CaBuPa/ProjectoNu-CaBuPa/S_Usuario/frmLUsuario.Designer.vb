@@ -33,6 +33,7 @@ Partial Class frmLUsuario
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.UI_GradientPanel1 = New UIDC.UI_GradientPanel()
         Me.UI_TitleBanner1 = New UIDC.UI_TitleBanner()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.panelUsuario.SuspendLayout()
         Me.UI_GradientPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -106,6 +107,7 @@ Partial Class frmLUsuario
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEntrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(134, Byte), Integer))
+        Me.btnEntrar.Enabled = False
         Me.btnEntrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEntrar.Location = New System.Drawing.Point(288, 114)
         Me.btnEntrar.Name = "btnEntrar"
@@ -201,6 +203,9 @@ Partial Class frmLUsuario
         Me.UI_TitleBanner1.TypeWindows = UIDC.UI_TitleBanner.TypeTheme.Windows
         Me.UI_TitleBanner1.UseVisualStyleBackColor = False
         '
+        'BackgroundWorker1
+        '
+        '
         'frmLUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
@@ -237,4 +242,5 @@ Partial Class frmLUsuario
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents UI_GradientPanel1 As UIDC.UI_GradientPanel
     Friend WithEvents UI_TitleBanner1 As UIDC.UI_TitleBanner
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class

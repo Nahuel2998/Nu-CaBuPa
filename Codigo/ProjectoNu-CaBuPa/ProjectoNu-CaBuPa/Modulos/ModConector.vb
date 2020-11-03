@@ -47,31 +47,27 @@ Module ModConector
 #End Region
 #Region "Constructor"
     Public Sub Crear(ByVal RAddress As String, ByVal RPort As String, ByVal RDatabase As String, ByVal RUser As String, ByVal RPass As String)
-        If Not String.IsNullOrEmpty(Address) Then
+        If Not String.IsNullOrEmpty(RAddress) Then
             Address = RAddress
         Else
             Address = "localhost"
         End If
-        If Not String.IsNullOrEmpty(Address) Then
+        If Not String.IsNullOrEmpty(RUser) Then
             User = RUser
         Else
             User = "root"
         End If
-        If Not String.IsNullOrEmpty(Address) Then
+        If Not String.IsNullOrEmpty(RDatabase) Then
             Database = RDatabase
         Else
-            Database = "JVRPDB"
+            Database = "jvrpdatabase"
         End If
-        If Not String.IsNullOrEmpty(Address) Then
+        If Not String.IsNullOrEmpty(RPort) Then
             Port = RPort
         Else
             Port = "3306"
         End If
-        If Not String.IsNullOrEmpty(Address) Then
-            Pass = RPass
-        Else
-            Pass = "root"
-        End If
+        Pass = RPass
     End Sub
     Public Sub EAddress(ByVal NAddress As String)
         Address = NAddress
@@ -92,7 +88,7 @@ Module ModConector
 #Region "Conectar"
     Public Sub Inicio()
         Try
-            connStr = "DataSource=" + Address + "; Port=" + Port + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8"
+            connStr = "DataSource=" + Address + "; Port=" + Port + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass
             'connStr = "Server=" + Address + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8mb4"
             'connStr = "Server=" + Address + "; Database=" + Database + "; Uid=" + User + "; Pwd=root; CharSet=utf8mb4"
             conn = New MySqlConnection(connStr)
@@ -114,10 +110,10 @@ Module ModConector
 #Region "Interpretar"
     Public Function ESQL(ByVal sql As String) As Boolean
         Dim conT = New MySqlConnection(connStr)
-        conT.Open()
+        conT.OpenAsync()
         ModLog.Guardar(sql)
         Try
-            objCmd = New MySqlCommand(sql, conn)
+            objCmd = New MySqlCommand(sql, conT)
             objCmd.Prepare()
             objCmd.ExecuteNonQuery()
 
@@ -125,7 +121,7 @@ Module ModConector
             MessageBox.Show(ex.ToString)
             Return False
         End Try
-        conT.Close()
+        conT.CloseAsync()
         Return True
     End Function
     Public Function ESQLSelect(ByVal sql As String) As DataTable
