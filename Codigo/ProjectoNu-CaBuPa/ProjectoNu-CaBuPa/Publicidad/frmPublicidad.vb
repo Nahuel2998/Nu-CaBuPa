@@ -48,7 +48,6 @@ Public Class frmPublicidad
             ExtraerDatos()
         Else
             MessageBox.Show("Debe tener empresas ingresadas")
-            Close()
         End If
         cbEmpresa.SelectedIndex = pos(0)
     End Sub

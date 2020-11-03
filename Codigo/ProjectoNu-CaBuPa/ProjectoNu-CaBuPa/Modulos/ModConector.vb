@@ -113,10 +113,9 @@ Module ModConector
         conT.OpenAsync()
         ModLog.Guardar(sql)
         Try
-            objCmd = New MySqlCommand(sql, conT)
+            objCmd = New MySqlCommand(sql, conT) 'çonT
             objCmd.Prepare()
             objCmd.ExecuteNonQuery()
-
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
             Return False
