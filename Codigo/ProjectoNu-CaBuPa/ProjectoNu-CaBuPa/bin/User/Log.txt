@@ -1127,3 +1127,4 @@
 03/11/2020 19:21:33 DESKTOP-SDVEG3U ' select p.id_publicidad, Nombre FROM publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad WHERE a.fecha_inicio <= '2020-11-03' and a.fecha_finalizacion >= '2020-11-03' and a.hora_inicio = '17:09:59' 
 03/11/2020 19:21:34 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM pmuestrapubli WHERE year(fecha_emision)='2020' group by 1 
 03/11/2020 19:21:34 DESKTOP-SDVEG3U ' select month(fecha_emision), sum(precio) FROM programacuota WHERE year(fecha_emision)='2020' group by 1 
+3/11/2020 20:06:51 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
