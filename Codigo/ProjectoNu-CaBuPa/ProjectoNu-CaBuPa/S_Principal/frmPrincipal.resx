@@ -411,6 +411,42 @@
   <data name="GroupBox7.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
+  <data name="cbTodTand.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="cbTodTand.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbTodTand.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbTodTand.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 0</value>
+  </data>
+  <data name="cbTodTand.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="cbTodTand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 22</value>
+  </data>
+  <data name="cbTodTand.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="cbTodTand.Text" xml:space="preserve">
+    <value>Todas</value>
+  </data>
+  <data name="&gt;&gt;cbTodTand.Name" xml:space="preserve">
+    <value>cbTodTand</value>
+  </data>
+  <data name="&gt;&gt;cbTodTand.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbTodTand.Parent" xml:space="preserve">
+    <value>GroupBox7</value>
+  </data>
+  <data name="&gt;&gt;cbTodTand.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="dtpTanda.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -424,7 +460,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="dtpTanda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 27</value>
+    <value>152, 27</value>
   </data>
   <data name="dtpTanda.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -439,7 +475,7 @@
     <value>GroupBox7</value>
   </data>
   <data name="&gt;&gt;dtpTanda.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="dgvPublicidades.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -478,7 +514,7 @@
     <value>GroupBox7</value>
   </data>
   <data name="&gt;&gt;dgvPublicidades.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="GroupBox7.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 166</value>

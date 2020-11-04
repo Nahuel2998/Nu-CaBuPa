@@ -178,10 +178,10 @@ Partial Class frmLUsuario
         '
         'UI_TitleBanner1
         '
-        Me.UI_TitleBanner1.Animate = UIDC.UI_TitleBanner.Anim.AnimateOFF
+        Me.UI_TitleBanner1.Animate = UIDC.UI_TitleBanner.Anim.AnimateON
         Me.UI_TitleBanner1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.UI_TitleBanner1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.UI_TitleBanner1.ButtonMenuActive = UIDC.UI_TitleBanner.Active.ActiveOn
+        Me.UI_TitleBanner1.ButtonMenuActive = UIDC.UI_TitleBanner.Active.ActiveOff
         Me.UI_TitleBanner1.ButtonsVisible = UIDC.UI_TitleBanner.ButtonVisible.Close_Minimize
         Me.UI_TitleBanner1.Dock = System.Windows.Forms.DockStyle.Top
         Me.UI_TitleBanner1.FlatAppearance.BorderSize = 0
@@ -194,7 +194,7 @@ Partial Class frmLUsuario
         Me.UI_TitleBanner1.Margin = New System.Windows.Forms.Padding(2)
         Me.UI_TitleBanner1.MoveActive = True
         Me.UI_TitleBanner1.Name = "UI_TitleBanner1"
-        Me.UI_TitleBanner1.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
+        Me.UI_TitleBanner1.Padding = New System.Windows.Forms.Padding(15, 12, 0, 0)
         Me.UI_TitleBanner1.ParentControl = Me
         Me.UI_TitleBanner1.Size = New System.Drawing.Size(429, 30)
         Me.UI_TitleBanner1.TabIndex = 1

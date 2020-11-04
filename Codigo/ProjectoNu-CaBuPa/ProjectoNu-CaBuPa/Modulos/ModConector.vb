@@ -266,13 +266,17 @@ Module ModConector
         Dim Condicion As String = String.Format("fecha_inicio<='{0}' and ifnull(fecha_finalizacion,'{0}')>='{0}'", Format(Fecha, "yyyy-MM-dd"))
         Return DevolverTabla(PSQL(Columna, Tablas, Condicion))
     End Function
-    Public Function APublicidad(Fecha As Date, Hora As String) As DataTable
-        ModLog.Guardar("llegamos3")
-        ModLog.Guardar(PSQL("p.id_publicidad, Nombre", "publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad", "a.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.hora_inicio = '" + Hora + "'"))
-        Return DevolverTabla(PSQL("p.id_publicidad, Nombre", "publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad", "a.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.hora_inicio = '" + Hora + "'"))
+    Public Function APublicidad(Fecha As Date, Hora As String, ByVal todas As Boolean) As DataTable
+        Dim condicion As String
+        If (todas) Then
+            condicion = "a.hora_inicio = '" + Hora + "'"
+        Else
+            condicion = "a.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.hora_inicio = '" + Hora + "'"
+        End If
+        Return DevolverTabla(PSQL("distinct p.id_publicidad, Nombre", "publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad", condicion))
 
     End Function
-    Public Function APPublicidad(Fecha As Date, idPrograma As Integer) As DataTable
+    Public Function APPublicidad(ByVal Fecha As Date, ByVal idPrograma As Integer) As DataTable
         Return DevolverTabla(PSQL("pp.id_publicidad, Nombre", "pmuestrapubli pp inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad", "pp.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and pp.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd").ToString + "' and pp.id_programa = '" + idPrograma.ToString + "'"))
         ModLog.Guardar(PSQL("pp.id_publicidad, Nombre", "pmuestrapubli pp inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad", "pp.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and pp.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd").ToString + "' and pp.id_programa = '" + idPrograma.ToString + "'"))
     End Function

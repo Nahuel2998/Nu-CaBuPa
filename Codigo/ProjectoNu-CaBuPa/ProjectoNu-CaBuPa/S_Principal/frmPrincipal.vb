@@ -198,7 +198,7 @@ Public Class frmPrincipal
         If dgvTandas.Rows.Count > 0 And dgvTandas.SelectedRows.Count > 0 Then
             Dim Horas As String = MysqlHM(CDate(CargarID(dt_tandas, dgvTandas, {0})(0)))
             If Not IsNothing(dt_tandas) Then
-                dt_publi = ModConector.APublicidad(dtpTanda.Value, Horas)
+                dt_publi = ModConector.APublicidad(dtpTanda.Value, Horas, cbTodTand.Checked)
             End If
         Else
             dt_publi = Nothing
@@ -583,7 +583,7 @@ Public Class frmPrincipal
             condicion += " and Mail = '" + txtMailBF.Text + "'"
         End If
         If Not (BWBuscador.IsBusy) Then
-            BWBuscador.RunWorkerAsync(PSQL("id_Funcionario, Nombre, Telefono, Mail", "funcionario", condicion))
+            BWBuscador.RunWorkerAsync(PSQL("id_Funcionario, Nombre, Telefono, Mail as 'E-Mail'", "funcionario", condicion))
         End If
     End Sub
 
@@ -792,4 +792,9 @@ Public Class frmPrincipal
         End If
     End Sub
 
+    Private Sub cbTodTand_CheckedChanged(sender As Object, e As EventArgs) Handles cbTodTand.CheckedChanged
+        If Not BWTandas.IsBusy Then
+            BWTandas.RunWorkerAsync()
+        End If
+    End Sub
 End Class

@@ -335,6 +335,7 @@ Partial Class frmPrincipal
         Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.ctpPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.cbTodTand = New System.Windows.Forms.CheckBox()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -595,6 +596,7 @@ Partial Class frmPrincipal
         'GroupBox7
         '
         resources.ApplyResources(Me.GroupBox7, "GroupBox7")
+        Me.GroupBox7.Controls.Add(Me.cbTodTand)
         Me.GroupBox7.Controls.Add(Me.dtpTanda)
         Me.GroupBox7.Controls.Add(Me.dgvPublicidades)
         Me.GroupBox7.Name = "GroupBox7"
@@ -2804,6 +2806,12 @@ Partial Class frmPrincipal
         resources.ApplyResources(Me.ctpPubli, "ctpPubli")
         Me.ctpPubli.Name = "ctpPubli"
         '
+        'cbTodTand
+        '
+        resources.ApplyResources(Me.cbTodTand, "cbTodTand")
+        Me.cbTodTand.Name = "cbTodTand"
+        Me.cbTodTand.UseVisualStyleBackColor = True
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -2823,6 +2831,7 @@ Partial Class frmPrincipal
         Me.gbTandas.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
         CType(Me.dgvPublicidades, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -3210,4 +3219,5 @@ Partial Class frmPrincipal
     Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn4 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents cbTodTand As CheckBox
 End Class
