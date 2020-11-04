@@ -1327,3 +1327,40 @@
 04/11/2020 13:09:13 DESKTOP-SDVEG3U ' DELETE FROM programacuota WHERE id_programa_cuota in ('11' ) 
 04/11/2020 13:09:13 DESKTOP-SDVEG3U ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is not null and year(fecha_emision)=2020 
 04/11/2020 13:09:33 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+4/11/2020 16:45:24 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+4/11/2020 16:45:37 LAPTOP-701EDAA0 ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+4/11/2020 16:45:37 LAPTOP-701EDAA0 ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+4/11/2020 16:45:38 LAPTOP-701EDAA0 ' Llegué5 
+4/11/2020 16:45:51 LAPTOP-701EDAA0 ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+4/11/2020 16:45:57 LAPTOP-701EDAA0 ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+4/11/2020 16:46:00 LAPTOP-701EDAA0 ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+4/11/2020 16:46:03 LAPTOP-701EDAA0 ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+4/11/2020 16:46:07 LAPTOP-701EDAA0 ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+4/11/2020 16:46:09 LAPTOP-701EDAA0 ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '3' 
+4/11/2020 16:46:13 LAPTOP-701EDAA0 ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+4/11/2020 16:46:17 LAPTOP-701EDAA0 ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+4/11/2020 16:49:03 LAPTOP-701EDAA0 ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+4/11/2020 16:49:03 LAPTOP-701EDAA0 ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+4/11/2020 16:49:03 LAPTOP-701EDAA0 ' Llegué5 
+4/11/2020 16:51:36 LAPTOP-701EDAA0 ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM publicidadcuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+4/11/2020 16:51:36 LAPTOP-701EDAA0 ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM publicidadcuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+4/11/2020 16:55:50 LAPTOP-701EDAA0 ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+4/11/2020 16:56:16 LAPTOP-701EDAA0 ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 2) 
+4/11/2020 16:56:16 LAPTOP-701EDAA0 ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+4/11/2020 16:56:20 LAPTOP-701EDAA0 ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+4/11/2020 16:57:25 LAPTOP-701EDAA0 ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+4/11/2020 16:59:01 LAPTOP-701EDAA0 ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 2) 
+4/11/2020 16:59:01 LAPTOP-701EDAA0 ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+4/11/2020 17:02:33 LAPTOP-701EDAA0 ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 2) 
+4/11/2020 17:02:33 LAPTOP-701EDAA0 ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+4/11/2020 17:03:13 LAPTOP-701EDAA0 ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+4/11/2020 17:03:42 LAPTOP-701EDAA0 ' Funcionario: select id_programa, Nombre_Programa FROM programa WHERE false 
+4/11/2020 17:04:01 LAPTOP-701EDAA0 ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+4/11/2020 17:08:00 LAPTOP-701EDAA0 ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+4/11/2020 17:08:13 LAPTOP-701EDAA0 ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+4/11/2020 17:08:16 LAPTOP-701EDAA0 ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+4/11/2020 17:12:19 LAPTOP-701EDAA0 ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+4/11/2020 17:12:25 LAPTOP-701EDAA0 ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+4/11/2020 17:12:26 LAPTOP-701EDAA0 ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '3' 
+4/11/2020 17:24:49 LAPTOP-701EDAA0 ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+4/11/2020 17:28:27 LAPTOP-701EDAA0 ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
