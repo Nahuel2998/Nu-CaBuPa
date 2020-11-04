@@ -1971,6 +1971,117 @@
   <data name="&gt;&gt;TabPage3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="TableLayoutPanel26.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ChartProg.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ChartProg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 36</value>
+  </data>
+  <data name="ChartProg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 293</value>
+  </data>
+  <data name="ChartProg.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ChartProg.Text" xml:space="preserve">
+    <value>Chart1</value>
+  </data>
+  <data name="&gt;&gt;ChartProg.Name" xml:space="preserve">
+    <value>ChartProg</value>
+  </data>
+  <data name="&gt;&gt;ChartProg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;ChartProg.Parent" xml:space="preserve">
+    <value>TableLayoutPanel26</value>
+  </data>
+  <data name="&gt;&gt;ChartProg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dtpYearCuota.CustomFormat" xml:space="preserve">
+    <value>yyyy</value>
+  </data>
+  <data name="dtpYearCuota.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="dtpYearCuota.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 3</value>
+  </data>
+  <data name="dtpYearCuota.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 27</value>
+  </data>
+  <data name="dtpYearCuota.TabIndex" type="System.Int32, mscorlib">
+    <value>28876928</value>
+  </data>
+  <data name="&gt;&gt;dtpYearCuota.Name" xml:space="preserve">
+    <value>dtpYearCuota</value>
+  </data>
+  <data name="&gt;&gt;dtpYearCuota.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpYearCuota.Parent" xml:space="preserve">
+    <value>TableLayoutPanel26</value>
+  </data>
+  <data name="&gt;&gt;dtpYearCuota.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TableLayoutPanel26.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TableLayoutPanel26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TableLayoutPanel26.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TableLayoutPanel26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>570, 332</value>
+  </data>
+  <data name="TableLayoutPanel26.TabIndex" type="System.Int32, mscorlib">
+    <value>28876929</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel26.Name" xml:space="preserve">
+    <value>TableLayoutPanel26</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel26.Parent" xml:space="preserve">
+    <value>tbCuotaProg</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel26.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TableLayoutPanel26.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ChartProg" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dtpYearCuota" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="tbCuotaProg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 27</value>
+  </data>
+  <data name="tbCuotaProg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>570, 332</value>
+  </data>
+  <data name="tbCuotaProg.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tbCuotaProg.Text" xml:space="preserve">
+    <value>Ganancias mensuales</value>
+  </data>
+  <data name="&gt;&gt;tbCuotaProg.Name" xml:space="preserve">
+    <value>tbCuotaProg</value>
+  </data>
+  <data name="&gt;&gt;tbCuotaProg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbCuotaProg.Parent" xml:space="preserve">
+    <value>tProgramas</value>
+  </data>
+  <data name="&gt;&gt;tbCuotaProg.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="tProgramas.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -4372,13 +4483,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnBorrarPubliB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>483, 2</value>
+    <value>471, 2</value>
   </data>
   <data name="btnBorrarPubliB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 2, 4, 2</value>
   </data>
   <data name="btnBorrarPubliB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 46</value>
+    <value>85, 46</value>
   </data>
   <data name="btnBorrarPubliB.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -4405,13 +4516,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnIngresarPubliB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>198, 2</value>
+    <value>193, 2</value>
   </data>
   <data name="btnIngresarPubliB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="btnIngresarPubliB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 46</value>
+    <value>117, 46</value>
   </data>
   <data name="btnIngresarPubliB.TabIndex" type="System.Int32, mscorlib">
     <value>12394295</value>
@@ -4453,7 +4564,7 @@
     <value>112, 10</value>
   </data>
   <data name="btnBuscarPubliB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 46</value>
+    <value>151, 46</value>
   </data>
   <data name="btnBuscarPubliB.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4477,13 +4588,13 @@
     <value>Fill</value>
   </data>
   <data name="Panel21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 2</value>
+    <value>314, 2</value>
   </data>
   <data name="Panel21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="Panel21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 46</value>
+    <value>151, 46</value>
   </data>
   <data name="Panel21.TabIndex" type="System.Int32, mscorlib">
     <value>12394296</value>
@@ -4552,7 +4663,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="Panel22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 46</value>
+    <value>109, 46</value>
   </data>
   <data name="Panel22.TabIndex" type="System.Int32, mscorlib">
     <value>12394297</value>
@@ -4576,13 +4687,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnTanda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 2</value>
+    <value>115, 2</value>
   </data>
   <data name="btnTanda.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="btnTanda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 46</value>
+    <value>74, 46</value>
   </data>
   <data name="btnTanda.TabIndex" type="System.Int32, mscorlib">
     <value>12394298</value>
@@ -4603,7 +4714,7 @@
     <value>4</value>
   </data>
   <data name="TableLayoutPanel15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 311</value>
+    <value>2, 274</value>
   </data>
   <data name="TableLayoutPanel15.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -4612,7 +4723,7 @@
     <value>1</value>
   </data>
   <data name="TableLayoutPanel15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>574, 50</value>
+    <value>560, 50</value>
   </data>
   <data name="TableLayoutPanel15.TabIndex" type="System.Int32, mscorlib">
     <value>2342326</value>
@@ -4678,7 +4789,7 @@
     <value>62</value>
   </data>
   <data name="dgvPubliB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>559, 118</value>
+    <value>545, 81</value>
   </data>
   <data name="dgvPubliB.TabIndex" type="System.Int32, mscorlib">
     <value>2342325</value>
@@ -4711,7 +4822,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>570, 144</value>
+    <value>556, 107</value>
   </data>
   <data name="GroupBox11.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4756,7 +4867,7 @@
     <value>NoControl</value>
   </data>
   <data name="cbPubli.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 8</value>
+    <value>424, 8</value>
   </data>
   <data name="cbPubli.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -4792,7 +4903,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="ctpPubli.Size" type="System.Drawing.Size, System.Drawing">
-    <value>429, 27</value>
+    <value>415, 27</value>
   </data>
   <data name="ctpPubli.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4816,7 +4927,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Panel24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>464, 32</value>
+    <value>450, 32</value>
   </data>
   <data name="Panel24.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -4978,7 +5089,7 @@
     <value>False</value>
   </data>
   <data name="txtNombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>454, 24</value>
+    <value>440, 24</value>
   </data>
   <data name="txtNombre.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -5005,7 +5116,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Panel23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>464, 32</value>
+    <value>450, 32</value>
   </data>
   <data name="Panel23.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -5041,7 +5152,7 @@
     <value>False</value>
   </data>
   <data name="txtEmpresa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>454, 25</value>
+    <value>440, 25</value>
   </data>
   <data name="txtEmpresa.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -5068,7 +5179,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Panel25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>464, 33</value>
+    <value>450, 33</value>
   </data>
   <data name="Panel25.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -5095,7 +5206,7 @@
     <value>3</value>
   </data>
   <data name="TableLayoutPanel16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>555, 121</value>
+    <value>541, 121</value>
   </data>
   <data name="TableLayoutPanel16.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -5131,7 +5242,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>570, 149</value>
+    <value>556, 149</value>
   </data>
   <data name="GroupBox12.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -5158,7 +5269,7 @@
     <value>Mongolian Baiti, 10.2pt</value>
   </data>
   <data name="TableLayoutPanel14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
+    <value>3, 3</value>
   </data>
   <data name="TableLayoutPanel14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -5167,7 +5278,7 @@
     <value>3</value>
   </data>
   <data name="TableLayoutPanel14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>578, 363</value>
+    <value>564, 326</value>
   </data>
   <data name="TableLayoutPanel14.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -5179,13 +5290,178 @@
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TableLayoutPanel14.Parent" xml:space="preserve">
-    <value>tbPublicidad</value>
+    <value>TabPage4</value>
   </data>
   <data name="&gt;&gt;TableLayoutPanel14.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="TableLayoutPanel14.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="TableLayoutPanel15" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GroupBox11" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GroupBox12" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,Percent,100,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="TabPage4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 27</value>
+  </data>
+  <data name="TabPage4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="TabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>570, 332</value>
+  </data>
+  <data name="TabPage4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TabPage4.Text" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="&gt;&gt;TabPage4.Name" xml:space="preserve">
+    <value>TabPage4</value>
+  </data>
+  <data name="&gt;&gt;TabPage4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage4.Parent" xml:space="preserve">
+    <value>tcPubli</value>
+  </data>
+  <data name="&gt;&gt;TabPage4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TableLayoutPanel27.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ChartPubli.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ChartPubli.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 36</value>
+  </data>
+  <data name="ChartPubli.Size" type="System.Drawing.Size, System.Drawing">
+    <value>558, 287</value>
+  </data>
+  <data name="ChartPubli.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ChartPubli.Text" xml:space="preserve">
+    <value>Chart1</value>
+  </data>
+  <data name="&gt;&gt;ChartPubli.Name" xml:space="preserve">
+    <value>ChartPubli</value>
+  </data>
+  <data name="&gt;&gt;ChartPubli.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;ChartPubli.Parent" xml:space="preserve">
+    <value>TableLayoutPanel27</value>
+  </data>
+  <data name="&gt;&gt;ChartPubli.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dtpGra.CustomFormat" xml:space="preserve">
+    <value>yyyy</value>
+  </data>
+  <data name="dtpGra.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="dtpGra.Location" type="System.Drawing.Point, System.Drawing">
+    <value>472, 3</value>
+  </data>
+  <data name="dtpGra.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 27</value>
+  </data>
+  <data name="dtpGra.TabIndex" type="System.Int32, mscorlib">
+    <value>28876928</value>
+  </data>
+  <data name="&gt;&gt;dtpGra.Name" xml:space="preserve">
+    <value>dtpGra</value>
+  </data>
+  <data name="&gt;&gt;dtpGra.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpGra.Parent" xml:space="preserve">
+    <value>TableLayoutPanel27</value>
+  </data>
+  <data name="&gt;&gt;dtpGra.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TableLayoutPanel27.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TableLayoutPanel27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="TableLayoutPanel27.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TableLayoutPanel27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 326</value>
+  </data>
+  <data name="TableLayoutPanel27.TabIndex" type="System.Int32, mscorlib">
+    <value>28876930</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel27.Name" xml:space="preserve">
+    <value>TableLayoutPanel27</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel27.Parent" xml:space="preserve">
+    <value>TabPage5</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel27.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TableLayoutPanel27.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ChartPubli" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dtpGra" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="TabPage5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 27</value>
+  </data>
+  <data name="TabPage5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="TabPage5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>570, 332</value>
+  </data>
+  <data name="TabPage5.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabPage5.Text" xml:space="preserve">
+    <value>Ganancias</value>
+  </data>
+  <data name="&gt;&gt;TabPage5.Name" xml:space="preserve">
+    <value>TabPage5</value>
+  </data>
+  <data name="&gt;&gt;TabPage5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage5.Parent" xml:space="preserve">
+    <value>tcPubli</value>
+  </data>
+  <data name="&gt;&gt;TabPage5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tcPubli.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tcPubli.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="tcPubli.Size" type="System.Drawing.Size, System.Drawing">
+    <value>578, 363</value>
+  </data>
+  <data name="tcPubli.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tcPubli.Name" xml:space="preserve">
+    <value>tcPubli</value>
+  </data>
+  <data name="&gt;&gt;tcPubli.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tcPubli.Parent" xml:space="preserve">
+    <value>tbPublicidad</value>
+  </data>
+  <data name="&gt;&gt;tcPubli.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="tbPublicidad.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 27</value>

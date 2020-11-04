@@ -339,7 +339,7 @@ CREATE TABLE `programacuota` (
   `ID_Programa_Cuota` int(6) unsigned NOT NULL AUTO_INCREMENT,
   `ID_Programa` int(6) unsigned NOT NULL,
   `Fecha_Pago` date DEFAULT NULL,
-  `Precio` decimal(5,2) unsigned NOT NULL,
+  precio decimal(7,2) unsigned not null,
   `Fecha_Emision` date NOT NULL,
   PRIMARY KEY (`ID_Programa_Cuota`),
   KEY `ID_Programa` (`ID_Programa`)
@@ -393,7 +393,7 @@ DROP TABLE IF EXISTS `publicidadcuota`;
 CREATE TABLE `publicidadcuota` (
   `ID_PublicidadCuota` int(6) unsigned NOT NULL AUTO_INCREMENT,
   `Fecha_Pago` date DEFAULT NULL,
-  `Precio` decimal(5,2) unsigned NOT NULL,
+  precio decimal(7,2) unsigned not null,
   `ID_Publicidad` int(6) unsigned NOT NULL,
   `Fecha_Emision` date NOT NULL,
   PRIMARY KEY (`ID_PublicidadCuota`),
@@ -533,7 +533,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'d',_binary 'å∞ê6µ\œ\Ì¶#\˜B˝O†9');
+INSERT INTO `usuarios` VALUES (1,'d',_binary '¬å¬∞¬ê6¬µ\√è\√≠¬¶#\√∑B√ΩO¬†9');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 

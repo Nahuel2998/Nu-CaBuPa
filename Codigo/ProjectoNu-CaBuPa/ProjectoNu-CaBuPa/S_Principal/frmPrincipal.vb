@@ -40,6 +40,9 @@ Public Class frmPrincipal
         If Not (PoseePermiso("Programa")) Then
             tcSecciones.TabPages.RemoveByKey("tbMenu")
         Else
+            If Not (PoseePermiso("Programa", "a")) Then
+                tcPubli.TabPages.RemoveAt(2)
+            End If
             If Not (PoseePermiso("Serie")) Then
                 tcSecciones.TabPages.RemoveByKey("tbSeries")
             End If
@@ -52,8 +55,13 @@ Public Class frmPrincipal
         End If
         If Not (PoseePermiso("Publicidad")) Then
             tcSecciones.TabPages.RemoveByKey("tbPublicidad")
+        Else
+            If Not (PoseePermiso("Publicidad", "a")) Then
+                tcPubli.TabPages.RemoveAt(1)
+            End If
+
         End If
-        If Not (PoseePermiso("Funcionario")) Then
+            If Not (PoseePermiso("Funcionario")) Then
             tcSecciones.TabPages.RemoveByKey("tbFuncionario")
         End If
         If Not (PoseePermiso("Evento")) Then
@@ -290,9 +298,25 @@ Public Class frmPrincipal
             Case EVENTO
                 dt_BEvento = TBusca
                 ActualizarTablaC(dt_BEvento, dgvBEvento)
+            Case CUOTA
+                dt_BEvento = TBusca
+                ActualizarTablaC(dt_BEvento, dgvBEvento)
+            Case GRAPROGRAMA
+                dt_GraPrograma = TBusca
+                ActualizarGraficos(dt_GraPrograma, ChartProg, "Ganancias")
         End Select
         TBusca = Nothing
         TBuscada = 0
+    End Sub
+    Private Sub BuscarGraPRog(ByVal buscada As Byte)
+        TBuscada = buscada
+        Dim Condicion As String = String.Format("year(fecha_pago)='{0}' and fecha_pago is not null group by 1", Year(If(buscada = GRAPROGRAMA, dtpYearCuota.Value, dtpGra.Value)))
+        Dim Columna As String = "month(fecha_pago) as Fecha, sum(precio) as 'Valor'"
+        Dim Tablas As String = If(buscada = GRAPROGRAMA, "programacuota", "publicidadcuota")
+        If Not (BWBuscador.IsBusy) Then
+            BWBuscador.RunWorkerAsync(PSQL(Columna, Tablas, Condicion))
+            ModLog.Guardar(PSQL(Columna, Tablas, Condicion))
+        End If
     End Sub
 
     Private Sub DgvVB_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVB.CellDoubleClick
@@ -773,6 +797,8 @@ Public Class frmPrincipal
             If Not BWProgramas.IsBusy Then
                 BWProgramas.RunWorkerAsync()
             End If
+        ElseIf (tProgramas.SelectedIndex = 2) Then
+            BuscarGraPRog(GRAPROGRAMA)
         End If
     End Sub
 
@@ -795,6 +821,20 @@ Public Class frmPrincipal
     Private Sub cbTodTand_CheckedChanged(sender As Object, e As EventArgs) Handles cbTodTand.CheckedChanged
         If Not BWTandas.IsBusy Then
             BWTandas.RunWorkerAsync()
+        End If
+    End Sub
+
+    Private Sub dtpYearCuota_ValueChanged(sender As Object, e As EventArgs) Handles dtpYearCuota.ValueChanged
+        BuscarGraPRog(GRAPROGRAMA)
+    End Sub
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles dtpGra.ValueChanged
+        BuscarGraPRog(GRAPUBLI)
+    End Sub
+
+    Private Sub tcPubli_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcPubli.SelectedIndexChanged
+        If (tcPubli.SelectedIndex = 0) Then
+            BuscarGraPRog(GRAPUBLI)
         End If
     End Sub
 End Class

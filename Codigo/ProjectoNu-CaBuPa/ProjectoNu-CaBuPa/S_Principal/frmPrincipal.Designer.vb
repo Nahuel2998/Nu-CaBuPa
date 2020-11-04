@@ -52,6 +52,21 @@ Partial Class frmPrincipal
         Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint1 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint2 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint3 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint4 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint5 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint6 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint7 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint8 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint9 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint10 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint11 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint12 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
         Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -68,6 +83,21 @@ Partial Class frmPrincipal
         Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint13 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint14 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint15 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint16 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint17 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint18 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint19 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint20 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint21 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint22 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint23 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint24 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
         Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -94,6 +124,8 @@ Partial Class frmPrincipal
         Me.gbTandas = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.cbTodTand = New System.Windows.Forms.CheckBox()
+        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPublicidades = New System.Windows.Forms.DataGridView()
         Me.PDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -107,6 +139,7 @@ Partial Class frmPrincipal
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.dgvPrograma = New System.Windows.Forms.DataGridView()
         Me.Inicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Final = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -146,6 +179,10 @@ Partial Class frmPrincipal
         Me.txtNombreBP = New System.Windows.Forms.RichTextBox()
         Me.Panel20 = New System.Windows.Forms.Panel()
         Me.txtDescripcionBP = New System.Windows.Forms.RichTextBox()
+        Me.tbCuotaProg = New System.Windows.Forms.TabPage()
+        Me.TableLayoutPanel26 = New System.Windows.Forms.TableLayoutPanel()
+        Me.ChartProg = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.dtpYearCuota = New System.Windows.Forms.DateTimePicker()
         Me.tbSeries = New System.Windows.Forms.TabPage()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -170,6 +207,7 @@ Partial Class frmPrincipal
         Me.txtBSnombre = New System.Windows.Forms.RichTextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.cbS = New System.Windows.Forms.CheckBox()
+        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.tbVideo = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -223,6 +261,8 @@ Partial Class frmPrincipal
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.txtCMail = New System.Windows.Forms.RichTextBox()
         Me.tbPublicidad = New System.Windows.Forms.TabPage()
+        Me.tcPubli = New System.Windows.Forms.TabControl()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel14 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel15 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnBorrarPubliB = New System.Windows.Forms.Button()
@@ -241,6 +281,7 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel24 = New System.Windows.Forms.Panel()
         Me.cbPubli = New System.Windows.Forms.CheckBox()
+        Me.ctpPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -248,6 +289,10 @@ Partial Class frmPrincipal
         Me.txtNombre = New System.Windows.Forms.RichTextBox()
         Me.Panel25 = New System.Windows.Forms.Panel()
         Me.txtEmpresa = New System.Windows.Forms.RichTextBox()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.TableLayoutPanel27 = New System.Windows.Forms.TableLayoutPanel()
+        Me.ChartPubli = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.dtpGra = New System.Windows.Forms.DateTimePicker()
         Me.tbFuncionario = New System.Windows.Forms.TabPage()
         Me.TabControl3 = New System.Windows.Forms.TabControl()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
@@ -331,11 +376,6 @@ Partial Class frmPrincipal
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
         Me.RecPA = New System.Windows.Forms.Timer(Me.components)
         Me.RecTan = New System.Windows.Forms.Timer(Me.components)
-        Me.dtpTanda = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.ctpPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.cbTodTand = New System.Windows.Forms.CheckBox()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -374,6 +414,9 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel13.SuspendLayout()
         Me.Panel19.SuspendLayout()
         Me.Panel20.SuspendLayout()
+        Me.tbCuotaProg.SuspendLayout()
+        Me.TableLayoutPanel26.SuspendLayout()
+        CType(Me.ChartProg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbSeries.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -411,6 +454,8 @@ Partial Class frmPrincipal
         Me.Panel13.SuspendLayout()
         Me.Panel14.SuspendLayout()
         Me.tbPublicidad.SuspendLayout()
+        Me.tcPubli.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.TableLayoutPanel14.SuspendLayout()
         Me.TableLayoutPanel15.SuspendLayout()
         Me.Panel21.SuspendLayout()
@@ -422,6 +467,9 @@ Partial Class frmPrincipal
         Me.Panel24.SuspendLayout()
         Me.Panel23.SuspendLayout()
         Me.Panel25.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
+        Me.TableLayoutPanel27.SuspendLayout()
+        CType(Me.ChartPubli, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbFuncionario.SuspendLayout()
         Me.TabControl3.SuspendLayout()
         Me.TabPage6.SuspendLayout()
@@ -602,6 +650,18 @@ Partial Class frmPrincipal
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
         '
+        'cbTodTand
+        '
+        resources.ApplyResources(Me.cbTodTand, "cbTodTand")
+        Me.cbTodTand.Name = "cbTodTand"
+        Me.cbTodTand.UseVisualStyleBackColor = True
+        '
+        'dtpTanda
+        '
+        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
+        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTanda.Name = "dtpTanda"
+        '
         'dgvPublicidades
         '
         Me.dgvPublicidades.AllowUserToAddRows = False
@@ -749,6 +809,7 @@ Partial Class frmPrincipal
         '
         Me.tProgramas.Controls.Add(Me.TabPage2)
         Me.tProgramas.Controls.Add(Me.TabPage3)
+        Me.tProgramas.Controls.Add(Me.tbCuotaProg)
         resources.ApplyResources(Me.tProgramas, "tProgramas")
         Me.tProgramas.Name = "tProgramas"
         Me.tProgramas.SelectedIndex = 0
@@ -774,6 +835,11 @@ Partial Class frmPrincipal
         Me.GroupBox1.Controls.Add(Me.dgvPrograma)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
+        '
+        'dtp
+        '
+        resources.ApplyResources(Me.dtp, "dtp")
+        Me.dtp.Name = "dtp"
         '
         'dgvPrograma
         '
@@ -1205,6 +1271,58 @@ Partial Class frmPrincipal
         Me.txtDescripcionBP.ForeColor = System.Drawing.Color.White
         Me.txtDescripcionBP.Name = "txtDescripcionBP"
         '
+        'tbCuotaProg
+        '
+        Me.tbCuotaProg.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.tbCuotaProg.Controls.Add(Me.TableLayoutPanel26)
+        resources.ApplyResources(Me.tbCuotaProg, "tbCuotaProg")
+        Me.tbCuotaProg.Name = "tbCuotaProg"
+        '
+        'TableLayoutPanel26
+        '
+        resources.ApplyResources(Me.TableLayoutPanel26, "TableLayoutPanel26")
+        Me.TableLayoutPanel26.Controls.Add(Me.ChartProg, 0, 1)
+        Me.TableLayoutPanel26.Controls.Add(Me.dtpYearCuota, 0, 0)
+        Me.TableLayoutPanel26.Name = "TableLayoutPanel26"
+        '
+        'ChartProg
+        '
+        Me.ChartProg.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        ChartArea1.Name = "ChartArea1"
+        Me.ChartProg.ChartAreas.Add(ChartArea1)
+        resources.ApplyResources(Me.ChartProg, "ChartProg")
+        Legend1.Name = "Legend1"
+        Me.ChartProg.Legends.Add(Legend1)
+        Me.ChartProg.Name = "ChartProg"
+        Me.ChartProg.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea
+        Series1.IsValueShownAsLabel = True
+        Series1.Legend = "Legend1"
+        Series1.Name = "Ganancias"
+        Series1.Points.Add(DataPoint1)
+        Series1.Points.Add(DataPoint2)
+        Series1.Points.Add(DataPoint3)
+        Series1.Points.Add(DataPoint4)
+        Series1.Points.Add(DataPoint5)
+        Series1.Points.Add(DataPoint6)
+        Series1.Points.Add(DataPoint7)
+        Series1.Points.Add(DataPoint8)
+        Series1.Points.Add(DataPoint9)
+        Series1.Points.Add(DataPoint10)
+        Series1.Points.Add(DataPoint11)
+        Series1.Points.Add(DataPoint12)
+        Series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.[String]
+        Series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32
+        Me.ChartProg.Series.Add(Series1)
+        '
+        'dtpYearCuota
+        '
+        resources.ApplyResources(Me.dtpYearCuota, "dtpYearCuota")
+        Me.dtpYearCuota.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpYearCuota.Name = "dtpYearCuota"
+        Me.dtpYearCuota.ShowUpDown = True
+        '
         'tbSeries
         '
         Me.tbSeries.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -1419,6 +1537,11 @@ Partial Class frmPrincipal
         resources.ApplyResources(Me.cbS, "cbS")
         Me.cbS.Name = "cbS"
         Me.cbS.UseVisualStyleBackColor = True
+        '
+        'ctpSerie
+        '
+        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
+        Me.ctpSerie.Name = "ctpSerie"
         '
         'tbVideo
         '
@@ -1871,9 +1994,24 @@ Partial Class frmPrincipal
         'tbPublicidad
         '
         Me.tbPublicidad.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.tbPublicidad.Controls.Add(Me.TableLayoutPanel14)
+        Me.tbPublicidad.Controls.Add(Me.tcPubli)
         resources.ApplyResources(Me.tbPublicidad, "tbPublicidad")
         Me.tbPublicidad.Name = "tbPublicidad"
+        '
+        'tcPubli
+        '
+        Me.tcPubli.Controls.Add(Me.TabPage4)
+        Me.tcPubli.Controls.Add(Me.TabPage5)
+        resources.ApplyResources(Me.tcPubli, "tcPubli")
+        Me.tcPubli.Name = "tcPubli"
+        Me.tcPubli.SelectedIndex = 0
+        '
+        'TabPage4
+        '
+        Me.TabPage4.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.TabPage4.Controls.Add(Me.TableLayoutPanel14)
+        resources.ApplyResources(Me.TabPage4, "TabPage4")
+        Me.TabPage4.Name = "TabPage4"
         '
         'TableLayoutPanel14
         '
@@ -2050,6 +2188,11 @@ Partial Class frmPrincipal
         Me.cbPubli.Name = "cbPubli"
         Me.cbPubli.UseVisualStyleBackColor = True
         '
+        'ctpPubli
+        '
+        resources.ApplyResources(Me.ctpPubli, "ctpPubli")
+        Me.ctpPubli.Name = "ctpPubli"
+        '
         'Label11
         '
         resources.ApplyResources(Me.Label11, "Label11")
@@ -2095,6 +2238,58 @@ Partial Class frmPrincipal
         Me.txtEmpresa.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtEmpresa.ForeColor = System.Drawing.Color.White
         Me.txtEmpresa.Name = "txtEmpresa"
+        '
+        'TabPage5
+        '
+        Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.TabPage5.Controls.Add(Me.TableLayoutPanel27)
+        resources.ApplyResources(Me.TabPage5, "TabPage5")
+        Me.TabPage5.Name = "TabPage5"
+        '
+        'TableLayoutPanel27
+        '
+        resources.ApplyResources(Me.TableLayoutPanel27, "TableLayoutPanel27")
+        Me.TableLayoutPanel27.Controls.Add(Me.ChartPubli, 0, 1)
+        Me.TableLayoutPanel27.Controls.Add(Me.dtpGra, 0, 0)
+        Me.TableLayoutPanel27.Name = "TableLayoutPanel27"
+        '
+        'ChartPubli
+        '
+        Me.ChartPubli.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        ChartArea2.Name = "ChartArea1"
+        Me.ChartPubli.ChartAreas.Add(ChartArea2)
+        resources.ApplyResources(Me.ChartPubli, "ChartPubli")
+        Legend2.Name = "Legend1"
+        Me.ChartPubli.Legends.Add(Legend2)
+        Me.ChartPubli.Name = "ChartPubli"
+        Me.ChartPubli.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea
+        Series2.IsValueShownAsLabel = True
+        Series2.Legend = "Legend1"
+        Series2.Name = "Ganancias"
+        Series2.Points.Add(DataPoint13)
+        Series2.Points.Add(DataPoint14)
+        Series2.Points.Add(DataPoint15)
+        Series2.Points.Add(DataPoint16)
+        Series2.Points.Add(DataPoint17)
+        Series2.Points.Add(DataPoint18)
+        Series2.Points.Add(DataPoint19)
+        Series2.Points.Add(DataPoint20)
+        Series2.Points.Add(DataPoint21)
+        Series2.Points.Add(DataPoint22)
+        Series2.Points.Add(DataPoint23)
+        Series2.Points.Add(DataPoint24)
+        Series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.[String]
+        Series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32
+        Me.ChartPubli.Series.Add(Series2)
+        '
+        'dtpGra
+        '
+        resources.ApplyResources(Me.dtpGra, "dtpGra")
+        Me.dtpGra.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpGra.Name = "dtpGra"
+        Me.dtpGra.ShowUpDown = True
         '
         'tbFuncionario
         '
@@ -2785,33 +2980,6 @@ Partial Class frmPrincipal
         'RecTan
         '
         '
-        'dtpTanda
-        '
-        resources.ApplyResources(Me.dtpTanda, "dtpTanda")
-        Me.dtpTanda.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTanda.Name = "dtpTanda"
-        '
-        'dtp
-        '
-        resources.ApplyResources(Me.dtp, "dtp")
-        Me.dtp.Name = "dtp"
-        '
-        'ctpSerie
-        '
-        resources.ApplyResources(Me.ctpSerie, "ctpSerie")
-        Me.ctpSerie.Name = "ctpSerie"
-        '
-        'ctpPubli
-        '
-        resources.ApplyResources(Me.ctpPubli, "ctpPubli")
-        Me.ctpPubli.Name = "ctpPubli"
-        '
-        'cbTodTand
-        '
-        resources.ApplyResources(Me.cbTodTand, "cbTodTand")
-        Me.cbTodTand.Name = "cbTodTand"
-        Me.cbTodTand.UseVisualStyleBackColor = True
-        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -2863,6 +3031,9 @@ Partial Class frmPrincipal
         Me.TableLayoutPanel13.PerformLayout()
         Me.Panel19.ResumeLayout(False)
         Me.Panel20.ResumeLayout(False)
+        Me.tbCuotaProg.ResumeLayout(False)
+        Me.TableLayoutPanel26.ResumeLayout(False)
+        CType(Me.ChartProg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbSeries.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
@@ -2906,6 +3077,8 @@ Partial Class frmPrincipal
         Me.Panel13.ResumeLayout(False)
         Me.Panel14.ResumeLayout(False)
         Me.tbPublicidad.ResumeLayout(False)
+        Me.tcPubli.ResumeLayout(False)
+        Me.TabPage4.ResumeLayout(False)
         Me.TableLayoutPanel14.ResumeLayout(False)
         Me.TableLayoutPanel15.ResumeLayout(False)
         Me.Panel21.ResumeLayout(False)
@@ -2919,6 +3092,9 @@ Partial Class frmPrincipal
         Me.Panel24.PerformLayout()
         Me.Panel23.ResumeLayout(False)
         Me.Panel25.ResumeLayout(False)
+        Me.TabPage5.ResumeLayout(False)
+        Me.TableLayoutPanel27.ResumeLayout(False)
+        CType(Me.ChartPubli, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbFuncionario.ResumeLayout(False)
         Me.TabControl3.ResumeLayout(False)
         Me.TabPage6.ResumeLayout(False)
@@ -3220,4 +3396,14 @@ Partial Class frmPrincipal
     Friend WithEvents DataGridViewCheckBoxColumn4 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents cbTodTand As CheckBox
+    Friend WithEvents tbCuotaProg As TabPage
+    Friend WithEvents ChartProg As DataVisualization.Charting.Chart
+    Friend WithEvents dtpYearCuota As DateTimePicker
+    Friend WithEvents TableLayoutPanel26 As TableLayoutPanel
+    Friend WithEvents tcPubli As TabControl
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents TableLayoutPanel27 As TableLayoutPanel
+    Friend WithEvents ChartPubli As DataVisualization.Charting.Chart
+    Friend WithEvents dtpGra As DateTimePicker
 End Class

@@ -1,4 +1,5 @@
-﻿Imports System.Text.RegularExpressions
+﻿Imports System.Globalization
+Imports System.Text.RegularExpressions
 Imports System.Windows.Forms.DataVisualization.Charting
 
 Module ModTablas
@@ -36,6 +37,40 @@ Module ModTablas
     Public Const EVENTO As Byte = 14
     Public Const TRABAJACOMO As Byte = 15
     Public Const PUBLICIDADEVENTO As Byte = 16
+    Public Const GRAPROGRAMA As Byte = 17
+    Public Const GRAPUBLI As Byte = 18
+
+    Public Function MonthName(ByVal mes As Byte) As String
+        Dim dtinfo As DateTimeFormatInfo = New CultureInfo("es-ES", False).DateTimeFormat
+        Return dtinfo.GetMonthName(mes)
+    End Function
+    Public Sub ActualizarGraficos(ByVal dt As DataTable, ByRef Gra As Chart, ByVal nom As String)
+        Gra.Series(0).Name = nom
+        Gra.ChartAreas(0).AxisX.Interval = 1
+        Gra.ChartAreas(0).AxisX.IntervalAutoMode = False
+        Gra.Series(nom).Points.Clear()
+        If Not (IsNothing(dt)) Then
+            Dim j As Byte = 0
+            For i As Byte = 1 To 12
+                If (dt.Rows(j).Item(0) = i) Then
+                    Gra.Series(nom).Points.AddXY(MonthName(i), dt.Rows(j).Item(1))
+                    ModLog.Guardar("")
+                    If (dt.Rows.Count < j) Then
+                        j += 1
+                    End If
+                Else
+                    Gra.Series(nom).Points.AddXY(MonthName(i), 0)
+                End If
+            Next
+            ModLog.Guardar("Llegué4")
+        Else
+            For i As Byte = 1 To 12
+                Gra.Series(nom).Points.AddXY(MonthName(i), 0)
+            Next
+
+            ModLog.Guardar("Llegué5")
+        End If
+    End Sub
 
     Public Function ValidarEmail(ByVal s As String) As Boolean
         Return Regex.IsMatch(s, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
