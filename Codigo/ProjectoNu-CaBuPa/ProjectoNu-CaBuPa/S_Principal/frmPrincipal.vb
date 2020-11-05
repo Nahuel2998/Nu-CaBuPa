@@ -696,11 +696,11 @@ Public Class frmPrincipal
     Private Sub btnBuscarE_Click(sender As Object, e As EventArgs) Handles btnBuscarE.Click
         TBuscada = EVENTO
         Dim condicion As String = "true"        ' FIXME: Al poner limit 50 no sirve buscar solo por fecha. Asi que lo he quitado por ahora.
-        If Not String.IsNullOrWhiteSpace(txtNombreBP.Text) Then
-            condicion = String.Format("nombre like '%{0}%'", txtNombreBP.Text)
+        If Not String.IsNullOrWhiteSpace(txtNombreE.Text) Then
+            condicion = String.Format("nombre like '%{0}%'", txtNombreE.Text)
         End If
-        If Not String.IsNullOrWhiteSpace(txtDescripcionBP.Text) Then
-            condicion += String.Format(" and descripcion like '%{0}%'", txtDescripcionBP.Text)
+        If Not String.IsNullOrWhiteSpace(txtDescripcionE.Text) Then
+            condicion += String.Format(" and descripcion like '%{0}%'", txtDescripcionE.Text)
         End If
         If Not BWBuscador.IsBusy Then
             BWBuscador.RunWorkerAsync(PSQL("ID_Evento, nombre as Nombre, descripcion as Descripcion", "evento", condicion))

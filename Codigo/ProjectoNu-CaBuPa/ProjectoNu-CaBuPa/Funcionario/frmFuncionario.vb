@@ -316,8 +316,9 @@ Public Class frmFuncionario
                                                                                                                 1,
                                                                                                         String.Format(",'{0}','{1}',", positionPrograma(cbPrograma.SelectedIndex - 1), Format(dtpFIP.Value, "yyyy-MM-dd")) + If(cbFF.Checked, String.Format("'{0}'", Format(dtpFFP.Value, "yyyy-MM-dd")), "null"), True))
                 BuscarFun()
-                dtpFFP.Value = Now
                 dtpFIP.Value = Now
+                dtpFFP.Value = Now
+
                 cbFF.Checked = False
             End If
         Else

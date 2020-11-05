@@ -601,7 +601,7 @@ Partial Class frmFuncionario
         Me.TableLayoutPanel6.ColumnCount = 3
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.0!))
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.0!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124.0!))
         Me.TableLayoutPanel6.Controls.Add(Me.txtDescripcionBFF, 1, 1)
         Me.TableLayoutPanel6.Controls.Add(Me.btnBuscar, 2, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.Label4, 0, 0)
@@ -622,7 +622,7 @@ Partial Class frmFuncionario
         Me.txtDescripcionBFF.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtDescripcionBFF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtDescripcionBFF.ForeColor = System.Drawing.Color.White
-        Me.txtDescripcionBFF.Location = New System.Drawing.Point(102, 37)
+        Me.txtDescripcionBFF.Location = New System.Drawing.Point(101, 37)
         Me.txtDescripcionBFF.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescripcionBFF.Name = "txtDescripcionBFF"
         Me.txtDescripcionBFF.Size = New System.Drawing.Size(438, 22)
@@ -634,11 +634,11 @@ Partial Class frmFuncionario
         Me.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBuscar.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.Black
-        Me.btnBuscar.Location = New System.Drawing.Point(548, 4)
+        Me.btnBuscar.Location = New System.Drawing.Point(547, 4)
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.TableLayoutPanel6.SetRowSpan(Me.btnBuscar, 2)
-        Me.btnBuscar.Size = New System.Drawing.Size(116, 58)
+        Me.btnBuscar.Size = New System.Drawing.Size(117, 58)
         Me.btnBuscar.TabIndex = 0
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -651,7 +651,7 @@ Partial Class frmFuncionario
         Me.Label4.Location = New System.Drawing.Point(4, 0)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(90, 33)
+        Me.Label4.Size = New System.Drawing.Size(89, 33)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Nombre:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -664,7 +664,7 @@ Partial Class frmFuncionario
         Me.Label5.Location = New System.Drawing.Point(4, 33)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(90, 33)
+        Me.Label5.Size = New System.Drawing.Size(89, 33)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Descripcion:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -674,7 +674,7 @@ Partial Class frmFuncionario
         Me.txtNombreBFF.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtNombreBFF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtNombreBFF.ForeColor = System.Drawing.Color.White
-        Me.txtNombreBFF.Location = New System.Drawing.Point(102, 4)
+        Me.txtNombreBFF.Location = New System.Drawing.Point(101, 4)
         Me.txtNombreBFF.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombreBFF.Name = "txtNombreBFF"
         Me.txtNombreBFF.Size = New System.Drawing.Size(438, 22)
