@@ -708,7 +708,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnBEvento_Click(sender As Object, e As EventArgs) Handles btnBEvento.Click
-        BorrarConfirmar(Me, dt_BEvento, dgvBEvento, EVENTO, btnBEvento)
+        BorrarConfirmar(Me, dt_BEvento, dgvBEvento, EVENTO, btnBuscarE)
     End Sub
 
     Private Sub btnIngresarE_Click(sender As Object, e As EventArgs) Handles btnIngresarE.Click
@@ -819,8 +819,8 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub cbTodTand_CheckedChanged(sender As Object, e As EventArgs) Handles cbTodTand.CheckedChanged
-        If Not BWTandas.IsBusy Then
-            BWTandas.RunWorkerAsync()
+        If Not BWPublicidades.IsBusy Then
+            BWPublicidades.RunWorkerAsync()
         End If
     End Sub
 
