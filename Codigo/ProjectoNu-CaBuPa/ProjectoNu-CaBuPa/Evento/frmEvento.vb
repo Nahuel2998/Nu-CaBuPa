@@ -28,7 +28,7 @@ Public Class frmEvento
             tcP.TabPages.RemoveByKey("tbFechas")
             tcP.TabPages.RemoveByKey("tbPublicidad")
         End If
-        If Not PoseePermiso("Publicidad", "a") Then
+        If Not PoseePermiso("Publicid", "a") Then
             tcP.TabPages.RemoveByKey("tbPublicidad")
         End If
         If eventoID <> -1 Then

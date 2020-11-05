@@ -53,15 +53,15 @@ Public Class frmPrincipal
         If Not (PoseePermiso("Empresa")) Then
             tcSecciones.TabPages.RemoveByKey("tbEmpresa")
         End If
-        If Not (PoseePermiso("Publicidad")) Then
+        If Not (PoseePermiso("Publicid")) Then
             tcSecciones.TabPages.RemoveByKey("tbPublicidad")
         Else
-            If Not (PoseePermiso("Publicidad", "a")) Then
+            If Not (PoseePermiso("Publicid", "a")) Then
                 tcPubli.TabPages.RemoveAt(1)
             End If
 
         End If
-            If Not (PoseePermiso("Funcionario")) Then
+        If Not (PoseePermiso("Funciona")) Then
             tcSecciones.TabPages.RemoveByKey("tbFuncionario")
         End If
         If Not (PoseePermiso("Evento")) Then
@@ -300,7 +300,7 @@ Public Class frmPrincipal
                 ActualizarTablaC(dt_BEvento, dgvBEvento)
             Case GRAPUBLI
                 dt_GraPubli = TBusca
-                ActualizarGraficos(dt_GraPrograma, ChartPubli, "Ganancias")
+                ActualizarGraficos(dt_GraPubli, ChartPubli, "Ganancias")
             Case GRAPROGRAMA
                 dt_GraPrograma = TBusca
                 ActualizarGraficos(dt_GraPrograma, ChartProg, "Ganancias")
@@ -745,7 +745,7 @@ Public Class frmPrincipal
 
     Private Sub dgvPublicidades_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPublicidades.CellDoubleClick
         Dim i As Integer = CargarID(dt_publi, dgvPublicidades)
-        If (i <> -1 And i <> 0) And PoseePermiso("Publicidad") Then
+        If (i <> -1 And i <> 0) And PoseePermiso("Publicid") Then
             Dim formPubli As New frmPublicidad(i)
             AddHandler formPubli.FormClosed, AddressOf FormPubli_Close
             formPubli.ShowDialog()
@@ -808,6 +808,9 @@ Public Class frmPrincipal
                 If Not BWProgramas.IsBusy Then
                     BWProgramas.RunWorkerAsync()
                 End If
+                BuscarGraPRog(GRAPROGRAMA)
+            Case 3
+                BuscarGraPRog(GRAPUBLI)
         End Select
     End Sub
 
@@ -833,7 +836,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub tcPubli_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcPubli.SelectedIndexChanged
-        If (tcPubli.SelectedIndex = 0) Then
+        If (tcPubli.SelectedIndex = 1) Then
             BuscarGraPRog(GRAPUBLI)
         End If
     End Sub

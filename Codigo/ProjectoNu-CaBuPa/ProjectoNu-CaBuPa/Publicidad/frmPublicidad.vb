@@ -115,7 +115,7 @@ Public Class frmPublicidad
         If publicidadID <> -1 Then
             Buscar()
             btnSalir.Select()
-            If Not PoseePermiso("Publicidad", "a") Then
+            If Not PoseePermiso("Publicid", "a") Then
                 btnBorrar.Visible = False
                 btnEditar.Visible = False
                 btnBorrarC.Visible = False
@@ -470,11 +470,11 @@ Public Class frmPublicidad
     End Sub
     Private Sub btnInsertarC_Click(sender As Object, e As EventArgs) Handles btnInsertarC.Click
         If (CuotaId = -1) Then
-            ISQL("publicidadcuota", "id_publicidad,fecha_emision, fecha_pago,precio", String.Format("'{0}','{1}',{2},'{3}'", publicidadID, Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value))
+            ISQL("publicidadcuota", "id_publicidad,fecha_emision, fecha_pago,precio", String.Format("'{0}','{1}',{2},'{3}'", publicidadID, Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value.ToString.Replace(",", ".")))
             VaciarCuota()
             BuscarCuota()
         Else
-            USQL("publicidadcuota", String.Format("fecha_emision='{0}', fecha_pago={1},precio='{2}'", Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value), String.Format("id_publicidadcuota='{0}'", CuotaId))
+            USQL("publicidadcuota", String.Format("fecha_emision='{0}', fecha_pago={1},precio='{2}'", Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value.ToString.Replace(",", ".")), String.Format("id_publicidadcuota='{0}'", CuotaId))
             CuotaId = -1
             CambiarICuota()
             BuscarCuota()

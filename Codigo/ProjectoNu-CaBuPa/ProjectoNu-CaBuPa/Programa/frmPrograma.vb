@@ -394,11 +394,11 @@ Public Class frmPrograma
 
     Private Sub btnInsertarC_Click(sender As Object, e As EventArgs) Handles btnInsertarC.Click
         If (CuotaId = -1) Then
-            ISQL("programacuota", "id_programa,fecha_emision, fecha_pago,precio", String.Format("'{0}','{1}',{2},'{3}'", programaID, Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value))
+            ISQL("programacuota", "id_programa,fecha_emision, fecha_pago,precio", String.Format("'{0}','{1}',{2},'{3}'", programaID, Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value.ToString.Replace(",", ".")))
             VaciarCuota()
             BuscarCuota()
         Else
-            USQL("programacuota", String.Format("fecha_emision='{0}', fecha_pago={1},precio='{2}'", Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value), String.Format("id_programa_cuota='{0}'", CuotaId))
+            USQL("programacuota", String.Format("fecha_emision='{0}', fecha_pago={1},precio='{2}'", Format(dtpFE.Value, "yyyy-MM-dd"), If(cbP.Checked, "'" + Format(dtpFP.Value, "yyyy-MM-dd") + "'", "null"), nudValor.Value.ToString.Replace(",", ".")), String.Format("id_programa_cuota='{0}'", CuotaId))
             CuotaId = -1
             CambiarICuota()
             BuscarCuota()

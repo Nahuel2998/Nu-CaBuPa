@@ -4,7 +4,7 @@ Imports MySql.Data
 Imports System.Drawing.Text
 
 Module ModConector
-    Private Debug As Boolean = True
+    Private Debug As Boolean = False 'fixmo
     Private conn As New MySqlConnection
     Private connStr As String
     Private Address, User, Database, Port, Pass As String
@@ -169,6 +169,7 @@ Module ModConector
 
         If (parentesis) Then
             ESQL("Insert IGNORE into " + nTabla + " ( " + Column + " ) values (" + Data + " )")
+            'ModLog.Guardar("Insert IGNORE into " + nTabla + " ( " + Column + " ) values (" + Data + " )")
         Else
             ESQL("Insert IGNORE into " + nTabla + " ( " + Column + " ) values " + Data)
         End If
@@ -211,27 +212,36 @@ Module ModConector
 
     End Function
     Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String) As Boolean
+
+
+
         Try
-            objCmd = New MySqlCommand(PSQL("id_usuario", "usuarios as User", "nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256))"), conn)
-            objCmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre
-            objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = contraseña
-            objCmd.Parameters.Add("@key", MySqlDbType.VarChar).Value = ModCodificador.GKey
-            objCmd.Prepare()
-            Dim dt As DataTable = ESQLSelect(objCmd, False)
-            If Not IsNothing(dt) Then
-                If dt.Rows.Count = 0 Then
-                    MessageBox.Show("Contraseña o Usuario Incorrecto")
-                Else
-                    Usuario = nombre
-                    Password = contraseña
-                    UsuarioID = Integer.Parse(dt.Rows(0)("id_usuario"))
-                    ModPermisos.Esid(UsuarioID)
-                    CargarPermiso()
-                    Return True
+            Dim dto As DataTable = DevolverTabla(PSQL("nombre", "usuarios", "true"))
+            If Not IsNothing(dto) Then
+
+                objCmd = New MySqlCommand(PSQL("id_usuario", "usuarios as User", "nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256))"), conn)
+                objCmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre
+                objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = contraseña
+                objCmd.Parameters.Add("@key", MySqlDbType.VarChar).Value = ModCodificador.GKey
+                objCmd.Prepare()
+                Dim dt As DataTable = ESQLSelect(objCmd, False)
+                If Not IsNothing(dt) Then
+                    If dt.Rows.Count = 0 Then
+                        MessageBox.Show("Contraseña o Usuario Incorrecto")
+                    Else
+                        Usuario = nombre
+                        Password = contraseña
+                        UsuarioID = Integer.Parse(dt.Rows(0)("id_usuario"))
+                        ModPermisos.Esid(UsuarioID)
+                        CargarPermiso()
+                        Return True
+                    End If
                 End If
+            Else
+                Return True
             End If
         Catch e As Exception
-            MessageBox.Show(e.ToString)
+            MessageBox.Show("Error")
         End Try
 
         Return False
@@ -251,7 +261,7 @@ Module ModConector
                 End If
             End If
         Catch e As Exception
-            MessageBox.Show(e.ToString)
+            MessageBox.Show("Error de conexión")
         End Try
         Return Nothing
     End Function

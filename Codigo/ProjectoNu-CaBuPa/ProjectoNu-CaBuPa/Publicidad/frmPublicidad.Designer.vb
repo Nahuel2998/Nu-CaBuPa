@@ -193,7 +193,7 @@ Partial Class frmPublicidad
         Me.cbEmpresa.FormattingEnabled = True
         Me.cbEmpresa.Location = New System.Drawing.Point(6, 26)
         Me.cbEmpresa.Name = "cbEmpresa"
-        Me.cbEmpresa.Size = New System.Drawing.Size(549, 24)
+        Me.cbEmpresa.Size = New System.Drawing.Size(549, 29)
         Me.cbEmpresa.TabIndex = 4
         '
         'btnSalir
@@ -268,10 +268,10 @@ Partial Class frmPublicidad
         Me.tbDatos.Controls.Add(Me.gbNotas)
         Me.tbDatos.Controls.Add(Me.btnSalir)
         Me.tbDatos.Controls.Add(Me.btnEditar)
-        Me.tbDatos.Location = New System.Drawing.Point(4, 24)
+        Me.tbDatos.Location = New System.Drawing.Point(4, 27)
         Me.tbDatos.Name = "tbDatos"
         Me.tbDatos.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbDatos.Size = New System.Drawing.Size(573, 372)
+        Me.tbDatos.Size = New System.Drawing.Size(573, 369)
         Me.tbDatos.TabIndex = 0
         Me.tbDatos.Text = "Datos"
         '
@@ -295,10 +295,10 @@ Partial Class frmPublicidad
         Me.tbTandas.Controls.Add(Me.btnBorrrT)
         Me.tbTandas.Controls.Add(Me.btnIngresar)
         Me.tbTandas.Controls.Add(Me.dgvFechas)
-        Me.tbTandas.Location = New System.Drawing.Point(4, 24)
+        Me.tbTandas.Location = New System.Drawing.Point(4, 27)
         Me.tbTandas.Name = "tbTandas"
         Me.tbTandas.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbTandas.Size = New System.Drawing.Size(573, 372)
+        Me.tbTandas.Size = New System.Drawing.Size(573, 369)
         Me.tbTandas.TabIndex = 1
         Me.tbTandas.Text = "Tandas"
         '
@@ -333,7 +333,7 @@ Partial Class frmPublicidad
         Me.cbTanda.FormattingEnabled = True
         Me.cbTanda.Location = New System.Drawing.Point(142, 37)
         Me.cbTanda.Name = "cbTanda"
-        Me.cbTanda.Size = New System.Drawing.Size(272, 23)
+        Me.cbTanda.Size = New System.Drawing.Size(272, 26)
         Me.cbTanda.TabIndex = 1
         '
         'Label1
@@ -356,7 +356,7 @@ Partial Class frmPublicidad
         Me.dtpFI.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.dtpFI.Location = New System.Drawing.Point(3, 105)
         Me.dtpFI.Name = "dtpFI"
-        Me.dtpFI.Size = New System.Drawing.Size(272, 23)
+        Me.dtpFI.Size = New System.Drawing.Size(272, 27)
         Me.dtpFI.TabIndex = 2
         '
         'dtpFF
@@ -366,7 +366,7 @@ Partial Class frmPublicidad
         Me.dtpFF.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.dtpFF.Location = New System.Drawing.Point(281, 105)
         Me.dtpFF.Name = "dtpFF"
-        Me.dtpFF.Size = New System.Drawing.Size(275, 23)
+        Me.dtpFF.Size = New System.Drawing.Size(275, 27)
         Me.dtpFF.TabIndex = 3
         '
         'Label2
@@ -397,7 +397,7 @@ Partial Class frmPublicidad
         Me.Label4.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(258, 155)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(58, 16)
+        Me.Label4.Size = New System.Drawing.Size(72, 21)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Agenda"
         '
@@ -481,9 +481,9 @@ Partial Class frmPublicidad
         Me.tbTandasE.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.tbTandasE.Controls.Add(Me.btnBPubli)
         Me.tbTandasE.Controls.Add(Me.dgvTE)
-        Me.tbTandasE.Location = New System.Drawing.Point(4, 24)
+        Me.tbTandasE.Location = New System.Drawing.Point(4, 27)
         Me.tbTandasE.Name = "tbTandasE"
-        Me.tbTandasE.Size = New System.Drawing.Size(573, 372)
+        Me.tbTandasE.Size = New System.Drawing.Size(573, 369)
         Me.tbTandasE.TabIndex = 3
         Me.tbTandasE.Text = "Tandas Eliminadas"
         '
@@ -578,9 +578,9 @@ Partial Class frmPublicidad
         Me.tbProgramas.Controls.Add(Me.Label8)
         Me.tbProgramas.Controls.Add(Me.dtpFFP)
         Me.tbProgramas.Controls.Add(Me.dtpFIP)
-        Me.tbProgramas.Location = New System.Drawing.Point(4, 24)
+        Me.tbProgramas.Location = New System.Drawing.Point(4, 27)
         Me.tbProgramas.Name = "tbProgramas"
-        Me.tbProgramas.Size = New System.Drawing.Size(573, 372)
+        Me.tbProgramas.Size = New System.Drawing.Size(573, 369)
         Me.tbProgramas.TabIndex = 2
         Me.tbProgramas.Text = "Programas"
         '
@@ -658,7 +658,7 @@ Partial Class frmPublicidad
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(90, 85)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(66, 15)
+        Me.Label10.Size = New System.Drawing.Size(81, 18)
         Me.Label10.TabIndex = 24
         Me.Label10.Text = "Programa:"
         '
@@ -668,7 +668,7 @@ Partial Class frmPublicidad
         Me.cbPrograma.FormattingEnabled = True
         Me.cbPrograma.Location = New System.Drawing.Point(162, 82)
         Me.cbPrograma.Name = "cbPrograma"
-        Me.cbPrograma.Size = New System.Drawing.Size(243, 23)
+        Me.cbPrograma.Size = New System.Drawing.Size(243, 26)
         Me.cbPrograma.TabIndex = 23
         '
         'btnPrograma
@@ -687,7 +687,7 @@ Partial Class frmPublicidad
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(99, 52)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(57, 15)
+        Me.Label9.Size = New System.Drawing.Size(70, 18)
         Me.Label9.TabIndex = 21
         Me.Label9.Text = "Nombre:"
         '
@@ -696,7 +696,7 @@ Partial Class frmPublicidad
         Me.txtNombreP.Location = New System.Drawing.Point(162, 48)
         Me.txtNombreP.MaxLength = 48
         Me.txtNombreP.Name = "txtNombreP"
-        Me.txtNombreP.Size = New System.Drawing.Size(243, 23)
+        Me.txtNombreP.Size = New System.Drawing.Size(243, 27)
         Me.txtNombreP.TabIndex = 20
         '
         'Label5
@@ -704,7 +704,7 @@ Partial Class frmPublicidad
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(260, 182)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(50, 15)
+        Me.Label5.Size = New System.Drawing.Size(63, 18)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Agenda"
         '
@@ -729,7 +729,7 @@ Partial Class frmPublicidad
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(472, 124)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(70, 15)
+        Me.Label6.Size = New System.Drawing.Size(87, 18)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "Fecha final"
         '
@@ -738,7 +738,7 @@ Partial Class frmPublicidad
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(24, 124)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(79, 15)
+        Me.Label7.Size = New System.Drawing.Size(99, 18)
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Fecha inicial"
         '
@@ -748,7 +748,7 @@ Partial Class frmPublicidad
         Me.Label8.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(246, 14)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(83, 20)
+        Me.Label8.Size = New System.Drawing.Size(105, 25)
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "Programa"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -758,7 +758,7 @@ Partial Class frmPublicidad
         Me.dtpFFP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.dtpFFP.Location = New System.Drawing.Point(305, 145)
         Me.dtpFFP.Name = "dtpFFP"
-        Me.dtpFFP.Size = New System.Drawing.Size(261, 23)
+        Me.dtpFFP.Size = New System.Drawing.Size(261, 27)
         Me.dtpFFP.TabIndex = 13
         '
         'dtpFIP
@@ -766,7 +766,7 @@ Partial Class frmPublicidad
         Me.dtpFIP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.dtpFIP.Location = New System.Drawing.Point(7, 145)
         Me.dtpFIP.Name = "dtpFIP"
-        Me.dtpFIP.Size = New System.Drawing.Size(261, 23)
+        Me.dtpFIP.Size = New System.Drawing.Size(261, 27)
         Me.dtpFIP.TabIndex = 12
         '
         'tbEventos
@@ -787,9 +787,9 @@ Partial Class frmPublicidad
         Me.tbEventos.Controls.Add(Me.Label19)
         Me.tbEventos.Controls.Add(Me.dtpFFE)
         Me.tbEventos.Controls.Add(Me.dtpFIE)
-        Me.tbEventos.Location = New System.Drawing.Point(4, 24)
+        Me.tbEventos.Location = New System.Drawing.Point(4, 27)
         Me.tbEventos.Name = "tbEventos"
-        Me.tbEventos.Size = New System.Drawing.Size(573, 372)
+        Me.tbEventos.Size = New System.Drawing.Size(573, 369)
         Me.tbEventos.TabIndex = 5
         Me.tbEventos.Text = "Eventos"
         '
@@ -852,7 +852,7 @@ Partial Class frmPublicidad
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(105, 85)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(51, 15)
+        Me.Label14.Size = New System.Drawing.Size(63, 18)
         Me.Label14.TabIndex = 38
         Me.Label14.Text = "Evento:"
         '
@@ -862,7 +862,7 @@ Partial Class frmPublicidad
         Me.cbEvento.FormattingEnabled = True
         Me.cbEvento.Location = New System.Drawing.Point(162, 82)
         Me.cbEvento.Name = "cbEvento"
-        Me.cbEvento.Size = New System.Drawing.Size(243, 23)
+        Me.cbEvento.Size = New System.Drawing.Size(243, 26)
         Me.cbEvento.TabIndex = 37
         '
         'btnBEvento
@@ -881,7 +881,7 @@ Partial Class frmPublicidad
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(99, 52)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(57, 15)
+        Me.Label15.Size = New System.Drawing.Size(70, 18)
         Me.Label15.TabIndex = 35
         Me.Label15.Text = "Nombre:"
         '
@@ -890,7 +890,7 @@ Partial Class frmPublicidad
         Me.txtNEvento.Location = New System.Drawing.Point(162, 48)
         Me.txtNEvento.MaxLength = 32
         Me.txtNEvento.Name = "txtNEvento"
-        Me.txtNEvento.Size = New System.Drawing.Size(243, 23)
+        Me.txtNEvento.Size = New System.Drawing.Size(243, 27)
         Me.txtNEvento.TabIndex = 34
         '
         'Label16
@@ -898,7 +898,7 @@ Partial Class frmPublicidad
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(260, 182)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(50, 15)
+        Me.Label16.Size = New System.Drawing.Size(63, 18)
         Me.Label16.TabIndex = 33
         Me.Label16.Text = "Agenda"
         '
@@ -939,7 +939,7 @@ Partial Class frmPublicidad
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(472, 124)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(70, 15)
+        Me.Label17.Size = New System.Drawing.Size(87, 18)
         Me.Label17.TabIndex = 30
         Me.Label17.Text = "Fecha final"
         '
@@ -948,7 +948,7 @@ Partial Class frmPublicidad
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(24, 124)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(79, 15)
+        Me.Label18.Size = New System.Drawing.Size(99, 18)
         Me.Label18.TabIndex = 29
         Me.Label18.Text = "Fecha inicial"
         '
@@ -958,7 +958,7 @@ Partial Class frmPublicidad
         Me.Label19.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(254, 14)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(64, 20)
+        Me.Label19.Size = New System.Drawing.Size(81, 25)
         Me.Label19.TabIndex = 26
         Me.Label19.Text = "Evento"
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -968,7 +968,7 @@ Partial Class frmPublicidad
         Me.dtpFFE.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.dtpFFE.Location = New System.Drawing.Point(305, 145)
         Me.dtpFFE.Name = "dtpFFE"
-        Me.dtpFFE.Size = New System.Drawing.Size(261, 23)
+        Me.dtpFFE.Size = New System.Drawing.Size(261, 27)
         Me.dtpFFE.TabIndex = 28
         '
         'dtpFIE
@@ -976,7 +976,7 @@ Partial Class frmPublicidad
         Me.dtpFIE.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.dtpFIE.Location = New System.Drawing.Point(7, 145)
         Me.dtpFIE.Name = "dtpFIE"
-        Me.dtpFIE.Size = New System.Drawing.Size(261, 23)
+        Me.dtpFIE.Size = New System.Drawing.Size(261, 27)
         Me.dtpFIE.TabIndex = 27
         '
         'tbCuotas
@@ -986,10 +986,10 @@ Partial Class frmPublicidad
         Me.tbCuotas.Controls.Add(Me.btnBorrarC)
         Me.tbCuotas.Controls.Add(Me.btnInsertarC)
         Me.tbCuotas.Controls.Add(Me.gbAlquiler)
-        Me.tbCuotas.Location = New System.Drawing.Point(4, 24)
+        Me.tbCuotas.Location = New System.Drawing.Point(4, 27)
         Me.tbCuotas.Name = "tbCuotas"
         Me.tbCuotas.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbCuotas.Size = New System.Drawing.Size(573, 372)
+        Me.tbCuotas.Size = New System.Drawing.Size(573, 369)
         Me.tbCuotas.TabIndex = 4
         Me.tbCuotas.Text = "Cuotas"
         '
@@ -1093,7 +1093,7 @@ Partial Class frmPublicidad
         Me.cbPagados.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cbPagados.Location = New System.Drawing.Point(9, 26)
         Me.cbPagados.Name = "cbPagados"
-        Me.cbPagados.Size = New System.Drawing.Size(72, 19)
+        Me.cbPagados.Size = New System.Drawing.Size(89, 22)
         Me.cbPagados.TabIndex = 28876930
         Me.cbPagados.Text = "Pagados"
         Me.cbPagados.UseVisualStyleBackColor = True
@@ -1105,7 +1105,7 @@ Partial Class frmPublicidad
         Me.dtpYearCuota.Location = New System.Drawing.Point(464, 21)
         Me.dtpYearCuota.Name = "dtpYearCuota"
         Me.dtpYearCuota.ShowUpDown = True
-        Me.dtpYearCuota.Size = New System.Drawing.Size(89, 23)
+        Me.dtpYearCuota.Size = New System.Drawing.Size(89, 27)
         Me.dtpYearCuota.TabIndex = 28876932
         '
         'btnBorrarC
@@ -1160,7 +1160,7 @@ Partial Class frmPublicidad
         Me.nudValor.Location = New System.Drawing.Point(307, 47)
         Me.nudValor.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
         Me.nudValor.Name = "nudValor"
-        Me.nudValor.Size = New System.Drawing.Size(111, 23)
+        Me.nudValor.Size = New System.Drawing.Size(111, 27)
         Me.nudValor.TabIndex = 28876934
         '
         'cbP
@@ -1168,7 +1168,7 @@ Partial Class frmPublicidad
         Me.cbP.AutoSize = True
         Me.cbP.Location = New System.Drawing.Point(326, 116)
         Me.cbP.Name = "cbP"
-        Me.cbP.Size = New System.Drawing.Size(67, 19)
+        Me.cbP.Size = New System.Drawing.Size(82, 22)
         Me.cbP.TabIndex = 28876933
         Me.cbP.Text = "Pagado"
         Me.cbP.UseVisualStyleBackColor = True
@@ -1178,7 +1178,7 @@ Partial Class frmPublicidad
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(304, 29)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(43, 15)
+        Me.Label11.Size = New System.Drawing.Size(53, 18)
         Me.Label11.TabIndex = 28876932
         Me.Label11.Text = "Valor:"
         '
@@ -1187,7 +1187,7 @@ Partial Class frmPublicidad
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(7, 29)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(109, 15)
+        Me.Label13.Size = New System.Drawing.Size(136, 18)
         Me.Label13.TabIndex = 28876930
         Me.Label13.Text = "Fecha de emisión:"
         '
@@ -1196,7 +1196,7 @@ Partial Class frmPublicidad
         Me.dtpFE.CustomFormat = "yyyy-M-dd"
         Me.dtpFE.Location = New System.Drawing.Point(7, 47)
         Me.dtpFE.Name = "dtpFE"
-        Me.dtpFE.Size = New System.Drawing.Size(294, 23)
+        Me.dtpFE.Size = New System.Drawing.Size(294, 27)
         Me.dtpFE.TabIndex = 28876928
         '
         'Label12
@@ -1204,7 +1204,7 @@ Partial Class frmPublicidad
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(7, 95)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(92, 15)
+        Me.Label12.Size = New System.Drawing.Size(115, 18)
         Me.Label12.TabIndex = 28876931
         Me.Label12.Text = "Fecha de pago:"
         '
@@ -1213,7 +1213,7 @@ Partial Class frmPublicidad
         Me.dtpFP.CustomFormat = "yyyy-M-dd"
         Me.dtpFP.Location = New System.Drawing.Point(7, 114)
         Me.dtpFP.Name = "dtpFP"
-        Me.dtpFP.Size = New System.Drawing.Size(294, 23)
+        Me.dtpFP.Size = New System.Drawing.Size(294, 27)
         Me.dtpFP.TabIndex = 28876929
         '
         'bwDatos
@@ -1221,10 +1221,10 @@ Partial Class frmPublicidad
         '
         'frmPublicidad
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(607, 432)
+        Me.ClientSize = New System.Drawing.Size(605, 424)
         Me.Controls.Add(Me.tcP)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.ForeColor = System.Drawing.Color.White

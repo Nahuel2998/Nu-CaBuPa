@@ -23,7 +23,7 @@ Public Class frmFuncionario
     End Sub
 
     Private Sub frmFuncionario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Not PoseePermiso("Funcionario", "a") Then
+        If Not PoseePermiso("Funciona", "a") Then
             btnBorrar.Visible = False
             btnEditar.Visible = False
             tcF.TabPages.RemoveByKey("tbAF")

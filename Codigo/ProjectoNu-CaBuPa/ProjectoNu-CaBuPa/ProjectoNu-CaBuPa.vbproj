@@ -254,6 +254,9 @@
     <EmbeddedResource Include="S_Principal\frmPrincipal.aa.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="S_Principal\frmPrincipal.es.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="S_Usuario\frmAcceso.resx">
       <DependentUpon>frmAcceso.vb</DependentUpon>
     </EmbeddedResource>
