@@ -88,8 +88,8 @@ Module ModConector
 #Region "Conectar"
     Public Sub Inicio()
         Try
-            connStr = "DataSource=" + Address + "; Port=" + Port + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass
-            'connStr = "Server=" + Address + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8mb4"
+            connStr = "DataSource=" + Address + "; Port=" + Port + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8mb4"
+            'connStr = "DataSource=" + Address + "; Port=" + Port + "; Database=" + Database + "; Uid=" + User + "; Pwd=" + Pass + "; CharSet=utf8mb4_general_ci"
             'connStr = "Server=" + Address + "; Database=" + Database + "; Uid=" + User + "; Pwd=root; CharSet=utf8mb4"
             conn = New MySqlConnection(connStr)
             ModLog.Guardar(connStr)
