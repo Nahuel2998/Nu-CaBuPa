@@ -79,7 +79,7 @@ Public Class frmEvento
         Next
     End Sub
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        If Not editando Or videoID = -1 Then
+        If Not editando Or eventoID = -1 Then
             Close()
         Else
             Rellenar()

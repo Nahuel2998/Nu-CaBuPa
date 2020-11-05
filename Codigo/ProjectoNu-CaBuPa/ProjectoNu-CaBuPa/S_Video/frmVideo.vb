@@ -161,4 +161,7 @@
         formDelete.ShowDialog(Me)
     End Sub
 
+    Private Sub VFecha_Click(sender As Object, e As EventArgs) Handles VFecha.Click
+
+    End Sub
 End Class

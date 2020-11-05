@@ -1837,3 +1837,166 @@
 5/11/2020 0:50:42 LAPTOP-701EDAA0 ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
 5/11/2020 0:50:44 LAPTOP-701EDAA0 ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '7' 
 5/11/2020 0:50:55 LAPTOP-701EDAA0 ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true and descripcion like '%Trabajos%' 
+5/11/2020 5:05:28 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 5:06:08 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 5:26:01 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 5:26:23 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:26:23 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:26:24 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:26:28 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2019' and fecha_pago is not null group by 1 
+5/11/2020 5:26:28 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2019' and fecha_pago is not null group by 1 
+5/11/2020 5:26:28 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:26:29 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:26:29 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:26:29 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:26:29 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2021' and fecha_pago is not null group by 1 
+5/11/2020 5:26:29 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2021' and fecha_pago is not null group by 1 
+5/11/2020 5:26:29 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:26:29 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:26:29 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:26:30 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2019' and fecha_pago is not null group by 1 
+5/11/2020 5:26:30 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:26:30 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:26:30 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:26:30 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:26:40 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+5/11/2020 5:26:55 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+5/11/2020 5:26:58 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+5/11/2020 5:27:02 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 4) 
+5/11/2020 5:27:02 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+5/11/2020 5:27:03 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '4' 
+5/11/2020 5:27:07 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+5/11/2020 5:27:09 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail as 'E-Mail' FROM empresa WHERE true 
+5/11/2020 5:27:14 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail as 'E-Mail' FROM empresa WHERE true 
+5/11/2020 5:27:20 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+5/11/2020 5:27:23 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+5/11/2020 5:27:24 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha FROM video WHERE id_video = '5' 
+5/11/2020 5:27:28 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+5/11/2020 5:27:36 LAPTOP-J0MPD84C ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+5/11/2020 5:27:36 LAPTOP-J0MPD84C ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+5/11/2020 5:27:37 LAPTOP-J0MPD84C ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+5/11/2020 5:27:37 LAPTOP-J0MPD84C ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+5/11/2020 5:27:38 LAPTOP-J0MPD84C ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+5/11/2020 5:27:47 LAPTOP-J0MPD84C ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE nombre like '%a%' 
+5/11/2020 5:28:03 LAPTOP-J0MPD84C ' Insert IGNORE into evento ( nombre,descripcion,ID_Video ) values ('a','dfsg','3' ) 
+5/11/2020 5:29:51 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 5:30:22 LAPTOP-J0MPD84C ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '1' 
+5/11/2020 5:30:44 LAPTOP-J0MPD84C ' select Nombre, Tema, id_empresa FROM publicidad WHERE id_publicidad = '3' 
+5/11/2020 5:30:53 LAPTOP-J0MPD84C ' select Nombre, Tema, id_empresa FROM publicidad WHERE id_publicidad = '3' 
+5/11/2020 5:32:05 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+5/11/2020 5:32:07 LAPTOP-J0MPD84C ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+5/11/2020 5:32:12 LAPTOP-J0MPD84C ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-11-05' and fecha <='2020-11-05' 
+5/11/2020 5:32:12 LAPTOP-J0MPD84C ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-11-05' and fecha <='2020-11-05' 
+5/11/2020 5:32:17 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+5/11/2020 5:32:18 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:32:18 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:32:19 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:32:22 LAPTOP-J0MPD84C ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+5/11/2020 5:32:23 LAPTOP-J0MPD84C ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '1' 
+5/11/2020 5:32:45 LAPTOP-J0MPD84C ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-11-23' ) 
+5/11/2020 5:32:54 LAPTOP-J0MPD84C ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-11-23' ) 
+5/11/2020 5:32:54 LAPTOP-J0MPD84C ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-11-23' ) 
+5/11/2020 5:32:58 LAPTOP-J0MPD84C ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-11-19' ) 
+5/11/2020 5:33:02 LAPTOP-J0MPD84C ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-11-19' ,'2020-12-12' ) 
+5/11/2020 5:33:02 LAPTOP-J0MPD84C ' DELETE FROM fechaevento WHERE id_evento='1' and fecha in ('2020-11-19' ,'2020-12-12' ) 
+5/11/2020 5:33:41 LAPTOP-J0MPD84C ' Insert IGNORE into fechaevento ( ID_Evento,fecha ) values ('1','2020-11-5' ) 
+5/11/2020 5:33:58 LAPTOP-J0MPD84C ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+5/11/2020 5:34:33 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+5/11/2020 5:34:36 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 2) 
+5/11/2020 5:34:36 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+5/11/2020 5:34:36 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+5/11/2020 5:34:37 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 2) 
+5/11/2020 5:34:37 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+5/11/2020 5:34:38 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+5/11/2020 5:41:33 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 5:41:37 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+5/11/2020 5:41:38 LAPTOP-J0MPD84C ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '3' 
+5/11/2020 5:41:39 LAPTOP-J0MPD84C ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 3 and fecha >= '2020-11-05' and fecha <='2020-11-05' 
+5/11/2020 5:41:42 LAPTOP-J0MPD84C ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 3 and fecha = '2020-11-05' 
+5/11/2020 5:41:43 LAPTOP-J0MPD84C ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='3' and Fecha_Pago is null and year(fecha_emision)=2020 
+5/11/2020 5:41:44 LAPTOP-J0MPD84C ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='3' and fecha_inicio <='2020-11-05' and fecha_finalizacion>='2020-11-05' 
+5/11/2020 5:41:47 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 3) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+5/11/2020 5:41:52 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 3) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+5/11/2020 5:41:54 LAPTOP-J0MPD84C ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='3' and fecha_inicio <='2020-11-05' and fecha_finalizacion>='2020-11-05' 
+5/11/2020 5:41:57 LAPTOP-J0MPD84C ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='3' and Fecha_Pago is null and year(fecha_emision)=2020 
+5/11/2020 5:41:59 LAPTOP-J0MPD84C ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 3 and fecha = '2020-11-05' 
+5/11/2020 5:42:13 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+5/11/2020 5:48:38 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 5:48:44 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:48:44 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:48:45 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:48:46 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:48:46 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:48:46 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:48:49 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2019' and fecha_pago is not null group by 1 
+5/11/2020 5:48:49 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:48:50 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:48:50 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:49:10 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:49:10 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:49:43 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM publicidadcuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:49:44 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM publicidadcuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:49:44 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:55:16 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 5:56:13 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+5/11/2020 5:56:18 LAPTOP-J0MPD84C ' select id_serie, fecha_finalizacion as Fecha, nombre as Nombre FROM serie WHERE true 
+5/11/2020 5:56:21 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+5/11/2020 5:56:44 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha FROM video WHERE id_video = '5' 
+5/11/2020 5:56:51 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+5/11/2020 5:56:54 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail as 'E-Mail' FROM empresa WHERE true 
+5/11/2020 5:57:00 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail as 'E-Mail' FROM empresa WHERE true 
+5/11/2020 5:57:35 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 5:57:41 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+5/11/2020 5:57:42 LAPTOP-J0MPD84C ' select contenido, Nombre, id_serie, DATE_FORMAT(Fecha,'%Y-%m-%d') as Fecha FROM video WHERE id_video = '3' 
+5/11/2020 5:57:44 LAPTOP-J0MPD84C ' select id_video, fecha as Fecha, v.nombre as Nombre, (select s.nombre from serie s where s.id_serie=v.id_serie) as Serie FROM video v WHERE true 
+5/11/2020 5:57:47 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+5/11/2020 5:57:50 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM publicidadcuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:57:50 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM publicidadcuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 5:57:50 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 5:57:51 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+5/11/2020 5:58:03 LAPTOP-J0MPD84C ' Insert IGNORE into publicidad ( Nombre,Tema,ID_Empresa ) values ('Raid Shadow Legends','yes','3' ) 
+5/11/2020 5:58:04 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+5/11/2020 5:58:06 LAPTOP-J0MPD84C ' select Nombre, Tema, id_empresa FROM publicidad WHERE id_publicidad = '4' 
+5/11/2020 5:58:10 LAPTOP-J0MPD84C ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+5/11/2020 5:58:14 LAPTOP-J0MPD84C ' select id_publicidadcuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM publicidadcuota WHERE id_publicidad='4' and Fecha_Pago is null and year(fecha_emision)=2020 
+5/11/2020 5:58:16 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+5/11/2020 6:14:43 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 6:36:16 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 6:36:24 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+5/11/2020 6:36:26 LAPTOP-J0MPD84C ' select Nombre, Tema, id_empresa FROM publicidad WHERE id_publicidad = '4' 
+5/11/2020 6:36:27 LAPTOP-J0MPD84C ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+5/11/2020 6:36:31 LAPTOP-J0MPD84C ' select id_publicidadcuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM publicidadcuota WHERE id_publicidad='4' and Fecha_Pago is null and year(fecha_emision)=2020 
+5/11/2020 6:36:33 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+5/11/2020 6:36:35 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail as 'E-Mail' FROM empresa WHERE true 
+5/11/2020 6:36:38 LAPTOP-J0MPD84C ' select id_Empresa, Nombre, Telefono, Mail as 'E-Mail' FROM empresa WHERE true 
+5/11/2020 6:36:40 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+5/11/2020 6:36:41 LAPTOP-J0MPD84C ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+5/11/2020 6:36:42 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+5/11/2020 6:36:43 LAPTOP-J0MPD84C ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-11-05' and fecha_finalizacion>='2020-11-05' 
+5/11/2020 6:36:43 LAPTOP-J0MPD84C ' select id_programa_cuota, fecha_emision as 'Fecha de emisión', fecha_pago as 'Fecha de pago', precio as 'Valor' FROM programacuota WHERE id_programa='2' and Fecha_Pago is null and year(fecha_emision)=2020 
+5/11/2020 6:36:44 LAPTOP-J0MPD84C ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-11-05' 
+5/11/2020 6:36:44 LAPTOP-J0MPD84C ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-11-05' and fecha <='2020-11-05' 
+5/11/2020 6:36:44 LAPTOP-J0MPD84C ' select Fecha, hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha >= '2020-11-05' and fecha <='2020-11-05' 
+5/11/2020 6:36:45 LAPTOP-J0MPD84C ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+5/11/2020 6:36:49 LAPTOP-J0MPD84C ' select p.id_publicidad, Nombre, fecha_inicio as 'Fecha Inicio', fecha_finalizacion as 'Fecha Finalizacion' FROM pmuestrapubli pm inner join publicidad p on pm.id_publicidad = p.id_publicidad WHERE id_programa='2' and fecha_inicio <='2020-11-05' and fecha_finalizacion>='2020-11-05' 
+5/11/2020 6:36:50 LAPTOP-J0MPD84C ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+5/11/2020 6:51:13 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 6:51:20 LAPTOP-J0MPD84C ' select month(fecha_pago) as Fecha, sum(precio) as 'Valor' FROM programacuota WHERE year(fecha_pago)='2020' and fecha_pago is not null group by 1 
+5/11/2020 6:51:20 LAPTOP-J0MPD84C ' Llegué5 
+5/11/2020 6:51:26 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+5/11/2020 6:51:28 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 2) 
+5/11/2020 6:51:28 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+5/11/2020 6:51:29 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+5/11/2020 6:51:32 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+5/11/2020 6:52:49 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 6:53:05 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 6:53:10 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+5/11/2020 6:53:11 LAPTOP-J0MPD84C ' select Nombre, Tema, id_empresa FROM publicidad WHERE id_publicidad = '4' 
+5/11/2020 6:53:13 LAPTOP-J0MPD84C ' select p.id_publicidad, p.nombre as Nombre, e.nombre As Empresa FROM publicidad p inner join empresa e on p.id_empresa = e.id_empresa WHERE true 
+5/11/2020 6:53:15 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+5/11/2020 6:53:20 LAPTOP-J0MPD84C ' Funcionario: select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true and ID_Funcion not in (select ID_Funcion from TrabajaComo where ID_Funcionario = 2) 
+5/11/2020 6:53:20 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, t.id_trabajacomo , f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+5/11/2020 6:53:21 LAPTOP-J0MPD84C ' Funcionario: select f.ID_Funcion, t.id_trabajacomo, f.Nombre, f.Descripcion FROM Funcion f join TrabajaComo t on f.ID_Funcion = t.ID_Funcion WHERE t.ID_Funcionario = '2' 
+5/11/2020 6:53:25 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
+5/11/2020 6:53:50 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
+5/11/2020 6:54:00 LAPTOP-J0MPD84C ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '1' 

@@ -48,12 +48,11 @@ Partial Class frmFuncion
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 1)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(1, 2)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.35135!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.64865!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(496, 247)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(372, 201)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'GroupBox1
@@ -65,11 +64,9 @@ Partial Class frmFuncion
         Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(4, 4)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(488, 168)
+        Me.GroupBox1.Size = New System.Drawing.Size(366, 137)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -77,12 +74,11 @@ Partial Class frmFuncion
         '
         Me.txtDesc.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtDesc.ForeColor = System.Drawing.Color.White
-        Me.txtDesc.Location = New System.Drawing.Point(125, 64)
-        Me.txtDesc.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDesc.Location = New System.Drawing.Point(94, 52)
         Me.txtDesc.MaxLength = 128
         Me.txtDesc.Name = "txtDesc"
         Me.txtDesc.ReadOnly = True
-        Me.txtDesc.Size = New System.Drawing.Size(349, 91)
+        Me.txtDesc.Size = New System.Drawing.Size(263, 75)
         Me.txtDesc.TabIndex = 4
         Me.txtDesc.Text = ""
         '
@@ -90,12 +86,11 @@ Partial Class frmFuncion
         '
         Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.txtNombre.ForeColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(125, 23)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombre.Location = New System.Drawing.Point(94, 19)
         Me.txtNombre.MaxLength = 16
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(351, 22)
+        Me.txtNombre.Size = New System.Drawing.Size(264, 20)
         Me.txtNombre.TabIndex = 3
         '
         'Label2
@@ -103,10 +98,9 @@ Partial Class frmFuncion
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(41, 26)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(31, 21)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 18)
+        Me.Label2.Size = New System.Drawing.Size(57, 15)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombre:"
         '
@@ -115,10 +109,9 @@ Partial Class frmFuncion
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(13, 66)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(10, 54)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(99, 18)
+        Me.Label1.Size = New System.Drawing.Size(78, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Descripción:"
         '
@@ -134,12 +127,11 @@ Partial Class frmFuncion
         Me.TableLayoutPanel2.Controls.Add(Me.btnSalir, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btnBorrar, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btnEditar, 0, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(4, 180)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 146)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(488, 63)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(366, 52)
         Me.TableLayoutPanel2.TabIndex = 1
         '
         'btnSalir
@@ -150,10 +142,9 @@ Partial Class frmFuncion
         Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnSalir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnSalir.ForeColor = System.Drawing.Color.Black
-        Me.btnSalir.Location = New System.Drawing.Point(331, 4)
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSalir.Location = New System.Drawing.Point(248, 3)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(153, 55)
+        Me.btnSalir.Size = New System.Drawing.Size(115, 46)
         Me.btnSalir.TabIndex = 2
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = False
@@ -166,10 +157,9 @@ Partial Class frmFuncion
         Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnBorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrar.ForeColor = System.Drawing.Color.Black
-        Me.btnBorrar.Location = New System.Drawing.Point(163, 4)
-        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBorrar.Location = New System.Drawing.Point(122, 3)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(160, 55)
+        Me.btnBorrar.Size = New System.Drawing.Size(120, 46)
         Me.btnBorrar.TabIndex = 0
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
@@ -182,26 +172,25 @@ Partial Class frmFuncion
         Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnEditar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnEditar.ForeColor = System.Drawing.Color.Black
-        Me.btnEditar.Location = New System.Drawing.Point(4, 4)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnEditar.Location = New System.Drawing.Point(3, 3)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(151, 55)
+        Me.btnEditar.Size = New System.Drawing.Size(113, 46)
         Me.btnEditar.TabIndex = 1
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
         '
         'frmFuncion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(496, 242)
+        Me.ClientSize = New System.Drawing.Size(374, 203)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(514, 289)
-        Me.MinimumSize = New System.Drawing.Size(514, 289)
+        Me.MaximumSize = New System.Drawing.Size(390, 242)
+        Me.MinimumSize = New System.Drawing.Size(390, 242)
         Me.Name = "frmFuncion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Ver Función"

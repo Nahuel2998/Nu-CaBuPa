@@ -85,20 +85,22 @@ Partial Class frmEvento
         Me.tcP.Controls.Add(Me.tbDatos)
         Me.tcP.Controls.Add(Me.tbFechas)
         Me.tcP.Controls.Add(Me.tbPublicidad)
-        Me.tcP.Location = New System.Drawing.Point(12, 12)
+        Me.tcP.Location = New System.Drawing.Point(6, 6)
+        Me.tcP.Margin = New System.Windows.Forms.Padding(2)
         Me.tcP.Name = "tcP"
         Me.tcP.SelectedIndex = 0
-        Me.tcP.Size = New System.Drawing.Size(498, 348)
+        Me.tcP.Size = New System.Drawing.Size(377, 289)
         Me.tcP.TabIndex = 5
         '
         'tbDatos
         '
         Me.tbDatos.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.tbDatos.Controls.Add(Me.GroupBox1)
-        Me.tbDatos.Location = New System.Drawing.Point(4, 25)
+        Me.tbDatos.Location = New System.Drawing.Point(4, 22)
+        Me.tbDatos.Margin = New System.Windows.Forms.Padding(2)
         Me.tbDatos.Name = "tbDatos"
-        Me.tbDatos.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbDatos.Size = New System.Drawing.Size(490, 319)
+        Me.tbDatos.Padding = New System.Windows.Forms.Padding(2)
+        Me.tbDatos.Size = New System.Drawing.Size(369, 263)
         Me.tbDatos.TabIndex = 0
         Me.tbDatos.Text = "Datos"
         '
@@ -116,11 +118,11 @@ Partial Class frmEvento
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(7, 6)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.GroupBox1.Location = New System.Drawing.Point(5, 5)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox1.Size = New System.Drawing.Size(479, 307)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(362, 255)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos"
@@ -129,10 +131,10 @@ Partial Class frmEvento
         '
         Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnBorrar.ForeColor = System.Drawing.Color.Black
-        Me.btnBorrar.Location = New System.Drawing.Point(162, 249)
-        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnBorrar.Location = New System.Drawing.Point(133, 206)
+        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(124, 52)
+        Me.btnBorrar.Size = New System.Drawing.Size(93, 41)
         Me.btnBorrar.TabIndex = 10
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
@@ -145,19 +147,20 @@ Partial Class frmEvento
         Me.cbVideo.Enabled = False
         Me.cbVideo.ForeColor = System.Drawing.Color.White
         Me.cbVideo.FormattingEnabled = True
-        Me.cbVideo.Location = New System.Drawing.Point(99, 82)
+        Me.cbVideo.Location = New System.Drawing.Point(78, 67)
+        Me.cbVideo.Margin = New System.Windows.Forms.Padding(2)
         Me.cbVideo.Name = "cbVideo"
-        Me.cbVideo.Size = New System.Drawing.Size(364, 28)
+        Me.cbVideo.Size = New System.Drawing.Size(274, 25)
         Me.cbVideo.TabIndex = 5
         '
         'btnSalir
         '
-        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnSalir.ForeColor = System.Drawing.Color.Black
-        Me.btnSalir.Location = New System.Drawing.Point(8, 249)
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnSalir.Location = New System.Drawing.Point(256, 206)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(132, 52)
+        Me.btnSalir.Size = New System.Drawing.Size(99, 41)
         Me.btnSalir.TabIndex = 1
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = False
@@ -166,32 +169,31 @@ Partial Class frmEvento
         '
         Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnEditar.ForeColor = System.Drawing.Color.Black
-        Me.btnEditar.Location = New System.Drawing.Point(312, 249)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnEditar.Location = New System.Drawing.Point(7, 206)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(159, 52)
-        Me.btnEditar.TabIndex = 1
+        Me.btnEditar.Size = New System.Drawing.Size(119, 41)
+        Me.btnEditar.TabIndex = 2
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
         '
         'VSerie
         '
         Me.VSerie.AutoSize = True
-        Me.VSerie.Location = New System.Drawing.Point(8, 85)
-        Me.VSerie.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.VSerie.Location = New System.Drawing.Point(24, 70)
         Me.VSerie.Name = "VSerie"
-        Me.VSerie.Size = New System.Drawing.Size(56, 20)
+        Me.VSerie.Size = New System.Drawing.Size(48, 17)
         Me.VSerie.TabIndex = 9
         Me.VSerie.Text = "Video:"
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.txtDescripcion)
-        Me.GroupBox2.Location = New System.Drawing.Point(8, 116)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.GroupBox2.Location = New System.Drawing.Point(7, 94)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox2.Size = New System.Drawing.Size(463, 127)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(348, 103)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Descripción"
@@ -200,22 +202,21 @@ Partial Class frmEvento
         '
         Me.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtDescripcion.ForeColor = System.Drawing.Color.White
-        Me.txtDescripcion.Location = New System.Drawing.Point(8, 25)
-        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtDescripcion.Location = New System.Drawing.Point(3, 20)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtDescripcion.MaxLength = 128
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.ReadOnly = True
-        Me.txtDescripcion.Size = New System.Drawing.Size(447, 96)
-        Me.txtDescripcion.TabIndex = 3
+        Me.txtDescripcion.Size = New System.Drawing.Size(342, 79)
+        Me.txtDescripcion.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 35)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(10, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 20)
+        Me.Label1.Size = New System.Drawing.Size(62, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre:"
         '
@@ -223,13 +224,13 @@ Partial Class frmEvento
         '
         Me.txtNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtNombre.ForeColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(99, 32)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtNombre.Location = New System.Drawing.Point(78, 29)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtNombre.MaxLength = 32
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(364, 27)
-        Me.txtNombre.TabIndex = 2
+        Me.txtNombre.Size = New System.Drawing.Size(274, 23)
+        Me.txtNombre.TabIndex = 3
         '
         'tbFechas
         '
@@ -237,25 +238,29 @@ Partial Class frmEvento
         Me.tbFechas.Controls.Add(Me.GroupBox3)
         Me.tbFechas.Controls.Add(Me.gbBuscar)
         Me.tbFechas.Controls.Add(Me.TableLayoutPanel7)
-        Me.tbFechas.Location = New System.Drawing.Point(4, 25)
+        Me.tbFechas.Location = New System.Drawing.Point(4, 22)
+        Me.tbFechas.Margin = New System.Windows.Forms.Padding(2)
         Me.tbFechas.Name = "tbFechas"
-        Me.tbFechas.Size = New System.Drawing.Size(490, 319)
+        Me.tbFechas.Size = New System.Drawing.Size(369, 263)
         Me.tbFechas.TabIndex = 4
         Me.tbFechas.Text = "Agendar"
         '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.mcFecha)
-        Me.GroupBox3.Location = New System.Drawing.Point(7, 4)
+        Me.GroupBox3.Location = New System.Drawing.Point(5, 3)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(244, 255)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox3.Size = New System.Drawing.Size(183, 211)
         Me.GroupBox3.TabIndex = 28876930
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Agendar"
         '
         'mcFecha
         '
-        Me.mcFecha.Location = New System.Drawing.Point(12, 30)
+        Me.mcFecha.Location = New System.Drawing.Point(9, 24)
+        Me.mcFecha.Margin = New System.Windows.Forms.Padding(7)
         Me.mcFecha.Name = "mcFecha"
         Me.mcFecha.TabIndex = 3
         '
@@ -263,9 +268,11 @@ Partial Class frmEvento
         '
         Me.gbBuscar.Controls.Add(Me.dtpYearE)
         Me.gbBuscar.Controls.Add(Me.dgvFechas)
-        Me.gbBuscar.Location = New System.Drawing.Point(257, 4)
+        Me.gbBuscar.Location = New System.Drawing.Point(193, 3)
+        Me.gbBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.gbBuscar.Name = "gbBuscar"
-        Me.gbBuscar.Size = New System.Drawing.Size(230, 255)
+        Me.gbBuscar.Padding = New System.Windows.Forms.Padding(2)
+        Me.gbBuscar.Size = New System.Drawing.Size(172, 211)
         Me.gbBuscar.TabIndex = 28876929
         Me.gbBuscar.TabStop = False
         Me.gbBuscar.Text = "Buscar"
@@ -276,10 +283,11 @@ Partial Class frmEvento
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dtpYearE.CustomFormat = "yyyy"
         Me.dtpYearE.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpYearE.Location = New System.Drawing.Point(135, 16)
+        Me.dtpYearE.Location = New System.Drawing.Point(101, 13)
+        Me.dtpYearE.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpYearE.Name = "dtpYearE"
         Me.dtpYearE.ShowUpDown = True
-        Me.dtpYearE.Size = New System.Drawing.Size(89, 22)
+        Me.dtpYearE.Size = New System.Drawing.Size(68, 20)
         Me.dtpYearE.TabIndex = 28876930
         '
         'dgvFechas
@@ -318,7 +326,7 @@ Partial Class frmEvento
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvFechas.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvFechas.Location = New System.Drawing.Point(5, 47)
+        Me.dgvFechas.Location = New System.Drawing.Point(4, 38)
         Me.dgvFechas.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvFechas.MultiSelect = False
         Me.dgvFechas.Name = "dgvFechas"
@@ -332,7 +340,7 @@ Partial Class frmEvento
         Me.dgvFechas.RowTemplate.Height = 28
         Me.dgvFechas.RowTemplate.ReadOnly = True
         Me.dgvFechas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvFechas.Size = New System.Drawing.Size(220, 195)
+        Me.dgvFechas.Size = New System.Drawing.Size(165, 169)
         Me.dgvFechas.TabIndex = 28876927
         '
         'Fecha
@@ -358,51 +366,52 @@ Partial Class frmEvento
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.btnABorrar, 1, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.btnAnadir, 0, 0)
-        Me.TableLayoutPanel7.Location = New System.Drawing.Point(3, 264)
-        Me.TableLayoutPanel7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(3, 218)
+        Me.TableLayoutPanel7.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 1
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(484, 50)
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(363, 41)
         Me.TableLayoutPanel7.TabIndex = 28876926
         '
         'btnABorrar
         '
         Me.btnABorrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnABorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnABorrar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnABorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnABorrar.ForeColor = System.Drawing.Color.Black
-        Me.btnABorrar.Location = New System.Drawing.Point(256, 4)
-        Me.btnABorrar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnABorrar.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnABorrar.Location = New System.Drawing.Point(192, 3)
+        Me.btnABorrar.MinimumSize = New System.Drawing.Size(90, 12)
         Me.btnABorrar.Name = "btnABorrar"
-        Me.btnABorrar.Size = New System.Drawing.Size(224, 42)
+        Me.btnABorrar.Size = New System.Drawing.Size(168, 35)
         Me.btnABorrar.TabIndex = 2
         Me.btnABorrar.Text = "Borrar"
-        Me.btnABorrar.UseVisualStyleBackColor = True
+        Me.btnABorrar.UseVisualStyleBackColor = False
         '
         'btnAnadir
         '
         Me.btnAnadir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnAnadir.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnAnadir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnAnadir.ForeColor = System.Drawing.Color.Black
-        Me.btnAnadir.Location = New System.Drawing.Point(4, 4)
-        Me.btnAnadir.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnAnadir.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnAnadir.Location = New System.Drawing.Point(3, 3)
+        Me.btnAnadir.MinimumSize = New System.Drawing.Size(90, 12)
         Me.btnAnadir.Name = "btnAnadir"
-        Me.btnAnadir.Size = New System.Drawing.Size(244, 42)
+        Me.btnAnadir.Size = New System.Drawing.Size(183, 34)
         Me.btnAnadir.TabIndex = 1
         Me.btnAnadir.Text = "Añadir"
-        Me.btnAnadir.UseVisualStyleBackColor = True
+        Me.btnAnadir.UseVisualStyleBackColor = False
         '
         'tbPublicidad
         '
         Me.tbPublicidad.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.tbPublicidad.Controls.Add(Me.GBPubli)
-        Me.tbPublicidad.Location = New System.Drawing.Point(4, 25)
+        Me.tbPublicidad.Location = New System.Drawing.Point(4, 22)
+        Me.tbPublicidad.Margin = New System.Windows.Forms.Padding(2)
         Me.tbPublicidad.Name = "tbPublicidad"
-        Me.tbPublicidad.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbPublicidad.Size = New System.Drawing.Size(490, 319)
+        Me.tbPublicidad.Padding = New System.Windows.Forms.Padding(2)
+        Me.tbPublicidad.Size = New System.Drawing.Size(369, 263)
         Me.tbPublicidad.TabIndex = 5
         Me.tbPublicidad.Text = "Publicidades"
         '
@@ -415,11 +424,11 @@ Partial Class frmEvento
         Me.GBPubli.Controls.Add(Me.dgvEventoPubli)
         Me.GBPubli.Controls.Add(Me.TableLayoutPanel5)
         Me.GBPubli.Controls.Add(Me.dtpFPubli)
-        Me.GBPubli.Location = New System.Drawing.Point(5, 11)
+        Me.GBPubli.Location = New System.Drawing.Point(4, 4)
         Me.GBPubli.Margin = New System.Windows.Forms.Padding(2)
         Me.GBPubli.Name = "GBPubli"
         Me.GBPubli.Padding = New System.Windows.Forms.Padding(2)
-        Me.GBPubli.Size = New System.Drawing.Size(480, 312)
+        Me.GBPubli.Size = New System.Drawing.Size(361, 255)
         Me.GBPubli.TabIndex = 6
         Me.GBPubli.TabStop = False
         Me.GBPubli.Text = "Publicidades"
@@ -460,7 +469,7 @@ Partial Class frmEvento
         DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvEventoPubli.DefaultCellStyle = DataGridViewCellStyle7
-        Me.dgvEventoPubli.Location = New System.Drawing.Point(13, 45)
+        Me.dgvEventoPubli.Location = New System.Drawing.Point(5, 37)
         Me.dgvEventoPubli.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvEventoPubli.MultiSelect = False
         Me.dgvEventoPubli.Name = "dgvEventoPubli"
@@ -474,7 +483,7 @@ Partial Class frmEvento
         Me.dgvEventoPubli.RowTemplate.Height = 28
         Me.dgvEventoPubli.RowTemplate.ReadOnly = True
         Me.dgvEventoPubli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvEventoPubli.Size = New System.Drawing.Size(453, 209)
+        Me.dgvEventoPubli.Size = New System.Drawing.Size(351, 171)
         Me.dgvEventoPubli.TabIndex = 28876927
         '
         'DataGridViewTextBoxColumn4
@@ -513,31 +522,31 @@ Partial Class frmEvento
         Me.TableLayoutPanel5.ColumnCount = 2
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15.0!))
         Me.TableLayoutPanel5.Controls.Add(Me.btnBorrarSelect, 1, 0)
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(2, 260)
-        Me.TableLayoutPanel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(2, 212)
+        Me.TableLayoutPanel5.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
         Me.TableLayoutPanel5.RowCount = 1
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(476, 50)
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(357, 41)
         Me.TableLayoutPanel5.TabIndex = 28876926
         '
         'btnBorrarSelect
         '
         Me.btnBorrarSelect.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnBorrarSelect.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnBorrarSelect.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBorrarSelect.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrarSelect.ForeColor = System.Drawing.Color.Black
-        Me.btnBorrarSelect.Location = New System.Drawing.Point(4, 4)
-        Me.btnBorrarSelect.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnBorrarSelect.MinimumSize = New System.Drawing.Size(120, 15)
+        Me.btnBorrarSelect.Location = New System.Drawing.Point(3, 3)
+        Me.btnBorrarSelect.MinimumSize = New System.Drawing.Size(90, 12)
         Me.btnBorrarSelect.Name = "btnBorrarSelect"
-        Me.btnBorrarSelect.Size = New System.Drawing.Size(468, 42)
+        Me.btnBorrarSelect.Size = New System.Drawing.Size(351, 35)
         Me.btnBorrarSelect.TabIndex = 2
         Me.btnBorrarSelect.Text = "Borrar Seleccionados"
-        Me.btnBorrarSelect.UseVisualStyleBackColor = True
+        Me.btnBorrarSelect.UseVisualStyleBackColor = False
         '
         'dtpFPubli
         '
@@ -546,11 +555,11 @@ Partial Class frmEvento
         Me.dtpFPubli.CustomFormat = "yyyy"
         Me.dtpFPubli.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.dtpFPubli.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFPubli.Location = New System.Drawing.Point(380, 19)
+        Me.dtpFPubli.Location = New System.Drawing.Point(289, 13)
         Me.dtpFPubli.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpFPubli.Name = "dtpFPubli"
         Me.dtpFPubli.ShowUpDown = True
-        Me.dtpFPubli.Size = New System.Drawing.Size(86, 22)
+        Me.dtpFPubli.Size = New System.Drawing.Size(67, 20)
         Me.dtpFPubli.TabIndex = 4
         '
         'bwFechas
@@ -558,17 +567,17 @@ Partial Class frmEvento
         '
         'frmEvento
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(517, 369)
+        Me.ClientSize = New System.Drawing.Size(389, 301)
         Me.Controls.Add(Me.tcP)
         Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(535, 416)
-        Me.MinimumSize = New System.Drawing.Size(535, 416)
+        Me.MaximumSize = New System.Drawing.Size(405, 340)
+        Me.MinimumSize = New System.Drawing.Size(405, 340)
         Me.Name = "frmEvento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Eventos"

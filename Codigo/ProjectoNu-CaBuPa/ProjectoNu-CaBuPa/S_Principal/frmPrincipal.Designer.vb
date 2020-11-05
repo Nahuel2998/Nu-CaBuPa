@@ -1614,6 +1614,7 @@ Partial Class frmPrincipal
         'txtVnombre
         '
         resources.ApplyResources(Me.txtVnombre, "txtVnombre")
+        Me.txtVnombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.txtVnombre.Name = "txtVnombre"
         '
         'Panel3
@@ -1658,6 +1659,7 @@ Partial Class frmPrincipal
         'txtVcontenido
         '
         resources.ApplyResources(Me.txtVcontenido, "txtVcontenido")
+        Me.txtVcontenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.txtVcontenido.Name = "txtVcontenido"
         '
         'Panel8
@@ -2079,7 +2081,7 @@ Partial Class frmPrincipal
         'btnTanda
         '
         resources.ApplyResources(Me.btnTanda, "btnTanda")
-        Me.btnTanda.ForeColor = System.Drawing.Color.Black
+        Me.btnTanda.ForeColor = System.Drawing.Color.White
         Me.btnTanda.Name = "btnTanda"
         Me.btnTanda.UseVisualStyleBackColor = True
         '

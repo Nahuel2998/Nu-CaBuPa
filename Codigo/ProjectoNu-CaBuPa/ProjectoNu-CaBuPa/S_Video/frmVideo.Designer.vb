@@ -44,10 +44,10 @@ Partial Class frmVideo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 33)
+        Me.Label1.Location = New System.Drawing.Point(18, 33)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 18)
+        Me.Label1.Size = New System.Drawing.Size(57, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre:"
         '
@@ -60,29 +60,29 @@ Partial Class frmVideo
         Me.txtNombre.MaxLength = 48
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
-        Me.txtNombre.Size = New System.Drawing.Size(219, 27)
+        Me.txtNombre.Size = New System.Drawing.Size(219, 23)
         Me.txtNombre.TabIndex = 2
         '
         'txtContenido
         '
         Me.txtContenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtContenido.ForeColor = System.Drawing.Color.White
-        Me.txtContenido.Location = New System.Drawing.Point(8, 26)
+        Me.txtContenido.Location = New System.Drawing.Point(8, 22)
         Me.txtContenido.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtContenido.MaxLength = 128
         Me.txtContenido.Multiline = True
         Me.txtContenido.Name = "txtContenido"
         Me.txtContenido.ReadOnly = True
-        Me.txtContenido.Size = New System.Drawing.Size(365, 150)
+        Me.txtContenido.Size = New System.Drawing.Size(372, 154)
         Me.txtContenido.TabIndex = 3
         '
         'VFecha
         '
         Me.VFecha.AutoSize = True
-        Me.VFecha.Location = New System.Drawing.Point(31, 72)
+        Me.VFecha.Location = New System.Drawing.Point(31, 69)
         Me.VFecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.VFecha.Name = "VFecha"
-        Me.VFecha.Size = New System.Drawing.Size(55, 18)
+        Me.VFecha.Size = New System.Drawing.Size(44, 15)
         Me.VFecha.TabIndex = 2
         Me.VFecha.Text = "Fecha:"
         '
@@ -103,11 +103,11 @@ Partial Class frmVideo
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.VFecha)
         Me.GroupBox1.Controls.Add(Me.txtNombre)
-        Me.GroupBox1.Location = New System.Drawing.Point(18, 14)
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 12)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox1.Size = New System.Drawing.Size(394, 360)
+        Me.GroupBox1.Size = New System.Drawing.Size(404, 371)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos"
@@ -116,10 +116,10 @@ Partial Class frmVideo
         '
         Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnBorrar.ForeColor = System.Drawing.Color.Black
-        Me.btnBorrar.Location = New System.Drawing.Point(194, 328)
+        Me.btnBorrar.Location = New System.Drawing.Point(110, 328)
         Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(94, 26)
+        Me.btnBorrar.Size = New System.Drawing.Size(94, 33)
         Me.btnBorrar.TabIndex = 10
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
@@ -129,7 +129,7 @@ Partial Class frmVideo
         Me.chbTieneFecha.AutoSize = True
         Me.chbTieneFecha.Location = New System.Drawing.Point(318, 68)
         Me.chbTieneFecha.Name = "chbTieneFecha"
-        Me.chbTieneFecha.Size = New System.Drawing.Size(78, 22)
+        Me.chbTieneFecha.Size = New System.Drawing.Size(64, 19)
         Me.chbTieneFecha.TabIndex = 4
         Me.chbTieneFecha.Text = "Incluir"
         Me.chbTieneFecha.UseVisualStyleBackColor = True
@@ -142,7 +142,7 @@ Partial Class frmVideo
         Me.txtTapar.ForeColor = System.Drawing.Color.White
         Me.txtTapar.Location = New System.Drawing.Point(93, 66)
         Me.txtTapar.Name = "txtTapar"
-        Me.txtTapar.Size = New System.Drawing.Size(219, 27)
+        Me.txtTapar.Size = New System.Drawing.Size(219, 23)
         Me.txtTapar.TabIndex = 3
         Me.txtTapar.Text = "No posee fecha"
         Me.txtTapar.Visible = False
@@ -157,17 +157,17 @@ Partial Class frmVideo
         Me.cbSerie.FormattingEnabled = True
         Me.cbSerie.Location = New System.Drawing.Point(93, 102)
         Me.cbSerie.Name = "cbSerie"
-        Me.cbSerie.Size = New System.Drawing.Size(219, 26)
+        Me.cbSerie.Size = New System.Drawing.Size(219, 23)
         Me.cbSerie.TabIndex = 5
         '
         'btnSalir
         '
-        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnSalir.ForeColor = System.Drawing.Color.Black
-        Me.btnSalir.Location = New System.Drawing.Point(8, 328)
+        Me.btnSalir.Location = New System.Drawing.Point(302, 328)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(94, 26)
+        Me.btnSalir.Size = New System.Drawing.Size(94, 33)
         Me.btnSalir.TabIndex = 1
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = False
@@ -176,10 +176,10 @@ Partial Class frmVideo
         '
         Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnEditar.ForeColor = System.Drawing.Color.Black
-        Me.btnEditar.Location = New System.Drawing.Point(292, 328)
+        Me.btnEditar.Location = New System.Drawing.Point(8, 328)
         Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(94, 26)
+        Me.btnEditar.Size = New System.Drawing.Size(94, 33)
         Me.btnEditar.TabIndex = 1
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
@@ -191,16 +191,16 @@ Partial Class frmVideo
         Me.dtpFecha.Location = New System.Drawing.Point(93, 66)
         Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(219, 27)
+        Me.dtpFecha.Size = New System.Drawing.Size(219, 23)
         Me.dtpFecha.TabIndex = 3
         '
         'VSerie
         '
         Me.VSerie.AutoSize = True
-        Me.VSerie.Location = New System.Drawing.Point(37, 105)
+        Me.VSerie.Location = New System.Drawing.Point(35, 105)
         Me.VSerie.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.VSerie.Name = "VSerie"
-        Me.VSerie.Size = New System.Drawing.Size(49, 18)
+        Me.VSerie.Size = New System.Drawing.Size(40, 15)
         Me.VSerie.TabIndex = 9
         Me.VSerie.Text = "Serie:"
         '
@@ -211,17 +211,17 @@ Partial Class frmVideo
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox3.Size = New System.Drawing.Size(381, 182)
+        Me.GroupBox3.Size = New System.Drawing.Size(388, 182)
         Me.GroupBox3.TabIndex = 8
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Contenido"
         '
         'frmVideo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(428, 387)
+        Me.ClientSize = New System.Drawing.Size(430, 395)
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.ForeColor = System.Drawing.Color.White

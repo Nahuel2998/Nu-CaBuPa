@@ -47,18 +47,19 @@ Partial Class frmPublicidad
         Me.tbDatos = New System.Windows.Forms.TabPage()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.tbTandas = New System.Windows.Forms.TabPage()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.cbTanda = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dtpFI = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.dtpFF = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnBorrrT = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.dgvFechas = New System.Windows.Forms.DataGridView()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descrip = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.cbTanda = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.dtpFF = New ProjectoNu_CaBuPa.ColorDateTimePicker()
-        Me.dtpFI = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.tbTandasE = New System.Windows.Forms.TabPage()
         Me.btnBPubli = New System.Windows.Forms.Button()
         Me.dgvTE = New System.Windows.Forms.DataGridView()
@@ -68,6 +69,7 @@ Partial Class frmPublicidad
         Me.TEliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.tbProgramas = New System.Windows.Forms.TabPage()
         Me.btnMP = New System.Windows.Forms.Button()
+        Me.btnBorrarP = New System.Windows.Forms.Button()
         Me.dgvProgramaP = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -77,7 +79,6 @@ Partial Class frmPublicidad
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtNombreP = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnBorrarP = New System.Windows.Forms.Button()
         Me.btnIngresarP = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -128,6 +129,7 @@ Partial Class frmPublicidad
         Me.tcP.SuspendLayout()
         Me.tbDatos.SuspendLayout()
         Me.tbTandas.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.dgvFechas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbTandasE.SuspendLayout()
         CType(Me.dgvTE, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -146,9 +148,9 @@ Partial Class frmPublicidad
         '
         Me.gbNotas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.gbNotas.Controls.Add(Me.txtTema)
-        Me.gbNotas.Location = New System.Drawing.Point(6, 156)
+        Me.gbNotas.Location = New System.Drawing.Point(6, 144)
         Me.gbNotas.Name = "gbNotas"
-        Me.gbNotas.Size = New System.Drawing.Size(561, 169)
+        Me.gbNotas.Size = New System.Drawing.Size(561, 181)
         Me.gbNotas.TabIndex = 2
         Me.gbNotas.TabStop = False
         Me.gbNotas.Text = "Tema"
@@ -162,21 +164,21 @@ Partial Class frmPublicidad
         Me.txtTema.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtTema.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.txtTema.ForeColor = System.Drawing.Color.White
-        Me.txtTema.Location = New System.Drawing.Point(7, 22)
+        Me.txtTema.Location = New System.Drawing.Point(6, 20)
         Me.txtTema.MaxLength = 64
         Me.txtTema.Name = "txtTema"
         Me.txtTema.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.txtTema.Size = New System.Drawing.Size(545, 141)
-        Me.txtTema.TabIndex = 1
+        Me.txtTema.Size = New System.Drawing.Size(549, 153)
+        Me.txtTema.TabIndex = 5
         Me.txtTema.Text = ""
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.cbEmpresa)
         Me.GroupBox2.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(7, 80)
+        Me.GroupBox2.Location = New System.Drawing.Point(6, 80)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(560, 70)
+        Me.GroupBox2.Size = New System.Drawing.Size(561, 58)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Empresa"
@@ -189,20 +191,20 @@ Partial Class frmPublicidad
         Me.cbEmpresa.Enabled = False
         Me.cbEmpresa.ForeColor = System.Drawing.Color.White
         Me.cbEmpresa.FormattingEnabled = True
-        Me.cbEmpresa.Location = New System.Drawing.Point(7, 30)
+        Me.cbEmpresa.Location = New System.Drawing.Point(6, 26)
         Me.cbEmpresa.Name = "cbEmpresa"
-        Me.cbEmpresa.Size = New System.Drawing.Size(544, 29)
-        Me.cbEmpresa.TabIndex = 6
+        Me.cbEmpresa.Size = New System.Drawing.Size(549, 24)
+        Me.cbEmpresa.TabIndex = 4
         '
         'btnSalir
         '
-        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnSalir.ForeColor = System.Drawing.Color.Black
-        Me.btnSalir.Location = New System.Drawing.Point(7, 328)
+        Me.btnSalir.Location = New System.Drawing.Point(441, 331)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(126, 38)
-        Me.btnSalir.TabIndex = 15
+        Me.btnSalir.Size = New System.Drawing.Size(126, 34)
+        Me.btnSalir.TabIndex = 1
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = False
         '
@@ -210,11 +212,11 @@ Partial Class frmPublicidad
         '
         Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnEditar.ForeColor = System.Drawing.Color.Black
-        Me.btnEditar.Location = New System.Drawing.Point(450, 328)
+        Me.btnEditar.Location = New System.Drawing.Point(7, 331)
         Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(116, 35)
-        Me.btnEditar.TabIndex = 14
+        Me.btnEditar.Size = New System.Drawing.Size(116, 34)
+        Me.btnEditar.TabIndex = 2
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
         '
@@ -235,12 +237,12 @@ Partial Class frmPublicidad
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombre.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.txtNombre.ForeColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(7, 26)
+        Me.txtNombre.Location = New System.Drawing.Point(7, 22)
         Me.txtNombre.MaxLength = 32
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.txtNombre.Size = New System.Drawing.Size(545, 36)
-        Me.txtNombre.TabIndex = 1
+        Me.txtNombre.Size = New System.Drawing.Size(548, 38)
+        Me.txtNombre.TabIndex = 3
         Me.txtNombre.Text = ""
         '
         'tcP
@@ -266,52 +268,136 @@ Partial Class frmPublicidad
         Me.tbDatos.Controls.Add(Me.gbNotas)
         Me.tbDatos.Controls.Add(Me.btnSalir)
         Me.tbDatos.Controls.Add(Me.btnEditar)
-        Me.tbDatos.Location = New System.Drawing.Point(4, 27)
+        Me.tbDatos.Location = New System.Drawing.Point(4, 24)
         Me.tbDatos.Name = "tbDatos"
         Me.tbDatos.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbDatos.Size = New System.Drawing.Size(573, 369)
+        Me.tbDatos.Size = New System.Drawing.Size(573, 372)
         Me.tbDatos.TabIndex = 0
         Me.tbDatos.Text = "Datos"
         '
         'btnBorrar
         '
-        Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnBorrar.ForeColor = System.Drawing.Color.Black
-        Me.btnBorrar.Location = New System.Drawing.Point(237, 328)
+        Me.btnBorrar.Location = New System.Drawing.Point(131, 331)
         Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(118, 38)
-        Me.btnBorrar.TabIndex = 18
+        Me.btnBorrar.Size = New System.Drawing.Size(118, 34)
+        Me.btnBorrar.TabIndex = 6
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
         '
         'tbTandas
         '
         Me.tbTandas.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.tbTandas.Controls.Add(Me.TableLayoutPanel1)
         Me.tbTandas.Controls.Add(Me.Label4)
         Me.tbTandas.Controls.Add(Me.btnBorrrT)
         Me.tbTandas.Controls.Add(Me.btnIngresar)
         Me.tbTandas.Controls.Add(Me.dgvFechas)
-        Me.tbTandas.Controls.Add(Me.Label3)
-        Me.tbTandas.Controls.Add(Me.Label2)
-        Me.tbTandas.Controls.Add(Me.cbTanda)
-        Me.tbTandas.Controls.Add(Me.Label1)
-        Me.tbTandas.Controls.Add(Me.dtpFF)
-        Me.tbTandas.Controls.Add(Me.dtpFI)
-        Me.tbTandas.Location = New System.Drawing.Point(4, 27)
+        Me.tbTandas.Location = New System.Drawing.Point(4, 24)
         Me.tbTandas.Name = "tbTandas"
         Me.tbTandas.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbTandas.Size = New System.Drawing.Size(573, 369)
+        Me.tbTandas.Size = New System.Drawing.Size(573, 372)
         Me.tbTandas.TabIndex = 1
         Me.tbTandas.Text = "Tandas"
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 4
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.cbTanda, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.dtpFI, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.dtpFF, 2, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 3, 2)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(7, 6)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 4
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(559, 137)
+        Me.TableLayoutPanel1.TabIndex = 10
+        '
+        'cbTanda
+        '
+        Me.cbTanda.BackColor = System.Drawing.SystemColors.Window
+        Me.TableLayoutPanel1.SetColumnSpan(Me.cbTanda, 2)
+        Me.cbTanda.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cbTanda.FormattingEnabled = True
+        Me.cbTanda.Location = New System.Drawing.Point(142, 37)
+        Me.cbTanda.Name = "cbTanda"
+        Me.cbTanda.Size = New System.Drawing.Size(272, 23)
+        Me.cbTanda.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.TableLayoutPanel1.SetColumnSpan(Me.Label1, 2)
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(142, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(272, 34)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Tanda"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'dtpFI
+        '
+        Me.TableLayoutPanel1.SetColumnSpan(Me.dtpFI, 2)
+        Me.dtpFI.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dtpFI.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFI.Location = New System.Drawing.Point(3, 105)
+        Me.dtpFI.Name = "dtpFI"
+        Me.dtpFI.Size = New System.Drawing.Size(272, 23)
+        Me.dtpFI.TabIndex = 2
+        '
+        'dtpFF
+        '
+        Me.TableLayoutPanel1.SetColumnSpan(Me.dtpFF, 2)
+        Me.dtpFF.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dtpFF.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dtpFF.Location = New System.Drawing.Point(281, 105)
+        Me.dtpFF.Name = "dtpFF"
+        Me.dtpFF.Size = New System.Drawing.Size(275, 23)
+        Me.dtpFF.TabIndex = 3
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Location = New System.Drawing.Point(3, 68)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(133, 34)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Fecha inicial"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label3.Location = New System.Drawing.Point(420, 68)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(136, 34)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Fecha final"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(248, 157)
+        Me.Label4.Location = New System.Drawing.Point(258, 155)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 21)
+        Me.Label4.Size = New System.Drawing.Size(58, 16)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Agenda"
         '
@@ -323,10 +409,10 @@ Partial Class frmPublicidad
         Me.btnBorrrT.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnBorrrT.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrrT.ForeColor = System.Drawing.Color.Black
-        Me.btnBorrrT.Location = New System.Drawing.Point(6, 317)
+        Me.btnBorrrT.Location = New System.Drawing.Point(299, 317)
         Me.btnBorrrT.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBorrrT.Name = "btnBorrrT"
-        Me.btnBorrrT.Size = New System.Drawing.Size(286, 45)
+        Me.btnBorrrT.Size = New System.Drawing.Size(267, 48)
         Me.btnBorrrT.TabIndex = 8
         Me.btnBorrrT.Text = "Borrar"
         Me.btnBorrrT.UseVisualStyleBackColor = False
@@ -339,10 +425,10 @@ Partial Class frmPublicidad
         Me.btnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnIngresar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnIngresar.ForeColor = System.Drawing.Color.Black
-        Me.btnIngresar.Location = New System.Drawing.Point(300, 317)
+        Me.btnIngresar.Location = New System.Drawing.Point(7, 317)
         Me.btnIngresar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(266, 45)
+        Me.btnIngresar.Size = New System.Drawing.Size(268, 48)
         Me.btnIngresar.TabIndex = 7
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
@@ -362,7 +448,7 @@ Partial Class frmPublicidad
         Me.dgvFechas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvFechas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvFechas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nombre, Me.descrip})
-        Me.dgvFechas.Location = New System.Drawing.Point(7, 182)
+        Me.dgvFechas.Location = New System.Drawing.Point(7, 175)
         Me.dgvFechas.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvFechas.MultiSelect = False
         Me.dgvFechas.Name = "dgvFechas"
@@ -373,7 +459,7 @@ Partial Class frmPublicidad
         Me.dgvFechas.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvFechas.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvFechas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvFechas.Size = New System.Drawing.Size(559, 124)
+        Me.dgvFechas.Size = New System.Drawing.Size(559, 134)
         Me.dgvFechas.TabIndex = 6
         '
         'Nombre
@@ -390,67 +476,14 @@ Partial Class frmPublicidad
         Me.descrip.Name = "descrip"
         Me.descrip.ReadOnly = True
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(374, 92)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(87, 18)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Fecha final"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(77, 92)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(99, 18)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Fecha inicial"
-        '
-        'cbTanda
-        '
-        Me.cbTanda.BackColor = System.Drawing.SystemColors.Window
-        Me.cbTanda.FormattingEnabled = True
-        Me.cbTanda.Location = New System.Drawing.Point(181, 43)
-        Me.cbTanda.Name = "cbTanda"
-        Me.cbTanda.Size = New System.Drawing.Size(207, 26)
-        Me.cbTanda.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(247, 15)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 25)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Tanda"
-        '
-        'dtpFF
-        '
-        Me.dtpFF.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFF.Location = New System.Drawing.Point(300, 113)
-        Me.dtpFF.Name = "dtpFF"
-        Me.dtpFF.Size = New System.Drawing.Size(267, 27)
-        Me.dtpFF.TabIndex = 3
-        '
-        'dtpFI
-        '
-        Me.dtpFI.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFI.Location = New System.Drawing.Point(7, 113)
-        Me.dtpFI.Name = "dtpFI"
-        Me.dtpFI.Size = New System.Drawing.Size(268, 27)
-        Me.dtpFI.TabIndex = 2
-        '
         'tbTandasE
         '
         Me.tbTandasE.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.tbTandasE.Controls.Add(Me.btnBPubli)
         Me.tbTandasE.Controls.Add(Me.dgvTE)
-        Me.tbTandasE.Location = New System.Drawing.Point(4, 27)
+        Me.tbTandasE.Location = New System.Drawing.Point(4, 24)
         Me.tbTandasE.Name = "tbTandasE"
-        Me.tbTandasE.Size = New System.Drawing.Size(573, 369)
+        Me.tbTandasE.Size = New System.Drawing.Size(573, 372)
         Me.tbTandasE.TabIndex = 3
         Me.tbTandasE.Text = "Tandas Eliminadas"
         '
@@ -485,7 +518,7 @@ Partial Class frmPublicidad
         Me.dgvTE.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvTE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTE.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Hora, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.TEliminar})
-        Me.dgvTE.Location = New System.Drawing.Point(7, 4)
+        Me.dgvTE.Location = New System.Drawing.Point(7, 7)
         Me.dgvTE.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvTE.MultiSelect = False
         Me.dgvTE.Name = "dgvTE"
@@ -531,6 +564,7 @@ Partial Class frmPublicidad
         '
         Me.tbProgramas.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.tbProgramas.Controls.Add(Me.btnMP)
+        Me.tbProgramas.Controls.Add(Me.btnBorrarP)
         Me.tbProgramas.Controls.Add(Me.dgvProgramaP)
         Me.tbProgramas.Controls.Add(Me.Label10)
         Me.tbProgramas.Controls.Add(Me.cbPrograma)
@@ -538,31 +572,46 @@ Partial Class frmPublicidad
         Me.tbProgramas.Controls.Add(Me.Label9)
         Me.tbProgramas.Controls.Add(Me.txtNombreP)
         Me.tbProgramas.Controls.Add(Me.Label5)
-        Me.tbProgramas.Controls.Add(Me.btnBorrarP)
         Me.tbProgramas.Controls.Add(Me.btnIngresarP)
         Me.tbProgramas.Controls.Add(Me.Label6)
         Me.tbProgramas.Controls.Add(Me.Label7)
         Me.tbProgramas.Controls.Add(Me.Label8)
         Me.tbProgramas.Controls.Add(Me.dtpFFP)
         Me.tbProgramas.Controls.Add(Me.dtpFIP)
-        Me.tbProgramas.Location = New System.Drawing.Point(4, 27)
+        Me.tbProgramas.Location = New System.Drawing.Point(4, 24)
         Me.tbProgramas.Name = "tbProgramas"
-        Me.tbProgramas.Size = New System.Drawing.Size(573, 369)
+        Me.tbProgramas.Size = New System.Drawing.Size(573, 372)
         Me.tbProgramas.TabIndex = 2
         Me.tbProgramas.Text = "Programas"
         '
         'btnMP
         '
-        Me.btnMP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnMP.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMP.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnMP.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnMP.ForeColor = System.Drawing.Color.Black
-        Me.btnMP.Location = New System.Drawing.Point(412, 82)
+        Me.btnMP.Location = New System.Drawing.Point(411, 81)
         Me.btnMP.Margin = New System.Windows.Forms.Padding(4)
         Me.btnMP.Name = "btnMP"
-        Me.btnMP.Size = New System.Drawing.Size(101, 26)
+        Me.btnMP.Size = New System.Drawing.Size(102, 27)
         Me.btnMP.TabIndex = 2342332
         Me.btnMP.Text = "Mostrar"
         Me.btnMP.UseVisualStyleBackColor = False
+        '
+        'btnBorrarP
+        '
+        Me.btnBorrarP.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBorrarP.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnBorrarP.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
+        Me.btnBorrarP.ForeColor = System.Drawing.Color.Black
+        Me.btnBorrarP.Location = New System.Drawing.Point(298, 316)
+        Me.btnBorrarP.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBorrarP.Name = "btnBorrarP"
+        Me.btnBorrarP.Size = New System.Drawing.Size(268, 48)
+        Me.btnBorrarP.TabIndex = 18
+        Me.btnBorrarP.Text = "Borrar"
+        Me.btnBorrarP.UseVisualStyleBackColor = False
         '
         'dgvProgramaP
         '
@@ -572,14 +621,11 @@ Partial Class frmPublicidad
         Me.dgvProgramaP.AllowUserToResizeRows = False
         DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
         Me.dgvProgramaP.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-        Me.dgvProgramaP.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvProgramaP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvProgramaP.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvProgramaP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProgramaP.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.dgvProgramaP.Location = New System.Drawing.Point(6, 197)
+        Me.dgvProgramaP.Location = New System.Drawing.Point(7, 202)
         Me.dgvProgramaP.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvProgramaP.MultiSelect = False
         Me.dgvProgramaP.Name = "dgvProgramaP"
@@ -610,11 +656,11 @@ Partial Class frmPublicidad
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(80, 82)
+        Me.Label10.Location = New System.Drawing.Point(90, 85)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(76, 18)
+        Me.Label10.Size = New System.Drawing.Size(66, 15)
         Me.Label10.TabIndex = 24
-        Me.Label10.Text = "Programa"
+        Me.Label10.Text = "Programa:"
         '
         'cbPrograma
         '
@@ -622,14 +668,14 @@ Partial Class frmPublicidad
         Me.cbPrograma.FormattingEnabled = True
         Me.cbPrograma.Location = New System.Drawing.Point(162, 82)
         Me.cbPrograma.Name = "cbPrograma"
-        Me.cbPrograma.Size = New System.Drawing.Size(243, 26)
+        Me.cbPrograma.Size = New System.Drawing.Size(243, 23)
         Me.cbPrograma.TabIndex = 23
         '
         'btnPrograma
         '
-        Me.btnPrograma.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnPrograma.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnPrograma.ForeColor = System.Drawing.Color.Black
-        Me.btnPrograma.Location = New System.Drawing.Point(411, 47)
+        Me.btnPrograma.Location = New System.Drawing.Point(411, 46)
         Me.btnPrograma.Name = "btnPrograma"
         Me.btnPrograma.Size = New System.Drawing.Size(102, 27)
         Me.btnPrograma.TabIndex = 22
@@ -639,44 +685,28 @@ Partial Class frmPublicidad
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(91, 51)
+        Me.Label9.Location = New System.Drawing.Point(99, 52)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(65, 18)
+        Me.Label9.Size = New System.Drawing.Size(57, 15)
         Me.Label9.TabIndex = 21
-        Me.Label9.Text = "Nombre"
+        Me.Label9.Text = "Nombre:"
         '
         'txtNombreP
         '
-        Me.txtNombreP.Location = New System.Drawing.Point(162, 46)
+        Me.txtNombreP.Location = New System.Drawing.Point(162, 48)
         Me.txtNombreP.MaxLength = 48
         Me.txtNombreP.Name = "txtNombreP"
-        Me.txtNombreP.Size = New System.Drawing.Size(243, 27)
+        Me.txtNombreP.Size = New System.Drawing.Size(243, 23)
         Me.txtNombreP.TabIndex = 20
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(254, 175)
+        Me.Label5.Location = New System.Drawing.Point(260, 182)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 18)
+        Me.Label5.Size = New System.Drawing.Size(50, 15)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Agenda"
-        '
-        'btnBorrarP
-        '
-        Me.btnBorrarP.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBorrarP.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnBorrarP.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
-        Me.btnBorrarP.ForeColor = System.Drawing.Color.Black
-        Me.btnBorrarP.Location = New System.Drawing.Point(6, 314)
-        Me.btnBorrarP.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnBorrarP.Name = "btnBorrarP"
-        Me.btnBorrarP.Size = New System.Drawing.Size(221, 45)
-        Me.btnBorrarP.TabIndex = 18
-        Me.btnBorrarP.Text = "Borrar"
-        Me.btnBorrarP.UseVisualStyleBackColor = False
         '
         'btnIngresarP
         '
@@ -686,10 +716,10 @@ Partial Class frmPublicidad
         Me.btnIngresarP.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnIngresarP.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnIngresarP.ForeColor = System.Drawing.Color.Black
-        Me.btnIngresarP.Location = New System.Drawing.Point(316, 314)
+        Me.btnIngresarP.Location = New System.Drawing.Point(7, 316)
         Me.btnIngresarP.Margin = New System.Windows.Forms.Padding(4)
         Me.btnIngresarP.Name = "btnIngresarP"
-        Me.btnIngresarP.Size = New System.Drawing.Size(250, 45)
+        Me.btnIngresarP.Size = New System.Drawing.Size(268, 48)
         Me.btnIngresarP.TabIndex = 17
         Me.btnIngresarP.Text = "Ingresar"
         Me.btnIngresarP.UseVisualStyleBackColor = False
@@ -697,18 +727,18 @@ Partial Class frmPublicidad
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(366, 124)
+        Me.Label6.Location = New System.Drawing.Point(472, 124)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(87, 18)
+        Me.Label6.Size = New System.Drawing.Size(70, 15)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "Fecha final"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(71, 124)
+        Me.Label7.Location = New System.Drawing.Point(24, 124)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(99, 18)
+        Me.Label7.Size = New System.Drawing.Size(79, 15)
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Fecha inicial"
         '
@@ -716,26 +746,27 @@ Partial Class frmPublicidad
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(227, 11)
+        Me.Label8.Location = New System.Drawing.Point(246, 14)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(105, 25)
+        Me.Label8.Size = New System.Drawing.Size(83, 20)
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "Programa"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dtpFFP
         '
         Me.dtpFFP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.dtpFFP.Location = New System.Drawing.Point(305, 145)
         Me.dtpFFP.Name = "dtpFFP"
-        Me.dtpFFP.Size = New System.Drawing.Size(261, 27)
+        Me.dtpFFP.Size = New System.Drawing.Size(261, 23)
         Me.dtpFFP.TabIndex = 13
         '
         'dtpFIP
         '
         Me.dtpFIP.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFIP.Location = New System.Drawing.Point(16, 145)
+        Me.dtpFIP.Location = New System.Drawing.Point(7, 145)
         Me.dtpFIP.Name = "dtpFIP"
-        Me.dtpFIP.Size = New System.Drawing.Size(269, 27)
+        Me.dtpFIP.Size = New System.Drawing.Size(261, 23)
         Me.dtpFIP.TabIndex = 12
         '
         'tbEventos
@@ -756,19 +787,19 @@ Partial Class frmPublicidad
         Me.tbEventos.Controls.Add(Me.Label19)
         Me.tbEventos.Controls.Add(Me.dtpFFE)
         Me.tbEventos.Controls.Add(Me.dtpFIE)
-        Me.tbEventos.Location = New System.Drawing.Point(4, 27)
+        Me.tbEventos.Location = New System.Drawing.Point(4, 24)
         Me.tbEventos.Name = "tbEventos"
-        Me.tbEventos.Size = New System.Drawing.Size(573, 369)
+        Me.tbEventos.Size = New System.Drawing.Size(573, 372)
         Me.tbEventos.TabIndex = 5
         Me.tbEventos.Text = "Eventos"
         '
         'btnMostrarE
         '
-        Me.btnMostrarE.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnMostrarE.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnMostrarE.ForeColor = System.Drawing.Color.Black
         Me.btnMostrarE.Location = New System.Drawing.Point(411, 81)
         Me.btnMostrarE.Name = "btnMostrarE"
-        Me.btnMostrarE.Size = New System.Drawing.Size(87, 27)
+        Me.btnMostrarE.Size = New System.Drawing.Size(102, 27)
         Me.btnMostrarE.TabIndex = 40
         Me.btnMostrarE.Text = "Mostrar"
         Me.btnMostrarE.UseVisualStyleBackColor = False
@@ -788,7 +819,7 @@ Partial Class frmPublicidad
         Me.dgvAEvento.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.dgvAEvento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAEvento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.dgvAEvento.Location = New System.Drawing.Point(6, 196)
+        Me.dgvAEvento.Location = New System.Drawing.Point(7, 202)
         Me.dgvAEvento.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvAEvento.MultiSelect = False
         Me.dgvAEvento.Name = "dgvAEvento"
@@ -819,28 +850,28 @@ Partial Class frmPublicidad
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(91, 84)
+        Me.Label14.Location = New System.Drawing.Point(105, 85)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(58, 18)
+        Me.Label14.Size = New System.Drawing.Size(51, 15)
         Me.Label14.TabIndex = 38
-        Me.Label14.Text = "Evento"
+        Me.Label14.Text = "Evento:"
         '
         'cbEvento
         '
         Me.cbEvento.BackColor = System.Drawing.SystemColors.Window
         Me.cbEvento.FormattingEnabled = True
-        Me.cbEvento.Location = New System.Drawing.Point(162, 81)
+        Me.cbEvento.Location = New System.Drawing.Point(162, 82)
         Me.cbEvento.Name = "cbEvento"
-        Me.cbEvento.Size = New System.Drawing.Size(243, 26)
+        Me.cbEvento.Size = New System.Drawing.Size(243, 23)
         Me.cbEvento.TabIndex = 37
         '
         'btnBEvento
         '
-        Me.btnBEvento.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnBEvento.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnBEvento.ForeColor = System.Drawing.Color.Black
         Me.btnBEvento.Location = New System.Drawing.Point(411, 46)
         Me.btnBEvento.Name = "btnBEvento"
-        Me.btnBEvento.Size = New System.Drawing.Size(87, 27)
+        Me.btnBEvento.Size = New System.Drawing.Size(102, 27)
         Me.btnBEvento.TabIndex = 36
         Me.btnBEvento.Text = "Buscar"
         Me.btnBEvento.UseVisualStyleBackColor = False
@@ -848,26 +879,26 @@ Partial Class frmPublicidad
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(91, 50)
+        Me.Label15.Location = New System.Drawing.Point(99, 52)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(65, 18)
+        Me.Label15.Size = New System.Drawing.Size(57, 15)
         Me.Label15.TabIndex = 35
-        Me.Label15.Text = "Nombre"
+        Me.Label15.Text = "Nombre:"
         '
         'txtNEvento
         '
-        Me.txtNEvento.Location = New System.Drawing.Point(162, 45)
+        Me.txtNEvento.Location = New System.Drawing.Point(162, 48)
         Me.txtNEvento.MaxLength = 32
         Me.txtNEvento.Name = "txtNEvento"
-        Me.txtNEvento.Size = New System.Drawing.Size(243, 27)
+        Me.txtNEvento.Size = New System.Drawing.Size(243, 23)
         Me.txtNEvento.TabIndex = 34
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(254, 174)
+        Me.Label16.Location = New System.Drawing.Point(260, 182)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(63, 18)
+        Me.Label16.Size = New System.Drawing.Size(50, 15)
         Me.Label16.TabIndex = 33
         Me.Label16.Text = "Agenda"
         '
@@ -879,10 +910,10 @@ Partial Class frmPublicidad
         Me.btnBPEvento.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnBPEvento.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBPEvento.ForeColor = System.Drawing.Color.Black
-        Me.btnBPEvento.Location = New System.Drawing.Point(6, 313)
+        Me.btnBPEvento.Location = New System.Drawing.Point(298, 316)
         Me.btnBPEvento.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBPEvento.Name = "btnBPEvento"
-        Me.btnBPEvento.Size = New System.Drawing.Size(221, 45)
+        Me.btnBPEvento.Size = New System.Drawing.Size(268, 48)
         Me.btnBPEvento.TabIndex = 32
         Me.btnBPEvento.Text = "Borrar"
         Me.btnBPEvento.UseVisualStyleBackColor = False
@@ -895,10 +926,10 @@ Partial Class frmPublicidad
         Me.btnIEvento.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnIEvento.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnIEvento.ForeColor = System.Drawing.Color.Black
-        Me.btnIEvento.Location = New System.Drawing.Point(316, 313)
+        Me.btnIEvento.Location = New System.Drawing.Point(7, 316)
         Me.btnIEvento.Margin = New System.Windows.Forms.Padding(4)
         Me.btnIEvento.Name = "btnIEvento"
-        Me.btnIEvento.Size = New System.Drawing.Size(250, 45)
+        Me.btnIEvento.Size = New System.Drawing.Size(268, 48)
         Me.btnIEvento.TabIndex = 31
         Me.btnIEvento.Text = "Ingresar"
         Me.btnIEvento.UseVisualStyleBackColor = False
@@ -906,18 +937,18 @@ Partial Class frmPublicidad
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(366, 123)
+        Me.Label17.Location = New System.Drawing.Point(472, 124)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(87, 18)
+        Me.Label17.Size = New System.Drawing.Size(70, 15)
         Me.Label17.TabIndex = 30
         Me.Label17.Text = "Fecha final"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(71, 123)
+        Me.Label18.Location = New System.Drawing.Point(24, 124)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(99, 18)
+        Me.Label18.Size = New System.Drawing.Size(79, 15)
         Me.Label18.TabIndex = 29
         Me.Label18.Text = "Fecha inicial"
         '
@@ -925,26 +956,27 @@ Partial Class frmPublicidad
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Mongolian Baiti", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(227, 10)
+        Me.Label19.Location = New System.Drawing.Point(254, 14)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(81, 25)
+        Me.Label19.Size = New System.Drawing.Size(64, 20)
         Me.Label19.TabIndex = 26
         Me.Label19.Text = "Evento"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dtpFFE
         '
         Me.dtpFFE.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFFE.Location = New System.Drawing.Point(298, 144)
+        Me.dtpFFE.Location = New System.Drawing.Point(305, 145)
         Me.dtpFFE.Name = "dtpFFE"
-        Me.dtpFFE.Size = New System.Drawing.Size(267, 27)
+        Me.dtpFFE.Size = New System.Drawing.Size(261, 23)
         Me.dtpFFE.TabIndex = 28
         '
         'dtpFIE
         '
         Me.dtpFIE.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.dtpFIE.Location = New System.Drawing.Point(6, 144)
+        Me.dtpFIE.Location = New System.Drawing.Point(7, 145)
         Me.dtpFIE.Name = "dtpFIE"
-        Me.dtpFIE.Size = New System.Drawing.Size(266, 27)
+        Me.dtpFIE.Size = New System.Drawing.Size(261, 23)
         Me.dtpFIE.TabIndex = 27
         '
         'tbCuotas
@@ -954,10 +986,10 @@ Partial Class frmPublicidad
         Me.tbCuotas.Controls.Add(Me.btnBorrarC)
         Me.tbCuotas.Controls.Add(Me.btnInsertarC)
         Me.tbCuotas.Controls.Add(Me.gbAlquiler)
-        Me.tbCuotas.Location = New System.Drawing.Point(4, 27)
+        Me.tbCuotas.Location = New System.Drawing.Point(4, 24)
         Me.tbCuotas.Name = "tbCuotas"
         Me.tbCuotas.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbCuotas.Size = New System.Drawing.Size(573, 369)
+        Me.tbCuotas.Size = New System.Drawing.Size(573, 372)
         Me.tbCuotas.TabIndex = 4
         Me.tbCuotas.Text = "Cuotas"
         '
@@ -1006,7 +1038,7 @@ Partial Class frmPublicidad
         DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvVerCuota.DefaultCellStyle = DataGridViewCellStyle11
-        Me.dgvVerCuota.Location = New System.Drawing.Point(11, 53)
+        Me.dgvVerCuota.Location = New System.Drawing.Point(8, 49)
         Me.dgvVerCuota.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvVerCuota.MultiSelect = False
         Me.dgvVerCuota.Name = "dgvVerCuota"
@@ -1020,7 +1052,7 @@ Partial Class frmPublicidad
         Me.dgvVerCuota.RowTemplate.Height = 28
         Me.dgvVerCuota.RowTemplate.ReadOnly = True
         Me.dgvVerCuota.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvVerCuota.Size = New System.Drawing.Size(544, 146)
+        Me.dgvVerCuota.Size = New System.Drawing.Size(545, 146)
         Me.dgvVerCuota.TabIndex = 28876929
         '
         'PFecha
@@ -1059,9 +1091,9 @@ Partial Class frmPublicidad
         '
         Me.cbPagados.AutoSize = True
         Me.cbPagados.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cbPagados.Location = New System.Drawing.Point(11, 26)
+        Me.cbPagados.Location = New System.Drawing.Point(9, 26)
         Me.cbPagados.Name = "cbPagados"
-        Me.cbPagados.Size = New System.Drawing.Size(89, 22)
+        Me.cbPagados.Size = New System.Drawing.Size(72, 19)
         Me.cbPagados.TabIndex = 28876930
         Me.cbPagados.Text = "Pagados"
         Me.cbPagados.UseVisualStyleBackColor = True
@@ -1070,15 +1102,16 @@ Partial Class frmPublicidad
         '
         Me.dtpYearCuota.CustomFormat = "yyyy"
         Me.dtpYearCuota.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpYearCuota.Location = New System.Drawing.Point(466, 21)
+        Me.dtpYearCuota.Location = New System.Drawing.Point(464, 21)
         Me.dtpYearCuota.Name = "dtpYearCuota"
         Me.dtpYearCuota.ShowUpDown = True
-        Me.dtpYearCuota.Size = New System.Drawing.Size(89, 27)
+        Me.dtpYearCuota.Size = New System.Drawing.Size(89, 23)
         Me.dtpYearCuota.TabIndex = 28876932
         '
         'btnBorrarC
         '
         Me.btnBorrarC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnBorrarC.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnBorrarC.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrarC.ForeColor = System.Drawing.Color.Black
         Me.btnBorrarC.Location = New System.Drawing.Point(443, 239)
@@ -1088,11 +1121,12 @@ Partial Class frmPublicidad
         Me.btnBorrarC.Size = New System.Drawing.Size(120, 42)
         Me.btnBorrarC.TabIndex = 2
         Me.btnBorrarC.Text = "Borrar"
-        Me.btnBorrarC.UseVisualStyleBackColor = True
+        Me.btnBorrarC.UseVisualStyleBackColor = False
         '
         'btnInsertarC
         '
         Me.btnInsertarC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnInsertarC.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnInsertarC.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnInsertarC.ForeColor = System.Drawing.Color.Black
         Me.btnInsertarC.Location = New System.Drawing.Point(443, 309)
@@ -1102,7 +1136,7 @@ Partial Class frmPublicidad
         Me.btnInsertarC.Size = New System.Drawing.Size(120, 42)
         Me.btnInsertarC.TabIndex = 1
         Me.btnInsertarC.Text = "Añadir"
-        Me.btnInsertarC.UseVisualStyleBackColor = True
+        Me.btnInsertarC.UseVisualStyleBackColor = False
         '
         'gbAlquiler
         '
@@ -1126,15 +1160,15 @@ Partial Class frmPublicidad
         Me.nudValor.Location = New System.Drawing.Point(307, 47)
         Me.nudValor.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
         Me.nudValor.Name = "nudValor"
-        Me.nudValor.Size = New System.Drawing.Size(111, 27)
+        Me.nudValor.Size = New System.Drawing.Size(111, 23)
         Me.nudValor.TabIndex = 28876934
         '
         'cbP
         '
         Me.cbP.AutoSize = True
-        Me.cbP.Location = New System.Drawing.Point(319, 108)
+        Me.cbP.Location = New System.Drawing.Point(326, 116)
         Me.cbP.Name = "cbP"
-        Me.cbP.Size = New System.Drawing.Size(82, 22)
+        Me.cbP.Size = New System.Drawing.Size(67, 19)
         Me.cbP.TabIndex = 28876933
         Me.cbP.Text = "Pagado"
         Me.cbP.UseVisualStyleBackColor = True
@@ -1142,44 +1176,44 @@ Partial Class frmPublicidad
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(304, 23)
+        Me.Label11.Location = New System.Drawing.Point(304, 29)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(48, 18)
+        Me.Label11.Size = New System.Drawing.Size(43, 15)
         Me.Label11.TabIndex = 28876932
-        Me.Label11.Text = "Valor"
+        Me.Label11.Text = "Valor:"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(47, 23)
+        Me.Label13.Location = New System.Drawing.Point(7, 29)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(131, 18)
+        Me.Label13.Size = New System.Drawing.Size(109, 15)
         Me.Label13.TabIndex = 28876930
-        Me.Label13.Text = "Fecha de emisión"
+        Me.Label13.Text = "Fecha de emisión:"
         '
         'dtpFE
         '
         Me.dtpFE.CustomFormat = "yyyy-M-dd"
         Me.dtpFE.Location = New System.Drawing.Point(7, 47)
         Me.dtpFE.Name = "dtpFE"
-        Me.dtpFE.Size = New System.Drawing.Size(294, 27)
+        Me.dtpFE.Size = New System.Drawing.Size(294, 23)
         Me.dtpFE.TabIndex = 28876928
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(48, 84)
+        Me.Label12.Location = New System.Drawing.Point(7, 95)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(110, 18)
+        Me.Label12.Size = New System.Drawing.Size(92, 15)
         Me.Label12.TabIndex = 28876931
-        Me.Label12.Text = "Fecha de pago"
+        Me.Label12.Text = "Fecha de pago:"
         '
         'dtpFP
         '
         Me.dtpFP.CustomFormat = "yyyy-M-dd"
-        Me.dtpFP.Location = New System.Drawing.Point(8, 108)
+        Me.dtpFP.Location = New System.Drawing.Point(7, 114)
         Me.dtpFP.Name = "dtpFP"
-        Me.dtpFP.Size = New System.Drawing.Size(294, 27)
+        Me.dtpFP.Size = New System.Drawing.Size(294, 23)
         Me.dtpFP.TabIndex = 28876929
         '
         'bwDatos
@@ -1187,13 +1221,14 @@ Partial Class frmPublicidad
         '
         'frmPublicidad
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(605, 424)
+        Me.ClientSize = New System.Drawing.Size(607, 432)
         Me.Controls.Add(Me.tcP)
         Me.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
@@ -1209,6 +1244,8 @@ Partial Class frmPublicidad
         Me.tbDatos.ResumeLayout(False)
         Me.tbTandas.ResumeLayout(False)
         Me.tbTandas.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         CType(Me.dgvFechas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbTandasE.ResumeLayout(False)
         CType(Me.dgvTE, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1315,4 +1352,5 @@ Partial Class frmPublicidad
     Friend WithEvents dtpFIE As ColorDateTimePicker
     Friend WithEvents btnMP As Button
     Friend WithEvents btnMostrarE As Button
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
 End Class
