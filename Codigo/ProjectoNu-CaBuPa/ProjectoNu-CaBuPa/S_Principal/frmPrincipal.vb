@@ -298,9 +298,9 @@ Public Class frmPrincipal
             Case EVENTO
                 dt_BEvento = TBusca
                 ActualizarTablaC(dt_BEvento, dgvBEvento)
-            Case CUOTA
-                dt_BEvento = TBusca
-                ActualizarTablaC(dt_BEvento, dgvBEvento)
+            Case GRAPUBLI
+                dt_GraPubli = TBusca
+                ActualizarGraficos(dt_GraPrograma, ChartPubli, "Ganancias")
             Case GRAPROGRAMA
                 dt_GraPrograma = TBusca
                 ActualizarGraficos(dt_GraPrograma, ChartProg, "Ganancias")

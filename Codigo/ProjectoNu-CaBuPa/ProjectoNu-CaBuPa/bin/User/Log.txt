@@ -1364,3 +1364,12 @@
 4/11/2020 17:12:26 LAPTOP-701EDAA0 ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '3' 
 4/11/2020 17:24:49 LAPTOP-701EDAA0 ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
 4/11/2020 17:28:27 LAPTOP-701EDAA0 ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+04/11/2020 23:03:37 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+04/11/2020 23:03:45 DESKTOP-SDVEG3U ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+04/11/2020 23:03:55 DESKTOP-SDVEG3U ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+04/11/2020 23:04:02 DESKTOP-SDVEG3U ' Insert IGNORE into Funcion ( Nombre,descripcion ) values ('m','mn' ) 
+04/11/2020 23:04:03 DESKTOP-SDVEG3U ' select ID_Funcion, Nombre, Descripcion FROM Funcion WHERE true 
+04/11/2020 23:10:58 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+04/11/2020 23:11:12 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 
+04/11/2020 23:13:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+04/11/2020 23:13:46 DESKTOP-SDVEG3U ' select ID_Evento, nombre as Nombre, descripcion as Descripcion FROM evento WHERE true 

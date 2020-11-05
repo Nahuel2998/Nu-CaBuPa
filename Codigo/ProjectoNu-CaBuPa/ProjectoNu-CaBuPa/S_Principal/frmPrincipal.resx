@@ -7407,9 +7407,6 @@
   <data name="&gt;&gt;GroupBox17.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="GroupBox18.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="TableLayoutPanel25.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
@@ -7503,11 +7500,11 @@
   <data name="Panel37.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="txtNombreE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="txtNombreE.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="txtNombreE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
+    <value>0, 0</value>
   </data>
   <data name="txtNombreE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -7519,7 +7516,7 @@
     <value>False</value>
   </data>
   <data name="txtNombreE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>442, 27</value>
+    <value>448, 35</value>
   </data>
   <data name="txtNombreE.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -7566,11 +7563,11 @@
   <data name="Panel38.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="txtDescripcionE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="txtDescripcionE.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="txtDescripcionE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 4</value>
+    <value>0, 0</value>
   </data>
   <data name="txtDescripcionE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -7579,7 +7576,7 @@
     <value>128</value>
   </data>
   <data name="txtDescripcionE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>442, 47</value>
+    <value>448, 55</value>
   </data>
   <data name="txtDescripcionE.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -7655,6 +7652,9 @@
   </data>
   <data name="TableLayoutPanel25.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="Label17" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label20" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Panel37" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Panel38" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="Absolute,43,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="GroupBox18.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="GroupBox18.Font" type="System.Drawing.Font, System.Drawing">
     <value>Mongolian Baiti, 10.2pt</value>
@@ -10389,6 +10389,9 @@
         YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYfHE4f8HceZN3Q9v
         DjgAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>
