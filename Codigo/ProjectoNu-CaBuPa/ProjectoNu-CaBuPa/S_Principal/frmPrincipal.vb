@@ -837,4 +837,10 @@ Public Class frmPrincipal
             BuscarGraPRog(GRAPUBLI)
         End If
     End Sub
+
+    Private Sub dgvTandas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTandas.CellDoubleClick
+        Dim formTanda As New frmTandas()
+        AddHandler formTanda.FormClosed, AddressOf tandasClosed
+        formTanda.ShowDialog()
+    End Sub
 End Class

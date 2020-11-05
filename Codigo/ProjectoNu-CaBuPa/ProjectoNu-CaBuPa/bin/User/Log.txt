@@ -2000,3 +2000,20 @@
 5/11/2020 6:53:25 LAPTOP-J0MPD84C ' select id_Funcionario, Nombre, Telefono, Mail as 'E-Mail' FROM funcionario WHERE true 
 5/11/2020 6:53:50 LAPTOP-J0MPD84C ' DataSource=localhost; Port=3308; Database=jvrpdatabase; Uid=root; Pwd= 
 5/11/2020 6:54:00 LAPTOP-J0MPD84C ' select Nombre, Descripcion, id_video FROM evento WHERE id_evento = '1' 
+05/11/2020 10:05:08 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+05/11/2020 10:05:27 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+05/11/2020 10:05:29 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+05/11/2020 10:05:30 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-11-05' 
+05/11/2020 10:05:34 DESKTOP-SDVEG3U ' Insert IGNORE into fechaprograma ( Fecha,Hora_Inicio,Hora_Fin,ID_Programa ) values ('2020-11-05','10:05:30','14:05:30','2' ) 
+05/11/2020 10:05:34 DESKTOP-SDVEG3U ' select hora_inicio as 'Inicio', hora_fin as 'Final' FROM fechaprograma WHERE id_programa = 2 and fecha = '2020-11-05' 
+05/11/2020 10:05:36 DESKTOP-SDVEG3U ' select fun.id_funcionario, ft.ID_TrabajaComo, fun.Nombre, f.Nombre as Función, fecha_inicio as 'Inicio de la función', fecha_finalizacion as 'Fin de la función', Telefono, Mail FROM (select * from funtrabaja where id_Programa = 2) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario WHERE ifnull(fecha_finalizacion,curdate())>=curdate() 
+05/11/2020 10:05:39 DESKTOP-SDVEG3U ' select ID_Programa, Nombre_Programa as Nombre, Descripcion FROM programa WHERE true 
+05/11/2020 10:11:24 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+05/11/2020 10:12:38 DESKTOP-SDVEG3U ' DataSource=localhost; Port=3306; Database=jvrpdatabase; Uid=root; Pwd= 
+05/11/2020 10:12:43 DESKTOP-SDVEG3U ' select Nombre_Programa, Descripcion, DATE_FORMAT(Fecha_Finalizacion,'%Y-%m-%d') as Fecha_Finalizacion FROM programa WHERE id_programa = '2' 
+05/11/2020 10:12:47 DESKTOP-SDVEG3U ' select Nombre, Tema, id_empresa FROM publicidad WHERE id_publicidad = '2' 
+05/11/2020 10:12:52 DESKTOP-SDVEG3U ' select Hora_inicio, concat('Tanda ',Hora_Inicio,' ',Hora_fin) as 'Horas' FROM Tanda WHERE True 
+05/11/2020 10:13:09 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='01:00:00' and Hora_fin<='23:10:59' 
+05/11/2020 10:13:09 DESKTOP-SDVEG3U ' DELETE FROM tanda WHERE Hora_Inicio>='01:00:00' and Hora_fin<='23:10:59' 
+05/11/2020 10:13:09 DESKTOP-SDVEG3U ' Insert IGNORE into tanda ( hora_inicio, hora_fin ) values ('01:00:00','23:10:59' ) 
+05/11/2020 10:13:09 DESKTOP-SDVEG3U ' update aparecepubli set hora_inicio='01:00:00' WHERE Hora_Inicio='01:00:00' 

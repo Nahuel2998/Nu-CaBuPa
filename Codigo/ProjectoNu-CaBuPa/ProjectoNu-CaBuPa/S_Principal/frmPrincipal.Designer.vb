@@ -152,9 +152,6 @@ Partial Class frmPrincipal
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBFuncionario = New System.Windows.Forms.GroupBox()
         Me.dgvFuncionarios = New System.Windows.Forms.DataGridView()
-        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FFuncion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBDEscripcion = New System.Windows.Forms.GroupBox()
         Me.TBDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -376,6 +373,9 @@ Partial Class frmPrincipal
         Me.BWBuscador = New System.ComponentModel.BackgroundWorker()
         Me.RecPA = New System.Windows.Forms.Timer(Me.components)
         Me.RecTan = New System.Windows.Forms.Timer(Me.components)
+        Me.FNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FFuncion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -1037,24 +1037,6 @@ Partial Class frmPrincipal
         Me.dgvFuncionarios.RowTemplate.Height = 28
         Me.dgvFuncionarios.RowTemplate.ReadOnly = True
         Me.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'FNombre
-        '
-        resources.ApplyResources(Me.FNombre, "FNombre")
-        Me.FNombre.Name = "FNombre"
-        Me.FNombre.ReadOnly = True
-        '
-        'Telefono
-        '
-        resources.ApplyResources(Me.Telefono, "Telefono")
-        Me.Telefono.Name = "Telefono"
-        Me.Telefono.ReadOnly = True
-        '
-        'FFuncion
-        '
-        resources.ApplyResources(Me.FFuncion, "FFuncion")
-        Me.FFuncion.Name = "FFuncion"
-        Me.FFuncion.ReadOnly = True
         '
         'GBDEscripcion
         '
@@ -2081,7 +2063,7 @@ Partial Class frmPrincipal
         'btnTanda
         '
         resources.ApplyResources(Me.btnTanda, "btnTanda")
-        Me.btnTanda.ForeColor = System.Drawing.Color.White
+        Me.btnTanda.ForeColor = System.Drawing.Color.Black
         Me.btnTanda.Name = "btnTanda"
         Me.btnTanda.UseVisualStyleBackColor = True
         '
@@ -2982,6 +2964,24 @@ Partial Class frmPrincipal
         'RecTan
         '
         '
+        'FNombre
+        '
+        resources.ApplyResources(Me.FNombre, "FNombre")
+        Me.FNombre.Name = "FNombre"
+        Me.FNombre.ReadOnly = True
+        '
+        'Telefono
+        '
+        resources.ApplyResources(Me.Telefono, "Telefono")
+        Me.Telefono.Name = "Telefono"
+        Me.Telefono.ReadOnly = True
+        '
+        'FFuncion
+        '
+        resources.ApplyResources(Me.FFuncion, "FFuncion")
+        Me.FFuncion.Name = "FFuncion"
+        Me.FFuncion.ReadOnly = True
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -3279,9 +3279,6 @@ Partial Class frmPrincipal
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
-    Friend WithEvents FNombre As DataGridViewTextBoxColumn
-    Friend WithEvents Telefono As DataGridViewTextBoxColumn
-    Friend WithEvents FFuncion As DataGridViewTextBoxColumn
     Friend WithEvents btnagendarEvento As Button
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents cTelefono As DataGridViewTextBoxColumn
@@ -3408,4 +3405,7 @@ Partial Class frmPrincipal
     Friend WithEvents TableLayoutPanel27 As TableLayoutPanel
     Friend WithEvents ChartPubli As DataVisualization.Charting.Chart
     Friend WithEvents dtpGra As DateTimePicker
+    Friend WithEvents FNombre As DataGridViewTextBoxColumn
+    Friend WithEvents Telefono As DataGridViewTextBoxColumn
+    Friend WithEvents FFuncion As DataGridViewTextBoxColumn
 End Class

@@ -181,9 +181,11 @@ Public Class frmEvento
 
     Private Sub tcP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcP.SelectedIndexChanged
         If (tcP.SelectedIndex = 1) Then
-            bwFechas.RunWorkerAsync()
+            If Not bwFechas.IsBusy Then
+                bwFechas.RunWorkerAsync()
+            End If
         ElseIf (tcP.SelectedIndex = 2) Then
-            PubliDeFechaE(dt_publicidades, dgvEventoPubli, eventoID, dtpFPubli.Value)
+                PubliDeFechaE(dt_publicidades, dgvEventoPubli, eventoID, dtpFPubli.Value)
         End If
     End Sub
 
@@ -215,5 +217,11 @@ Public Class frmEvento
 
     Private Sub dtpFPubli_ValueChanged(sender As Object, e As EventArgs) Handles dtpFPubli.ValueChanged
         PubliDeFechaE(dt_publicidades, dgvEventoPubli, eventoID, dtpFPubli.Value)
+    End Sub
+
+    Private Sub dtpYearE_ValueChanged(sender As Object, e As EventArgs) Handles dtpYearE.ValueChanged
+        If Not bwFechas.IsBusy Then
+            bwFechas.RunWorkerAsync()
+        End If
     End Sub
 End Class
