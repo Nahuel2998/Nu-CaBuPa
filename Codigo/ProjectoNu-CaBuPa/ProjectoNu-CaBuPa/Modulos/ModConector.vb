@@ -4,7 +4,7 @@ Imports MySql.Data
 Imports System.Drawing.Text
 
 Module ModConector
-    Private Debug As Boolean = False 'fixmo
+    Private Debug As Boolean = True 'fixmo
     Private conn As New MySqlConnection
     Private connStr As String
     Private Address, User, Database, Port, Pass As String
