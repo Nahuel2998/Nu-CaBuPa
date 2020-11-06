@@ -4,7 +4,7 @@ Imports MySql.Data
 Imports System.Drawing.Text
 
 Module ModConector
-    Private Debug As Boolean = True 'fixmo
+    Private Debug As Boolean = False 'fixmo
     Private conn As New MySqlConnection
     Private connStr As String
     Private Address, User, Database, Port, Pass As String
@@ -212,13 +212,12 @@ Module ModConector
 
     End Function
     Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String) As Boolean
-
-
-
         Try
             Dim dto As DataTable = DevolverTabla(PSQL("nombre", "usuarios", "true"))
             If Not IsNothing(dto) Then
-
+                If (dto.Rows.Count = 1) Then
+                    Debug = True
+                End If
                 objCmd = New MySqlCommand(PSQL("id_usuario", "usuarios as User", "nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256))"), conn)
                 objCmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre
                 objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = contraseña
