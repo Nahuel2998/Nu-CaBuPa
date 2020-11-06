@@ -109,7 +109,7 @@ Partial Class frmLUsuario
         Me.btnEntrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btnEntrar.Enabled = False
         Me.btnEntrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEntrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnEntrar.ForeColor = System.Drawing.Color.Black
         Me.btnEntrar.Location = New System.Drawing.Point(288, 114)
         Me.btnEntrar.Name = "btnEntrar"
         Me.btnEntrar.Size = New System.Drawing.Size(115, 42)
