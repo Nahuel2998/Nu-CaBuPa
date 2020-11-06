@@ -175,6 +175,11 @@ Module ModConector
         End If
 
     End Sub
+    Public Sub ISQLR(ByVal nTabla As String, ByVal Column As String, ByVal Data As String)
+        ESQL("replace into " + nTabla + " ( " + Column + " ) values (" + Data + " )")
+        ModLog.Guardar("replace into " + nTabla + " ( " + Column + " ) values " + Data)
+    End Sub
+
     Public Sub MISQL(ByVal nTabla As String, ByVal Column As String, ByVal datos() As String, Optional comilla As Boolean = True)
         Dim r As String = ""
         For Each d In datos
@@ -235,7 +240,7 @@ Module ModConector
                         Password = contraseña
                         UsuarioID = Integer.Parse(dt.Rows(0)("id_usuario"))
                         ModPermisos.Esid(UsuarioID)
-                        CargarPermiso()
+                        CargarPermiso(UsuarioID)
                         conT.CloseAsync()
                         Return True
                     End If

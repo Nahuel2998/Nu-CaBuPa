@@ -3,11 +3,11 @@ Imports System.IO
 Imports System.Collections
 Module ModUser
     ':::Ruta donde crearemos nuestro archivo txt
-    Private ruta As String = "..\User\"
+    Private ruta As String = "C:\Nu-CaBuPa\"
     ':::Nombre del archivo
-    Private archivo As String = "User.txt"
-    Private Barchivo As String = "Origin.txt"
-    Private karchivo As String = "Key.txt"
+    Private archivo As String = "User.dat"
+    Private Barchivo As String = "Origin.dat"
+    Private karchivo As String = "Key.dat"
     'Establece la key y una verificacion
     Public Sub Inicio()
         If Not Directory.Exists(ruta) Then
@@ -50,6 +50,14 @@ Module ModUser
         If Not File.Exists(ruta & archivo) Then
             If Not File.Exists(ruta & Barchivo) Then
                 File.Create(ruta & Barchivo).Close()
+                ModConector.Crear("", "", "", "", "")
+                Guardar(True)
+                ModConector.Inicio()
+                BSQL("usuarios", "nombre='admin'")
+                BSQL("usuarios", "id_usuario='1'")
+                ISQL("usuarios", "id_usuario,nombre,contrasena", "'1','admin', AES_ENCRYPT('default',sha2('" + ModCodificador.GKey + "',256))")
+                ISQL("ustieneacceso", "id_usuario, id_acceso", "1,2")
+                ISQL("ustieneacceso", "id_usuario, id_acceso", "1,11")
             Else
                 File.Copy(ruta & Barchivo, ruta & archivo)
             End If
@@ -81,7 +89,6 @@ Module ModUser
         Dim archivos As String
         If Desarrollo Then
             archivos = Barchivo
-
         Else
             archivos = archivo
         End If

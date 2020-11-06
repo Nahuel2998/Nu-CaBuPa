@@ -103,7 +103,8 @@
             For i As Integer = 0 To Permisos.Rows.Count - 1
                 If (Permisos.Rows(i).Item(1) = Seccion) Then
                     If (tipo <> "") Then
-                        If (Permisos.Rows(i).Item(2) = tipo) Then
+                        ModLog.Guardar(Permisos.Rows(i).Item(2))
+                        If (Permisos.Rows(i).Item(2).ToString.Contains(tipo)) Then
                             Return True
                         End If
                     Else

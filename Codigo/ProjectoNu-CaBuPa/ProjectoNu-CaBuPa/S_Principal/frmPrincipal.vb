@@ -137,7 +137,7 @@ Public Class frmPrincipal
     End Sub
 
     Public Sub GuardarNotas()
-        Dim ruta As String = "..\User\"
+        Dim ruta As String = "C:\Nu-CaBuPa\"
         Dim archivo As String = "Notas.txt"
         Dim escribir As New StreamWriter(ruta & archivo, False)
         escribir.Write(TBNotas.Text)
