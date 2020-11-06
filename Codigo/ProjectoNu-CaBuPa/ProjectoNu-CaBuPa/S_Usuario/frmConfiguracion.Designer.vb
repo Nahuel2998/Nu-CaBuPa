@@ -481,14 +481,15 @@ Partial Class frmConfiguracion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(524, 334)
+        Me.ClientSize = New System.Drawing.Size(531, 342)
         Me.Controls.Add(Me.TAB)
         Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(542, 381)
-        Me.MinimumSize = New System.Drawing.Size(542, 381)
+        Me.MaximumSize = New System.Drawing.Size(549, 389)
+        Me.MinimumSize = New System.Drawing.Size(549, 389)
         Me.Name = "frmConfiguracion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Configuración"

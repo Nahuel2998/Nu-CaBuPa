@@ -383,7 +383,7 @@ Partial Class frmEvento
         Me.btnABorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnABorrar.ForeColor = System.Drawing.Color.Black
         Me.btnABorrar.Location = New System.Drawing.Point(256, 4)
-        Me.btnABorrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnABorrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnABorrar.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnABorrar.Name = "btnABorrar"
         Me.btnABorrar.Size = New System.Drawing.Size(224, 42)
@@ -398,7 +398,7 @@ Partial Class frmEvento
         Me.btnAnadir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnAnadir.ForeColor = System.Drawing.Color.Black
         Me.btnAnadir.Location = New System.Drawing.Point(4, 4)
-        Me.btnAnadir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAnadir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAnadir.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnAnadir.Name = "btnAnadir"
         Me.btnAnadir.Size = New System.Drawing.Size(244, 42)
@@ -544,7 +544,7 @@ Partial Class frmEvento
         Me.btnBorrarSelect.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrarSelect.ForeColor = System.Drawing.Color.Black
         Me.btnBorrarSelect.Location = New System.Drawing.Point(4, 4)
-        Me.btnBorrarSelect.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBorrarSelect.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBorrarSelect.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnBorrarSelect.Name = "btnBorrarSelect"
         Me.btnBorrarSelect.Size = New System.Drawing.Size(467, 42)
@@ -574,15 +574,15 @@ Partial Class frmEvento
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(516, 361)
+        Me.ClientSize = New System.Drawing.Size(519, 371)
         Me.Controls.Add(Me.tcP)
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(534, 408)
-        Me.MinimumSize = New System.Drawing.Size(534, 408)
+        Me.MaximumSize = New System.Drawing.Size(537, 418)
+        Me.MinimumSize = New System.Drawing.Size(537, 418)
         Me.Name = "frmEvento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Eventos"
