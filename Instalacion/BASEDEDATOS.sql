@@ -1,0 +1,189 @@
+CREATE TABLE `funcion` (
+  `ID_Funcion` int(6) unsigned NOT NULL AUTO_INCREMENT,
+Nombre varchar(16) not null,
+  `descripcion` varchar(128) NOT NULL,
+  PRIMARY KEY (ID_Funcion)
+);
+CREATE TABLE `funcionario` (
+  `ID_Funcionario` int(6) unsigned NOT NULL AUTO_INCREMENT,
+`Telefono` varchar(16) DEFAULT NULL,
+  `nombre` varchar(48) NOT NULL,
+`Mail` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`ID_Funcionario`)
+);
+CREATE TABLE `acceso` (
+  `id_acceso` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `seccion` varchar(8) NOT NULL,
+  `tipo` varchar(2) NOT NULL,
+  PRIMARY KEY (`id_acceso`)
+);
+CREATE TABLE `serie` (
+  `ID_Serie` int(6) unsigned NOT NULL AUTO_INCREMENT,
+`fecha_finalizacion` date DEFAULT NULL,
+`nombre` varchar(48) NOT NULL,
+  PRIMARY KEY (`ID_Serie`)
+);
+
+CREATE TABLE `video` (
+  `ID_Video` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `contenido` varchar(128) NOT NULL,
+  `nombre` varchar(48) NOT NULL,
+  `ID_Serie` int(6) unsigned DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
+  PRIMARY KEY (`ID_Video`),
+Foreign KEY (ID_Serie) references Serie(`ID_Serie`)
+);
+
+CREATE TABLE `evento` (
+  `ID_Evento` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(32) NOT NULL,
+  `descripcion` varchar(128) NOT NULL,
+  `ID_Video` int(6) unsigned,
+  PRIMARY KEY (`ID_Evento`),
+  Foreign KEY (ID_Video)references Video(`ID_Video`)
+);
+CREATE TABLE `empresa` (
+  `ID_Empresa` int(6) unsigned NOT NULL AUTO_INCREMENT,
+`Nombre` varchar(64) NOT NULL,
+  `Telefono` varchar(16) DEFAULT NULL,
+`Mail` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`ID_Empresa`)
+);
+CREATE TABLE `publicidad` (
+  `ID_Publicidad` int(6) unsigned NOT NULL AUTO_INCREMENT,
+ `Nombre` varchar(32) NOT NULL,
+  `Tema` varchar(64) NOT NULL,
+  `ID_Empresa` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`ID_Publicidad`),
+  Foreign KEY (ID_Empresa) references Empresa(`ID_Empresa`)
+);
+
+CREATE TABLE `usuarios` (
+  `id_usuario` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(16) NOT NULL,
+  `contrasena` varbinary(256) NOT NULL,
+  PRIMARY KEY (`id_usuario`)
+);
+CREATE TABLE `tanda` (
+  `Hora_Inicio` time NOT NULL,
+  `Hora_Fin` time NOT NULL,
+PRIMARY KEY (`Hora_Inicio`)
+);
+
+CREATE TABLE `programa` (
+  `ID_Programa` int(6) unsigned NOT NULL AUTO_INCREMENT,
+`Nombre_Programa` varchar(48) NOT NULL,
+  `Descripcion` varchar(128) DEFAULT NULL,
+  `Fecha_Finalizacion` datetime DEFAULT NULL,
+PRIMARY KEY (`ID_Programa`)
+);
+
+CREATE TABLE `aparecepubli` (
+  `ID_Publicidad` int(6) unsigned NOT NULL,
+`Hora_Inicio` time NOT NULL,
+  `Fecha_Inicio` date NOT NULL,
+  `Fecha_Finalizacion` date NOT NULL,
+  PRIMARY KEY (`ID_Publicidad`,`Hora_Inicio`,`Fecha_Inicio`),
+Foreign KEY (Hora_Inicio) references Tanda(Hora_Inicio),
+Foreign key (ID_Publicidad) references Publicidad(ID_Publicidad)
+);
+
+CREATE TABLE `eventomuestrapubli` (
+  `ID_Evento` int(6) unsigned NOT NULL,
+  `ID_Publicidad` int(6) unsigned NOT NULL,
+  `Fecha_Inicio` date NOT NULL,
+  `Fecha_Finalizacion` date NOT NULL,
+  PRIMARY KEY (`ID_Evento`,`ID_Publicidad`,`Fecha_Inicio`),
+  Foreign KEY (ID_Publicidad) references Publicidad(`ID_Publicidad`),
+Foreign KEY (ID_Evento) references Evento(ID_Evento)
+);
+CREATE TABLE `fechaevento` (
+  `ID_Evento` int(6) unsigned NOT NULL,
+  `fecha` datetime NOT NULL,
+  PRIMARY KEY (`ID_Evento`,`fecha`),
+Foreign key (ID_Evento) references Evento(ID_Evento)
+);
+CREATE TABLE `fechaprograma` (
+  `Fecha` date NOT NULL,
+  `Hora_Inicio` time NOT NULL,
+  `Hora_Fin` time NOT NULL,
+  `ID_Programa` int(6) unsigned DEFAULT NULL,
+PRIMARY KEY (`Fecha`,`Hora_Inicio`),
+Foreign KEY (ID_Programa) references Programa(`ID_Programa`)
+);
+CREATE TABLE `trabajacomo` (
+ID_TrabajaComo int(6) unsigned not null auto_increment,
+  `ID_Funcionario` int(6) unsigned NOT NULL,
+  `ID_Funcion` int(6) unsigned NOT NULL,
+  PRIMARY KEY (ID_TrabajaComo),
+  Foreign KEY (ID_Funcion) references Funcion(`ID_Funcion`),
+Foreign KEY (ID_Funcionario) references Funcionario(ID_Funcionario)
+);
+CREATE TABLE `funtrabaja` (
+  `ID_TrabajaComo` int(6) unsigned NOT NULL,
+  `ID_Programa` int(6) unsigned NOT NULL,
+`fecha_inicio` date NOT NULL,
+  `fecha_finalizacion` date DEFAULT NULL,
+  PRIMARY KEY (`ID_TrabajaComo`,`ID_Programa`,`fecha_inicio`),
+Foreign KEY (ID_TrabajaComo) references Funcion(`ID_Funcion`),
+Foreign KEY (ID_Programa) references Programa(`ID_Programa`)
+);
+CREATE TABLE `pmuestrapubli` (
+  `ID_Publicidad` int(6) unsigned NOT NULL,
+  `ID_Programa` int(6) unsigned NOT NULL,
+`Fecha_Inicio` date NOT NULL,
+  `Fecha_Finalizacion` date NOT NULL,
+  PRIMARY KEY (`Fecha_Inicio`,`ID_Programa`,`ID_Publicidad`),
+Foreign KEY (ID_Programa) references Programa(`ID_Programa`),
+  Foreign KEY (ID_Publicidad) references Publicidad(`ID_Publicidad`)
+);
+CREATE TABLE `programacuota` (
+  `ID_Programa_Cuota` int(6) unsigned NOT NULL auto_increment,
+  `ID_Programa` int(6) unsigned NOT NULL,
+`Fecha_Pago` date DEFAULT NULL,
+`Precio` decimal(7,2) unsigned NOT NULL,
+  `Fecha_Emision` date NOT NULL,
+  PRIMARY KEY (`ID_Programa_Cuota`),
+Foreign KEY (ID_Programa) references Programa(`ID_Programa`)
+);
+CREATE TABLE `publicidadcuota` (
+  `ID_PublicidadCuota` int(6) unsigned NOT NULL AUTO_INCREMENT,
+`Fecha_Pago` date DEFAULT NULL,
+`Precio` decimal(7,2) unsigned NOT NULL,
+  `ID_Publicidad` int(6) unsigned NOT NULL,
+  `Fecha_Emision` date NOT NULL,
+  PRIMARY KEY (`ID_PublicidadCuota`),
+  Foreign KEY (ID_Publicidad) references Publicidad(`ID_Publicidad`)
+);
+
+
+
+
+CREATE TABLE `ustieneacceso` (
+`id_usuario` int(6) unsigned NOT NULL,
+  `id_acceso` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`id_usuario`,`id_acceso`),
+  Foreign KEY (id_acceso) references acceso(`id_acceso`)
+);
+REPLACE `acceso` VALUES 
+(1,'Inicio','a'),
+(2,'Configur','a'),
+(3,'Programa','a'),
+(4,'Serie','a'),
+(5,'Video','a'),
+(6,'Empresa','a'),
+(7,'Publicid','a'),
+(8,'Evento','a'),
+(9,'Tanda','a'),
+(10,'Tanda','v'),
+(11,'Configur','v'),
+(12,'Programa','v'),
+(13,'Serie','v'),
+(14,'Video','v'),
+(15,'Serie','v'),
+(16,'Empresas','v'),
+(17,'Publicid','v'),
+(18,'Eventos','v'),
+(19,'Funciona','a'),
+(20,'Funciona','v')
+;

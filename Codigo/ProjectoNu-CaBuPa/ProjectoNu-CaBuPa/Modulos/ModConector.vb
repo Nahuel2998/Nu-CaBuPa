@@ -97,7 +97,7 @@ Module ModConector
                 conn.Open()
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.ToString())
+            MessageBox.Show("Error de conexión con la base de datos.")
         End Try
     End Sub
     Public Sub desconectar()
@@ -117,7 +117,7 @@ Module ModConector
             objCmd.Prepare()
             objCmd.ExecuteNonQuery()
         Catch ex As Exception
-            MessageBox.Show(ex.ToString)
+            MessageBox.Show("Error de conexión.")
             Return False
         End Try
         conT.CloseAsync()
@@ -134,7 +134,7 @@ Module ModConector
             sqladapter = New MySqlDataAdapter(objCmd)
             sqladapter.FillAsync(dt)
         Catch ex As Exception
-            MessageBox.Show(ex.ToString)
+            MessageBox.Show("Error de conexión.")
             Return Nothing
         End Try
         conT.CloseAsync()
@@ -153,7 +153,7 @@ Module ModConector
                 ds.Tables.Add(dt)
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.ToString)
+            MessageBox.Show("Error de conexión.")
             Return Nothing
         End Try
         sqladapter.Dispose()
@@ -212,13 +212,16 @@ Module ModConector
 
     End Function
     Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String) As Boolean
+
         Try
+            Dim conT = New MySqlConnection(connStr)
+            conT.OpenAsync()
             Dim dto As DataTable = DevolverTabla(PSQL("nombre", "usuarios", "true"))
             If Not IsNothing(dto) Then
                 If (dto.Rows.Count = 1) Then
                     Debug = True
                 End If
-                objCmd = New MySqlCommand(PSQL("id_usuario", "usuarios as User", "nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256))"), conn)
+                objCmd = New MySqlCommand(PSQL("id_usuario", "usuarios as User", "nombre = @nombre AND contrasena = AES_ENCRYPT(@contrasena,sha2(@key,256))"), conT)
                 objCmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre
                 objCmd.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = contraseña
                 objCmd.Parameters.Add("@key", MySqlDbType.VarChar).Value = ModCodificador.GKey
@@ -233,16 +236,18 @@ Module ModConector
                         UsuarioID = Integer.Parse(dt.Rows(0)("id_usuario"))
                         ModPermisos.Esid(UsuarioID)
                         CargarPermiso()
+                        conT.CloseAsync()
                         Return True
                     End If
                 End If
             Else
+                conT.CloseAsync()
                 Return True
             End If
+            conT.CloseAsync()
         Catch e As Exception
             MessageBox.Show("Error")
         End Try
-
         Return False
     End Function
     Public Sub IUsuario(ByVal nombre As String, ByVal contraseña As String)
