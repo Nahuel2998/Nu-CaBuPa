@@ -1,0 +1,38 @@
+New Component > Guna2BorderlessForm:
+- It is easier for you to customize the view of the borderless form with some of the combinant components: dragform, dockform, resizeform, formshadow, ellipse and animatewindow.
+
+Improved > Guna2ShadowForm:
+- Added the property BorderRadius.
+> BorderRadius: The curve angle of the shadow on all angles.
+- Added the property ShadowColor.
+> ShadowColor: Gets or sets the shadow color.
+Improved > Guna2DragControl:
+- Added the property DockForm.
+> DockForm: Gets or sets a value indicating whether the docking indicators will be used on the parent form.
+- Added the property DockIndicatorColor.
+> DockIndicatorColor: Gets or sets the color of the docking indicators.
+- Added the property DockIndicatorTransparencyValue.
+> DockIndicatorTransparencyValue: Gets or sets the opacity or transparency of the docking indicators.
+- Added the property DragMode.
+> DragMode: Gets or sets a value indicating whether the parent form or control will be dragging.
+- Added the property DragOrientation.
+> DragOrientation: Allows you to move the form or control on the vertical, horizontal or both axis.
+
+Fixed > Guna2ShadowForm:
+- Memory/RAM usage optimized.
+Fixed > Guna2Button:
+- Memory/RAM usage optimized.
+Fixed > Guna2TileButton:
+- Memory/RAM usage optimized.
+Fixed > Guna2CircleButton:
+- Memory/RAM usage optimized.
+Fixed > Guna2GradientCircleButton:
+- Memory/RAM usage optimized.
+Fixed > Guna2GradientButton:
+- Memory/RAM usage optimized.
+Fixed > Guna2GradientTileButton:
+- Memory/RAM usage optimized.
+Fixed > Guna2DateTimePicker:
+- Memory/RAM usage optimized.
+Fixed > Guna2ControlBox:
+- Memory/RAM usage optimized.

@@ -1,0 +1,13 @@
+Requirements
+Minimum System & User Requirements
+
+Guna UI currently work with C# and VB.NET languages, specifically and specially designed for Windows Forms applications.
+
+To effectively get the most out of our tools, your system needs to meet the following minimum requirements:
+- Runs on Windows.
+- Microsoft .NET Framework 4.0 or higher.
+- Visual Studio 2012 or later (recommended).
+
+As a developer, you need to:
+- Have a basic knowledge of C# or VB.NET.
+- Have a basic knowledge of Windows Forms.

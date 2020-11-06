@@ -1,0 +1,5 @@
+Siguiente versión
++Conexión con la BD 50-50
++Interfaz de login 0
++Objeto controlador de BD 0
++Version inicial del inicio 0
