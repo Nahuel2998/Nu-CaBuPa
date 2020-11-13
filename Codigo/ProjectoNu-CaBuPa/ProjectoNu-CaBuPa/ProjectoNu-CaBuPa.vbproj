@@ -27,14 +27,14 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>https://github.com/Nahuel2998/Nu-CaBuPa/blob/master/Instalacion/publish/</UpdateUrl>
+    <UpdateUrl>http://localhost/ProjectoNu-CaBuPa/</UpdateUrl>
     <SupportUrl>https://github.com/Nahuel2998/Nu-CaBuPa/</SupportUrl>
     <ErrorReportUrl>https://github.com/Nahuel2998/Nu-CaBuPa/</ErrorReportUrl>
     <TargetCulture>es</TargetCulture>
     <ProductName>SAJVRP</ProductName>
     <PublisherName>Nu-CaBuPa</PublisherName>
     <SuiteName>SAJVRP</SuiteName>
-    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationRevision>23</ApplicationRevision>
     <ApplicationVersion>1.8.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
