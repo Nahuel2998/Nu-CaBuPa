@@ -61,8 +61,10 @@ Public Class frmSerie
         ElseIf editando Then
             If cambio Then
                 Dim datos() As String = {If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), "null"), txtNombre.Text}
+
                 If Not CompararValores(VaciarNull(datos), tmpDatos) Then
                     PrepararUpdate("Serie", datos, serieID)
+                    tmpDatos = {If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), ""), txtNombre.Text}
                 End If
 
                 AlternarCambioHandlers()
@@ -74,6 +76,7 @@ Public Class frmSerie
 
             Alternar()
         End If
+        'AlternarCambioHandlers()
     End Sub
     Private Sub Vaciar()
         txtNombre.Clear()
@@ -86,8 +89,6 @@ Public Class frmSerie
             Close()
         Else
             If cambio Then
-                AlternarCambioHandlers()
-
                 If tmpDatos(0) <> "" Then
                     dtpFecha.Value = CDate(tmpDatos(0))
                 Else
@@ -96,9 +97,8 @@ Public Class frmSerie
                     chbIncluir.Checked = False
                 End If
                 txtNombre.Text = tmpDatos(1)
-
+                AlternarCambioHandlers()
             End If
-
             Alternar()
         End If
     End Sub
@@ -133,19 +133,19 @@ Public Class frmSerie
             btnSSalir.Text = "Salir"
             Text = "Ver Serie"
 
+            RemoveHandler chbIncluir.CheckedChanged, AddressOf chbIncluir_CheckedChanged
+            chbIncluir.Checked = tmpDatos(0) <> ""
+            AddHandler chbIncluir.CheckedChanged, AddressOf chbIncluir_CheckedChanged
+
             txtTapar.Visible = Not chbIncluir.Checked
         Else
             btnSSalir.Text = "Cancelar"
             btnSEditar.Text = "Guardar"
             Text = "Editar Serie"
-            RemoveHandler chbIncluir.CheckedChanged, AddressOf chbIncluir_CheckedChanged
-            chbIncluir.Checked = tmpDatos(0) <> ""
-            AddHandler chbIncluir.CheckedChanged, AddressOf chbIncluir_CheckedChanged
-            ' ...Sufro con poner esas dos lineas
 
             txtTapar.Visible = False
-            End If
-            editando = Not editando
+        End If
+        editando = Not editando
 
         txtNombre.ReadOnly = Not editando
         dtpFecha.Enabled = editando

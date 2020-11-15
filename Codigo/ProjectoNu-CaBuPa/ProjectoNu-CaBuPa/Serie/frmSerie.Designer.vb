@@ -157,12 +157,13 @@ Partial Class frmSerie
         Me.TableLayoutPanel3.Controls.Add(Me.btnSSalir, 4, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnBorrar, 2, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.btnSEditar, 0, 0)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 336)
         Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(875, 58)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(889, 59)
         Me.TableLayoutPanel3.TabIndex = 28876924
         '
         'btnSSalir
@@ -173,11 +174,11 @@ Partial Class frmSerie
         Me.btnSSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnSSalir.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnSSalir.ForeColor = System.Drawing.Color.Black
-        Me.btnSSalir.Location = New System.Drawing.Point(720, 4)
+        Me.btnSSalir.Location = New System.Drawing.Point(734, 4)
         Me.btnSSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSSalir.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnSSalir.Name = "btnSSalir"
-        Me.btnSSalir.Size = New System.Drawing.Size(151, 50)
+        Me.btnSSalir.Size = New System.Drawing.Size(151, 51)
         Me.btnSSalir.TabIndex = 0
         Me.btnSSalir.Text = "Salir"
         Me.btnSSalir.UseVisualStyleBackColor = False
@@ -189,11 +190,11 @@ Partial Class frmSerie
         Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBorrar.Font = New System.Drawing.Font("Mongolian Baiti", 10.2!)
         Me.btnBorrar.ForeColor = System.Drawing.Color.Black
-        Me.btnBorrar.Location = New System.Drawing.Point(335, 4)
+        Me.btnBorrar.Location = New System.Drawing.Point(338, 4)
         Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBorrar.MinimumSize = New System.Drawing.Size(120, 15)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(248, 50)
+        Me.btnBorrar.Size = New System.Drawing.Size(255, 51)
         Me.btnBorrar.TabIndex = 2
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
@@ -705,7 +706,7 @@ Partial Class frmSerie
         Me.TableLayoutPanel4.SetColumnSpan(Me.TableLayoutPanel6, 2)
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.60207!))
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.39793!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140.0!))
         Me.TableLayoutPanel6.Controls.Add(Me.btnBuscar, 2, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.Label4, 0, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.Label5, 0, 1)
@@ -727,11 +728,11 @@ Partial Class frmSerie
         Me.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBuscar.Font = New System.Drawing.Font("Mongolian Baiti", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.Black
-        Me.btnBuscar.Location = New System.Drawing.Point(752, 4)
+        Me.btnBuscar.Location = New System.Drawing.Point(750, 4)
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.TableLayoutPanel6.SetRowSpan(Me.btnBuscar, 2)
-        Me.btnBuscar.Size = New System.Drawing.Size(131, 64)
+        Me.btnBuscar.Size = New System.Drawing.Size(133, 64)
         Me.btnBuscar.TabIndex = 0
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -773,7 +774,7 @@ Partial Class frmSerie
         Me.txtNombreBV.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombreBV.MaxLength = 48
         Me.txtNombreBV.Name = "txtNombreBV"
-        Me.txtNombreBV.Size = New System.Drawing.Size(639, 22)
+        Me.txtNombreBV.Size = New System.Drawing.Size(637, 22)
         Me.txtNombreBV.TabIndex = 3
         '
         'TableLayoutPanel8
@@ -790,14 +791,14 @@ Partial Class frmSerie
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 1
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(639, 33)
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(637, 33)
         Me.TableLayoutPanel8.TabIndex = 4
         '
         'chkFecha
         '
         Me.chkFecha.AutoSize = True
         Me.chkFecha.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.chkFecha.Location = New System.Drawing.Point(616, 4)
+        Me.chkFecha.Location = New System.Drawing.Point(614, 4)
         Me.chkFecha.Margin = New System.Windows.Forms.Padding(4)
         Me.chkFecha.Name = "chkFecha"
         Me.chkFecha.Size = New System.Drawing.Size(19, 25)
@@ -812,7 +813,7 @@ Partial Class frmSerie
         Me.dtpFechaBV.Location = New System.Drawing.Point(4, 4)
         Me.dtpFechaBV.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpFechaBV.Name = "dtpFechaBV"
-        Me.dtpFechaBV.Size = New System.Drawing.Size(604, 22)
+        Me.dtpFechaBV.Size = New System.Drawing.Size(602, 22)
         Me.dtpFechaBV.TabIndex = 0
         '
         'BWBuscador

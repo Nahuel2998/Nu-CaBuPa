@@ -63,13 +63,16 @@ Public Class frmFuncionario
                 CargarDatos()
                 If Not CompararValores(VaciarNull(datos), tmpDatos) Then
                     PrepararUpdate("Funcionario", datos, ID)
+                    tmpDatos = {txtTelefono.Text, txtNombre.Text, txtMail.Text}
+
                 End If
-                'AlternarCambioHandlers()
+                AlternarCambioHandlers()
             End If
         Else
             tmpDatos = {txtTelefono.Text, txtNombre.Text, txtMail.Text}
+            cambio = False
+            AlternarCambioHandlers()
         End If
-
         Alternar()
     End Sub
     Private Sub Vaciar()
@@ -119,6 +122,7 @@ Public Class frmFuncionario
             btnEditar.Text = "Editar"
             btnSalir.Text = "Salir"
             Text = "Ver Funcionario"
+            tmpDatos = {txtTelefono.Text, txtNombre.Text, txtMail.Text}
         Else
             btnSalir.Text = "Cancelar"
             btnEditar.Text = "Guardar"

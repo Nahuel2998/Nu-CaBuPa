@@ -47,16 +47,15 @@ Public Class frmEmpresa
                 CargarDatos()
                 If Not CompararValores(VaciarNull(datos), tmpDatos) Then
                     PrepararUpdate("Empresa", datos, empresaID)
+                    tmpDatos = {txtNombre.Text, txtTelefono.Text, txtMail.Text}
                 End If
-                'AlternarCambioHandlers()
             End If
             Alternar()
         Else
-            tmpDatos(0) = txtNombre.Text
-            tmpDatos(1) = txtTelefono.Text
-            tmpDatos(2) = txtMail.Text
+            tmpDatos = {txtNombre.Text, txtTelefono.Text, txtMail.Text}
             Alternar()
         End If
+        AlternarCambioHandlers()
     End Sub
     Private Sub Vaciar()
         txtNombre.Clear()
