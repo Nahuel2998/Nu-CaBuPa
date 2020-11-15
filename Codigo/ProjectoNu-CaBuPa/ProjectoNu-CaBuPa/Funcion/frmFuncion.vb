@@ -40,7 +40,7 @@
                 If Not CompararValores(VaciarNull(datos), tmpDatos) Then
                     PrepararUpdate("Funcion", datos, ID)
                 End If
-                AlternarCambioHandlers()
+                'AlternarCambioHandlers()
             End If
         Else
             tmpDatos = {txtNombre.Text, txtDesc.Text}

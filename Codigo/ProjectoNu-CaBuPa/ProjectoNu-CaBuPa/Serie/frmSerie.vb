@@ -86,6 +86,8 @@ Public Class frmSerie
             Close()
         Else
             If cambio Then
+                AlternarCambioHandlers()
+
                 If tmpDatos(0) <> "" Then
                     dtpFecha.Value = CDate(tmpDatos(0))
                 Else
@@ -95,7 +97,6 @@ Public Class frmSerie
                 End If
                 txtNombre.Text = tmpDatos(1)
 
-                AlternarCambioHandlers()
             End If
 
             Alternar()
@@ -137,15 +138,14 @@ Public Class frmSerie
             btnSSalir.Text = "Cancelar"
             btnSEditar.Text = "Guardar"
             Text = "Editar Serie"
-
             RemoveHandler chbIncluir.CheckedChanged, AddressOf chbIncluir_CheckedChanged
             chbIncluir.Checked = tmpDatos(0) <> ""
             AddHandler chbIncluir.CheckedChanged, AddressOf chbIncluir_CheckedChanged
             ' ...Sufro con poner esas dos lineas
 
             txtTapar.Visible = False
-        End If
-        editando = Not editando
+            End If
+            editando = Not editando
 
         txtNombre.ReadOnly = Not editando
         dtpFecha.Enabled = editando
@@ -154,19 +154,19 @@ Public Class frmSerie
 
     '' Checkean si hay cambios hechos
     '' Si cambio = True, no se llamaran
-    Private Sub txtNombre_ModifiedChanged(sender As Object, e As EventArgs)
+    Private Sub txtNombre_ModifiedChanged(sender As Object, e As EventArgs) Handles txtNombre.ModifiedChanged
         If txtNombre.Modified Then
             AlternarCambioHandlers()
         End If
     End Sub
-    Private Sub dtpFecha_ValueChanged(sender As Object, e As EventArgs)
+    Private Sub dtpFecha_ValueChanged(sender As Object, e As EventArgs) Handles dtpFecha.ValueChanged
         AlternarCambioHandlers()
     End Sub
-    Private Sub chbIncluir_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub chbIncluir_CheckedChanged(sender As Object, e As EventArgs) Handles chbIncluir.CheckedChanged
         AlternarCambioHandlers()
     End Sub
 
-    ' Aqui yacIA mi variable, recordatorio de lo que una vez fue Y AUN ES
+    ' Aqui yacIA mi variable, recordatorio de lo que una vez fue
     ' cambio: I LIVED BITCH
 
     '' Alterna el estado de cambios y activa/desactiva la deteccion de cambios

@@ -2,7 +2,7 @@
 Public Class frmEmpresa
     Dim empresaID As Integer
     Dim editando As Boolean = False ' Controla si se esta en modo de edicion o no
-    Dim tmpDatos(3) As String
+    Dim tmpDatos() As String = {"", "", "", ""}
     Dim cambio As Boolean = False    ' Controla si han habido cambios desde el ultimo modo de edicion
     Dim dt_Publicidad As New DataTable
     Dim datos() As String
@@ -35,23 +35,28 @@ Public Class frmEmpresa
         '' editando = False  -> Se le permitira al usuario escribir en los campos
         If empresaID = -1 Then
             CargarDatos()
-            PrepararInsert("Empresa", datos)
-            Vaciar()
+            If (ValidarEmail(txtMail.Text)) Then
+
+                PrepararInsert("Empresa", datos)
+                Vaciar()
+            Else
+                MessageBox.Show("Debe ingresar un mail de contacto válido")
+            End If
         ElseIf editando Then
             If cambio Then
                 CargarDatos()
                 If Not CompararValores(VaciarNull(datos), tmpDatos) Then
                     PrepararUpdate("Empresa", datos, empresaID)
                 End If
-                AlternarCambioHandlers()
+                'AlternarCambioHandlers()
             End If
+            Alternar()
         Else
             tmpDatos(0) = txtNombre.Text
             tmpDatos(1) = txtTelefono.Text
             tmpDatos(2) = txtMail.Text
+            Alternar()
         End If
-
-        Alternar()
     End Sub
     Private Sub Vaciar()
         txtNombre.Clear()

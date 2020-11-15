@@ -110,7 +110,7 @@ Public Class frmEvento
     Sub Vaciar()
         txtNombre.Clear()
         txtDescripcion.Clear()
-        cbVideo.SelectedIndex = -1
+        cbVideo.SelectedIndex = 0
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click

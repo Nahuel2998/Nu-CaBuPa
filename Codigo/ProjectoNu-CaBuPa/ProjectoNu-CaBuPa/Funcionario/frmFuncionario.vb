@@ -50,15 +50,21 @@ Public Class frmFuncionario
         '' editando = False  -> Se le permitira al usuario escribir en los campos
         If ID = -1 Then
             CargarDatos()
-            PrepararInsert("Funcionario", datos)
-            Vaciar()
+            If (ValidarEmail(txtMail.Text)) Then
+
+                PrepararInsert("Funcionario", datos)
+
+                Vaciar()
+            Else
+                MessageBox.Show("Debe ingresar un mail de contacto válido")
+            End If
         ElseIf editando Then
             If cambio Then
                 CargarDatos()
                 If Not CompararValores(VaciarNull(datos), tmpDatos) Then
                     PrepararUpdate("Funcionario", datos, ID)
                 End If
-                AlternarCambioHandlers()
+                'AlternarCambioHandlers()
             End If
         Else
             tmpDatos = {txtTelefono.Text, txtNombre.Text, txtMail.Text}
@@ -82,7 +88,6 @@ Public Class frmFuncionario
                 txtMail.Text = tmpDatos(2)
                 AlternarCambioHandlers()
             End If
-
             Alternar()
         End If
     End Sub
