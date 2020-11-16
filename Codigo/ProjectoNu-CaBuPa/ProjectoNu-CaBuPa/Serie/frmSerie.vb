@@ -73,7 +73,8 @@ Public Class frmSerie
             Alternar()
         Else
             tmpDatos = {If(chbIncluir.Checked, Format(dtpFecha.Value, "yyyy-MM-dd"), ""), txtNombre.Text}
-
+            cambio = False
+            AlternarCambioHandlers()
             Alternar()
         End If
         'AlternarCambioHandlers()

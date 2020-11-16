@@ -68,12 +68,14 @@ Public Class frmFuncionario
                 End If
                 AlternarCambioHandlers()
             End If
+            Alternar()
         Else
             tmpDatos = {txtTelefono.Text, txtNombre.Text, txtMail.Text}
             cambio = False
             AlternarCambioHandlers()
+            Alternar()
         End If
-        Alternar()
+
     End Sub
     Private Sub Vaciar()
         txtNombre.Clear()
