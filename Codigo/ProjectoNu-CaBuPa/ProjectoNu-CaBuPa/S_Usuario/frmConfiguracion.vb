@@ -106,15 +106,15 @@ Public Class frmConfiguracion
 #Region "Modificar Usuarios"
     Private Sub UBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UBorrar.Click
         If Not IsNothing(UserID) Then
-            BSQL("usuarios", "id_usuario ='" + UserID.ToString + "'")
             'ActualizarUsuarios(False)
 
-            BW.RunWorkerAsync(False)
-            If UserID = ModConector.GUsuarioID Then
-                ModConector.BorrarUsuario()
-                Me.Dispose()
-
+            If UserID = ModConector.GUsuarioID Or UserID = 1 Then
+                MessageBox.Show("No se puede borrar el usuario utilizado")
+            Else
+                BSQL("usuarios", "id_usuario ='" + UserID.ToString + "'")
+                BW.RunWorkerAsync(False)
             End If
+
         End If
         LimpiarEditar()
     End Sub

@@ -117,7 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnGuardarNota.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnGuardarNota.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Mongolian Baiti, 9pt</value>
+  </data>
+  <data name="btnGuardarNota.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnGuardarNota.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 168</value>
+  </data>
+  <data name="btnGuardarNota.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGuardarNota.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 27</value>
+  </data>
+  <data name="btnGuardarNota.Text" xml:space="preserve">
+    <value>Guardar en Escritorio</value>
+  </data>
+  <data name="TBNotas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 141</value>
+  </data>
+  <data name="Panel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 27</value>
+  </data>
+  <data name="Panel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 159</value>
+  </data>
+  <data name="gbNotas.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Mongolian Baiti, 10.8pt</value>
+  </data>
   <data name="btnbuscarv.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 0</value>
   </data>
@@ -141,6 +175,13 @@
   </data>
   <data name="Panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 44</value>
+  </data>
+  <data name="txtVcontenido.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Mongolian Baiti, 10.8pt</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtVcontenido.MaxLength" type="System.Int32, mscorlib">
+    <value>1024</value>
   </data>
   <data name="txtVcontenido.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 111</value>
@@ -168,6 +209,9 @@
   </data>
   <data name="tbVideo.Size" type="System.Drawing.Size, System.Drawing">
     <value>570, 332</value>
+  </data>
+  <data name="GroupBox6.Text" xml:space="preserve">
+    <value>Empresas</value>
   </data>
   <data name="btnBorrarBFF.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 46</value>
@@ -2647,5 +2691,8 @@
         YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYfHE4f8HceZN3Q9v
         DjgAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
 </root>

@@ -428,7 +428,7 @@ Public Class frmPrograma
         If (i(0) <> 0) Then
             CuotaId = i(0)
             dtpFE.Value = i(1)
-            dtpFP.Value = If(i(2) = "", Now, i(2))
+            dtpFP.Value = If(i(2) = "", i(1), i(2))
             cbP.Checked = If(i(2) = "", False, True)
             nudValor.Value = i(3)
         End If
@@ -478,4 +478,5 @@ Public Class frmPrograma
             End If
         End If
     End Sub
+
 End Class

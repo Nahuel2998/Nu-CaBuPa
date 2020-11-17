@@ -376,6 +376,7 @@ Partial Class frmPrincipal
         Me.dtp = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.ctpSerie = New ProjectoNu_CaBuPa.ColorDateTimePicker()
         Me.ctpPubli = New ProjectoNu_CaBuPa.ColorDateTimePicker()
+        Me.btnGuardarNota = New System.Windows.Forms.Button()
         Me.pMain.SuspendLayout()
         Me.spNotEven.SuspendLayout()
         Me.gbNotas.SuspendLayout()
@@ -528,6 +529,7 @@ Partial Class frmPrincipal
         'gbNotas
         '
         resources.ApplyResources(Me.gbNotas, "gbNotas")
+        Me.gbNotas.Controls.Add(Me.btnGuardarNota)
         Me.gbNotas.Controls.Add(Me.Panel7)
         Me.gbNotas.Name = "gbNotas"
         Me.gbNotas.TabStop = False
@@ -1599,6 +1601,7 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.txtVnombre, "txtVnombre")
         Me.txtVnombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.txtVnombre.ForeColor = System.Drawing.Color.White
         Me.txtVnombre.Name = "txtVnombre"
         '
         'Panel3
@@ -1644,6 +1647,7 @@ Partial Class frmPrincipal
         '
         resources.ApplyResources(Me.txtVcontenido, "txtVcontenido")
         Me.txtVcontenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.txtVcontenido.ForeColor = System.Drawing.Color.White
         Me.txtVcontenido.Name = "txtVcontenido"
         '
         'Panel8
@@ -2982,6 +2986,14 @@ Partial Class frmPrincipal
         resources.ApplyResources(Me.ctpPubli, "ctpPubli")
         Me.ctpPubli.Name = "ctpPubli"
         '
+        'btnGuardarNota
+        '
+        resources.ApplyResources(Me.btnGuardarNota, "btnGuardarNota")
+        Me.btnGuardarNota.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnGuardarNota.ForeColor = System.Drawing.Color.Black
+        Me.btnGuardarNota.Name = "btnGuardarNota"
+        Me.btnGuardarNota.UseVisualStyleBackColor = False
+        '
         'frmPrincipal
         '
         resources.ApplyResources(Me, "$this")
@@ -3408,4 +3420,5 @@ Partial Class frmPrincipal
     Friend WithEvents FNombre As DataGridViewTextBoxColumn
     Friend WithEvents Telefono As DataGridViewTextBoxColumn
     Friend WithEvents FFuncion As DataGridViewTextBoxColumn
+    Friend WithEvents btnGuardarNota As Button
 End Class

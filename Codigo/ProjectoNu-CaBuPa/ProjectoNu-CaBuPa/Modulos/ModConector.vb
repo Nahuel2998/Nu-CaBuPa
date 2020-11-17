@@ -75,6 +75,9 @@ Module ModConector
     Public Sub EPort(ByVal NPort As String)
         Port = NPort
     End Sub
+    Public Function DUsuario()
+        Return Usuario
+    End Function
     Public Sub EUser(ByVal NUser As String)
         User = NUser
     End Sub
@@ -115,7 +118,7 @@ Module ModConector
         Try
             objCmd = New MySqlCommand(sql, conT) 'çonT
             objCmd.Prepare()
-            objCmd.ExecuteNonQuery()
+            objCmd.ExecuteNonQueryAsync()
         Catch ex As Exception
             MessageBox.Show("Error de conexión.")
             Return False
@@ -216,8 +219,7 @@ Module ModConector
         End If
 
     End Function
-    Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String) As Boolean
-
+    Public Function BUsuario(ByVal nombre As String, ByVal contraseña As String, Optional cartel As Boolean = True) As Boolean
         Try
             Dim conT = New MySqlConnection(connStr)
             conT.OpenAsync()
@@ -233,7 +235,7 @@ Module ModConector
                 objCmd.Prepare()
                 Dim dt As DataTable = ESQLSelect(objCmd, False)
                 If Not IsNothing(dt) Then
-                    If dt.Rows.Count = 0 Then
+                    If dt.Rows.Count = 0 And cartel Then
                         MessageBox.Show("Contraseña o Usuario Incorrecto")
                     Else
                         Usuario = nombre
@@ -276,13 +278,13 @@ Module ModConector
     End Function
 #Region "Actualizar"
     Public Function APrograma(fecha As Date) As DataTable
-        Return DevolverTabla(PSQL("p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa'", "fechaprograma f inner join programa p on f.id_programa=p.id_programa", "fecha = '" + Format(fecha, "yyyy-MM-dd") + "'"))
+        Return DevolverTabla(PSQL("p.id_programa, time_format(hora_inicio, '%H:%i') as 'Inicio', time_format(hora_fin, '%H:%i') as 'Final', Nombre_programa as 'Programa'", "fechaprograma f inner join programa p on f.id_programa=p.id_programa", "fecha = '" + Format(fecha, "yyyy-MM-dd") + "' order by hora_inicio"))
     End Function
     Public Function AFPrograma(Fecha As Date, idPrograma As Integer) As DataTable
         Dim Columna As String = "fun.id_funcionario, fun.Nombre, Telefono, Mail, f.Nombre as Función"
         Dim Tablas As String = "(select * from funtrabaja where id_Programa = {0}) ft inner join trabajacomo tc on ft.id_trabajacomo = tc.id_trabajacomo inner join funcion f on f.id_funcion = tc.id_funcion inner join funcionario fun on fun.id_funcionario = tc.id_funcionario"
         Tablas = String.Format(Tablas, idPrograma)
-        Dim Condicion As String = String.Format("fecha_inicio<='{0}' and ifnull(fecha_finalizacion,'{0}')>='{0}'", Format(Fecha, "yyyy-MM-dd"))
+        Dim Condicion As String = String.Format("fecha_inicio<='{0}' and ifnull(fecha_finalizacion,'{0}')>='{0}' order by fecha_inicio", Format(Fecha, "yyyy-MM-dd"))
         Return DevolverTabla(PSQL(Columna, Tablas, Condicion))
     End Function
     Public Function APublicidad(Fecha As Date, Hora As String, ByVal todas As Boolean) As DataTable
@@ -292,20 +294,19 @@ Module ModConector
         Else
             condicion = "a.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.hora_inicio = '" + Hora + "'"
         End If
-        Return DevolverTabla(PSQL("distinct p.id_publicidad, Nombre", "publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad", condicion))
+        Return DevolverTabla(PSQL("distinct p.id_publicidad, Nombre", "publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad order by hora_inicio", condicion))
 
     End Function
     Public Function APPublicidad(ByVal Fecha As Date, ByVal idPrograma As Integer) As DataTable
-        Return DevolverTabla(PSQL("pp.id_publicidad, Nombre", "pmuestrapubli pp inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad", "pp.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and pp.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd").ToString + "' and pp.id_programa = '" + idPrograma.ToString + "'"))
-        ModLog.Guardar(PSQL("pp.id_publicidad, Nombre", "pmuestrapubli pp inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad", "pp.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and pp.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd").ToString + "' and pp.id_programa = '" + idPrograma.ToString + "'"))
+        Return DevolverTabla(PSQL("pp.id_publicidad, Nombre", "pmuestrapubli pp inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad", "pp.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and pp.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd").ToString + "' and pp.id_programa = '" + idPrograma.ToString + "' order by pp.fecha_inicio"))
     End Function
     Public Function AEventos() As DataTable
-        Return DevolverTabla(PSQL("e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre", "evento e inner join fechaevento f on f.id_evento=e.id_evento", "f.fecha >= now()"))
+        Return DevolverTabla(PSQL("e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre", "evento e inner join fechaevento f on f.id_evento=e.id_evento", "f.fecha >= now() order by f.fecha"))
     End Function
     Public Function ATandas(Optional siguiente As Boolean = True) As DataTable
         Dim condicion As String = "true"
         If (siguiente) Then
-            condicion = "(hora_inicio <= curtime() and hora_fin >= curtime()) or hora_inicio >= curtime()"
+            condicion = "(hora_inicio <= curtime() and hora_fin >= curtime()) or hora_inicio >= curtime() order by hora_inicio"
         End If
         Return DevolverTabla(PSQL("hora_inicio as 'Inicio', hora_fin as 'Final'", "tanda", condicion))
     End Function

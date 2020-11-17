@@ -37,8 +37,12 @@
                 BSQL("funtrabaja", String.Format("id_programa='{0}'", id(0)) + " and " + CreadorCondicion("ID_TrabajaComo", id2) + " and " + CreadorCondicion("fecha_inicio", id3, True))
             Case EMPRESA
                 PrepararDelete("Empresa", "id_empresa", id)
+                USQL("publicidad", "id_empresa=null", String.Format("id_publicidad='{0}'", id))
             Case PROGRAMAS
                 PrepararDelete("Programa", "ID_Programa", id)
+                PrepararDelete("programacuota", "id_programa", id)
+                PrepararDelete("fechaprograma", "id_programa", id)
+                PrepararDelete("pmustrapubli", "id_programa", id)
             Case FUNCIONARIO
                 PrepararDelete("Funcionario", "ID_Funcionario", id)
                 Dim Borrado As DataTable = DevolverTabla(PSQL("id_trabajacomo", "trabajacomo", String.Format("ID_Funcionario='{0}'", id)))
@@ -56,7 +60,11 @@
             Case CUOTA
                 BSQL("programacuota", CreadorCondicion("id_programa_cuota", id))
             Case FUNCION
+                Dim Borrado As DataTable = DevolverTabla(PSQL("id_trabajacomo", "trabajacomo", String.Format("ID_Funcion='{0}'", id)))
+                Dim idTrabaja() As String = CargarTodo(Borrado, 0)
                 PrepararDelete("Funcion", "ID_Funcion", id)
+                PrepararDelete("trabajacomo", "ID_Funcion", id)
+                BSQL("funtrabaja", CreadorCondicion("id_trabajacomo", idTrabaja))
             Case CUOTAPUBLICIDAD
                 BSQL("publicidadcuota", CreadorCondicion("id_publicidadcuota", id))
             Case EVENTO

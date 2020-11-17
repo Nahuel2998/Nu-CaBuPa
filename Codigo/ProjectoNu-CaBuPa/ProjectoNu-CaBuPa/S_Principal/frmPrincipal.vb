@@ -138,15 +138,15 @@ Public Class frmPrincipal
 
     Public Sub GuardarNotas()
         Dim ruta As String = "C:\Nu-CaBuPa\"
-        Dim archivo As String = "Notas.txt"
+        Dim archivo As String = String.Format("Notas_{0}.txt", ModConector.DUsuario())
         Dim escribir As New StreamWriter(ruta & archivo, False)
         escribir.Write(TBNotas.Text)
         escribir.Close()
     End Sub
 
     Public Sub LeerNotas()
-        Dim ruta As String = "..\User\"
-        Dim archivo As String = "Notas.txt"
+        Dim ruta As String = "C:\Nu-CaBuPa\"
+        Dim archivo As String = String.Format("Notas_{0}.txt", ModConector.DUsuario())
         If File.Exists(ruta & archivo) Then
             TBNotas.Text = ""
             Dim leer As New StreamReader(ruta & archivo)
@@ -845,5 +845,15 @@ Public Class frmPrincipal
         Dim formTanda As New frmTandas()
         AddHandler formTanda.FormClosed, AddressOf tandasClosed
         formTanda.ShowDialog()
+    End Sub
+
+    Private Sub btnGuardarNota_Click(sender As Object, e As EventArgs) Handles btnGuardarNota.Click
+        Dim s As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+        Dim ruta As String = s + "\"
+        Dim archivo As String = String.Format("Notas_{0}.txt", ModConector.DUsuario)
+        MessageBox.Show(ruta)
+        Dim escribir As New StreamWriter(ruta & archivo, False)
+        escribir.Write(TBNotas.Text)
+        escribir.Close()
     End Sub
 End Class

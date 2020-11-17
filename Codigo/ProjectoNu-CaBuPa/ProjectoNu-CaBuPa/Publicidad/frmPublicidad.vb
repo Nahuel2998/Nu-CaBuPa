@@ -405,9 +405,8 @@ Public Class frmPublicidad
             If (dt_fechasA.Rows.Count > 0) Then
                 Dim Id() As String = ObtenerCheck(dt_fechasA, dgvTE, 0)
                 Dim Id2() As String = ObtenerCheck(dt_fechasA, dgvTE, 1)
-                Dim Id3() As String = ObtenerCheck(dt_fechasA, dgvTE, 2)
                 If Not Id.Length = 0 Then
-                    BSQL("aparecepubli", String.Format("id_publicidad='{0}'", publicidadID) + " and " + CreadorCondicion("Hora_Inicio", Id) + " and " + CreadorCondicion("fecha_inicio", Id2, True) + " and " + CreadorCondicion("fecha_finalizacion", Id3, True))
+                    BSQL("aparecepubli", CreadorCondicion("Hora_Inicio", Id) + " and " + CreadorCondicion("fecha_inicio", Id2, True))
                     If Not (bwDatos.IsBusy) Then
                         bwDatos.RunWorkerAsync(2)
                     End If
@@ -486,7 +485,7 @@ Public Class frmPublicidad
         If (i(0) <> 0) Then
             CuotaId = i(0)
             dtpFE.Value = i(1)
-            dtpFP.Value = If(i(2) = "", Now, i(2))
+            dtpFP.Value = If(i(2) = "", i(1), i(2))
             cbP.Checked = i(2) IsNot ""
             nudValor.Value = i(3)
         End If
@@ -547,4 +546,5 @@ Public Class frmPublicidad
             bwDatos.RunWorkerAsync(4) 'PSQL("ID_Programa, Nombre_Programa as Nombre, Descripcion", "programa", condicion))
         End If
     End Sub
+
 End Class

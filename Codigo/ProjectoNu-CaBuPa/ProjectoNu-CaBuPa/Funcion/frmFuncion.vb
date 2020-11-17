@@ -42,11 +42,11 @@
                 End If
                 'AlternarCambioHandlers()
             End If
+            Alternar()
         Else
             tmpDatos = {txtNombre.Text, txtDesc.Text}
+            Alternar()
         End If
-
-        Alternar()
     End Sub
     Private Sub Vaciar()
         txtNombre.Clear()
