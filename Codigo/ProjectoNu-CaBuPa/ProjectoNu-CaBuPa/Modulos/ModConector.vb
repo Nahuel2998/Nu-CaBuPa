@@ -294,11 +294,11 @@ Module ModConector
         Else
             condicion = "a.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd") + "' and a.hora_inicio = '" + Hora + "'"
         End If
-        Return DevolverTabla(PSQL("distinct p.id_publicidad, Nombre", "publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad order by hora_inicio", condicion))
+        Return DevolverTabla(PSQL("distinct p.id_publicidad, Nombre", "publicidad p inner join aparecepubli a on p.id_publicidad=a.id_publicidad", condicion))
 
     End Function
     Public Function APPublicidad(ByVal Fecha As Date, ByVal idPrograma As Integer) As DataTable
-        Return DevolverTabla(PSQL("pp.id_publicidad, Nombre", "pmuestrapubli pp inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad", "pp.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and pp.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd").ToString + "' and pp.id_programa = '" + idPrograma.ToString + "' order by pp.fecha_inicio"))
+        Return DevolverTabla(PSQL("pp.id_publicidad, Nombre", "pmuestrapubli pp inner join publicidad ppp on pp.id_publicidad = ppp.id_publicidad", "pp.fecha_inicio <= '" + Format(Fecha, "yyyy-MM-dd") + "' and pp.fecha_finalizacion >= '" + Format(Fecha, "yyyy-MM-dd").ToString + "' and pp.id_programa = '" + idPrograma.ToString + "'"))
     End Function
     Public Function AEventos() As DataTable
         Return DevolverTabla(PSQL("e.id_Evento, DATE_FORMAT(Fecha,'%d/%m/%Y') as Fecha, Nombre", "evento e inner join fechaevento f on f.id_evento=e.id_evento", "f.fecha >= now() order by f.fecha"))

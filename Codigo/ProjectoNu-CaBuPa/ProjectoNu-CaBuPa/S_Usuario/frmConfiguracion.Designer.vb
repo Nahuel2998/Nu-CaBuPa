@@ -136,7 +136,7 @@ Partial Class frmConfiguracion
         'btnRestablecer
         '
         Me.btnRestablecer.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnRestablecer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnRestablecer.ForeColor = System.Drawing.Color.White
         Me.btnRestablecer.Location = New System.Drawing.Point(277, 242)
         Me.btnRestablecer.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRestablecer.Name = "btnRestablecer"
@@ -337,7 +337,7 @@ Partial Class frmConfiguracion
         'UBorrar
         '
         Me.UBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.UBorrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.UBorrar.ForeColor = System.Drawing.Color.White
         Me.UBorrar.Location = New System.Drawing.Point(20, 117)
         Me.UBorrar.Margin = New System.Windows.Forms.Padding(4)
         Me.UBorrar.Name = "UBorrar"
@@ -415,7 +415,7 @@ Partial Class frmConfiguracion
         'LimpiarUsuario
         '
         Me.LimpiarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.LimpiarUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.LimpiarUsuario.ForeColor = System.Drawing.Color.White
         Me.LimpiarUsuario.Location = New System.Drawing.Point(263, 55)
         Me.LimpiarUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.LimpiarUsuario.Name = "LimpiarUsuario"
