@@ -851,7 +851,6 @@ Public Class frmPrincipal
         Dim s As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         Dim ruta As String = s + "\"
         Dim archivo As String = String.Format("Notas_{0}.txt", ModConector.DUsuario)
-        MessageBox.Show(ruta)
         Dim escribir As New StreamWriter(ruta & archivo, False)
         escribir.Write(TBNotas.Text)
         escribir.Close()
