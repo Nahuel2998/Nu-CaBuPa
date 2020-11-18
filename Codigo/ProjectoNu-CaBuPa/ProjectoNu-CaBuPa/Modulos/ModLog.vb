@@ -5,7 +5,7 @@ Module ModLog
     Private ruta As String = "C:\Nu-CaBuPa\"
     ':::Nombre del archivo
     Private archivo As String = "Log.txt"
-    Private ENUSU As Boolean = False
+    Private ENUSU As Boolean = True
     Public Sub Guardar(ByVal Acciones As String)
         If Not ENUSU Then
             ENUSU = True
